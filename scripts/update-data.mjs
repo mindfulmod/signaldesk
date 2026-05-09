@@ -104,7 +104,7 @@ async function main() {
     }
   }
 
-  for (const [ticker] of STOCKS.slice(0, 40)) {
+  for (const [ticker] of STOCKS) {
     try {
       const market = await fetchMarket(ticker);
       if (market) {
@@ -112,12 +112,13 @@ async function main() {
           source: "Price/Volume",
           ticker,
           name: stockName(ticker),
-          title: `${ticker} price ${signed(market.priceMove)}%, volume ${market.relativeVolume.toFixed(1)}x`,
+          title: `${ticker} $${market.lastPrice.toFixed(2)}, price ${signed(market.priceMove)}%, volume ${market.relativeVolume.toFixed(1)}x`,
           url: `https://finance.yahoo.com/quote/${ticker}`,
           mentions: Math.max(1, Math.round(Math.abs(market.priceMove) + market.relativeVolume * 3)),
           sentiment: market.priceMove > 1 ? 0.25 : market.priceMove < -1 ? -0.18 : 0,
           priceMove: market.priceMove,
           relativeVolume: market.relativeVolume,
+          lastPrice: market.lastPrice,
           published: new Date().toISOString(),
         });
       }
@@ -221,6 +222,7 @@ async function fetchMarket(ticker) {
   const prev = closes.at(-2);
   const avgVolume = volumes.slice(0, -1).reduce((sum, value) => sum + value, 0) / Math.max(1, volumes.length - 1);
   return {
+    lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
   };
@@ -245,6 +247,7 @@ function collectMentions(events, source, text, url, weight = 1, published = "", 
         sentiment: scoreSentiment(normalized),
         priceMove: 0,
         relativeVolume: 1,
+        lastPrice: null,
         published: published || new Date().toISOString(),
       });
     }
@@ -264,6 +267,7 @@ function aggregate(events, previous) {
         weightedSentiment: 0,
         weightedPrice: 0,
         weightedVolume: 0,
+        lastPrice: previousByTicker.get(event.ticker)?.lastPrice ?? null,
         sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
         latest: [],
       };
@@ -271,6 +275,7 @@ function aggregate(events, previous) {
     item.weightedSentiment += event.sentiment * event.mentions;
     item.weightedPrice += event.priceMove * event.mentions;
     item.weightedVolume += event.relativeVolume * event.mentions;
+    if (Number.isFinite(event.lastPrice)) item.lastPrice = event.lastPrice;
     item.sources[event.source] = (item.sources[event.source] || 0) + event.mentions;
     item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published });
     map.set(event.ticker, item);
@@ -302,6 +307,7 @@ function aggregate(events, previous) {
         momentum,
         sentiment,
         priceMove,
+        lastPrice: item.lastPrice,
         relativeVolume,
         optionsActivity: 0,
         signalScore,
