@@ -71,6 +71,7 @@ function realSignals() {
     mentions: Number(item.mentions) || 0,
     momentum: Number(item.momentum) || 0,
     sentiment: Number(item.sentiment) || 0,
+    lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
     priceMove: Number(item.priceMove) || 0,
     relativeVolume: Number(item.relativeVolume) || 1,
     optionsActivity: Number(item.optionsActivity) || 0,
@@ -119,6 +120,7 @@ function render() {
 
   updateStatus();
   updateMetrics(items);
+  renderBuyCandidates(items);
   renderTable(top30);
   renderChart(state, items);
   renderDetail(items, top30);
@@ -146,6 +148,7 @@ function renderEmptyState() {
   byId("dominantSourceMeta").textContent = "No source data";
   byId("trackedUniverse").textContent = "0";
   byId("rankingBody").innerHTML = "";
+  byId("buyCandidates").innerHTML = "";
   byId("trendChart").innerHTML = "";
   byId("chartLegend").innerHTML = "";
   byId("sourceBreakdown").innerHTML = "";
@@ -156,6 +159,72 @@ function renderEmptyState() {
       ? `<li>Most recent refresh warnings: ${snapshot.failures.slice(0, 4).join(" | ")}${snapshot.failures.length > 4 ? " | …" : ""}</li>`
       : "",
   ].join("");
+}
+
+function buyScore(item) {
+  const signal = clamp(0, 1, item.signalScore / 100);
+  const momentum = clamp(0, 1, (item.momentum + 10) / 80);
+  const sentiment = clamp(0, 1, (item.sentiment + 0.2) / 0.65);
+  const price = clamp(0, 1, (item.priceMove + 1) / 7);
+  const volume = clamp(0, 1, item.relativeVolume / 2.5);
+  const sourceBreadth = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
+  return 100 * (0.34 * signal + 0.18 * momentum + 0.16 * sentiment + 0.14 * price + 0.1 * volume + 0.08 * sourceBreadth);
+}
+
+function renderBuyCandidates(items) {
+  const candidates = [...items]
+    .map((item) => ({ ...item, buyScore: buyScore(item) }))
+    .filter((item) => item.signalScore >= 35 && item.mentions >= 2)
+    .sort((a, b) => b.buyScore - a.buyScore)
+    .slice(0, 5);
+
+  byId("buyCandidates").innerHTML = candidates.length
+    ? candidates.map((item, index) => buyCard(item, index)).join("")
+    : `<div class="buy-empty">No buy candidates meet the current real-data filters.</div>`;
+
+  document.querySelectorAll("[data-buy-ticker]").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedTicker = button.dataset.buyTicker;
+      byId("tickerSearch").value = "";
+      render();
+      document.getElementById("chart-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function buyCard(item, index) {
+  const reasons = buyReasons(item);
+  return `
+    <article class="buy-card">
+      <div class="buy-card-top">
+        <span class="buy-rank">#${index + 1}</span>
+        <button type="button" data-buy-ticker="${item.ticker}" class="buy-ticker">${item.ticker}</button>
+      </div>
+      <p class="buy-name">${item.name}</p>
+      <div class="buy-score-row">
+        <span>Buy score</span>
+        <strong>${item.buyScore.toFixed(0)}</strong>
+      </div>
+      <div class="buy-meter" aria-label="Buy score ${item.buyScore.toFixed(0)} out of 100">
+        <span style="width:${clamp(0, 100, item.buyScore)}%"></span>
+      </div>
+      <ul>
+        ${reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}
+      </ul>
+    </article>`;
+}
+
+function buyReasons(item) {
+  const reasons = [
+    `${item.signalScore.toFixed(0)}/100 early signal`,
+    `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}% mention momentum`,
+  ];
+  if (item.sentiment > 0.08) reasons.push(`${sentimentLabel(item.sentiment)} public sentiment`);
+  if (item.priceMove > 0) reasons.push(`${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% price confirmation`);
+  if (item.relativeVolume > 1.1) reasons.push(`${item.relativeVolume.toFixed(1)}x relative volume`);
+  const sourceCount = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length;
+  reasons.push(`${sourceCount} public sources detected`);
+  return reasons.slice(0, 4);
 }
 
 function updateStatus() {
@@ -207,6 +276,7 @@ function renderTable(items) {
             </div>
           </td>
           <td><span class="signal-pill">${item.signalScore.toFixed(0)}</span></td>
+          <td>${formatPrice(item.lastPrice)}</td>
           <td>${fmt.format(item.mentions)}</td>
           <td><span class="momentum ${momentumClass}">${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%</span></td>
           <td><span class="momentum ${sentimentClass}">${sentimentLabel(item.sentiment)}</span></td>
@@ -355,6 +425,16 @@ function sentimentLabel(value) {
   return "Neutral";
 }
 
+function formatPrice(value) {
+  if (!Number.isFinite(value)) return "-";
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
 function setPreset(days) {
   const generated = new Date(snapshot?.generatedAt || Date.now());
   const start = new Date(generated);
@@ -370,13 +450,14 @@ function setPreset(days) {
 
 function exportCsv() {
   const data = filteredSignals().slice(0, 30);
-  const header = ["rank", "ticker", "name", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
+  const header = ["rank", "ticker", "name", "market_price", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
   const lines = [header.join(",")].concat(
     data.map((item, index) =>
       [
         index + 1,
         item.ticker,
         `"${item.name.replaceAll('"', '""')}"`,
+        item.lastPrice ?? "",
         item.signalScore.toFixed(1),
         item.mentions,
         item.momentum.toFixed(2),

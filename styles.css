@@ -351,6 +351,7 @@ h1 {
 }
 
 .metrics-grid article,
+.buy-panel,
 .chart-section,
 .table-panel,
 .side-panel {
@@ -390,6 +391,109 @@ td {
 .metrics-grid p {
   margin: 9px 0 0;
   font-size: 0.86rem;
+}
+
+.buy-panel {
+  width: min(1260px, 100%);
+  margin: 0 auto 18px;
+  padding: 18px;
+}
+
+.buy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.buy-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdfb;
+}
+
+.buy-card-top,
+.buy-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buy-rank {
+  color: var(--green);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.buy-ticker {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.55rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.buy-name {
+  min-height: 38px;
+  margin: 8px 0 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.buy-score-row span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.buy-score-row strong {
+  font-size: 1.3rem;
+}
+
+.buy-meter {
+  height: 9px;
+  margin: 8px 0 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e4ebe7;
+}
+
+.buy-meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #146c43, #315fba);
+}
+
+.buy-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.buy-card li,
+.buy-disclaimer,
+.buy-empty {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.38;
+}
+
+.buy-card li {
+  margin-bottom: 6px;
+}
+
+.buy-disclaimer {
+  margin: 13px 0 0;
+}
+
+.buy-empty {
+  grid-column: 1 / -1;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdfb;
 }
 
 .chart-section {
@@ -673,6 +777,10 @@ tbody tr.selected {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .buy-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
@@ -717,6 +825,7 @@ tbody tr.selected {
   }
 
   .metrics-grid,
+  .buy-grid,
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
@@ -726,6 +835,7 @@ tbody tr.selected {
   }
 
   .chart-section,
+  .buy-panel,
   .table-panel,
   .side-panel {
     padding: 14px;
