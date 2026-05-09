@@ -1,0 +1,45 @@
+name: Refresh SignalDesk Data
+
+on:
+  schedule:
+    # 12:00 PM America/Toronto during daylight saving time.
+    # GitHub Actions schedules use UTC.
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate scripts
+        run: |
+          node --check script.js
+          node --check scripts/update-data.mjs
+
+      - name: Refresh public no-key data
+        run: node scripts/update-data.mjs
+
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet -- data/signals.json data/signals.js; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/signals.json data/signals.js
+          git commit -m "Refresh public stock signal data"
+          git push
+
