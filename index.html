@@ -25,11 +25,11 @@
         <section class="control-group" aria-labelledby="range-heading">
           <h2 id="range-heading">Time Range</h2>
           <div class="preset-grid" role="group" aria-label="Preset ranges">
-            <button class="preset active" data-days="7">7D</button>
+            <button class="preset active" data-days="1">1D</button>
+            <button class="preset" data-days="7">7D</button>
             <button class="preset" data-days="14">14D</button>
             <button class="preset" data-days="30">30D</button>
             <button class="preset" data-days="60">60D</button>
-            <button class="preset" data-days="90">90D</button>
             <button class="preset" data-days="all">All</button>
           </div>
           <label class="field">
@@ -40,45 +40,18 @@
             <span>End</span>
             <input id="endDate" type="date" />
           </label>
+          <p id="rangeNote" class="range-note">1D view loads the latest public snapshot. Longer ranges build as daily refreshes accumulate.</p>
         </section>
 
         <section class="control-group" aria-labelledby="platform-heading">
           <h2 id="platform-heading">Platforms</h2>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="Wallstreetbets" checked />
-            <span class="source-dot wsb"></span>
-            <span>Wallstreetbets</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="Reddit Finance" checked />
-            <span class="source-dot reddit"></span>
-            <span>Reddit Finance</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="SEC Filings" checked />
-            <span class="source-dot sec"></span>
-            <span>SEC Filings</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="Yahoo Public News" checked />
-            <span class="source-dot news"></span>
-            <span>Yahoo Public News</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="CNBC" checked />
-            <span class="source-dot cnbc"></span>
-            <span>CNBC</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="MarketWatch" checked />
-            <span class="source-dot marketwatch"></span>
-            <span>MarketWatch</span>
-          </label>
-          <label class="check-row">
-            <input type="checkbox" name="source" value="Price/Volume" checked />
-            <span class="source-dot price-volume"></span>
-            <span>Price/Volume</span>
-          </label>
+          <label class="check-row"><input type="checkbox" name="source" value="Wallstreetbets" checked /><span class="source-dot wsb"></span><span>Wallstreetbets</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="Reddit Finance" checked /><span class="source-dot reddit"></span><span>Reddit Finance</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="SEC Filings" checked /><span class="source-dot sec"></span><span>SEC Filings</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="Yahoo Public News" checked /><span class="source-dot news"></span><span>Yahoo Public News</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="CNBC" checked /><span class="source-dot cnbc"></span><span>CNBC</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="MarketWatch" checked /><span class="source-dot marketwatch"></span><span>MarketWatch</span></label>
+          <label class="check-row"><input type="checkbox" name="source" value="Price/Volume" checked /><span class="source-dot price-volume"></span><span>Price/Volume</span></label>
         </section>
 
         <section class="control-group" aria-labelledby="display-heading">
@@ -95,10 +68,7 @@
               <option value="rank">Rank</option>
             </select>
           </label>
-          <label class="field">
-            <span>Focus ticker</span>
-            <input id="tickerSearch" type="search" placeholder="Search symbol or name" />
-          </label>
+          <label class="field"><span>Focus ticker</span><input id="tickerSearch" type="search" placeholder="Search symbol or name" /></label>
           <button id="clearFocus" class="secondary-button" type="button">Clear focus</button>
         </section>
       </aside>
@@ -111,117 +81,47 @@
             <p id="dataStatus" class="data-status">Loading public data snapshot...</p>
           </div>
           <div class="top-actions">
-            <button id="exportCsv" class="icon-button" type="button" title="Export CSV" aria-label="Export CSV">
-              <span aria-hidden="true">CSV</span>
-            </button>
-            <button id="refreshData" class="icon-button" type="button" title="Reload real data" aria-label="Reload real data">
-              <span aria-hidden="true">↻</span>
-            </button>
+            <button id="exportCsv" class="icon-button" type="button" title="Export CSV" aria-label="Export CSV"><span aria-hidden="true">CSV</span></button>
+            <button id="refreshData" class="icon-button" type="button" title="Reload real data" aria-label="Reload real data"><span aria-hidden="true">↻</span></button>
           </div>
         </header>
 
         <section class="metrics-grid" aria-label="Summary metrics">
-          <article>
-            <span>Total mentions</span>
-            <strong id="totalMentions">0</strong>
-            <p id="mentionDelta">0% vs previous period</p>
-          </article>
-          <article>
-            <span>Fastest riser</span>
-            <strong id="fastestRiser">-</strong>
-            <p id="fastestRiserMeta">Momentum unavailable</p>
-          </article>
-          <article>
-            <span>Best early signal</span>
-            <strong id="bestSignal">-</strong>
-            <p id="bestSignalMeta">Signal unavailable</p>
-          </article>
-          <article>
-            <span>Dominant source</span>
-            <strong id="dominantSource">-</strong>
-            <p id="dominantSourceMeta">No source selected</p>
-          </article>
-          <article>
-            <span>Tracked universe</span>
-            <strong id="trackedUniverse">0</strong>
-            <p>liquid stocks and ETFs</p>
-          </article>
+          <article><span>Total mentions</span><strong id="totalMentions">0</strong><p id="mentionDelta">0% vs previous period</p></article>
+          <article><span>Fastest riser</span><strong id="fastestRiser">-</strong><p id="fastestRiserMeta">Momentum unavailable</p></article>
+          <article><span>Best early signal</span><strong id="bestSignal">-</strong><p id="bestSignalMeta">Signal unavailable</p></article>
+          <article><span>Dominant source</span><strong id="dominantSource">-</strong><p id="dominantSourceMeta">No source selected</p></article>
+          <article><span>Tracked universe</span><strong id="trackedUniverse">0</strong><p>liquid stocks and ETFs</p></article>
         </section>
 
         <section class="buy-panel" aria-labelledby="buy-heading">
-          <div class="section-head compact">
-            <div>
-              <h2 id="buy-heading">Buy Candidates</h2>
-              <p>Top 5 data-driven stocks to research, based on the latest public signal snapshot</p>
-            </div>
-          </div>
+          <div class="section-head compact"><div><h2 id="buy-heading">Buy Candidates</h2><p>Top 5 data-driven stocks to research, based on the selected public signal range</p></div></div>
           <div id="buyCandidates" class="buy-grid"></div>
           <p class="buy-disclaimer">Informational signal screen only. Not financial advice; review fundamentals, risk, and your own plan before trading.</p>
         </section>
 
         <section class="chart-section" aria-labelledby="chart-heading">
-          <div class="section-head">
-            <div>
-              <h2 id="chart-heading">Mention Trend</h2>
-              <p id="chartSubhead">Top tickers over the selected range</p>
-            </div>
-            <div class="legend" id="chartLegend" aria-label="Chart legend"></div>
-          </div>
-          <div class="chart-wrap">
-            <svg id="trendChart" role="img" aria-label="Trend chart"></svg>
-          </div>
+          <div class="section-head"><div><h2 id="chart-heading">Mention Trend</h2><p id="chartSubhead">Top tickers over the selected range</p></div><div class="legend" id="chartLegend" aria-label="Chart legend"></div></div>
+          <div class="chart-wrap"><svg id="trendChart" role="img" aria-label="Trend chart"></svg></div>
         </section>
 
         <section class="dashboard-grid">
           <div class="table-panel">
-            <div class="section-head compact">
-              <div>
-                <h2>Ranking</h2>
-                <p id="rankSubhead">Showing the top 30 tickers</p>
-              </div>
-              <div class="view-toggle" role="group" aria-label="Table display mode">
-                <button id="viewSignal" class="active" type="button">Signal</button>
-                <button id="viewMentions" type="button">Mentions</button>
-                <button id="viewMomentum" type="button">Momentum</button>
-              </div>
-            </div>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Ticker</th>
-                    <th>Signal</th>
-                    <th>Price</th>
-                    <th>Mentions</th>
-                    <th>Momentum</th>
-                    <th>Sentiment</th>
-                    <th>Price/Vol</th>
-                    <th>Source mix</th>
-                  </tr>
-                </thead>
-                <tbody id="rankingBody"></tbody>
-              </table>
-            </div>
+            <div class="section-head compact"><div><h2>Ranking</h2><p id="rankSubhead">Showing the top 30 tickers</p></div><div class="view-toggle" role="group" aria-label="Table display mode"><button id="viewSignal" class="active" type="button">Signal</button><button id="viewMentions" type="button">Mentions</button><button id="viewMomentum" type="button">Momentum</button></div></div>
+            <div class="table-scroll"><table><thead><tr><th>Rank</th><th>Ticker</th><th>Signal</th><th>Price</th><th>Mentions</th><th>Momentum</th><th>Sentiment</th><th>Price/Vol</th><th>Source mix</th></tr></thead><tbody id="rankingBody"></tbody></table></div>
           </div>
-
           <aside class="side-panel" aria-label="Selected stock detail">
-            <div class="selected-stock">
-              <span id="selectedRank">Rank #1</span>
-              <h2 id="selectedTicker">NVDA</h2>
-              <p id="selectedName">NVIDIA Corporation</p>
-            </div>
+            <div class="selected-stock"><span id="selectedRank">Rank #1</span><h2 id="selectedTicker">NVDA</h2><p id="selectedName">NVIDIA Corporation</p></div>
             <div class="source-breakdown" id="sourceBreakdown"></div>
-            <div class="context-list">
-              <h3>Attention Notes</h3>
-              <ul id="attentionNotes"></ul>
-            </div>
+            <div class="context-list"><h3>Attention Notes</h3><ul id="attentionNotes"></ul></div>
           </aside>
         </section>
       </main>
     </div>
 
     <script src="data/signals.js"></script>
+    <script src="data/history.js"></script>
     <script src="script.js"></script>
+    <script src="history-support.js"></script>
   </body>
 </html>
