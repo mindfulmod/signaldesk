@@ -1,0 +1,7 @@
+{
+  "dataMode": "real-public-no-key-history",
+  "updatedAt": null,
+  "retentionDays": 120,
+  "sourceNote": "Daily real public no-key snapshots retained for range aggregation. Longer ranges become more complete as scheduled refreshes accumulate.",
+  "snapshots": []
+}
