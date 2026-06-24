@@ -12,6 +12,9 @@ const REDDIT_USER_AGENT = "bot:SignalDeskPublic:1.0 (by /u/mindfulmod; read-only
 const DISCOVERY_LIMIT = 80;
 const PRICE_UNIVERSE_LIMIT = 140;
 const NEWS_UNIVERSE_LIMIT = 70;
+// StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
+// may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
+const STOCKTWITS_LIMIT = 45;
 // FINRA universe: how many candidates to register from the short-volume file
 const FINRA_UNIVERSE_LIMIT = 200;
 const FINRA_MIN_RATIO = 0.30;
@@ -25,6 +28,7 @@ const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 const SOURCES = [
   "Wallstreetbets",
   "Reddit Finance",
+  "StockTwits",
   "GDELT News",
   "Google News",
   "Bing News",
@@ -123,6 +127,10 @@ async function main() {
   events.push(...finraEvents);
   console.log(`FINRA universe built: ${stockRegistry.size} tickers registered`);
 
+  // StockTwits trending ("fintwit") — registers hot tickers into the universe so
+  // they are discoverable even if no other feed mentions them today.
+  await collectStockTwitsTrending(events, failures);
+
   for (const feed of feeds) {
     try {
       let items;
@@ -207,6 +215,13 @@ async function main() {
 
   for (const { ticker, name } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
     await collectTickerNews(events, failures, ticker, name);
+  }
+
+  // StockTwits per-symbol sentiment for the most-mentioned tickers. Bullish/Bearish
+  // tags make this our richest explicit social-sentiment signal.
+  for (const { ticker, name } of newsUniverseEntries(events, STOCKTWITS_LIMIT)) {
+    await collectStockTwitsSentiment(events, failures, ticker, name);
+    await sleep(350);
   }
 
   const signals = aggregate(events, previous);
@@ -736,6 +751,78 @@ function collectMentions(events, source, text, url, weight = 1, published = "", 
         published: published || new Date().toISOString(),
       });
     }
+  }
+}
+
+// StockTwits trending symbols: free, no-key. Registers each trending ticker into
+// the universe and records a light mention so it can surface even on a quiet news
+// day. https://api.stocktwits.com/api/2/trending/symbols.json
+async function collectStockTwitsTrending(events, failures) {
+  try {
+    const json = await fetchJson("https://api.stocktwits.com/api/2/trending/symbols.json");
+    const symbols = Array.isArray(json?.symbols) ? json.symbols : [];
+    symbols.forEach((entry, index) => {
+      const ticker = String(entry?.symbol || "").toUpperCase();
+      if (!isPossibleTicker(ticker)) return;
+      const name = entry?.title || ticker;
+      registerStock(ticker, name, [ticker, name]);
+      // Earlier in the trending list = hotter; weight 5 down to 1.
+      const weight = Math.max(1, Math.round((symbols.length - index) / Math.max(1, symbols.length) * 5));
+      events.push({
+        source: "StockTwits",
+        ticker,
+        name,
+        title: `Trending on StockTwits (#${index + 1})`,
+        url: `https://stocktwits.com/symbol/${encodeURIComponent(ticker)}`,
+        mentions: weight,
+        sentiment: 0,
+        priceMove: 0,
+        relativeVolume: 1,
+        lastPrice: null,
+        quoteAsOf: null,
+        quoteSource: null,
+        published: new Date().toISOString(),
+      });
+    });
+    console.log(`StockTwits trending: ${symbols.length} symbols registered`);
+  } catch (error) {
+    failures.push(`StockTwits trending: ${error.message}`);
+  }
+}
+
+// StockTwits per-symbol message stream: each recent message can carry an explicit
+// Bullish/Bearish tag, giving a real social-sentiment read for a ticker.
+// https://api.stocktwits.com/api/2/streams/symbol/{TICKER}.json
+async function collectStockTwitsSentiment(events, failures, ticker, name) {
+  try {
+    const json = await fetchJson(`https://api.stocktwits.com/api/2/streams/symbol/${encodeURIComponent(ticker)}.json`);
+    const messages = Array.isArray(json?.messages) ? json.messages : [];
+    if (!messages.length) return;
+    for (const message of messages.slice(0, 8)) {
+      const basic = message?.entities?.sentiment?.basic;
+      const sentiment = basic === "Bullish" ? 0.3 : basic === "Bearish" ? -0.3 : 0;
+      const username = message?.user?.username;
+      const url = username && message?.id
+        ? `https://stocktwits.com/${username}/message/${message.id}`
+        : `https://stocktwits.com/symbol/${encodeURIComponent(ticker)}`;
+      events.push({
+        source: "StockTwits",
+        ticker,
+        name: name || ticker,
+        title: String(message?.body || `${ticker} chatter on StockTwits`).slice(0, 240),
+        url,
+        mentions: 1,
+        sentiment,
+        priceMove: 0,
+        relativeVolume: 1,
+        lastPrice: null,
+        quoteAsOf: null,
+        quoteSource: null,
+        published: message?.created_at || new Date().toISOString(),
+      });
+    }
+  } catch (error) {
+    failures.push(`StockTwits ${ticker}: ${error.message}`);
   }
 }
 
