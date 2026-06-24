@@ -57,41 +57,49 @@ function getState() {
 }
 
 async function loadSnapshot(force = false) {
-  if (!force && window.SIGNALDESK_DATA?.dataMode === "real-public-no-key") {
+  const canFetchJson = location.protocol === "http:" || location.protocol === "https:";
+  if (canFetchJson || force) {
+    try {
+      const response = await fetch(`data/signals.json?ts=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("No real data snapshot found.");
+      snapshot = await response.json();
+      await loadHistory(force);
+      return snapshot?.dataMode === "real-public-no-key";
+    } catch {
+      snapshot = null;
+      history = null;
+    }
+  }
+
+  if (window.SIGNALDESK_DATA?.dataMode === "real-public-no-key") {
     snapshot = window.SIGNALDESK_DATA;
     await loadHistory(force);
     return true;
   }
 
-  try {
-    const response = await fetch(`data/signals.json?ts=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) throw new Error("No real data snapshot found.");
-    snapshot = await response.json();
-    await loadHistory(force);
-    return snapshot?.dataMode === "real-public-no-key";
-  } catch {
-    snapshot = null;
-    history = null;
-    return false;
-  }
+  return false;
 }
 
 async function loadHistory(force = false) {
-  if (!force && window.SIGNALDESK_HISTORY?.dataMode === "real-public-no-key-history") {
+  const canFetchJson = location.protocol === "http:" || location.protocol === "https:";
+  if (canFetchJson || force) {
+    try {
+      const response = await fetch(`data/history.json?ts=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("No history found.");
+      const data = await response.json();
+      history = data?.dataMode === "real-public-no-key-history" ? data : null;
+      return Boolean(history);
+    } catch {
+      history = null;
+    }
+  }
+
+  if (window.SIGNALDESK_HISTORY?.dataMode === "real-public-no-key-history") {
     history = window.SIGNALDESK_HISTORY;
     return true;
   }
 
-  try {
-    const response = await fetch(`data/history.json?ts=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) throw new Error("No history found.");
-    const data = await response.json();
-    history = data?.dataMode === "real-public-no-key-history" ? data : null;
-    return Boolean(history);
-  } catch {
-    history = null;
-    return false;
-  }
+  return false;
 }
 
 function currentSnapshotEntry() {
@@ -211,17 +219,15 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
       const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
       const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
       const sourceBreadth = SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length;
-      const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
       const signalScore = clamp(
         0,
         100,
-        27 * Math.sqrt(item.mentions / maxMentions) +
-          20 * clamp(0, 1, momentum / 80 + 0.25) +
-          17 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
+        30 * Math.sqrt(item.mentions / maxMentions) +
+          22 * clamp(0, 1, momentum / 80 + 0.25) +
+          18 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
           12 * clamp(0, 1, priceMove / 6) +
-          9 * clamp(0, 1, relativeVolume / 2.5) +
-          9 * sourceBreadth +
-          6 * shortPressure
+          10 * clamp(0, 1, relativeVolume / 2.5) +
+          8 * sourceBreadth
       );
       return {
         ticker: item.ticker,
