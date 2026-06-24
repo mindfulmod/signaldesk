@@ -1,5 +1,5 @@
 window.SIGNALDESK_DATA = {
-  "generatedAt": "2026-05-09T19:00:38.774Z",
+  "generatedAt": "2026-06-24T00:22:40.930Z",
   "dataMode": "real-public-no-key",
   "sourceNote": "Real snapshot from public no-key sources. Coverage is best-effort and less complete than paid APIs for X, Google Trends, StockTwits, and options flow.",
   "sources": [
@@ -11,1497 +11,25 @@ window.SIGNALDESK_DATA = {
     "MarketWatch",
     "Price/Volume"
   ],
-  "failures": [],
+  "failures": [
+    "Wallstreetbets: 403 Blocked",
+    "Wallstreetbets: 403 Blocked",
+    "Reddit Finance: 403 Blocked",
+    "Reddit Finance: 403 Blocked",
+    "Reddit Finance: 403 Blocked"
+  ],
   "signals": [
     {
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "mentions": 248,
-      "momentum": 23.383084577114428,
-      "sentiment": 0.08640552995391705,
-      "priceMove": 6.485223307785656,
-      "lastPrice": 105.47000122070312,
-      "relativeVolume": 1.6027198417786481,
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "mentions": 44,
+      "momentum": 158.8235294117647,
+      "sentiment": -0.10757575757575756,
+      "priceMove": -16.79842067951667,
+      "lastPrice": 2.0799999237060547,
+      "relativeVolume": 1.598344746923972,
       "optionsActivity": 0,
-      "signalScore": 67.00991107225035,
-      "sources": {
-        "Wallstreetbets": 176,
-        "Reddit Finance": 23,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 47
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "$RKLB been holding on for 2 years now ",
-          "url": "https://i.redd.it/r7f7rtxm640h1.jpeg",
-          "published": "2026-05-09T13:32:20.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "106 RKLB calls. Mocked yesterday. Up 560% today. Yesterday: he's finished. Today: you keep mocking  I keep counting money. It's not luck. I just did the math. I can afford the loss",
-          "url": "https://i.redd.it/sshqgn66axzg1.png",
-          "published": "2026-05-08T14:23:29.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$1M+ RKLB gains This is my biggest lot by far. The rest of my position is another few hundred k. I'm holding this for the long haul to Mars.",
-          "url": "https://i.redd.it/zbmphwl8wzzg1.png",
-          "published": "2026-05-08T23:06:55.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "4 years later $rklb 4 years ago i posted my $rklb position. At one point i had 18750 shares, i sold 8750 this and last year to pay for my house. Letting the last 10k shares ride. Gz to anyone who hopped on the train! Never sell a good compa",
-          "url": "https://www.reddit.com/gallery/1t7vfg1",
-          "published": "2026-05-09T05:07:29.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Congrats RKLB Holders! (I told you...) https://preview.redd.it/7woewo2sdzzg1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=f515f007d7e7d4f79385c7945c5b89f2ecdd5f8a\n\nRelevant DD. Positions in comments. This is the trade of the next of d",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7l71r/congrats_rklb_holders_i_told_you/",
-          "published": "2026-05-08T21:24:58.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Hit 100k for the first time thanks to RKLB When I hit 50k for the first time a couple months ago, I set a goal to reach 100k before I turned 25. Thanks to Sir  Peter Beck and his phenomenal hair, I reached that goal with less than a month t",
-          "url": "https://www.reddit.com/gallery/1t7a5y4",
-          "published": "2026-05-08T14:49:09.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "mentions": 34,
-      "momentum": 183.33333333333331,
-      "sentiment": 0.16176470588235295,
-      "priceMove": 7.744973452956483,
-      "lastPrice": 54.349998474121094,
-      "relativeVolume": 2.480579644931686,
-      "optionsActivity": 0,
-      "signalScore": 65.47782666757317,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 12,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 22
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "HANTAVIRUS - Potential? Am I the only one watching $INO right now because of the Hantavirus concerns? \n\nWhat else could go up doing a new possible pandemic? \n\nPeople forget how insane the money flow into pharma and biotech was during COVID.",
-          "url": "https://reddit.com/r/stocks/comments/1t79wzl/hantavirus_potential/",
-          "published": "2026-05-08T14:40:03.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Hantavirus portfolio Do you like these stocks in case of an epidemic?\n\n**EBS - Emergent BioSolutions** is a manufacturer of vaccines working with the US government. \n\nFrom Wikipedia- \"During the COVID-19 pandemic, Emergent BioSolutions also",
-          "url": "https://reddit.com/r/stocks/comments/1t7dq95/hantavirus_portfolio/",
-          "published": "2026-05-08T16:56:32.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Unusual Options Activity In MRNA Sample size is too small to trade based on this …need more. Right? \n\n🟢 MRNA — $49 Call, 8 days to expiration\n\nUnusual Flow: $1.1M of these calls in volume-burst activity (no clean sweep pattern).\n\nHistorica",
-          "url": "https://reddit.com/r/options/comments/1t70mxe/unusual_options_activity_in_mrna/",
-          "published": "2026-05-08T07:20:19.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "MRNA $54.35, price +12.0%, volume 3.3x",
-          "url": "https://finance.yahoo.com/quote/MRNA",
-          "published": "2026-05-09T19:00:33.687Z"
-        }
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "name": "Dell Technologies",
-      "mentions": 30,
-      "momentum": 200,
-      "sentiment": 0.2450980392156863,
-      "priceMove": 8.740460219877551,
-      "lastPrice": 260.4599914550781,
-      "relativeVolume": 1.7858882638523534,
-      "optionsActivity": 0,
-      "signalScore": 64.31526401139193,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 10,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 20
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "Time to Make Some Bearish Bets... Last October, when the market was racing higher, I published a piece called “Are We on a Ticking Time Bomb?” where I laid out exactly where I thought the market would top. At the time, the major indexes wer",
-          "url": "https://reddit.com/r/options/comments/1t3jz9f/time_to_make_some_bearish_bets/",
-          "published": "2026-05-04T14:51:37.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "DELL $260.46, price +13.1%, volume 2.2x",
-          "url": "https://finance.yahoo.com/quote/DELL",
-          "published": "2026-05-09T19:00:33.250Z"
-        }
-      ]
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron",
-      "mentions": 354,
-      "momentum": 5.6716417910447765,
-      "sentiment": 0.25697471078827017,
-      "priceMove": 0.8315253269501297,
-      "lastPrice": 746.8099975585938,
-      "relativeVolume": 1.0111118888663895,
-      "optionsActivity": 0,
-      "signalScore": 58.38813681188351,
-      "sources": {
-        "Wallstreetbets": 242,
-        "Reddit Finance": 91,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 19
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Any WSB OGs remember the MU $80 memes? Today MU went up more than that amount in a single day ",
-          "url": "https://i.redd.it/my96gk3py00h1.png",
-          "published": "2026-05-09T02:42:29.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Su-bae has always been the one Good enough for a screenshot good enough to exit, however I exited $mu too early so I'll be holding this one till next year. ",
-          "url": "https://i.redd.it/44g6ybtx550h1.jpeg",
-          "published": "2026-05-09T16:50:11.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-          "published": "2026-05-08T21:00:35.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Cheers to my Dad Bought my Mom Micron before he passed. 2.3k to 299k. ",
-          "url": "https://i.redd.it/axi98k4xa10h1.png",
-          "published": "2026-05-09T03:50:59.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "I’m going to be sick $600K gain - MU ",
-          "url": "https://i.redd.it/pkifj2xxxxzg1.jpeg",
-          "published": "2026-05-08T16:32:55.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "mentions": 406,
-      "momentum": 0,
-      "sentiment": 0.17654820548909222,
-      "priceMove": 0.6187966641192667,
-      "lastPrice": 124.91999816894531,
-      "relativeVolume": 1.0227587531961,
-      "optionsActivity": 0,
-      "signalScore": 57.511296482171026,
-      "sources": {
-        "Wallstreetbets": 279,
-        "Reddit Finance": 105,
-        "SEC Filings": 0,
-        "Yahoo Public News": 2,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 18
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "INTC Option Trade My other post had an issue, so had to delete.  \n\\-INTC…bought \\*\\*100 Contracts\\*\\* in July 2025 of the Dec 2026 $70 Calls\n\n\\-have been selling on huge run ups and recently sold 5 more\n\n\\-never thought I’d see a % gain lik",
-          "url": "https://i.redd.it/8naxxw79f40h1.jpeg",
-          "published": "2026-05-09T14:20:38.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-          "published": "2026-05-08T21:00:35.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "INTC calls years in the making Years of being called a regard paid off. The original position had 150 contracts but I sold 50 after earning. \n\nPosting more updates on X including other regarded future plays like this but not sure if I'm all",
-          "url": "https://i.redd.it/2mnle0hsozzg1.png",
-          "published": "2026-05-08T22:25:10.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "My Intel stocks are going retard mode ",
-          "url": "https://www.reddit.com/gallery/1t7dw88",
-          "published": "2026-05-08T17:02:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-          "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-          "published": "2026-05-08T16:53:42.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "mentions": 237,
-      "momentum": 0,
-      "sentiment": 0.25450611273396084,
-      "priceMove": 0.6758122331825162,
-      "lastPrice": 455.19000244140625,
-      "relativeVolume": 0.9980469600487464,
-      "optionsActivity": 0,
-      "signalScore": 51.30919449962625,
-      "sources": {
-        "Wallstreetbets": 92,
-        "Reddit Finance": 121,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 14
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "I’m officially retiring from Options This has got to be the third or fourth time I’ve perfectly timed options, in exactly the wrong direction. Bought AMD calls a couple months ago (too early), expired worthless. Sold AMD covered calls more ",
-          "url": "https://i.redd.it/rue6xg26610h1.jpeg",
-          "published": "2026-05-09T03:24:21.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Cheers WSB, it's been a ride. Up $250k in the past month with AMD at 23 Held through earnings on 3x leverage AMD despite expecting a huge dump as is usually the case with AMD. The regard in me decided to take a gamble as AMD has been pumpin",
-          "url": "https://www.reddit.com/gallery/1t7asj4",
-          "published": "2026-05-08T15:11:00.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-          "url": "https://i.redd.it/utd374zjozzg1.png",
-          "published": "2026-05-08T22:24:44.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-          "url": "https://www.reddit.com/gallery/1t6tt8l",
-          "published": "2026-05-08T01:33:28.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "My luck in a nutshell. I also sold AMD at $345, you're welcome! ",
-          "url": "https://i.redd.it/fs2721s8hyzg1.jpeg",
-          "published": "2026-05-08T18:22:32.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "mentions": 19,
-      "momentum": 72.72727272727273,
-      "sentiment": 0.2236842105263158,
-      "priceMove": 1.8358416146503125,
-      "lastPrice": 527.77001953125,
-      "relativeVolume": 1.1589094729658134,
-      "optionsActivity": 0,
-      "signalScore": 51.26334220343067,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 11,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "A review of the SaaSpocalypse and most of the stocks that dumped because of AI. Here's a short review of SaaS and AI dumpsters, if you're a masochist \"value investor\" like me or brave enough: choose your poison if you want to fight AI.\n\nEas",
-          "url": "https://reddit.com/r/stocks/comments/1t7g1jz/a_review_of_the_saaspocalypse_and_most_of_the/",
-          "published": "2026-05-08T18:15:56.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "SpaceX IPO effect: Will we begin to have index based funds, but they don't invest in particular index companies? With the SpaceX IPO coming up - initially I was excited about it.\n\nThen, it was for SpaceX + xAI + Twitter - all of which are n",
-          "url": "https://reddit.com/r/investing/comments/1t3tx4w/spacex_ipo_effect_will_we_begin_to_have_index/",
-          "published": "2026-05-04T20:37:07.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "CRWD $527.77, price +4.4%, volume 1.4x",
-          "url": "https://finance.yahoo.com/quote/CRWD",
-          "published": "2026-05-09T19:00:33.747Z"
-        }
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "mentions": 194,
-      "momentum": 0.5181347150259068,
-      "sentiment": 0.2599410898379971,
-      "priceMove": 0.036070258567835904,
-      "lastPrice": 215.1999969482422,
-      "relativeVolume": 0.9982325835416649,
-      "optionsActivity": 0,
-      "signalScore": 49.27224360328222,
-      "sources": {
-        "Wallstreetbets": 59,
-        "Reddit Finance": 125,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-          "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-          "published": "2026-05-08T17:17:03.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Tech is going to keep ripping and continue through NVDA earnings (position in XLK) Sharing my positions with y'all. We're looking at very similar seasonal earnings behavior for tech. Check out the charts from last year to see how the sector",
-          "url": "https://www.reddit.com/gallery/1t7kfic",
-          "published": "2026-05-08T20:56:26.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "mentions": 41,
-      "momentum": 412.5,
-      "sentiment": -0.1530081300813008,
-      "priceMove": -19.01316397130567,
-      "lastPrice": 196.1300048828125,
-      "relativeVolume": 2.76595266523263,
-      "optionsActivity": 0,
-      "signalScore": 47.45609968875545,
-      "sources": {
-        "Wallstreetbets": 4,
-        "Reddit Finance": 4,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 33
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-          "published": "2026-05-09T10:43:24.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Cloudflare ($NET) down nearly 19% after earnings Cloudflare is down nearly 19% after hours despite beating Q1 expectations. Looks like the market is reacting less to the headline earnings and more to the 20% workforce cut, restructuring cos",
-          "url": "https://reddit.com/r/options/comments/1t70x83/cloudflare_net_down_nearly_19_after_earnings/",
-          "published": "2026-05-08T07:36:41.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "NET $196.13, price -23.6%, volume 3.2x",
-          "url": "https://finance.yahoo.com/quote/NET",
-          "published": "2026-05-09T19:00:33.816Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "mentions": 179,
-      "momentum": 0,
-      "sentiment": 0.22020484171322158,
-      "priceMove": 0.05714094943370227,
-      "lastPrice": 293.32000732421875,
-      "relativeVolume": 1.0015376528691988,
-      "optionsActivity": 0,
-      "signalScore": 47.34548976608648,
-      "sources": {
-        "Wallstreetbets": 79,
-        "Reddit Finance": 85,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "In 2000, I got my own brokerage account and bought some AAPL. ",
-          "url": "https://i.redd.it/c4p2xzemcxzg1.png",
-          "published": "2026-05-08T14:35:21.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-          "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-          "published": "2026-05-08T16:53:42.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-          "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-          "published": "2026-05-08T17:17:03.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-          "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-          "published": "2026-05-08T17:17:03.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "IONQ",
-      "name": "IonQ",
-      "mentions": 7,
-      "momentum": 250,
-      "sentiment": 0.17857142857142858,
-      "priceMove": 2.337010671300079,
-      "lastPrice": 49.2400016784668,
-      "relativeVolume": 0.7441316040013455,
-      "optionsActivity": 0,
-      "signalScore": 46.89586319337681,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 2,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "SEC Filings",
-          "title": "4 - IonQ, Inc. (0001824920) (Issuer)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1824920/000119312526215307/0001193125-26-215307-index.htm",
-          "published": "2026-05-08T21:55:03-04:00"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "IONQ $49.24, price +3.3%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/IONQ",
-          "published": "2026-05-09T19:00:33.172Z"
-        }
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "mentions": 78,
-      "momentum": -1.2658227848101267,
-      "sentiment": 0.5199023199023199,
-      "priceMove": -0.08607531558452412,
-      "lastPrice": 415.1199951171875,
-      "relativeVolume": 1.0076610719159147,
-      "optionsActivity": 0,
-      "signalScore": 44.90335956156997,
-      "sources": {
-        "Wallstreetbets": 20,
-        "Reddit Finance": 47,
-        "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-          "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-          "published": "2026-05-09T17:24:26.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-          "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:53:52.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "You don't have to make up losses from the stock that caused them I know that's obvious and simple advice but I saw it in a comment this morning somewhere and it really jumped out at me.  Waiting around for a recovery while it goes sideways ",
-          "url": "https://reddit.com/r/stocks/comments/1t5sxfx/you_dont_have_to_make_up_losses_from_the_stock/",
-          "published": "2026-05-06T23:02:13.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "We're seeing the first subtle signs of Datacenters being overbuilt SpaceX and Anthropic recently announced a deal for SpaceX to provide 100% of capacity from Colossus 1 datacenter to Anthropic in the very near term. This addresses Anthropic",
-          "url": "https://reddit.com/r/stocks/comments/1t6qu3x/were_seeing_the_first_subtle_signs_of_datacenters/",
-          "published": "2026-05-07T23:19:44.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "COST",
-      "name": "Costco",
-      "mentions": 225,
-      "momentum": 0,
-      "sentiment": 0.1188039614706281,
-      "priceMove": -0.004308070719309544,
-      "lastPrice": 1008.7899780273438,
-      "relativeVolume": 0.9993834337455518,
-      "optionsActivity": 0,
-      "signalScore": 44.74276061571572,
-      "sources": {
-        "Wallstreetbets": 87,
-        "Reddit Finance": 135,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-          "published": "2026-05-08T21:00:35.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "I'm not fucking selling - INTC 40k to 6mil. Please don't ask about the cost basis. Check the other screenshots to see as I rolled them.",
-          "url": "https://www.reddit.com/gallery/1t7xfiz",
-          "published": "2026-05-09T06:55:13.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$2.1M bet against Semiconductors Short - SOXS Who will win, Nana or me? Intel has been getting pretty sky-high lately. Bought SOXS at average cost basis of $8.96/sh. Just got back from the Berkshire Hathaway conference, where Warren Buffett",
-          "url": "https://www.reddit.com/gallery/1t7g2mr",
-          "published": "2026-05-08T18:16:59.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-          "published": "2026-05-09T10:43:24.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "mentions": 146,
-      "momentum": 0,
-      "sentiment": 0.23312133072407043,
-      "priceMove": 0.014507821120705248,
-      "lastPrice": 400.79998779296875,
-      "relativeVolume": 0.9960833675543013,
-      "optionsActivity": 0,
-      "signalScore": 44.49804270228364,
-      "sources": {
-        "Wallstreetbets": 14,
-        "Reddit Finance": 123,
-        "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "$1,200-&gt;$51,000 with Google ",
-          "url": "https://i.redd.it/jrqsn079850h1",
-          "published": "2026-05-09T17:03:12.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$1,200-&gt;$51,000 with Google ",
-          "url": "https://i.redd.it/jrqsn079850h1",
-          "published": "2026-05-09T17:03:12.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-          "published": "2026-05-09T10:43:24.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "/r/Stocks Weekend Discussion Saturday - May 09, 2026 This is the weekend edition of our stickied discussion thread.  Discuss your trades / moves from last week and what you're planning on doing for the week ahead.\n\nSome helpful links:\n\n* [F",
-          "url": "https://reddit.com/r/stocks/comments/1t805tp/rstocks_weekend_discussion_saturday_may_09_2026/",
-          "published": "2026-05-09T09:30:07.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-          "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-          "published": "2026-05-09T17:24:26.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "The case for purchasing any SaaSpocalyse stocks I've been wondering about stocks like Service Now (NOW), Salesforce (CRM), and others since they got hammered due to fears of AI replacing them. Are they in fact oversold? Perhaps like video g",
-          "url": "https://reddit.com/r/stocks/comments/1t7farx/the_case_for_purchasing_any_saaspocalyse_stocks/",
-          "published": "2026-05-08T17:50:18.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "mentions": 51,
-      "momentum": 0,
-      "sentiment": 0.5130718954248367,
-      "priceMove": 0.6631003184177969,
-      "lastPrice": 430,
-      "relativeVolume": 1.0202747097287814,
-      "optionsActivity": 0,
-      "signalScore": 44.111422305556054,
-      "sources": {
-        "Wallstreetbets": 20,
-        "Reddit Finance": 15,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Is Celestica still a good long-term investment after its recent run-up? Hi everyone,\n\nI’m trying to get a more grounded view on Celestica (CLS) and would appreciate perspectives from long-term investors here.\n\nCLS has had a strong run over ",
-          "url": "https://reddit.com/r/stocks/comments/1t7q8gc/is_celestica_still_a_good_longterm_investment/",
-          "published": "2026-05-09T00:57:58.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-          "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:53:52.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Anyone know of an AI Energy and Infrastructure ETF - minus semiconductor? The closest match I could find is AIPO - it has exactly the names I want GEV CEG VRT VST ETN BE TLN CCJ.  But despite the focus being energy, grid and data center ope",
-          "url": "https://reddit.com/r/stocks/comments/1t6gjp7/anyone_know_of_an_ai_energy_and_infrastructure/",
-          "published": "2026-05-07T17:01:36.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "$25K AI options portfolio: Day 1 -$10.88, Day 2 +5.2%, and 4 bugs to discuss Following up on Tuesday's deployment post. Day 1 is in the books and Day 2 is mid-tape, so I want to walk through what actually happened, why the rules are the rul",
-          "url": "https://nexustrade.io/blog/day-1-ai-options-portfolio-25000-20260506",
-          "published": "2026-05-07T01:11:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "mentions": 94,
-      "momentum": -2.083333333333333,
-      "sentiment": 0.32990543735224587,
-      "priceMove": 0.34225247458733765,
-      "lastPrice": 428.3500061035156,
-      "relativeVolume": 1.0179572409776783,
-      "optionsActivity": 0,
-      "signalScore": 43.60187862588482,
-      "sources": {
-        "Wallstreetbets": 42,
-        "Reddit Finance": 36,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-          "url": "https://i.redd.it/utd374zjozzg1.png",
-          "published": "2026-05-08T22:24:44.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-          "published": "2026-05-08T21:57:15.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Smol TSLA gains Almost shit myself between yesterday and today, sold a little early on both accounts but this feels great being my 2nd week back in the casino.\n\nTSLA 410C, 415C, 420C\n\n\\-Your wife’s girlfriend.",
-          "url": "https://www.reddit.com/gallery/1t7kuks",
-          "published": "2026-05-08T21:11:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "FML Tesla I blame no one but myself for panicking",
-          "url": "https://i.redd.it/mmo607xfnxzg1.jpeg",
-          "published": "2026-05-08T15:34:03.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-          "url": "https://i.redd.it/utd374zjozzg1.png",
-          "published": "2026-05-08T22:24:44.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-          "published": "2026-05-08T21:57:15.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "mentions": 114,
-      "momentum": 0,
-      "sentiment": 0.27631578947368424,
-      "priceMove": 0.014653646802220298,
-      "lastPrice": 272.67999267578125,
-      "relativeVolume": 0.9949673885303154,
-      "optionsActivity": 0,
-      "signalScore": 43.51127489832507,
-      "sources": {
-        "Wallstreetbets": 32,
-        "Reddit Finance": 67,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-          "url": "https://www.reddit.com/gallery/1t6tt8l",
-          "published": "2026-05-08T01:33:28.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-          "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-          "published": "2026-05-09T05:00:29.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "What’s your opinion on selling All Tech Heavy Stocks soon and moving to SP500 $VOO? I’ve had quite the run up on Tech Stocks I bought in Nov 2022 such as $12k AMZN +200%, $30k AIQ +200%, and a few that just gained well the past few months $",
-          "url": "https://reddit.com/r/stocks/comments/1t7mi2f/whats_your_opinion_on_selling_all_tech_heavy/",
-          "published": "2026-05-08T22:16:11.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-          "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:53:52.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AI",
-      "name": "C3.ai",
-      "mentions": 6,
-      "momentum": 35,
-      "sentiment": 0.25,
-      "priceMove": 3.0271395006529382,
-      "lastPrice": 9.869999885559082,
-      "relativeVolume": 1.1199543648349939,
-      "optionsActivity": 0,
-      "signalScore": 43.306080503774844,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "AI $9.87, price +3.0%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/AI",
-          "published": "2026-05-09T19:00:33.046Z"
-        }
-      ]
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "mentions": 18,
-      "momentum": 63.63636363636363,
-      "sentiment": 0.055,
-      "priceMove": -0.9433151979510974,
-      "lastPrice": 181.82000732421875,
-      "relativeVolume": 1.1522184370172586,
-      "optionsActivity": 0,
-      "signalScore": 43.054206833732835,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 11,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "The case for purchasing any SaaSpocalyse stocks I've been wondering about stocks like Service Now (NOW), Salesforce (CRM), and others since they got hammered due to fears of AI replacing them. Are they in fact oversold? Perhaps like video g",
-          "url": "https://reddit.com/r/stocks/comments/1t7farx/the_case_for_purchasing_any_saaspocalyse_stocks/",
-          "published": "2026-05-08T17:50:18.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "A review of the SaaSpocalypse and most of the stocks that dumped because of AI. Here's a short review of SaaS and AI dumpsters, if you're a masochist \"value investor\" like me or brave enough: choose your poison if you want to fight AI.\n\nEas",
-          "url": "https://reddit.com/r/stocks/comments/1t7g1jz/a_review_of_the_saaspocalypse_and_most_of_the/",
-          "published": "2026-05-08T18:15:56.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "CRM $181.82, price -2.4%, volume 1.4x",
-          "url": "https://finance.yahoo.com/quote/CRM",
-          "published": "2026-05-09T19:00:33.431Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "mentions": 129,
-      "momentum": 0,
-      "sentiment": 0.13839489284085726,
-      "priceMove": 0.02560022636044086,
-      "lastPrice": 737.6199951171875,
-      "relativeVolume": 0.9991673846904259,
-      "optionsActivity": 0,
-      "signalScore": 42.159822287816816,
-      "sources": {
-        "Wallstreetbets": 24,
-        "Reddit Finance": 97,
-        "SEC Filings": 0,
-        "Yahoo Public News": 2,
-        "CNBC": 0,
-        "MarketWatch": 2,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Closed yesterday SPY Puts and put them in MU. ",
-          "url": "https://www.reddit.com/gallery/1t7huyy",
-          "published": "2026-05-08T19:21:32.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Closed yesterday SPY Puts and put them in MU. ",
-          "url": "https://www.reddit.com/gallery/1t7huyy",
-          "published": "2026-05-08T19:21:32.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "/r/Stocks Weekend Discussion Saturday - May 09, 2026 This is the weekend edition of our stickied discussion thread.  Discuss your trades / moves from last week and what you're planning on doing for the week ahead.\n\nSome helpful links:\n\n* [F",
-          "url": "https://reddit.com/r/stocks/comments/1t805tp/rstocks_weekend_discussion_saturday_may_09_2026/",
-          "published": "2026-05-09T09:30:07.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "r/Stocks Daily Discussion &amp; Fundamentals Friday May 08, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on fundamentals, but if fundamentals aren't your thing then just ignore the theme.",
-          "url": "https://reddit.com/r/stocks/comments/1t72w8g/rstocks_daily_discussion_fundamentals_friday_may/",
-          "published": "2026-05-08T09:30:07.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "mentions": 48,
-      "momentum": 0,
-      "sentiment": 0.33209325396825395,
-      "priceMove": 0.7590967919136283,
-      "lastPrice": 35.369998931884766,
-      "relativeVolume": 0.9616175632268656,
-      "optionsActivity": 0,
-      "signalScore": 40.719433244163795,
-      "sources": {
-        "Wallstreetbets": 24,
-        "Reddit Finance": 9,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-          "url": "https://www.reddit.com/gallery/1t852py",
-          "published": "2026-05-09T13:29:47.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-          "url": "https://www.reddit.com/gallery/1t852py",
-          "published": "2026-05-09T13:29:47.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-          "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-          "published": "2026-05-07T19:36:13.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SMCI $35.37, price +5.2%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/SMCI",
-          "published": "2026-05-09T19:00:29.654Z"
-        }
-      ]
-    },
-    {
-      "ticker": "ROKU",
-      "name": "Roku",
-      "mentions": 4,
-      "momentum": 35,
-      "sentiment": 0.25,
-      "priceMove": 2.2578358346046983,
-      "lastPrice": 129.52999877929688,
-      "relativeVolume": 0.7373837324361765,
-      "optionsActivity": 0,
-      "signalScore": 39.5679566008669,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "ROKU $129.53, price +2.3%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/ROKU",
-          "published": "2026-05-09T19:00:33.875Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "mentions": 47,
-      "momentum": 0,
-      "sentiment": 0.2612765957446808,
-      "priceMove": -0.13297872340425532,
-      "lastPrice": 15.75,
-      "relativeVolume": 0.995085628534947,
-      "optionsActivity": 0,
-      "signalScore": 37.40609629730326,
-      "sources": {
-        "Wallstreetbets": 14,
-        "Reddit Finance": 19,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "SoFi Releases Its Q1 10-Q, Quietly Confirming Massive Fair Value Losses, Credit Card Distress **TL;DR: SoFi's Q1 2026 10-Q, released yesterday, quietly added a previously missing GAAP disclosure that confirms at least $1B of historical fair",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7das0/sofi_releases_its_q1_10q_quietly_confirming/",
-          "published": "2026-05-08T16:41:00.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "SoFi Releases Its Q1 10-Q, Quietly Confirming Massive Fair Value Losses, Credit Card Distress **TL;DR: SoFi's Q1 2026 10-Q, released yesterday, quietly added a previously missing GAAP disclosure that confirms at least $1B of historical fair",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7das0/sofi_releases_its_q1_10q_quietly_confirming/",
-          "published": "2026-05-08T16:41:00.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "When will the vortex ofAI/memory/chip stocks sucking money out of other stocks end? AI stocks have gone parabolic in the past couple of months. It seems everything remotely is related (such as ai infrastructure, construction related, coolin",
-          "url": "https://reddit.com/r/stocks/comments/1t7umw8/when_will_the_vortex_ofaimemorychip_stocks/",
-          "published": "2026-05-09T04:26:46.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "SoFi Will Bounce Back SoFi serves significant amounts of purposes in terms of modern banking. Down to their student loan options for students, the offers they provide are monstrous when compared to a traditional credit union. The stock is d",
-          "url": "https://reddit.com/r/stocks/comments/1t7a42z/sofi_will_bounce_back/",
-          "published": "2026-05-08T14:47:15.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "21M, $-22 in the bank but i will reach my goal by 30! So i have nothing saved at all at the moment, im negative in my checking because i had to get gas for my car, i been doing a lot of questioning &amp; looking for - what accounts should i",
-          "url": "https://reddit.com/r/investing/comments/1t50ckt/21m_22_in_the_bank_but_i_will_reach_my_goal_by_30/",
-          "published": "2026-05-06T02:42:18.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SOFI $15.75, price -1.6%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/SOFI",
-          "published": "2026-05-09T19:00:30.259Z"
-        }
-      ]
-    },
-    {
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "mentions": 95,
-      "momentum": 0,
-      "sentiment": 0.0914344685242518,
-      "priceMove": 0.14804741616571337,
-      "lastPrice": 711.22998046875,
-      "relativeVolume": 1.0091682975157497,
-      "optionsActivity": 0,
-      "signalScore": 36.55284136675299,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 83,
-        "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "Opinion needed on buying semiconductor and chip stocks If this is not the right forum for stocks and ISA advice let me know and I will move it. Thanks.\n\nFor context I am very new to investing but have learnt a lot quickly. I started a month",
-          "url": "https://reddit.com/r/stocks/comments/1t83bxv/opinion_needed_on_buying_semiconductor_and_chip/",
-          "published": "2026-05-09T12:13:10.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "The Nasdaq's top winners are now running hotter than in 2000 &gt; The top 10 performers in the Nasdaq 100 (NDX) over the past year are up an average of 784%, according to BTIG’s Jonathan Krinsky, topping the 622% average gain for the index’",
-          "url": "https://reddit.com/r/investing/comments/1t84oc8/the_nasdaqs_top_winners_are_now_running_hotter/",
-          "published": "2026-05-09T13:13:00.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Burry dot com bubble 1999 What do you guys think of Burry saying the market today feels like ‘the last months of the 1999-2000 bubble’?\n\nCurrently the Nasdaq-100 forward P/E hit \\\\\\~60x in the dot com bubble. The current forward P/E ratio f",
-          "url": "https://reddit.com/r/investing/comments/1t7rmye/burry_dot_com_bubble_1999/",
-          "published": "2026-05-09T02:02:28.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Edward Jones advisor wants me to invest with him instead of on my own. When I was 20 I opened and a Roth IRA with Edward Jones and maxed it out. 12 years later, I just maxed it out one more time. \n\nI've just started making good money and sa",
-          "url": "https://reddit.com/r/investing/comments/1t4imcs/edward_jones_advisor_wants_me_to_invest_with_him/",
-          "published": "2026-05-05T15:22:38.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Who Controls the Space Controls the Economy: Mapping the Space Economy Bottlenecks Happy May 4th.\n\nRecently, I was interested in finding out the bottlenecks that are lagging behind main sectors.\n\nI picked Space Sector this week paying homag",
-          "url": "https://reddit.com/r/investing/comments/1t41692/who_controls_the_space_controls_the_economy/",
-          "published": "2026-05-05T01:29:05.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-          "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-          "published": "2026-05-09T15:36:27.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "mentions": 74,
-      "momentum": 0,
-      "sentiment": 0.1230127186009539,
-      "priceMove": 0.03986025942839649,
-      "lastPrice": 77.02999877929688,
-      "relativeVolume": 0.9884461650004208,
-      "optionsActivity": 0,
-      "signalScore": 36.50447641164975,
-      "sources": {
-        "Wallstreetbets": 28,
-        "Reddit Finance": 33,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-          "url": "https://www.reddit.com/gallery/1t6tt8l",
-          "published": "2026-05-08T01:33:28.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-          "url": "https://www.reddit.com/gallery/1t7w3sp",
-          "published": "2026-05-09T05:43:08.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Robinhood is super shady. Account under review for no reason I have a Robinhood account and I tried moving some BTC to cold storage. Robinhood flagged my account for no reason and I get a notification that my account is under review for sus",
-          "url": "https://reddit.com/r/investing/comments/1t53gr2/robinhood_is_super_shady_account_under_review_for/",
-          "published": "2026-05-06T05:15:17.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Options trading platform for my use case. So I do an options trade every morning. I just follow some guy, turned 25k into 250k over six months so it’d astonishingly consistent. It prints like crazy. The issue is that I can’t move my SL here",
-          "url": "https://reddit.com/r/options/comments/1t5iq6w/options_trading_platform_for_my_use_case/",
-          "published": "2026-05-06T16:55:40.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Robinhood not allowing diagonal spreads? So I've done LEAPS and PMCC strategy for a few years from 2020 to roughly 2023. I liquidated but want to get back into it. I still have level 3 options. Just bought a long call ITM but it won't let m",
-          "url": "https://reddit.com/r/options/comments/1t4l8x2/robinhood_not_allowing_diagonal_spreads/",
-          "published": "2026-05-05T16:54:10.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "mentions": 108,
-      "momentum": 0,
-      "sentiment": 0.018612580834803084,
-      "priceMove": -0.04311305843146669,
-      "lastPrice": 609.6300048828125,
-      "relativeVolume": 0.9935026912195458,
-      "optionsActivity": 0,
-      "signalScore": 36.425462872998374,
-      "sources": {
-        "Wallstreetbets": 30,
-        "Reddit Finance": 70,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "I've been holding CoreWeave since more than one year but last night's earnings just shook my conviction. I've been pretty bullish on CoreWeave since more than one year. The thesis was simple to me,  AI needs GPUs, GPUs need infrastructure, ",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t72v75/ive_been_holding_coreweave_since_more_than_one/",
-          "published": "2026-05-08T09:28:30.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-          "published": "2026-05-09T13:50:49.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-          "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-          "published": "2026-05-09T17:24:26.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Could Meta be a fad? This may get a bit sociological, but when I’m looking at the longterm health of Meta, I wonder whether Facebook/Instagram may fall out of popularity.  In discussions of Insta/FB, I see a prevailing opinion that: “they k",
-          "url": "https://reddit.com/r/stocks/comments/1t8cm5f/could_meta_be_a_fad/",
-          "published": "2026-05-09T18:19:48.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-          "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-          "published": "2026-05-09T05:00:29.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "BA",
-      "name": "Boeing",
-      "mentions": 47,
-      "momentum": 0,
-      "sentiment": 0.17654011959393684,
-      "priceMove": 0.34977507007936465,
-      "lastPrice": 237.36000061035156,
-      "relativeVolume": 1.0297685676815795,
-      "optionsActivity": 0,
-      "signalScore": 34.92258309302939,
-      "sources": {
-        "Wallstreetbets": 14,
-        "Reddit Finance": 27,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "I've been holding CoreWeave since more than one year but last night's earnings just shook my conviction. I've been pretty bullish on CoreWeave since more than one year. The thesis was simple to me,  AI needs GPUs, GPUs need infrastructure, ",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t72v75/ive_been_holding_coreweave_since_more_than_one/",
-          "published": "2026-05-08T09:28:30.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "MU and MUU Gains Holding lot of MU and MUU, Although sold some in the morning before the run. Thank you Sanjay.\n\nhttps://preview.redd.it/emx0z2b3dzzg1.jpg?width=1289&amp;format=pjpg&amp;auto=webp&amp;s=610aa45da402d2d5d7585be7e1b4bab94ed2ca",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t7kz8t/mu_and_muu_gains/",
-          "published": "2026-05-08T21:16:41.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-          "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-          "published": "2026-05-07T15:29:06.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Who Controls the Space Controls the Economy: Mapping the Space Economy Bottlenecks Happy May 4th.\n\nRecently, I was interested in finding out the bottlenecks that are lagging behind main sectors.\n\nI picked Space Sector this week paying homag",
-          "url": "https://reddit.com/r/investing/comments/1t41692/who_controls_the_space_controls_the_economy/",
-          "published": "2026-05-05T01:29:05.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Will a PBR Petrobras call option get exercised and will I miss out the dividends? https://preview.redd.it/47y7qq1itdzg1.png?width=1842&amp;format=png&amp;auto=webp&amp;s=27b3ba45c2600dfae0022533ad7e0e009e87a684\n\n\n\nI have 1800 PBR Petrobras ",
-          "url": "https://reddit.com/r/options/comments/1t4s4x3/will_a_pbr_petrobras_call_option_get_exercised/",
-          "published": "2026-05-05T20:54:18.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Time to Make Some Bearish Bets... Last October, when the market was racing higher, I published a piece called “Are We on a Ticking Time Bomb?” where I laid out exactly where I thought the market would top. At the time, the major indexes wer",
-          "url": "https://reddit.com/r/options/comments/1t3jz9f/time_to_make_some_bearish_bets/",
-          "published": "2026-05-04T14:51:37.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "mentions": 46,
-      "momentum": 0,
-      "sentiment": 0.11195652173913044,
-      "priceMove": 0.023793283419234243,
-      "lastPrice": 137.8000030517578,
-      "relativeVolume": 0.9837210890195032,
-      "optionsActivity": 0,
-      "signalScore": 33.45939447060635,
-      "sources": {
-        "Wallstreetbets": 15,
-        "Reddit Finance": 19,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-          "url": "https://i.redd.it/utd374zjozzg1.png",
-          "published": "2026-05-08T22:24:44.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Archer vs Joby: Am I Missing Something, or Does Joby Clearly Have the Stronger Setup? Something I’ve been thinking about in the Archer vs Joby debate:\n\nWhy do some investors seem more comfortable backing Archer over Joby when you compare th",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85uzf/archer_vs_joby_am_i_missing_something_or_does/",
-          "published": "2026-05-09T14:02:31.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-          "url": "https://i.redd.it/utd374zjozzg1.png",
-          "published": "2026-05-08T22:24:44.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "AMD,NBIS Defy Gravity AMD stock up 95 percent YTD  \nNBIS stock up 100 percent YTD\n\nThese stocks did the unthinkable. It’s truly impressive and a sign. It could be that AI really is this big and it’s changing everything. What I see is Mag 7 ",
-          "url": "https://reddit.com/r/stocks/comments/1t7b884/amdnbis_defy_gravity/",
-          "published": "2026-05-08T15:26:52.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "SpaceX IPO effect: Will we begin to have index based funds, but they don't invest in particular index companies? With the SpaceX IPO coming up - initially I was excited about it.\n\nThen, it was for SpaceX + xAI + Twitter - all of which are n",
-          "url": "https://reddit.com/r/investing/comments/1t3tx4w/spacex_ipo_effect_will_we_begin_to_have_index/",
-          "published": "2026-05-04T20:37:07.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Palantir ($PLTR) Earnings Vol Trade Post-mortem - Patience is the Key Yesterday I posted my thesis for going long vol into $PLTR EA.\n\n[https://www.reddit.com/r/options/comments/1t4135r/palantir\\_pltr\\_earnings\\_vol\\_setup\\_are\\_traders/](ht",
-          "url": "https://reddit.com/r/options/comments/1t4hez8/palantir_pltr_earnings_vol_trade_postmortem/",
-          "published": "2026-05-05T14:39:30.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "DKNG",
-      "name": "DraftKings",
-      "mentions": 21,
-      "momentum": 0,
-      "sentiment": 0.2420634920634921,
-      "priceMove": 0.39651222915289436,
-      "lastPrice": 25.520000457763672,
-      "relativeVolume": 1.3043701595671324,
-      "optionsActivity": 0,
-      "signalScore": 33.272162998988534,
+      "signalScore": 64.34143093574784,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1509,1193 +37,122 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 14,
         "CNBC": 0,
         "MarketWatch": 0,
-        "Price/Volume": 7
+        "Price/Volume": 30
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "DKNG $25.52, price +1.2%, volume 1.9x",
-          "url": "https://finance.yahoo.com/quote/DKNG",
-          "published": "2026-05-09T19:00:31.190Z"
+          "title": "AMC $2.08, price -24.6%, volume 1.9x",
+          "url": "https://finance.yahoo.com/quote/AMC",
+          "published": "2026-06-24T00:22:36.455Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "DraftKings Profit Beats, Ups Prediction Market Spending",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-profit-beats-ups-prediction-182707595.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 18:27:07 +0000"
+          "title": "AMC Dilutes Again, Shares Nosedive Because This Time Is Never Different",
+          "url": "https://app.moby.co/home/news/news-amc-dilutes-again-shares-nosedive-because-this-time-is-never-different?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:48:07 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "DraftKings shares gain as Q1 revenue tops estimates on strong betting margins",
-          "url": "https://www.proactiveinvestors.com/companies/news/1091987/draftkings-shares-gain-as-q1-revenue-tops-estimates-on-strong-betting-margins-1091987.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 16:24:00 +0000"
+          "title": "AMC Stock Heads For Worst Day In Nearly Three Years – But Retail Says Debt Paydown Offers Silver Lining",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-amc-stock-is-falling-today-share-sale-debt-payoff/cZKw5dER7aX?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 13:51:58 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "DraftKings Q1 Earnings Call Highlights",
-          "url": "https://www.marketbeat.com/instant-alerts/draftkings-q1-earnings-call-highlights-2026-05-08/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
-          "published": "Fri, 08 May 2026 14:57:23 +0000"
+          "title": "AMC Entertainment Shares Slide After $200 Million Equity Raise Announcement (AMC)",
+          "url": "https://investorshub.advfn.com/market-news/article/30929/amc-entertainment-shares-slide-after-200-million-equity-raise-announcement-amc?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:55:57 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "DraftKings Beats Revenue Expectations. The Stock Is Down.",
-          "url": "https://finance.yahoo.com/m/f00f9eaf-1ea3-3a5f-ada4-d24501641319/draftkings-beats-revenue.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 08:45:00 +0000"
+          "title": "AMC Entertainment Holdings, Inc. Announces Pricing of $200 Million Registered Direct Offering of Common Stock",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-holdings-inc-announces-113000736.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 11:30:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "DraftKings (DKNG) Reports Q1 Earnings: What Key Metrics Have to Say",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-reports-q1-earnings-233004138.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 23:30:04 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
-      "mentions": 9,
-      "momentum": 125,
-      "sentiment": -0.24814814814814815,
-      "priceMove": -0.7618117075724282,
-      "lastPrice": 144.57000732421875,
-      "relativeVolume": 1.0669386734572812,
-      "optionsActivity": 0,
-      "signalScore": 33.06771303003165,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 4,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "Sold XOM $149P expiring Friday — IVR hit 100 across the whole energy sector this morning. Gift or tr Strait of Hormuz headlines pushed IV on energy names to max this morning. XOM, OXY, CVX, EOG, DVN - IVR at 100 across the board.\n\nSold the ",
-          "url": "https://i.redd.it/k0yoy6xqs5zg1.png",
-          "published": "2026-05-04T17:54:31.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "XOM $144.57, price -1.4%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/XOM",
-          "published": "2026-05-09T19:00:32.852Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SHOP",
-      "name": "Shopify",
-      "mentions": 26,
-      "momentum": 0,
-      "sentiment": 0.1697069597069597,
-      "priceMove": -0.13733745512454829,
-      "lastPrice": 110.41000366210938,
-      "relativeVolume": 0.9526562253926978,
-      "optionsActivity": 0,
-      "signalScore": 32.26632083435546,
-      "sources": {
-        "Wallstreetbets": 8,
-        "Reddit Finance": 5,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Hit 100k for the first time thanks to RKLB When I hit 50k for the first time a couple months ago, I set a goal to reach 100k before I turned 25. Thanks to Sir  Peter Beck and his phenomenal hair, I reached that goal with less than a month t",
-          "url": "https://www.reddit.com/gallery/1t7a5y4",
-          "published": "2026-05-08T14:49:09.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Dutch Bros Q1 Earnings Report (Total revenues grew 30.8% to $464.4 million YoY) TEMPE, Ariz.--([BUSINESS WIRE](https://www.businesswire.com/news/home/20260506549768/en/Dutch-Bros-Inc.-Reports-First-Quarter-2026-Financial-Results))--Dutch Br",
-          "url": "https://reddit.com/r/stocks/comments/1t5q0qr/dutch_bros_q1_earnings_report_total_revenues_grew/",
-          "published": "2026-05-06T21:10:42.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SHOP $110.41, price -1.2%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/SHOP",
-          "published": "2026-05-09T19:00:31.066Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Jim Cramer on Shopify: “You Want to Buy It When the Stock’s Ice Cold”",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-shopify-want-buy-184754746.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 18:47:54 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Oppenheimer Maintains Outperform Rating on Shopify (SHOP)",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-maintains-outperform-rating-shopify-101337740.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 10:13:37 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Is It Time To Reassess Shopify (SHOP) After Recent Share Price Weakness?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/time-reassess-shopify-shop-recent-200719127.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 20:07:19 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "mentions": 21,
-      "momentum": 0,
-      "sentiment": 0.22222222222222218,
-      "priceMove": -0.11802574833423754,
-      "lastPrice": 152.4499969482422,
-      "relativeVolume": 0.9821999938939465,
-      "optionsActivity": 0,
-      "signalScore": 31.823110939214484,
-      "sources": {
-        "Wallstreetbets": 8,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-          "url": "https://i.redd.it/zc75ifxkp50h1.png",
-          "published": "2026-05-09T18:44:39.000Z"
-        },
-        {
-          "source": "Wallstreetbets",
-          "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-          "url": "https://i.redd.it/zc75ifxkp50h1.png",
-          "published": "2026-05-09T18:44:39.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SNOW $152.45, price -0.8%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/SNOW",
-          "published": "2026-05-09T19:00:31.128Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Snowflake Inc. (SNOW) Collaborates with O9 Solutions for Application Integration",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-inc-snow-collaborates-o9-144937844.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 14:49:37 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Snowflake (SNOW) Surges 10.0%: Is This an Indication of Further Gains?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-surges-10-0-093900661.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 09:39:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Snowflake (SNOW) Is Up 12.6% After o9 Taps Its AI Data Cloud For Closed-Loop Planning Integration – Has The Bull Case Changed?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-12-6-o9-091548267.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 09:15:48 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "UBER",
-      "name": "Uber",
-      "mentions": 31,
-      "momentum": 0,
-      "sentiment": 0.10043010752688172,
-      "priceMove": -0.21525102310005229,
-      "lastPrice": 75.44999694824219,
-      "relativeVolume": 0.9513065766021025,
-      "optionsActivity": 0,
-      "signalScore": 31.177419956704618,
-      "sources": {
-        "Wallstreetbets": 5,
-        "Reddit Finance": 10,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "Archer vs Joby: Am I Missing Something, or Does Joby Clearly Have the Stronger Setup? Something I’ve been thinking about in the Archer vs Joby debate:\n\nWhy do some investors seem more comfortable backing Archer over Joby when you compare th",
-          "url": "https://reddit.com/r/wallstreetbets/comments/1t85uzf/archer_vs_joby_am_i_missing_something_or_does/",
-          "published": "2026-05-09T14:02:31.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "UBER as an autonomous vehicles play (or \"Physical AI Hype Cycle\" play) How do people feel about UBER as an Autonomous Vehicles (AV) play? Or simply a stock that could rise in a \"Physical AI\" hype cycle? I'm a little confused by TSLA; simult",
-          "url": "https://reddit.com/r/stocks/comments/1t6dzpv/uber_as_an_autonomous_vehicles_play_or_physical/",
-          "published": "2026-05-07T15:32:03.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Uber pops 10% as company issues higher-than-expected bookings guidance Uber reported first-quarter revenue on Wednesday that missed estimates, but the ride-hailing giant issued bookings guidance for the current quarter that exceeded analyst",
-          "url": "https://reddit.com/r/stocks/comments/1t5aw1b/uber_pops_10_as_company_issues_higherthanexpected/",
-          "published": "2026-05-06T12:04:43.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "UBER $75.45, price -1.7%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/UBER",
-          "published": "2026-05-09T19:00:31.472Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Assessing Rivian (RIVN) Valuation After Uber’s 50,000 Autonomous R2 SUV Robotaxi Commitment",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-rivian-rivn-valuation-uber-171139476.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 17:11:39 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Uber CEO Dara Khosrowshahi Sees 'Trillion-Dollar' Self-Driving Opportunity, Says Waymo Hasn't Impacted Business",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/uber-ceo-dara-khosrowshahi-sees-123139631.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 12:31:39 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "MSTR",
-      "name": "MicroStrategy",
-      "mentions": 15,
-      "momentum": 0,
-      "sentiment": 0.07222222222222223,
-      "priceMove": 2.0110468974162603,
-      "lastPrice": 187.58999633789062,
-      "relativeVolume": 0.9976185154562046,
-      "optionsActivity": 0,
-      "signalScore": 30.993241654231728,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 4,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "Palantir ($PLTR) Earnings Vol Trade Post-mortem - Patience is the Key Yesterday I posted my thesis for going long vol into $PLTR EA.\n\n[https://www.reddit.com/r/options/comments/1t4135r/palantir\\_pltr\\_earnings\\_vol\\_setup\\_are\\_traders/](ht",
-          "url": "https://reddit.com/r/options/comments/1t4hez8/palantir_pltr_earnings_vol_trade_postmortem/",
-          "published": "2026-05-05T14:39:30.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "MSTR $187.59, price +4.3%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/MSTR",
-          "published": "2026-05-09T19:00:30.130Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "America’s oldest bank raises stake at MicroStrategy",
-          "url": "https://www.thestreet.com/crypto/markets/americas-oldest-bank-raises-stake-at-microstrategy?.tsrc=rss",
-          "published": "Sat, 09 May 2026 16:00:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Bitcoin Dominated MSTR Stock Earnings. Don’t Miss the Possibility of Increased Dividend Payouts.",
-          "url": "https://www.barchart.com/story/news/1811611/bitcoin-dominated-mstr-stock-earnings-dont-miss-the-possibility-of-increased-dividend-payouts?.tsrc=rss",
-          "published": "Fri, 08 May 2026 18:16:53 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "F",
-      "name": "Ford",
-      "mentions": 24,
-      "momentum": 0,
-      "sentiment": 0.125,
-      "priceMove": 0.1915700412434117,
-      "lastPrice": 12.319999694824219,
-      "relativeVolume": 0.9722095065775438,
-      "optionsActivity": 0,
-      "signalScore": 30.137374766483536,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 8,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "What’s your opinion on selling All Tech Heavy Stocks soon and moving to SP500 $VOO? I’ve had quite the run up on Tech Stocks I bought in Nov 2022 such as $12k AMZN +200%, $30k AIQ +200%, and a few that just gained well the past few months $",
-          "url": "https://reddit.com/r/stocks/comments/1t7mi2f/whats_your_opinion_on_selling_all_tech_heavy/",
-          "published": "2026-05-08T22:16:11.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "F $12.32, price +1.1%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/F",
-          "published": "2026-05-09T19:00:31.898Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "This is how Ford CEO Jim Farley \"future proofs\" F-Series trucks",
-          "url": "https://www.thestreet.com/automotive/ford-ceo-jim-farley-future-proofs-f-series?.tsrc=rss",
-          "published": "Sat, 09 May 2026 13:33:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Ford (F) Appoints Maria Ricciardone as Chief Investor Relations Officer",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ford-f-appoints-maria-ricciardone-045720803.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 04:57:20 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Can Ford Reduce Cyclical Risks Through Software & Services Growth?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ford-reduce-cyclical-risks-software-153200930.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 15:32:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Why Is Ford Cautious on Cash Flow Growth Despite Strong EBIT?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-ford-cautious-cash-flow-150600629.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 15:06:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "RIVN",
-      "name": "Rivian",
-      "mentions": 23,
-      "momentum": 0,
-      "sentiment": 0.12246376811594202,
-      "priceMove": 0.03679397895888172,
-      "lastPrice": 14.220000267028809,
-      "relativeVolume": 0.9981933935589862,
-      "optionsActivity": 0,
-      "signalScore": 29.712966376136865,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 10,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "Part II: Can R2 flip Rivian to profitability? A deep dive on unit-economics In Part I, I argued that R2 is the bridge from survival to monetization where even though Rivian's vehicle business was losing $66,000 per car, R2's lower bill of m",
-          "url": "https://reddit.com/r/stocks/comments/1t7dmwc/part_ii_can_r2_flip_rivian_to_profitability_a/",
-          "published": "2026-05-08T16:53:16.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Uber pops 10% as company issues higher-than-expected bookings guidance Uber reported first-quarter revenue on Wednesday that missed estimates, but the ride-hailing giant issued bookings guidance for the current quarter that exceeded analyst",
-          "url": "https://reddit.com/r/stocks/comments/1t5aw1b/uber_pops_10_as_company_issues_higherthanexpected/",
-          "published": "2026-05-06T12:04:43.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "RIVN $14.22, price +0.3%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/RIVN",
-          "published": "2026-05-09T19:00:30.196Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Assessing Rivian (RIVN) Valuation After Uber’s 50,000 Autonomous R2 SUV Robotaxi Commitment",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-rivian-rivn-valuation-uber-171139476.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 17:11:39 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Better EV Stock: Tesla vs. Rivian vs. Lucid",
-          "url": "https://www.fool.com/investing/2026/05/09/better-ev-stock-tesla-vs-rivian-vs-lucid/?.tsrc=rss",
-          "published": "Sat, 09 May 2026 09:05:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "1 Surprising Reason Rivian Stock Is a Buy Before the SpaceX IPO",
-          "url": "https://www.fool.com/investing/2026/05/07/1-surprising-reason-rivian-stock-is-a-buy-before-t/?.tsrc=rss",
-          "published": "Thu, 07 May 2026 23:25:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
-      "mentions": 4,
-      "momentum": 0,
-      "sentiment": 0.3333333333333333,
-      "priceMove": -0.009374451875333882,
-      "lastPrice": 213.27000427246094,
-      "relativeVolume": 0.8630855977445864,
-      "optionsActivity": 0,
-      "signalScore": 29.215806678605418,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 2,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "ARM $213.27, price -0.0%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/ARM",
-          "published": "2026-05-09T19:00:31.006Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Is Arm Holdings Stock a Buy After Its Record Q4 Earnings?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arm-holdings-stock-buy-record-181800209.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 18:18:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase",
-      "mentions": 20,
-      "momentum": 0,
-      "sentiment": -0.033333333333333326,
-      "priceMove": 1.699833470756796,
-      "lastPrice": 201.16000366210938,
-      "relativeVolume": 1.1373848736683,
-      "optionsActivity": 0,
-      "signalScore": 29.10765786046392,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "CNBC",
-          "title": "AWS data center outage hits trading on FanDuel, Coinbase — recovery to take hours",
-          "url": "https://www.cnbc.com/2026/05/08/aws-outage-data-center-fanduel-coinbase.html",
-          "published": "Fri, 08 May 2026 19:51:01 GMT"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "COIN $201.16, price +4.2%, volume 1.3x",
-          "url": "https://finance.yahoo.com/quote/COIN",
-          "published": "2026-05-09T19:00:30.068Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase (COIN) Valuation Check As Q1 Loss And AI Job Cuts Reshape The Business",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-coin-valuation-check-q1-011346196.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 01:13:46 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase reported wider-than-expected Q1 loss as crypto trading slows",
-          "url": "https://www.proactiveinvestors.com/companies/news/1091984/coinbase-reported-wider-than-expected-q1-loss-as-crypto-trading-slows-1091984.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 15:11:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase Just Got Slammed: Barclays Slashes Price Target to $107 After Q1 Crypto Trading Miss",
-          "url": "https://247wallst.com/investing/2026/05/08/coinbase-just-got-slammed-barclays-slashes-price-target-to-107-after-q1-crypto-trading-miss/?.tsrc=rss",
-          "published": "Fri, 08 May 2026 15:01:43 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase Restores Trading After 7-Hour Outage Caps Difficult Week",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-restores-trading-7-hour-132533378.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 13:25:33 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "GME",
-      "name": "GameStop",
-      "mentions": 40,
-      "momentum": 0,
-      "sentiment": 0.0125,
-      "priceMove": 0.06466445185050619,
-      "lastPrice": 24.280000686645508,
-      "relativeVolume": 0.96511226636897,
-      "optionsActivity": 0,
-      "signalScore": 29.084821706363485,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 26,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "r/Stocks Weekly Thread on Meme Stocks Saturday - May 09, 2026 The meme stock scheduled posts will now run weekly and post Saturday afternoon and won't be a sticky; you're probably seeing this because automod sent you here!\n\n[Full list of me",
-          "url": "https://reddit.com/r/stocks/comments/1t88v36/rstocks_weekly_thread_on_meme_stocks_saturday_may/",
-          "published": "2026-05-09T16:00:12.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Patrick Boyle GameStop take (JustStop) Patrick Boyle has an excellent finance channel (he is a professor in the London School of Economics), but in his past life he was a trader and has a sharp take on business news:  \n[https://youtu.be/iBl",
-          "url": "https://reddit.com/r/investing/comments/1t8awvo/patrick_boyle_gamestop_take_juststop/",
-          "published": "2026-05-09T17:16:49.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Ryan Cohen offers $56B to buy eBay Ryan Cohen, GameStop chairman and CEO, submitted a non-binding $56 billion proposal to acquire eBay at $125 per share after quietly accumulating roughly a 5% stake. The deal would be financed with GameStop",
-          "url": "https://reddit.com/r/investing/comments/1t3g9i5/ryan_cohen_offers_56b_to_buy_ebay/",
-          "published": "2026-05-04T12:29:01.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Tell me this EBAY flow isn't criminal A single strike, the 5/15 $106c's were being swept constantly. They're OTM and short dated. The stock wasn't budging as IV and contract price doubled. The earnings were already out so it wasn't like som",
-          "url": "https://reddit.com/r/options/comments/1t2x7le/tell_me_this_ebay_flow_isnt_criminal/",
-          "published": "2026-05-03T20:52:15.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "GME $24.28, price +1.3%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/GME",
-          "published": "2026-05-09T19:00:29.723Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Michael Burry Says GameStop's eBay Bid 'Just Went Hostile' After Ryan Cohen Claims Ban: All You Need To Know",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-says-gamestops-ebay-150011942.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 15:00:11 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "LCID",
-      "name": "Lucid",
-      "mentions": 19,
-      "momentum": 0,
-      "sentiment": 0.021929824561403518,
-      "priceMove": 1.7659849229861346,
-      "lastPrice": 6.340000152587891,
-      "relativeVolume": 0.8699635942413797,
-      "optionsActivity": 0,
-      "signalScore": 28.279875380392546,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "LCID $6.34, price +4.8%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/LCID",
-          "published": "2026-05-09T19:00:30.754Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Better EV Stock: Tesla vs. Rivian vs. Lucid",
-          "url": "https://www.fool.com/investing/2026/05/09/better-ev-stock-tesla-vs-rivian-vs-lucid/?.tsrc=rss",
-          "published": "Sat, 09 May 2026 09:05:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Could Lucid Motors Stock Turn $10,000 into $1 Million?",
-          "url": "https://www.fool.com/investing/2026/05/08/could-lucid-motors-stock-turn-10000-into-1-million/?.tsrc=rss",
-          "published": "Fri, 08 May 2026 13:25:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Tesla Rival Lucid Eyes 2027 Affordable EV Ramp Against Model Y, Rivian R2",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-rival-lucid-eyes-2027-203235617.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 20:32:35 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Morgan Stanley Just Cut Lucid's Price Target By 50%. Here's Why.",
-          "url": "https://www.barchart.com/story/news/1775989/morgan-stanley-just-cut-lucid-s-price-target-by-50-here-s-why?.tsrc=rss",
-          "published": "Thu, 07 May 2026 14:35:07 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Lucid shares fall after earnings shock exposes mounting losses",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/lucid-shares-fall-earnings-shock-134353386.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 13:43:53 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "NFLX",
-      "name": "Netflix",
-      "mentions": 24,
-      "momentum": 0,
-      "sentiment": 0.034722222222222224,
-      "priceMove": -0.14353203705957862,
-      "lastPrice": 87.48999786376953,
-      "relativeVolume": 0.9934205206022906,
-      "optionsActivity": 0,
-      "signalScore": 27.517650168667128,
-      "sources": {
-        "Wallstreetbets": 12,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-          "url": "https://www.reddit.com/gallery/1t6tt8l",
-          "published": "2026-05-08T01:33:28.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "NFLX $87.49, price -0.9%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NFLX",
-          "published": "2026-05-09T19:00:30.419Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Jim Cramer on Netflix: “It’s Not a Buy, Buy, Buy”",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-netflix-not-buy-150720683.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 15:07:20 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Netflix (NFLX) Is Down 5.7% After Cautious Q2 Guide And $25 Billion Buyback Plan - Has The Bull Case Changed?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-nflx-down-5-7-082045235.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 08:20:45 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Warner Bros Discovery posts wider Q1 loss driven by Netflix termination fee",
-          "url": "https://www.proactiveinvestors.com/companies/news/1091909/warner-bros-discovery-posts-wider-q1-loss-driven-by-2-8b-netflix-termination-fee-1091909.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 14:08:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Netflix and Meta On Sale: Which One Deserves Your Capital Today?",
-          "url": "https://247wallst.com/investing/2026/05/07/netflix-and-meta-on-sale-which-one-deserves-your-capital-today/?.tsrc=rss",
-          "published": "Thu, 07 May 2026 11:35:57 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "mentions": 28,
-      "momentum": 12,
-      "sentiment": -0.1011904761904762,
-      "priceMove": 0.0748827554609098,
-      "lastPrice": 195.9499969482422,
-      "relativeVolume": 0.9704956680673134,
-      "optionsActivity": 0,
-      "signalScore": 26.82237905273361,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 25,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-          "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-          "published": "2026-05-09T05:00:29.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-          "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-          "published": "2026-05-07T15:29:06.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Suggestions for my call option *help* Hey all! Looking for some advice. Got in on oracle before the earnings report before last around $200 and dca'd down to about $192. It then dropped way down to around $136-140 so decided to sell a call ",
-          "url": "https://reddit.com/r/options/comments/1t5wvv2/suggestions_for_my_call_option_help/",
-          "published": "2026-05-07T01:55:41.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "The 24/7 workflow I run for earnings IV crush trades TL;DR: I created an alert system with AI that finds overpriced options right before earnings, and then I trade a short straddle setup betting on the IV crush. I'm averaging \\~84.74 % annu",
-          "url": "https://reddit.com/r/options/comments/1t4yjba/the_247_workflow_i_run_for_earnings_iv_crush/",
-          "published": "2026-05-06T01:20:19.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "ORCL $195.95, price +0.7%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/ORCL",
-          "published": "2026-05-09T19:00:33.339Z"
+          "title": "Here's Why AMC Entertainment (AMC) Fell More Than Broader Market",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-amc-entertainment-amc-214504462.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 21:45:04 +0000"
         }
       ]
     },
     {
       "ticker": "NIO",
       "name": "NIO",
-      "mentions": 10,
-      "momentum": 0,
-      "sentiment": 0.13333333333333333,
-      "priceMove": -0.06814303685325812,
-      "lastPrice": 5.849999904632568,
-      "relativeVolume": 0.9381441917539417,
+      "mentions": 16,
+      "momentum": 60,
+      "sentiment": -0.041666666666666664,
+      "priceMove": 0.19801960565474083,
+      "lastPrice": 5.090000152587891,
+      "relativeVolume": 1.0062330885527864,
       "optionsActivity": 0,
-      "signalScore": 26.10367006418049,
+      "signalScore": 52.15450938304359,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "SEC Filings": 0,
-        "Yahoo Public News": 8,
+        "Yahoo Public News": 12,
         "CNBC": 0,
         "MarketWatch": 0,
-        "Price/Volume": 2
+        "Price/Volume": 4
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "NIO $5.85, price -0.3%, volume 0.7x",
+          "title": "NIO $5.09, price +0.8%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/NIO",
-          "published": "2026-05-09T19:00:30.690Z"
+          "published": "2026-06-24T00:22:35.544Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Nio Targets Mass EV Growth With Onvo L80 And In House Chips",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nio-targets-mass-ev-growth-031824900.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 03:18:24 +0000"
+          "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 01:21:37 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Nio Inc (NIO) Goes After Tesla’s Lunch Again",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nio-inc-nio-goes-tesla-190014248.html?.tsrc=rss",
-          "published": "Wed, 06 May 2026 19:00:14 +0000"
+          "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
+          "published": "Sun, 21 Jun 2026 11:10:36 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Is Most-Watched Stock NIO Inc. (NIO) Worth Betting on Now?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/most-watched-stock-nio-inc-130006950.html?.tsrc=rss",
-          "published": "Wed, 06 May 2026 13:00:06 +0000"
+          "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
+          "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 14:27:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "NIO Inc. (NIO) Gains As Market Dips: What You Should Know",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nio-inc-nio-gains-market-214502771.html?.tsrc=rss",
-          "published": "Mon, 04 May 2026 21:45:02 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "T",
-      "name": "AT&T",
-      "mentions": 19,
-      "momentum": 0,
-      "sentiment": -0.05263157894736842,
-      "priceMove": -0.08334406847824248,
-      "lastPrice": 25.15999984741211,
-      "relativeVolume": 1.0314980800525915,
-      "optionsActivity": 0,
-      "signalScore": 25.762464530296697,
-      "sources": {
-        "Wallstreetbets": 3,
-        "Reddit Finance": 6,
-        "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Wallstreetbets",
-          "title": "The Sun Always Rises! It’s ya boy again, remember me when I called out $TE about a month ago?\n\nIt’s been a very nice month to say the least.\n\nWith 15-25% of the float being shorted by gay bers, the volatility on this baby is jacked to the t",
-          "url": "https://www.reddit.com/gallery/1t7mgxw",
-          "published": "2026-05-08T22:15:05.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "$TXN - Analog manufacturer is raising prices on their products \"Texas Instruments\n\nMay 7, 2026    \n  \nDear Valued Partner:    \n  \nWe are writing to inform you of upcoming adjustments to our product pricing. The new prices will apply to all ",
-          "url": "https://reddit.com/r/stocks/comments/1t89rwu/txn_analog_manufacturer_is_raising_prices_on/",
-          "published": "2026-05-09T16:34:52.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "$TRT -Anyone looking into this? Earnings on Monday pre-market. Anyone looking into this company? \n\nCould be interesting for asymmetric upside for exposure to burn-in systems + testing for SiC/GaN qualification.\n\n$TRT trades at just a \\~1.2x",
-          "url": "https://reddit.com/r/stocks/comments/1t79yx0/trt_anyone_looking_into_this/",
-          "published": "2026-05-08T14:42:04.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "T $25.16, price -0.4%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/T",
-          "published": "2026-05-09T19:00:31.786Z"
+          "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:00:08 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "AT&T (T), Citi (C) Enhance AT&T Points Plus World Mastercard with New Bill Discounts",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/t-t-citi-c-enhance-111656643.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 11:16:56 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AT&T to Webcast Fireside Chat with John Stankey at the 2026 J.P. Morgan Global Technology, Media and Communications Conference on May 19",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/t-webcast-fireside-chat-john-110000922.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 11:00:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "RBLX",
-      "name": "Roblox",
-      "mentions": 24,
-      "momentum": 0,
-      "sentiment": -0.075,
-      "priceMove": -2.6704620832597876,
-      "lastPrice": 41.90999984741211,
-      "relativeVolume": 1.0476892549101564,
-      "optionsActivity": 0,
-      "signalScore": 23.77043939161288,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 14,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 10
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "RBLX $41.91, price -6.4%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/RBLX",
-          "published": "2026-05-09T19:00:32.048Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Roblox Taps Sunil Rao To Drive India Growth And Investor Questions",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-taps-sunil-rao-drive-221834115.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 22:18:34 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Roblox downgraded, Chipotle upgraded: Wall Street's top analyst calls",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/qorvo-downgraded-ulta-beauty-upgraded-133354484.html?.tsrc=rss",
-          "published": "Tue, 05 May 2026 13:46:21 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Piper Sandler cuts Roblox rating and target on age-verification headwinds",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/piper-sandler-cuts-roblox-rating-133619508.html?.tsrc=rss",
-          "published": "Tue, 05 May 2026 13:36:19 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Here Are Tuesday’s Top Wall Street Analyst Research Calls: Applied Materials, Devon Energy, GoDaddy, Home Depot, Lam Research, Lowe’s, Roblox, Tractor Supply, Ulta Beauty, and More",
-          "url": "https://247wallst.com/investing/2026/05/05/here-are-tuesdays-top-wall-street-analyst-research-calls-applied-materials-devon-energy-godaddy-home-depot-lam-research-lowes-roblox-tractor-supply-ulta-beauty-and-more/?.tsrc=rss",
-          "published": "Tue, 05 May 2026 11:52:54 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Why RBLX Stock’s Selloff Creates A Rare Entry Point",
-          "url": "https://www.trefis.com/articles/598164/why-rblx-stocks-selloff-creates-a-rare-entry-point/2026-05-04?.tsrc=rss",
-          "published": "Mon, 04 May 2026 15:32:08 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "WMT",
-      "name": "Walmart",
-      "mentions": 17,
-      "momentum": 0,
-      "sentiment": -0.03619909502262444,
-      "priceMove": 0.04156424196800081,
-      "lastPrice": 130.42999267578125,
-      "relativeVolume": 1.0379886983453663,
-      "optionsActivity": 0,
-      "signalScore": 23.657324011877648,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 13,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "DIY direct indexing for Large capital gains ($450k+) My situation is that I have large cap gains from selling AMD (cap gains alone of 450K+ in 2026) with a mix of long term and short term sales. I have sold a bit too much, because 1) I am m",
-          "url": "https://reddit.com/r/investing/comments/1t7dtnw/diy_direct_indexing_for_large_capital_gains_450k/",
-          "published": "2026-05-08T16:59:56.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "Selling Bull Put Spread on boring stocks. I have been working on collecting liquid stocks that are boring, meaning flatish price move, no big shocks, low IV to name a few parameters. Then I sell Bull Put Spread on them with 10-15 DTE. A few",
-          "url": "https://reddit.com/r/options/comments/1t4pjca/selling_bull_put_spread_on_boring_stocks/",
-          "published": "2026-05-05T19:20:57.000Z"
-        },
-        {
-          "source": "Reddit Finance",
-          "title": "First PMCC: Underlying Walmart I'm eager to try out PMCC but trying to be careful about choosing my underlying stock. I feel like Walmart is a good stock. Consistent bull, not too much IV..  \n\nthoughts, tips on PMCC and this underlying in p",
-          "url": "https://reddit.com/r/options/comments/1t4mdie/first_pmcc_underlying_walmart/",
-          "published": "2026-05-05T17:32:03.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "WMT $130.43, price +0.2%, volume 1.2x",
-          "url": "https://finance.yahoo.com/quote/WMT",
-          "published": "2026-05-09T19:00:32.177Z"
-        }
-      ]
-    },
-    {
-      "ticker": "CVNA",
-      "name": "Carvana",
-      "mentions": 4,
-      "momentum": 35,
-      "sentiment": -0.18,
-      "priceMove": -2.5798652792543098,
-      "lastPrice": 77.94000244140625,
-      "relativeVolume": 0.6067360792788073,
-      "optionsActivity": 0,
-      "signalScore": 23.472551461885164,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "CVNA $77.94, price -2.6%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/CVNA",
-          "published": "2026-05-09T19:00:32.916Z"
-        }
-      ]
-    },
-    {
-      "ticker": "DIS",
-      "name": "Disney",
-      "mentions": 12,
-      "momentum": 0,
-      "sentiment": -0.031746031746031744,
-      "priceMove": -0.09816660492563317,
-      "lastPrice": 108.0199966430664,
-      "relativeVolume": 0.9258910366540235,
-      "optionsActivity": 0,
-      "signalScore": 23.401994768697982,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 6,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Reddit Finance",
-          "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-          "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-          "published": "2026-05-09T17:24:26.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "DIS $108.02, price -0.6%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/DIS",
-          "published": "2026-05-09T19:00:31.603Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Walt Disney Insiders Added US$2.11m Of Stock To Their Holdings",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-insiders-added-us-130008861.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 13:00:08 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Is Disney Stock a Buy After Strong Q2 Results Under New Leadership?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/disney-stock-buy-strong-q2-230200235.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 23:02:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "AMC",
-      "name": "AMC Entertainment",
-      "mentions": 17,
-      "momentum": 0,
-      "sentiment": -0.031764705882352945,
-      "priceMove": -0.23219792388715585,
-      "lastPrice": 1.5,
-      "relativeVolume": 0.9050548359231029,
-      "optionsActivity": 0,
-      "signalScore": 23.156487227573862,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 14,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "AMC $1.50, price -1.3%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/AMC",
-          "published": "2026-05-09T19:00:31.979Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AMC Global Media (AMCX) Lags Q1 Earnings and Revenue Estimates",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amc-global-media-amcx-lags-121502096.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 12:15:02 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AMC Stock Is in the Midst of a Turnaround as Consumers Head Back to the Theater",
-          "url": "https://www.barchart.com/story/news/1775391/amc-stock-is-in-the-midst-of-a-turnaround-as-consumers-head-back-to-the-theater?.tsrc=rss",
-          "published": "Thu, 07 May 2026 14:06:08 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Is AMC Entertainment (AMC) Stock Outpacing Its Consumer Discretionary Peers This Year?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-amc-stock-outpacing-134002398.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 13:40:02 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AMC Entertainment Positioned to Gain Market Share in 2026, Wedbush Says",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-positioned-gain-market-155007659.html?.tsrc=rss",
-          "published": "Wed, 06 May 2026 15:50:07 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "The Bull Case For AMC (AMC) Could Change Following Q1 2026 Results And Arena One Concert Push – Learn Why",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bull-case-amc-amc-could-131900302.html?.tsrc=rss",
-          "published": "Wed, 06 May 2026 13:19:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "BABA",
-      "name": "Alibaba",
-      "mentions": 9,
-      "momentum": 0,
-      "sentiment": 0,
-      "priceMove": -0.22222279938682032,
-      "lastPrice": 140.05999755859375,
-      "relativeVolume": 0.9783700360421689,
-      "optionsActivity": 0,
-      "signalScore": 22.59439086132358,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "BABA $140.06, price -0.7%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/BABA",
-          "published": "2026-05-09T19:00:30.622Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "US Said to Suspect Nvidia Chips Smuggled to Alibaba Via Thailand",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/us-said-suspect-nvidia-chips-075632473.html?.tsrc=rss",
-          "published": "Sat, 09 May 2026 05:20:02 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Alibaba Stock, Baidu Rise. It Isn’t Just the U.S. That Has AI Plays.",
-          "url": "https://finance.yahoo.com/m/d6dc80dd-48ff-35df-a406-0e3dd4091b1f/alibaba-stock%2C-baidu-rise.-it.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 14:15:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Wall Street Analysts Think Alibaba (BABA) Is a Good Investment: Is It?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-alibaba-133004024.html?.tsrc=rss",
-          "published": "Fri, 08 May 2026 13:30:04 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "WBD",
-      "name": "Warner Bros. Discovery",
-      "mentions": 2,
-      "momentum": 0,
-      "sentiment": 0,
-      "priceMove": -0.03687399916068223,
-      "lastPrice": 27.110000610351562,
-      "relativeVolume": 0.7824656231622937,
-      "optionsActivity": 0,
-      "signalScore": 18.306878283108535,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "WBD $27.11, price -0.0%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/WBD",
-          "published": "2026-05-09T19:00:33.622Z"
+          "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
+          "published": "Thu, 18 Jun 2026 04:37:20 +0000"
         }
       ]
     },
     {
       "ticker": "PYPL",
       "name": "PayPal",
-      "mentions": 6,
-      "momentum": 0,
-      "sentiment": -0.12,
-      "priceMove": -1.226023750712814,
-      "lastPrice": 45.369998931884766,
-      "relativeVolume": 0.7660197005752605,
+      "mentions": 14,
+      "momentum": 133.33333333333331,
+      "sentiment": -0.09904761904761905,
+      "priceMove": -0.4318775810391811,
+      "lastPrice": 41.70000076293945,
+      "relativeVolume": 0.9081597773138483,
       "optionsActivity": 0,
-      "signalScore": 17.839634274001455,
+      "signalScore": 48.72226829256389,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "SEC Filings": 0,
-        "Yahoo Public News": 2,
+        "Yahoo Public News": 10,
         "CNBC": 0,
         "MarketWatch": 0,
         "Price/Volume": 4
@@ -2703,29 +160,53 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "PYPL $45.37, price -1.8%, volume 0.6x",
+          "title": "PYPL $41.70, price -1.5%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/PYPL",
-          "published": "2026-05-09T19:00:31.666Z"
+          "published": "2026-06-24T00:22:36.197Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "FCA Probe Tests PayPal’s UK Wallet Economics And Growth Narrative",
-          "url": "https://finance.yahoo.com/economy/policy/articles/fca-probe-tests-paypal-uk-201403343.html?.tsrc=rss",
-          "published": "Thu, 07 May 2026 20:14:03 +0000"
+          "title": "Paypal (PYPL) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paypal-pypl-suffers-larger-drop-214506461.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "64% of UK Consumers Want to Use Agentic AI for Shopping, According to New Research from Commerce and PayPal",
+          "url": "https://finance.yahoo.com/technology/ai/articles/64-uk-consumers-want-agentic-120000671.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SoFi vs. PayPal: Two Beaten-Down Fintech Stocks. Which Is the Better Comeback Story?",
+          "url": "https://www.fool.com/investing/2026/06/23/sofi-vs-paypal-two-beaten-down-fintech-stocks-whic/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 10:37:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paypals-checkout-recovery-branded-tpv-172300701.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 17:23:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "PayPal Ad Executive Explains How Shoppable Ads Are Disrupting Retail",
+          "url": "https://finance.yahoo.com/video/paypal-ad-executive-explains-shoppable-163200448.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 16:32:00 +0000"
         }
       ]
     },
     {
-      "ticker": "UPST",
-      "name": "Upstart",
-      "mentions": 2,
-      "momentum": 0,
-      "sentiment": 0,
-      "priceMove": -0.13793419147359914,
-      "lastPrice": 28.959999084472656,
-      "relativeVolume": 0.6462919965311774,
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "mentions": 12,
+      "momentum": 200,
+      "sentiment": -0.18000000000000002,
+      "priceMove": -10.136855304749513,
+      "lastPrice": 366.3900146484375,
+      "relativeVolume": 0.643056517252223,
       "optionsActivity": 0,
-      "signalScore": 17.76218377658407,
+      "signalScore": 43.18207224787884,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2733,31 +214,384 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
+        "Price/Volume": 12
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "ARM $366.39, price -10.1%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/ARM",
+          "published": "2026-06-24T00:22:35.752Z"
+        }
+      ]
+    },
+    {
+      "ticker": "WBD",
+      "name": "Warner Bros. Discovery",
+      "mentions": 3,
+      "momentum": 50,
+      "sentiment": 0,
+      "priceMove": -0.2597461973697415,
+      "lastPrice": 26.8799991607666,
+      "relativeVolume": 0.7763608065861805,
+      "optionsActivity": 0,
+      "signalScore": 37.7603663157797,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "WBD $26.88, price -0.3%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/WBD",
+          "published": "2026-06-24T00:22:37.796Z"
+        }
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "mentions": 13,
+      "momentum": 8.333333333333332,
+      "sentiment": 0.0064102564102564135,
+      "priceMove": 0.2432710582780815,
+      "lastPrice": 103.52999877929688,
+      "relativeVolume": 0.8869540918993036,
+      "optionsActivity": 0,
+      "signalScore": 37.01186522507919,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "DIS $103.53, price +1.1%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/DIS",
+          "published": "2026-06-24T00:22:36.127Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "As America Celebrates 250 Years, Disney’s Economic Impact Reaches All 50 States",
+          "url": "https://finance.yahoo.com/economy/articles/america-celebrates-250-years-disney-130000374.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:56:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "OMNICOM AND DISNEY ADVERTISING TEAM UP TO ENABLE SMARTER SEQUENTIAL ADVERTISING IN STREAMING",
+          "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-disney-advertising-team-enable-173000613.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:30:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "New Report from Disney at Cannes Lions Shows ‘Eventizing’ of Streaming Content",
+          "url": "https://finance.yahoo.com/video/report-disney-cannes-lions-shows-154452410.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:44:52 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Disney Faces Fresh Trump-ABC Fight",
+          "url": "https://finance.yahoo.com/media-advertising/articles/disney-faces-fresh-trump-abc-122449612.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:24:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Walt Disney (DIS) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-suffers-larger-214505458.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 21:45:05 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "mentions": 11,
+      "momentum": 22.22222222222222,
+      "sentiment": -0.0818181818181818,
+      "priceMove": -1.0262684225887533,
+      "lastPrice": 102.5999984741211,
+      "relativeVolume": 0.9170563300396044,
+      "optionsActivity": 0,
+      "signalScore": 36.88972604165914,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "BABA $102.60, price -2.3%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/BABA",
+          "published": "2026-06-24T00:22:35.512Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba sues Pentagon to remove it from military blacklist",
+          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-pentagon-remove-military-192941272.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:29:41 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba sues US for being linked to Chinese military",
+          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-us-department-defense-172113802.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:21:13 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba (BABA) Launches $1.5 Billion Pupu Bid As Meituan Rivalry Heats Up",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/alibaba-baba-launches-1-5-101503395.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 10:15:03 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "mentions": 18,
+      "momentum": -61.702127659574465,
+      "sentiment": 0.09259259259259259,
+      "priceMove": 0.24691426877069894,
+      "lastPrice": 17.290000915527344,
+      "relativeVolume": 0.9829860595643479,
+      "optionsActivity": 0,
+      "signalScore": 34.709075343041825,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 14,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "SOFI $17.29, price +1.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/SOFI",
+          "published": "2026-06-24T00:22:35.331Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SoFi Technologies, Inc. (SOFI) Advances While Market Declines: Some Information for Investors",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-technologies-inc-sofi-advances-214505739.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:05 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Jim Cramer on SoFi: “I Continue to Believe It’s Time to Buy”",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-sofi-continue-believe-144118728.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:41:18 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SoFi deepens AI-powered trading ambitions with Composer deal",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-deepens-ai-powered-trading-120337750.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:03:37 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Introducing Composer by SoFi: AI-Powered Investing From Idea to Execution",
+          "url": "https://finance.yahoo.com/technology/ai/articles/introducing-composer-sofi-ai-powered-120000411.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SoFi Expands AI Offerings With a Trading Assistant",
+          "url": "https://finance.yahoo.com/m/63ccee7a-991f-3c91-8658-ffc350be3cca/sofi-expands-ai-offerings.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "mentions": 18,
+      "momentum": -25,
+      "sentiment": 0.1111111111111111,
+      "priceMove": -0.03760897112631162,
+      "lastPrice": 47.11000061035156,
+      "relativeVolume": 0.9653626923522197,
+      "optionsActivity": 0,
+      "signalScore": 34.620943812842384,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 16,
+        "CNBC": 0,
+        "MarketWatch": 0,
         "Price/Volume": 2
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "UPST $28.96, price -0.1%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/UPST",
-          "published": "2026-05-09T19:00:32.982Z"
+          "title": "RBLX $47.11, price -0.3%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/RBLX",
+          "published": "2026-06-24T00:22:36.497Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Roblox (RBLX) Faces Class Action Lawsuit Over Organic Growth Claims",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-faces-class-action-090629143.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 09:06:29 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Did New Kid-Safe Accounts and TV-Style Ad Metrics Just Shift Roblox's (RBLX) Investment Narrative?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/did-kid-safe-accounts-tv-051019534.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 05:10:19 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Roblox Is Down 42% in 2026: Will the Pain Be Over Soon?",
+          "url": "https://247wallst.com/investing/2026/06/22/roblox-is-down-42-in-2026-will-the-pain-be-over-soon/?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 19:15:21 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is Roblox (RBLX) a Buy as Wall Street Analysts Look Optimistic?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-buy-wall-street-133004587.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 13:30:04 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Roblox Corporation (RBLX): A High-Growth Large-Cap Stock to Invest In, Hurt By Comparisons",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-corporation-rblx-high-growth-184946363.html?.tsrc=rss",
+          "published": "Sat, 20 Jun 2026 18:49:46 +0000"
         }
       ]
     },
     {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "mentions": 9,
-      "momentum": 0,
-      "sentiment": -0.43333333333333335,
-      "priceMove": -0.7564101137593381,
-      "lastPrice": 302.1000061035156,
-      "relativeVolume": 1.130318723669483,
+      "ticker": "T",
+      "name": "AT&T",
+      "mentions": 10,
+      "momentum": -47.368421052631575,
+      "sentiment": 0.15,
+      "priceMove": 1.9275992910877193,
+      "lastPrice": 22.809999465942383,
+      "relativeVolume": 0.9385719470928333,
       "optionsActivity": 0,
-      "signalScore": 16.773614183261405,
+      "signalScore": 34.482853780659234,
       "sources": {
         "Wallstreetbets": 0,
-        "Reddit Finance": 4,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "T $22.81, price +3.2%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/T",
+          "published": "2026-06-24T00:22:36.289Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Should Income Investors Add Positions in Comcast or AT&T Stock Near 52-Week Lows?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/income-investors-add-positions-comcast-225900755.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:59:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "The Zacks Analyst Blog Highlights Visa, TotalEnergies, AT&T, Tredegar and Geospace",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-visa-094600774.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 09:46:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "mentions": 20,
+      "momentum": -58.333333333333336,
+      "sentiment": 0.027999999999999997,
+      "priceMove": -2.4139869654824753,
+      "lastPrice": 33.31999969482422,
+      "relativeVolume": 0.8921315650619395,
+      "optionsActivity": 0,
+      "signalScore": 33.22880784843073,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 8
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "SMCI $33.32, price -6.0%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/SMCI",
+          "published": "2026-06-24T00:22:34.866Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Super Micro Computer Is Trading at Its Best Valuation in 18 Months. Should You Buy the Dip?",
+          "url": "https://www.fool.com/investing/2026/06/23/super-micro-computer-is-trading-at-its-best-valuat/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:27:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Super Micro Computer (SMCI) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-suffers-214506467.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/smci-stock-soars-15-nvidia-190000419.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Forget Super Micro Computer: 1 Unstoppable AI Hardware Powerhouse to Buy Hand Over Fist After the Pullback",
+          "url": "https://247wallst.com/investing/2026/06/23/forget-super-micro-computer-1-unstoppable-ai-hardware-powerhouse-to-buy-hand-over-fist-after-the-pullback/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:46:40 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Down Nearly 50% From Its High, Is Super Micro Computer Stock a Bargain Buy?",
+          "url": "https://www.fool.com/investing/2026/06/23/down-nearly-50-from-its-high-is-super-micro-comput/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:30:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "mentions": 5,
+      "momentum": -87.8048780487805,
+      "sentiment": 0.25,
+      "priceMove": 3.003936904440491,
+      "lastPrice": 224.94000244140625,
+      "relativeVolume": 0.7395349331713245,
+      "optionsActivity": 0,
+      "signalScore": 33.079011478514914,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
         "SEC Filings": 0,
         "Yahoo Public News": 0,
         "CNBC": 0,
@@ -2766,16 +600,1244 @@ window.SIGNALDESK_DATA = {
       },
       "latest": [
         {
-          "source": "Reddit Finance",
-          "title": "WDC Put Sell ($310) **Question:** What options are you guys running on WDC? Is this type a put you would sell? WDC closed at $431.52 on 01 MAY 26. For clarity, I'm not looking for anyone to tell me what to do but rather a discussion around ",
-          "url": "https://reddit.com/r/options/comments/1t1sneg/wdc_put_sell_310/",
-          "published": "2026-05-02T15:15:58.000Z"
+          "source": "Price/Volume",
+          "title": "NET $224.94, price +3.0%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/NET",
+          "published": "2026-06-24T00:22:37.907Z"
+        }
+      ]
+    },
+    {
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "mentions": 16,
+      "momentum": -30.434782608695656,
+      "sentiment": 0.07999999999999999,
+      "priceMove": -0.347682173579079,
+      "lastPrice": 14.890000343322754,
+      "relativeVolume": 0.9515104356714822,
+      "optionsActivity": 0,
+      "signalScore": 32.66815098878032,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "RIVN $14.89, price -1.4%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/RIVN",
+          "published": "2026-06-24T00:22:35.291Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Down 22% This Year, Is Rivian Stock Overdue for a Rally?",
+          "url": "https://www.fool.com/investing/2026/06/23/down-22-this-year-is-rivian-stock-overdue-for-a-ra/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:35:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Tesla Declines 5% While Lucid and Rivian Hold Steady: What’s Going On With EV Stocks Today?",
+          "url": "https://247wallst.com/investing/2026/06/23/tesla-declines-5-while-lucid-and-rivian-hold-steady-whats-going-on-with-ev-stocks-today/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:06:12 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Jim Cramer on Rivian: “It’s Losing Too Much Money, Sorry”",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-rivian-losing-too-144120645.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:41:20 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is Rivian Automotive Stock A Smart Buy Right Now?",
+          "url": "https://www.trefis.com/articles/603809/is-rivian-automotive-stock-a-smart-buy-right-now/2026-06-22?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 01:34:53 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Rivian Automotive (RIVN) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rivian-automotive-rivn-sees-more-215005541.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 21:50:05 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "mentions": 12,
+      "momentum": -42.857142857142854,
+      "sentiment": 0.13888888888888887,
+      "priceMove": 0.5619558653599108,
+      "lastPrice": 230.41000366210938,
+      "relativeVolume": 0.8976133655281275,
+      "optionsActivity": 0,
+      "signalScore": 32.66706851455942,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "SNOW $230.41, price +1.7%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/SNOW",
+          "published": "2026-06-24T00:22:35.817Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is Snowflake’s (SNOW) AI Data Cloud Momentum Overshadowing Emerging Questions About Board Accountability?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/snowflake-snow-ai-data-cloud-221239608.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:12:39 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Snowflake (SNOW) Stock After 32% Monthly Jump Is The Valuation Starting To Appeal",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-stock-32-monthly-201311555.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:13:11 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Snowflake (SNOW) Expands Marketplacer Tie Up As AI Partner Recognition Grows",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-expands-marketplacer-tie-181518243.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:15:18 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GrowthLoop Highlighted in Snowflake's Fifth Edition Modern Marketing Data Stack Report as \"One to Watch\"",
+          "url": "https://finance.yahoo.com/technology/ai/articles/growthloop-highlighted-snowflakes-fifth-edition-160000284.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "GME",
+      "name": "GameStop",
+      "mentions": 16,
+      "momentum": -60,
+      "sentiment": 0.041666666666666664,
+      "priceMove": -0.035477452503950034,
+      "lastPrice": 21.079999923706055,
+      "relativeVolume": 0.9489049618564089,
+      "optionsActivity": 0,
+      "signalScore": 31.672014807805738,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 14,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "GME $21.08, price -0.3%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/GME",
+          "published": "2026-06-24T00:22:34.940Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GameStop CEO Ryan Cohen Forgoes Performance Award To Focus On EBay Acquisition",
+          "url": "https://stocktwits.com/news-articles/markets/equity/gamestop-ceo-ryan-cohen-forgoes-performance-award-to-focus-on-ebay-acquisition/cZKwicuR7OR?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:18:31 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GameStop’s Ryan Cohen Withdraws CEO Performance Package. It’s All About eBay.",
+          "url": "https://finance.yahoo.com/m/217fb1c4-927a-3d88-a23d-20c927017263/gamestop%E2%80%99s-ryan-cohen.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GameStop drops Cohen’s $35B pay plan to focus on eBay acquisition",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/gamestop-drops-cohen-35b-pay-210312418.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:03:12 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GameStop CEO Cohen spurns $35 billion pay plan to focus on plan to buy eBay",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/gamestop-ceo-foregoes-performance-award-202847978.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:28:47 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GameStop vs. StubHub: Which Consumer Stock Is a Better Buy in 2026?",
+          "url": "https://www.fool.com/coverage/better-buy/2026/06/23/gamestop-vs-stubhub-which-consumer-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:28:01 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "mentions": 5,
+      "momentum": -70.58823529411765,
+      "sentiment": 0.25,
+      "priceMove": 1.9115871803514508,
+      "lastPrice": 119.41999816894531,
+      "relativeVolume": 0.9178193538547571,
+      "optionsActivity": 0,
+      "signalScore": 31.60744971307056,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "WMT $119.42, price +1.9%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/WMT",
+          "published": "2026-06-24T00:22:36.606Z"
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "mentions": 16,
+      "momentum": -89.04109589041096,
+      "sentiment": -0.045,
+      "priceMove": -0.2538026100524039,
+      "lastPrice": 346.1300048828125,
+      "relativeVolume": 0.9576930443898828,
+      "optionsActivity": 0,
+      "signalScore": 30.62145285222535,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 4,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
+          "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
+          "published": "Tue, 23 Jun 2026 22:44:45 GMT"
+        },
+        {
+          "source": "CNBC",
+          "title": "Google’s online dominance is showing signs of cracking in AI era",
+          "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
+          "published": "Tue, 23 Jun 2026 15:21:38 GMT"
         },
         {
           "source": "Price/Volume",
-          "title": "JPM $302.10, price -1.4%, volume 1.2x",
-          "url": "https://finance.yahoo.com/quote/JPM",
-          "published": "2026-05-09T19:00:32.303Z"
+          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/GOOGL",
+          "published": "2026-06-24T00:22:35.444Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
+          "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Google's YouTube settles case over social media harm to children",
+          "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:02:22 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alphabet Set to Join and Honeywell International to Remain in Dow Jones Industrial Average",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-set-join-honeywell-international-220200121.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:02:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "mentions": 4,
+      "momentum": -88.23529411764706,
+      "sentiment": 0.25,
+      "priceMove": 2.7887753732483054,
+      "lastPrice": 61,
+      "relativeVolume": 0.4678335128268854,
+      "optionsActivity": 0,
+      "signalScore": 30.49422513513706,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "MRNA $61.00, price +2.8%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/MRNA",
+          "published": "2026-06-24T00:22:37.836Z"
+        }
+      ]
+    },
+    {
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "mentions": 16,
+      "momentum": -23.809523809523807,
+      "sentiment": -0.03625,
+      "priceMove": -0.7309941629182122,
+      "lastPrice": 25.149999618530273,
+      "relativeVolume": 1.1055027877776802,
+      "optionsActivity": 0,
+      "signalScore": 30.294834682919397,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "DKNG $25.15, price -1.9%, volume 1.3x",
+          "url": "https://finance.yahoo.com/quote/DKNG",
+          "published": "2026-06-24T00:22:35.850Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:27:27 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "DraftKings (DKNG) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-suffers-larger-drop-220003944.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 22:00:03 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "DraftKings Stock Gains 12% in 3 Months: Should You Buy, Sell or Hold?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-stock-gains-12-3-134400949.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:44:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is It Worth Investing in DraftKings (DKNG) Based on Wall Street's Bullish Views?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-draftkings-dkng-based-133003982.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:30:03 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "mentions": 8,
+      "momentum": -89.74358974358975,
+      "sentiment": 0.125,
+      "priceMove": 0.8983511419002597,
+      "lastPrice": 373.94000244140625,
+      "relativeVolume": 0.9419268202303062,
+      "optionsActivity": 0,
+      "signalScore": 30.285023974629798,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "MSFT $373.94, price +1.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/MSFT",
+          "published": "2026-06-24T00:22:35.174Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "You’re Probably Paying Twice for NVIDIA, Apple, and Microsoft Without Realizing It",
+          "url": "https://247wallst.com/investing/2026/06/23/youre-probably-paying-twice-for-nvidia-apple-and-microsoft-without-realizing-it/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:02:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why the Market Dipped But Microsoft (MSFT) Gained Today",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-market-dipped-microsoft-msft-214505165.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:05 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "mentions": 4,
+      "momentum": -77.77777777777779,
+      "sentiment": 0.25,
+      "priceMove": 2.1982435112536116,
+      "lastPrice": 153.4199981689453,
+      "relativeVolume": 0.6970291189921883,
+      "optionsActivity": 0,
+      "signalScore": 30.229943835808886,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CRM $153.42, price +2.2%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CRM",
+          "published": "2026-06-24T00:22:37.666Z"
+        }
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "mentions": 17,
+      "momentum": -63.04347826086957,
+      "sentiment": -0.05294117647058823,
+      "priceMove": -0.6891467023770153,
+      "lastPrice": 116.69999694824219,
+      "relativeVolume": 0.9868399754919892,
+      "optionsActivity": 0,
+      "signalScore": 29.947747893680376,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "PLTR $116.70, price -2.3%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/PLTR",
+          "published": "2026-06-24T00:22:34.828Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Palantir partners with Zeta Global on AI-powered marketing infrastructure, Wedbush sees further enterprise validation",
+          "url": "https://www.proactiveinvestors.com/companies/news/1094368/palantir-partners-with-zeta-global-on-ai-powered-marketing-infrastructure-wedbush-sees-further-enterprise-validation-1094368.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:50:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Palantir Hits 52-Week Low Amid AI Retreat, Rising Interest Rates",
+          "url": "https://finance.yahoo.com/m/b407a679-d46d-3178-b894-989ec99621b1/palantir-hits-52-week-low.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:32:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Stocks making big moves yesterday: Shutterstock, Viavi Solutions, Micron, Palantir Technologies, and IonQ",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-191246574.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:12:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "PLTR vs. COHR: Which AI-Driven Tech Stock Should You Bet on?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/pltr-vs-cohr-ai-driven-174000935.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:40:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Palantir Stock Rises on Major AI Infrastructure Pact With Zeta",
+          "url": "https://finance.yahoo.com/technology/ai/articles/palantir-stock-rises-major-ai-172202116.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:22:02 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "mentions": 4,
+      "momentum": -86.66666666666667,
+      "sentiment": 0.25,
+      "priceMove": 2.1661788611012494,
+      "lastPrice": 427.7799987792969,
+      "relativeVolume": 0.6009827942188576,
+      "optionsActivity": 0,
+      "signalScore": 29.78162923641084,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "DELL $427.78, price +2.2%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/DELL",
+          "published": "2026-06-24T00:22:37.518Z"
+        }
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "mentions": 14,
+      "momentum": -41.66666666666667,
+      "sentiment": 0,
+      "priceMove": -0.011760538038035081,
+      "lastPrice": 72.81999969482422,
+      "relativeVolume": 0.9568784705337544,
+      "optionsActivity": 0,
+      "signalScore": 29.464081840953718,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "NFLX $72.82, price -0.1%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/NFLX",
+          "published": "2026-06-24T00:22:35.403Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is Omnicom (OMC) Quietly Recasting Its Competitive Edge Through Netflix And Acxiom’s AI Ad Alliance?",
+          "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-omc-quietly-recasting-competitive-181603854.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:16:03 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Netflix Struggles to Shift the Narrative After Warner Bros. Fiasco",
+          "url": "https://finance.yahoo.com/m/819ffce1-f19a-3dda-b00f-5587d9d01ec7/netflix-struggles-to-shift.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:32:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Netflix Unveils New Horror Game to Jumpstart Interactive Offerings",
+          "url": "https://finance.yahoo.com/media-advertising/articles/netflix-unveils-horror-game-jumpstart-160607091.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:06:07 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Citizens Upholds its Market Perform Rating for Netflix (NFLX)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/citizens-upholds-market-perform-rating-150652441.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:06:52 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Netflix Will Trade at This Price in 2028",
+          "url": "https://247wallst.com/investing/2026/06/23/netflix-will-trade-at-this-price-in-2028/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:06:13 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "mentions": 12,
+      "momentum": -88.88888888888889,
+      "sentiment": 0,
+      "priceMove": -0.048770756121539034,
+      "lastPrice": 562.2000122070312,
+      "relativeVolume": 0.9419286951521398,
+      "optionsActivity": 0,
+      "signalScore": 29.29184667376422,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 4,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Meta announces new smart glasses starting at $299, as Zuckerberg keeps pushing wearables",
+          "url": "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html",
+          "published": "Tue, 23 Jun 2026 15:56:53 GMT"
+        },
+        {
+          "source": "CNBC",
+          "title": "Meta is building a prediction markets app. These stocks fell in response",
+          "url": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
+          "published": "Tue, 23 Jun 2026 20:09:00 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "META $562.20, price -0.3%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/META",
+          "published": "2026-06-24T00:22:35.115Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta Platforms Is Building A Prediction Market App",
+          "url": "https://www.cryptoprowl.com/releases/meta-platforms-is-building-a-prediction-market-app-5963?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta unveils cheaper AI smart glasses, but the competition is heating up",
+          "url": "https://finance.yahoo.com/video/meta-unveils-cheaper-ai-smart-205015115.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:50:15 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:27:27 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "mentions": 10,
+      "momentum": -61.53846153846154,
+      "sentiment": 0.06666666666666667,
+      "priceMove": -0.11113281808897027,
+      "lastPrice": 107.68000030517578,
+      "relativeVolume": 1.109124892930692,
+      "optionsActivity": 0,
+      "signalScore": 29.167009838978082,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "SHOP $107.68, price -0.3%, volume 1.3x",
+          "url": "https://finance.yahoo.com/quote/SHOP",
+          "published": "2026-06-24T00:22:35.786Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Is Shopify (SHOP) One of the Most Promising Long-Term Stocks to Buy According to Analysts?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-shop-one-most-promising-191930827.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:19:30 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SHOP vs. WIX: Which E-Commerce Stock Is in a Better Position Now?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/shop-vs-wix-e-commerce-151600236.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:16:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Shopify Moves Toward Vape Ban",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-moves-toward-vape-ban-121525598.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:15:25 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "mentions": 17,
+      "momentum": -81.91489361702128,
+      "sentiment": -0.09529411764705882,
+      "priceMove": -3.063674467645667,
+      "lastPrice": 381.6099853515625,
+      "relativeVolume": 1.0253988912343364,
+      "optionsActivity": 0,
+      "signalScore": 29.012907926397663,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 9
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "TSLA $381.61, price -5.8%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/TSLA",
+          "published": "2026-06-24T00:22:34.682Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Tesla Quietly Files Megapod Trademark — An AI Data Center Play That Could See Elon Musk Challenging Nvidia's Dominance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/tesla-quietly-files-megapod-trademark-223152710.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:31:52 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "TSLA Stock: Tesla Doubles EU Registrations In May But BYD Still Leads With Over 26K Units",
+          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-stock-tesla-doubles-eu-registrations-in-may-but-byd-still-leads/cZKwhThR7Ob?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:40:55 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Micron, Sandisk, SpaceX, Tesla, Carnival, and More Stocks That Explain Today’s Market",
+          "url": "https://finance.yahoo.com/m/b2c73f09-fd59-3c3a-b892-dfef8b936f4f/micron%2C-sandisk%2C-spacex%2C.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:32:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why Tesla Stock Dropped on Tuesday",
+          "url": "https://www.fool.com/investing/2026/06/23/why-tesla-stock-dropped-on-tuesday/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:00:42 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "mentions": 10,
+      "momentum": -94.41340782122904,
+      "sentiment": 0.06666666666666667,
+      "priceMove": -0.36497382358187436,
+      "lastPrice": 294.29998779296875,
+      "relativeVolume": 0.9888843407901,
+      "optionsActivity": 0,
+      "signalScore": 28.68604763041571,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "AAPL $294.30, price -0.9%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/AAPL",
+          "published": "2026-06-24T00:22:34.797Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "The Real Engine Behind Apple Stock's Next Potential Climb",
+          "url": "https://www.trefis.com/articles/604054/the-real-engine-behind-apple-stocks-next-potential-climb/2026-06-23?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:12:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "You’re Probably Paying Twice for NVIDIA, Apple, and Microsoft Without Realizing It",
+          "url": "https://247wallst.com/investing/2026/06/23/youre-probably-paying-twice-for-nvidia-apple-and-microsoft-without-realizing-it/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:02:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Apple and Intel Just Signed a Historic Chip Partnership. Is the Silicon Pioneer a No-Brainer Buy Today?",
+          "url": "https://www.fool.com/investing/2026/06/23/apple-intel-sign-historic-chip-partner-buy-stock/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:59:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "mentions": 19,
+      "momentum": -94.63276836158192,
+      "sentiment": -0.16105263157894736,
+      "priceMove": -11.788945969579506,
+      "lastPrice": 1051.77001953125,
+      "relativeVolume": 1.098971786310446,
+      "optionsActivity": 0,
+      "signalScore": 28.68268169625198,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 2,
+        "Price/Volume": 17
+      },
+      "latest": [
+        {
+          "source": "MarketWatch",
+          "title": "Micron and Sandisk lead a sharp tech selloff in a &#x2018;gut-check&#x2019; moment for AI stocks",
+          "url": "https://www.marketwatch.com/story/micron-and-sandisk-lead-a-sharp-tech-selloff-in-a-gut-check-moment-for-ai-stocks-cd92fa5d?mod=mw_rss_topstories",
+          "published": "Tue, 23 Jun 2026 21:23:00 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "MU $1051.77, price -13.2%, volume 1.1x",
+          "url": "https://finance.yahoo.com/quote/MU",
+          "published": "2026-06-24T00:22:37.763Z"
+        }
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "mentions": 13,
+      "momentum": -82.43243243243244,
+      "sentiment": -0.017948717948717944,
+      "priceMove": -0.8950463553328339,
+      "lastPrice": 103.25,
+      "relativeVolume": 0.9735310657176746,
+      "optionsActivity": 0,
+      "signalScore": 28.45359071075622,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "HOOD $103.25, price -2.3%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/HOOD",
+          "published": "2026-06-24T00:22:35.371Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Forget Trading Fees: This Power Move Could Completely Redefine Robinhood's Revenue",
+          "url": "https://www.fool.com/investing/2026/06/23/trading-fees-power-move-redefine-robinhood-revenue/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Truist Stays Bullish on Robinhood as June Volumes Point to Record Quarter",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/truist-stays-bullish-robinhood-june-190156498.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:01:56 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Robinhood stock falls as company unveils $2 billion debt plan",
+          "url": "https://www.thestreet.com/investing/stocks/robinhood-stock-falls-as-company-unveils-2-billion-debt-plan?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:33:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "mentions": 15,
+      "momentum": -96.30541871921181,
+      "sentiment": -0.06355555555555555,
+      "priceMove": -3.6866766760741236,
+      "lastPrice": 132.27999877929688,
+      "relativeVolume": 0.9169699193301046,
+      "optionsActivity": 0,
+      "signalScore": 28.264105920954687,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 9
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "INTC $132.28, price -6.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/INTC",
+          "published": "2026-06-24T00:22:35.658Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why Intel (INTC) Stock Is Nosediving",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-intel-intc-stock-nosediving-231246035.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:12:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Intel (INTC) Dips More Than Broader Market: What You Should Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/intel-intc-dips-more-broader-214504973.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:04 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Apple and Intel Just Signed a Historic Chip Partnership. Is the Silicon Pioneer a No-Brainer Buy Today?",
+          "url": "https://www.fool.com/investing/2026/06/23/apple-intel-sign-historic-chip-partner-buy-stock/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:59:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "CVNA",
+      "name": "Carvana",
+      "mentions": 5,
+      "momentum": 25,
+      "sentiment": -0.18,
+      "priceMove": -2.759856589808172,
+      "lastPrice": 64.83000183105469,
+      "relativeVolume": 0.6532798464651521,
+      "optionsActivity": 0,
+      "signalScore": 28.043974465666384,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CVNA",
+          "published": "2026-06-24T00:22:37.321Z"
+        }
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "mentions": 13,
+      "momentum": -74.50980392156863,
+      "sentiment": -0.030769230769230764,
+      "priceMove": -1.1750430917879209,
+      "lastPrice": 380.1499938964844,
+      "relativeVolume": 0.9242788478341641,
+      "optionsActivity": 0,
+      "signalScore": 27.926911509551847,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "AVGO $380.15, price -3.1%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/AVGO",
+          "published": "2026-06-24T00:22:35.710Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Broadcom (AVGO) Stock Trades Down, Here Is Why",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-avgo-stock-trades-down-223246211.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:32:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "A Look Back at Processors and Graphics Chips Stocks’ Q1 Earnings: Broadcom (NASDAQ:AVGO) Vs The Rest Of The Pack",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/look-back-processors-graphics-chips-165646145.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:56:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "How Broadcom’s (AVGO) AI XPV Platform Ties Its Custom XPUs to the Next Wave of AI Compute Demand",
+          "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-ai-xpv-platform-160958450.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:09:58 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Broadcom Stock Drops After Strong Earnings -- Time to Buy?",
+          "url": "https://www.fool.com/investing/2026/06/23/broadcom-stock-drops-strong-earnings-time-buy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:06:05 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "mentions": 15,
+      "momentum": -25,
+      "sentiment": -0.084,
+      "priceMove": -1.8854657716768954,
+      "lastPrice": 158.17999267578125,
+      "relativeVolume": 0.9315143807259971,
+      "optionsActivity": 0,
+      "signalScore": 27.796569480823972,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "COIN $158.18, price -4.0%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/COIN",
+          "published": "2026-06-24T00:22:35.215Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Here's Why Coinbase Global, Inc. (COIN) Fell More Than Broader Market",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-coinbase-global-inc-214504007.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:04 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "ICE & OKX Are Getting Ready to Drink Coinbase’s Tokenized Milkshake",
+          "url": "https://app.moby.co/home/news/news-ice-okx-are-getting-ready-to-drink-coinbases-tokenized-milkshake?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:00:51 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Coinbase Bets on AI Trading With Pre-IPO of OpenAI, Anthropic?",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-bets-ai-trading-pre-160700597.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:07:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Coinbase Is Offering Pre-IPO Perpetual Futures on OpenAI and Anthropic. That’s Better News for COIN Stock Than It Is for You.",
+          "url": "https://www.barchart.com/story/news/2606188/coinbase-is-offering-pre-ipo-perpetual-futures-on-openai-and-anthropic-thats-better-news-for-coin-stock-than-it-is-for-you?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:26:45 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "mentions": 15,
+      "momentum": -51.61290322580645,
+      "sentiment": -0.10444444444444442,
+      "priceMove": -0.8213179003738293,
+      "lastPrice": 69.66999816894531,
+      "relativeVolume": 0.9732541706243992,
+      "optionsActivity": 0,
+      "signalScore": 27.437814354703292,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "UBER $69.67, price -2.5%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/UBER",
+          "published": "2026-06-24T00:22:36.019Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Uber Technologies (UBER) Falls More Steeply Than Broader Market: What Investors Need to Know",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-falls-more-214502330.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:02 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Life360 (LIF), Uber (UBER) Partner to Integrate Family Ride Services Directly Into App",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/life360-lif-uber-uber-partner-191846758.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:18:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Q1 Earnings Outperformers: Uber (NYSE:UBER) And The Rest Of The Gig Economy Stocks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/q1-earnings-outperformers-uber-nyse-180046984.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:00:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Uber (UBER) Faces Shareholder Lawsuit Over Alleged Safety And Compliance Failures",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/uber-uber-faces-shareholder-lawsuit-151153480.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:11:53 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SERV vs. UBER: Which Autonomous Delivery Stock is the Better Buy?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/serv-vs-uber-autonomous-delivery-145500846.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:55:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "mentions": 16,
+      "momentum": -93.24894514767934,
+      "sentiment": -0.13166666666666665,
+      "priceMove": -2.8805566245101466,
+      "lastPrice": 519.8499755859375,
+      "relativeVolume": 0.9319273852264183,
+      "optionsActivity": 0,
+      "signalScore": 27.14696164414292,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 8
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "AMD $519.85, price -5.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/AMD",
+          "published": "2026-06-24T00:22:34.717Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why AMD (AMD) Stock Is Trading Lower Today",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-trading-225646127.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:56:46 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Over 40 Analysts Rate AMD a Buy, Here’s Why We Agree",
+          "url": "https://247wallst.com/investing/2026/06/23/over-40-analysts-rate-amd-a-buy-heres-why-we-agree/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:28:08 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is “Healthy”",
+          "url": "https://247wallst.com/investing/2026/06/23/amd-and-intel-drop-5-nvidia-slips-3-amid-korean-led-chip-selloff-bulls-say-is-healthy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:23:22 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "AMD (AMD) Stock Sees Modest Fair Value Lift As AI Target Revisions Split Analysts",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-amd-stock-sees-modest-171526878.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:15:26 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "F",
+      "name": "Ford",
+      "mentions": 10,
+      "momentum": -58.333333333333336,
+      "sentiment": 0,
+      "priceMove": -0.3118346119170632,
+      "lastPrice": 14,
+      "relativeVolume": 0.9762335103780042,
+      "optionsActivity": 0,
+      "signalScore": 26.921158594481614,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "F $14.00, price -0.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/F",
+          "published": "2026-06-24T00:22:36.408Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Ford and General Motors Want In on the Energy Craze. Which Stock Will Win?",
+          "url": "https://www.fool.com/investing/2026/06/23/ford-and-general-motors-want-in-on-the-energy-boom/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:39:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Ford (F) Faces New US Import Rules For China Built Lincoln Nautilus",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ford-f-faces-us-import-140722451.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:07:22 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Unifor launches negotiations with Ford Motor Company",
+          "url": "https://finance.yahoo.com/economy/policy/articles/unifor-launches-negotiations-ford-motor-173000656.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 17:30:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "mentions": 12,
+      "momentum": -57.14285714285714,
+      "sentiment": -0.15,
+      "priceMove": -4.717162300563124,
+      "lastPrice": 165.16000366210938,
+      "relativeVolume": 1.377085219440514,
+      "optionsActivity": 0,
+      "signalScore": 26.03247277091772,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 2,
+        "MarketWatch": 0,
+        "Price/Volume": 10
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Oracle sheds 21,000 roles over the past year amid wave of AI layoffs from tech giants",
+          "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
+          "published": "Tue, 23 Jun 2026 13:48:00 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "ORCL $165.16, price -5.7%, volume 1.5x",
+          "url": "https://finance.yahoo.com/quote/ORCL",
+          "published": "2026-06-24T00:22:37.587Z"
         }
       ]
     },
@@ -2785,11 +1847,11 @@ window.SIGNALDESK_DATA = {
       "mentions": 6,
       "momentum": 0,
       "sentiment": -0.18000000000000002,
-      "priceMove": -3.0211452072894716,
-      "lastPrice": 25.68000030517578,
-      "relativeVolume": 0.8578587905777854,
+      "priceMove": -1.435409136549812,
+      "lastPrice": 24.719999313354492,
+      "relativeVolume": 1.4588394631487824,
       "optionsActivity": 0,
-      "signalScore": 15.521276348297267,
+      "signalScore": 25.35644918359222,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2802,5213 +1864,3156 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "PFE $25.68, price -3.0%, volume 0.9x",
+          "title": "PFE $24.72, price -1.4%, volume 1.5x",
           "url": "https://finance.yahoo.com/quote/PFE",
-          "published": "2026-05-09T19:00:32.556Z"
+          "published": "2026-06-24T00:22:37.016Z"
+        }
+      ]
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "mentions": 12,
+      "momentum": -20,
+      "sentiment": -0.12,
+      "priceMove": -3.422865456841425,
+      "lastPrice": 103.83999633789062,
+      "relativeVolume": 0.9437188853233692,
+      "optionsActivity": 0,
+      "signalScore": 25.070436005877706,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 8
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "MSTR $103.84, price -5.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/MSTR",
+          "published": "2026-06-24T00:22:35.258Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "CryptoQuant’s MicroStrategy Warning Comes Two Weeks Late",
+          "url": "https://beincrypto.com/cryptoquant-microstrategy-bitcoin-warning-late/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:40:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Wall Street analyst predicts 400% upside for MicroStrategy stock",
+          "url": "https://www.thestreet.com/crypto/markets/wall-street-analyst-predicts-400-upside-for-microstrategy-stock?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:30:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "mentions": 6,
+      "momentum": -94.73684210526315,
+      "sentiment": 0,
+      "priceMove": 0.37802521937910183,
+      "lastPrice": 234.11000061035156,
+      "relativeVolume": 1.0118399513768497,
+      "optionsActivity": 0,
+      "signalScore": 24.595930146691263,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 2,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "AMZN $234.11, price +0.6%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/AMZN",
+          "published": "2026-06-24T00:22:35.041Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Worried About Amazon’s AI Bill? What If It’s Already Paid For?",
+          "url": "https://www.trefis.com/articles/604076/worried-about-amazons-ai-bill-what-if-its-already-paid-for/2026-06-23?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:44:14 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "LCID",
+      "name": "Lucid",
+      "mentions": 11,
+      "momentum": -42.10526315789473,
+      "sentiment": -0.1212121212121212,
+      "priceMove": 0.15856348147724494,
+      "lastPrice": 5.190000057220459,
+      "relativeVolume": 0.9196042112790458,
+      "optionsActivity": 0,
+      "signalScore": 24.592946405473267,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "LCID $5.19, price +0.6%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/LCID",
+          "published": "2026-06-24T00:22:35.577Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Tesla Declines 5% While Lucid and Rivian Hold Steady: What’s Going On With EV Stocks Today?",
+          "url": "https://247wallst.com/investing/2026/06/23/tesla-declines-5-while-lucid-and-rivian-hold-steady-whats-going-on-with-ev-stocks-today/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:06:12 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "LCID Stock Layoffs: What to Know About the Latest Lucid Job Cuts",
+          "url": "https://www.barchart.com/story/news/2587960/lcid-stock-layoffs-what-to-know-about-the-latest-lucid-job-cuts?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 18:23:34 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Lucid layoffs today: EV maker cuts 18% of jobs, LCID stock takes a dive",
+          "url": "https://www.fastcompany.com/91562913/lucid-layoffs-today-lcid-stock-down-ev-maker-jobs-cut-rivian?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 18:15:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Lucid Eyes $158M In Cost Savings After 2nd Round Of Layoffs This Year – Set To Reduce Shifts At Its Biggest Manufacturing Plant",
+          "url": "https://stocktwits.com/news-articles/markets/equity/lcid-stock-falls-lucid-layoff-cost-savings/cZKMRqgR79R?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 16:49:33 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "UPST",
+      "name": "Upstart",
+      "mentions": 2,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": 0.4469967784564604,
+      "lastPrice": 31.459999084472656,
+      "relativeVolume": 0.6802524287968115,
+      "optionsActivity": 0,
+      "signalScore": 23.08245333419705,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "UPST $31.46, price +0.4%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/UPST",
+          "published": "2026-06-24T00:22:37.356Z"
+        }
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Invesco QQQ ETF",
+      "mentions": 9,
+      "momentum": -90.52631578947368,
+      "sentiment": -0.14,
+      "priceMove": -2.561147800393285,
+      "lastPrice": 713.6500244140625,
+      "relativeVolume": 1.0706581600689142,
+      "optionsActivity": 0,
+      "signalScore": 22.964928860560732,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 2,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "QQQ $713.65, price -3.3%, volume 1.1x",
+          "url": "https://finance.yahoo.com/quote/QQQ",
+          "published": "2026-06-24T00:22:35.985Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "ProShares UltraPro QQQ Charges 0.82% Annually, but the Real Cost Compounds Every Trading Day",
+          "url": "https://247wallst.com/investing/2026/06/23/proshares-ultrapro-qqq-charges-0-82-annually-but-the-real-cost-compounds-every-trading-day/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:36:33 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "mentions": 10,
+      "momentum": -92.24806201550388,
+      "sentiment": -0.2053333333333333,
+      "priceMove": -0.5808781604196624,
+      "lastPrice": 733.5800170898438,
+      "relativeVolume": 0.9719132408290948,
+      "optionsActivity": 0,
+      "signalScore": 22.766734659143122,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 2,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
+          "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
+          "published": "Tue, 23 Jun 2026 16:40:57 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SPY $733.58, price -1.5%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/SPY",
+          "published": "2026-06-24T00:22:35.926Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
+          "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:21:50 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "mentions": 4,
+      "momentum": -98.22222222222223,
+      "sentiment": 0,
+      "priceMove": 0.6653720767633473,
+      "lastPrice": 957.6799926757812,
+      "relativeVolume": 1.0181428053951547,
+      "optionsActivity": 0,
+      "signalScore": 22.020084283868794,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "COST $957.68, price +0.7%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/COST",
+          "published": "2026-06-24T00:22:36.846Z"
+        }
+      ]
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IonQ",
+      "mentions": 4,
+      "momentum": -42.857142857142854,
+      "sentiment": 0,
+      "priceMove": -0.8059005884131318,
+      "lastPrice": 57.849998474121094,
+      "relativeVolume": 1.1892625756004647,
+      "optionsActivity": 0,
+      "signalScore": 21.37381921116334,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
+          "url": "https://finance.yahoo.com/quote/IONQ",
+          "published": "2026-06-24T00:22:37.471Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "mentions": 3,
+      "momentum": -84.21052631578947,
+      "sentiment": 0,
+      "priceMove": 0.8113200948925708,
+      "lastPrice": 680.9199829101562,
+      "relativeVolume": 0.7131849128853149,
+      "optionsActivity": 0,
+      "signalScore": 19.880302930761374,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CRWD $680.92, price +0.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CRWD",
+          "published": "2026-06-24T00:22:37.876Z"
+        }
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "mentions": 3,
+      "momentum": -66.66666666666666,
+      "sentiment": 0,
+      "priceMove": 0.9099404172226956,
+      "lastPrice": 139.72999572753906,
+      "relativeVolume": 0.5503982991955573,
+      "optionsActivity": 0,
+      "signalScore": 19.426397120662596,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "XOM $139.73, price +0.9%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/XOM",
+          "published": "2026-06-24T00:22:37.289Z"
+        }
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "mentions": 7,
+      "momentum": -96.3917525773196,
+      "sentiment": -0.18,
+      "priceMove": -4.126528091164557,
+      "lastPrice": 200.0399932861328,
+      "relativeVolume": 0.9856242551075447,
+      "optionsActivity": 0,
+      "signalScore": 18.851214691549306,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "NVDA $200.04, price -4.1%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NVDA",
+          "published": "2026-06-24T00:22:34.603Z"
+        }
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "mentions": 2,
+      "momentum": -77.77777777777779,
+      "sentiment": 0,
+      "priceMove": 0.8024627651587374,
+      "lastPrice": 334.1400146484375,
+      "relativeVolume": 0.562675277991155,
+      "optionsActivity": 0,
+      "signalScore": 17.82307670437898,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "JPM $334.14, price +0.8%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/JPM",
+          "published": "2026-06-24T00:22:36.772Z"
+        }
+      ]
+    },
+    {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "mentions": 7,
+      "momentum": -97.17741935483872,
+      "sentiment": -0.18,
+      "priceMove": -5.155048481154087,
+      "lastPrice": 95.12000274658203,
+      "relativeVolume": 0.5612845213164767,
+      "optionsActivity": 0,
+      "signalScore": 17.153855756385035,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "RKLB $95.12, price -5.2%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/RKLB",
+          "published": "2026-06-24T00:22:37.423Z"
+        }
+      ]
+    },
+    {
+      "ticker": "AI",
+      "name": "C3.ai",
+      "mentions": 2,
+      "momentum": -66.66666666666666,
+      "sentiment": 0,
+      "priceMove": -0.20618045858364417,
+      "lastPrice": 9.680000305175781,
+      "relativeVolume": 0.6758401898734178,
+      "optionsActivity": 0,
+      "signalScore": 16.670810821590557,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "AI $9.68, price -0.2%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/AI",
+          "published": "2026-06-24T00:22:37.386Z"
+        }
+      ]
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing",
+      "mentions": 4,
+      "momentum": -91.48936170212765,
+      "sentiment": -0.18,
+      "priceMove": -1.8656863121069436,
+      "lastPrice": 216.7100067138672,
+      "relativeVolume": 0.8205754848755467,
+      "optionsActivity": 0,
+      "signalScore": 15.27049941969224,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "BA $216.71, price -1.9%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/BA",
+          "published": "2026-06-24T00:22:37.133Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ROKU",
+      "name": "Roku",
+      "mentions": 1,
+      "momentum": -75,
+      "sentiment": 0,
+      "priceMove": -0.10725168323520645,
+      "lastPrice": 135.05499267578125,
+      "relativeVolume": 0.44162979906769545,
+      "optionsActivity": 0,
+      "signalScore": 13.860617936365808,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 1
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "ROKU $135.05, price -0.1%, volume 0.4x",
+          "url": "https://finance.yahoo.com/quote/ROKU",
+          "published": "2026-06-24T00:22:37.943Z"
         }
       ]
     }
   ],
   "events": [
     {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "$RKLB been holding on for 2 years now ",
-      "url": "https://i.redd.it/r7f7rtxm640h1.jpeg",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:32:20.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Any WSB OGs remember the MU $80 memes? Today MU went up more than that amount in a single day ",
-      "url": "https://i.redd.it/my96gk3py00h1.png",
-      "mentions": 15,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:42:29.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Su-bae has always been the one Good enough for a screenshot good enough to exit, however I exited $mu too early so I'll be holding this one till next year. ",
-      "url": "https://i.redd.it/44g6ybtx550h1.jpeg",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T16:50:11.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "I’m officially retiring from Options This has got to be the third or fourth time I’ve perfectly timed options, in exactly the wrong direction. Bought AMD calls a couple months ago (too early), expired worthless. Sold AMD covered calls more ",
-      "url": "https://i.redd.it/rue6xg26610h1.jpeg",
-      "mentions": 13,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T03:24:21.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "INTC Option Trade My other post had an issue, so had to delete.  \n\\-INTC…bought \\*\\*100 Contracts\\*\\* in July 2025 of the Dec 2026 $70 Calls\n\n\\-have been selling on huge run ups and recently sold 5 more\n\n\\-never thought I’d see a % gain lik",
-      "url": "https://i.redd.it/8naxxw79f40h1.jpeg",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:20:38.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Cheers to my Dad Bought my Mom Micron before he passed. 2.3k to 299k. ",
-      "url": "https://i.redd.it/axi98k4xa10h1.png",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T03:50:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "106 RKLB calls. Mocked yesterday. Up 560% today. Yesterday: he's finished. Today: you keep mocking  I keep counting money. It's not luck. I just did the math. I can afford the loss",
-      "url": "https://i.redd.it/sshqgn66axzg1.png",
-      "mentions": 20,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:23:29.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "$1M+ RKLB gains This is my biggest lot by far. The rest of my position is another few hundred k. I'm holding this for the long haul to Mars.",
-      "url": "https://i.redd.it/zbmphwl8wzzg1.png",
-      "mentions": 10,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T23:06:55.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
+      "source": "CNBC",
       "ticker": "GOOGL",
       "name": "Alphabet",
-      "title": "$1,200-&gt;$51,000 with Google ",
-      "url": "https://i.redd.it/jrqsn079850h1",
-      "mentions": 5,
+      "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
+      "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-09T17:03:12.000Z"
+      "published": "Tue, 23 Jun 2026 22:44:45 GMT"
     },
     {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "4 years later $rklb 4 years ago i posted my $rklb position. At one point i had 18750 shares, i sold 8750 this and last year to pay for my house. Letting the last 10k shares ride. Gz to anyone who hopped on the train! Never sell a good compa",
-      "url": "https://www.reddit.com/gallery/1t7vfg1",
-      "mentions": 8,
+      "source": "CNBC",
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
+      "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
+      "mentions": 2,
       "sentiment": -0.3333333333333333,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-09T05:07:29.000Z"
+      "published": "Tue, 23 Jun 2026 16:40:57 GMT"
     },
     {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "In 2000, I got my own brokerage account and bought some AAPL. ",
-      "url": "https://i.redd.it/c4p2xzemcxzg1.png",
-      "mentions": 15,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:35:21.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "INTC calls years in the making Years of being called a regard paid off. The original position had 150 contracts but I sold 50 after earning. \n\nPosting more updates on X including other regarded future plays like this but not sure if I'm all",
-      "url": "https://i.redd.it/2mnle0hsozzg1.png",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:25:10.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "I’m going to be sick $600K gain - MU ",
-      "url": "https://i.redd.it/pkifj2xxxxzg1.jpeg",
-      "mentions": 15,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:32:55.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "My Intel stocks are going retard mode ",
-      "url": "https://www.reddit.com/gallery/1t7dw88",
-      "mentions": 14,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:02:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-      "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:42.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-      "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:42.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "300% MU gain but Paper Handed 1,600% Generational Wealth🤦🏻‍♂️ Bought MU calls Wednesday, was up almost 30k on Thursday with 10 contracts, intended to sell but the gains evaporated mid morning. Thought forsure it would come back so I avera",
-      "url": "https://www.reddit.com/gallery/1t7nvsz",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T23:13:18.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-      "url": "https://i.redd.it/zc75ifxkp50h1.png",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T18:44:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-      "url": "https://i.redd.it/zc75ifxkp50h1.png",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T18:44:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Intel is so back. Nana would be proud. ",
-      "url": "https://v.redd.it/i9n5jcrzhzzg1",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:50:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Congrats RKLB Holders! (I told you...) https://preview.redd.it/7woewo2sdzzg1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=f515f007d7e7d4f79385c7945c5b89f2ecdd5f8a\n\nRelevant DD. Positions in comments. This is the trade of the next of d",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7l71r/congrats_rklb_holders_i_told_you/",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:24:58.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-      "url": "https://www.reddit.com/gallery/1t852py",
-      "mentions": 4,
-      "sentiment": 0.8571428571428571,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:29:47.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-      "url": "https://www.reddit.com/gallery/1t852py",
-      "mentions": 4,
-      "sentiment": 0.8571428571428571,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:29:47.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "I'm not fucking selling - INTC 40k to 6mil. Please don't ask about the cost basis. Check the other screenshots to see as I rolled them.",
-      "url": "https://www.reddit.com/gallery/1t7xfiz",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T06:55:13.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "I'm not fucking selling - INTC 40k to 6mil. Please don't ask about the cost basis. Check the other screenshots to see as I rolled them.",
-      "url": "https://www.reddit.com/gallery/1t7xfiz",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T06:55:13.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "400K gain from MU in 6 days booked a win instead of screenshotting it. gonna let it sizzle over the weekend and maybe open a smaller position on monday pre market ",
-      "url": "https://i.redd.it/c80mbluj5zzg1.jpeg",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:37:21.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC Gainz From a couple days ago.\n\nSold half of it today, I figure it’s time to start locking in those gains. Forgot to take a screenshot of the full wins 🥲",
-      "url": "https://i.redd.it/b01tbvil7zzg1.jpeg",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:48:48.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "1000% Micron gains Sold the 10 $680 calls for $22,000 and $700 calls for $10,000",
-      "url": "https://i.redd.it/lw4x3z5l4xzg1.jpeg",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T13:48:23.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$2.1M bet against Semiconductors Short - SOXS Who will win, Nana or me? Intel has been getting pretty sky-high lately. Bought SOXS at average cost basis of $8.96/sh. Just got back from the Berkshire Hathaway conference, where Warren Buffett",
-      "url": "https://www.reddit.com/gallery/1t7g2mr",
-      "mentions": 9,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:16:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "$2.1M bet against Semiconductors Short - SOXS Who will win, Nana or me? Intel has been getting pretty sky-high lately. Bought SOXS at average cost basis of $8.96/sh. Just got back from the Berkshire Hathaway conference, where Warren Buffett",
-      "url": "https://www.reddit.com/gallery/1t7g2mr",
-      "mentions": 9,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:16:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SHOP",
-      "name": "Shopify",
-      "title": "Hit 100k for the first time thanks to RKLB When I hit 50k for the first time a couple months ago, I set a goal to reach 100k before I turned 25. Thanks to Sir  Peter Beck and his phenomenal hair, I reached that goal with less than a month t",
-      "url": "https://www.reddit.com/gallery/1t7a5y4",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:49:09.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Hit 100k for the first time thanks to RKLB When I hit 50k for the first time a couple months ago, I set a goal to reach 100k before I turned 25. Thanks to Sir  Peter Beck and his phenomenal hair, I reached that goal with less than a month t",
-      "url": "https://www.reddit.com/gallery/1t7a5y4",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:49:09.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Bulls go MU i like the stock ",
-      "url": "https://www.reddit.com/gallery/1t7mcv9",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:10:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Cheers WSB, it's been a ride. Up $250k in the past month with AMD at 23 Held through earnings on 3x leverage AMD despite expecting a huge dump as is usually the case with AMD. The regard in me decided to take a gamble as AMD has been pumpin",
-      "url": "https://www.reddit.com/gallery/1t7asj4",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:11:00.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB Calls +1000% Would’ve made about $120,000 if I’d held the position till close. ",
-      "url": "https://i.redd.it/3l7nd55zzyzg1.jpeg",
-      "mentions": 6,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:06:05.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-      "mentions": 6,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:57:15.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-      "mentions": 6,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:57:15.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "title": "SoFi Releases Its Q1 10-Q, Quietly Confirming Massive Fair Value Losses, Credit Card Distress **TL;DR: SoFi's Q1 2026 10-Q, released yesterday, quietly added a previously missing GAAP disclosure that confirms at least $1B of historical fair",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7das0/sofi_releases_its_q1_10q_quietly_confirming/",
-      "mentions": 7,
-      "sentiment": 0.7857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:41:00.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Still holding Intel Should I exercise these options and hold or sell the options? ",
-      "url": "https://i.redd.it/28btqzryfxzg1.jpeg",
-      "mentions": 7,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:52:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "3k-&gt; 36k and counting bought mu calls at monday open, sold today and rotated into next week calls\n\nhoping mu hits 800 next week!\nedit:51k now wow",
-      "url": "https://www.reddit.com/gallery/1t7c3ur",
-      "mentions": 6,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:58:18.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Options changed my life pt.5 After hedging at the very bottom of the Iran war market dip and some poorly timed trades, I decided to revert back to my initial strategy of only space and AI positions.\n\nLost some momentum but today was the lar",
-      "url": "https://www.reddit.com/gallery/1t7km2k",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:03:10.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC Gains Had options that I completely forgot about last year. They exercised and boom, 300 shares. Had serious thoughts of selling at $40. ",
-      "url": "https://i.redd.it/ij69d75gsyzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:23:53.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB 10 bagger to 13 bagger today ",
-      "url": "https://i.redd.it/go8cgm0rzyzg1.png",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:04:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "$MU just won’t stop going up!! t’s amazing how bullish this one is. Every dip today was returned with a new rally!",
-      "url": "https://i.redd.it/1l8x2n511zzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:12:04.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Smol TSLA gains Almost shit myself between yesterday and today, sold a little early on both accounts but this feels great being my 2nd week back in the casino.\n\nTSLA 410C, 415C, 420C\n\n\\-Your wife’s girlfriend.",
-      "url": "https://www.reddit.com/gallery/1t7kuks",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:11:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-      "url": "https://www.reddit.com/gallery/1t6tt8l",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:33:28.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-      "url": "https://www.reddit.com/gallery/1t6tt8l",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:33:28.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-      "url": "https://www.reddit.com/gallery/1t6tt8l",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:33:28.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NFLX",
-      "name": "Netflix",
-      "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-      "url": "https://www.reddit.com/gallery/1t6tt8l",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:33:28.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "My friends and family can never know (My portfolio)😔✊ My portfolio from last year to now, the good and bad, a lot of margin (portfolio diversity wrong). \n\nAMD (35k+) -&gt; AMZN INTC (10k+) -&gt; LMT FIG  (34k+)-&gt; FIG (20k+)-&gt; RDDT (2",
-      "url": "https://www.reddit.com/gallery/1t6tt8l",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:33:28.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Thank you $RKLB Exited my entire 68 contracts over last 2hrs, satisfied with the gain although stock could shoot to $130 before July and these print",
-      "url": "https://i.redd.it/fwnki6jztxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:10:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "My luck in a nutshell. I also sold AMD at $345, you're welcome! ",
-      "url": "https://i.redd.it/fs2721s8hyzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:22:32.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB long hold Been in for years, not selling. ",
-      "url": "https://i.redd.it/n2cs31sg3zzg1.jpeg",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:25:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "FML Tesla I blame no one but myself for panicking",
-      "url": "https://i.redd.it/mmo607xfnxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:34:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
+      "source": "CNBC",
       "ticker": "META",
       "name": "Meta Platforms",
-      "title": "I've been holding CoreWeave since more than one year but last night's earnings just shook my conviction. I've been pretty bullish on CoreWeave since more than one year. The thesis was simple to me,  AI needs GPUs, GPUs need infrastructure, ",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t72v75/ive_been_holding_coreweave_since_more_than_one/",
-      "mentions": 10,
-      "sentiment": -0.2222222222222222,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T09:28:30.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "BA",
-      "name": "Boeing",
-      "title": "I've been holding CoreWeave since more than one year but last night's earnings just shook my conviction. I've been pretty bullish on CoreWeave since more than one year. The thesis was simple to me,  AI needs GPUs, GPUs need infrastructure, ",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t72v75/ive_been_holding_coreweave_since_more_than_one/",
-      "mentions": 10,
-      "sentiment": -0.2222222222222222,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T09:28:30.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Closed yesterday SPY Puts and put them in MU. ",
-      "url": "https://www.reddit.com/gallery/1t7huyy",
-      "mentions": 4,
+      "title": "Meta announces new smart glasses starting at $299, as Zuckerberg keeps pushing wearables",
+      "url": "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-08T19:21:32.000Z"
+      "published": "Tue, 23 Jun 2026 15:56:53 GMT"
     },
     {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Closed yesterday SPY Puts and put them in MU. ",
-      "url": "https://www.reddit.com/gallery/1t7huyy",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:21:32.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Thanks RKLB 🫡 ",
-      "url": "https://i.redd.it/e5hlc4nvtxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:10:07.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Rocket lab reports strongest quarter in its history Q1 Earnings Report is out.\n\nRevenue of $200.3M vs. $189.4M est.  \nAdj. EBITDA of $(11.8M) vs. $(26M) est.\n\nQ2 guidance:\n\nRevenue of $225-240M vs. $205.2M est.  \nAdj. EBITDA of $(20-26M) vs",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t6mmi4/rocket_lab_reports_strongest_quarter_in_its/",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T20:33:30.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-      "url": "https://i.redd.it/zc75ifxkp50h1.png",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T18:44:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "title": "Semiconductor Gains - Plus Snowflake Had to post the gains somewhere - placed a sell order for INTC on Monday market open\n\n\n\n",
-      "url": "https://i.redd.it/zc75ifxkp50h1.png",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T18:44:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "$1,200-&gt;$51,000 with Google ",
-      "url": "https://i.redd.it/jrqsn079850h1",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:03:12.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Su-bae has always been the one Good enough for a screenshot good enough to exit, however I exited $mu too early so I'll be holding this one till next year. ",
-      "url": "https://i.redd.it/44g6ybtx550h1.jpeg",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T16:50:11.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "INTC Option Trade My other post had an issue, so had to delete.  \n\\-INTC…bought \\*\\*100 Contracts\\*\\* in July 2025 of the Dec 2026 $70 Calls\n\n\\-have been selling on huge run ups and recently sold 5 more\n\n\\-never thought I’d see a % gain lik",
-      "url": "https://i.redd.it/8naxxw79f40h1.jpeg",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:20:38.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Archer vs Joby: Am I Missing Something, or Does Joby Clearly Have the Stronger Setup? Something I’ve been thinking about in the Archer vs Joby debate:\n\nWhy do some investors seem more comfortable backing Archer over Joby when you compare th",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85uzf/archer_vs_joby_am_i_missing_something_or_does/",
-      "mentions": 5,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:02:31.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "UBER",
-      "name": "Uber",
-      "title": "Archer vs Joby: Am I Missing Something, or Does Joby Clearly Have the Stronger Setup? Something I’ve been thinking about in the Archer vs Joby debate:\n\nWhy do some investors seem more comfortable backing Archer over Joby when you compare th",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85uzf/archer_vs_joby_am_i_missing_something_or_does/",
-      "mentions": 5,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:02:31.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
+      "source": "CNBC",
       "ticker": "META",
       "name": "Meta Platforms",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "MU is on fire with room to run **Last Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus called me an oracle. It’s now 746, 757 AH. Now I’m making a case tha",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t85kp9/mu_is_on_fire_with_room_to_run/",
-      "mentions": 10,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:50:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "$RKLB been holding on for 2 years now ",
-      "url": "https://i.redd.it/r7f7rtxm640h1.jpeg",
-      "mentions": 8,
+      "title": "Meta is building a prediction markets app. These stocks fell in response",
+      "url": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-09T13:32:20.000Z"
+      "published": "Tue, 23 Jun 2026 20:09:00 GMT"
     },
     {
-      "source": "Wallstreetbets",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-      "url": "https://www.reddit.com/gallery/1t852py",
-      "mentions": 4,
-      "sentiment": 0.8571428571428571,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:29:47.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "WDC will run higher next!!! FU Money! I have been totally blown away that I managed to hit these memory stocks like they are the fucking lottery ticket I have always dreamed could happen.\n\n \n\nI was looking at my plays and the dates and how ",
-      "url": "https://www.reddit.com/gallery/1t852py",
-      "mentions": 4,
-      "sentiment": 0.8571428571428571,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:29:47.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T10:43:24.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T10:43:24.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "title": "$AKAM - The CDN Boomer That Just Became an AI Infrastructure Chad (and nobody's talking about it) Alright regards, strap in. I know what you're thinking. \"Akamai? My dad's router has more sex appeal than this internet grandpa company.\" Bear",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t81jj3/akam_the_cdn_boomer_that_just_became_an_ai/",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T10:43:24.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "I'm not fucking selling - INTC 40k to 6mil. Please don't ask about the cost basis. Check the other screenshots to see as I rolled them.",
-      "url": "https://www.reddit.com/gallery/1t7xfiz",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T06:55:13.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "I'm not fucking selling - INTC 40k to 6mil. Please don't ask about the cost basis. Check the other screenshots to see as I rolled them.",
-      "url": "https://www.reddit.com/gallery/1t7xfiz",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T06:55:13.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Up 250k in the last month from 17k initial… INTC AMD 90% of what I played. Robinhood I put $1550 in three weeks ago, Fidelity IRA had $15.8.\n\nI have AMD and INTC heavy a good bit of NVDA calls plus BB HIMX MRAM DRAM UMC SMCI RXT.\n\nI’ve also",
-      "url": "https://www.reddit.com/gallery/1t7w3sp",
-      "mentions": 8,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:43:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "4 years later $rklb 4 years ago i posted my $rklb position. At one point i had 18750 shares, i sold 8750 this and last year to pay for my house. Letting the last 10k shares ride. Gz to anyone who hopped on the train! Never sell a good compa",
-      "url": "https://www.reddit.com/gallery/1t7vfg1",
-      "mentions": 8,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:07:29.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Cheers to my Dad Bought my Mom Micron before he passed. 2.3k to 299k. ",
-      "url": "https://i.redd.it/axi98k4xa10h1.png",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T03:50:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "I’m officially retiring from Options This has got to be the third or fourth time I’ve perfectly timed options, in exactly the wrong direction. Bought AMD calls a couple months ago (too early), expired worthless. Sold AMD covered calls more ",
-      "url": "https://i.redd.it/rue6xg26610h1.jpeg",
-      "mentions": 13,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T03:24:21.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Any WSB OGs remember the MU $80 memes? Today MU went up more than that amount in a single day ",
-      "url": "https://i.redd.it/my96gk3py00h1.png",
-      "mentions": 15,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:42:29.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "If you want invest in something never tell anyone about it, I lost +600%, my opportunity with INTC because my friend discourage me I was there when Nana stuff happen, and then Intc drop 19$ for a long time i was ready to put my money in it ",
-      "url": "https://i.redd.it/kf300i4cj00h1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T01:16:23.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "300% MU gain but Paper Handed 1,600% Generational Wealth🤦🏻‍♂️ Bought MU calls Wednesday, was up almost 30k on Thursday with 10 contracts, intended to sell but the gains evaporated mid morning. Thought forsure it would come back so I avera",
-      "url": "https://www.reddit.com/gallery/1t7nvsz",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T23:13:18.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "$1M+ RKLB gains This is my biggest lot by far. The rest of my position is another few hundred k. I'm holding this for the long haul to Mars.",
-      "url": "https://i.redd.it/zbmphwl8wzzg1.png",
-      "mentions": 10,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T23:06:55.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "INTC calls years in the making Years of being called a regard paid off. The original position had 150 contracts but I sold 50 after earning. \n\nPosting more updates on X including other regarded future plays like this but not sure if I'm all",
-      "url": "https://i.redd.it/2mnle0hsozzg1.png",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:25:10.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Things have been going alright Chart starts 5 years ago, main gains were \\~100% on TSLA like \\~1300% on PLTR, and now AMD, INTC, and MU.\n\n  \ni probably put like 26k into this account, and have taken 50k in profits, with this being the curre",
-      "url": "https://i.redd.it/utd374zjozzg1.png",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:24:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "T",
-      "name": "AT&T",
-      "title": "The Sun Always Rises! It’s ya boy again, remember me when I called out $TE about a month ago?\n\nIt’s been a very nice month to say the least.\n\nWith 15-25% of the float being shorted by gay bers, the volatility on this baby is jacked to the t",
-      "url": "https://www.reddit.com/gallery/1t7mgxw",
-      "mentions": 3,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:15:05.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Bulls go MU i like the stock ",
-      "url": "https://www.reddit.com/gallery/1t7mcv9",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:10:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-      "mentions": 6,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:57:15.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC robotic division is $MBLY its literally Intels Biggest holding. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7m0oj/intc_robotic_division_is_mbly_its_literally/",
-      "mentions": 6,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:57:15.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Intel is so back. Nana would be proud. ",
-      "url": "https://v.redd.it/i9n5jcrzhzzg1",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:50:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Congrats RKLB Holders! (I told you...) https://preview.redd.it/7woewo2sdzzg1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=f515f007d7e7d4f79385c7945c5b89f2ecdd5f8a\n\nRelevant DD. Positions in comments. This is the trade of the next of d",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7l71r/congrats_rklb_holders_i_told_you/",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:24:58.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "BA",
-      "name": "Boeing",
-      "title": "MU and MUU Gains Holding lot of MU and MUU, Although sold some in the morning before the run. Thank you Sanjay.\n\nhttps://preview.redd.it/emx0z2b3dzzg1.jpg?width=1289&amp;format=pjpg&amp;auto=webp&amp;s=610aa45da402d2d5d7585be7e1b4bab94ed2ca",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kz8t/mu_and_muu_gains/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:16:41.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "MU and MUU Gains Holding lot of MU and MUU, Although sold some in the morning before the run. Thank you Sanjay.\n\nhttps://preview.redd.it/emx0z2b3dzzg1.jpg?width=1289&amp;format=pjpg&amp;auto=webp&amp;s=610aa45da402d2d5d7585be7e1b4bab94ed2ca",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kz8t/mu_and_muu_gains/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:16:41.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Smol TSLA gains Almost shit myself between yesterday and today, sold a little early on both accounts but this feels great being my 2nd week back in the casino.\n\nTSLA 410C, 415C, 420C\n\n\\-Your wife’s girlfriend.",
-      "url": "https://www.reddit.com/gallery/1t7kuks",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:11:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Options changed my life pt.5 After hedging at the very bottom of the Iran war market dip and some poorly timed trades, I decided to revert back to my initial strategy of only space and AI positions.\n\nLost some momentum but today was the lar",
-      "url": "https://www.reddit.com/gallery/1t7km2k",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:03:10.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "A WHOLE CIVILIZATION OF BEARS WILL DIE TONIGHT, NEVER TO BE BROUGHT BACK AGAIN.🐻🐻🐻🐻🐻 https://preview.redd.it/1e08qlk59zzg1.png?width=3436&amp;format=png&amp;auto=webp&amp;s=48fde1ff7892951c85a66be908225510dfee07d4\n\nGather round, regard",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7kjjl/a_whole_civilization_of_bears_will_die_tonight/",
-      "mentions": 13,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T21:00:35.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Tech is going to keep ripping and continue through NVDA earnings (position in XLK) Sharing my positions with y'all. We're looking at very similar seasonal earnings behavior for tech. Check out the charts from last year to see how the sector",
-      "url": "https://www.reddit.com/gallery/1t7kfic",
-      "mentions": 3,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:56:26.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC Gainz From a couple days ago.\n\nSold half of it today, I figure it’s time to start locking in those gains. Forgot to take a screenshot of the full wins 🥲",
-      "url": "https://i.redd.it/b01tbvil7zzg1.jpeg",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:48:48.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "400K gain from MU in 6 days booked a win instead of screenshotting it. gonna let it sizzle over the weekend and maybe open a smaller position on monday pre market ",
-      "url": "https://i.redd.it/c80mbluj5zzg1.jpeg",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:37:21.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB long hold Been in for years, not selling. ",
-      "url": "https://i.redd.it/n2cs31sg3zzg1.jpeg",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:25:39.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "$MU just won’t stop going up!! t’s amazing how bullish this one is. Every dip today was returned with a new rally!",
-      "url": "https://i.redd.it/1l8x2n511zzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:12:04.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Wife’s Account MU$ average flex Bought about 1k$ worth of MU$ sometime during Covid for wifey. She told me good job, and that she will allow me a 100$ buy-in for me and her to play online roulette tonight together before she heads over to h",
-      "url": "https://i.redd.it/jtaq1bxz0zzg1.jpeg",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:11:48.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB Calls +1000% Would’ve made about $120,000 if I’d held the position till close. ",
-      "url": "https://i.redd.it/3l7nd55zzyzg1.jpeg",
-      "mentions": 6,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:06:05.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB 10 bagger to 13 bagger today ",
-      "url": "https://i.redd.it/go8cgm0rzyzg1.png",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:04:49.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC Gains Had options that I completely forgot about last year. They exercised and boom, 300 shares. Had serious thoughts of selling at $40. ",
-      "url": "https://i.redd.it/ij69d75gsyzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:23:53.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Closed yesterday SPY Puts and put them in MU. ",
-      "url": "https://www.reddit.com/gallery/1t7huyy",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:21:32.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Closed yesterday SPY Puts and put them in MU. ",
-      "url": "https://www.reddit.com/gallery/1t7huyy",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:21:32.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Thank you AMD And also shout out to RKLB",
-      "url": "https://i.redd.it/q690lvawpyzg1.jpeg",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:09:38.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Thank you AMD And also shout out to RKLB",
-      "url": "https://i.redd.it/q690lvawpyzg1.jpeg",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T19:09:38.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "My luck in a nutshell. I also sold AMD at $345, you're welcome! ",
-      "url": "https://i.redd.it/fs2721s8hyzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:22:32.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$2.1M bet against Semiconductors Short - SOXS Who will win, Nana or me? Intel has been getting pretty sky-high lately. Bought SOXS at average cost basis of $8.96/sh. Just got back from the Berkshire Hathaway conference, where Warren Buffett",
-      "url": "https://www.reddit.com/gallery/1t7g2mr",
-      "mentions": 9,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:16:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "$2.1M bet against Semiconductors Short - SOXS Who will win, Nana or me? Intel has been getting pretty sky-high lately. Bought SOXS at average cost basis of $8.96/sh. Just got back from the Berkshire Hathaway conference, where Warren Buffett",
-      "url": "https://www.reddit.com/gallery/1t7g2mr",
-      "mentions": 9,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:16:59.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$250 into $5,700 on $INTC &amp; $AAPL deal!! 🔥🔥🚀 I knew it was coming, I was watching the data on the strikes, spotted a lot of anomalous volume, holy shit\n\nI did this last year as well on $INTC before $NVDA investment of $5 billion\n\nYes",
-      "url": "https://i.redd.it/czkelpft5yzg1.jpeg",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:17:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "My Intel stocks are going retard mode ",
-      "url": "https://www.reddit.com/gallery/1t7dw88",
-      "mentions": 14,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:02:08.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-      "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:42.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Apple, Intel Have Reached Preliminary Chip-Making Agreement ",
-      "url": "https://www.wsj.com/tech/apple-intel-have-reached-preliminary-chip-making-agreement-69eb9370",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:42.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "title": "SoFi Releases Its Q1 10-Q, Quietly Confirming Massive Fair Value Losses, Credit Card Distress **TL;DR: SoFi's Q1 2026 10-Q, released yesterday, quietly added a previously missing GAAP disclosure that confirms at least $1B of historical fair",
-      "url": "https://reddit.com/r/wallstreetbets/comments/1t7das0/sofi_releases_its_q1_10q_quietly_confirming/",
-      "mentions": 7,
-      "sentiment": 0.7857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:41:00.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "I’m going to be sick $600K gain - MU ",
-      "url": "https://i.redd.it/pkifj2xxxxzg1.jpeg",
-      "mentions": 15,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:32:55.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Thank you $RKLB Exited my entire 68 contracts over last 2hrs, satisfied with the gain although stock could shoot to $130 before July and these print",
-      "url": "https://i.redd.it/fwnki6jztxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:10:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Thanks RKLB 🫡 ",
-      "url": "https://i.redd.it/e5hlc4nvtxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:10:07.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "3k-&gt; 36k and counting bought mu calls at monday open, sold today and rotated into next week calls\n\nhoping mu hits 800 next week!\nedit:51k now wow",
-      "url": "https://www.reddit.com/gallery/1t7c3ur",
-      "mentions": 6,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:58:18.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "~200% gains with DRAM good gains with DRAM could go higher but I don’t like holding over the weekend   \nAverage cost: 0.85   \nSold at 3.00/3.10",
-      "url": "https://i.redd.it/141222nvpxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:47:44.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "FML Tesla I blame no one but myself for panicking",
-      "url": "https://i.redd.it/mmo607xfnxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:34:03.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Intel Gains From $1,000&gt;$31K. 3,000% gains and we ain't done yet. Cheers everyone ",
-      "url": "https://i.redd.it/x1zg4ae9lxzg1.jpeg",
-      "mentions": 5,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:21:50.000Z"
-    },
-    {
-      "source": "Wallstreetbets",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Cheers WSB, it's been a ride. Up $250k in the past month with AMD at 23 Held through earnings on 3x leverage AMD despite expecting a huge dump as is usually the case with AMD. The regard in me decided to take a gamble as AMD has been pumpin",
-      "url": "https://www.reddit.com/gallery/1t7asj4",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:11:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "/r/Stocks Weekend Discussion Saturday - May 09, 2026 This is the weekend edition of our stickied discussion thread.  Discuss your trades / moves from last week and what you're planning on doing for the week ahead.\n\nSome helpful links:\n\n* [F",
-      "url": "https://reddit.com/r/stocks/comments/1t805tp/rstocks_weekend_discussion_saturday_may_09_2026/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:30:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "/r/Stocks Weekend Discussion Saturday - May 09, 2026 This is the weekend edition of our stickied discussion thread.  Discuss your trades / moves from last week and what you're planning on doing for the week ahead.\n\nSome helpful links:\n\n* [F",
-      "url": "https://reddit.com/r/stocks/comments/1t805tp/rstocks_weekend_discussion_saturday_may_09_2026/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:30:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-      "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-      "mentions": 6,
-      "sentiment": -0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:24:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-      "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-      "mentions": 6,
-      "sentiment": -0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:24:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-      "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-      "mentions": 6,
-      "sentiment": -0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:24:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "DIS",
-      "name": "Disney",
-      "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-      "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-      "mentions": 6,
-      "sentiment": -0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:24:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "\"Tokenmaxxing\" - How AI demand is inflated by deliberately wasteful &amp; subsidized usage. At least $6 Billion+ a year in waste At many large companies, AI usage is tracked, and has become a metric/target to measure employee productivity. ",
-      "url": "https://reddit.com/r/stocks/comments/1t8b4br/tokenmaxxing_how_ai_demand_is_inflated_by/",
-      "mentions": 6,
-      "sentiment": -0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:24:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "Could Meta be a fad? This may get a bit sociological, but when I’m looking at the longterm health of Meta, I wonder whether Facebook/Instagram may fall out of popularity.  In discussions of Insta/FB, I see a prevailing opinion that: “they k",
-      "url": "https://reddit.com/r/stocks/comments/1t8cm5f/could_meta_be_a_fad/",
-      "mentions": 5,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T18:19:48.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Apple and Intel $INTC reach agreement for Intel to make chips in Apple devices, WSJ reports. Apple &amp; Intel have ‌reached a preliminary agreement for Intel to manufacture some of the ​chips that power the ​iPhone maker's devices, the Wal",
-      "url": "https://reddit.com/r/stocks/comments/1t7dxtx/apple_and_intel_intc_reach_agreement_for_intel_to/",
-      "mentions": 13,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:03:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Apple and Intel $INTC reach agreement for Intel to make chips in Apple devices, WSJ reports. Apple &amp; Intel have ‌reached a preliminary agreement for Intel to manufacture some of the ​chips that power the ​iPhone maker's devices, the Wal",
-      "url": "https://reddit.com/r/stocks/comments/1t7dxtx/apple_and_intel_intc_reach_agreement_for_intel_to/",
-      "mentions": 13,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:03:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "RKLB position I have a smallish position in RKLB of 203 shares with $4 average and this boom threw me off balance with RKLB now at 60% of my portfolio. \n\nIf you have a small portfolio, what do you do when your shares explode? \n\nLogically I ",
-      "url": "https://reddit.com/r/stocks/comments/1t7psln/rklb_position/",
-      "mentions": 10,
-      "sentiment": 0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T00:37:33.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "How can the market accepts such a low forward P/E for MU? I don’t get it. What is so different for RAM compared to GPUs to justify such a gap in multiples? I get that the technology is less complex but I don’t see commoditization coming soo",
-      "url": "https://reddit.com/r/stocks/comments/1t7xh7t/how_can_the_market_accepts_such_a_low_forward_pe/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T06:57:51.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "$INTC owns Majority stake in $MBLY Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry.\n\nJenson recent said \"billions of ",
-      "url": "https://reddit.com/r/stocks/comments/1t7zyi3/intc_owns_majority_stake_in_mbly/",
-      "mentions": 5,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:18:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "$INTC owns Majority stake in $MBLY Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate into every industry.\n\nJenson recent said \"billions of ",
-      "url": "https://reddit.com/r/stocks/comments/1t7zyi3/intc_owns_majority_stake_in_mbly/",
-      "mentions": 5,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:18:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Opinion needed on buying semiconductor and chip stocks If this is not the right forum for stocks and ISA advice let me know and I will move it. Thanks.\n\nFor context I am very new to investing but have learnt a lot quickly. I started a month",
-      "url": "https://reddit.com/r/stocks/comments/1t83bxv/opinion_needed_on_buying_semiconductor_and_chip/",
-      "mentions": 6,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T12:13:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Opinion needed on buying semiconductor and chip stocks If this is not the right forum for stocks and ISA advice let me know and I will move it. Thanks.\n\nFor context I am very new to investing but have learnt a lot quickly. I started a month",
-      "url": "https://reddit.com/r/stocks/comments/1t83bxv/opinion_needed_on_buying_semiconductor_and_chip/",
-      "mentions": 6,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T12:13:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Opinion needed on buying semiconductor and chip stocks If this is not the right forum for stocks and ISA advice let me know and I will move it. Thanks.\n\nFor context I am very new to investing but have learnt a lot quickly. I started a month",
-      "url": "https://reddit.com/r/stocks/comments/1t83bxv/opinion_needed_on_buying_semiconductor_and_chip/",
-      "mentions": 6,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T12:13:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Intel - One person's FOMO story Feel I need to admit this, if anything just to make myself feel better, so maybe I can then move on.\n\nIn November of 2025 I sold my holding's of Intel for $37/share. I got assigned in a covered call trade and",
-      "url": "https://reddit.com/r/stocks/comments/1t7jzyo/intel_one_persons_fomo_story/",
-      "mentions": 11,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:40:15.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-      "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:00:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-      "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:00:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
+      "source": "CNBC",
       "ticker": "ORCL",
       "name": "Oracle",
-      "title": "AI materials vs. AI companies It seems a safer bet with AI is not to bet on AI-centric companies like AMZN, GOOG, META, ORCL, etc but on the materials for AI hyper scaling centers. \n\nMaterials companies like\n\nMemory (sanddisk)  \nDisk (eg. w",
-      "url": "https://reddit.com/r/stocks/comments/1t7vacc/ai_materials_vs_ai_companies/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:00:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "What’s your opinion on selling All Tech Heavy Stocks soon and moving to SP500 $VOO? I’ve had quite the run up on Tech Stocks I bought in Nov 2022 such as $12k AMZN +200%, $30k AIQ +200%, and a few that just gained well the past few months $",
-      "url": "https://reddit.com/r/stocks/comments/1t7mi2f/whats_your_opinion_on_selling_all_tech_heavy/",
-      "mentions": 8,
+      "title": "Oracle sheds 21,000 roles over the past year amid wave of AI layoffs from tech giants",
+      "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-08T22:16:11.000Z"
+      "published": "Tue, 23 Jun 2026 13:48:00 GMT"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "What’s your opinion on selling All Tech Heavy Stocks soon and moving to SP500 $VOO? I’ve had quite the run up on Tech Stocks I bought in Nov 2022 such as $12k AMZN +200%, $30k AIQ +200%, and a few that just gained well the past few months $",
-      "url": "https://reddit.com/r/stocks/comments/1t7mi2f/whats_your_opinion_on_selling_all_tech_heavy/",
-      "mentions": 8,
+      "source": "CNBC",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "Google’s online dominance is showing signs of cracking in AI era",
+      "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-08T22:16:11.000Z"
+      "published": "Tue, 23 Jun 2026 15:21:38 GMT"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "F",
-      "name": "Ford",
-      "title": "What’s your opinion on selling All Tech Heavy Stocks soon and moving to SP500 $VOO? I’ve had quite the run up on Tech Stocks I bought in Nov 2022 such as $12k AMZN +200%, $30k AIQ +200%, and a few that just gained well the past few months $",
-      "url": "https://reddit.com/r/stocks/comments/1t7mi2f/whats_your_opinion_on_selling_all_tech_heavy/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T22:16:11.000Z"
-    },
-    {
-      "source": "Reddit Finance",
+      "source": "MarketWatch",
       "ticker": "MU",
       "name": "Micron",
-      "title": "UK investor - Opinions and ideas wanted for memory stocks Hello, I am based in the UK with a stocks ISA.\n\nThinking about putting money into a memory stock and wanted to know the community's thoughts to get some baseline ideas. At the moment",
-      "url": "https://reddit.com/r/stocks/comments/1t8752h/uk_investor_opinions_and_ideas_wanted_for_memory/",
-      "mentions": 3,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:53:49.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "T",
-      "name": "AT&T",
-      "title": "$TXN - Analog manufacturer is raising prices on their products \"Texas Instruments\n\nMay 7, 2026    \n  \nDear Valued Partner:    \n  \nWe are writing to inform you of upcoming adjustments to our product pricing. The new prices will apply to all ",
-      "url": "https://reddit.com/r/stocks/comments/1t89rwu/txn_analog_manufacturer_is_raising_prices_on/",
-      "mentions": 3,
+      "title": "Micron and Sandisk lead a sharp tech selloff in a &#x2018;gut-check&#x2019; moment for AI stocks",
+      "url": "https://www.marketwatch.com/story/micron-and-sandisk-lead-a-sharp-tech-selloff-in-a-gut-check-moment-for-ai-stocks-cd92fa5d?mod=mw_rss_topstories",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-09T16:34:52.000Z"
+      "published": "Tue, 23 Jun 2026 21:23:00 GMT"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Consumer sentiment falls to fresh record low in May as surging gas prices hit outlook https://www.cnbc.com/2026/05/08/consumer-sentiment-falls-to-fresh-record-low-in-may-as-surging-gas-prices-hit-outlook.html\n\n**Surging gas prices due to th",
-      "url": "https://reddit.com/r/stocks/comments/1t7afr2/consumer_sentiment_falls_to_fresh_record_low_in/",
-      "mentions": 8,
-      "sentiment": 0.1,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:58:51.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Nintendo stock got crushed today while Sony is up. Tale of 2 different gaming AI stories. Both Nintendo and Sony released earnings today. Nintendo got crushed, stock down 10% today, while Sony is up slightly. Both gaming companies got hit b",
-      "url": "https://reddit.com/r/stocks/comments/1t7jc79/nintendo_stock_got_crushed_today_while_sony_is_up/",
+      "source": "Price/Volume",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "title": "NVDA $200.04, price -4.1%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/NVDA",
       "mentions": 7,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T20:16:03.000Z"
+      "sentiment": -0.18,
+      "priceMove": -4.126528091164557,
+      "relativeVolume": 0.9856242551075447,
+      "lastPrice": 200.0399932861328,
+      "published": "2026-06-24T00:22:34.603Z"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "title": "When will the vortex ofAI/memory/chip stocks sucking money out of other stocks end? AI stocks have gone parabolic in the past couple of months. It seems everything remotely is related (such as ai infrastructure, construction related, coolin",
-      "url": "https://reddit.com/r/stocks/comments/1t7umw8/when_will_the_vortex_ofaimemorychip_stocks/",
+      "source": "Price/Volume",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "TSLA $381.61, price -5.8%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/TSLA",
+      "mentions": 9,
+      "sentiment": -0.18,
+      "priceMove": -5.786940661108482,
+      "relativeVolume": 1.047975683442635,
+      "lastPrice": 381.6099853515625,
+      "published": "2026-06-24T00:22:34.682Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "AMD $519.85, price -5.8%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/AMD",
+      "mentions": 8,
+      "sentiment": -0.18,
+      "priceMove": -5.761113249020293,
+      "relativeVolume": 0.8638547704528367,
+      "lastPrice": 519.8499755859375,
+      "published": "2026-06-24T00:22:34.717Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "title": "AAPL $294.30, price -0.9%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/AAPL",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": -0.9124345589546858,
+      "relativeVolume": 0.9722108519752499,
+      "lastPrice": 294.29998779296875,
+      "published": "2026-06-24T00:22:34.797Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "PLTR $116.70, price -2.3%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/PLTR",
       "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T04:26:46.000Z"
+      "sentiment": -0.18,
+      "priceMove": -2.3430987880818517,
+      "relativeVolume": 0.9552559166727632,
+      "lastPrice": 116.69999694824219,
+      "published": "2026-06-24T00:22:34.828Z"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "title": "SoFi Will Bounce Back SoFi serves significant amounts of purposes in terms of modern banking. Down to their student loan options for students, the offers they provide are monstrous when compared to a traditional credit union. The stock is d",
-      "url": "https://reddit.com/r/stocks/comments/1t7a42z/sofi_will_bounce_back/",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:47:15.000Z"
+      "source": "Price/Volume",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "SMCI $33.32, price -6.0%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/SMCI",
+      "mentions": 8,
+      "sentiment": -0.18,
+      "priceMove": -6.034967413706188,
+      "relativeVolume": 0.7303289126548485,
+      "lastPrice": 33.31999969482422,
+      "published": "2026-06-24T00:22:34.866Z"
     },
     {
-      "source": "Reddit Finance",
+      "source": "Price/Volume",
       "ticker": "GME",
       "name": "GameStop",
-      "title": "r/Stocks Weekly Thread on Meme Stocks Saturday - May 09, 2026 The meme stock scheduled posts will now run weekly and post Saturday afternoon and won't be a sticky; you're probably seeing this because automod sent you here!\n\n[Full list of me",
-      "url": "https://reddit.com/r/stocks/comments/1t88v36/rstocks_weekly_thread_on_meme_stocks_saturday_may/",
-      "mentions": 3,
+      "title": "GME $21.08, price -0.3%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/GME",
+      "mentions": 2,
       "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T16:00:12.000Z"
+      "priceMove": -0.2838196200316003,
+      "relativeVolume": 0.5912396948512719,
+      "lastPrice": 21.079999923706055,
+      "published": "2026-06-24T00:22:34.940Z"
     },
     {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "The case for purchasing any SaaSpocalyse stocks I've been wondering about stocks like Service Now (NOW), Salesforce (CRM), and others since they got hammered due to fears of AI replacing them. Are they in fact oversold? Perhaps like video g",
-      "url": "https://reddit.com/r/stocks/comments/1t7farx/the_case_for_purchasing_any_saaspocalyse_stocks/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:50:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "title": "The case for purchasing any SaaSpocalyse stocks I've been wondering about stocks like Service Now (NOW), Salesforce (CRM), and others since they got hammered due to fears of AI replacing them. Are they in fact oversold? Perhaps like video g",
-      "url": "https://reddit.com/r/stocks/comments/1t7farx/the_case_for_purchasing_any_saaspocalyse_stocks/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:50:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Is Celestica still a good long-term investment after its recent run-up? Hi everyone,\n\nI’m trying to get a more grounded view on Celestica (CLS) and would appreciate perspectives from long-term investors here.\n\nCLS has had a strong run over ",
-      "url": "https://reddit.com/r/stocks/comments/1t7q8gc/is_celestica_still_a_good_longterm_investment/",
-      "mentions": 4,
-      "sentiment": 0.875,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T00:57:58.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "Is Celestica still a good long-term investment after its recent run-up? Hi everyone,\n\nI’m trying to get a more grounded view on Celestica (CLS) and would appreciate perspectives from long-term investors here.\n\nCLS has had a strong run over ",
-      "url": "https://reddit.com/r/stocks/comments/1t7q8gc/is_celestica_still_a_good_longterm_investment/",
-      "mentions": 4,
-      "sentiment": 0.875,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T00:57:58.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Is Celestica still a good long-term investment after its recent run-up? Hi everyone,\n\nI’m trying to get a more grounded view on Celestica (CLS) and would appreciate perspectives from long-term investors here.\n\nCLS has had a strong run over ",
-      "url": "https://reddit.com/r/stocks/comments/1t7q8gc/is_celestica_still_a_good_longterm_investment/",
-      "mentions": 4,
-      "sentiment": 0.875,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T00:57:58.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Valuation vs. Investment - (Myth-Busting) Okay for some people this will be too obvious, so don't diss it and act smart. this isn't for you. but I see so much misconception among young investors that I want to try to explain it. The headlin",
-      "url": "https://reddit.com/r/stocks/comments/1t7fvdk/valuation_vs_investment_mythbusting/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:09:57.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Duolingo is set for a comeback. Answer is in the bear thesis. About 2 weeks ago, I invested 2m into SaaS stocks, after rebalancing, $800k of that is now in Duolingo stock following the reaction to its earnings report.\n\nThe so-called ‘SaaSpo",
-      "url": "https://reddit.com/r/stocks/comments/1t8aael/duolingo_is_set_for_a_comeback_answer_is_in_the/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T16:54:08.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Is MRVL the next MU? I got in MU at \\~$100 last May and the stock was just flat for awhile. So I sold it for a small profit then fortunately, I was reasonable enough to get back in at 180. I did the same with MRVL at 80, sold when it was ju",
-      "url": "https://reddit.com/r/stocks/comments/1t7bpyn/is_mrvl_the_next_mu/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:44:16.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RIVN",
-      "name": "Rivian",
-      "title": "Part II: Can R2 flip Rivian to profitability? A deep dive on unit-economics In Part I, I argued that R2 is the bridge from survival to monetization where even though Rivian's vehicle business was losing $66,000 per car, R2's lower bill of m",
-      "url": "https://reddit.com/r/stocks/comments/1t7dmwc/part_ii_can_r2_flip_rivian_to_profitability_a/",
-      "mentions": 4,
-      "sentiment": -0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:16.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Part II: Can R2 flip Rivian to profitability? A deep dive on unit-economics In Part I, I argued that R2 is the bridge from survival to monetization where even though Rivian's vehicle business was losing $66,000 per car, R2's lower bill of m",
-      "url": "https://reddit.com/r/stocks/comments/1t7dmwc/part_ii_can_r2_flip_rivian_to_profitability_a/",
-      "mentions": 4,
-      "sentiment": -0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:53:16.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "FLNC You Beautiful Beast The volatility on this ticker is absolutely insane, it’s a total beast but a wild one. One day it looks like it’s ready to moon on the back of massive data center energy demands, and the next day it’s testing everyo",
-      "url": "https://reddit.com/r/stocks/comments/1t7bd47/flnc_you_beautiful_beast/",
-      "mentions": 4,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:31:41.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
+      "source": "Price/Volume",
       "ticker": "AMZN",
       "name": "Amazon",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
+      "title": "AMZN $234.11, price +0.6%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/AMZN",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0.5670378290686527,
+      "relativeVolume": 1.0177599270652746,
+      "lastPrice": 234.11000061035156,
+      "published": "2026-06-24T00:22:35.041Z"
     },
     {
-      "source": "Reddit Finance",
+      "source": "Price/Volume",
       "ticker": "META",
       "name": "Meta Platforms",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
+      "title": "META $562.20, price -0.3%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/META",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": -0.2926245367292342,
+      "relativeVolume": 0.6515721709128395,
+      "lastPrice": 562.2000122070312,
+      "published": "2026-06-24T00:22:35.115Z"
     },
     {
-      "source": "Reddit Finance",
+      "source": "Price/Volume",
       "ticker": "MSFT",
       "name": "Microsoft",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "MU is on fire with room to run My positions: 1200 shares of mu at $464 100 shares of mu at $381.\n\nLast Thursday at 510 I said institutions were rotating into MU. Wednesday at 640 I said it was heating up and got dismissed by some doofus cal",
-      "url": "https://reddit.com/r/stocks/comments/1t85n9l/mu_is_on_fire_with_room_to_run/",
-      "mentions": 3,
-      "sentiment": 0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:53:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "r/Stocks Daily Discussion &amp; Fundamentals Friday May 08, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on fundamentals, but if fundamentals aren't your thing then just ignore the theme.",
-      "url": "https://reddit.com/r/stocks/comments/1t72w8g/rstocks_daily_discussion_fundamentals_friday_may/",
-      "mentions": 15,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T09:30:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "r/Stocks Daily Discussion &amp; Fundamentals Friday May 08, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on fundamentals, but if fundamentals aren't your thing then just ignore the theme.",
-      "url": "https://reddit.com/r/stocks/comments/1t72w8g/rstocks_daily_discussion_fundamentals_friday_may/",
-      "mentions": 15,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T09:30:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "r/Stocks Daily Discussion &amp; Fundamentals Friday May 08, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on fundamentals, but if fundamentals aren't your thing then just ignore the theme.",
-      "url": "https://reddit.com/r/stocks/comments/1t72w8g/rstocks_daily_discussion_fundamentals_friday_may/",
-      "mentions": 15,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T09:30:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "NVIDIA and IREN Announce Strategic Partnership to Accelerate Deployment of up to 5 Gigawatts of AI Infrastructure, IREN +25% AH Source: [NVIDIA and IREN Announce Strategic Partnership to Accelerate Deployment of up to 5 Gigawatts of AI Infr",
-      "url": "https://reddit.com/r/stocks/comments/1t6mty3/nvidia_and_iren_announce_strategic_partnership_to/",
-      "mentions": 7,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T20:41:03.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "$HIMX - CPO Microlens Supplier This is Himax, they are currently trading at $18.44, with a +131% gain in just 6 months. \n\nThis company is important because NVIDIA is using Co-Packaged Optics (CPO). Rather than relying on external transceive",
-      "url": "https://reddit.com/r/stocks/comments/1t7amc0/himx_cpo_microlens_supplier/",
-      "mentions": 4,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:04:57.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "T",
-      "name": "AT&T",
-      "title": "$TRT -Anyone looking into this? Earnings on Monday pre-market. Anyone looking into this company? \n\nCould be interesting for asymmetric upside for exposure to burn-in systems + testing for SiC/GaN qualification.\n\n$TRT trades at just a \\~1.2x",
-      "url": "https://reddit.com/r/stocks/comments/1t79yx0/trt_anyone_looking_into_this/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:42:04.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "4 Risks for the Memory / Semi Boom Highlighting 4 potential risks for the boom in memory stocks and semis. Memory stocks are most exposed here.\n\n**1. Efficiency Improvements:** If frontier models figure out how to run agentic AI with 80% le",
-      "url": "https://reddit.com/r/stocks/comments/1t7r0gl/4_risks_for_the_memory_semi_boom/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T01:33:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "How not to miss \"obvious plays\" in front of us? So like many, I wasn't early to the show. I happened to dable in SNDK in the 200s and left with a tiny profit to just buy back less than half the position in the 500s (and thankfully held even",
-      "url": "https://reddit.com/r/stocks/comments/1t7sfqm/how_not_to_miss_obvious_plays_in_front_of_us/",
-      "mentions": 5,
-      "sentiment": 0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:40:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "How not to miss \"obvious plays\" in front of us? So like many, I wasn't early to the show. I happened to dable in SNDK in the 200s and left with a tiny profit to just buy back less than half the position in the 500s (and thankfully held even",
-      "url": "https://reddit.com/r/stocks/comments/1t7sfqm/how_not_to_miss_obvious_plays_in_front_of_us/",
-      "mentions": 5,
-      "sentiment": 0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:40:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "How not to miss \"obvious plays\" in front of us? So like many, I wasn't early to the show. I happened to dable in SNDK in the 200s and left with a tiny profit to just buy back less than half the position in the 500s (and thankfully held even",
-      "url": "https://reddit.com/r/stocks/comments/1t7sfqm/how_not_to_miss_obvious_plays_in_front_of_us/",
-      "mentions": 5,
-      "sentiment": 0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:40:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "How not to miss \"obvious plays\" in front of us? So like many, I wasn't early to the show. I happened to dable in SNDK in the 200s and left with a tiny profit to just buy back less than half the position in the 500s (and thankfully held even",
-      "url": "https://reddit.com/r/stocks/comments/1t7sfqm/how_not_to_miss_obvious_plays_in_front_of_us/",
-      "mentions": 5,
-      "sentiment": 0.2857142857142857,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:40:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Google is the best stock on the market and it’s not even close Google is absolutely positively the best stock on the market right now and it isn’t even close. One year ago Google was getting torn up given reports of AI taking over search an",
-      "url": "https://reddit.com/r/stocks/comments/1t7vk9s/google_is_the_best_stock_on_the_market_and_its/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:14:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Google is the best stock on the market and it’s not even close Google is absolutely positively the best stock on the market right now and it isn’t even close. One year ago Google was getting torn up given reports of AI taking over search an",
-      "url": "https://reddit.com/r/stocks/comments/1t7vk9s/google_is_the_best_stock_on_the_market_and_its/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:14:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Google is the best stock on the market and it’s not even close Google is absolutely positively the best stock on the market right now and it isn’t even close. One year ago Google was getting torn up given reports of AI taking over search an",
-      "url": "https://reddit.com/r/stocks/comments/1t7vk9s/google_is_the_best_stock_on_the_market_and_its/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:14:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Google is the best stock on the market and it’s not even close Google is absolutely positively the best stock on the market right now and it isn’t even close. One year ago Google was getting torn up given reports of AI taking over search an",
-      "url": "https://reddit.com/r/stocks/comments/1t7vk9s/google_is_the_best_stock_on_the_market_and_its/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T05:14:26.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/stocks/comments/1t7skjj/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:46:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/stocks/comments/1t7skjj/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:46:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/stocks/comments/1t7skjj/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:46:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/stocks/comments/1t7skjj/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:46:29.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Anyone know of an AI Energy and Infrastructure ETF - minus semiconductor? The closest match I could find is AIPO - it has exactly the names I want GEV CEG VRT VST ETN BE TLN CCJ.  But despite the focus being energy, grid and data center ope",
-      "url": "https://reddit.com/r/stocks/comments/1t6gjp7/anyone_know_of_an_ai_energy_and_infrastructure/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T17:01:36.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Anyone know of an AI Energy and Infrastructure ETF - minus semiconductor? The closest match I could find is AIPO - it has exactly the names I want GEV CEG VRT VST ETN BE TLN CCJ.  But despite the focus being energy, grid and data center ope",
-      "url": "https://reddit.com/r/stocks/comments/1t6gjp7/anyone_know_of_an_ai_energy_and_infrastructure/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T17:01:36.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "Anyone know of an AI Energy and Infrastructure ETF - minus semiconductor? The closest match I could find is AIPO - it has exactly the names I want GEV CEG VRT VST ETN BE TLN CCJ.  But despite the focus being energy, grid and data center ope",
-      "url": "https://reddit.com/r/stocks/comments/1t6gjp7/anyone_know_of_an_ai_energy_and_infrastructure/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T17:01:36.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "I may have accidentally created a taxable sale this morning So back in 2020 I bought a few shares of AMD and its generated a very healthy profit for me over that time. \n\nHere’s the problem though: yesterday I bought a few more shares of the",
-      "url": "https://reddit.com/r/stocks/comments/1t7gu29/i_may_have_accidentally_created_a_taxable_sale/",
-      "mentions": 3,
-      "sentiment": 0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:44:35.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "A review of the SaaSpocalypse and most of the stocks that dumped because of AI. Here's a short review of SaaS and AI dumpsters, if you're a masochist \"value investor\" like me or brave enough: choose your poison if you want to fight AI.\n\nEas",
-      "url": "https://reddit.com/r/stocks/comments/1t7g1jz/a_review_of_the_saaspocalypse_and_most_of_the/",
-      "mentions": 3,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:15:56.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "title": "A review of the SaaSpocalypse and most of the stocks that dumped because of AI. Here's a short review of SaaS and AI dumpsters, if you're a masochist \"value investor\" like me or brave enough: choose your poison if you want to fight AI.\n\nEas",
-      "url": "https://reddit.com/r/stocks/comments/1t7g1jz/a_review_of_the_saaspocalypse_and_most_of_the/",
-      "mentions": 3,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:15:56.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "title": "A review of the SaaSpocalypse and most of the stocks that dumped because of AI. Here's a short review of SaaS and AI dumpsters, if you're a masochist \"value investor\" like me or brave enough: choose your poison if you want to fight AI.\n\nEas",
-      "url": "https://reddit.com/r/stocks/comments/1t7g1jz/a_review_of_the_saaspocalypse_and_most_of_the/",
-      "mentions": 3,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T18:15:56.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "AMD,NBIS Defy Gravity AMD stock up 95 percent YTD  \nNBIS stock up 100 percent YTD\n\nThese stocks did the unthinkable. It’s truly impressive and a sign. It could be that AI really is this big and it’s changing everything. What I see is Mag 7 ",
-      "url": "https://reddit.com/r/stocks/comments/1t7b884/amdnbis_defy_gravity/",
-      "mentions": 3,
-      "sentiment": 0.8,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:26:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "AMD,NBIS Defy Gravity AMD stock up 95 percent YTD  \nNBIS stock up 100 percent YTD\n\nThese stocks did the unthinkable. It’s truly impressive and a sign. It could be that AI really is this big and it’s changing everything. What I see is Mag 7 ",
-      "url": "https://reddit.com/r/stocks/comments/1t7b884/amdnbis_defy_gravity/",
-      "mentions": 3,
-      "sentiment": 0.8,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:26:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "AMD,NBIS Defy Gravity AMD stock up 95 percent YTD  \nNBIS stock up 100 percent YTD\n\nThese stocks did the unthinkable. It’s truly impressive and a sign. It could be that AI really is this big and it’s changing everything. What I see is Mag 7 ",
-      "url": "https://reddit.com/r/stocks/comments/1t7b884/amdnbis_defy_gravity/",
-      "mentions": 3,
-      "sentiment": 0.8,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:26:52.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Why is everyone so down? Is it because most of you guys went to cash during tariff's 13 months ago?\n\nYou are waiting for that crash?\n\nWe are about to hit 7400 on the freaking SP500.  That's insane.\n\nGoogle and NVDA are mooning.  Amazon fina",
-      "url": "https://reddit.com/r/stocks/comments/1t7e7n0/why_is_everyone_so_down/",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:13:02.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "Why is everyone so down? Is it because most of you guys went to cash during tariff's 13 months ago?\n\nYou are waiting for that crash?\n\nWe are about to hit 7400 on the freaking SP500.  That's insane.\n\nGoogle and NVDA are mooning.  Amazon fina",
-      "url": "https://reddit.com/r/stocks/comments/1t7e7n0/why_is_everyone_so_down/",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:13:02.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Why is everyone so down? Is it because most of you guys went to cash during tariff's 13 months ago?\n\nYou are waiting for that crash?\n\nWe are about to hit 7400 on the freaking SP500.  That's insane.\n\nGoogle and NVDA are mooning.  Amazon fina",
-      "url": "https://reddit.com/r/stocks/comments/1t7e7n0/why_is_everyone_so_down/",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:13:02.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Intel trading at a ~119x forward P/E and nobody is talking about this So Intel just had a blowout Q1 and the stock ripped 27%+ in a single session. Great quarter, sure. Six consecutive beats, AI chip demand, Apple partnership rumors, all th",
-      "url": "https://reddit.com/r/stocks/comments/1t5hxu0/intel_trading_at_a_119x_forward_pe_and_nobody_is/",
-      "mentions": 16,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:28:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Intel trading at a ~119x forward P/E and nobody is talking about this So Intel just had a blowout Q1 and the stock ripped 27%+ in a single session. Great quarter, sure. Six consecutive beats, AI chip demand, Apple partnership rumors, all th",
-      "url": "https://reddit.com/r/stocks/comments/1t5hxu0/intel_trading_at_a_119x_forward_pe_and_nobody_is/",
-      "mentions": 16,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:28:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Intel trading at a ~119x forward P/E and nobody is talking about this So Intel just had a blowout Q1 and the stock ripped 27%+ in a single session. Great quarter, sure. Six consecutive beats, AI chip demand, Apple partnership rumors, all th",
-      "url": "https://reddit.com/r/stocks/comments/1t5hxu0/intel_trading_at_a_119x_forward_pe_and_nobody_is/",
-      "mentions": 16,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:28:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Intel trading at a ~119x forward P/E and nobody is talking about this So Intel just had a blowout Q1 and the stock ripped 27%+ in a single session. Great quarter, sure. Six consecutive beats, AI chip demand, Apple partnership rumors, all th",
-      "url": "https://reddit.com/r/stocks/comments/1t5hxu0/intel_trading_at_a_119x_forward_pe_and_nobody_is/",
-      "mentions": 16,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:28:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "You don't have to make up losses from the stock that caused them I know that's obvious and simple advice but I saw it in a comment this morning somewhere and it really jumped out at me.  Waiting around for a recovery while it goes sideways ",
-      "url": "https://reddit.com/r/stocks/comments/1t5sxfx/you_dont_have_to_make_up_losses_from_the_stock/",
-      "mentions": 10,
-      "sentiment": 0.8,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T23:02:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "title": "HANTAVIRUS - Potential? Am I the only one watching $INO right now because of the Hantavirus concerns? \n\nWhat else could go up doing a new possible pandemic? \n\nPeople forget how insane the money flow into pharma and biotech was during COVID.",
-      "url": "https://reddit.com/r/stocks/comments/1t79wzl/hantavirus_potential/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T14:40:03.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "title": "Hantavirus portfolio Do you like these stocks in case of an epidemic?\n\n**EBS - Emergent BioSolutions** is a manufacturer of vaccines working with the US government. \n\nFrom Wikipedia- \"During the COVID-19 pandemic, Emergent BioSolutions also",
-      "url": "https://reddit.com/r/stocks/comments/1t7dq95/hantavirus_portfolio/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:56:32.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "UBER as an autonomous vehicles play (or \"Physical AI Hype Cycle\" play) How do people feel about UBER as an Autonomous Vehicles (AV) play? Or simply a stock that could rise in a \"Physical AI\" hype cycle? I'm a little confused by TSLA; simult",
-      "url": "https://reddit.com/r/stocks/comments/1t6dzpv/uber_as_an_autonomous_vehicles_play_or_physical/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:32:03.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "UBER",
-      "name": "Uber",
-      "title": "UBER as an autonomous vehicles play (or \"Physical AI Hype Cycle\" play) How do people feel about UBER as an Autonomous Vehicles (AV) play? Or simply a stock that could rise in a \"Physical AI\" hype cycle? I'm a little confused by TSLA; simult",
-      "url": "https://reddit.com/r/stocks/comments/1t6dzpv/uber_as_an_autonomous_vehicles_play_or_physical/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:32:03.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "UBER as an autonomous vehicles play (or \"Physical AI Hype Cycle\" play) How do people feel about UBER as an Autonomous Vehicles (AV) play? Or simply a stock that could rise in a \"Physical AI\" hype cycle? I'm a little confused by TSLA; simult",
-      "url": "https://reddit.com/r/stocks/comments/1t6dzpv/uber_as_an_autonomous_vehicles_play_or_physical/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:32:03.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "r/Stocks Daily Discussion &amp; Options Trading Thursday - May 07, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on stock options, but if options aren't your thing then just ignore the the",
-      "url": "https://reddit.com/r/stocks/comments/1t65fa6/rstocks_daily_discussion_options_trading_thursday/",
-      "mentions": 11,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T09:30:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "r/Stocks Daily Discussion &amp; Options Trading Thursday - May 07, 2026 This is the daily discussion, so anything stocks related is fine, but the theme for today is on stock options, but if options aren't your thing then just ignore the the",
-      "url": "https://reddit.com/r/stocks/comments/1t65fa6/rstocks_daily_discussion_options_trading_thursday/",
-      "mentions": 11,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T09:30:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Last year, a friend recommended buying MU, and now it’s the star of my portfolio with a target of $1,000 Honestly, when my friend first suggested MU, I wasn’t really convinced. At the time, I thought the memory chip cycle was unclear, and M",
-      "url": "https://reddit.com/r/stocks/comments/1t7eqxh/last_year_a_friend_recommended_buying_mu_and_now/",
-      "mentions": 4,
-      "sentiment": 0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T17:31:19.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "AMD’s stock soars 20% as data center growth pushes revenue and guidance past estimates Advanced Micro Devices reported first-quarter earnings Tuesday that topped expectations, while the company’s revenue forecast also exceeded estimates as ",
-      "url": "https://reddit.com/r/stocks/comments/1t5av2t/amds_stock_soars_20_as_data_center_growth_pushes/",
-      "mentions": 11,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T12:03:35.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "The Perpetual War Anyone else get the feeling that Trump ironically needs the war to continue indefinitely to prop the market up? He can announce the war has ended weekly for that little pump, and no one wants to sell or short the market be",
-      "url": "https://reddit.com/r/stocks/comments/1t5fchg/the_perpetual_war/",
-      "mentions": 12,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T14:56:33.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SHOP",
-      "name": "Shopify",
-      "title": "Dutch Bros Q1 Earnings Report (Total revenues grew 30.8% to $464.4 million YoY) TEMPE, Ariz.--([BUSINESS WIRE](https://www.businesswire.com/news/home/20260506549768/en/Dutch-Bros-Inc.-Reports-First-Quarter-2026-Financial-Results))--Dutch Br",
-      "url": "https://reddit.com/r/stocks/comments/1t5q0qr/dutch_bros_q1_earnings_report_total_revenues_grew/",
-      "mentions": 5,
-      "sentiment": 0.8571428571428571,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T21:10:42.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Why do we chase 10x underdogs instead of proven winners for 1x or 2x upside? $GOOGL, $AMZN, $NVDA Is it just anchoring bias?\n\nAfter the latest earnings, the outlook is clearer than ever for $GOOGL. The existential threat to the Search busin",
-      "url": "https://reddit.com/r/stocks/comments/1t509id/why_do_we_chase_10x_underdogs_instead_of_proven/",
-      "mentions": 16,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T02:38:25.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "Why do we chase 10x underdogs instead of proven winners for 1x or 2x upside? $GOOGL, $AMZN, $NVDA Is it just anchoring bias?\n\nAfter the latest earnings, the outlook is clearer than ever for $GOOGL. The existential threat to the Search busin",
-      "url": "https://reddit.com/r/stocks/comments/1t509id/why_do_we_chase_10x_underdogs_instead_of_proven/",
-      "mentions": 16,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T02:38:25.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Why do we chase 10x underdogs instead of proven winners for 1x or 2x upside? $GOOGL, $AMZN, $NVDA Is it just anchoring bias?\n\nAfter the latest earnings, the outlook is clearer than ever for $GOOGL. The existential threat to the Search busin",
-      "url": "https://reddit.com/r/stocks/comments/1t509id/why_do_we_chase_10x_underdogs_instead_of_proven/",
-      "mentions": 16,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T02:38:25.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "AMD’s stock soars as data center revenue jumps 57% **•** Revenue $10.25B vs Est. $9.85B (up 38% YoY)  \n**•** EPS $1.37 vs. Est. $1.29 (up 48% YoY)  \n**•** Data Center Revenue $5.8B vs Est. $5.6B (up 57% YoY)  \n**•** Gross Margin 55% vs. Est",
-      "url": "https://reddit.com/r/stocks/comments/1t4uv3g/amds_stock_soars_as_data_center_revenue_jumps_57/",
-      "mentions": 18,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T22:40:21.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "We're seeing the first subtle signs of Datacenters being overbuilt SpaceX and Anthropic recently announced a deal for SpaceX to provide 100% of capacity from Colossus 1 datacenter to Anthropic in the very near term. This addresses Anthropic",
-      "url": "https://reddit.com/r/stocks/comments/1t6qu3x/were_seeing_the_first_subtle_signs_of_datacenters/",
-      "mentions": 4,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T23:19:44.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "We're seeing the first subtle signs of Datacenters being overbuilt SpaceX and Anthropic recently announced a deal for SpaceX to provide 100% of capacity from Colossus 1 datacenter to Anthropic in the very near term. This addresses Anthropic",
-      "url": "https://reddit.com/r/stocks/comments/1t6qu3x/were_seeing_the_first_subtle_signs_of_datacenters/",
-      "mentions": 4,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T23:19:44.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "We're seeing the first subtle signs of Datacenters being overbuilt SpaceX and Anthropic recently announced a deal for SpaceX to provide 100% of capacity from Colossus 1 datacenter to Anthropic in the very near term. This addresses Anthropic",
-      "url": "https://reddit.com/r/stocks/comments/1t6qu3x/were_seeing_the_first_subtle_signs_of_datacenters/",
-      "mentions": 4,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T23:19:44.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RIVN",
-      "name": "Rivian",
-      "title": "Uber pops 10% as company issues higher-than-expected bookings guidance Uber reported first-quarter revenue on Wednesday that missed estimates, but the ride-hailing giant issued bookings guidance for the current quarter that exceeded analyst",
-      "url": "https://reddit.com/r/stocks/comments/1t5aw1b/uber_pops_10_as_company_issues_higherthanexpected/",
-      "mentions": 6,
-      "sentiment": 0.625,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T12:04:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Uber pops 10% as company issues higher-than-expected bookings guidance Uber reported first-quarter revenue on Wednesday that missed estimates, but the ride-hailing giant issued bookings guidance for the current quarter that exceeded analyst",
-      "url": "https://reddit.com/r/stocks/comments/1t5aw1b/uber_pops_10_as_company_issues_higherthanexpected/",
-      "mentions": 6,
-      "sentiment": 0.625,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T12:04:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "UBER",
-      "name": "Uber",
-      "title": "Uber pops 10% as company issues higher-than-expected bookings guidance Uber reported first-quarter revenue on Wednesday that missed estimates, but the ride-hailing giant issued bookings guidance for the current quarter that exceeded analyst",
-      "url": "https://reddit.com/r/stocks/comments/1t5aw1b/uber_pops_10_as_company_issues_higherthanexpected/",
-      "mentions": 6,
-      "sentiment": 0.625,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T12:04:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Is Intel's rally actually sustainable or is this a geopolitical spike? $INTC more than doubled in April, best month in their history on the Nasdaq. Apple chip deal news just dropped this week pushing it to 110. The deal makes more sense now",
-      "url": "https://reddit.com/r/stocks/comments/1t5gs73/is_intels_rally_actually_sustainable_or_is_this_a/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T15:47:53.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Is Intel's rally actually sustainable or is this a geopolitical spike? $INTC more than doubled in April, best month in their history on the Nasdaq. Apple chip deal news just dropped this week pushing it to 110. The deal makes more sense now",
-      "url": "https://reddit.com/r/stocks/comments/1t5gs73/is_intels_rally_actually_sustainable_or_is_this_a/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T15:47:53.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "The Nasdaq's top winners are now running hotter than in 2000 &gt; The top 10 performers in the Nasdaq 100 (NDX) over the past year are up an average of 784%, according to BTIG’s Jonathan Krinsky, topping the 622% average gain for the index’",
-      "url": "https://reddit.com/r/investing/comments/1t84oc8/the_nasdaqs_top_winners_are_now_running_hotter/",
-      "mentions": 7,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:13:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GME",
-      "name": "GameStop",
-      "title": "Patrick Boyle GameStop take (JustStop) Patrick Boyle has an excellent finance channel (he is a professor in the London School of Economics), but in his past life he was a trader and has a sharp take on business news:  \n[https://youtu.be/iBl",
-      "url": "https://reddit.com/r/investing/comments/1t8awvo/patrick_boyle_gamestop_take_juststop/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:16:49.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Burry dot com bubble 1999 What do you guys think of Burry saying the market today feels like ‘the last months of the 1999-2000 bubble’?\n\nCurrently the Nasdaq-100 forward P/E hit \\\\\\~60x in the dot com bubble. The current forward P/E ratio f",
-      "url": "https://reddit.com/r/investing/comments/1t7rmye/burry_dot_com_bubble_1999/",
-      "mentions": 10,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:02:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Investing strat for AI/semi cond So given the run up of many stocks such as Micron and Nvda along with the view that on one hand they have more to go but on the other the fear of losing in case of correction, is it a solid strategy to buy a",
-      "url": "https://reddit.com/r/investing/comments/1t7zntt/investing_strat_for_aisemi_cond/",
-      "mentions": 4,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:01:23.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Investing strat for AI/semi cond So given the run up of many stocks such as Micron and Nvda along with the view that on one hand they have more to go but on the other the fear of losing in case of correction, is it a solid strategy to buy a",
-      "url": "https://reddit.com/r/investing/comments/1t7zntt/investing_strat_for_aisemi_cond/",
-      "mentions": 4,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T09:01:23.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Market is about to learn what Duolingo is actually about. About 2 weeks ago, I invested 2m into SaaS stocks, after rebalancing, $800k of that is now in Duolingo stock following the reaction to its earnings report.\n\nThe so-called ‘SaaSpocaly",
-      "url": "https://reddit.com/r/investing/comments/1t8ac8z/market_is_about_to_learn_what_duolingo_is/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T16:56:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Is there a reason Qualcomm went from 125 to 220 in a week? No one uses them for AI, edge computing, soon Apple will not use their modems I don't get it in 7 trading days.  I've worked with a lot of AI and infra before the AI hype\n\nWrote abo",
-      "url": "https://reddit.com/r/investing/comments/1t6kzo2/is_there_a_reason_qualcomm_went_from_125_to_220/",
-      "mentions": 9,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T19:36:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Do automatic 401k contributions affect markets? Every two weeks, about 60 million Americans have an automatic buy in their 401k accounts. \n\nThis is split up into bi-weekly, semi-monthly, and perhaps weekly, but you would expect *most* of th",
-      "url": "https://reddit.com/r/investing/comments/1t69tha/do_automatic_401k_contributions_affect_markets/",
-      "mentions": 10,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T12:58:55.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-      "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-      "mentions": 6,
-      "sentiment": 0.8888888888888888,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:29:06.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-      "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-      "mentions": 6,
-      "sentiment": 0.8888888888888888,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:29:06.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-      "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-      "mentions": 6,
-      "sentiment": 0.8888888888888888,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:29:06.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "BA",
-      "name": "Boeing",
-      "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-      "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-      "mentions": 6,
-      "sentiment": 0.8888888888888888,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:29:06.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "title": "Record EPS growth, but not when you exclude 'other income' coming from Anthropic? There's a lot being said about the record-beating EPS growth of 2026 Q1, 25% year-on year.\n\nThen I saw [this graph](https://i.imgur.com/JQNhwIJ.jpeg) that att",
-      "url": "https://reddit.com/r/investing/comments/1t6dwnc/record_eps_growth_but_not_when_you_exclude_other/",
-      "mentions": 6,
-      "sentiment": 0.8888888888888888,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:29:06.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "DIY direct indexing for Large capital gains ($450k+) My situation is that I have large cap gains from selling AMD (cap gains alone of 450K+ in 2026) with a mix of long term and short term sales. I have sold a bit too much, because 1) I am m",
-      "url": "https://reddit.com/r/investing/comments/1t7dtnw/diy_direct_indexing_for_large_capital_gains_450k/",
-      "mentions": 3,
-      "sentiment": 0.46153846153846156,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:59:56.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "WMT",
-      "name": "Walmart",
-      "title": "DIY direct indexing for Large capital gains ($450k+) My situation is that I have large cap gains from selling AMD (cap gains alone of 450K+ in 2026) with a mix of long term and short term sales. I have sold a bit too much, because 1) I am m",
-      "url": "https://reddit.com/r/investing/comments/1t7dtnw/diy_direct_indexing_for_large_capital_gains_450k/",
-      "mentions": 3,
-      "sentiment": 0.46153846153846156,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T16:59:56.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Current memory semiconductor sector sentiment: Value disconnect between MU and peer AI stocks Been investing through multiple market cycles for over a decade, and lately I’ve been noticing a pretty interesting disconnect within the memory a",
-      "url": "https://reddit.com/r/investing/comments/1t6dbs4/current_memory_semiconductor_sector_sentiment/",
+      "title": "MSFT $373.94, price +1.8%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/MSFT",
       "mentions": 4,
       "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T15:08:34.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Arstechnica: SpaceX IPO gives Musk unchecked power and forbids investor lawsuits https://arstechnica.com/tech-policy/2026/05/report-spacex-ipo-gives-musk-unchecked-power-and-forbids-investor-lawsuits/\n\nDirect article that was referenced: ht",
-      "url": "https://reddit.com/r/investing/comments/1t5scrw/arstechnica_spacex_ipo_gives_musk_unchecked_power/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T22:39:02.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "$RKLB is a real space business, but the stock is already priced like Neutron works Rocket Lab is one of the few public space companies where the business is already real. Revenue exists, launches are happening, government customers are invo",
-      "url": "https://reddit.com/r/investing/comments/1t5bugk/rklb_is_a_real_space_business_but_the_stock_is/",
-      "mentions": 5,
-      "sentiment": 0.75,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T12:45:38.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Should I get out of SPY and move it to a better long term index? I bought 300 shares of SPY back in March at 630 for the intention of holding long term.  10 years min.  \nNow looking more into other indexes, it seems there were better option",
-      "url": "https://reddit.com/r/investing/comments/1t6ai1u/should_i_get_out_of_spy_and_move_it_to_a_better/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T13:25:24.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "You guys spent 2 years calling intel a dead company and it just doubled in a month Every single thread on here for the last 2 years was the same. Intc is finished. Sell. Pat gerlsinger ruined it. Can’t compete with tsmc. Going to zero\n\nThe ",
-      "url": "https://reddit.com/r/investing/comments/1t66klw/you_guys_spent_2_years_calling_intel_a_dead/",
-      "mentions": 5,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T10:32:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "You guys spent 2 years calling intel a dead company and it just doubled in a month Every single thread on here for the last 2 years was the same. Intc is finished. Sell. Pat gerlsinger ruined it. Can’t compete with tsmc. Going to zero\n\nThe ",
-      "url": "https://reddit.com/r/investing/comments/1t66klw/you_guys_spent_2_years_calling_intel_a_dead/",
-      "mentions": 5,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T10:32:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "You guys spent 2 years calling intel a dead company and it just doubled in a month Every single thread on here for the last 2 years was the same. Intc is finished. Sell. Pat gerlsinger ruined it. Can’t compete with tsmc. Going to zero\n\nThe ",
-      "url": "https://reddit.com/r/investing/comments/1t66klw/you_guys_spent_2_years_calling_intel_a_dead/",
-      "mentions": 5,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T10:32:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Edward Jones advisor wants me to invest with him instead of on my own. When I was 20 I opened and a Roth IRA with Edward Jones and maxed it out. 12 years later, I just maxed it out one more time. \n\nI've just started making good money and sa",
-      "url": "https://reddit.com/r/investing/comments/1t4imcs/edward_jones_advisor_wants_me_to_invest_with_him/",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T15:22:38.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Is Brian Niccol the worst CEO for long term brand health? ($SBUX) At Chipotle he raised prices four times between 2021-2023, while he quietly cut quality, ruined the brand, and shrank the portions. Pocketed over $100M across his tenure whil",
-      "url": "https://reddit.com/r/investing/comments/1t42uo3/is_brian_niccol_the_worst_ceo_for_long_term_brand/",
-      "mentions": 8,
-      "sentiment": -0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T02:42:53.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Could be Time to Buy Robotic Stocks 🤖 Musk &amp; Jenson call them the biggest TAM ever. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate ",
-      "url": "https://reddit.com/r/investing/comments/1t59ja2/could_be_time_to_buy_robotic_stocks_musk_jenson/",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T11:02:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Could be Time to Buy Robotic Stocks 🤖 Musk &amp; Jenson call them the biggest TAM ever. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate ",
-      "url": "https://reddit.com/r/investing/comments/1t59ja2/could_be_time_to_buy_robotic_stocks_musk_jenson/",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T11:02:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Could be Time to Buy Robotic Stocks 🤖 Musk &amp; Jenson call them the biggest TAM ever. Elon Musk has been banging on the table about Robotics, Jensen Huang views robotics as the next massive growth Frontier after Ai, which will integrate ",
-      "url": "https://reddit.com/r/investing/comments/1t59ja2/could_be_time_to_buy_robotic_stocks_musk_jenson/",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T11:02:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GME",
-      "name": "GameStop",
-      "title": "Ryan Cohen offers $56B to buy eBay Ryan Cohen, GameStop chairman and CEO, submitted a non-binding $56 billion proposal to acquire eBay at $125 per share after quietly accumulating roughly a 5% stake. The deal would be financed with GameStop",
-      "url": "https://reddit.com/r/investing/comments/1t3g9i5/ryan_cohen_offers_56b_to_buy_ebay/",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T12:29:01.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Ryan Cohen offers $56B to buy eBay Ryan Cohen, GameStop chairman and CEO, submitted a non-binding $56 billion proposal to acquire eBay at $125 per share after quietly accumulating roughly a 5% stake. The deal would be financed with GameStop",
-      "url": "https://reddit.com/r/investing/comments/1t3g9i5/ryan_cohen_offers_56b_to_buy_ebay/",
-      "mentions": 12,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T12:29:01.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "SpaceX IPO effect: Will we begin to have index based funds, but they don't invest in particular index companies? With the SpaceX IPO coming up - initially I was excited about it.\n\nThen, it was for SpaceX + xAI + Twitter - all of which are n",
-      "url": "https://reddit.com/r/investing/comments/1t3tx4w/spacex_ipo_effect_will_we_begin_to_have_index/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T20:37:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "SpaceX IPO effect: Will we begin to have index based funds, but they don't invest in particular index companies? With the SpaceX IPO coming up - initially I was excited about it.\n\nThen, it was for SpaceX + xAI + Twitter - all of which are n",
-      "url": "https://reddit.com/r/investing/comments/1t3tx4w/spacex_ipo_effect_will_we_begin_to_have_index/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T20:37:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "title": "SpaceX IPO effect: Will we begin to have index based funds, but they don't invest in particular index companies? With the SpaceX IPO coming up - initially I was excited about it.\n\nThen, it was for SpaceX + xAI + Twitter - all of which are n",
-      "url": "https://reddit.com/r/investing/comments/1t3tx4w/spacex_ipo_effect_will_we_begin_to_have_index/",
-      "mentions": 8,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T20:37:07.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Robinhood is super shady. Account under review for no reason I have a Robinhood account and I tried moving some BTC to cold storage. Robinhood flagged my account for no reason and I get a notification that my account is under review for sus",
-      "url": "https://reddit.com/r/investing/comments/1t53gr2/robinhood_is_super_shady_account_under_review_for/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T05:15:17.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "title": "21M, $-22 in the bank but i will reach my goal by 30! So i have nothing saved at all at the moment, im negative in my checking because i had to get gas for my car, i been doing a lot of questioning &amp; looking for - what accounts should i",
-      "url": "https://reddit.com/r/investing/comments/1t50ckt/21m_22_in_the_bank_but_i_will_reach_my_goal_by_30/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T02:42:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "OpenAI IPO could shake the market more than people think There is a lot of hype about a possible IPO from OpenAI with a valuation between 750 billion and 1 trillion dollars. But if you look deeper, there are some serious risks that people a",
-      "url": "https://reddit.com/r/investing/comments/1t4kb2o/openai_ipo_could_shake_the_market_more_than/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:21:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "OpenAI IPO could shake the market more than people think There is a lot of hype about a possible IPO from OpenAI with a valuation between 750 billion and 1 trillion dollars. But if you look deeper, there are some serious risks that people a",
-      "url": "https://reddit.com/r/investing/comments/1t4kb2o/openai_ipo_could_shake_the_market_more_than/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:21:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "OpenAI IPO could shake the market more than people think There is a lot of hype about a possible IPO from OpenAI with a valuation between 750 billion and 1 trillion dollars. But if you look deeper, there are some serious risks that people a",
-      "url": "https://reddit.com/r/investing/comments/1t4kb2o/openai_ipo_could_shake_the_market_more_than/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:21:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "OpenAI IPO could shake the market more than people think There is a lot of hype about a possible IPO from OpenAI with a valuation between 750 billion and 1 trillion dollars. But if you look deeper, there are some serious risks that people a",
-      "url": "https://reddit.com/r/investing/comments/1t4kb2o/openai_ipo_could_shake_the_market_more_than/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:21:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "What today’s headlines may actually mean for freight resilience, tariff refunds, and the return of an energy risk premium Today’s headlines look disconnected, but I think they point to the same investment question: what parts of the global ",
-      "url": "https://reddit.com/r/investing/comments/1t41skd/what_todays_headlines_may_actually_mean_for/",
-      "mentions": 3,
-      "sentiment": 0.4,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T01:56:35.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Who Controls the Space Controls the Economy: Mapping the Space Economy Bottlenecks Happy May 4th.\n\nRecently, I was interested in finding out the bottlenecks that are lagging behind main sectors.\n\nI picked Space Sector this week paying homag",
-      "url": "https://reddit.com/r/investing/comments/1t41692/who_controls_the_space_controls_the_economy/",
-      "mentions": 3,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T01:29:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "BA",
-      "name": "Boeing",
-      "title": "Who Controls the Space Controls the Economy: Mapping the Space Economy Bottlenecks Happy May 4th.\n\nRecently, I was interested in finding out the bottlenecks that are lagging behind main sectors.\n\nI picked Space Sector this week paying homag",
-      "url": "https://reddit.com/r/investing/comments/1t41692/who_controls_the_space_controls_the_economy/",
-      "mentions": 3,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T01:29:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "title": "Who Controls the Space Controls the Economy: Mapping the Space Economy Bottlenecks Happy May 4th.\n\nRecently, I was interested in finding out the bottlenecks that are lagging behind main sectors.\n\nI picked Space Sector this week paying homag",
-      "url": "https://reddit.com/r/investing/comments/1t41692/who_controls_the_space_controls_the_economy/",
-      "mentions": 3,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T01:29:05.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Market growth - realization Sp500 is currently at \\~66 trillion dollars market cap, assuming a conservative 8% annual growth rate. sp500 will reach 1 quadrillion in 36 years.\n\nThis means that the top company in 30-40 years will likely be wo",
-      "url": "https://reddit.com/r/investing/comments/1t2v831/market_growth_realization/",
-      "mentions": 10,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-03T19:37:22.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "Market growth - realization Sp500 is currently at \\~66 trillion dollars market cap, assuming a conservative 8% annual growth rate. sp500 will reach 1 quadrillion in 36 years.\n\nThis means that the top company in 30-40 years will likely be wo",
-      "url": "https://reddit.com/r/investing/comments/1t2v831/market_growth_realization/",
-      "mentions": 10,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-03T19:37:22.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Market growth - realization Sp500 is currently at \\~66 trillion dollars market cap, assuming a conservative 8% annual growth rate. sp500 will reach 1 quadrillion in 36 years.\n\nThis means that the top company in 30-40 years will likely be wo",
-      "url": "https://reddit.com/r/investing/comments/1t2v831/market_growth_realization/",
-      "mentions": 10,
-      "sentiment": 0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-03T19:37:22.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "What's more important than power in the AI era? I've been doing research about what kind of bottlenecks that actually last. The story now is not much about GPU any more. It shifts to CPU now as AMD and Intel explode. I do think RAM (HBM) is",
-      "url": "https://reddit.com/r/investing/comments/1t3ady7/whats_more_important_than_power_in_the_ai_era/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T07:12:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "Keeping or selling Meta stock? Just as the title suggests, I'm curious for those currently owning Meta stock if: \n\n* You'll keep or sell the stock, given that it's plummeted since last week's quarterly announcement due to investor concerns ",
-      "url": "https://reddit.com/r/investing/comments/1t3h6ml/keeping_or_selling_meta_stock/",
-      "mentions": 5,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T13:06:36.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Options Questions Safe Haven periodic megathread | May 4 2026 We *call* this the weekly Safe Haven thread, but it might stay up for more than a week.\n\nFor the options questions you wanted to ask, but were afraid to.  \n**There are no stupid ",
-      "url": "https://reddit.com/r/options/comments/1t3lodj/options_questions_safe_haven_periodic_megathread/",
-      "mentions": 4,
-      "sentiment": -0.2222222222222222,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T15:51:20.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Options Questions Safe Haven periodic megathread | May 4 2026 We *call* this the weekly Safe Haven thread, but it might stay up for more than a week.\n\nFor the options questions you wanted to ask, but were afraid to.  \n**There are no stupid ",
-      "url": "https://reddit.com/r/options/comments/1t3lodj/options_questions_safe_haven_periodic_megathread/",
-      "mentions": 4,
-      "sentiment": -0.2222222222222222,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-04T15:51:20.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "AMD Covered Call damage limitations on the runaway stock price? Curious what everyone's play would be on damage limitation for my worst trade in history.  \n\nI have actually never had a run on an option this large go against me.  Taxable acc",
-      "url": "https://reddit.com/r/options/comments/1t85oye/amd_covered_call_damage_limitations_on_the/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T13:55:49.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Trying to get into AMD and MU Hey guys planning to buy AMD and MU options next week. I believe they still have alot of room to grow this year but I have a huge problem, I only have $3000 usd to play with and premiums are quite expensive. Am",
-      "url": "https://reddit.com/r/options/comments/1t872th/trying_to_get_into_amd_and_mu/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:51:16.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Trying to get into AMD and MU Hey guys planning to buy AMD and MU options next week. I believe they still have alot of room to grow this year but I have a huge problem, I only have $3000 usd to play with and premiums are quite expensive. Am",
-      "url": "https://reddit.com/r/options/comments/1t872th/trying_to_get_into_amd_and_mu/",
-      "mentions": 5,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T14:51:16.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-      "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-      "mentions": 4,
-      "sentiment": -0.16666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T15:36:27.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-      "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-      "mentions": 4,
-      "sentiment": -0.16666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T15:36:27.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-      "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-      "mentions": 4,
-      "sentiment": -0.16666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T15:36:27.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-      "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-      "mentions": 4,
-      "sentiment": -0.16666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T15:36:27.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Decent strategy to make monthly income via ITM options? This is more of a discussion and sharing your personal findings or preferences. I have used NVDA to make 5-10% but I am bad at noticing the momentum push and I miss out on more than 10",
-      "url": "https://reddit.com/r/options/comments/1t8893a/decent_strategy_to_make_monthly_income_via_itm/",
-      "mentions": 4,
-      "sentiment": -0.16666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T15:36:27.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Advice for a Steady Cash Flow Strategy? So I have been doing a bunch of research over the past 3 to 4 months and trading some paper accounts. I also have an investment account holding long-term blue chips and ETFs, along with a Roth IRA and",
-      "url": "https://reddit.com/r/options/comments/1t8bssf/advice_for_a_steady_cash_flow_strategy/",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:49:48.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Advice for a Steady Cash Flow Strategy? So I have been doing a bunch of research over the past 3 to 4 months and trading some paper accounts. I also have an investment account holding long-term blue chips and ETFs, along with a Roth IRA and",
-      "url": "https://reddit.com/r/options/comments/1t8bssf/advice_for_a_steady_cash_flow_strategy/",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T17:49:48.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Long-term MU shareholder, first time considering calls — framework advice?  Long-term MU holder with a big position. Strong conviction the stock crosses $1,000, just can’t say exactly when. Could be by June earnings, could be after June ear",
-      "url": "https://reddit.com/r/options/comments/1t7uxxf/longterm_mu_shareholder_first_time_considering/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T04:42:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/options/comments/1t7sj6x/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:44:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AAPL",
-      "name": "Apple",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/options/comments/1t7sj6x/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:44:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/options/comments/1t7sj6x/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:44:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "if u had to pick one INTC or AMD puts? currently debating between 8/21 expirations to play for a 10-20% pullback. Intel ran up harder and feels more susceptible to FOMO from the 24/7 recycled headlines of potential partnerships but at the s",
-      "url": "https://reddit.com/r/options/comments/1t7sj6x/if_u_had_to_pick_one_intc_or_amd_puts/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T02:44:43.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "PLNT BULL THESIS pt 2 DISCLAIMER: pt 1 is still playing out. High THEORETICAL VALUE is how I like to think of my near worthless calls that I’m of course still holding.\n\nLet me back up, so I’ve been bullish on PLNT since mid January and hone",
-      "url": "https://reddit.com/r/options/comments/1t7tj4d/plnt_bull_thesis_pt_2/",
-      "mentions": 3,
-      "sentiment": -0.3076923076923077,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-09T03:32:32.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Political Screw-Up + Bad Timing + Hospital Stay = Covered Call Wow Hey Team, for a couple years I was doing great selling daily covered calls (my only options experience) against various longs in my account. I uncharacteristically got distr",
-      "url": "https://reddit.com/r/options/comments/1t7bygv/political_screwup_bad_timing_hospital_stay/",
-      "mentions": 4,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T15:52:49.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Short vol analysis The mental energy cost of manual analysis nobody talks about\n\nEvery time I open a new position I spend 15+ minutes scanning tickers, checking IV rank, calculating optimal strikes, verifying no earnings conflicts. That cog",
-      "url": "https://reddit.com/r/options/comments/1t781w9/short_vol_analysis/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T13:31:14.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MU",
-      "name": "Micron",
-      "title": "Micron recently did 4 naked $510 mu puts for Jul, got about $17k premium. took $10k of that and did a 670/720 debit spread for my June 2027 expiration. payout is around $25k I think if successful. my thesis is that mu will continue to go up",
-      "url": "https://reddit.com/r/options/comments/1t6vmsm/micron/",
-      "mentions": 6,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T02:58:34.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NET",
-      "name": "Cloudflare",
-      "title": "Cloudflare ($NET) down nearly 19% after earnings Cloudflare is down nearly 19% after hours despite beating Q1 expectations. Looks like the market is reacting less to the headline earnings and more to the 20% workforce cut, restructuring cos",
-      "url": "https://reddit.com/r/options/comments/1t70x83/cloudflare_net_down_nearly_19_after_earnings/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T07:36:41.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MRNA",
-      "name": "Moderna",
-      "title": "Unusual Options Activity In MRNA Sample size is too small to trade based on this …need more. Right? \n\n🟢 MRNA — $49 Call, 8 days to expiration\n\nUnusual Flow: $1.1M of these calls in volume-burst activity (no clean sweep pattern).\n\nHistorica",
-      "url": "https://reddit.com/r/options/comments/1t70mxe/unusual_options_activity_in_mrna/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T07:20:19.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Looking for input on running a persistent OTM put structure as a portfolio hedge! I've been thinking about a tail hedge structure I read about recently, keeping a small persistent long position in 25-30% OTM puts with 30-60 day maturities, ",
-      "url": "https://reddit.com/r/options/comments/1t6hoom/looking_for_input_on_running_a_persistent_otm_put/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T17:40:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Are long-term puts on crude oil futures ETF's not an obvious idea? It seems extremely likely that the oil price will be much lower than the current price in a year or two, let alone 952 days from now, when the furthest out USO options end. ",
-      "url": "https://reddit.com/r/options/comments/1t6yzmt/are_longterm_puts_on_crude_oil_futures_etfs_not/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T05:50:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "My TOP 3 Premium Selling PICKS DAILY IV OPPORTUNITIES BRIEF — FRIDAY, MAY 8, 2026\n\n\n\n**SECTION 1: MARKET CONTEXT**\n\n\n\nFutures are green across the board this morning — SPY +0.51%, QQQ +0.73%, IWM +0.48%, DIA +0.33% — broad-based risk-on ton",
-      "url": "https://reddit.com/r/options/comments/1t75653/my_top_3_premium_selling_picks/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T11:29:22.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "My TOP 3 Premium Selling PICKS DAILY IV OPPORTUNITIES BRIEF — FRIDAY, MAY 8, 2026\n\n\n\n**SECTION 1: MARKET CONTEXT**\n\n\n\nFutures are green across the board this morning — SPY +0.51%, QQQ +0.73%, IWM +0.48%, DIA +0.33% — broad-based risk-on ton",
-      "url": "https://reddit.com/r/options/comments/1t75653/my_top_3_premium_selling_picks/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T11:29:22.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Short vol tickers What tickers do you prefer for short vol strategies and why?\n\nBeen mostly trading SPY, QQQ, and IWM for IC setups — good liquidity, tight spreads, and reliable IV behavior.\n\nCurious what tickers the community prefers and w",
-      "url": "https://reddit.com/r/options/comments/1t6tob5/short_vol_tickers/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:27:04.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Short vol tickers What tickers do you prefer for short vol strategies and why?\n\nBeen mostly trading SPY, QQQ, and IWM for IC setups — good liquidity, tight spreads, and reliable IV behavior.\n\nCurious what tickers the community prefers and w",
-      "url": "https://reddit.com/r/options/comments/1t6tob5/short_vol_tickers/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:27:04.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Tickers of short vol What are your go-to tickers for short vol?\n\nPersonally running IC and spreads on SPY, QQQ and IWM mostly. Curious what the community is trading.\n\nDrop your top 3 below 👇\n\n\\#thetagang #shortvol #optionstrading",
-      "url": "https://reddit.com/r/options/comments/1t6tfxe/tickers_of_short_vol/",
-      "mentions": 3,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:16:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Tickers of short vol What are your go-to tickers for short vol?\n\nPersonally running IC and spreads on SPY, QQQ and IWM mostly. Curious what the community is trading.\n\nDrop your top 3 below 👇\n\n\\#thetagang #shortvol #optionstrading",
-      "url": "https://reddit.com/r/options/comments/1t6tfxe/tickers_of_short_vol/",
-      "mentions": 3,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-08T01:16:13.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "IC setups Current premium environment check — what are you seeing?\n\nIV rank on SPY and QQQ is elevated right now. Premium environment looks rich for IC setups around 36 DTE with POP above 80%. Anyone else positioning this week or waiting fo",
-      "url": "https://reddit.com/r/options/comments/1t6b1yw/ic_setups/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T13:46:48.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "IC setups Current premium environment check — what are you seeing?\n\nIV rank on SPY and QQQ is elevated right now. Premium environment looks rich for IC setups around 36 DTE with POP above 80%. Anyone else positioning this week or waiting fo",
-      "url": "https://reddit.com/r/options/comments/1t6b1yw/ic_setups/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T13:46:48.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "Sold INTC $100 covered call 05/29 &amp;#x200B;\n\nI sold 10 $100 covered call that expires on 05/29 for 1k premium week ago. The stock has rallied since then and I feel guilty and don't want to miss out on the profit. What should I do now? Ju",
-      "url": "https://reddit.com/r/options/comments/1t5ygq3/sold_intc_100_covered_call_0529/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T03:07:33.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Suggestions for my call option *help* Hey all! Looking for some advice. Got in on oracle before the earnings report before last around $200 and dca'd down to about $192. It then dropped way down to around $136-140 so decided to sell a call ",
-      "url": "https://reddit.com/r/options/comments/1t5wvv2/suggestions_for_my_call_option_help/",
-      "mentions": 4,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:55:41.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "title": "Suggestions for my call option *help* Hey all! Looking for some advice. Got in on oracle before the earnings report before last around $200 and dca'd down to about $192. It then dropped way down to around $136-140 so decided to sell a call ",
-      "url": "https://reddit.com/r/options/comments/1t5wvv2/suggestions_for_my_call_option_help/",
-      "mentions": 4,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:55:41.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "Short vol Current premium environment check — what are you seeing?\n\nIV rank on SPY and QQQ is elevated right now. Premium environment looks rich for IC setups around 36 DTE with POP above 80%. Anyone else positioning this week or waiting fo",
-      "url": "https://reddit.com/r/options/comments/1t6b0e1/short_vol/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T13:45:09.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Short vol Current premium environment check — what are you seeing?\n\nIV rank on SPY and QQQ is elevated right now. Premium environment looks rich for IC setups around 36 DTE with POP above 80%. Anyone else positioning this week or waiting fo",
-      "url": "https://reddit.com/r/options/comments/1t6b0e1/short_vol/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T13:45:09.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "title": "Qqq Credit spread gone wrong 700/710 Opened a credit spread on qqq and it's dangerously close to my strikes.   \nThe current position is 05/22 700/710\n\nI am thinking of rolling it out 30 dte and up for more time and less risk of it hitting t",
-      "url": "https://reddit.com/r/options/comments/1t6105y/qqq_credit_spread_gone_wrong_700710/",
-      "mentions": 4,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T05:15:23.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Best options trading journal app/tool you’ve actually stuck with? I’ve been trading options for a few months now with mixed results, and I’m realizing a big gap in my process is proper journaling and tracking. I started with Google Sheets, ",
-      "url": "https://reddit.com/r/options/comments/1t5himk/best_options_trading_journal_apptool_youve/",
-      "mentions": 6,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:13:36.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "The 24/7 workflow I run for earnings IV crush trades TL;DR: I created an alert system with AI that finds overpriced options right before earnings, and then I trade a short straddle setup betting on the IV crush. I'm averaging \\~84.74 % annu",
-      "url": "https://reddit.com/r/options/comments/1t4yjba/the_247_workflow_i_run_for_earnings_iv_crush/",
-      "mentions": 9,
-      "sentiment": -0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T01:20:19.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "title": "The 24/7 workflow I run for earnings IV crush trades TL;DR: I created an alert system with AI that finds overpriced options right before earnings, and then I trade a short straddle setup betting on the IV crush. I'm averaging \\~84.74 % annu",
-      "url": "https://reddit.com/r/options/comments/1t4yjba/the_247_workflow_i_run_for_earnings_iv_crush/",
-      "mentions": 9,
-      "sentiment": -0.8333333333333334,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T01:20:19.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "$25K AI options portfolio: Day 1 -$10.88, Day 2 +5.2%, and 4 bugs to discuss Following up on Tuesday's deployment post. Day 1 is in the books and Day 2 is mid-tape, so I want to walk through what actually happened, why the rules are the rul",
-      "url": "https://nexustrade.io/blog/day-1-ai-options-portfolio-25000-20260506",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:11:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "$25K AI options portfolio: Day 1 -$10.88, Day 2 +5.2%, and 4 bugs to discuss Following up on Tuesday's deployment post. Day 1 is in the books and Day 2 is mid-tape, so I want to walk through what actually happened, why the rules are the rul",
-      "url": "https://nexustrade.io/blog/day-1-ai-options-portfolio-25000-20260506",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:11:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "$25K AI options portfolio: Day 1 -$10.88, Day 2 +5.2%, and 4 bugs to discuss Following up on Tuesday's deployment post. Day 1 is in the books and Day 2 is mid-tape, so I want to walk through what actually happened, why the rules are the rul",
-      "url": "https://nexustrade.io/blog/day-1-ai-options-portfolio-25000-20260506",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:11:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "title": "$25K AI options portfolio: Day 1 -$10.88, Day 2 +5.2%, and 4 bugs to discuss Following up on Tuesday's deployment post. Day 1 is in the books and Day 2 is mid-tape, so I want to walk through what actually happened, why the rules are the rul",
-      "url": "https://nexustrade.io/blog/day-1-ai-options-portfolio-25000-20260506",
-      "mentions": 3,
-      "sentiment": 0.5,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T01:11:00.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Margin loan at 13% (E*TRADE) vs SPX box spread financing — worth it? Hey all,\n\nI recently took out a \\~$83K margin loan with E\\*TRADE to invest in NVDA LEAP calls and shares. I’m currently in a small profit and planning to hold most of the ",
-      "url": "https://reddit.com/r/options/comments/1t5kx4w/margin_loan_at_13_etrade_vs_spx_box_spread/",
-      "mentions": 4,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T18:09:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Margin loan at 13% (E*TRADE) vs SPX box spread financing — worth it? Hey all,\n\nI recently took out a \\~$83K margin loan with E\\*TRADE to invest in NVDA LEAP calls and shares. I’m currently in a small profit and planning to hold most of the ",
-      "url": "https://reddit.com/r/options/comments/1t5kx4w/margin_loan_at_13_etrade_vs_spx_box_spread/",
-      "mentions": 4,
-      "sentiment": -0.6666666666666666,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T18:09:28.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Did AMD feel way too crowded before earnings or was that just me? I almost got myself killed on AMD earnings because I thought I was being clever.\n\nAMD closed around $355 on May 5 before reporting. The stock had already been running hard wi",
-      "url": "https://reddit.com/r/options/comments/1t65buz/did_amd_feel_way_too_crowded_before_earnings_or/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-07T09:24:37.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "WMT",
-      "name": "Walmart",
-      "title": "Selling Bull Put Spread on boring stocks. I have been working on collecting liquid stocks that are boring, meaning flatish price move, no big shocks, low IV to name a few parameters. Then I sell Bull Put Spread on them with 10-15 DTE. A few",
-      "url": "https://reddit.com/r/options/comments/1t4pjca/selling_bull_put_spread_on_boring_stocks/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T19:20:57.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "COST",
-      "name": "Costco",
-      "title": "Selling Bull Put Spread on boring stocks. I have been working on collecting liquid stocks that are boring, meaning flatish price move, no big shocks, low IV to name a few parameters. Then I sell Bull Put Spread on them with 10-15 DTE. A few",
-      "url": "https://reddit.com/r/options/comments/1t4pjca/selling_bull_put_spread_on_boring_stocks/",
-      "mentions": 6,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T19:20:57.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Options trading platform for my use case. So I do an options trade every morning. I just follow some guy, turned 25k into 250k over six months so it’d astonishingly consistent. It prints like crazy. The issue is that I can’t move my SL here",
-      "url": "https://reddit.com/r/options/comments/1t5iq6w/options_trading_platform_for_my_use_case/",
-      "mentions": 4,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T16:55:40.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "MSFT and META LEAPS I’d love to get some outside perspectives on two LEAPS positions I’m currently holding:  \nMeta (long-dated call, Jan 2027)  \nMicrosoft (long-dated call, Mar 2027)  \nMy thesis going in was pretty simple: both are dominant",
-      "url": "https://reddit.com/r/options/comments/1t4l162/msft_and_meta_leaps/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:46:46.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "title": "MSFT and META LEAPS I’d love to get some outside perspectives on two LEAPS positions I’m currently holding:  \nMeta (long-dated call, Jan 2027)  \nMicrosoft (long-dated call, Mar 2027)  \nMy thesis going in was pretty simple: both are dominant",
-      "url": "https://reddit.com/r/options/comments/1t4l162/msft_and_meta_leaps/",
-      "mentions": 4,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:46:46.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Robinhood not allowing diagonal spreads? So I've done LEAPS and PMCC strategy for a few years from 2020 to roughly 2023. I liquidated but want to get back into it. I still have level 3 options. Just bought a long call ITM but it won't let m",
-      "url": "https://reddit.com/r/options/comments/1t4l8x2/robinhood_not_allowing_diagonal_spreads/",
-      "mentions": 4,
-      "sentiment": -0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T16:54:10.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Option Experts - Help! My analysis sucks and I don't know why (CMPX) This is my first time buying an option (CMPX).  I like the idea of options but I didn't want to dip my toe in since I don't understand them yet.  However, I bought my firs",
-      "url": "https://reddit.com/r/options/comments/1t50en3/option_experts_help_my_analysis_sucks_and_i_dont/",
-      "mentions": 3,
-      "sentiment": 0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-06T02:44:55.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "Will a PBR Petrobras call option get exercised and will I miss out the dividends? https://preview.redd.it/47y7qq1itdzg1.png?width=1842&amp;format=png&amp;auto=webp&amp;s=27b3ba45c2600dfae0022533ad7e0e009e87a684\n\n\n\nI have 1800 PBR Petrobras ",
-      "url": "https://reddit.com/r/options/comments/1t4s4x3/will_a_pbr_petrobras_call_option_get_exercised/",
-      "mentions": 4,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T20:54:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "BA",
-      "name": "Boeing",
-      "title": "Will a PBR Petrobras call option get exercised and will I miss out the dividends? https://preview.redd.it/47y7qq1itdzg1.png?width=1842&amp;format=png&amp;auto=webp&amp;s=27b3ba45c2600dfae0022533ad7e0e009e87a684\n\n\n\nI have 1800 PBR Petrobras ",
-      "url": "https://reddit.com/r/options/comments/1t4s4x3/will_a_pbr_petrobras_call_option_get_exercised/",
-      "mentions": 4,
-      "sentiment": -0.25,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T20:54:18.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "Palantir ($PLTR) Earnings Vol Trade Post-mortem - Patience is the Key Yesterday I posted my thesis for going long vol into $PLTR EA.\n\n[https://www.reddit.com/r/options/comments/1t4135r/palantir\\_pltr\\_earnings\\_vol\\_setup\\_are\\_traders/](ht",
-      "url": "https://reddit.com/r/options/comments/1t4hez8/palantir_pltr_earnings_vol_trade_postmortem/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T14:39:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Palantir ($PLTR) Earnings Vol Trade Post-mortem - Patience is the Key Yesterday I posted my thesis for going long vol into $PLTR EA.\n\n[https://www.reddit.com/r/options/comments/1t4135r/palantir\\_pltr\\_earnings\\_vol\\_setup\\_are\\_traders/](ht",
-      "url": "https://reddit.com/r/options/comments/1t4hez8/palantir_pltr_earnings_vol_trade_postmortem/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "2026-05-05T14:39:30.000Z"
-    },
-    {
-      "source": "Reddit Finance",
+      "priceMove": 1.7967022838005193,
+      "relativeVolume": 0.8838536404606124,
+      "lastPrice": 373.94000244140625,
+      "published": "2026-06-24T00:22:35.174Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "COIN $158.18, price -4.0%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/COIN",
+      "mentions": 7,
+      "sentiment": -0.18,
+      "priceMove": -4.04028379645049,
+      "relativeVolume": 0.8532451015557082,
+      "lastPrice": 158.17999267578125,
+      "published": "2026-06-24T00:22:35.215Z"
+    },
+    {
+      "source": "Price/Volume",
       "ticker": "MSTR",
       "name": "MicroStrategy",
-      "title": "Palantir ($PLTR) Earnings Vol Trade Post-mortem - Patience is the Key Yesterday I posted my thesis for going long vol into $PLTR EA.\n\n[https://www.reddit.com/r/options/comments/1t4135r/palantir\\_pltr\\_earnings\\_vol\\_setup\\_are\\_traders/](ht",
-      "url": "https://reddit.com/r/options/comments/1t4hez8/palantir_pltr_earnings_vol_trade_postmortem/",
+      "title": "MSTR $103.84, price -5.1%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/MSTR",
+      "mentions": 8,
+      "sentiment": -0.18,
+      "priceMove": -5.134298185262137,
+      "relativeVolume": 0.9155783279850538,
+      "lastPrice": 103.83999633789062,
+      "published": "2026-06-24T00:22:35.258Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "RIVN $14.89, price -1.4%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/RIVN",
       "mentions": 4,
+      "sentiment": -0.18,
+      "priceMove": -1.390728694316316,
+      "relativeVolume": 0.8060417426859288,
+      "lastPrice": 14.890000343322754,
+      "published": "2026-06-24T00:22:35.291Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SOFI $17.29, price +1.1%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/SOFI",
+      "mentions": 4,
+      "sentiment": 0.25,
+      "priceMove": 1.1111142094681452,
+      "relativeVolume": 0.9234372680395654,
+      "lastPrice": 17.290000915527344,
+      "published": "2026-06-24T00:22:35.331Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "HOOD $103.25, price -2.3%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/HOOD",
+      "mentions": 5,
+      "sentiment": -0.18,
+      "priceMove": -2.3271205238653683,
+      "relativeVolume": 0.931180770865954,
+      "lastPrice": 103.25,
+      "published": "2026-06-24T00:22:35.371Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "NFLX $72.82, price -0.1%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/NFLX",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": -0.08232376626624557,
+      "relativeVolume": 0.698149293736281,
+      "lastPrice": 72.81999969482422,
+      "published": "2026-06-24T00:22:35.403Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/GOOGL",
+      "mentions": 4,
+      "sentiment": -0.18,
+      "priceMove": -1.0152104402096156,
+      "relativeVolume": 0.8307721775595311,
+      "lastPrice": 346.1300048828125,
+      "published": "2026-06-24T00:22:35.444Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "title": "BABA $102.60, price -2.3%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/BABA",
+      "mentions": 5,
+      "sentiment": -0.18,
+      "priceMove": -2.2577905296952574,
+      "relativeVolume": 0.8175239260871296,
+      "lastPrice": 102.5999984741211,
+      "published": "2026-06-24T00:22:35.512Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "NIO $5.09, price +0.8%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/NIO",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0.7920784226189633,
+      "relativeVolume": 1.024932354211146,
+      "lastPrice": 5.090000152587891,
+      "published": "2026-06-24T00:22:35.544Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "LCID",
+      "name": "Lucid",
+      "title": "LCID $5.19, price +0.6%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/LCID",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0.5813994320832314,
+      "relativeVolume": 0.7052154413565014,
+      "lastPrice": 5.190000057220459,
+      "published": "2026-06-24T00:22:35.577Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "INTC",
+      "name": "Intel",
+      "title": "INTC $132.28, price -6.1%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/INTC",
+      "mentions": 9,
+      "sentiment": -0.18,
+      "priceMove": -6.1444611267902065,
+      "relativeVolume": 0.861616532216841,
+      "lastPrice": 132.27999877929688,
+      "published": "2026-06-24T00:22:35.658Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "AVGO $380.15, price -3.1%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/AVGO",
+      "mentions": 5,
+      "sentiment": -0.18,
+      "priceMove": -3.055112038648594,
+      "relativeVolume": 0.8031250043688268,
+      "lastPrice": 380.1499938964844,
+      "published": "2026-06-24T00:22:35.710Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "title": "ARM $366.39, price -10.1%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/ARM",
+      "mentions": 12,
+      "sentiment": -0.18,
+      "priceMove": -10.136855304749513,
+      "relativeVolume": 0.643056517252223,
+      "lastPrice": 366.3900146484375,
+      "published": "2026-06-24T00:22:35.752Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "title": "SHOP $107.68, price -0.3%, volume 1.3x",
+      "url": "https://finance.yahoo.com/quote/SHOP",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": -0.27783204522242566,
+      "relativeVolume": 1.27281223232673,
+      "lastPrice": 107.68000030517578,
+      "published": "2026-06-24T00:22:35.786Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "title": "SNOW $230.41, price +1.7%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/SNOW",
+      "mentions": 4,
+      "sentiment": 0.25,
+      "priceMove": 1.6858675960797325,
+      "relativeVolume": 0.6928400965843824,
+      "lastPrice": 230.41000366210938,
+      "published": "2026-06-24T00:22:35.817Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "DKNG $25.15, price -1.9%, volume 1.3x",
+      "url": "https://finance.yahoo.com/quote/DKNG",
+      "mentions": 6,
+      "sentiment": -0.18,
+      "priceMove": -1.9493177677818991,
+      "relativeVolume": 1.2813407674071473,
+      "lastPrice": 25.149999618530273,
+      "published": "2026-06-24T00:22:35.850Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "title": "SPY $733.58, price -1.5%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/SPY",
+      "mentions": 4,
+      "sentiment": -0.18,
+      "priceMove": -1.4521954010491562,
+      "relativeVolume": 0.9297831020727371,
+      "lastPrice": 733.5800170898438,
+      "published": "2026-06-24T00:22:35.926Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "QQQ",
+      "name": "Invesco QQQ ETF",
+      "title": "QQQ $713.65, price -3.3%, volume 1.1x",
+      "url": "https://finance.yahoo.com/quote/QQQ",
+      "mentions": 7,
+      "sentiment": -0.18,
+      "priceMove": -3.2929043147913664,
+      "relativeVolume": 1.0908462058028896,
+      "lastPrice": 713.6500244140625,
+      "published": "2026-06-24T00:22:35.985Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "UBER $69.67, price -2.5%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/UBER",
+      "mentions": 5,
+      "sentiment": -0.18,
+      "priceMove": -2.463953701121488,
+      "relativeVolume": 0.9197625118731979,
+      "lastPrice": 69.66999816894531,
+      "published": "2026-06-24T00:22:36.019Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "DIS $103.53, price +1.1%, volume 0.5x",
+      "url": "https://finance.yahoo.com/quote/DIS",
+      "mentions": 3,
+      "sentiment": 0.25,
+      "priceMove": 1.0541745858716864,
+      "relativeVolume": 0.5101343982303161,
+      "lastPrice": 103.52999877929688,
+      "published": "2026-06-24T00:22:36.127Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "PYPL $41.70, price -1.5%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/PYPL",
+      "mentions": 4,
+      "sentiment": -0.18,
+      "priceMove": -1.5115715336371338,
+      "relativeVolume": 0.6785592205984691,
+      "lastPrice": 41.70000076293945,
+      "published": "2026-06-24T00:22:36.197Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "T",
+      "name": "AT&T",
+      "title": "T $22.81, price +3.2%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/T",
+      "mentions": 6,
+      "sentiment": 0.25,
+      "priceMove": 3.212665485146199,
+      "relativeVolume": 0.8976199118213889,
+      "lastPrice": 22.809999465942383,
+      "published": "2026-06-24T00:22:36.289Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "F",
+      "name": "Ford",
+      "title": "F $14.00, price -0.8%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/F",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": -0.779586529792658,
+      "relativeVolume": 0.9405837759450105,
+      "lastPrice": 14,
+      "published": "2026-06-24T00:22:36.408Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC $2.08, price -24.6%, volume 1.9x",
+      "url": "https://finance.yahoo.com/quote/AMC",
+      "mentions": 30,
+      "sentiment": -0.18,
+      "priceMove": -24.637683663291117,
+      "relativeVolume": 1.8775722954884921,
+      "lastPrice": 2.0799999237060547,
+      "published": "2026-06-24T00:22:36.455Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "RBLX $47.11, price -0.3%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/RBLX",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": -0.33848074013680457,
+      "relativeVolume": 0.6882642311699765,
+      "lastPrice": 47.11000061035156,
+      "published": "2026-06-24T00:22:36.497Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "WMT",
+      "name": "Walmart",
+      "title": "WMT $119.42, price +1.9%, volume 0.9x",
+      "url": "https://finance.yahoo.com/quote/WMT",
+      "mentions": 5,
+      "sentiment": 0.25,
+      "priceMove": 1.9115871803514508,
+      "relativeVolume": 0.9178193538547571,
+      "lastPrice": 119.41999816894531,
+      "published": "2026-06-24T00:22:36.606Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "title": "JPM $334.14, price +0.8%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/JPM",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0.8024627651587374,
+      "relativeVolume": 0.562675277991155,
+      "lastPrice": 334.1400146484375,
+      "published": "2026-06-24T00:22:36.772Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "COST",
+      "name": "Costco",
+      "title": "COST $957.68, price +0.7%, volume 1.0x",
+      "url": "https://finance.yahoo.com/quote/COST",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0.6653720767633473,
+      "relativeVolume": 1.0181428053951547,
+      "lastPrice": 957.6799926757812,
+      "published": "2026-06-24T00:22:36.846Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "title": "PFE $24.72, price -1.4%, volume 1.5x",
+      "url": "https://finance.yahoo.com/quote/PFE",
+      "mentions": 6,
+      "sentiment": -0.18,
+      "priceMove": -1.4354091365498118,
+      "relativeVolume": 1.4588394631487824,
+      "lastPrice": 24.719999313354492,
+      "published": "2026-06-24T00:22:37.016Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "BA",
+      "name": "Boeing",
+      "title": "BA $216.71, price -1.9%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/BA",
+      "mentions": 4,
+      "sentiment": -0.18,
+      "priceMove": -1.8656863121069436,
+      "relativeVolume": 0.8205754848755467,
+      "lastPrice": 216.7100067138672,
+      "published": "2026-06-24T00:22:37.133Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "title": "XOM $139.73, price +0.9%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/XOM",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0.9099404172226955,
+      "relativeVolume": 0.5503982991955573,
+      "lastPrice": 139.72999572753906,
+      "published": "2026-06-24T00:22:37.289Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "CVNA",
+      "name": "Carvana",
+      "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/CVNA",
+      "mentions": 5,
+      "sentiment": -0.18,
+      "priceMove": -2.759856589808172,
+      "relativeVolume": 0.6532798464651521,
+      "lastPrice": 64.83000183105469,
+      "published": "2026-06-24T00:22:37.321Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "UPST",
+      "name": "Upstart",
+      "title": "UPST $31.46, price +0.4%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/UPST",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0.4469967784564604,
+      "relativeVolume": 0.6802524287968115,
+      "lastPrice": 31.459999084472656,
+      "published": "2026-06-24T00:22:37.356Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "AI",
+      "name": "C3.ai",
+      "title": "AI $9.68, price -0.2%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/AI",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": -0.20618045858364417,
+      "relativeVolume": 0.6758401898734178,
+      "lastPrice": 9.680000305175781,
+      "published": "2026-06-24T00:22:37.386Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "title": "RKLB $95.12, price -5.2%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/RKLB",
+      "mentions": 7,
+      "sentiment": -0.18,
+      "priceMove": -5.155048481154087,
+      "relativeVolume": 0.5612845213164767,
+      "lastPrice": 95.12000274658203,
+      "published": "2026-06-24T00:22:37.423Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "IONQ",
+      "name": "IonQ",
+      "title": "IONQ $57.85, price -0.8%, volume 1.2x",
+      "url": "https://finance.yahoo.com/quote/IONQ",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": -0.8059005884131318,
+      "relativeVolume": 1.1892625756004647,
+      "lastPrice": 57.849998474121094,
+      "published": "2026-06-24T00:22:37.471Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "title": "DELL $427.78, price +2.2%, volume 0.6x",
+      "url": "https://finance.yahoo.com/quote/DELL",
+      "mentions": 4,
+      "sentiment": 0.25,
+      "priceMove": 2.1661788611012494,
+      "relativeVolume": 0.6009827942188576,
+      "lastPrice": 427.7799987792969,
+      "published": "2026-06-24T00:22:37.518Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "title": "ORCL $165.16, price -5.7%, volume 1.5x",
+      "url": "https://finance.yahoo.com/quote/ORCL",
+      "mentions": 10,
+      "sentiment": -0.18,
+      "priceMove": -5.660594760675748,
+      "relativeVolume": 1.452502263328617,
+      "lastPrice": 165.16000366210938,
+      "published": "2026-06-24T00:22:37.587Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "title": "CRM $153.42, price +2.2%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/CRM",
+      "mentions": 4,
+      "sentiment": 0.25,
+      "priceMove": 2.1982435112536116,
+      "relativeVolume": 0.6970291189921883,
+      "lastPrice": 153.4199981689453,
+      "published": "2026-06-24T00:22:37.666Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "MU",
+      "name": "Micron",
+      "title": "MU $1051.77, price -13.2%, volume 1.1x",
+      "url": "https://finance.yahoo.com/quote/MU",
+      "mentions": 17,
+      "sentiment": -0.18,
+      "priceMove": -13.175880789530037,
+      "relativeVolume": 1.110615525876381,
+      "lastPrice": 1051.77001953125,
+      "published": "2026-06-24T00:22:37.763Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "WBD",
+      "name": "Warner Bros. Discovery",
+      "title": "WBD $26.88, price -0.3%, volume 0.8x",
+      "url": "https://finance.yahoo.com/quote/WBD",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": -0.2597461973697415,
+      "relativeVolume": 0.7763608065861805,
+      "lastPrice": 26.8799991607666,
+      "published": "2026-06-24T00:22:37.796Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "title": "MRNA $61.00, price +2.8%, volume 0.5x",
+      "url": "https://finance.yahoo.com/quote/MRNA",
+      "mentions": 4,
+      "sentiment": 0.25,
+      "priceMove": 2.7887753732483054,
+      "relativeVolume": 0.4678335128268854,
+      "lastPrice": 61,
+      "published": "2026-06-24T00:22:37.836Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "CRWD $680.92, price +0.8%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/CRWD",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0.8113200948925708,
+      "relativeVolume": 0.7131849128853149,
+      "lastPrice": 680.9199829101562,
+      "published": "2026-06-24T00:22:37.876Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "NET",
+      "name": "Cloudflare",
+      "title": "NET $224.94, price +3.0%, volume 0.7x",
+      "url": "https://finance.yahoo.com/quote/NET",
+      "mentions": 5,
+      "sentiment": 0.25,
+      "priceMove": 3.003936904440491,
+      "relativeVolume": 0.7395349331713245,
+      "lastPrice": 224.94000244140625,
+      "published": "2026-06-24T00:22:37.907Z"
+    },
+    {
+      "source": "Price/Volume",
+      "ticker": "ROKU",
+      "name": "Roku",
+      "title": "ROKU $135.05, price -0.1%, volume 0.4x",
+      "url": "https://finance.yahoo.com/quote/ROKU",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": -0.10725168323520645,
+      "relativeVolume": 0.44162979906769545,
+      "lastPrice": 135.05499267578125,
+      "published": "2026-06-24T00:22:37.943Z"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "Tesla Quietly Files Megapod Trademark — An AI Data Center Play That Could See Elon Musk Challenging Nvidia's Dominance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/tesla-quietly-files-megapod-trademark-223152710.html?.tsrc=rss",
+      "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "2026-05-05T14:39:30.000Z"
+      "published": "Tue, 23 Jun 2026 22:31:52 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "TSLA Stock: Tesla Doubles EU Registrations In May But BYD Still Leads With Over 26K Units",
+      "url": "https://stocktwits.com/news-articles/markets/equity/tsla-stock-tesla-doubles-eu-registrations-in-may-but-byd-still-leads/cZKwhThR7Ob?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:40:55 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "Micron, Sandisk, SpaceX, Tesla, Carnival, and More Stocks That Explain Today’s Market",
+      "url": "https://finance.yahoo.com/m/b2c73f09-fd59-3c3a-b892-dfef8b936f4f/micron%2C-sandisk%2C-spacex%2C.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:32:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "Why Tesla Stock Dropped on Tuesday",
+      "url": "https://www.fool.com/investing/2026/06/23/why-tesla-stock-dropped-on-tuesday/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:00:42 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "Why AMD (AMD) Stock Is Trading Lower Today",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-trading-225646127.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:56:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "Over 40 Analysts Rate AMD a Buy, Here’s Why We Agree",
+      "url": "https://247wallst.com/investing/2026/06/23/over-40-analysts-rate-amd-a-buy-heres-why-we-agree/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:28:08 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is “Healthy”",
+      "url": "https://247wallst.com/investing/2026/06/23/amd-and-intel-drop-5-nvidia-slips-3-amid-korean-led-chip-selloff-bulls-say-is-healthy/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:23:22 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "AMD (AMD) Stock Sees Modest Fair Value Lift As AI Target Revisions Split Analysts",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/amd-amd-stock-sees-modest-171526878.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:15:26 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "title": "The Real Engine Behind Apple Stock's Next Potential Climb",
+      "url": "https://www.trefis.com/articles/604054/the-real-engine-behind-apple-stocks-next-potential-climb/2026-06-23?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:12:49 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "title": "You’re Probably Paying Twice for NVIDIA, Apple, and Microsoft Without Realizing It",
+      "url": "https://247wallst.com/investing/2026/06/23/youre-probably-paying-twice-for-nvidia-apple-and-microsoft-without-realizing-it/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:02:49 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "title": "Apple and Intel Just Signed a Historic Chip Partnership. Is the Silicon Pioneer a No-Brainer Buy Today?",
+      "url": "https://www.fool.com/investing/2026/06/23/apple-intel-sign-historic-chip-partner-buy-stock/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:59:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "Palantir partners with Zeta Global on AI-powered marketing infrastructure, Wedbush sees further enterprise validation",
+      "url": "https://www.proactiveinvestors.com/companies/news/1094368/palantir-partners-with-zeta-global-on-ai-powered-marketing-infrastructure-wedbush-sees-further-enterprise-validation-1094368.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:50:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "Palantir Hits 52-Week Low Amid AI Retreat, Rising Interest Rates",
+      "url": "https://finance.yahoo.com/m/b407a679-d46d-3178-b894-989ec99621b1/palantir-hits-52-week-low.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:32:49 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "Stocks making big moves yesterday: Shutterstock, Viavi Solutions, Micron, Palantir Technologies, and IonQ",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-191246574.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:12:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "PLTR vs. COHR: Which AI-Driven Tech Stock Should You Bet on?",
+      "url": "https://finance.yahoo.com/technology/ai/articles/pltr-vs-cohr-ai-driven-174000935.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:40:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "Palantir Stock Rises on Major AI Infrastructure Pact With Zeta",
+      "url": "https://finance.yahoo.com/technology/ai/articles/palantir-stock-rises-major-ai-172202116.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:22:02 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "Palantir, Zeta Team Up on Marketing Platform",
+      "url": "https://finance.yahoo.com/media-advertising/articles/palantir-zeta-team-marketing-platform-171017764.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:10:17 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Super Micro Computer Is Trading at Its Best Valuation in 18 Months. Should You Buy the Dip?",
+      "url": "https://www.fool.com/investing/2026/06/23/super-micro-computer-is-trading-at-its-best-valuat/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:27:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Super Micro Computer (SMCI) Suffers a Larger Drop Than the General Market: Key Insights",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-suffers-214506467.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/smci-stock-soars-15-nvidia-190000419.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:00:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Forget Super Micro Computer: 1 Unstoppable AI Hardware Powerhouse to Buy Hand Over Fist After the Pullback",
+      "url": "https://247wallst.com/investing/2026/06/23/forget-super-micro-computer-1-unstoppable-ai-hardware-powerhouse-to-buy-hand-over-fist-after-the-pullback/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:46:40 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Down Nearly 50% From Its High, Is Super Micro Computer Stock a Bargain Buy?",
+      "url": "https://www.fool.com/investing/2026/06/23/down-nearly-50-from-its-high-is-super-micro-comput/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Super Micro Computer (SMCI) Stock After Volatile AI Server Rally Is It Still Attractive",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-stock-161556693.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:15:56 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "GameStop CEO Ryan Cohen Forgoes Performance Award To Focus On EBay Acquisition",
+      "url": "https://stocktwits.com/news-articles/markets/equity/gamestop-ceo-ryan-cohen-forgoes-performance-award-to-focus-on-ebay-acquisition/cZKwicuR7OR?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:18:31 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "GameStop’s Ryan Cohen Withdraws CEO Performance Package. It’s All About eBay.",
+      "url": "https://finance.yahoo.com/m/217fb1c4-927a-3d88-a23d-20c927017263/gamestop%E2%80%99s-ryan-cohen.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:13:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "GameStop drops Cohen’s $35B pay plan to focus on eBay acquisition",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/gamestop-drops-cohen-35b-pay-210312418.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:03:12 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "GameStop CEO Cohen spurns $35 billion pay plan to focus on plan to buy eBay",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/gamestop-ceo-foregoes-performance-award-202847978.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:28:47 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "GameStop vs. StubHub: Which Consumer Stock Is a Better Buy in 2026?",
+      "url": "https://www.fool.com/coverage/better-buy/2026/06/23/gamestop-vs-stubhub-which-consumer-stock-is-a-better-buy-in-2026/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:28:01 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "Ryan Cohen Withdraws CEO Performance Award; GameStop Focuses on eBay",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ryan-cohen-withdraws-ceo-performance-202000483.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:20:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GME",
+      "name": "GameStop",
+      "title": "Dear GameStop Stock Fans, Mark Your Calendars for July 7",
+      "url": "https://www.barchart.com/story/news/2567323/dear-gamestop-stock-fans-mark-your-calendars-for-july-7?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Sat, 20 Jun 2026 15:45:02 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "title": "Worried About Amazon’s AI Bill? What If It’s Already Paid For?",
+      "url": "https://www.trefis.com/articles/604076/worried-about-amazons-ai-bill-what-if-its-already-paid-for/2026-06-23?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:44:14 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "title": "Meta Platforms Is Building A Prediction Market App",
+      "url": "https://www.cryptoprowl.com/releases/meta-platforms-is-building-a-prediction-market-app-5963?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:13:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "title": "Meta unveils cheaper AI smart glasses, but the competition is heating up",
+      "url": "https://finance.yahoo.com/video/meta-unveils-cheaper-ai-smart-205015115.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:50:15 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
+      "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:27:27 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "title": "You’re Probably Paying Twice for NVIDIA, Apple, and Microsoft Without Realizing It",
+      "url": "https://247wallst.com/investing/2026/06/23/youre-probably-paying-twice-for-nvidia-apple-and-microsoft-without-realizing-it/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:02:49 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "title": "Why the Market Dipped But Microsoft (MSFT) Gained Today",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-market-dipped-microsoft-msft-214505165.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:05 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Here's Why Coinbase Global, Inc. (COIN) Fell More Than Broader Market",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-coinbase-global-inc-214504007.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:04 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "ICE & OKX Are Getting Ready to Drink Coinbase’s Tokenized Milkshake",
+      "url": "https://app.moby.co/home/news/news-ice-okx-are-getting-ready-to-drink-coinbases-tokenized-milkshake?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:00:51 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase Bets on AI Trading With Pre-IPO of OpenAI, Anthropic?",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-bets-ai-trading-pre-160700597.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:07:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase Is Offering Pre-IPO Perpetual Futures on OpenAI and Anthropic. That’s Better News for COIN Stock Than It Is for You.",
+      "url": "https://www.barchart.com/story/news/2606188/coinbase-is-offering-pre-ipo-perpetual-futures-on-openai-and-anthropic-thats-better-news-for-coin-stock-than-it-is-for-you?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 14:26:45 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "title": "CryptoQuant’s MicroStrategy Warning Comes Two Weeks Late",
+      "url": "https://beincrypto.com/cryptoquant-microstrategy-bitcoin-warning-late/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:40:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "title": "Wall Street analyst predicts 400% upside for MicroStrategy stock",
+      "url": "https://www.thestreet.com/crypto/markets/wall-street-analyst-predicts-400-upside-for-microstrategy-stock?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "Down 22% This Year, Is Rivian Stock Overdue for a Rally?",
+      "url": "https://www.fool.com/investing/2026/06/23/down-22-this-year-is-rivian-stock-overdue-for-a-ra/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:35:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "Tesla Declines 5% While Lucid and Rivian Hold Steady: What’s Going On With EV Stocks Today?",
+      "url": "https://247wallst.com/investing/2026/06/23/tesla-declines-5-while-lucid-and-rivian-hold-steady-whats-going-on-with-ev-stocks-today/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:06:12 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "Jim Cramer on Rivian: “It’s Losing Too Much Money, Sorry”",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-rivian-losing-too-144120645.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 14:41:20 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "Is Rivian Automotive Stock A Smart Buy Right Now?",
+      "url": "https://www.trefis.com/articles/603809/is-rivian-automotive-stock-a-smart-buy-right-now/2026-06-22?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 01:34:53 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "Rivian Automotive (RIVN) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rivian-automotive-rivn-sees-more-215005541.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 21:50:05 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "title": "3 Reasons to Avoid RIVN and 1 Stock to Buy Instead",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-rivn-1-154719551.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 15:47:19 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SoFi Technologies, Inc. (SOFI) Advances While Market Declines: Some Information for Investors",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-technologies-inc-sofi-advances-214505739.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:05 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "Jim Cramer on SoFi: “I Continue to Believe It’s Time to Buy”",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-sofi-continue-believe-144118728.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 14:41:18 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SoFi deepens AI-powered trading ambitions with Composer deal",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-deepens-ai-powered-trading-120337750.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:03:37 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "Introducing Composer by SoFi: AI-Powered Investing From Idea to Execution",
+      "url": "https://finance.yahoo.com/technology/ai/articles/introducing-composer-sofi-ai-powered-120000411.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SoFi Expands AI Offerings With a Trading Assistant",
+      "url": "https://finance.yahoo.com/m/63ccee7a-991f-3c91-8658-ffc350be3cca/sofi-expands-ai-offerings.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SoFi vs. PayPal: Two Beaten-Down Fintech Stocks. Which Is the Better Comeback Story?",
+      "url": "https://www.fool.com/investing/2026/06/23/sofi-vs-paypal-two-beaten-down-fintech-stocks-whic/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 10:37:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "SoFi Technologies (SOFI) Slid Amid Interest Rate Volatility and Macro Uncertainty",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-technologies-sofi-slid-amid-132857171.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 13:28:57 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "Forget Trading Fees: This Power Move Could Completely Redefine Robinhood's Revenue",
+      "url": "https://www.fool.com/investing/2026/06/23/trading-fees-power-move-redefine-robinhood-revenue/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:13:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "Truist Stays Bullish on Robinhood as June Volumes Point to Record Quarter",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/truist-stays-bullish-robinhood-june-190156498.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.6666666666666666,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:01:56 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+      "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:42:54 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "Robinhood stock falls as company unveils $2 billion debt plan",
+      "url": "https://www.thestreet.com/investing/stocks/robinhood-stock-falls-as-company-unveils-2-billion-debt-plan?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:33:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "Is Omnicom (OMC) Quietly Recasting Its Competitive Edge Through Netflix And Acxiom’s AI Ad Alliance?",
+      "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-omc-quietly-recasting-competitive-181603854.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:16:03 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "Netflix Struggles to Shift the Narrative After Warner Bros. Fiasco",
+      "url": "https://finance.yahoo.com/m/819ffce1-f19a-3dda-b00f-5587d9d01ec7/netflix-struggles-to-shift.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:32:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "Netflix Unveils New Horror Game to Jumpstart Interactive Offerings",
+      "url": "https://finance.yahoo.com/media-advertising/articles/netflix-unveils-horror-game-jumpstart-160607091.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:06:07 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "Citizens Upholds its Market Perform Rating for Netflix (NFLX)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/citizens-upholds-market-perform-rating-150652441.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:06:52 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "Netflix Will Trade at This Price in 2028",
+      "url": "https://247wallst.com/investing/2026/06/23/netflix-will-trade-at-this-price-in-2028/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:06:13 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "title": "This Could Be the Real Reason Netflix Stock Continues to Struggle",
+      "url": "https://www.fool.com/investing/2026/06/23/this-could-be-the-real-reason-netflix-stock-contin/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 11:50:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
+      "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:13:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "Google's YouTube settles case over social media harm to children",
+      "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:02:22 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "Alphabet Set to Join and Honeywell International to Remain in Dow Jones Industrial Average",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-set-join-honeywell-international-220200121.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:02:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "title": "Google-Parent Alphabet To Join Dow Jones Industrial Average, Replacing Verizon",
+      "url": "https://finance.yahoo.com/m/a1077ce3-f550-3d55-a667-1472e8e22b80/google-parent-alphabet-to.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:50:33 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "title": "Alibaba sues Pentagon to remove it from military blacklist",
+      "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-pentagon-remove-military-192941272.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:29:41 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "title": "Alibaba sues US for being linked to Chinese military",
+      "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-us-department-defense-172113802.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:21:13 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "title": "Alibaba (BABA) Launches $1.5 Billion Pupu Bid As Meituan Rivalry Heats Up",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/alibaba-baba-launches-1-5-101503395.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 10:15:03 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
+      "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 01:21:37 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Sun, 21 Jun 2026 11:10:36 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
+      "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 14:27:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 13:00:08 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
+      "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Thu, 18 Jun 2026 04:37:20 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NIO",
+      "name": "NIO",
+      "title": "Nio Delivered 37,705 EVs in May and Is Making Its Own Chips Now. Can It Compete With BYD at Scale?",
+      "url": "https://www.fool.com/investing/2026/06/16/nio-delivered-ev-may-making-chips-byd/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 16 Jun 2026 18:35:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "LCID",
+      "name": "Lucid",
+      "title": "Tesla Declines 5% While Lucid and Rivian Hold Steady: What’s Going On With EV Stocks Today?",
+      "url": "https://247wallst.com/investing/2026/06/23/tesla-declines-5-while-lucid-and-rivian-hold-steady-whats-going-on-with-ev-stocks-today/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:06:12 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "LCID",
+      "name": "Lucid",
+      "title": "LCID Stock Layoffs: What to Know About the Latest Lucid Job Cuts",
+      "url": "https://www.barchart.com/story/news/2587960/lcid-stock-layoffs-what-to-know-about-the-latest-lucid-job-cuts?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 18:23:34 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "LCID",
+      "name": "Lucid",
+      "title": "Lucid layoffs today: EV maker cuts 18% of jobs, LCID stock takes a dive",
+      "url": "https://www.fastcompany.com/91562913/lucid-layoffs-today-lcid-stock-down-ev-maker-jobs-cut-rivian?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 18:15:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "LCID",
+      "name": "Lucid",
+      "title": "Lucid Eyes $158M In Cost Savings After 2nd Round Of Layoffs This Year – Set To Reduce Shifts At Its Biggest Manufacturing Plant",
+      "url": "https://stocktwits.com/news-articles/markets/equity/lcid-stock-falls-lucid-layoff-cost-savings/cZKMRqgR79R?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 16:49:33 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "INTC",
+      "name": "Intel",
+      "title": "Why Intel (INTC) Stock Is Nosediving",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-intel-intc-stock-nosediving-231246035.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:12:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "INTC",
+      "name": "Intel",
+      "title": "Intel (INTC) Dips More Than Broader Market: What You Should Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/intel-intc-dips-more-broader-214504973.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:04 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "INTC",
+      "name": "Intel",
+      "title": "Apple and Intel Just Signed a Historic Chip Partnership. Is the Silicon Pioneer a No-Brainer Buy Today?",
+      "url": "https://www.fool.com/investing/2026/06/23/apple-intel-sign-historic-chip-partner-buy-stock/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:59:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "Broadcom (AVGO) Stock Trades Down, Here Is Why",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-avgo-stock-trades-down-223246211.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:32:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "A Look Back at Processors and Graphics Chips Stocks’ Q1 Earnings: Broadcom (NASDAQ:AVGO) Vs The Rest Of The Pack",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/look-back-processors-graphics-chips-165646145.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:56:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "How Broadcom’s (AVGO) AI XPV Platform Ties Its Custom XPUs to the Next Wave of AI Compute Demand",
+      "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-ai-xpv-platform-160958450.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:09:58 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "Broadcom Stock Drops After Strong Earnings -- Time to Buy?",
+      "url": "https://www.fool.com/investing/2026/06/23/broadcom-stock-drops-strong-earnings-time-buy/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.25,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:06:05 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "title": "Is Shopify (SHOP) One of the Most Promising Long-Term Stocks to Buy According to Analysts?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-shop-one-most-promising-191930827.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:19:30 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "title": "SHOP vs. WIX: Which E-Commerce Stock Is in a Better Position Now?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/shop-vs-wix-e-commerce-151600236.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:16:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "title": "Shopify Moves Toward Vape Ban",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/shopify-moves-toward-vape-ban-121525598.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:15:25 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "title": "Is Snowflake’s (SNOW) AI Data Cloud Momentum Overshadowing Emerging Questions About Board Accountability?",
+      "url": "https://finance.yahoo.com/technology/ai/articles/snowflake-snow-ai-data-cloud-221239608.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:12:39 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "title": "Snowflake (SNOW) Stock After 32% Monthly Jump Is The Valuation Starting To Appeal",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-stock-32-monthly-201311555.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:13:11 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "title": "Snowflake (SNOW) Expands Marketplacer Tie Up As AI Partner Recognition Grows",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-snow-expands-marketplacer-tie-181518243.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:15:18 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "title": "GrowthLoop Highlighted in Snowflake's Fifth Edition Modern Marketing Data Stack Report as \"One to Watch\"",
+      "url": "https://finance.yahoo.com/technology/ai/articles/growthloop-highlighted-snowflakes-fifth-edition-160000284.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 16:00:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
+      "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 20:27:27 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+      "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:42:54 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "DraftKings (DKNG) Suffers a Larger Drop Than the General Market: Key Insights",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-suffers-larger-drop-220003944.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 22:00:03 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "DraftKings Stock Gains 12% in 3 Months: Should You Buy, Sell or Hold?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-stock-gains-12-3-134400949.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.25,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 13:44:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "title": "Is It Worth Investing in DraftKings (DKNG) Based on Wall Street's Bullish Views?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-draftkings-dkng-based-133003982.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 13:30:03 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
+      "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:21:50 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+      "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "QQQ",
+      "name": "Invesco QQQ ETF",
+      "title": "ProShares UltraPro QQQ Charges 0.82% Annually, but the Real Cost Compounds Every Trading Day",
+      "url": "https://247wallst.com/investing/2026/06/23/proshares-ultrapro-qqq-charges-0-82-annually-but-the-real-cost-compounds-every-trading-day/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:36:33 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "Uber Technologies (UBER) Falls More Steeply Than Broader Market: What Investors Need to Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-falls-more-214502330.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:02 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "Life360 (LIF), Uber (UBER) Partner to Integrate Family Ride Services Directly Into App",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/life360-lif-uber-uber-partner-191846758.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:18:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "Q1 Earnings Outperformers: Uber (NYSE:UBER) And The Rest Of The Gig Economy Stocks",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/q1-earnings-outperformers-uber-nyse-180046984.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:00:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "Uber (UBER) Faces Shareholder Lawsuit Over Alleged Safety And Compliance Failures",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/uber-uber-faces-shareholder-lawsuit-151153480.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:11:53 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "UBER",
+      "name": "Uber",
+      "title": "SERV vs. UBER: Which Autonomous Delivery Stock is the Better Buy?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/serv-vs-uber-autonomous-delivery-145500846.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 14:55:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "As America Celebrates 250 Years, Disney’s Economic Impact Reaches All 50 States",
+      "url": "https://finance.yahoo.com/economy/articles/america-celebrates-250-years-disney-130000374.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:56:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "OMNICOM AND DISNEY ADVERTISING TEAM UP TO ENABLE SMARTER SEQUENTIAL ADVERTISING IN STREAMING",
+      "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-disney-advertising-team-enable-173000613.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "New Report from Disney at Cannes Lions Shows ‘Eventizing’ of Streaming Content",
+      "url": "https://finance.yahoo.com/video/report-disney-cannes-lions-shows-154452410.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 15:44:52 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "Disney Faces Fresh Trump-ABC Fight",
+      "url": "https://finance.yahoo.com/media-advertising/articles/disney-faces-fresh-trump-abc-122449612.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:24:49 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "DIS",
+      "name": "Disney",
+      "title": "Walt Disney (DIS) Suffers a Larger Drop Than the General Market: Key Insights",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-suffers-larger-214505458.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 21:45:05 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "Paypal (PYPL) Suffers a Larger Drop Than the General Market: Key Insights",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/paypal-pypl-suffers-larger-drop-214506461.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": -0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "64% of UK Consumers Want to Use Agentic AI for Shopping, According to New Research from Commerce and PayPal",
+      "url": "https://finance.yahoo.com/technology/ai/articles/64-uk-consumers-want-agentic-120000671.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "SoFi vs. PayPal: Two Beaten-Down Fintech Stocks. Which Is the Better Comeback Story?",
+      "url": "https://www.fool.com/investing/2026/06/23/sofi-vs-paypal-two-beaten-down-fintech-stocks-whic/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 10:37:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/paypals-checkout-recovery-branded-tpv-172300701.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 17:23:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "PayPal Ad Executive Explains How Shoppable Ads Are Disrupting Retail",
+      "url": "https://finance.yahoo.com/video/paypal-ad-executive-explains-shoppable-163200448.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 16:32:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "T",
+      "name": "AT&T",
+      "title": "Should Income Investors Add Positions in Comcast or AT&T Stock Near 52-Week Lows?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/income-investors-add-positions-comcast-225900755.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 22:59:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "T",
+      "name": "AT&T",
+      "title": "The Zacks Analyst Blog Highlights Visa, TotalEnergies, AT&T, Tredegar and Geospace",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-visa-094600774.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 09:46:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "F",
+      "name": "Ford",
+      "title": "Ford and General Motors Want In on the Energy Craze. Which Stock Will Win?",
+      "url": "https://www.fool.com/investing/2026/06/23/ford-and-general-motors-want-in-on-the-energy-boom/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 17:39:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "F",
+      "name": "Ford",
+      "title": "Ford (F) Faces New US Import Rules For China Built Lincoln Nautilus",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ford-f-faces-us-import-140722451.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 14:07:22 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "F",
+      "name": "Ford",
+      "title": "Unifor launches negotiations with Ford Motor Company",
+      "url": "https://finance.yahoo.com/economy/policy/articles/unifor-launches-negotiations-ford-motor-173000656.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 17:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Dilutes Again, Shares Nosedive Because This Time Is Never Different",
+      "url": "https://app.moby.co/home/news/news-amc-dilutes-again-shares-nosedive-because-this-time-is-never-different?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 19:48:07 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Stock Heads For Worst Day In Nearly Three Years – But Retail Says Debt Paydown Offers Silver Lining",
+      "url": "https://stocktwits.com/news-articles/markets/equity/why-amc-stock-is-falling-today-share-sale-debt-payoff/cZKw5dER7aX?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 13:51:58 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Entertainment Shares Slide After $200 Million Equity Raise Announcement (AMC)",
+      "url": "https://investorshub.advfn.com/market-news/article/30929/amc-entertainment-shares-slide-after-200-million-equity-raise-announcement-amc?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 12:55:57 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Entertainment Holdings, Inc. Announces Pricing of $200 Million Registered Direct Offering of Common Stock",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-holdings-inc-announces-113000736.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 11:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "Here's Why AMC Entertainment (AMC) Fell More Than Broader Market",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-amc-entertainment-amc-214504462.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 21:45:04 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Theatres Enjoys Its Busiest Weekend of 2026 in the United States as Toy Story 5 Debuts With the Biggest Opening Weekend Box Office of the Year",
+      "url": "https://finance.yahoo.com/media-advertising/articles/amc-theatres-enjoys-busiest-weekend-113000501.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 11:30:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "AMC Entertainment (AMC) Is Up 24.1% After Record May Attendance And $150 Million Equity Sale - Has The Bull Case Changed?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/amc-entertainment-amc-24-1-221141424.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 22:11:41 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Roblox (RBLX) Faces Class Action Lawsuit Over Organic Growth Claims",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-faces-class-action-090629143.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 09:06:29 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Did New Kid-Safe Accounts and TV-Style Ad Metrics Just Shift Roblox's (RBLX) Investment Narrative?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/did-kid-safe-accounts-tv-051019534.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 05:10:19 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Roblox Is Down 42% in 2026: Will the Pain Be Over Soon?",
+      "url": "https://247wallst.com/investing/2026/06/22/roblox-is-down-42-in-2026-will-the-pain-be-over-soon/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 19:15:21 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Is Roblox (RBLX) a Buy as Wall Street Analysts Look Optimistic?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-buy-wall-street-133004587.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Mon, 22 Jun 2026 13:30:04 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Roblox Corporation (RBLX): A High-Growth Large-Cap Stock to Invest In, Hurt By Comparisons",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-corporation-rblx-high-growth-184946363.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Sat, 20 Jun 2026 18:49:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Roblox (RBLX) Moves 7.3% Higher: Will This Strength Last?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-rblx-moves-7-3-100600315.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Fri, 19 Jun 2026 10:06:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "Can Roblox Corp (RBLX) Exceed Bookings Target After Russia Ban Reversal?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/roblox-corp-rblx-exceed-bookings-211426491.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Thu, 18 Jun 2026 21:14:26 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "title": "RBLX's Bookings Reset Adds Margin Pressure: Can AI and DevEx Pay Off?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rblxs-bookings-reset-adds-margin-142700100.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Thu, 18 Jun 2026 14:27:00 +0000"
     }
   ]
 };
