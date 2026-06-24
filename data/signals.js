@@ -1,5 +1,5 @@
 window.SIGNALDESK_DATA = {
-  "generatedAt": "2026-06-24T01:07:14.637Z",
+  "generatedAt": "2026-06-24T01:11:49.883Z",
   "dataMode": "real-public-no-key",
   "sourceNote": "Real snapshot from public no-key sources. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
   "sources": [
@@ -21,85 +21,150 @@ window.SIGNALDESK_DATA = {
     "Reddit Finance: 403 Blocked",
     "Reddit Finance: 403 Blocked",
     "Reddit Finance: 403 Blocked",
-    "GDELT News NVDA: 429 Too Many Requests",
+    "GDELT News NVDA: fetch failed",
+    "GDELT News TSLA: fetch failed",
+    "GDELT News AMD: 429 Too Many Requests",
     "GDELT News AAPL: 429 Too Many Requests",
+    "GDELT News PLTR: 429 Too Many Requests",
+    "GDELT News SMCI: 429 Too Many Requests",
     "GDELT News GME: 429 Too Many Requests",
     "GDELT News AMZN: 429 Too Many Requests",
     "GDELT News META: 429 Too Many Requests",
     "GDELT News MSFT: 429 Too Many Requests",
-    "GDELT News COIN: 429 Too Many Requests",
     "GDELT News MSTR: 429 Too Many Requests",
     "GDELT News RIVN: 429 Too Many Requests",
     "GDELT News SOFI: 429 Too Many Requests",
     "GDELT News HOOD: 429 Too Many Requests",
-    "GDELT News NFLX: 429 Too Many Requests",
-    "GDELT News GOOGL: 429 Too Many Requests",
-    "GDELT News BABA: 429 Too Many Requests",
-    "GDELT News NIO: Unexpected token 'T', \"The specif\"... is not valid JSON"
+    "GDELT News NFLX: 429 Too Many Requests"
   ],
   "signals": [
     {
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "mentions": 75,
-      "momentum": 275,
-      "sentiment": 0.0519111111111111,
-      "priceMove": -0.6437297656625456,
-      "lastPrice": 33.32,
-      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "ticker": "NIO",
+      "name": "NIO",
+      "mentions": 60,
+      "momentum": 36.36363636363637,
+      "sentiment": 0.04444444444444444,
+      "priceMove": 0.05280502673844573,
+      "lastPrice": 5.09,
+      "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0315044669030675,
+      "relativeVolume": 1.1068794661048722,
       "optionsActivity": 0,
-      "signalScore": 62.04883263183889,
+      "signalScore": 53.17525284284931,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "GDELT News": 12,
+        "GDELT News": 0,
         "Google News": 16,
         "Bing News": 16,
         "SEC Filings": 0,
         "Yahoo Public News": 12,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 8
+        "FINRA Short Volume": 12,
+        "Price/Volume": 4
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "SMCI $33.32, price -6.0%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/SMCI",
-          "published": "2026-06-24T01:04:25.824Z"
+          "title": "NIO $5.09, price +0.8%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NIO",
+          "published": "2026-06-24T01:08:00.281Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Super Micro Computer Is Trading at Its Best Valuation in 18 Months. Should You Buy the Dip?",
-          "url": "https://www.fool.com/investing/2026/06/23/super-micro-computer-is-trading-at-its-best-valuat/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 23:27:00 +0000"
+          "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 01:21:37 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Super Micro Computer (SMCI) Suffers a Larger Drop Than the General Market: Key Insights",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-suffers-214506467.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+          "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
+          "published": "Sun, 21 Jun 2026 11:10:36 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/smci-stock-soars-15-nvidia-190000419.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:00:00 +0000"
+          "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
+          "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 14:27:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Forget Super Micro Computer: 1 Unstoppable AI Hardware Powerhouse to Buy Hand Over Fist After the Pullback",
-          "url": "https://247wallst.com/investing/2026/06/23/forget-super-micro-computer-1-unstoppable-ai-hardware-powerhouse-to-buy-hand-over-fist-after-the-pullback/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:46:40 +0000"
+          "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:00:08 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Down Nearly 50% From Its High, Is Super Micro Computer Stock a Bargain Buy?",
-          "url": "https://www.fool.com/investing/2026/06/23/down-nearly-50-from-its-high-is-super-micro-comput/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 16:30:00 +0000"
+          "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
+          "published": "Thu, 18 Jun 2026 04:37:20 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "mentions": 56,
+      "momentum": 12,
+      "sentiment": 0.0818452380952381,
+      "priceMove": 0.17067756633495132,
+      "lastPrice": 119.42,
+      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0382411422646152,
+      "optionsActivity": 0,
+      "signalScore": 47.799056296875,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 6,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 9,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "WMT $119.42, price +1.9%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/WMT",
+          "published": "2026-06-24T01:08:01.802Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Trending: Walmart & Constellation ink nuclear deal, Avis to win $650M from hedge fund",
+          "url": "https://finance.yahoo.com/video/trending-walmart-constellation-ink-nuclear-195429085.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:54:29 +0000"
+        },
+        {
+          "source": "GDELT News",
+          "title": "How to save during Amazon , Target , and Walmart sales this week",
+          "url": "https://www.wmtw.com/article/amazon-prime-day-walmart-target-sales-what-to-buy-deals/71683214",
+          "published": "2026-06-24T00:30:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "title": "How to save during Amazon , Target , and Walmart sales this week",
+          "url": "https://www.kmbc.com/article/amazon-prime-day-walmart-target-sales-what-to-buy-deals/71683214",
+          "published": "2026-06-24T00:00:00.000Z"
+        },
+        {
+          "source": "Google News",
+          "title": "Walmart (WMT) Stock Could Be 9.9% Undervalued After Its Recent Pullback - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNWTBkdVV6d2Z2b2l1dGNacWlhOUhadmFSWEVuRjh3cy1GMVpwOWpOZDZzZGYxcDc0c0xRakdMR0JheDduNkNaLWdsRDNqVWpUV2p1YzNGcGxXeE9pMzVCYnRQb1JJaWJBTmRfQVlWa29HWE5FZzRpOXlQU1VmV3BzWkEzdnFfbGRLdFlQeE45NHFnR1AwWDZ5eWxkUDVjUkZFZ1R1MlU4eUhieDBHMFdRTUw2TWR5cGx2RmFMcWlnRjViVFZOSFR2X29nVHg0OXA10gHWAUFVX3lxTE4xZnVMY3ZLejFKbHR4VG4yVUFCLWZBbS1WM2VINlR5RzVPcllaNDg2NHg2c0dDODhLQk5CZ0d5OXFmOWYya0tENXUtcEo1cWY2MVhYTlYtQ3hmRzFzT3lrUXRyQjcwU0hrZnFjVGcyeDM0THc2MmxoVTdYejRsT3FRN1pJSm5aV193Ynh3OGtRYTlVd3NSZ2NOekVRYXhWanRuaVFmeFZ3bHo0OTFDMVJrYllhS0pGbGFrS0J6TERqejE4ZXpuZ0p2ZkFqSm9sYlpjQzlCd3c?oc=5",
+          "published": "Tue, 23 Jun 2026 20:33:46 GMT"
         }
       ]
     },
@@ -107,7 +172,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "SOFI",
       "name": "SoFi",
       "mentions": 63,
-      "momentum": 215,
+      "momentum": 0,
       "sentiment": 0.10052910052910054,
       "priceMove": 0.07054659400045621,
       "lastPrice": 17.29,
@@ -115,7 +180,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0571552046472052,
       "optionsActivity": 0,
-      "signalScore": 61.525606253095916,
+      "signalScore": 46.525606253095916,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -140,7 +205,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "SOFI $17.29, price +1.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/SOFI",
-          "published": "2026-06-24T01:04:26.292Z"
+          "published": "2026-06-24T01:08:00.052Z"
         },
         {
           "source": "Yahoo Public News",
@@ -172,7 +237,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMC",
       "name": "AMC Entertainment",
       "mentions": 86,
-      "momentum": 95.45454545454545,
+      "momentum": 0,
       "sentiment": -0.0627906976744186,
       "priceMove": -8.594539848494556,
       "lastPrice": 2.08,
@@ -180,7 +245,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.3353913898018577,
       "optionsActivity": 0,
-      "signalScore": 61.14250414070741,
+      "signalScore": 46.14250414070741,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -199,7 +264,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AMC $2.08, price -24.6%, volume 1.9x",
           "url": "https://finance.yahoo.com/quote/AMC",
-          "published": "2026-06-24T01:04:27.631Z"
+          "published": "2026-06-24T01:08:01.650Z"
         },
         {
           "source": "Yahoo Public News",
@@ -237,7 +302,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "SNOW",
       "name": "Snowflake",
       "mentions": 54,
-      "momentum": 350,
+      "momentum": 0,
       "sentiment": 0.15432098765432098,
       "priceMove": 0.12487896147381967,
       "lastPrice": 230.41,
@@ -245,7 +310,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.049807933189481,
       "optionsActivity": 0,
-      "signalScore": 60.44526769405329,
+      "signalScore": 45.44526769405329,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -264,7 +329,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "SNOW $230.41, price +1.7%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/SNOW",
-          "published": "2026-06-24T01:04:26.867Z"
+          "published": "2026-06-24T01:08:00.645Z"
         },
         {
           "source": "Yahoo Public News",
@@ -302,7 +367,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "mentions": 60,
-      "momentum": 275,
+      "momentum": 0,
       "sentiment": 0.0871111111111111,
       "priceMove": -0.768147843095513,
       "lastPrice": 519.85,
@@ -310,7 +375,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0888993975338919,
       "optionsActivity": 0,
-      "signalScore": 59.95019592779827,
+      "signalScore": 44.95019592779827,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -329,7 +394,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AMD $519.85, price -5.8%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/AMD",
-          "published": "2026-06-24T01:04:25.601Z"
+          "published": "2026-06-24T01:07:59.424Z"
         },
         {
           "source": "Yahoo Public News",
@@ -364,10 +429,75 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "mentions": 61,
+      "momentum": 5.172413793103448,
+      "sentiment": -0.0015300546448087458,
+      "priceMove": -0.4636386143040889,
+      "lastPrice": 158.18,
+      "quoteAsOf": "2026-06-23T20:00:01.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.078739419241896,
+      "optionsActivity": 0,
+      "signalScore": 44.941317394270875,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 3,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "COIN $158.18, price -4.0%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/COIN",
+          "published": "2026-06-24T01:07:59.920Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Here's Why Coinbase Global, Inc. (COIN) Fell More Than Broader Market",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-coinbase-global-inc-214504007.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:04 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "ICE & OKX Are Getting Ready to Drink Coinbase’s Tokenized Milkshake",
+          "url": "https://app.moby.co/home/news/news-ice-okx-are-getting-ready-to-drink-coinbases-tokenized-milkshake?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:00:51 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Coinbase Bets on AI Trading With Pre-IPO of OpenAI, Anthropic?",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-bets-ai-trading-pre-160700597.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:07:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Coinbase Is Offering Pre-IPO Perpetual Futures on OpenAI and Anthropic. That’s Better News for COIN Stock Than It Is for You.",
+          "url": "https://www.barchart.com/story/news/2606188/coinbase-is-offering-pre-ipo-perpetual-futures-on-openai-and-anthropic-thats-better-news-for-coin-stock-than-it-is-for-you?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 14:26:45 +0000"
+        },
+        {
+          "source": "GDELT News",
+          "title": "Algorand Price Eyes $0 . 10 as Trump Quantum Orders Spark ALGO Coin Bounce",
+          "url": "https://www.banklesstimes.com/articles/2026/06/23/algorand-price-eyes-0-10-as-trump-quantum-orders-spark-algo-coin-bounce/",
+          "published": "2026-06-23T22:15:00.000Z"
+        }
+      ]
+    },
+    {
       "ticker": "RBLX",
       "name": "Roblox",
       "mentions": 61,
-      "momentum": 238.88888888888889,
+      "momentum": 0,
       "sentiment": 0.06557377049180327,
       "priceMove": -0.011097771519330852,
       "lastPrice": 47.11,
@@ -375,7 +505,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0788078949427704,
       "optionsActivity": 0,
-      "signalScore": 59.45994296508264,
+      "signalScore": 44.45994296508264,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -394,7 +524,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "RBLX $47.11, price -0.3%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/RBLX",
-          "published": "2026-06-24T01:04:27.729Z"
+          "published": "2026-06-24T01:08:01.692Z"
         },
         {
           "source": "Yahoo Public News",
@@ -429,140 +559,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "mentions": 65,
-      "momentum": 282.3529411764706,
-      "sentiment": 0.006666666666666669,
-      "priceMove": -0.18023817186997085,
-      "lastPrice": 116.7,
-      "quoteAsOf": "2026-06-23T20:00:00.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0492905103584478,
-      "optionsActivity": 0,
-      "signalScore": 59.31608850735,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 6,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "PLTR $116.70, price -2.3%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/PLTR",
-          "published": "2026-06-24T01:04:25.779Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Palantir partners with Zeta Global on AI-powered marketing infrastructure, Wedbush sees further enterprise validation",
-          "url": "https://www.proactiveinvestors.com/companies/news/1094368/palantir-partners-with-zeta-global-on-ai-powered-marketing-infrastructure-wedbush-sees-further-enterprise-validation-1094368.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:50:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Palantir Hits 52-Week Low Amid AI Retreat, Rising Interest Rates",
-          "url": "https://finance.yahoo.com/m/b407a679-d46d-3178-b894-989ec99621b1/palantir-hits-52-week-low.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:32:49 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Stocks making big moves yesterday: Shutterstock, Viavi Solutions, Micron, Palantir Technologies, and IonQ",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-191246574.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:12:46 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "PLTR vs. COHR: Which AI-Driven Tech Stock Should You Bet on?",
-          "url": "https://finance.yahoo.com/technology/ai/articles/pltr-vs-cohr-ai-driven-174000935.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:40:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Palantir Stock Rises on Major AI Infrastructure Pact With Zeta",
-          "url": "https://finance.yahoo.com/technology/ai/articles/palantir-stock-rises-major-ai-172202116.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:22:02 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
-      "mentions": 53,
-      "momentum": 1666.6666666666667,
-      "sentiment": 0.08805031446540881,
-      "priceMove": 0.05150623600190585,
-      "lastPrice": 139.73,
-      "quoteAsOf": "2026-06-23T20:03:21.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0452247499314504,
-      "optionsActivity": 0,
-      "signalScore": 59.31271114569501,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 6,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 2,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "XOM $139.73, price +0.9%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/XOM",
-          "published": "2026-06-24T01:04:28.410Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "US Supreme Court boosts Exxon's bid to get compensation from Cuba",
-          "url": "https://finance.yahoo.com/video/us-supreme-court-boosts-exxons-193932341.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:39:32 +0000"
-        },
-        {
-          "source": "GDELT News",
-          "title": "ExxonMobil ( NYSE : XOM ) Trading Up 1 . 2 % – Here Why",
-          "url": "https://www.tickerreport.com/banking-finance/13484231/exxonmobil-nysexom-trading-up-1-2-heres-why.html",
-          "published": "2026-06-23T22:15:00.000Z"
-        },
-        {
-          "source": "GDELT News",
-          "title": "Exxon Mobil Shares Edge Higher as Oil Giant Advances Texas Move and Eyes Growth Amid Steady Crude Prices",
-          "url": "https://www.ibtimes.com.au/exxon-mobil-move-texas-growth-strategy-1871190",
-          "published": "2026-06-23T15:15:00.000Z"
-        },
-        {
-          "source": "Google News",
-          "title": "Exxon Mobil Stock (XOM) Opinions on Recent Oil Market Developments - Quiver Quantitative",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPT1JqU19rOF9YWXdvOW1oUVRKekJhUlhXVnIwLUUydFY0Y1hHMXdiQWtncHBsNERNTGttUFF5LVc1U0kzZGhZTFdWbHJuRm1XdGp1ZWtRbV9NcjJrUEtIeFVXS251eVY1ZzVucmJHUHBQemdCTkFKRjVwRDZBUmtJSFhINFlrdHlRTTlCbFh4UVFKUW9Bd1JZNUVONzNwMjRfOEp2TVpn?oc=5",
-          "published": "Tue, 23 Jun 2026 14:11:00 GMT"
-        },
-        {
-          "source": "Google News",
-          "title": "Exxon Mobil (XOM) Stock Could Be 18.5% Undervalued After Texas Domicile Shift - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSVBDRGY3SUw3YWo5a3lsbVZoY25LQWxHMXRpY3ZGRDZETldyR2lhTklrSDhVSGhuWE1GV2tNUHNITS1vQllWcC1FT3BHd21JSHBieklvaG1mZTFwZmZYb3hJZXpodllibFFlYmRTQi1UaG5uN2Q1dUM0S1FOQ0gwZmFUemY0N2k0MV9kWk9lbWZDNlJKLXhUZi12YzVCSUdMOXVBc2FsN1E0Mk5WT1BfWllWNExBS1hKTXN2Y0VhT1I5RE3SAcgBQVVfeXFMT050LTQ2bkRSVmdEMXpaY18zWVZCTFZzZ3Vtdmt2U3dsa2FMRDloNWZGQ1BNZWVJNmVoN0wxOTlZamdkT2R2T3ZOZ2xIT2d2Y19IRHI5S2hxVURLX2I0d1RySGJXb0VUMHdKNWItZEJJRVNzRHc5Rm81X1R1ZkhkT09ySGxFQ01jRTBZcHBuSjlSQzM0UFlTQkF5WF9XcENyRlBqUGRDX0lNbGdUUGJMMm5ILW9TSWlLRTRIc2tkcEF0T1ZYSzJrQVU?oc=5",
-          "published": "Tue, 23 Jun 2026 10:41:36 GMT"
-        }
-      ]
-    },
-    {
       "ticker": "DIS",
       "name": "Disney",
       "mentions": 56,
-      "momentum": 330.7692307692308,
+      "momentum": 0,
       "sentiment": 0.08482142857142858,
       "priceMove": 0.05647370235979425,
       "lastPrice": 103.53,
@@ -570,7 +570,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0570895775290408,
       "optionsActivity": 0,
-      "signalScore": 59.106885743545156,
+      "signalScore": 44.106885743545156,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -589,7 +589,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "DIS $103.53, price +1.1%, volume 0.5x",
           "url": "https://finance.yahoo.com/quote/DIS",
-          "published": "2026-06-24T01:04:27.225Z"
+          "published": "2026-06-24T01:08:01.251Z"
         },
         {
           "source": "Yahoo Public News",
@@ -624,83 +624,18 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "DKNG",
-      "name": "DraftKings",
-      "mentions": 62,
-      "momentum": 287.5,
-      "sentiment": 0.013763440860215052,
-      "priceMove": -0.188643511022949,
-      "lastPrice": 25.15,
-      "quoteAsOf": "2026-06-23T20:00:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1924793892400871,
-      "optionsActivity": 0,
-      "signalScore": 59.0694120081698,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "DKNG $25.15, price -1.9%, volume 1.3x",
-          "url": "https://finance.yahoo.com/quote/DKNG",
-          "published": "2026-06-24T01:04:26.911Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
-          "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:27:27 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
-          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "DraftKings (DKNG) Suffers a Larger Drop Than the General Market: Key Insights",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-suffers-larger-drop-220003944.html?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 22:00:03 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "DraftKings Stock Gains 12% in 3 Months: Should You Buy, Sell or Hold?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-stock-gains-12-3-134400949.html?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 13:44:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Is It Worth Investing in DraftKings (DKNG) Based on Wall Street's Bullish Views?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-draftkings-dkng-based-133003982.html?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 13:30:03 +0000"
-        }
-      ]
-    },
-    {
       "ticker": "T",
       "name": "AT&T",
       "mentions": 52,
-      "momentum": 420,
-      "sentiment": 0.08012820512820512,
+      "momentum": 0,
+      "sentiment": 0.09294871794871794,
       "priceMove": 0.3706924501957449,
       "lastPrice": 22.81,
       "quoteAsOf": "2026-06-23T20:01:40.000Z",
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0473500616817915,
       "optionsActivity": 0,
-      "signalScore": 58.76901565446618,
+      "signalScore": 44.080370965821494,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -719,7 +654,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "T $22.81, price +3.2%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/T",
-          "published": "2026-06-24T01:04:27.434Z"
+          "published": "2026-06-24T01:08:01.475Z"
         },
         {
           "source": "Yahoo Public News",
@@ -754,18 +689,18 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "mentions": 54,
-      "momentum": 390.90909090909093,
-      "sentiment": 0.0754320987654321,
-      "priceMove": -0.5349198909961953,
-      "lastPrice": 200.04,
+      "ticker": "DKNG",
+      "name": "DraftKings",
+      "mentions": 62,
+      "momentum": 0,
+      "sentiment": 0.013763440860215052,
+      "priceMove": -0.188643511022949,
+      "lastPrice": 25.15,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0696839978729358,
+      "relativeVolume": 1.1924793892400871,
       "optionsActivity": 0,
-      "signalScore": 58.46230169920419,
+      "signalScore": 44.06941200816981,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -773,48 +708,48 @@ window.SIGNALDESK_DATA = {
         "Google News": 16,
         "Bing News": 16,
         "SEC Filings": 0,
-        "Yahoo Public News": 4,
+        "Yahoo Public News": 10,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 7
+        "FINRA Short Volume": 14,
+        "Price/Volume": 6
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "NVDA $200.04, price -4.1%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NVDA",
-          "published": "2026-06-24T01:04:25.480Z"
+          "title": "DKNG $25.15, price -1.9%, volume 1.3x",
+          "url": "https://finance.yahoo.com/quote/DKNG",
+          "published": "2026-06-24T01:08:00.734Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia",
-          "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?.tsrc=rss",
-          "published": "Wed, 24 Jun 2026 00:47:00 +0000"
+          "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:27:27 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Nvidia's banned AI chips double in price on China's black market, FT reports",
-          "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-banned-ai-chips-double-002552897.html?.tsrc=rss",
-          "published": "Wed, 24 Jun 2026 00:25:52 +0000"
+          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
         },
         {
-          "source": "Google News",
-          "title": "The Nvidia Vs. Intel Pair Trade (NASDAQ:NVDA) - Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAwWjNFT201blQzMFREbnFfRjMwNVZnWHpJNmx3YWFBcldTTlRTNUV1OWJObllSbTFrODg4M1Y4QzVRd0JoeXd4QnZyNjdLQzVIcmJTM2U0UXhSTjBvbFJVSDFiRmR4TklkbnN2d2Noa0hqUVBtOGxQM3VhTQ?oc=5",
-          "published": "Tue, 23 Jun 2026 18:57:24 GMT"
+          "source": "Yahoo Public News",
+          "title": "DraftKings (DKNG) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-dkng-suffers-larger-drop-220003944.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 22:00:03 +0000"
         },
         {
-          "source": "Google News",
-          "title": "Is NVIDIA Corporation (NVDA) A Good Stock To Buy Now? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN194MXRGalVGSDVneTBHTXlMNVlEd1ZNcnFSeFo1Uko5NmZiSGFwWUtaVDNoNDJaRGtjZmxWdGdWTFJ4M19qRm5EU3JxZkhjRTNDV2YzSjJpSGZoNVZUejdqdEdFVVJKdE5sMWdoamt3NHRGbzMxSThCUk5zNWJuc3MycWNRSzM0Q1lyWFZXUXZpR1JKWTBEVGlfYlRVc25q?oc=5",
-          "published": "Mon, 08 Jun 2026 07:00:00 GMT"
+          "source": "Yahoo Public News",
+          "title": "DraftKings Stock Gains 12% in 3 Months: Should You Buy, Sell or Hold?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/draftkings-stock-gains-12-3-134400949.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:44:00 +0000"
         },
         {
-          "source": "Google News",
-          "title": "EMC Capital Management Purchases 10,100 Shares of NVIDIA Corporation $NVDA - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNTJqNWJqdmROeFVtTWZCdXMwM05iSFVCS01BbElhT0Y1YXdtb3V3dWRQWllnbll6M2lPN1RaRkdDOGdWU3E2ZGgwOV94OWJQa2xXbi1hWnVIOGJ3QTI5U2F4R0MwcWxoNzBzM0hPbno1cXJCQ2h1RjFfcW1nUzJqcXpTcXNwWVR5SS10bUdVTzFoaWQ2WXpTb3JQVXlFQUwzYVgtZGlwOFBCV1dPVndjeXdzeDJKMXhYVlZCbWFiSF9PWXZuVllOdmdCUVBwdw?oc=5",
-          "published": "Tue, 23 Jun 2026 07:36:20 GMT"
+          "source": "Yahoo Public News",
+          "title": "Is It Worth Investing in DraftKings (DKNG) Based on Wall Street's Bullish Views?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-draftkings-dkng-based-133003982.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:30:03 +0000"
         }
       ]
     },
@@ -822,7 +757,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "mentions": 60,
-      "momentum": 275,
+      "momentum": 0,
       "sentiment": 0.02444444444444444,
       "priceMove": -0.009460641971102884,
       "lastPrice": 21.08,
@@ -830,7 +765,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0976048424196343,
       "optionsActivity": 0,
-      "signalScore": 58.45963076748218,
+      "signalScore": 43.45963076748218,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -849,7 +784,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "GME $21.08, price -0.3%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/GME",
-          "published": "2026-06-24T01:04:25.908Z"
+          "published": "2026-06-24T01:07:59.704Z"
         },
         {
           "source": "Yahoo Public News",
@@ -884,10 +819,75 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "mentions": 53,
+      "momentum": 3.9215686274509802,
+      "sentiment": -0.012955974842767299,
+      "priceMove": -0.10959982617869145,
+      "lastPrice": 733.58,
+      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.1485589982243696,
+      "optionsActivity": 0,
+      "signalScore": 43.44870688271932,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 16,
+        "Bing News": 14,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 2,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
+          "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
+          "published": "Tue, 23 Jun 2026 16:40:57 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SPY $733.58, price -1.5%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/SPY",
+          "published": "2026-06-24T01:08:00.818Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
+          "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:21:50 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+        },
+        {
+          "source": "Google News",
+          "title": "SPY vs. QQQ: Which ETF Looks Best for Your Portfolio in 2026? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSmdubE0weU8xTzBVekplSFpTX3hhZERUdUxmS3ZSbk1Day1DdlhJR25ELUpPZkdaLXBIajFsWXRUWkZJWkd3UnA4ek8zaUhIN3diOWRtLUI2MUJTOVM2TUlVRkFrYWd1N0dod25KTDNKUzItclV4U0tQODRQcFJDb25TZURMTDVzTEdUQnNn?oc=5",
+          "published": "Sun, 21 Jun 2026 15:15:01 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "Index Options Are Now Cheap; Here's How To Buy Insurance Using The S&P 500 Tracking Fund SPY - Investor's Business Daily",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOSXR2NExRbUdMdjlIZWFoVFl6Zm4taGNKZkdZcHltWDJiY0ttUU42Nm40T25yR0hUVXVWMjZkWFRZM0lmRVR0SXpXUGF6c1o5MjcydjhlSkJtSG1LMGRJTHAxWGt1ZU9zMUh4Q0N4ZURqTTJvS0dmYXpXWThqZVU0YkotQkZkWU5haFYwODFOTVJlYlFMdGc?oc=5",
+          "published": "Mon, 22 Jun 2026 19:04:00 GMT"
+        }
+      ]
+    },
+    {
       "ticker": "RIVN",
       "name": "Rivian",
       "mentions": 60,
-      "momentum": 275,
+      "momentum": 0,
       "sentiment": 0.023555555555555552,
       "priceMove": -0.09271539786512512,
       "lastPrice": 14.89,
@@ -895,7 +895,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.099064616645616,
       "optionsActivity": 0,
-      "signalScore": 58.443298653108414,
+      "signalScore": 43.443298653108414,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -914,7 +914,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "RIVN $14.89, price -1.4%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/RIVN",
-          "published": "2026-06-24T01:04:26.250Z"
+          "published": "2026-06-24T01:08:00.008Z"
         },
         {
           "source": "Yahoo Public News",
@@ -952,15 +952,15 @@ window.SIGNALDESK_DATA = {
       "ticker": "SHOP",
       "name": "Shopify",
       "mentions": 50,
-      "momentum": 400,
-      "sentiment": 0.12000000000000002,
+      "momentum": 0,
+      "sentiment": 0.12,
       "priceMove": -0.022226586227593267,
       "lastPrice": 107.68,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0578206100302048,
       "optionsActivity": 0,
-      "signalScore": 58.43208456763375,
+      "signalScore": 43.43208456763375,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -979,7 +979,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "SHOP $107.68, price -0.3%, volume 1.3x",
           "url": "https://finance.yahoo.com/quote/SHOP",
-          "published": "2026-06-24T01:04:26.825Z"
+          "published": "2026-06-24T01:08:00.565Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1014,10 +1014,75 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "mentions": 48,
+      "momentum": 4.3478260869565215,
+      "sentiment": 0.06944444444444443,
+      "priceMove": 0.0334357644190594,
+      "lastPrice": 334.14,
+      "quoteAsOf": "2026-06-23T20:00:02.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0669341277354185,
+      "optionsActivity": 0,
+      "signalScore": 43.26499543548633,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 14,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 6,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 10,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "JPM $334.14, price +0.8%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/JPM",
+          "published": "2026-06-24T01:08:01.910Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why PAR Technology Corporation (PAR) Is Back on JPMorgan’s Radar",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-par-technology-corporation-par-153655966.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:36:55 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "After forcing workers back to the office, Goldman Sachs and JPMorgan Chase are now letting their staff work remotely—but only for the World Cup",
+          "url": "https://finance.yahoo.com/small-business/articles/forcing-workers-back-office-goldman-121527931.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:15:27 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Here is why JPMorgan Chase (JPM) Is Among the Cheapest Jim Cramer Stocks to Invest In",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-jpmorgan-chase-jpm-among-083545414.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 08:35:45 +0000"
+        },
+        {
+          "source": "Google News",
+          "title": "JPMorgan Chase (JPM) Stock Could Be 1.9% Undervalued After Rising Investor Optimism - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaWJLd09hRWRlZElndFlHem80Q2lKUVAwNGVzMS1ZUklSYXhXY2ZQZmthLWVISEc1SzljZ1hrbGVjVzZyM3VVaS15eS1VaFF4WVhMVDNYSHNZaGtGUllacy04RXdwWTR2eUVGYzBiTFJwcEtIRlJldGl1dnp4dmhfZWFpRHd5NkNmZ19uVTFFRzUwT2FvM1Q0bzU5dkZtWDNPVjdrUDFiTWg4aVdXRENHQmhJZldpUndTdHRFT1dSckhZT1kxc1HSAcsBQVVfeXFMTTgwbGtIbEFOVUNySlR0b2dIdEZ5THlwblRkX2o4NGhVTUsxZWZLbjNqTWNpU2E4aXhqS1h5RnpQWVZIWm5sb1A3M0xjR2QzUVgtbFhpNmM0OTZleWU4ZjlFNFhLalc4MnNRYmlDUlFtb3dxNUg3NS1VOWhNU0tQbm5qT1ZFcHpvMEc0Ri1NZW8tYWRoNnVUVkxoejByblUtNG84UExsMDVwR25mMFpieHh6RkNtb0JYdVlsMTNMR0pCVVNuNngxdDJ2akU?oc=5",
+          "published": "Tue, 23 Jun 2026 07:32:38 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "Here is why JPMorgan Chase (JPM) Is Among the Cheapest Jim Cramer Stocks to Invest In - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNM0hUa0VQSDVqTmtFaHcxdUtwMlY5LVl6djhjZFlFY3laUXJkYXNKR1dBeGdfNG5xMk5sWHEtc00xM21iMUlCOExmYUpKdTdENFpPZWJBUk9PaUNBYW1rRmVCbE1Dc1lXRmxocGVmZ1ltak1Vck1rSTZIN3VhSlhSTEJFZGRTYnlvRFhMa2dvT2NnZjlrRVl3eA?oc=5",
+          "published": "Tue, 23 Jun 2026 08:35:45 GMT"
+        }
+      ]
+    },
+    {
       "ticker": "QQQ",
       "name": "Invesco QQQ ETF",
       "mentions": 49,
-      "momentum": 444.44444444444446,
+      "momentum": 0,
       "sentiment": 0.06816326530612245,
       "priceMove": -0.4704153747362871,
       "lastPrice": 713.65,
@@ -1025,7 +1090,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.203834692987466,
       "optionsActivity": 0,
-      "signalScore": 58.246215992833946,
+      "signalScore": 43.246215992833946,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1044,7 +1109,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "QQQ $713.65, price -3.3%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/QQQ",
-          "published": "2026-06-24T01:04:27.061Z"
+          "published": "2026-06-24T01:08:00.881Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1079,75 +1144,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "WMT",
-      "name": "Walmart",
-      "mentions": 50,
-      "momentum": 900,
-      "sentiment": 0.09166666666666666,
-      "priceMove": 0.19115887429514547,
-      "lastPrice": 119.42,
-      "quoteAsOf": "2026-06-23T20:00:00.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.042830079336369,
-      "optionsActivity": 0,
-      "signalScore": 58.192341167630985,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 9,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "WMT $119.42, price +1.9%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/WMT",
-          "published": "2026-06-24T01:04:27.837Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
-          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Trending: Walmart & Constellation ink nuclear deal, Avis to win $650M from hedge fund",
-          "url": "https://finance.yahoo.com/video/trending-walmart-constellation-ink-nuclear-195429085.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:54:29 +0000"
-        },
-        {
-          "source": "Google News",
-          "title": "Monster insider trading alert for Walmart stock - Finbold",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pbUZ6bVJVMFc5dXlodUpHM3FzZXJlQ0NJZmxpUVM4aWt0M2RmcEJhUmFEcUhTM2xwYkxfcWNOZ0wzSkdsLWdWaXRrcU9OYjZjRElUM1o1Z0lGdnJ0T0xLaW9xOU1PUHN6WnItR2FtZWMtTm4ycnZ5eTN3?oc=5",
-          "published": "Tue, 23 Jun 2026 09:32:39 GMT"
-        },
-        {
-          "source": "Google News",
-          "title": "Walmart Stock (WMT) In the Spotlight After Key Changes to its ‘Unique’ Global Ads Business - TipRanks",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNHF0cmZRWXV2aHJwTjY0eUE1Z2UzVVhBelAyMDdid3FjVFIyWDlJRjZmVHZBNi1SQURHVWpfMUFPWnRoUE80dU9aV3Y5RDBfSllYcGlQRExQd0tXQmhLU3ZSRW90Vy1PdEZRT0oxWWZZbk9veWRFYzBsLWVxQ3loeDdCMi05UVkzUGN6aDBSM29qZVI3QjVzSDVEZFl0QjhCMHZFWTRTQVFlZW9vbFI2Z2ROWU01WnM?oc=5",
-          "published": "Mon, 22 Jun 2026 11:32:29 GMT"
-        },
-        {
-          "source": "Google News",
-          "title": "Walmart (WMT) Stock Could Be 9.9% Undervalued After Its Recent Pullback - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNWTBkdVV6d2Z2b2l1dGNacWlhOUhadmFSWEVuRjh3cy1GMVpwOWpOZDZzZGYxcDc0c0xRakdMR0JheDduNkNaLWdsRDNqVWpUV2p1YzNGcGxXeE9pMzVCYnRQb1JJaWJBTmRfQVlWa29HWE5FZzRpOXlQU1VmV3BzWkEzdnFfbGRLdFlQeE45NHFnR1AwWDZ5eWxkUDVjUkZFZ1R1MlU4eUhieDBHMFdRTUw2TWR5cGx2RmFMcWlnRjViVFZOSFR2X29nVHg0OXA10gHWAUFVX3lxTE4xZnVMY3ZLejFKbHR4VG4yVUFCLWZBbS1WM2VINlR5RzVPcllaNDg2NHg2c0dDODhLQk5CZ0d5OXFmOWYya0tENXUtcEo1cWY2MVhYTlYtQ3hmRzFzT3lrUXRyQjcwU0hrZnFjVGcyeDM0THc2MmxoVTdYejRsT3FRN1pJSm5aV193Ynh3OGtRYTlVd3NSZ2NOekVRYXhWanRuaVFmeFZ3bHo0OTFDMVJrYllhS0pGbGFrS0J6TERqejE4ZXpuZ0p2ZkFqSm9sYlpjQzlCd3c?oc=5",
-          "published": "Tue, 23 Jun 2026 20:33:46 GMT"
-        }
-      ]
-    },
-    {
       "ticker": "INTC",
       "name": "Intel",
       "mentions": 58,
-      "momentum": 286.6666666666667,
+      "momentum": 0,
       "sentiment": 0.01804597701149425,
       "priceMove": -0.9534507301047047,
       "lastPrice": 132.28,
@@ -1155,7 +1155,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.098116672209933,
       "optionsActivity": 0,
-      "signalScore": 58.07185293073169,
+      "signalScore": 43.07185293073169,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1174,7 +1174,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "INTC $132.28, price -6.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/INTC",
-          "published": "2026-06-24T01:04:26.653Z"
+          "published": "2026-06-24T01:08:00.406Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1209,140 +1209,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "CVNA",
-      "name": "Carvana",
-      "mentions": 59,
-      "momentum": 1080,
-      "sentiment": 0.009604519774011295,
-      "priceMove": -0.23388638442821688,
-      "lastPrice": 64.83,
-      "quoteAsOf": "2026-06-23T20:03:38.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0892195902561543,
-      "optionsActivity": 0,
-      "signalScore": 57.900659472450506,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CVNA",
-          "published": "2026-06-24T01:04:28.453Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Carvana (CVNA) Suffers a Larger Drop Than the General Market: Key Insights",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/carvana-cvna-suffers-larger-drop-221504158.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:15:04 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Carvana’s June sales growth appears to slow, Jefferies remains bullish",
-          "url": "https://www.proactiveinvestors.com/companies/news/1094366/carvana-s-june-sales-growth-appears-to-slow-jefferies-remains-bullish-1094366.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:16:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "How Is Carvana's Stock Performance Compared to Other Retail Stocks?",
-          "url": "https://www.barchart.com/story/news/2582968/how-is-carvana-s-stock-performance-compared-to-other-retail-stocks?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 13:32:39 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Carvana and Jimmie Johnson Foundation Launch \"Driving Brighter Futures\" Grant Program to Invest in the Next Generation of Automotive Talent",
-          "url": "https://finance.yahoo.com/small-business/articles/carvana-jimmie-johnson-foundation-launch-130000824.html?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 13:00:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Reflecting On Online Retail Stocks’ Q1 Earnings: Carvana (NYSE:CVNA)",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/reflecting-online-retail-stocks-q1-205258191.html?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 20:52:58 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "mentions": 57,
-      "momentum": 256.25,
-      "sentiment": 0.010760233918128652,
-      "priceMove": -0.07124293590004274,
-      "lastPrice": 346.13,
-      "quoteAsOf": "2026-06-23T20:00:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.031405238375691,
-      "optionsActivity": 0,
-      "signalScore": 57.88349550462334,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 4,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 9,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "CNBC",
-          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
-          "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
-          "published": "Tue, 23 Jun 2026 22:44:45 GMT"
-        },
-        {
-          "source": "CNBC",
-          "title": "Google’s online dominance is showing signs of cracking in AI era",
-          "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
-          "published": "Tue, 23 Jun 2026 15:21:38 GMT"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/GOOGL",
-          "published": "2026-06-24T01:04:26.423Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "GOOGL Stock Gains After-Hours As Alphabet Is Set To Replace Verizon In Dow Jones — Retail Eyes ‘$400’ Level",
-          "url": "https://stocktwits.com/news-articles/markets/equity/googl-stock-gains-after-hours-alphabet-replace-verizon-dow-jones-retail-eyes-400-level/cZKUA3aR7OE?.tsrc=rss",
-          "published": "Wed, 24 Jun 2026 00:01:28 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
-          "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:13:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Google's YouTube settles case over social media harm to children",
-          "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:02:22 +0000"
-        }
-      ]
-    },
-    {
       "ticker": "F",
       "name": "Ford",
       "mentions": 54,
-      "momentum": 440.00000000000006,
+      "momentum": 0,
       "sentiment": 0.037037037037037035,
       "priceMove": -0.057747150355011705,
       "lastPrice": 14,
@@ -1350,7 +1220,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0907939160973383,
       "optionsActivity": 0,
-      "signalScore": 57.716957016804976,
+      "signalScore": 42.716957016804976,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1369,7 +1239,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "F $14.00, price -0.8%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/F",
-          "published": "2026-06-24T01:04:27.580Z"
+          "published": "2026-06-24T01:08:01.605Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1404,75 +1274,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "mentions": 60,
-      "momentum": 361.53846153846155,
-      "sentiment": -0.014444444444444444,
-      "priceMove": -0.193926710322114,
-      "lastPrice": 103.25,
-      "quoteAsOf": "2026-06-23T20:00:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.120044868223421,
-      "optionsActivity": 0,
-      "signalScore": 57.69597041593136,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "HOOD $103.25, price -2.3%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/HOOD",
-          "published": "2026-06-24T01:04:26.332Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Forget Trading Fees: This Power Move Could Completely Redefine Robinhood's Revenue",
-          "url": "https://www.fool.com/investing/2026/06/23/trading-fees-power-move-redefine-robinhood-revenue/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:13:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Truist Stays Bullish on Robinhood as June Volumes Point to Record Quarter",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/truist-stays-bullish-robinhood-june-190156498.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:01:56 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "50,000 Reasons to Buy Robinhood Stock Now",
-          "url": "https://www.barchart.com/story/news/2611022/50-000-reasons-to-buy-robinhood-stock-now?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 18:45:30 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
-          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Robinhood stock falls as company unveils $2 billion debt plan",
-          "url": "https://www.thestreet.com/investing/stocks/robinhood-stock-falls-as-company-unveils-2-billion-debt-plan?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 16:33:00 +0000"
-        }
-      ]
-    },
-    {
       "ticker": "NFLX",
       "name": "Netflix",
       "mentions": 56,
-      "momentum": 300,
+      "momentum": 0,
       "sentiment": 0.03571428571428571,
       "priceMove": -0.002940119554603156,
       "lastPrice": 72.82,
@@ -1480,7 +1285,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.047261224688189,
       "optionsActivity": 0,
-      "signalScore": 57.658811370639306,
+      "signalScore": 42.658811370639306,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1499,7 +1304,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "NFLX $72.82, price -0.1%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/NFLX",
-          "published": "2026-06-24T01:04:26.376Z"
+          "published": "2026-06-24T01:08:00.135Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1534,10 +1339,75 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "CVNA",
+      "name": "Carvana",
+      "mentions": 59,
+      "momentum": 0,
+      "sentiment": -0.0016949152542372896,
+      "priceMove": -0.23388638442821688,
+      "lastPrice": 64.83,
+      "quoteAsOf": "2026-06-23T20:03:38.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0892195902561543,
+      "optionsActivity": 0,
+      "signalScore": 42.62624462176447,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CVNA",
+          "published": "2026-06-24T01:08:02.490Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Carvana (CVNA) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/carvana-cvna-suffers-larger-drop-221504158.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:15:04 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Carvana’s June sales growth appears to slow, Jefferies remains bullish",
+          "url": "https://www.proactiveinvestors.com/companies/news/1094366/carvana-s-june-sales-growth-appears-to-slow-jefferies-remains-bullish-1094366.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:16:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "How Is Carvana's Stock Performance Compared to Other Retail Stocks?",
+          "url": "https://www.barchart.com/story/news/2582968/how-is-carvana-s-stock-performance-compared-to-other-retail-stocks?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 13:32:39 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Carvana and Jimmie Johnson Foundation Launch \"Driving Brighter Futures\" Grant Program to Invest in the Next Generation of Automotive Talent",
+          "url": "https://finance.yahoo.com/small-business/articles/carvana-jimmie-johnson-foundation-launch-130000824.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 13:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Reflecting On Online Retail Stocks’ Q1 Earnings: Carvana (NYSE:CVNA)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/reflecting-online-retail-stocks-q1-205258191.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 20:52:58 +0000"
+        }
+      ]
+    },
+    {
       "ticker": "PYPL",
       "name": "PayPal",
       "mentions": 57,
-      "momentum": 307.14285714285717,
+      "momentum": 0,
       "sentiment": 0.016608187134502923,
       "priceMove": -0.10607532179456362,
       "lastPrice": 41.7,
@@ -1545,7 +1415,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0740715979837787,
       "optionsActivity": 0,
-      "signalScore": 57.57146061778921,
+      "signalScore": 42.57146061778921,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1564,7 +1434,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "PYPL $41.70, price -1.5%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/PYPL",
-          "published": "2026-06-24T01:04:27.333Z"
+          "published": "2026-06-24T01:08:01.297Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1602,7 +1472,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "UBER",
       "name": "Uber",
       "mentions": 58,
-      "momentum": 286.6666666666667,
+      "momentum": 0,
       "sentiment": 0.0074712643678160945,
       "priceMove": -0.21240958083587952,
       "lastPrice": 69.67,
@@ -1610,7 +1480,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.071018789481655,
       "optionsActivity": 0,
-      "signalScore": 57.51058955126785,
+      "signalScore": 42.510589551267856,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1629,7 +1499,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "UBER $69.67, price -2.5%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/UBER",
-          "published": "2026-06-24T01:04:27.102Z"
+          "published": "2026-06-24T01:08:00.923Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1667,7 +1537,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "mentions": 53,
-      "momentum": 430,
+      "momentum": 0,
       "sentiment": 0.03773584905660377,
       "priceMove": -0.06886267539484288,
       "lastPrice": 294.3,
@@ -1675,7 +1545,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0933178282104097,
       "optionsActivity": 0,
-      "signalScore": 57.45593675312676,
+      "signalScore": 42.45593675312676,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1694,7 +1564,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AAPL $294.30, price -0.9%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/AAPL",
-          "published": "2026-06-24T01:04:25.737Z"
+          "published": "2026-06-24T01:07:59.512Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1729,10 +1599,75 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "mentions": 60,
+      "momentum": 0,
+      "sentiment": -0.025555555555555554,
+      "priceMove": -0.193926710322114,
+      "lastPrice": 103.25,
+      "quoteAsOf": "2026-06-23T20:00:01.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.120044868223421,
+      "optionsActivity": 0,
+      "signalScore": 42.42612914609009,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "HOOD $103.25, price -2.3%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/HOOD",
+          "published": "2026-06-24T01:08:00.094Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Forget Trading Fees: This Power Move Could Completely Redefine Robinhood's Revenue",
+          "url": "https://www.fool.com/investing/2026/06/23/trading-fees-power-move-redefine-robinhood-revenue/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Truist Stays Bullish on Robinhood as June Volumes Point to Record Quarter",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/truist-stays-bullish-robinhood-june-190156498.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:01:56 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "50,000 Reasons to Buy Robinhood Stock Now",
+          "url": "https://www.barchart.com/story/news/2611022/50-000-reasons-to-buy-robinhood-stock-now?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:45:30 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta prediction markets app Arena sinks DraftKings, Robinhood stock",
+          "url": "https://qz.com/meta-prediction-markets-app-arena-draftkings-robinhood-stock-062326?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:42:54 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Robinhood stock falls as company unveils $2 billion debt plan",
+          "url": "https://www.thestreet.com/investing/stocks/robinhood-stock-falls-as-company-unveils-2-billion-debt-plan?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:33:00 +0000"
+        }
+      ]
+    },
+    {
       "ticker": "TSLA",
       "name": "Tesla",
       "mentions": 61,
-      "momentum": 258.8235294117647,
+      "momentum": 0,
       "sentiment": -0.037486338797814205,
       "priceMove": -0.8538103836378733,
       "lastPrice": 381.61,
@@ -1740,7 +1675,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.1006343032545878,
       "optionsActivity": 0,
-      "signalScore": 57.13399032228075,
+      "signalScore": 42.13399032228075,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1759,7 +1694,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "TSLA $381.61, price -5.8%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/TSLA",
-          "published": "2026-06-24T01:04:25.560Z"
+          "published": "2026-06-24T01:07:59.369Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1794,75 +1729,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "COIN",
-      "name": "Coinbase",
-      "mentions": 58,
-      "momentum": 286.6666666666667,
-      "sentiment": -0.013103448275862071,
-      "priceMove": -0.4876199219405073,
-      "lastPrice": 158.18,
-      "quoteAsOf": "2026-06-23T20:00:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0828121478233734,
-      "optionsActivity": 0,
-      "signalScore": 57.053374048523,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 16,
-        "Bing News": 16,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "COIN $158.18, price -4.0%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/COIN",
-          "published": "2026-06-24T01:04:26.149Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Here's Why Coinbase Global, Inc. (COIN) Fell More Than Broader Market",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-coinbase-global-inc-214504007.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:45:04 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "ICE & OKX Are Getting Ready to Drink Coinbase’s Tokenized Milkshake",
-          "url": "https://app.moby.co/home/news/news-ice-okx-are-getting-ready-to-drink-coinbases-tokenized-milkshake?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:00:51 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase Bets on AI Trading With Pre-IPO of OpenAI, Anthropic?",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-bets-ai-trading-pre-160700597.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 16:07:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Coinbase Is Offering Pre-IPO Perpetual Futures on OpenAI and Anthropic. That’s Better News for COIN Stock Than It Is for You.",
-          "url": "https://www.barchart.com/story/news/2606188/coinbase-is-offering-pre-ipo-perpetual-futures-on-openai-and-anthropic-thats-better-news-for-coin-stock-than-it-is-for-you?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 14:26:45 +0000"
-        },
-        {
-          "source": "Google News",
-          "title": "Coinbase Global (COIN) Stock Could Be 12.5% Overvalued After Its AI And Payments Push - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOWnRhcEtPTlNieUk2ejc0MHgzMXNLQjduMGJwTERsNG81MWtlNmx1RFFWRHhmT0RIY1ViT1VDXy0tc0RRUHRJa1Jfb3l0bmZnNXR0SmdIRjdCaHZ2R3JISmlEYU5iSXNCOE5xRlZNN2pjWDg1bHY0WjZ2Z0JZWjdOYWswaHVDZ2IwQzRQYTAweEhxMXdQQjRkUnM2a1dVWXpQVDF4Vk9PQkstdFdZTFZGRkk1UFktUmtMOW9jM282RVBPWTBDa2lpNjhWdklQSGdPNHQxTXpwQjZQMGNjTUduemZ30gHnAUFVX3lxTE5MUXoteVFxMi1LemFyTTFDaUJaYlBLd1BVSGN1ckU2cGxwV0RyTVBGODFpenhxMk5NTHQyN2FhbkdSTThlaXQ0UjFEYTlYZGM5NWRLR3pWcVFweWpJZXNHWW04RUpaWlU4dHJITXpsMmpVM2ZNc294elUzTXlwcWt0ODhtQjZIVHNMeDZDdjhjM1RzRWY4RGswcnhIMDAzOGxmTHFkQVdxU2pCTXJEWFJOMkxFZm5tRFd2Z3ZEb3Z5VDEzTjZZZ2haZkM4enZ4M2hNS3JVNjJFUGRfUjhJaEJ3SHZuVHRCZw?oc=5",
-          "published": "Tue, 23 Jun 2026 11:37:17 GMT"
-        }
-      ]
-    },
-    {
       "ticker": "COST",
       "name": "Costco",
       "mentions": 49,
-      "momentum": 1125,
+      "momentum": 0,
       "sentiment": 0.04081632653061224,
       "priceMove": 0.05431615074609973,
       "lastPrice": 957.68,
@@ -1870,7 +1740,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.1228564127630087,
       "optionsActivity": 0,
-      "signalScore": 57.03183960505164,
+      "signalScore": 42.03183960505162,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1889,7 +1759,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "COST $957.68, price +0.7%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/COST",
-          "published": "2026-06-24T01:04:27.990Z"
+          "published": "2026-06-24T01:08:01.986Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1927,7 +1797,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AVGO",
       "name": "Broadcom",
       "mentions": 52,
-      "momentum": 300,
+      "momentum": 0,
       "sentiment": 0.027564102564102563,
       "priceMove": -0.29376062328322256,
       "lastPrice": 380.15,
@@ -1935,7 +1805,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0709381181671778,
       "optionsActivity": 0,
-      "signalScore": 56.95137559624992,
+      "signalScore": 41.95137559624992,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1954,7 +1824,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AVGO $380.15, price -3.1%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/AVGO",
-          "published": "2026-06-24T01:04:26.717Z"
+          "published": "2026-06-24T01:08:00.482Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1992,7 +1862,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "mentions": 51,
-      "momentum": 409.99999999999994,
+      "momentum": 0,
       "sentiment": 0.0130718954248366,
       "priceMove": -0.011475556928327274,
       "lastPrice": 562.2,
@@ -2000,7 +1870,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0335690526851602,
       "optionsActivity": 0,
-      "signalScore": 56.86981278331666,
+      "signalScore": 41.86981278331666,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2031,7 +1901,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "META $562.20, price -0.3%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/META",
-          "published": "2026-06-24T01:04:25.993Z"
+          "published": "2026-06-24T01:07:59.793Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2057,7 +1927,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "mentions": 47,
-      "momentum": 683.3333333333333,
+      "momentum": 0,
       "sentiment": 0.07092198581560283,
       "priceMove": 0.04825851633011765,
       "lastPrice": 234.11,
@@ -2065,7 +1935,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0470084944868816,
       "optionsActivity": 0,
-      "signalScore": 56.85954721698283,
+      "signalScore": 41.85954721698283,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2084,7 +1954,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AMZN $234.11, price +0.6%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/AMZN",
-          "published": "2026-06-24T01:04:25.949Z"
+          "published": "2026-06-24T01:07:59.749Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2122,7 +1992,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSTR",
       "name": "MicroStrategy",
       "mentions": 56,
-      "momentum": 366.66666666666663,
+      "momentum": 0,
       "sentiment": -0.01380952380952381,
       "priceMove": -0.7334706913782629,
       "lastPrice": 103.84,
@@ -2130,7 +2000,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.094266189991097,
       "optionsActivity": 0,
-      "signalScore": 56.839593871580114,
+      "signalScore": 41.839593871580114,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2149,7 +2019,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "MSTR $103.84, price -5.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/MSTR",
-          "published": "2026-06-24T01:04:26.210Z"
+          "published": "2026-06-24T01:07:59.963Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2187,7 +2057,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "BABA",
       "name": "Alibaba",
       "mentions": 53,
-      "momentum": 381.8181818181818,
+      "momentum": 0,
       "sentiment": 0.020754716981132078,
       "priceMove": -0.21299896943980665,
       "lastPrice": 102.6,
@@ -2195,7 +2065,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.053050598991602,
       "optionsActivity": 0,
-      "signalScore": 56.78536825893636,
+      "signalScore": 41.78536825893636,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2214,7 +2084,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "BABA $102.60, price -2.3%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/BABA",
-          "published": "2026-06-24T01:04:26.466Z"
+          "published": "2026-06-24T01:08:00.234Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2249,67 +2119,67 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "mentions": 46,
-      "momentum": 2200,
-      "sentiment": 0.05797101449275362,
-      "priceMove": 0.03488949330684459,
-      "lastPrice": 334.14,
-      "quoteAsOf": "2026-06-23T20:00:02.000Z",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "mentions": 55,
+      "momentum": -3.508771929824561,
+      "sentiment": 0.011151515151515148,
+      "priceMove": -0.07383358811458975,
+      "lastPrice": 346.13,
+      "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.069844307202176,
+      "relativeVolume": 1.032547247043898,
       "optionsActivity": 0,
-      "signalScore": 56.5424226490433,
+      "signalScore": 41.66528701631015,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "GDELT News": 0,
-        "Google News": 14,
-        "Bing News": 14,
+        "Google News": 16,
+        "Bing News": 16,
         "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 2,
         "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 2
+        "FINRA Short Volume": 9,
+        "Price/Volume": 4
       },
       "latest": [
         {
+          "source": "CNBC",
+          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
+          "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
+          "published": "Tue, 23 Jun 2026 22:44:45 GMT"
+        },
+        {
           "source": "Price/Volume",
-          "title": "JPM $334.14, price +0.8%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/JPM",
-          "published": "2026-06-24T01:04:27.921Z"
+          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/GOOGL",
+          "published": "2026-06-24T01:08:00.187Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Why PAR Technology Corporation (PAR) Is Back on JPMorgan’s Radar",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-par-technology-corporation-par-153655966.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 15:36:55 +0000"
+          "title": "GOOGL Stock Gains After-Hours As Alphabet Is Set To Replace Verizon In Dow Jones — Retail Eyes ‘$400’ Level",
+          "url": "https://stocktwits.com/news-articles/markets/equity/googl-stock-gains-after-hours-alphabet-replace-verizon-dow-jones-retail-eyes-400-level/cZKUA3aR7OE?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:01:28 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "After forcing workers back to the office, Goldman Sachs and JPMorgan Chase are now letting their staff work remotely—but only for the World Cup",
-          "url": "https://finance.yahoo.com/small-business/articles/forcing-workers-back-office-goldman-121527931.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 12:15:27 +0000"
+          "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
+          "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:13:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Here is why JPMorgan Chase (JPM) Is Among the Cheapest Jim Cramer Stocks to Invest In",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-jpmorgan-chase-jpm-among-083545414.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 08:35:45 +0000"
+          "title": "Google's YouTube settles case over social media harm to children",
+          "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:02:22 +0000"
         },
         {
-          "source": "Google News",
-          "title": "JPMorgan Chase (JPM) Stock Could Be 1.9% Undervalued After Rising Investor Optimism - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaWJLd09hRWRlZElndFlHem80Q2lKUVAwNGVzMS1ZUklSYXhXY2ZQZmthLWVISEc1SzljZ1hrbGVjVzZyM3VVaS15eS1VaFF4WVhMVDNYSHNZaGtGUllacy04RXdwWTR2eUVGYzBiTFJwcEtIRlJldGl1dnp4dmhfZWFpRHd5NkNmZ19uVTFFRzUwT2FvM1Q0bzU5dkZtWDNPVjdrUDFiTWg4aVdXRENHQmhJZldpUndTdHRFT1dSckhZT1kxc1HSAcsBQVVfeXFMTTgwbGtIbEFOVUNySlR0b2dIdEZ5THlwblRkX2o4NGhVTUsxZWZLbjNqTWNpU2E4aXhqS1h5RnpQWVZIWm5sb1A3M0xjR2QzUVgtbFhpNmM0OTZleWU4ZjlFNFhLalc4MnNRYmlDUlFtb3dxNUg3NS1VOWhNU0tQbm5qT1ZFcHpvMEc0Ri1NZW8tYWRoNnVUVkxoejByblUtNG84UExsMDVwR25mMFpieHh6RkNtb0JYdVlsMTNMR0pCVVNuNngxdDJ2akU?oc=5",
-          "published": "Tue, 23 Jun 2026 07:32:38 GMT"
-        },
-        {
-          "source": "Google News",
-          "title": "Here is why JPMorgan Chase (JPM) Is Among the Cheapest Jim Cramer Stocks to Invest In - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNM0hUa0VQSDVqTmtFaHcxdUtwMlY5LVl6djhjZFlFY3laUXJkYXNKR1dBeGdfNG5xMk5sWHEtc00xM21iMUlCOExmYUpKdTdENFpPZWJBUk9PaUNBYW1rRmVCbE1Dc1lXRmxocGVmZ1ltak1Vck1rSTZIN3VhSlhSTEJFZGRTYnlvRFhMa2dvT2NnZjlrRVl3eA?oc=5",
-          "published": "Tue, 23 Jun 2026 08:35:45 GMT"
+          "source": "Yahoo Public News",
+          "title": "Alphabet Set to Join and Honeywell International to Remain in Dow Jones Industrial Average",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-set-join-honeywell-international-220200121.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:02:00 +0000"
         }
       ]
     },
@@ -2317,7 +2187,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "mentions": 49,
-      "momentum": 512.5,
+      "momentum": 0,
       "sentiment": 0.03401360544217687,
       "priceMove": 0.14666951993329988,
       "lastPrice": 373.94,
@@ -2325,7 +2195,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0387736218165424,
       "optionsActivity": 0,
-      "signalScore": 56.503741396115934,
+      "signalScore": 41.50374139611593,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2344,7 +2214,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "MSFT $373.94, price +1.8%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/MSFT",
-          "published": "2026-06-24T01:04:26.059Z"
+          "published": "2026-06-24T01:07:59.871Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2379,67 +2249,132 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "mentions": 51,
-      "momentum": 409.99999999999994,
-      "sentiment": -0.039607843137254906,
-      "priceMove": -0.11389785857785582,
-      "lastPrice": 733.58,
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "mentions": 63,
+      "momentum": -16,
+      "sentiment": 0.08296296296296296,
+      "priceMove": -0.7663449591220781,
+      "lastPrice": 33.32,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.154384841291992,
+      "relativeVolume": 1.037505317741747,
       "optionsActivity": 0,
-      "signalScore": 56.49597277823029,
+      "signalScore": 41.068985456018765,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "GDELT News": 0,
         "Google News": 16,
-        "Bing News": 12,
+        "Bing News": 16,
         "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 2,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
+        "FINRA Short Volume": 11,
+        "Price/Volume": 8
       },
       "latest": [
         {
-          "source": "CNBC",
-          "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
-          "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
-          "published": "Tue, 23 Jun 2026 16:40:57 GMT"
+          "source": "Price/Volume",
+          "title": "SMCI $33.32, price -6.0%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/SMCI",
+          "published": "2026-06-24T01:07:59.647Z"
         },
+        {
+          "source": "Yahoo Public News",
+          "title": "Super Micro Computer Is Trading at Its Best Valuation in 18 Months. Should You Buy the Dip?",
+          "url": "https://www.fool.com/investing/2026/06/23/super-micro-computer-is-trading-at-its-best-valuat/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:27:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Super Micro Computer (SMCI) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-suffers-214506467.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/smci-stock-soars-15-nvidia-190000419.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Forget Super Micro Computer: 1 Unstoppable AI Hardware Powerhouse to Buy Hand Over Fist After the Pullback",
+          "url": "https://247wallst.com/investing/2026/06/23/forget-super-micro-computer-1-unstoppable-ai-hardware-powerhouse-to-buy-hand-over-fist-after-the-pullback/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:46:40 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Down Nearly 50% From Its High, Is Super Micro Computer Stock a Bargain Buy?",
+          "url": "https://www.fool.com/investing/2026/06/23/down-nearly-50-from-its-high-is-super-micro-comput/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 16:30:00 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "mentions": 59,
+      "momentum": -9.230769230769232,
+      "sentiment": 0.007344632768361584,
+      "priceMove": -0.1985674774838662,
+      "lastPrice": 116.7,
+      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0543031046321882,
+      "optionsActivity": 0,
+      "signalScore": 40.20899501586624,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 10,
+        "Price/Volume": 5
+      },
+      "latest": [
         {
           "source": "Price/Volume",
-          "title": "SPY $733.58, price -1.5%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/SPY",
-          "published": "2026-06-24T01:04:26.991Z"
+          "title": "PLTR $116.70, price -2.3%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/PLTR",
+          "published": "2026-06-24T01:07:59.606Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
-          "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:21:50 +0000"
+          "title": "Palantir partners with Zeta Global on AI-powered marketing infrastructure, Wedbush sees further enterprise validation",
+          "url": "https://www.proactiveinvestors.com/companies/news/1094368/palantir-partners-with-zeta-global-on-ai-powered-marketing-infrastructure-wedbush-sees-further-enterprise-validation-1094368.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:50:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
-          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+          "title": "Palantir Hits 52-Week Low Amid AI Retreat, Rising Interest Rates",
+          "url": "https://finance.yahoo.com/m/b407a679-d46d-3178-b894-989ec99621b1/palantir-hits-52-week-low.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:32:49 +0000"
         },
         {
-          "source": "Google News",
-          "title": "Better S&P 500 ETF: VOO vs. SPY - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN1MzUUc0eGtDZzhXamZTRDN6UEJNYlE0NU9EMUlHVjVnVW5fb0o2TWdtSW92UHl5czhMMWVmVjJuZ0FsMVctUFZCTU9iRmVfSHhoNVFBUVZYTENseFZyYjV1WDlyTzVESlRMODJfYjlDTXEwRVBCdmg3V19Ia0t2WE56Vkhoc3BPU2RRbnhR?oc=5",
-          "published": "Sun, 21 Jun 2026 07:20:00 GMT"
+          "source": "Yahoo Public News",
+          "title": "Stocks making big moves yesterday: Shutterstock, Viavi Solutions, Micron, Palantir Technologies, and IonQ",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-191246574.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:12:46 +0000"
         },
         {
-          "source": "Google News",
-          "title": "Better S&P 500 ETF: VOO vs. SPY - The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5Cb3JFVklQZ21ySnUxdkpsVWtfLUFCcnV4Tkg2WTJkZUpWaTc5RUg3Vk5XWmN3amxFZE9lQUFvNGQtcV8wSjNERHlfeV9ydXJkYWpFbnMzNC05cDRYbXJ4cy11eE5qamlvRllWMzFmcmM1Yk1JQ3pMTFBNMA?oc=5",
-          "published": "Sun, 21 Jun 2026 08:00:00 GMT"
+          "source": "Yahoo Public News",
+          "title": "PLTR vs. COHR: Which AI-Driven Tech Stock Should You Bet on?",
+          "url": "https://finance.yahoo.com/technology/ai/articles/pltr-vs-cohr-ai-driven-174000935.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:40:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Palantir Stock Rises on Major AI Infrastructure Pact With Zeta",
+          "url": "https://finance.yahoo.com/technology/ai/articles/palantir-stock-rises-major-ai-172202116.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:22:02 +0000"
         }
       ]
     },
@@ -2447,7 +2382,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PFE",
       "name": "Pfizer",
       "mentions": 55,
-      "momentum": 816.6666666666666,
+      "momentum": 0,
       "sentiment": -0.09175757575757575,
       "priceMove": -0.15658978895223316,
       "lastPrice": 24.72,
@@ -2455,7 +2390,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.183226156355022,
       "optionsActivity": 0,
-      "signalScore": 55.20388511124739,
+      "signalScore": 40.20388511124738,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2474,7 +2409,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "PFE $24.72, price -1.4%, volume 1.5x",
           "url": "https://finance.yahoo.com/quote/PFE",
-          "published": "2026-06-24T01:04:28.111Z"
+          "published": "2026-06-24T01:08:02.107Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2502,9 +2437,9 @@ window.SIGNALDESK_DATA = {
         },
         {
           "source": "Google News",
-          "title": "Could Pfizer Stock Be Your Ticket to Generational Wealth? - The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOajNoYVhGUjdXb0hIdlZZMkJRRWtfUllLeVRjR1NjTTdrMzRGV3poLVRzZkhIcHVxSDhZSEVFWGl4eFJQMU1EazduLThwQkIyMjJ5Y2htRHlldlJGQXdtQzJYbnk5c1FCSmVObFBpaTVWLUdKQ1JrVW1ZQ0NCbDBjMXhqUnBCSVZvYWlNVW1nTjg0RTRuNUdr?oc=5",
-          "published": "Mon, 22 Jun 2026 02:15:00 GMT"
+          "title": "Pfizer Shares Fall After Lung-Cancer Setback Hits $43 Billion Seagen Deal - TechStock²",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaE9nMWFGVU11TnZvRTEzaVB6VGZQY0dlTUlyX25ETHY4eGxxZUZuZ3FhaDlNQ1V4cWFfUzM1QzZsN1prS2h4azd3RFpmZzVWREFVVE5oY215b180OFhPVEJMNkYzVEgwQW1zZ1FkdjNNZ0EzRXhDeWRJWUp2b01tcHdtOGlDVmRBS2J5OHczMlRvNVJ1cFQzeg?oc=5",
+          "published": "Tue, 23 Jun 2026 18:39:01 GMT"
         }
       ]
     },
@@ -2512,7 +2447,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "LCID",
       "name": "Lucid",
       "mentions": 54,
-      "momentum": 390.90909090909093,
+      "momentum": 0,
       "sentiment": -0.08641975308641975,
       "priceMove": 0.03229990684219902,
       "lastPrice": 5.19,
@@ -2520,7 +2455,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0856854592485816,
       "optionsActivity": 0,
-      "signalScore": 54.65381894315307,
+      "signalScore": 39.65381894315308,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2539,7 +2474,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "LCID $5.19, price +0.6%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/LCID",
-          "published": "2026-06-24T01:04:26.576Z"
+          "published": "2026-06-24T01:08:00.321Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2574,67 +2509,132 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "NIO",
-      "name": "NIO",
-      "mentions": 44,
-      "momentum": 175,
-      "sentiment": 0,
-      "priceMove": 0.07200685464333509,
-      "lastPrice": 5.09,
-      "quoteAsOf": "2026-06-23T20:00:02.000Z",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "mentions": 48,
+      "momentum": -11.11111111111111,
+      "sentiment": 0.07097222222222221,
+      "priceMove": -0.6017848773707196,
+      "lastPrice": 200.04,
+      "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.145744726506644,
+      "relativeVolume": 1.0783944976070527,
       "optionsActivity": 0,
-      "signalScore": 54.561820041472004,
+      "signalScore": 39.536750113272355,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "GDELT News": 0,
-        "Google News": 0,
+        "Google News": 10,
         "Bing News": 16,
         "SEC Filings": 0,
-        "Yahoo Public News": 12,
+        "Yahoo Public News": 4,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 4
+        "FINRA Short Volume": 11,
+        "Price/Volume": 7
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "NIO $5.09, price +0.8%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NIO",
-          "published": "2026-06-24T01:04:26.527Z"
+          "title": "NVDA $200.04, price -4.1%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NVDA",
+          "published": "2026-06-24T01:07:59.321Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 01:21:37 +0000"
+          "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia",
+          "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:47:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
-          "published": "Sun, 21 Jun 2026 11:10:36 +0000"
+          "title": "Nvidia's banned AI chips double in price on China's black market, FT reports",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-banned-ai-chips-double-002552897.html?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:25:52 +0000"
+        },
+        {
+          "source": "Google News",
+          "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia - The Globe and Mail",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPX0NQXzVkZ2xNOU80bWk5aWxnelB0TTdNTzZ3VVZRRFRIakxabW9lTEt4eFQtVU9pN2dybmZOc2VkcG5KcFNMa1NMVExpOGtQVFFuRnBUanRxbENCOXE0WjcxRWR1SmVnZWs5TGVBekFqQ3h5Qy1uLW5xU1hnclRhY3BMUjNJN2lFZk5EWFpVS0IxalBOM1hqV3hZeDNBNGlLSDI5eXdfcmVvYzZNanRGZ1EtUEtFUzJsZ293cnVsWk40NEQxVDdxOFpNWnBCQVZ4dHFudHpXalEtZGtFMVE2MS1GcDA?oc=5",
+          "published": "Wed, 24 Jun 2026 00:50:29 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "Nvidia: The $1 Trillion Trade Hiding In Plain Sight (NASDAQ:NVDA) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa3pieS0yNDl0VUUtNWVrMDk3aTdQMVVpZkkwZUdHMlpFMG9FNV9HZjRUTllXbF9Jd1B0Uk5wc0dGN0V0Sm9DeW9jZXJoS3hDOHVoX0xsZ2hLaWtsalltb0FzN2tPOXNOZ2hmQ3NLakdlWXNmU2wwRWw0OFhLeVNFU2FvV21Qb2NpcnNJb05pM2lKY1RD?oc=5",
+          "published": "Mon, 22 Jun 2026 18:11:25 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "NVIDIA Stock’s Next Big Move Might Not Involve A GPU - Trefis",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORjQwbVRsdDBSM3BNdWRKN0gyS0JYS2FEX2JkcUpZemtaWnBiTVpUMDhFc0hxNFpPbnh1bkZ5d19TTHBKOXZjNlNLQmFlODdRb3o5ZUNnbDBQdTFxYkdrT3MyaWhRbDI4Tk5OSGVRSHRKdF9KYS1Vb0hsYU11LWZjSE9NTy1XV3RsM3VYZUNqWW52aW9pRTJuNHBpMmEzdGxQV0NRLWRyTlNFdUhFVWt2WFNn?oc=5",
+          "published": "Tue, 23 Jun 2026 01:22:38 GMT"
+        }
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "mentions": 47,
+      "momentum": -11.320754716981133,
+      "sentiment": 0.05673758865248227,
+      "priceMove": 0.05808150017236191,
+      "lastPrice": 139.73,
+      "quoteAsOf": "2026-06-23T20:03:21.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0509981222631248,
+      "optionsActivity": 0,
+      "signalScore": 38.84654852306596,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 16,
+        "Bing News": 16,
+        "SEC Filings": 0,
+        "Yahoo Public News": 2,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 10,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "XOM $139.73, price +0.9%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/XOM",
+          "published": "2026-06-24T01:08:02.385Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
-          "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 14:27:00 +0000"
+          "title": "US Supreme Court boosts Exxon's bid to get compensation from Cuba",
+          "url": "https://finance.yahoo.com/video/us-supreme-court-boosts-exxons-193932341.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:39:32 +0000"
         },
         {
-          "source": "Yahoo Public News",
-          "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 13:00:08 +0000"
+          "source": "Google News",
+          "title": "Exxon Mobil Stock (XOM) Opinions on Recent Oil Market Developments - Quiver Quantitative",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPT1JqU19rOF9YWXdvOW1oUVRKekJhUlhXVnIwLUUydFY0Y1hHMXdiQWtncHBsNERNTGttUFF5LVc1U0kzZGhZTFdWbHJuRm1XdGp1ZWtRbV9NcjJrUEtIeFVXS251eVY1ZzVucmJHUHBQemdCTkFKRjVwRDZBUmtJSFhINFlrdHlRTTlCbFh4UVFKUW9Bd1JZNUVONzNwMjRfOEp2TVpn?oc=5",
+          "published": "Tue, 23 Jun 2026 14:11:00 GMT"
         },
         {
-          "source": "Yahoo Public News",
-          "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
-          "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
-          "published": "Thu, 18 Jun 2026 04:37:20 +0000"
+          "source": "Google News",
+          "title": "Exxon Mobil (XOM) Stock Could Be 18.5% Undervalued After Texas Domicile Shift - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSVBDRGY3SUw3YWo5a3lsbVZoY25LQWxHMXRpY3ZGRDZETldyR2lhTklrSDhVSGhuWE1GV2tNUHNITS1vQllWcC1FT3BHd21JSHBieklvaG1mZTFwZmZYb3hJZXpodllibFFlYmRTQi1UaG5uN2Q1dUM0S1FOQ0gwZmFUemY0N2k0MV9kWk9lbWZDNlJKLXhUZi12YzVCSUdMOXVBc2FsN1E0Mk5WT1BfWllWNExBS1hKTXN2Y0VhT1I5RE3SAcgBQVVfeXFMT050LTQ2bkRSVmdEMXpaY18zWVZCTFZzZ3Vtdmt2U3dsa2FMRDloNWZGQ1BNZWVJNmVoN0wxOTlZamdkT2R2T3ZOZ2xIT2d2Y19IRHI5S2hxVURLX2I0d1RySGJXb0VUMHdKNWItZEJJRVNzRHc5Rm81X1R1ZkhkT09ySGxFQ01jRTBZcHBuSjlSQzM0UFlTQkF5WF9XcENyRlBqUGRDX0lNbGdUUGJMMm5ILW9TSWlLRTRIc2tkcEF0T1ZYSzJrQVU?oc=5",
+          "published": "Tue, 23 Jun 2026 10:41:36 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "ExxonMobil Announces Planned Effective Date for Move to Texas - Exxon Mobil Corporation",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNOVNiZ05ER1lWN20tR083cGwxZFpwa00tYm8wVlNReE9qVXgtblYxbUNFdS13MEU4YUJRaV9lRlJkSlUyOUtMQXNWWWxIWk55ZGtDMXlGdjBWMGZ3TUp3anZrSFlFaEtGczU3Wk1XeVB3b2xqaTV5bzI0bTRGcjZBUGZ5cGoxQ1p0SkdmbFlMM1B2MXRXWVp5WTFQbkNDTmxKQmRXczcxVDRScEJkYnVLMTVFMWJ4UG5lRlNBUDZrYmM5dEhjRmZybE5aT2hoa0E?oc=5",
+          "published": "Mon, 22 Jun 2026 13:32:35 GMT"
+        },
+        {
+          "source": "Google News",
+          "title": "Exxon Mobil (XOM) Stock Could Be 18.9% Undervalued Despite Recent Pullback - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMFhzVl9vaXFZRWNIcVBUdVoydXVMMVFDTWRtNkZRamstTE5iTEJMWGJiaU5XcDZJSW43SHFid29wYk5wQjBqU1J1aU5qQW50NHVUQnd5TVdyWFkzVmdLY1ZXNExsd0Q4QkQtdVZ5b2ZubG9feHpnZTBwNUJudE5sTGZJLUxsRExOVmVxTlprZ1hQUEhxYTdN?oc=5",
+          "published": "Thu, 18 Jun 2026 23:20:53 GMT"
         }
       ]
     },
@@ -2642,7 +2642,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "BA",
       "name": "Boeing",
       "mentions": 46,
-      "momentum": 1050,
+      "momentum": 0,
       "sentiment": 0.027826086956521733,
       "priceMove": -0.162233856729961,
       "lastPrice": 216.71,
@@ -2650,7 +2650,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 0.9843978682500476,
       "optionsActivity": 0,
-      "signalScore": 53.31041574062469,
+      "signalScore": 38.310415740624684,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2669,7 +2669,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "BA $216.71, price -1.9%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/BA",
-          "published": "2026-06-24T01:04:28.289Z"
+          "published": "2026-06-24T01:08:02.245Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2707,7 +2707,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "ARM",
       "name": "Arm Holdings",
       "mentions": 42,
-      "momentum": 250,
+      "momentum": 0,
       "sentiment": -0.01968253968253969,
       "priceMove": -2.896245399290983,
       "lastPrice": 366.39,
@@ -2715,7 +2715,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.04676146990855,
       "optionsActivity": 0,
-      "signalScore": 53.21735684685106,
+      "signalScore": 38.21735684685106,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2734,7 +2734,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "ARM $366.39, price -10.1%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/ARM",
-          "published": "2026-06-24T01:04:26.761Z"
+          "published": "2026-06-24T01:08:00.524Z"
         },
         {
           "source": "Google News",
@@ -2772,7 +2772,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NET",
       "name": "Cloudflare",
       "mentions": 16,
-      "momentum": 220.00000000000003,
+      "momentum": 0,
       "sentiment": 0.078125,
       "priceMove": 0.9387299332744165,
       "lastPrice": 224.94,
@@ -2780,7 +2780,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.2548586318631019,
       "optionsActivity": 0,
-      "signalScore": 51.77100408359098,
+      "signalScore": 36.77100408359098,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2799,7 +2799,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "NET $224.94, price +3.0%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/NET",
-          "published": "2026-06-24T01:04:29.326Z"
+          "published": "2026-06-24T01:08:03.101Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -2813,7 +2813,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MRNA",
       "name": "Moderna",
       "mentions": 17,
-      "momentum": 325,
+      "momentum": 0,
       "sentiment": -0.017647058823529415,
       "priceMove": 0.6561824407643071,
       "lastPrice": 61,
@@ -2821,7 +2821,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.38473463808933,
       "optionsActivity": 0,
-      "signalScore": 50.16922532515699,
+      "signalScore": 35.16922532515699,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2840,7 +2840,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "MRNA $61.00, price +2.8%, volume 0.5x",
           "url": "https://finance.yahoo.com/quote/MRNA",
-          "published": "2026-06-24T01:04:29.227Z"
+          "published": "2026-06-24T01:08:03.014Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -2854,7 +2854,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "CRM",
       "name": "Salesforce",
       "mentions": 14,
-      "momentum": 250,
+      "momentum": 0,
       "sentiment": 0.07142857142857142,
       "priceMove": 0.6280699231374245,
       "lastPrice": 153.42,
@@ -2862,7 +2862,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.1658759899996016,
       "optionsActivity": 0,
-      "signalScore": 50.075272675940965,
+      "signalScore": 35.07527267594097,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2881,7 +2881,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "CRM $153.42, price +2.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/CRM",
-          "published": "2026-06-24T01:04:29.067Z"
+          "published": "2026-06-24T01:08:02.826Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -2895,7 +2895,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "mentions": 24,
-      "momentum": 84.61538461538461,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": 0.10141532813399463,
       "lastPrice": 680.92,
@@ -2903,7 +2903,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.1941911241809804,
       "optionsActivity": 0,
-      "signalScore": 50.04119741176865,
+      "signalScore": 35.04119741176865,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2952,7 +2952,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "CRWD $680.92, price +0.8%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/CRWD",
-          "published": "2026-06-24T01:04:29.283Z"
+          "published": "2026-06-24T01:08:03.060Z"
         }
       ]
     },
@@ -2960,7 +2960,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "DELL",
       "name": "Dell Technologies",
       "mentions": 16,
-      "momentum": 300,
+      "momentum": 0,
       "sentiment": -0.012500000000000011,
       "priceMove": 0.5415447881600729,
       "lastPrice": 427.78,
@@ -2968,7 +2968,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.337763999859691,
       "optionsActivity": 0,
-      "signalScore": 49.449200261007164,
+      "signalScore": 34.449200261007164,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2987,7 +2987,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "DELL $427.78, price +2.2%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/DELL",
-          "published": "2026-06-24T01:04:28.824Z"
+          "published": "2026-06-24T01:08:02.720Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -3001,7 +3001,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "UPST",
       "name": "Upstart",
       "mentions": 13,
-      "momentum": 550,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": 0.0687691848609475,
       "lastPrice": 31.46,
@@ -3009,7 +3009,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.3608889575267216,
       "optionsActivity": 0,
-      "signalScore": 48.31896191146623,
+      "signalScore": 33.31896191146624,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -3028,7 +3028,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "UPST $31.46, price +0.4%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/UPST",
-          "published": "2026-06-24T01:04:28.495Z"
+          "published": "2026-06-24T01:08:02.540Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -3039,180 +3039,10 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
-      "ticker": "IONQ",
-      "name": "IonQ",
-      "mentions": 17,
-      "momentum": 325,
-      "sentiment": -0.07647058823529412,
-      "priceMove": -0.1896230522406289,
-      "lastPrice": 57.85,
-      "quoteAsOf": "2026-06-23T20:00:02.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.483930295039256,
-      "optionsActivity": 0,
-      "signalScore": 47.78539338007668,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
-          "url": "https://finance.yahoo.com/quote/IONQ",
-          "published": "2026-06-24T01:04:28.749Z"
-        },
-        {
-          "source": "FINRA Short Volume",
-          "title": "IONQ FINRA short volume 57% of reported volume (6,144,664.071 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-06-23T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "ROKU",
-      "name": "Roku",
-      "mentions": 11,
-      "momentum": 1000,
-      "sentiment": 0,
-      "priceMove": -0.009749660537592589,
-      "lastPrice": 135.055,
-      "quoteAsOf": "2026-06-23T20:00:00.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3148681934268462,
-      "optionsActivity": 0,
-      "signalScore": 47.552166076795274,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "ROKU $135.06, price -0.1%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/ROKU",
-          "published": "2026-06-24T01:04:29.368Z"
-        },
-        {
-          "source": "FINRA Short Volume",
-          "title": "ROKU FINRA short volume 40% of reported volume (1,249,927.74 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-06-23T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "mentions": 21,
-      "momentum": 75,
-      "sentiment": -0.0857142857142857,
-      "priceMove": -2.6955223107013677,
-      "lastPrice": 165.16,
-      "quoteAsOf": "2026-06-23T20:04:19.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3068238043418707,
-      "optionsActivity": 0,
-      "signalScore": 47.062435471219686,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 9,
-        "Price/Volume": 10
-      },
-      "latest": [
-        {
-          "source": "CNBC",
-          "title": "Oracle sheds 21,000 roles over the past year amid wave of AI layoffs from tech giants",
-          "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
-          "published": "Tue, 23 Jun 2026 13:48:00 GMT"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "ORCL $165.16, price -5.7%, volume 1.5x",
-          "url": "https://finance.yahoo.com/quote/ORCL",
-          "published": "2026-06-24T01:04:28.959Z"
-        },
-        {
-          "source": "FINRA Short Volume",
-          "title": "ORCL FINRA short volume 21% of reported volume (2,569,024.403 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-06-23T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "mentions": 19,
-      "momentum": 171.42857142857142,
-      "sentiment": -0.06631578947368422,
-      "priceMove": -1.8992293967662228,
-      "lastPrice": 95.12,
-      "quoteAsOf": "2026-06-23T20:00:00.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1703875655780285,
-      "optionsActivity": 0,
-      "signalScore": 46.79100316457344,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "RKLB $95.12, price -5.2%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/RKLB",
-          "published": "2026-06-24T01:04:28.654Z"
-        },
-        {
-          "source": "FINRA Short Volume",
-          "title": "RKLB FINRA short volume 53% of reported volume (3,837,933.506 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-06-23T22:00:00.000Z"
-        }
-      ]
-    },
-    {
       "ticker": "MU",
       "name": "Micron",
       "mentions": 29,
-      "momentum": 52.63157894736842,
+      "momentum": 0,
       "sentiment": -0.10551724137931034,
       "priceMove": -7.723793132115498,
       "lastPrice": 1051.77,
@@ -3220,7 +3050,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.18410334122011,
       "optionsActivity": 0,
-      "signalScore": 46.1318706254888,
+      "signalScore": 32.97397588864669,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -3245,7 +3075,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "MU $1051.77, price -13.2%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/MU",
-          "published": "2026-06-24T01:04:29.142Z"
+          "published": "2026-06-24T01:08:02.929Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -3256,10 +3086,180 @@ window.SIGNALDESK_DATA = {
       ]
     },
     {
+      "ticker": "IONQ",
+      "name": "IonQ",
+      "mentions": 17,
+      "momentum": 0,
+      "sentiment": -0.07647058823529412,
+      "priceMove": -0.1896230522406289,
+      "lastPrice": 57.85,
+      "quoteAsOf": "2026-06-23T20:00:02.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.483930295039256,
+      "optionsActivity": 0,
+      "signalScore": 32.78539338007668,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
+          "url": "https://finance.yahoo.com/quote/IONQ",
+          "published": "2026-06-24T01:08:02.672Z"
+        },
+        {
+          "source": "FINRA Short Volume",
+          "title": "IONQ FINRA short volume 57% of reported volume (6,144,664.071 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-06-23T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ROKU",
+      "name": "Roku",
+      "mentions": 11,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": -0.009749660537592589,
+      "lastPrice": 135.055,
+      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.3148681934268462,
+      "optionsActivity": 0,
+      "signalScore": 32.55216607679528,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 10,
+        "Price/Volume": 1
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "ROKU $135.06, price -0.1%, volume 0.4x",
+          "url": "https://finance.yahoo.com/quote/ROKU",
+          "published": "2026-06-24T01:08:03.146Z"
+        },
+        {
+          "source": "FINRA Short Volume",
+          "title": "ROKU FINRA short volume 40% of reported volume (1,249,927.74 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-06-23T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "mentions": 21,
+      "momentum": 0,
+      "sentiment": -0.0857142857142857,
+      "priceMove": -2.6955223107013677,
+      "lastPrice": 165.16,
+      "quoteAsOf": "2026-06-23T20:04:19.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.3068238043418707,
+      "optionsActivity": 0,
+      "signalScore": 32.062435471219686,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 2,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 9,
+        "Price/Volume": 10
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Oracle sheds 21,000 roles over the past year amid wave of AI layoffs from tech giants",
+          "url": "https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html",
+          "published": "Tue, 23 Jun 2026 13:48:00 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "ORCL $165.16, price -5.7%, volume 1.5x",
+          "url": "https://finance.yahoo.com/quote/ORCL",
+          "published": "2026-06-24T01:08:02.782Z"
+        },
+        {
+          "source": "FINRA Short Volume",
+          "title": "ORCL FINRA short volume 21% of reported volume (2,569,024.403 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-06-23T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "mentions": 19,
+      "momentum": 0,
+      "sentiment": -0.06631578947368422,
+      "priceMove": -1.8992293967662228,
+      "lastPrice": 95.12,
+      "quoteAsOf": "2026-06-23T20:00:00.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.1703875655780285,
+      "optionsActivity": 0,
+      "signalScore": 31.79100316457344,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "RKLB $95.12, price -5.2%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/RKLB",
+          "published": "2026-06-24T01:08:02.624Z"
+        },
+        {
+          "source": "FINRA Short Volume",
+          "title": "RKLB FINRA short volume 53% of reported volume (3,837,933.506 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-06-23T22:00:00.000Z"
+        }
+      ]
+    },
+    {
       "ticker": "WBD",
       "name": "Warner Bros. Discovery",
       "mentions": 11,
-      "momentum": 266.66666666666663,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": -0.07083902272670432,
       "lastPrice": 26.88,
@@ -3267,7 +3267,7 @@ window.SIGNALDESK_DATA = {
       "quoteSource": "Yahoo public chart",
       "relativeVolume": 1.0862027147272522,
       "optionsActivity": 0,
-      "signalScore": 45.638061262567646,
+      "signalScore": 30.638061262567653,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -3286,7 +3286,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "WBD $26.88, price -0.3%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/WBD",
-          "published": "2026-06-24T01:04:29.182Z"
+          "published": "2026-06-24T01:08:02.973Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -3327,7 +3327,7 @@ window.SIGNALDESK_DATA = {
           "source": "Price/Volume",
           "title": "AI $9.68, price -0.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/AI",
-          "published": "2026-06-24T01:04:28.613Z"
+          "published": "2026-06-24T01:08:02.581Z"
         }
       ]
     }
@@ -3499,21 +3499,6 @@ window.SIGNALDESK_DATA = {
       "published": "Tue, 23 Jun 2026 13:48:00 GMT"
     },
     {
-      "source": "CNBC",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Google’s online dominance is showing signs of cracking in AI era",
-      "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 15:21:38 GMT"
-    },
-    {
       "source": "MarketWatch",
       "ticker": "MU",
       "name": "Micron",
@@ -3541,7 +3526,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 200.04,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.480Z"
+      "published": "2026-06-24T01:07:59.321Z"
     },
     {
       "source": "Price/Volume",
@@ -3556,7 +3541,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 381.61,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.560Z"
+      "published": "2026-06-24T01:07:59.369Z"
     },
     {
       "source": "Price/Volume",
@@ -3571,7 +3556,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 519.85,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.601Z"
+      "published": "2026-06-24T01:07:59.424Z"
     },
     {
       "source": "Price/Volume",
@@ -3586,7 +3571,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 294.3,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.737Z"
+      "published": "2026-06-24T01:07:59.512Z"
     },
     {
       "source": "Price/Volume",
@@ -3601,7 +3586,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 116.7,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.779Z"
+      "published": "2026-06-24T01:07:59.606Z"
     },
     {
       "source": "Price/Volume",
@@ -3616,7 +3601,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 33.32,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.824Z"
+      "published": "2026-06-24T01:07:59.647Z"
     },
     {
       "source": "Price/Volume",
@@ -3631,7 +3616,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 21.08,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.908Z"
+      "published": "2026-06-24T01:07:59.704Z"
     },
     {
       "source": "Price/Volume",
@@ -3646,7 +3631,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 234.11,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.949Z"
+      "published": "2026-06-24T01:07:59.749Z"
     },
     {
       "source": "Price/Volume",
@@ -3661,7 +3646,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 562.2,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:25.993Z"
+      "published": "2026-06-24T01:07:59.793Z"
     },
     {
       "source": "Price/Volume",
@@ -3676,7 +3661,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 373.94,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.059Z"
+      "published": "2026-06-24T01:07:59.871Z"
     },
     {
       "source": "Price/Volume",
@@ -3691,7 +3676,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 158.18,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.149Z"
+      "published": "2026-06-24T01:07:59.920Z"
     },
     {
       "source": "Price/Volume",
@@ -3706,7 +3691,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 103.84,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.210Z"
+      "published": "2026-06-24T01:07:59.963Z"
     },
     {
       "source": "Price/Volume",
@@ -3721,7 +3706,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 14.89,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.250Z"
+      "published": "2026-06-24T01:08:00.008Z"
     },
     {
       "source": "Price/Volume",
@@ -3736,7 +3721,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 17.29,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.292Z"
+      "published": "2026-06-24T01:08:00.052Z"
     },
     {
       "source": "Price/Volume",
@@ -3751,7 +3736,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 103.25,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.332Z"
+      "published": "2026-06-24T01:08:00.094Z"
     },
     {
       "source": "Price/Volume",
@@ -3766,7 +3751,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 72.82,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.376Z"
+      "published": "2026-06-24T01:08:00.135Z"
     },
     {
       "source": "Price/Volume",
@@ -3781,7 +3766,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 346.13,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.423Z"
+      "published": "2026-06-24T01:08:00.187Z"
     },
     {
       "source": "Price/Volume",
@@ -3796,7 +3781,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 102.6,
       "quoteAsOf": "2026-06-23T20:03:21.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.466Z"
+      "published": "2026-06-24T01:08:00.234Z"
     },
     {
       "source": "Price/Volume",
@@ -3811,7 +3796,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 5.09,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.527Z"
+      "published": "2026-06-24T01:08:00.281Z"
     },
     {
       "source": "Price/Volume",
@@ -3826,7 +3811,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 5.19,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.576Z"
+      "published": "2026-06-24T01:08:00.321Z"
     },
     {
       "source": "Price/Volume",
@@ -3841,7 +3826,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 132.28,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.653Z"
+      "published": "2026-06-24T01:08:00.406Z"
     },
     {
       "source": "Price/Volume",
@@ -3856,7 +3841,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 380.15,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.717Z"
+      "published": "2026-06-24T01:08:00.482Z"
     },
     {
       "source": "Price/Volume",
@@ -3871,7 +3856,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 366.39,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.761Z"
+      "published": "2026-06-24T01:08:00.524Z"
     },
     {
       "source": "Price/Volume",
@@ -3886,7 +3871,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 107.68,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.825Z"
+      "published": "2026-06-24T01:08:00.565Z"
     },
     {
       "source": "Price/Volume",
@@ -3901,7 +3886,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 230.41,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.867Z"
+      "published": "2026-06-24T01:08:00.645Z"
     },
     {
       "source": "Price/Volume",
@@ -3916,7 +3901,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 25.15,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.911Z"
+      "published": "2026-06-24T01:08:00.734Z"
     },
     {
       "source": "Price/Volume",
@@ -3931,7 +3916,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 733.58,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:26.991Z"
+      "published": "2026-06-24T01:08:00.818Z"
     },
     {
       "source": "Price/Volume",
@@ -3946,7 +3931,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 713.65,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.061Z"
+      "published": "2026-06-24T01:08:00.881Z"
     },
     {
       "source": "Price/Volume",
@@ -3961,7 +3946,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 69.67,
       "quoteAsOf": "2026-06-23T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.102Z"
+      "published": "2026-06-24T01:08:00.923Z"
     },
     {
       "source": "Price/Volume",
@@ -3976,7 +3961,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 103.53,
       "quoteAsOf": "2026-06-23T20:03:05.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.225Z"
+      "published": "2026-06-24T01:08:01.251Z"
     },
     {
       "source": "Price/Volume",
@@ -3991,7 +3976,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 41.7,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.333Z"
+      "published": "2026-06-24T01:08:01.297Z"
     },
     {
       "source": "Price/Volume",
@@ -4006,7 +3991,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 22.81,
       "quoteAsOf": "2026-06-23T20:01:40.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.434Z"
+      "published": "2026-06-24T01:08:01.475Z"
     },
     {
       "source": "Price/Volume",
@@ -4021,7 +4006,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 14,
       "quoteAsOf": "2026-06-23T20:03:10.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.580Z"
+      "published": "2026-06-24T01:08:01.605Z"
     },
     {
       "source": "Price/Volume",
@@ -4036,7 +4021,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 2.08,
       "quoteAsOf": "2026-06-23T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.631Z"
+      "published": "2026-06-24T01:08:01.650Z"
     },
     {
       "source": "Price/Volume",
@@ -4051,7 +4036,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 47.11,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.729Z"
+      "published": "2026-06-24T01:08:01.692Z"
     },
     {
       "source": "Price/Volume",
@@ -4066,7 +4051,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 119.42,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.837Z"
+      "published": "2026-06-24T01:08:01.802Z"
     },
     {
       "source": "Price/Volume",
@@ -4081,7 +4066,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 334.14,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.921Z"
+      "published": "2026-06-24T01:08:01.910Z"
     },
     {
       "source": "Price/Volume",
@@ -4096,7 +4081,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 957.68,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:27.990Z"
+      "published": "2026-06-24T01:08:01.986Z"
     },
     {
       "source": "Price/Volume",
@@ -4111,7 +4096,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 24.72,
       "quoteAsOf": "2026-06-23T20:03:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.111Z"
+      "published": "2026-06-24T01:08:02.107Z"
     },
     {
       "source": "Price/Volume",
@@ -4126,7 +4111,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 216.71,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.289Z"
+      "published": "2026-06-24T01:08:02.245Z"
     },
     {
       "source": "Price/Volume",
@@ -4141,7 +4126,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 139.73,
       "quoteAsOf": "2026-06-23T20:03:21.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.410Z"
+      "published": "2026-06-24T01:08:02.385Z"
     },
     {
       "source": "Price/Volume",
@@ -4156,7 +4141,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 64.83,
       "quoteAsOf": "2026-06-23T20:03:38.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.453Z"
+      "published": "2026-06-24T01:08:02.490Z"
     },
     {
       "source": "Price/Volume",
@@ -4171,7 +4156,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 31.46,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.495Z"
+      "published": "2026-06-24T01:08:02.540Z"
     },
     {
       "source": "Price/Volume",
@@ -4186,7 +4171,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 9.68,
       "quoteAsOf": "2026-06-23T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.613Z"
+      "published": "2026-06-24T01:08:02.581Z"
     },
     {
       "source": "Price/Volume",
@@ -4201,7 +4186,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 95.12,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.654Z"
+      "published": "2026-06-24T01:08:02.624Z"
     },
     {
       "source": "Price/Volume",
@@ -4216,7 +4201,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 57.85,
       "quoteAsOf": "2026-06-23T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.749Z"
+      "published": "2026-06-24T01:08:02.672Z"
     },
     {
       "source": "Price/Volume",
@@ -4231,7 +4216,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 427.78,
       "quoteAsOf": "2026-06-23T20:04:48.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.824Z"
+      "published": "2026-06-24T01:08:02.720Z"
     },
     {
       "source": "Price/Volume",
@@ -4246,7 +4231,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 165.16,
       "quoteAsOf": "2026-06-23T20:04:19.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:28.959Z"
+      "published": "2026-06-24T01:08:02.782Z"
     },
     {
       "source": "Price/Volume",
@@ -4261,7 +4246,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 153.42,
       "quoteAsOf": "2026-06-23T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.067Z"
+      "published": "2026-06-24T01:08:02.826Z"
     },
     {
       "source": "Price/Volume",
@@ -4276,7 +4261,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 1051.77,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.142Z"
+      "published": "2026-06-24T01:08:02.929Z"
     },
     {
       "source": "Price/Volume",
@@ -4291,7 +4276,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 26.88,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.182Z"
+      "published": "2026-06-24T01:08:02.973Z"
     },
     {
       "source": "Price/Volume",
@@ -4306,7 +4291,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 61,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.227Z"
+      "published": "2026-06-24T01:08:03.014Z"
     },
     {
       "source": "Price/Volume",
@@ -4321,7 +4306,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 680.92,
       "quoteAsOf": "2026-06-23T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.283Z"
+      "published": "2026-06-24T01:08:03.060Z"
     },
     {
       "source": "Price/Volume",
@@ -4336,7 +4321,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 224.94,
       "quoteAsOf": "2026-06-23T20:03:58.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.326Z"
+      "published": "2026-06-24T01:08:03.101Z"
     },
     {
       "source": "Price/Volume",
@@ -4351,7 +4336,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": 135.055,
       "quoteAsOf": "2026-06-23T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T01:04:29.368Z"
+      "published": "2026-06-24T01:08:03.146Z"
     },
     {
       "source": "Yahoo Public News",
@@ -6757,23 +6742,8 @@ window.SIGNALDESK_DATA = {
       "source": "Google News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "title": "The Nvidia Vs. Intel Pair Trade (NASDAQ:NVDA) - Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAwWjNFT201blQzMFREbnFfRjMwNVZnWHpJNmx3YWFBcldTTlRTNUV1OWJObllSbTFrODg4M1Y4QzVRd0JoeXd4QnZyNjdLQzVIcmJTM2U0UXhSTjBvbFJVSDFiRmR4TklkbnN2d2Noa0hqUVBtOGxQM3VhTQ?oc=5",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 18:57:24 GMT"
-    },
-    {
-      "source": "Google News",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "Is NVIDIA Corporation (NVDA) A Good Stock To Buy Now? - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNN194MXRGalVGSDVneTBHTXlMNVlEd1ZNcnFSeFo1Uko5NmZiSGFwWUtaVDNoNDJaRGtjZmxWdGdWTFJ4M19qRm5EU3JxZkhjRTNDV2YzSjJpSGZoNVZUejdqdEdFVVJKdE5sMWdoamt3NHRGbzMxSThCUk5zNWJuc3MycWNRSzM0Q1lyWFZXUXZpR1JKWTBEVGlfYlRVc25q?oc=5",
+      "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia - The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPX0NQXzVkZ2xNOU80bWk5aWxnelB0TTdNTzZ3VVZRRFRIakxabW9lTEt4eFQtVU9pN2dybmZOc2VkcG5KcFNMa1NMVExpOGtQVFFuRnBUanRxbENCOXE0WjcxRWR1SmVnZWs5TGVBekFqQ3h5Qy1uLW5xU1hnclRhY3BMUjNJN2lFZk5EWFpVS0IxalBOM1hqV3hZeDNBNGlLSDI5eXdfcmVvYzZNanRGZ1EtUEtFUzJsZ293cnVsWk40NEQxVDdxOFpNWnBCQVZ4dHFudHpXalEtZGtFMVE2MS1GcDA?oc=5",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -6781,14 +6751,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Mon, 08 Jun 2026 07:00:00 GMT"
+      "published": "Wed, 24 Jun 2026 00:50:29 GMT"
     },
     {
       "source": "Google News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "title": "EMC Capital Management Purchases 10,100 Shares of NVIDIA Corporation $NVDA - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNTJqNWJqdmROeFVtTWZCdXMwM05iSFVCS01BbElhT0Y1YXdtb3V3dWRQWllnbll6M2lPN1RaRkdDOGdWU3E2ZGgwOV94OWJQa2xXbi1hWnVIOGJ3QTI5U2F4R0MwcWxoNzBzM0hPbno1cXJCQ2h1RjFfcW1nUzJqcXpTcXNwWVR5SS10bUdVTzFoaWQ2WXpTb3JQVXlFQUwzYVgtZGlwOFBCV1dPVndjeXdzeDJKMXhYVlZCbWFiSF9PWXZuVllOdmdCUVBwdw?oc=5",
+      "title": "Nvidia: The $1 Trillion Trade Hiding In Plain Sight (NASDAQ:NVDA) - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa3pieS0yNDl0VUUtNWVrMDk3aTdQMVVpZkkwZUdHMlpFMG9FNV9HZjRUTllXbF9Jd1B0Uk5wc0dGN0V0Sm9DeW9jZXJoS3hDOHVoX0xsZ2hLaWtsalltb0FzN2tPOXNOZ2hmQ3NLakdlWXNmU2wwRWw0OFhLeVNFU2FvV21Qb2NpcnNJb05pM2lKY1RD?oc=5",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6796,14 +6766,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 07:36:20 GMT"
+      "published": "Mon, 22 Jun 2026 18:11:25 GMT"
     },
     {
       "source": "Google News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "title": "NVDA Stock Slips As U.S. Tightens China AI Chip Loophole - timothysykes.com",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1MbkQwckU0bTJ0Mkk5Tm9YOHRXUWRsU0hmSkJEaDRMSENFbVV5YmN6bml3Q1BIelJGYThYbVJMTGJYZDU3ZXZ1cWtRaDdYckxpTGRLMWNpSEUtcFFyZmNXSmQwVGtQTHRfWVhXYndydlIwTXVyakVzeWhDcHUtUDg?oc=5",
+      "title": "NVIDIA Stock’s Next Big Move Might Not Involve A GPU - Trefis",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORjQwbVRsdDBSM3BNdWRKN0gyS0JYS2FEX2JkcUpZemtaWnBiTVpUMDhFc0hxNFpPbnh1bkZ5d19TTHBKOXZjNlNLQmFlODdRb3o5ZUNnbDBQdTFxYkdrT3MyaWhRbDI4Tk5OSGVRSHRKdF9KYS1Vb0hsYU11LWZjSE9NTy1XV3RsM3VYZUNqWW52aW9pRTJuNHBpMmEzdGxQV0NRLWRyTlNFdUhFVWt2WFNn?oc=5",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6811,14 +6781,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 13:19:00 GMT"
+      "published": "Tue, 23 Jun 2026 01:22:38 GMT"
     },
     {
       "source": "Google News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "title": "Cornerstone Planning LLC Takes Position in NVIDIA Corporation $NVDA - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNeXFoM2pNVjRiTktFOUhYNTdwNHJ3Ulk0bkw4YjZQOVdmQWltZTlwb29EQjJzUUVXcU9jNUZxdjVkUUVKUlkyck02S1lYMnZnaC10Ulp2eUpGLUk3eE5xaGMzX3hzMG0yWmM1WFVsY0JhMVZqNDlMZklEY1hmTjhNT3VPZzQ2SGxCMzZYT1gxcU9vTVhUOW41WWpWMmdfRmUxOWg2bjNvaDVmZEctWFAyLUNaYVdvUnBOMHFJT2RIUWFaX1hMOVE?oc=5",
+      "title": "Nvidia (NVDA) Stock Trades Down, Here Is Why - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbU15dWp6ZVA4cWxWMlFGcVB5bmRUWU9oSkZHM0RCQ0VoQzlhSjdJYmtJRENXdFVsb0E2MVZ6eUNKY0FHVkNkWVNybHNmV3BYQ1Q2d0FzcWdiLWdGVld2dkMyNjB2VXZ1Y2hvOE9KOS1rSDh4NnFEd2o2UWYxZllzQnZUczZUWWpDaXZmM3lFV0pBNHd1eGd2T1lhR2pHVkdMYTJORQ?oc=5",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6826,14 +6796,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 08:48:32 GMT"
+      "published": "Tue, 23 Jun 2026 20:36:18 GMT"
     },
     {
       "source": "Google News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "title": "Nvidia: 3 Reasons Why The Stock Will Continue To Trail The Market (NASDAQ:NVDA) - Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOS2hVVE1tWFFsZHk5aWdHamx4a2RjM2J1NTVfaDdRZXo3Um1YRFVaOGpkd1JucmpHSk5pMkVmcWkzMWtXRWpZdzREdmFHZHh4Y2NHWXN0Y2RXRUJXS2ctYmFoZW9WMGUxYVRnN0dKSUFLc0ptS2RqOU1kTURhbjg2QUs3NGV6TnRwRnQ4bFU3SW50bkxjWlZvZVJ6UDRlUkdjMmJiNFkzTFI?oc=5",
+      "title": "Nvidia Insider Sold Shares Worth $185,999,938, According to a Recent SEC Filing - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZWswQTN3bVR5cVduS3UxQmJnUGJobVJJaE1uWVU0UlhPVlNLcTBTdW5VRWxsRmVwYmVmZ1lHQ0VrUm5TS0RPT213UHZ2T2RwUTU0dWRENDhpWFJnOC1wUmx3M3JpVWhJRjc5cGdZelFxRU54VTM2ZXp5MmVPa2VVcTdDZk5wYmc0Si1CU1RyUGpLeUR1MTJ5a1ZRTENTOGtTaS0zeHltTmVEQQ?oc=5",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6841,44 +6811,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Thu, 18 Jun 2026 21:10:25 GMT"
-    },
-    {
-      "source": "Google News",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "NVIDIA Corporation (NVDA): One of the Elite Stocks to Buy Right Now According to AI - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOX01BbVZUc1p6T0N3d0xSZ083VXdjdG9ncWQ3bVBxQldza2hCcGYyZnlfRWRTTDdwbUlUT1FCcWZBdGZsaG1JRk00eHVqSDRwSEFTMWRqOE1vclJoZGpTV2Y2ZkRTelRBSGhpSkVoaTJScjZocEZ3S3JZUXRjMTRyTlFWNHhCeGFUZEZvX21LRDBlYk9SUlcwRnFyd01DT3M?oc=5",
-      "mentions": 2,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Mon, 01 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "source": "Google News",
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "title": "PeakShares LLC Acquires Shares of 8,808 NVIDIA Corporation $NVDA - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVUpreUpfcEMxaHFhelRqQV8zWEpzdG5VT0JxMktGVnJna2M2cWJLdGdVZS1MTEhBamJSc0UxbERvdHVSdENBZkV0VEhoYkt5ZVpGaDZvZmY0WTFHTjlXaHN1c04yeU5HVElfRHo4ek5xS0xSWGFFTEk4dDE5Zk5McDNoN2MwTDFJNi13R2ROTnF1cnc4SGxmQVRJbzQzc2xjM0ZHaVVPV3ktMzdoUHFrblR4TF9SQXN5V1ZMUmtvS04?oc=5",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 08:58:47 GMT"
+      "published": "Tue, 23 Jun 2026 21:18:57 GMT"
     },
     {
       "source": "Bing News",
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "NVIDIA Corporation (NVDA) is a Cheap Robotics Stock to buy as the Vera CPU Tops on Autonomous Functions",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2ffinance.yahoo.com%2fsectors%2ftechnology%2farticles%2fnvidia-corporation-nvda-cheap-robotics-120120051.html&c=7670756687828718645&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2ffinance.yahoo.com%2fsectors%2ftechnology%2farticles%2fnvidia-corporation-nvda-cheap-robotics-120120051.html&c=7670756687828718645&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -6893,7 +6833,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "Is NVIDIA Corporation (NVDA) A Good Stock To Buy Now?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fis-nvidia-corporation-nvda-a-good-stock-to-buy-now-3-1777118%2f&c=4923262593551592091&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fis-nvidia-corporation-nvda-a-good-stock-to-buy-now-3-1777118%2f&c=4923262593551592091&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -6908,7 +6848,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "Nvidia (NVDA) Stock Price Projection: What to Expect by 2031",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fblockonomi.com%2fnvidia-nvda-stock-price-projection-what-to-expect-by-2031%2f&c=6487389231555425272&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fblockonomi.com%2fnvidia-nvda-stock-price-projection-what-to-expect-by-2031%2f&c=6487389231555425272&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6923,7 +6863,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "Investors heavily search NVIDIA Corporation (NVDA): Here is what you need to know",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2finvestors-heavily-search-nvidia-corporation-nvda-here-is-what-you-need-to-know%2far-AA25MKR9&c=3892290101341541164&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2finvestors-heavily-search-nvidia-corporation-nvda-here-is-what-you-need-to-know%2far-AA25MKR9&c=3892290101341541164&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6938,7 +6878,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "Wall Street Bullish on Nvidia (NVDA), Is It a Good Stock to Buy?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fwall-street-bullish-on-nvidia-nvda-is-it-a-good-stock-to-buy-1780216%2f&c=13349239142555615055&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fwall-street-bullish-on-nvidia-nvda-is-it-a-good-stock-to-buy-1780216%2f&c=13349239142555615055&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.6666666666666666,
       "priceMove": 0,
@@ -6953,7 +6893,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "How NVIDIA’s (NVDA) GB300 Benchmark Win Highlights the Memory Demands Behind Agentic AI",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2ffinance.yahoo.com%2ftechnology%2fai%2farticles%2fnvidia-nvda-gb300-benchmark-win-160944497.html&c=986228235621580548&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2ffinance.yahoo.com%2ftechnology%2fai%2farticles%2fnvidia-nvda-gb300-benchmark-win-160944497.html&c=986228235621580548&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6968,7 +6908,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fwww.sharewise.com%2fus%2fnews_articles%2fSMCI_Stock_Soars_15_on_NVIDIA_AI_Tailwind_Buy_Sell_or_Hold_Zacks_20260623_2100&c=1471884031836968308&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fwww.sharewise.com%2fus%2fnews_articles%2fSMCI_Stock_Soars_15_on_NVIDIA_AI_Tailwind_Buy_Sell_or_Hold_Zacks_20260623_2100&c=1471884031836968308&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -6983,7 +6923,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "title": "NVIDIA (NASDAQ:NVDA): Is the AI Growth Story Still Accelerating?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2ac1c241c2b2e2a475bf283399&url=https%3a%2f%2fkalkinemedia.com%2fus%2fstocks%2ftechnology%2fnvidia-nasdaqnvda-is-the-ai-growth-story-still-accelerating&c=76666654025232537&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e02bbac4b0baf0f6c38dc81f851&url=https%3a%2f%2fkalkinemedia.com%2fus%2fstocks%2ftechnology%2fnvidia-nasdaqnvda-is-the-ai-growth-story-still-accelerating&c=76666654025232537&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7118,7 +7058,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "Why Tesla stock dropped on Tuesday",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fwhy-tesla-stock-dropped-on-tuesday%2far-AA26nwSo&c=14045848009967702583&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fwhy-tesla-stock-dropped-on-tuesday%2far-AA26nwSo&c=14045848009967702583&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7133,7 +7073,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "TSLA stock: Tesla doubles EU registrations in May but BYD still leads with over 26K units",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fwww.msn.com%2fen-in%2fautos%2felectric-cars%2ftsla-stock-tesla-doubles-eu-registrations-in-may-but-byd-still-leads-with-over-26k-units%2far-AA26n8Qr&c=14869514555996846144&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2fwww.msn.com%2fen-in%2fautos%2felectric-cars%2ftsla-stock-tesla-doubles-eu-registrations-in-may-but-byd-still-leads-with-over-26k-units%2far-AA26n8Qr&c=14869514555996846144&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7148,7 +7088,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "Tesla Stock Heads For Red June — Jefferies Warns It Could Become a SpaceX Proxy As Merger Talk Builds",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2ftesla-stock-heads-red-june-042730148.html&c=13872216279360005348&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2ftesla-stock-heads-red-june-042730148.html&c=13872216279360005348&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7163,7 +7103,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "Tesla (TSLA) Stock Dropped 6% Below Target Amid SpaceX Merger Speculation",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fblockonomi.com%2ftesla-tsla-stock-dropped-6-below-target-amid-spacex-merger-speculation%2f&c=12270459421877343103&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2fblockonomi.com%2ftesla-tsla-stock-dropped-6-below-target-amid-spacex-merger-speculation%2f&c=12270459421877343103&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7177,8 +7117,23 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "TSLA",
       "name": "Tesla",
+      "title": "Tesla stock is sliding over 5% today: here's why",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2finvezz.com%2fnews%2f2026%2f06%2f23%2ftesla-stock-is-sliding-over-5-today-heres-why%2f&c=16149400333572068518&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 23 Jun 2026 08:38:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "TSLA",
+      "name": "Tesla",
       "title": "Should You Buy Tesla Stock Before July 2?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fwww.aol.com%2farticles%2fbuy-tesla-stock-july-2-125200000.html&c=16906080673958675226&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2fwww.aol.com%2farticles%2fbuy-tesla-stock-july-2-125200000.html&c=16906080673958675226&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7193,7 +7148,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "Why Tesla stock is beating the broader market today",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2finvezz.com%2fnews%2f2026%2f06%2f22%2fwhy-tesla-stock-is-beating-the-broader-market-today%2f&c=12066883402971129803&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2finvezz.com%2fnews%2f2026%2f06%2f22%2fwhy-tesla-stock-is-beating-the-broader-market-today%2f&c=12066883402971129803&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7208,7 +7163,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "TSLA",
       "name": "Tesla",
       "title": "Tesla: An Optimistic Or Unrealistic Forecast May Not Sustain Shares Forever",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4917143-tesla-an-optimistic-or-unrealistic-forecast-may-not-sustain-shares-forever&c=14240227055315090082&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e0dfa11400489eeac061d1cdc39&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4917143-tesla-an-optimistic-or-unrealistic-forecast-may-not-sustain-shares-forever&c=14240227055315090082&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7217,21 +7172,6 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Tue, 23 Jun 2026 15:26:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Tesla: The Vision Is Real - The Execution Isn't",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d2f20a64047915cc06750e95dc8&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4917157-tesla-the-vision-is-real-the-execution-isnt&c=15062401747321216367&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 17:02:00 GMT"
     },
     {
       "source": "Google News",
@@ -7358,7 +7298,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "With its MEXT acquisition, Advanced Micro Devices stock could rally to higher highs",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fwith-its-mext-acquisition-advanced-micro-devices-stock-could-rally-to-higher-highs%2far-AA26mYsa&c=637445767297298427&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fwith-its-mext-acquisition-advanced-micro-devices-stock-could-rally-to-higher-highs%2far-AA26mYsa&c=637445767297298427&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.6666666666666666,
       "priceMove": 0,
@@ -7373,7 +7313,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "What's going on with AMD stock Monday?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2fnews%2fwhats-going-on-with-amd-stock-monday%2far-AA26gaeJ&c=2051188374360052536&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2fnews%2fwhats-going-on-with-amd-stock-monday%2far-AA26gaeJ&c=2051188374360052536&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7388,7 +7328,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "Is Advanced Micro Devices (AMD) One of the Top 10 Dividend Stocks to Buy According to Reddit?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fadvanced-micro-devices-amd-one-035536885.html&c=16195130898910760429&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fadvanced-micro-devices-amd-one-035536885.html&c=16195130898910760429&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7402,8 +7342,8 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
-      "title": "Over 40 Analysts Rate AMD a Buy, Here’s Why We Agree",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fover-40-analysts-rate-amd-172808678.html&c=4663360058625027577&mkt=en-us",
+      "title": "Is Advanced Micro Devices, Inc. (AMD) A Good Stock To Buy Now?",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fadvanced-micro-devices-inc-amd-165733720.html&c=17223750822291593484&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7411,14 +7351,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 10:59:00 GMT"
+      "published": "Sat, 21 Mar 2026 16:10:00 GMT"
     },
     {
       "source": "Bing News",
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "Advanced Micro Devices, Inc.",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fwww.cnn.com%2fmarkets%2fstocks%2fAMD&c=6970778494139657078&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fwww.cnn.com%2fmarkets%2fstocks%2fAMD&c=6970778494139657078&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7433,7 +7373,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "AMD Is Soaring, But Here's Why It's Time To Say Goodbye",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4913497-amd-is-soaring-but-heres-why-its-time-to-say-goodbye&c=4482926314007811511&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4913497-amd-is-soaring-but-heres-why-its-time-to-say-goodbye&c=4482926314007811511&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7447,23 +7387,8 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
-      "title": "Why Advanced Micro Devices Stock Bounced Back Today",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fwww.aol.com%2farticles%2fwhy-advanced-micro-devices-stock-161052000.html&c=6292446693872445549&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Mon, 08 Jun 2026 16:10:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
       "title": "Is It Too Late to Buy Advanced Micro Devices (AMD) Stock After Its 12-Month Gain of 320%?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d39d3184a24b8d1024e2eb4a553&url=https%3a%2f%2fwww.aol.com%2ffinance%2ftoo-buy-advanced-micro-devices-173500133.html&c=3266506583119016086&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fwww.aol.com%2ffinance%2ftoo-buy-advanced-micro-devices-173500133.html&c=3266506583119016086&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.6666666666666666,
       "priceMove": 0,
@@ -7472,6 +7397,21 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Sun, 10 May 2026 10:35:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "Why Advanced Micro Devices Stock Bounced Back Today",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e16596b441581cc5de1b62e84a7&url=https%3a%2f%2fwww.aol.com%2farticles%2fwhy-advanced-micro-devices-stock-161052000.html&c=6292446693872445549&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 08 Jun 2026 16:10:00 GMT"
     },
     {
       "source": "Google News",
@@ -7598,7 +7538,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Apple stock is trending: A key level just came into play",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fapple-stock-is-trending-a-key-level-just-came-into-play%2far-AA26nzjc&c=1162829878873360126&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fapple-stock-is-trending-a-key-level-just-came-into-play%2far-AA26nzjc&c=1162829878873360126&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7613,7 +7553,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Tim Cook warns Apple product price hikes are unavoidable due to higher chip costs. What that means for AAPL stock.",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2fwww.msn.com%2fen-us%2fnews%2ftechnology%2ftim-cook-warns-apple-product-price-hikes-are-unavoidable-due-to-higher-chip-costs-what-that-means-for-aapl-stock%2far-AA26ihvc&c=2665099794383833157&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2fwww.msn.com%2fen-us%2fnews%2ftechnology%2ftim-cook-warns-apple-product-price-hikes-are-unavoidable-due-to-higher-chip-costs-what-that-means-for-aapl-stock%2far-AA26ihvc&c=2665099794383833157&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7628,7 +7568,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Apple (AAPL) Stock After 129% Five-Year Rally Is There Still Value Here",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fapple-aapl-stock-129-five-131332639.html&c=4719899696811242665&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fapple-aapl-stock-129-five-131332639.html&c=4719899696811242665&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7643,7 +7583,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Apple (AAPL) Teams Up With Intel To Build Chips In The United States",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2ffinance.yahoo.com%2ftechnology%2fai%2farticles%2fapple-aapl-teams-intel-build-042902105.html&c=6025086025732586891&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2ffinance.yahoo.com%2ftechnology%2fai%2farticles%2fapple-aapl-teams-intel-build-042902105.html&c=6025086025732586891&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7658,7 +7598,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Can Apple Stock Reach $400 by 2028? Wall Street Says Maybe",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f15%2fcan-apple-stock-reach-400-by-2028-wall-street-says-maybe%2f&c=3163337079835812369&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f15%2fcan-apple-stock-reach-400-by-2028-wall-street-says-maybe%2f&c=3163337079835812369&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7673,7 +7613,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "How Much Would $10,000 Invested in Apple Stock 20 Years Ago Be Worth Today?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2fmoney.usnews.com%2finvesting%2farticles%2fapple-aapl-stock-investment-worth-today&c=7504061021743061216&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2fmoney.usnews.com%2finvesting%2farticles%2fapple-aapl-stock-investment-worth-today&c=7504061021743061216&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7688,7 +7628,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Apple Stock Trades Near $302 as Apple Strengthens Position",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2fwww.analyticsinsight.net%2fstocks%2fapple-stock-trades-near-302-as-apple-strengthens-position&c=11676107422106604881&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2fwww.analyticsinsight.net%2fstocks%2fapple-stock-trades-near-302-as-apple-strengthens-position&c=11676107422106604881&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7703,7 +7643,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AAPL",
       "name": "Apple",
       "title": "Apple Inc.",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d3b9f6a484bb72ccca999d4c7ed&url=https%3a%2f%2fwww.cnn.com%2fmarkets%2fstocks%2fAAPL&c=16772071721436078063&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e1fa5c342d4aee84288d338e4ed&url=https%3a%2f%2fwww.cnn.com%2fmarkets%2fstocks%2fAAPL&c=16772071721436078063&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7712,36 +7652,6 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Mon, 25 Aug 2025 21:29:00 GMT"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Palantir Technologies ( NASDAQ : PLTR ) Shares Down 2 . 3 % – What Next ?",
-      "url": "https://www.themarketsdaily.com/2026/06/23/palantir-technologies-nasdaqpltr-shares-down-2-3-whats-next.html",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T22:15:00.000Z"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "Palantir ( NASDAQ : PLTR ) Stock Price Sinks To 52 - Week Low As Software Sector Faces Rate And AI Pressure",
-      "url": "https://www.foreignpolicyjournal.com/2026/06/23/palantir-nasdaq-pltr-stock-price-sinks-to-52-week-low-as-software-sector-faces-rate-and-ai-pressure/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T21:00:00.000Z"
     },
     {
       "source": "Google News",
@@ -7868,7 +7778,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "PLTR vs. COHR: Which AI-driven tech stock should you bet on?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2fcompanies%2fpltr-vs-cohr-which-ai-driven-tech-stock-should-you-bet-on%2far-AA26nmoF&c=7551435429880634861&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2fcompanies%2fpltr-vs-cohr-which-ai-driven-tech-stock-should-you-bet-on%2far-AA26nmoF&c=7551435429880634861&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7883,7 +7793,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Palantir (PLTR) Teams Up With Zeta Global To Build AI Marketing Infrastructure",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fpalantir-pltr-teams-zeta-global-120746950.html&c=415520964551901085&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fpalantir-pltr-teams-zeta-global-120746950.html&c=415520964551901085&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7898,7 +7808,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Palantir Technologies (PLTR) Stock After Recent Pullback Is The Price Now Fair?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fpalantir-technologies-pltr-stock-recent-151159019.html&c=17687530075589622497&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fpalantir-technologies-pltr-stock-recent-151159019.html&c=17687530075589622497&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7913,7 +7823,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Palantir and Salesforce put software's rebound on trial: AlphaCheck",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2fwww.aol.com%2farticles%2fpalantir-salesforce-put-softwares-rebound-165851000.html&c=8842488898236832315&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2fwww.aol.com%2farticles%2fpalantir-salesforce-put-softwares-rebound-165851000.html&c=8842488898236832315&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7928,7 +7838,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Forget Palantir: This Enterprise Software Fortress Is a No-Brainer Buy",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f23%2fforget-palantir-this-enterprise-software-fortress-is-a-no-brainer-buy%2f&c=884966272770380795&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f23%2fforget-palantir-this-enterprise-software-fortress-is-a-no-brainer-buy%2f&c=884966272770380795&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7943,7 +7853,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Palantir: Attractive As Never Before",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916020-palantir-attractive-as-never-before&c=18295730947102972851&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916020-palantir-attractive-as-never-before&c=18295730947102972851&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -7958,7 +7868,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "Palantir Technologies (NASDAQ:PLTR) Growth Stock Story Faces A New Test",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2fkalkinemedia.com%2fus%2fstocks%2fgrowth%2fpalantir-technologies-nasdaqpltr-growth-stock-story-faces-a-new-test&c=17388395940139047099&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2fkalkinemedia.com%2fus%2fstocks%2fgrowth%2fpalantir-technologies-nasdaqpltr-growth-stock-story-faces-a-new-test&c=17388395940139047099&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7973,7 +7883,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "PLTR",
       "name": "Palantir",
       "title": "SpaceX vs Palantir stock: 1 may offer you a significantly bigger gain, according to Wall Street",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4047144178961c94a4531769bb&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fspacex-vs-palantir-stock-1-may-offer-you-a-significantly-bigger-gain-according-to-wall-street%2far-AA26kLQA&c=4890851744128162346&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e269edd4ed5af89e2d183a51d2b&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fspacex-vs-palantir-stock-1-may-offer-you-a-significantly-bigger-gain-according-to-wall-street%2far-AA26kLQA&c=4890851744128162346&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -7982,66 +7892,6 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Tue, 23 Jun 2026 02:02:00 GMT"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "What Is Going On With Super Micro Stock On Tuesday ? - Super Micro Computer ( NASDAQ : SMCI )",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60048640/what-is-going-on-with-super-micro-stock-on-tuesday",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T18:15:00.000Z"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "SPCX , MU , SMCI , NFLX , PLTR : 5 Trending Stocks Today - Micron Technology ( NASDAQ : MU )",
-      "url": "https://www.benzinga.com/markets/equities/26/06/60033576/spacex-micron-technology-super-micro-computer-netflix-and-palantir-why-these-5-stocks-are-on-investors-radars-today",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T03:00:00.000Z"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Super Micro ( SMCI ) Gets 15 . 66 % Boost from Nvidia - Powered Blueprint",
-      "url": "https://www.insidermonkey.com/blog/super-micro-smci-gets-15-66-boost-from-nvidia-powered-blueprint-1787168/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T02:45:00.000Z"
-    },
-    {
-      "source": "GDELT News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Supermicro ( SMCI ) Joins Nvidia Vera Rubin Launch With Liquid Cooled AI Racks",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/supermicro-smci-joins-nvidia-vera-001347671.html",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-06-23T00:45:00.000Z"
     },
     {
       "source": "Google News",
@@ -8167,8 +8017,38 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "SMCI",
       "name": "Super Micro Computer",
+      "title": "SMCI stock gains most in nearly 2 months on new Vera Rubin racks, analyst upgrade",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fwww.msn.com%2fen-us%2fnews%2ftechnology%2fsmci-stock-gains-most-in-nearly-2-months-on-new-vera-rubin-racks-analyst-upgrade%2far-AA26iGpz&c=2436684947109050672&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0.6666666666666666,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 20:13:24 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Super Micro Computer (SMCI) A Data Center Stock Cheaper Than the S&P",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fsuper-micro-computer-smci-data-141309932.html&c=6336651594503527395&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 07:36:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
       "title": "Super Micro Computer (SMCI) Stock After Volatile AI Server Rally Is It Still Attractive",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fsuper-micro-computer-smci-stock-161556693.html&c=9085171598438071792&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fsuper-micro-computer-smci-stock-161556693.html&c=9085171598438071792&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8183,7 +8063,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "SMCI",
       "name": "Super Micro Computer",
       "title": "Down nearly 50% from its high, is Super Micro Computer stock a bargain buy?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fdown-nearly-50-from-its-high-is-super-micro-computer-stock-a-bargain-buy%2far-AA26mvNW&c=17618940902749090894&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fdown-nearly-50-from-its-high-is-super-micro-computer-stock-a-bargain-buy%2far-AA26mvNW&c=17618940902749090894&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8197,53 +8077,8 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "SMCI",
       "name": "Super Micro Computer",
-      "title": "Super Micro Computer (SMCI) A Data Center Stock Cheaper Than the S&P",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fsuper-micro-computer-smci-data-141309932.html&c=6336651594503527395&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Mon, 22 Jun 2026 07:36:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Why Super Micro Computer Stock Is Skyrocketing Today",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fwww.aol.com%2farticles%2fwhy-super-micro-computer-stock-173417000.html&c=4770540952872070991&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 06:31:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
-      "title": "Top ETF holders of Super Micro watch the stock surge 15%",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4605742-top-etf-holders-of-super-micro-watch-the-stock-surge-15&c=10031393705557016891&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0.3333333333333333,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Mon, 22 Jun 2026 10:33:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "SMCI",
-      "name": "Super Micro Computer",
       "title": "SMCI Stock Soars 15% on NVIDIA AI Tailwind: Buy, Sell, or Hold?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fwww.sharewise.com%2fus%2fnews_articles%2fSMCI_Stock_Soars_15_on_NVIDIA_AI_Tailwind_Buy_Sell_or_Hold_Zacks_20260623_2100&c=1471884031836968308&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fwww.sharewise.com%2fus%2fnews_articles%2fSMCI_Stock_Soars_15_on_NVIDIA_AI_Tailwind_Buy_Sell_or_Hold_Zacks_20260623_2100&c=1471884031836968308&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8257,8 +8092,23 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "SMCI",
       "name": "Super Micro Computer",
-      "title": "Why Super Micro Computer Stock Skyrocketed This Week",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fwww.aol.com%2farticles%2fwhy-super-micro-computer-stock-232349137.html&c=2849893420178058421&mkt=en-us",
+      "title": "Top ETF holders of Super Micro watch the stock surge 15%",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4605742-top-etf-holders-of-super-micro-watch-the-stock-surge-15&c=10031393705557016891&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 10:33:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "title": "Why Super Micro Computer Stock Is Skyrocketing Today",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fwww.aol.com%2farticles%2fwhy-super-micro-computer-stock-173417000.html&c=4770540952872070991&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8266,14 +8116,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "Mon, 01 Jun 2026 05:55:00 GMT"
+      "published": "Tue, 23 Jun 2026 06:31:00 GMT"
     },
     {
       "source": "Bing News",
       "ticker": "SMCI",
       "name": "Super Micro Computer",
       "title": "4 stocks to watch on Monday: SMCI, MU, CBRS, SPCX",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4639794dc089283fb1b31c9ea2&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4605477-4-stocks-to-watch-on-monday-smci-mu-cbrs-spcx&c=14681809571157655391&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e2d79a94d49bf1e4e0c69a844d4&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4605477-4-stocks-to-watch-on-monday-smci-mu-cbrs-spcx&c=14681809571157655391&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8408,7 +8258,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "Dear GameStop stock fans, mark your calendars for July 7",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fdear-gamestop-stock-fans-mark-your-calendars-for-july-7%2far-AA269i9A&c=12098552829570698241&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fdear-gamestop-stock-fans-mark-your-calendars-for-july-7%2far-AA269i9A&c=12098552829570698241&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8423,7 +8273,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "Is GameStop Corp. (GME) A Good Stock To Buy Now?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fis-gamestop-corp-gme-a-good-stock-to-buy-now-1763980%2f&c=6373378840907373751&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fis-gamestop-corp-gme-a-good-stock-to-buy-now-1763980%2f&c=6373378840907373751&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8438,7 +8288,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "GameStop CEO Ryan Cohen Forgoes Performance Award To Focus On EBay Acquisition",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fgamestop-ceo-ryan-cohen-forgoes-211831453.html&c=17294310887074513500&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fgamestop-ceo-ryan-cohen-forgoes-211831453.html&c=17294310887074513500&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8453,7 +8303,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "GameStop (GME) Stock Is Trending Monday: What's Going On?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fwww.benzinga.com%2ftrading-ideas%2fmovers%2f25%2f09%2f47917820%2fgamestop-gme-stock-is-trending-monday-whats-going-on&c=8494574315588052423&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fwww.benzinga.com%2ftrading-ideas%2fmovers%2f25%2f09%2f47917820%2fgamestop-gme-stock-is-trending-monday-whats-going-on&c=8494574315588052423&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8468,7 +8318,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "GameStop (GME) Stock Sentiment Is Soaring: Here's Why",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fwww.benzinga.com%2ftrading-ideas%2fmovers%2f25%2f12%2f49186815%2fgamestop-gme-stock-sentiment-is-soaring-heres-why&c=5251880519206527448&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fwww.benzinga.com%2ftrading-ideas%2fmovers%2f25%2f12%2f49186815%2fgamestop-gme-stock-sentiment-is-soaring-heres-why&c=5251880519206527448&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8483,7 +8333,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "A Look At GameStop (GME) Valuation As Shares Trade Around $22 After Choppy Returns",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2flook-gamestop-gme-valuation-shares-211359799.html&c=9695710110022359969&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2flook-gamestop-gme-valuation-shares-211359799.html&c=9695710110022359969&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8498,7 +8348,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "GameStop: Buy or Sell GME Stock Ahead of Its Earnings?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fwww.forbes.com%2fsites%2fgreatspeculations%2f2025%2f09%2f05%2fgamestop-buy-or-sell-gme-stock-ahead-of-its-earnings%2f&c=12491358575475099473&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fwww.forbes.com%2fsites%2fgreatspeculations%2f2025%2f09%2f05%2fgamestop-buy-or-sell-gme-stock-ahead-of-its-earnings%2f&c=12491358575475099473&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8513,7 +8363,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "GME",
       "name": "GameStop",
       "title": "GameStop investor sues to halt shareholder vote on Ryan Cohen's pay package",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4a10554d579b319a5e87cec7b1&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4604164-gamestop-investor-sues-to-halt-shareholder-vote-on-ryan-cohens-pay-package&c=3965115591753006986&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e34d3b6407790d63218173bcdd9&url=https%3a%2f%2fseekingalpha.com%2fnews%2f4604164-gamestop-investor-sues-to-halt-shareholder-vote-on-ryan-cohens-pay-package&c=3965115591753006986&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8648,7 +8498,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "title": "Amazon is navigating a $200B spending cycle — AMZN stock is still a buy now",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2famazon-is-navigating-a-200b-spending-cycle-amzn-stock-is-still-a-buy-now%2far-AA26ndR0&c=13949309636395057878&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2famazon-is-navigating-a-200b-spending-cycle-amzn-stock-is-still-a-buy-now%2far-AA26ndR0&c=13693693408368486952&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8663,7 +8513,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "title": "Where Will Amazon Stock Be In 2 Years?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f22%2fwhere-will-amazon-stock-be-in-2-years%2f&c=9915549486720222571&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f22%2fwhere-will-amazon-stock-be-in-2-years%2f&c=9915549486720222571&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8678,7 +8528,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "title": "Why Amazon (AMZN) is a top growth stock for the long term",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fwhy-amazon-amzn-is-a-top-growth-stock-for-the-long-term%2far-AA26myPm&c=14151105794347438651&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fwhy-amazon-amzn-is-a-top-growth-stock-for-the-long-term%2far-AA26myPm&c=14151105794347438651&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8692,23 +8542,8 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "AMZN",
       "name": "Amazon",
-      "title": "Alphabet Sinks 6%, Amazon Slides 4% Amid AI Capex Anxiety Across the Hyperscalers",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f22%2falphabet-sinks-6-amazon-slides-4-amid-ai-capex-anxiety-across-the-hyperscalers%2f&c=746939555846788599&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Mon, 22 Jun 2026 09:00:00 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "AMZN",
-      "name": "Amazon",
       "title": "Amazon: The One That Never Disappoints, I'm Adding More",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916942-amazon-the-one-that-never-disappoints-im-adding-more&c=5672990639727093141&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916942-amazon-the-one-that-never-disappoints-im-adding-more&c=5672990639727093141&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8722,8 +8557,23 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "AMZN",
       "name": "Amazon",
+      "title": "Alphabet Sinks 6%, Amazon Slides 4% Amid AI Capex Anxiety Across the Hyperscalers",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f22%2falphabet-sinks-6-amazon-slides-4-amid-ai-capex-anxiety-across-the-hyperscalers%2f&c=746939555846788599&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 09:00:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "AMZN",
+      "name": "Amazon",
       "title": "Amazon (AMZN) Stock After Recent AI And Cloud Investment Push Is There Still Value",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2famazon-amzn-stock-recent-ai-001620803.html&c=555535369781998903&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2famazon-amzn-stock-recent-ai-001620803.html&c=555535369781998903&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8738,7 +8588,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "title": "Amazon (AMZN) Stock Gets Fair Value Bump As Analysts Weigh AWS And AI Spending",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2famazon-amzn-stock-gets-fair-171045199.html&c=12074833099256556214&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2famazon-amzn-stock-gets-fair-171045199.html&c=12074833099256556214&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8753,7 +8603,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "AMZN",
       "name": "Amazon",
       "title": "Analysts Remain Bullish on Amazon (AMZN) As It Reveals New Advertising Formats",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d4d303b458ca7eb3f637a129e62&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fanalysts-remain-bullish-on-amazon-amzn-as-it-reveals-new-advertising-formats-1779408%2f&c=16801232049732671459&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e3b54734a279ed8813b9e012dc3&url=https%3a%2f%2fwww.insidermonkey.com%2fblog%2fanalysts-remain-bullish-on-amazon-amzn-as-it-reveals-new-advertising-formats-1779408%2f&c=16801232049732671459&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8777,6 +8627,21 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Tue, 23 Jun 2026 16:55:53 GMT"
+    },
+    {
+      "source": "Google News",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "title": "META Stock Alert: What to Know as Meta Platforms Doubles Down on Wearables With $299 Glasses - Barchart.com",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdE1oZ2w2VEtyckZRSFBzaG5OalVZNDZwRkdtOTF5WHM4ck5FWmNJRVlvRmg3dkdQVU9oRVJKa2FzdGhadWN5TGk4UFhoclRGVUpOdzVtYWpDTHNoOWZWWmhtOF9ESHdpS3M3LXlfZGhhV01hczhaaHVpSDBvRVdqdzhFVi1nZWNwSWY0TURGU1p2ZWxOZTNEMkhzWXdLSXdObkp1T3d1c3hnVnR4ak1OX0ZIeWI4cE9pc2dwM2p0ZWR2bUlFaTUtWU5mbG1RMWc?oc=5",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 23 Jun 2026 19:15:25 GMT"
     },
     {
       "source": "Google News",
@@ -8822,21 +8687,6 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Thu, 18 Jun 2026 16:20:57 GMT"
-    },
-    {
-      "source": "Google News",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "Nothing Seems to Be Going Right for Meta Platforms. How to Play META Stock Here. - Barchart.com",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZkNvSWlQbGxrRlNKVGx3ZTBXcVl3aWlNVzREVklFSEVxZm80TXozS2UwcjhJRGNqNk93TEpGTEVzbDRiRGR2MUtBSFFPQkQ4clFiMk1NQ3pBT2JqajBWRGtNVk5sRkQ2aG11dy1CNTAxNi1lR09ZWE1vNnU0ZkcwZzdwNl9neFpEVVlTNXFyYlA5UHZyMVVxVnh4QVNyNkZGMk5OdWZHWGNyWUZEVHBfMkhhYW5XdnBreWZ1Nlg5WQ?oc=5",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Sun, 21 Jun 2026 17:30:02 GMT"
     },
     {
       "source": "Google News",
@@ -8888,7 +8738,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Meta stock alert: What to know as Meta Platforms doubles down on wearables with $299 glasses",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fwww.msn.com%2fen-us%2ftechnology%2ftech-companies%2fmeta-stock-alert-what-to-know-as-meta-platforms-doubles-down-on-wearables-with-299-glasses%2far-AA26n8xa&c=15854752906206713910&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fwww.msn.com%2fen-us%2ftechnology%2ftech-companies%2fmeta-stock-alert-what-to-know-as-meta-platforms-doubles-down-on-wearables-with-299-glasses%2far-AA26n8xa&c=15854752906206713910&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8903,7 +8753,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Nothing Seems to Be Going Right for Meta Platforms. How to Play META Stock Here.",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fnothing-seems-going-meta-platforms-173002053.html&c=16451455433618153988&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fnothing-seems-going-meta-platforms-173002053.html&c=16451455433618153988&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8918,7 +8768,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Meta Platforms Looks Unbelievably Cheap After the Tech Sell-Off. Is It Time to Load Up on Shares?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fwww.aol.com%2farticles%2fmeta-platforms-looks-unbelievably-cheap-170500000.html&c=13537430403127912504&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fwww.aol.com%2farticles%2fmeta-platforms-looks-unbelievably-cheap-170500000.html&c=13537430403127912504&mkt=en-us",
       "mentions": 2,
       "sentiment": -0.3333333333333333,
       "priceMove": 0,
@@ -8933,7 +8783,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "As Meta Stock Pulls Back, It’s Valuation Becomes Harder to Ignore",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmeta-stock-pulls-back-valuation-183237685.html%3ffr%3dsycsrp_catchall&c=11126830489971593583&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmeta-stock-pulls-back-valuation-183237685.html%3ffr%3dsycsrp_catchall&c=11126830489971593583&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8948,7 +8798,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Meta Platforms: Monetizing AI Faster Than What The Market Gives Credit",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916916-meta-monetizing-ai-faster-than-what-the-market-gives-credit&c=4929520787213704151&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916916-meta-monetizing-ai-faster-than-what-the-market-gives-credit&c=4929520787213704151&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8963,7 +8813,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Meta expands $299 smart glasses lineup as it challenges Apple’s AR ambitions — stock gains nearly 1.5%",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2fgeneral%2fmeta-expands-299-smart-glasses-lineup-as-it-challenges-apple-s-ar-ambitions-stock-gains-nearly-1-5%2far-AA26n6LL&c=8706493449859497899&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2fgeneral%2fmeta-expands-299-smart-glasses-lineup-as-it-challenges-apple-s-ar-ambitions-stock-gains-nearly-1-5%2far-AA26n6LL&c=8706493449859497899&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -8978,7 +8828,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Meta Just Crushed Earnings. So Why Does Wall Street Keep Selling the Stock?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fmeta-just-crushed-earnings-so-why-does-wall-street-keep-selling-the-stock%2far-AA256sSV&c=959533395882648713&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftopstocks%2fmeta-just-crushed-earnings-so-why-does-wall-street-keep-selling-the-stock%2far-AA256sSV&c=959533395882648713&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8993,7 +8843,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "META",
       "name": "Meta Platforms",
       "title": "Veteran Tech Investor: Meta Is ‘One of the Best Advertising Machines Ever Built’ With 46% Upside",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d51300c419ebbe8a7ab5b3c85ab&url=https%3a%2f%2fwww.aol.com%2ffinance%2fveteran-tech-investor-meta-one-194448492.html&c=13797585553622416640&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e43b2454feb89f3ae88fbae361f&url=https%3a%2f%2fwww.aol.com%2ffinance%2fveteran-tech-investor-meta-one-194448492.html&c=13797585553622416640&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9128,7 +8978,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "title": "Down 30% from its all-time high: Why you'll regret not loading up on Microsoft stock right now",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftechnology%2fdown-30-from-its-all-time-high-why-you-ll-regret-not-loading-up-on-microsoft-stock-right-now%2far-AA26k6X1&c=9503207585631201131&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftechnology%2fdown-30-from-its-all-time-high-why-you-ll-regret-not-loading-up-on-microsoft-stock-right-now%2far-AA26k6X1&c=9503207585631201131&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9143,7 +8993,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "title": "Microsoft Hasn't Been This Cheap Since 2018 - And History Says This Comes Next",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916943-microsoft-hasnt-been-this-cheap-since-2018-history-says-this-comes-next&c=6564670021614183846&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916943-microsoft-hasnt-been-this-cheap-since-2018-history-says-this-comes-next&c=6564670021614183846&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9157,23 +9007,8 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "MSFT",
       "name": "Microsoft",
-      "title": "MSFT stock enters bear market after 21% drop from peak: Retail cautious but analysts stay overwhelmingly bullish",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2ftop-stocks%2fmsft-stock-enters-bear-market-after-21-drop-from-peak-retail-cautious-but-analysts-stay-overwhelmingly-bullish%2far-AA26jMoz&c=8941221267014571774&mkt=en-us",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "Tue, 23 Jun 2026 00:40:01 GMT"
-    },
-    {
-      "source": "Bing News",
-      "ticker": "MSFT",
-      "name": "Microsoft",
       "title": "Microsoft Won't Be This Cheap For Long",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916635-microsoft-would-not-be-this-cheap-for-long&c=1873708289766322230&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2fseekingalpha.com%2farticle%2f4916635-microsoft-would-not-be-this-cheap-for-long&c=1873708289766322230&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9187,8 +9022,23 @@ window.SIGNALDESK_DATA = {
       "source": "Bing News",
       "ticker": "MSFT",
       "name": "Microsoft",
+      "title": "MSFT stock enters bear market after 21% drop from peak: Retail cautious but analysts stay overwhelmingly bullish",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2fwww.msn.com%2fen-in%2fmoney%2ftop-stocks%2fmsft-stock-enters-bear-market-after-21-drop-from-peak-retail-cautious-but-analysts-stay-overwhelmingly-bullish%2far-AA26jMoz&c=8941221267014571774&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 23 Jun 2026 00:40:01 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "MSFT",
+      "name": "Microsoft",
       "title": "Microsoft (MSFT) Faces Shareholder Lawsuit; TD Cowen Maintains Buy Rating",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmicrosoft-msft-faces-shareholder-lawsuit-141221930.html&c=1678233062904557658&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmicrosoft-msft-faces-shareholder-lawsuit-141221930.html&c=1678233062904557658&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9203,7 +9053,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "title": "Microsoft's Boring Stock Story May Be Its Biggest Strength",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmicrosofts-boring-stock-story-may-144500223.html&c=6547836815441533535&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fmicrosofts-boring-stock-story-may-144500223.html&c=6547836815441533535&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9218,7 +9068,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "title": "Microsoft Stock Price Prediction: A New Record High on the Horizon?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f10%2fmicrosoft-stock-price-prediction-a-new-record-high-on-the-horizon%2f&c=14745810699507151237&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2f247wallst.com%2finvesting%2f2026%2f06%2f10%2fmicrosoft-stock-price-prediction-a-new-record-high-on-the-horizon%2f&c=14745810699507151237&mkt=en-us",
       "mentions": 2,
       "sentiment": 0.3333333333333333,
       "priceMove": 0,
@@ -9233,7 +9083,7 @@ window.SIGNALDESK_DATA = {
       "ticker": "MSFT",
       "name": "Microsoft",
       "title": "What’s Happening With Microsoft Stock?",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2d541b904bbba8fd8dfbe48d5c28&url=https%3a%2f%2fwww.forbes.com%2fsites%2fgreatspeculations%2f2026%2f06%2f01%2fwhats-happening-with-microsoft-stock%2f&c=15673536758461587478&mkt=en-us",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e49bfa84248829fe1e239b42439&url=https%3a%2f%2fwww.forbes.com%2fsites%2fgreatspeculations%2f2026%2f06%2f01%2fwhats-happening-with-microsoft-stock%2f&c=15673536758461587478&mkt=en-us",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9242,6 +9092,21 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Mon, 01 Jun 2026 07:58:00 GMT"
+    },
+    {
+      "source": "GDELT News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Algorand Price Eyes $0 . 10 as Trump Quantum Orders Spark ALGO Coin Bounce",
+      "url": "https://www.banklesstimes.com/articles/2026/06/23/algorand-price-eyes-0-10-as-trump-quantum-orders-spark-algo-coin-bounce/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-06-23T22:15:00.000Z"
     },
     {
       "source": "Google News",
@@ -9332,6 +9197,141 @@ window.SIGNALDESK_DATA = {
       "quoteAsOf": null,
       "quoteSource": null,
       "published": "Sun, 21 Jun 2026 07:22:21 GMT"
+    },
+    {
+      "source": "Google News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Cantor Fitzgerald reiterates Coinbase stock rating on tokenization - Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOSXhqUUxXREN5UjZhckNES3M1ZnZXSE9haWNDcGZsVTBCNk9GelFyQ1pIb0VxTWptcWdySjNvOUVELWZJelkyNFNGdUJINWhBVTdsSDhRcnpYVUZEU1hJYUowZkFxLTVuMk1FX2xzRldWNDFYWXQ4aDY3WGc5X1hlMDlwVnNyUHk1NllzaFZnUUZaSDljX1NVZUdKVFQ4ZWFoRGcxR1FQUzNWUDNLODB2ZUJWQkkyWGRuV2pjN1VhVkJ2SFZY?oc=5",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 12:56:57 GMT"
+    },
+    {
+      "source": "Google News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase Just Unveiled Its Biggest Product Push Ever. The Stock Barely Moved. - TIKR.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYUNKbFdaYnlVakQ5enZIV0xFZkNwT1JoZ05oclNlQngybXFDWUp0NXRQOXZjSmFuSWNXcG1QaHplR1VTajB1bG1EemFTRVdaa0FiZDJGUlRjSmRSdEY2YXJ4ZjBDcl9xN3dBaVI3NkJ2cjNJNWs0WHMxRnVOeGNMaTFYTjRRYkpMOTZvajRkb1RzanA4N1lNemlCQ2ZpXzA1bkNV?oc=5",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Sat, 20 Jun 2026 12:16:31 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "COIN stock alert: What to know as Coinbase launches pre-IPO perpetual futures",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftop-stocks%2fcoin-stock-alert-what-to-know-as-coinbase-launches-pre-ipo-perpetual-futures%2far-AA26i9RG&c=7566593424123621684&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 22 Jun 2026 11:31:12 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase is offering pre-IPO perpetual futures on OpenAI and Anthropic. That’s better news for COIN stock than it is for you.",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fwww.msn.com%2fen-us%2fmoney%2ftechnology%2fcoinbase-is-offering-pre-ipo-perpetual-futures-on-openai-and-anthropic-that-s-better-news-for-coin-stock-than-it-is-for-you%2far-AA26mCi3&c=18081221543426435303&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 23 Jun 2026 07:26:45 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase (COIN) Stock Valuation After AI Agents Launch And New Trust Charter Approval",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2ffinance.yahoo.com%2fmarkets%2fstocks%2farticles%2fcoinbase-coin-stock-valuation-ai-190852880.html&c=843246490067391532&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 15 Jun 2026 12:50:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase Stock At 40% Safety?",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fwww.forbes.com%2fsites%2fgreatspeculations%2f2025%2f06%2f24%2fcoinbase-stock-at-40-safety%2f&c=13609014332510076657&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 24 Jun 2025 02:54:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Prediction: Coinbase Will Trade at This Price in 2027",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fwww.aol.com%2ffinance%2fprediction-coinbase-trade-price-2027-151501209.html&c=16665118042822973730&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Mon, 15 Jun 2026 17:29:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase (COIN) Stock: What’s Next After Its 24% Crypto-Driven Rally?",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fmoneymorning.com%2f2025%2f05%2f14%2fcoinbase-coin-stock-whats-next-after-its-24-crypto-driven-rally&c=7033881175720605995&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Tue, 13 May 2025 17:01:00 GMT"
+    },
+    {
+      "source": "Bing News",
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "title": "Coinbase's stock is up 44% this month as Wall Street projects amazing profit growth",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a3b2e5271c94987854df12cf3cc39f9&url=https%3a%2f%2fwww.morningstar.com%2fnews%2fmarketwatch%2f20250627249%2fcoinbases-stock-is-up-44-this-month-as-wall-street-projects-amazing-profit-growth&c=13813969547785099551&mkt=en-us",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "Fri, 27 Jun 2025 04:54:00 GMT"
     }
   ]
 };
