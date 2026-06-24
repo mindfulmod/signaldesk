@@ -395,6 +395,25 @@ function parseGdeltDate(value) {
 }
 
 async function fetchMarket(ticker) {
+  const [yahoo, stooq] = await Promise.allSettled([fetchYahooMarket(ticker), fetchStooqMarket(ticker)]);
+  const yahooMarket = yahoo.status === "fulfilled" ? yahoo.value : null;
+  const stooqMarket = stooq.status === "fulfilled" ? stooq.value : null;
+
+  if (yahooMarket && stooqMarket) {
+    const gap = Math.abs(yahooMarket.lastPrice - stooqMarket.lastPrice) / Math.max(0.01, stooqMarket.lastPrice);
+    if (gap > 0.25) {
+      return {
+        ...stooqMarket,
+        quoteSource: `Stooq public daily quote; Yahoo mismatch ${yahooMarket.lastPrice.toFixed(2)}`,
+      };
+    }
+    return yahooMarket;
+  }
+
+  return yahooMarket || stooqMarket;
+}
+
+async function fetchYahooMarket(ticker) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=5d&interval=1d`;
   const json = await fetchJson(url);
   const result = json.chart?.result?.[0];
@@ -415,6 +434,33 @@ async function fetchMarket(ticker) {
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
     quoteAsOf,
     quoteSource: "Yahoo public chart",
+  };
+}
+
+async function fetchStooqMarket(ticker) {
+  const symbol = `${ticker.toLowerCase()}.us`;
+  const url = `https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&i=d`;
+  const csv = await fetchText(url);
+  const rows = csv
+    .trim()
+    .split(/\r?\n/)
+    .slice(1)
+    .map((line) => line.split(","))
+    .filter((row) => row.length >= 6 && row[4] !== "N/D");
+  if (rows.length < 2) return null;
+  const lastRow = rows.at(-1);
+  const prevRow = rows.at(-2);
+  const last = Number(lastRow[4]);
+  const prev = Number(prevRow[4]);
+  const volumes = rows.slice(-6).map((row) => Number(row[5])).filter(Number.isFinite);
+  if (!Number.isFinite(last) || !Number.isFinite(prev) || !volumes.length) return null;
+  const avgVolume = volumes.slice(0, -1).reduce((sum, value) => sum + value, 0) / Math.max(1, volumes.length - 1);
+  return {
+    lastPrice: last,
+    priceMove: ((last - prev) / prev) * 100,
+    relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    quoteAsOf: `${lastRow[0]}T20:00:00.000Z`,
+    quoteSource: "Stooq public daily quote",
   };
 }
 
