@@ -150,7 +150,8 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     return aggregateSnapshotSignals(snapshots, previousSnapshots);
   }
   if (!snapshot?.signals?.length) return [];
-  return snapshot.signals.map((item) => ({
+
+  const items = snapshot.signals.map((item) => ({
     ticker: item.ticker,
     name: item.name,
     mentions: Number(item.mentions) || 0,
@@ -162,10 +163,25 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     priceMove: Number(item.priceMove) || 0,
     relativeVolume: Number(item.relativeVolume) || 1,
     optionsActivity: Number(item.optionsActivity) || 0,
-    signalScore: Number(item.signalScore) || 0,
     sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
     latest: item.latest || [],
   }));
+
+  // Re-compute signalScore peer-relatively so rankings spread across a useful range
+  // even when some sources (WSB, Reddit) are blocked and momentum has no prior snapshot.
+  const maxMentions = Math.max(1, ...items.map((item) => item.mentions));
+  const rawScores = items.map((item) =>
+    30 * Math.sqrt(item.mentions / maxMentions) +
+    22 * clamp(0, 1, item.momentum / 80 + 0.25) +
+    18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
+    12 * clamp(0, 1, item.priceMove / 6) +
+    10 * clamp(0, 1, item.relativeVolume / 2.5) +
+    8 * (SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length)
+  );
+  // Scale so the top scorer reaches 85, preserving relative differences.
+  const maxRaw = Math.max(1, ...rawScores);
+  const scale = 85 / maxRaw;
+  return items.map((item, i) => ({ ...item, signalScore: clamp(0, 100, rawScores[i] * scale) }));
 }
 
 function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
