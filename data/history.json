@@ -1,13 +1,254 @@
 {
   "dataMode": "real-public-no-key-history",
-  "updatedAt": "2026-06-24T02:00:12.570Z",
+  "updatedAt": "2026-06-24T02:07:58.537Z",
   "retentionDays": 120,
   "sourceNote": "Daily real public no-key snapshots retained for range aggregation. Longer ranges become more complete as scheduled refreshes accumulate.",
   "snapshots": [
     {
       "date": "2026-06-24",
-      "generatedAt": "2026-06-24T02:00:12.570Z",
+      "generatedAt": "2026-06-24T02:07:58.537Z",
       "signals": [
+        {
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "mentions": 23,
+          "momentum": 35,
+          "sentiment": -0.06086956521739131,
+          "priceMove": 0.1273969714441814,
+          "lastPrice": 156.11,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3651340261727207,
+          "optionsActivity": 0,
+          "signalScore": 50.09292720550162,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 6,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "GDELT News",
+              "title": "Better Artificial Intelligence ( AI ) Stock to Buy : SpaceX vs . Nvidia fool.com",
+              "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?source=iedfolrf0000001",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "GDELT News",
+              "title": "Does a Lower Stock Price and New Contracts Make SpaceX Stock a Buy ?  fool.com",
+              "url": "https://www.fool.com/investing/2026/06/23/does-a-lower-stock-price-and-new-contracts-make-spacex-stock-a-buy/?source=iedfolrf0000001",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "GDELT News",
+              "title": "SpaceX shares eke out a gain to snap three day losing streak economictimes.indiatimes.com",
+              "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/spacex-shares-eke-out-a-gain-to-snap-three-day-losing-streak/articleshow/131952468.cms",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SPCX $156.11, price +1.0%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/SPCX",
+              "published": "2026-06-24T02:07:08.139Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "SPCX FINRA short volume 66% of reported volume (42,354,258.236 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "MSCI",
+          "name": "MSCI Inc.",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0.02130577306332475,
+          "lastPrice": 581.51,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3501856032281716,
+          "optionsActivity": 0,
+          "signalScore": 48.38055310863135,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 2,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "GDELT News",
+              "title": "MSCI ( MSCI ) Stock Gets Fair Value Bump As AI Debate Shapes Analyst Views finance.yahoo.com",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/msci-msci-stock-gets-fair-011138981.html",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "MSCI $581.51, price +0.1%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/MSCI",
+              "published": "2026-06-24T02:07:08.323Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "MSCI FINRA short volume 55% of reported volume (159,024.677 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "COST",
+          "name": "Costco",
+          "mentions": 19,
+          "momentum": 26.666666666666668,
+          "sentiment": 0,
+          "priceMove": 0.1400784940294151,
+          "lastPrice": 957.68,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3168402223888118,
+          "optionsActivity": 0,
+          "signalScore": 47.295572507147355,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 4,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "GDELT News",
+              "title": "Royal Mail increases annual earnings despite staff cost pressures hampshirechronicle.co.uk",
+              "url": "https://www.hampshirechronicle.co.uk/news/national/26218660.royal-mail-increases-annual-earnings-despite-staff-cost-pressures/",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "GDELT News",
+              "title": "Royal Mail increases annual earnings despite staff cost pressures surreycomet.co.uk",
+              "url": "https://www.surreycomet.co.uk/news/national/26218660.royal-mail-increases-annual-earnings-despite-staff-cost-pressures/",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "COST $957.68, price +0.7%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/COST",
+              "published": "2026-06-24T02:07:08.231Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "COST FINRA short volume 54% of reported volume (418,760.382 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "AMC",
+          "name": "AMC Entertainment",
+          "mentions": 40,
+          "momentum": 0,
+          "sentiment": -0.13499999999999998,
+          "priceMove": -18.478260674263293,
+          "lastPrice": 2.08,
+          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.7210914880739943,
+          "optionsActivity": 0,
+          "signalScore": 44.125150136287154,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 30
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "AMC $2.08, price -24.6%, volume 1.9x",
+              "url": "https://finance.yahoo.com/quote/AMC",
+              "published": "2026-06-24T02:07:08.692Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "AMC FINRA short volume 25% of reported volume (14,380,874.349 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "T",
+          "name": "AT&T",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": 0.09375,
+          "priceMove": 1.204750463136171,
+          "lastPrice": 22.81,
+          "quoteAsOf": "2026-06-23T20:01:40.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1538877004658217,
+          "optionsActivity": 0,
+          "signalScore": 42.37437393493647,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 6
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "T $22.81, price +3.2%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/T",
+              "published": "2026-06-24T02:07:12.891Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "T FINRA short volume 31% of reported volume (9,952,764.138 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
         {
           "ticker": "NET",
           "name": "Cloudflare",
@@ -39,11 +280,58 @@
               "source": "Price/Volume",
               "title": "NET $224.94, price +3.0%, volume 0.7x",
               "url": "https://finance.yahoo.com/quote/NET",
-              "published": "2026-06-24T01:59:27.054Z"
+              "published": "2026-06-24T02:07:11.245Z"
             },
             {
               "source": "FINRA Short Volume",
               "title": "NET FINRA short volume 49% of reported volume (571,178.114 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA Corporation",
+          "mentions": 20,
+          "momentum": 11.11111111111111,
+          "sentiment": -0.063,
+          "priceMove": -1.444283705689727,
+          "lastPrice": 200.04,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.188146794256927,
+          "optionsActivity": 0,
+          "signalScore": 41.44296335511352,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 2,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 7
+          },
+          "latest": [
+            {
+              "source": "GDELT News",
+              "title": "Better Artificial Intelligence ( AI ) Stock to Buy : SpaceX vs . Nvidia fool.com",
+              "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?source=iedfolrf0000001",
+              "published": "2026-06-24T01:45:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "NVDA $200.04, price -4.1%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/NVDA",
+              "published": "2026-06-24T02:07:08.415Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "NVDA FINRA short volume 35% of reported volume (16,480,701.544 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -80,11 +368,93 @@
               "source": "Price/Volume",
               "title": "MRNA $61.00, price +2.8%, volume 0.5x",
               "url": "https://finance.yahoo.com/quote/MRNA",
-              "published": "2026-06-24T01:59:26.430Z"
+              "published": "2026-06-24T02:07:10.874Z"
             },
             {
               "source": "FINRA Short Volume",
               "title": "MRNA FINRA short volume 67% of reported volume (1,808,467.5 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SOFI",
+          "name": "SoFi",
+          "mentions": 15,
+          "momentum": 0,
+          "sentiment": 0.06666666666666667,
+          "priceMove": 0.2962956948019161,
+          "lastPrice": 17.29,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.240051859518262,
+          "optionsActivity": 0,
+          "signalScore": 40.31767367449585,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "SOFI $17.29, price +1.1%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/SOFI",
+              "published": "2026-06-24T02:07:12.666Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "SOFI FINRA short volume 36% of reported volume (21,752,486.818 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "WMT",
+          "name": "Walmart",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": 0.08928571428571429,
+          "priceMove": 0.6827102653398053,
+          "lastPrice": 119.42,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1529645690584602,
+          "optionsActivity": 0,
+          "signalScore": 40.22281080553287,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 9,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "WMT $119.42, price +1.9%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/WMT",
+              "published": "2026-06-24T02:07:13.365Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "WMT FINRA short volume 28% of reported volume (2,177,119.981 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -121,11 +491,52 @@
               "source": "Price/Volume",
               "title": "CRM $153.42, price +2.2%, volume 0.7x",
               "url": "https://finance.yahoo.com/quote/CRM",
-              "published": "2026-06-24T01:59:24.086Z"
+              "published": "2026-06-24T02:07:09.457Z"
             },
             {
               "source": "FINRA Short Volume",
               "title": "CRM FINRA short volume 35% of reported volume (1,811,326.476 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SNOW",
+          "name": "Snowflake",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": 0.07142857142857142,
+          "priceMove": 0.4816759942561616,
+          "lastPrice": 230.41,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1921163137308548,
+          "optionsActivity": 0,
+          "signalScore": 39.95658650336988,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "SNOW $230.41, price +1.7%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/SNOW",
+              "published": "2026-06-24T02:07:12.574Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "SNOW FINRA short volume 39% of reported volume (839,096.634 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -162,7 +573,7 @@
               "source": "Price/Volume",
               "title": "DELL $427.78, price +2.2%, volume 0.6x",
               "url": "https://finance.yahoo.com/quote/DELL",
-              "published": "2026-06-24T01:59:24.555Z"
+              "published": "2026-06-24T02:07:09.734Z"
             },
             {
               "source": "FINRA Short Volume",
@@ -173,18 +584,264 @@
           ]
         },
         {
-          "ticker": "AMC",
-          "name": "AMC Entertainment",
-          "mentions": 40,
-          "momentum": -53.48837209302325,
-          "sentiment": -0.13499999999999998,
-          "priceMove": -18.478260674263293,
-          "lastPrice": 2.08,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "ticker": "NIO",
+          "name": "NIO",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.1980188502691715,
+          "lastPrice": 5.09,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.7210914880739943,
+          "relativeVolume": 1.400797997893271,
           "optionsActivity": 0,
-          "signalScore": 39.125150136287154,
+          "signalScore": 39.72300206565558,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "NIO $5.09, price +0.8%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/NIO",
+              "published": "2026-06-24T02:07:11.428Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "NIO FINRA short volume 53% of reported volume (8,869,043.555 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "DIS",
+          "name": "Disney",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": 0.05357142857142857,
+          "priceMove": 0.225894809439177,
+          "lastPrice": 103.53,
+          "quoteAsOf": "2026-06-23T20:03:05.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2283583101161628,
+          "optionsActivity": 0,
+          "signalScore": 39.57039327990669,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "DIS $103.53, price +1.1%, volume 0.5x",
+              "url": "https://finance.yahoo.com/quote/DIS",
+              "published": "2026-06-24T02:07:09.846Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "DIS FINRA short volume 42% of reported volume (1,815,055.555 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "mentions": 13,
+          "momentum": 0,
+          "sentiment": 0.07692307692307693,
+          "priceMove": 0.5528312674408995,
+          "lastPrice": 373.94,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1461467283854292,
+          "optionsActivity": 0,
+          "signalScore": 39.35392922567794,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 9,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "MSFT $373.94, price +1.8%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/MSFT",
+              "published": "2026-06-24T02:07:10.969Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "MSFT FINRA short volume 26% of reported volume (3,945,379.585 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "INTC",
+          "name": "Intel",
+          "mentions": 22,
+          "momentum": 0,
+          "sentiment": -0.07363636363636362,
+          "priceMove": -2.5136428339124035,
+          "lastPrice": 132.28,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2586712267352775,
+          "optionsActivity": 0,
+          "signalScore": 39.01988739634035,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 9
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "INTC $132.28, price -6.1%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/INTC",
+              "published": "2026-06-24T02:07:10.415Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "INTC FINRA short volume 53% of reported volume (30,077,155.039 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "F",
+          "name": "Ford",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.1948966324481645,
+          "lastPrice": 14,
+          "quoteAsOf": "2026-06-23T20:03:10.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3064294668285166,
+          "optionsActivity": 0,
+          "signalScore": 38.98723765328412,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "F $14.00, price -0.8%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/F",
+              "published": "2026-06-24T02:07:10.048Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "F FINRA short volume 43% of reported volume (18,787,247.58 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "DKNG",
+          "name": "DraftKings",
+          "mentions": 20,
+          "momentum": 0,
+          "sentiment": -0.12400000000000003,
+          "priceMove": -0.5847948841711419,
+          "lastPrice": 25.15,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5966861066442708,
+          "optionsActivity": 0,
+          "signalScore": 38.73631671231979,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 6
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "DKNG $25.15, price -1.9%, volume 1.3x",
+              "url": "https://finance.yahoo.com/quote/DKNG",
+              "published": "2026-06-24T02:07:09.938Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "DKNG FINRA short volume 73% of reported volume (4,728,328.725 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron",
+          "mentions": 27,
+          "momentum": 0,
+          "sentiment": -0.11333333333333334,
+          "priceMove": -8.295925956716646,
+          "lastPrice": 1051.77,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.197740625754933,
+          "optionsActivity": 0,
+          "signalScore": 38.67226330931046,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -196,18 +853,223 @@
             "CNBC": 0,
             "MarketWatch": 0,
             "FINRA Short Volume": 10,
-            "Price/Volume": 30
+            "Price/Volume": 17
           },
           "latest": [
             {
               "source": "Price/Volume",
-              "title": "AMC $2.08, price -24.6%, volume 1.9x",
-              "url": "https://finance.yahoo.com/quote/AMC",
-              "published": "2026-06-24T01:59:22.681Z"
+              "title": "MU $1051.77, price -13.2%, volume 1.1x",
+              "url": "https://finance.yahoo.com/quote/MU",
+              "published": "2026-06-24T02:07:11.153Z"
             },
             {
               "source": "FINRA Short Volume",
-              "title": "AMC FINRA short volume 25% of reported volume (14,380,874.349 shares)",
+              "title": "MU FINRA short volume 35% of reported volume (8,778,492.641 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "CRWD",
+          "name": "CrowdStrike",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.1738548482297051,
+          "lastPrice": 680.92,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3328990700245378,
+          "optionsActivity": 0,
+          "signalScore": 38.54163968499463,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "CRWD $680.92, price +0.8%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/CRWD",
+              "published": "2026-06-24T02:07:09.549Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "CRWD FINRA short volume 50% of reported volume (505,167.247 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "QQQ",
+          "name": "Invesco QQQ ETF",
+          "mentions": 21,
+          "momentum": 0,
+          "sentiment": -0.12666666666666668,
+          "priceMove": -1.09763587438467,
+          "lastPrice": 713.65,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4756142836374202,
+          "optionsActivity": 0,
+          "signalScore": 38.50717176005218,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 7
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "QQQ $713.65, price -3.3%, volume 1.1x",
+              "url": "https://finance.yahoo.com/quote/QQQ",
+              "published": "2026-06-24T02:07:11.933Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "QQQ FINRA short volume 67% of reported volume (11,504,801.734 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla",
+          "mentions": 21,
+          "momentum": 0,
+          "sentiment": -0.07714285714285714,
+          "priceMove": -2.4801158762814417,
+          "lastPrice": 381.61,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.292318690406183,
+          "optionsActivity": 0,
+          "signalScore": 38.47860014142653,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 9
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "TSLA $381.61, price -5.8%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/TSLA",
+              "published": "2026-06-24T02:07:12.983Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "TSLA FINRA short volume 48% of reported volume (10,435,987.27 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "LCID",
+          "name": "Lucid",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.12458535496276767,
+          "lastPrice": 5.19,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3305010571016722,
+          "optionsActivity": 0,
+          "signalScore": 38.434467851938436,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "LCID $5.19, price +0.6%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/LCID",
+              "published": "2026-06-24T02:07:10.690Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "LCID FINRA short volume 50% of reported volume (2,098,949.057 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "AAPL",
+          "name": "Apple",
+          "mentions": 15,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.2433147863951115,
+          "lastPrice": 294.3,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.329722993010114,
+          "optionsActivity": 0,
+          "signalScore": 38.428850746415065,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "AAPL $294.30, price -0.9%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/AAPL",
+              "published": "2026-06-24T02:07:08.506Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "AAPL FINRA short volume 46% of reported volume (6,749,884.689 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -244,11 +1106,52 @@
               "source": "Price/Volume",
               "title": "IONQ $57.85, price -0.8%, volume 1.2x",
               "url": "https://finance.yahoo.com/quote/IONQ",
-              "published": "2026-06-24T01:59:25.806Z"
+              "published": "2026-06-24T02:07:10.507Z"
             },
             {
               "source": "FINRA Short Volume",
               "title": "IONQ FINRA short volume 57% of reported volume (6,144,664.071 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "mentions": 24,
+          "momentum": 0,
+          "sentiment": -0.09000000000000001,
+          "priceMove": -5.06842944875922,
+          "lastPrice": 366.39,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.0818325723399622,
+          "optionsActivity": 0,
+          "signalScore": 38.33078525202183,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 12
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "ARM $366.39, price -10.1%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/ARM",
+              "published": "2026-06-24T02:07:08.968Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "ARM FINRA short volume 52% of reported volume (2,043,123.519 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -285,11 +1188,175 @@
               "source": "Price/Volume",
               "title": "UPST $31.46, price +0.4%, volume 0.7x",
               "url": "https://finance.yahoo.com/quote/UPST",
-              "published": "2026-06-24T01:59:30.332Z"
+              "published": "2026-06-24T02:07:13.168Z"
             },
             {
               "source": "FINRA Short Volume",
               "title": "UPST FINRA short volume 48% of reported volume (517,998.684 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "mentions": 20,
+          "momentum": 0,
+          "sentiment": -0.072,
+          "priceMove": -2.304443529286539,
+          "lastPrice": 519.85,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2666981926016754,
+          "optionsActivity": 0,
+          "signalScore": 38.21121736462359,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 8
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "AMD $519.85, price -5.8%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/AMD",
+              "published": "2026-06-24T02:07:08.785Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "AMD FINRA short volume 54% of reported volume (5,649,776.498 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "MSTR",
+          "name": "MicroStrategy",
+          "mentions": 20,
+          "momentum": 0,
+          "sentiment": -0.072,
+          "priceMove": -2.053717935859136,
+          "lastPrice": 103.84,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2639453319750713,
+          "optionsActivity": 0,
+          "signalScore": 38.20130706636782,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 8
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "MSTR $103.84, price -5.1%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/MSTR",
+              "published": "2026-06-24T02:07:11.062Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "MSTR FINRA short volume 50% of reported volume (4,206,508.008 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "RBLX",
+          "name": "Roblox",
+          "mentions": 13,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.052074158667629385,
+          "lastPrice": 47.11,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3697908916545378,
+          "optionsActivity": 0,
+          "signalScore": 38.10833073350999,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "RBLX $47.11, price -0.3%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/RBLX",
+              "published": "2026-06-24T02:07:12.024Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "RBLX FINRA short volume 49% of reported volume (2,628,090.805 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "PFE",
+          "name": "Pfizer",
+          "mentions": 19,
+          "momentum": 0,
+          "sentiment": -0.12526315789473683,
+          "priceMove": -0.453286231177517,
+          "lastPrice": 24.72,
+          "quoteAsOf": "2026-06-23T20:03:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5303915052382209,
+          "optionsActivity": 0,
+          "signalScore": 37.88882533670844,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 6
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "PFE $24.72, price -1.4%, volume 1.5x",
+              "url": "https://finance.yahoo.com/quote/PFE",
+              "published": "2026-06-24T02:07:11.658Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "PFE FINRA short volume 56% of reported volume (14,193,301.675 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -326,7 +1393,7 @@
               "source": "Price/Volume",
               "title": "RKLB $95.12, price -5.2%, volume 0.6x",
               "url": "https://finance.yahoo.com/quote/RKLB",
-              "published": "2026-06-24T01:59:28.770Z"
+              "published": "2026-06-24T02:07:12.208Z"
             },
             {
               "source": "FINRA Short Volume",
@@ -337,18 +1404,18 @@
           ]
         },
         {
-          "ticker": "T",
-          "name": "AT&T",
-          "mentions": 16,
-          "momentum": -69.23076923076923,
-          "sentiment": 0.09375,
-          "priceMove": 1.204750463136171,
-          "lastPrice": 22.81,
-          "quoteAsOf": "2026-06-23T20:01:40.000Z",
+          "ticker": "XOM",
+          "name": "Exxon Mobil",
+          "mentions": 13,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.20998696216161614,
+          "lastPrice": 139.73,
+          "quoteAsOf": "2026-06-23T20:03:21.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1538877004658217,
+          "relativeVolume": 1.1843778266436051,
           "optionsActivity": 0,
-          "signalScore": 37.37437393493647,
+          "signalScore": 37.3992791622554,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -360,18 +1427,264 @@
             "CNBC": 0,
             "MarketWatch": 0,
             "FINRA Short Volume": 10,
-            "Price/Volume": 6
+            "Price/Volume": 3
           },
           "latest": [
             {
               "source": "Price/Volume",
-              "title": "T $22.81, price +3.2%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/T",
-              "published": "2026-06-24T01:59:29.863Z"
+              "title": "XOM $139.73, price +0.9%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/XOM",
+              "published": "2026-06-24T02:07:13.469Z"
             },
             {
               "source": "FINRA Short Volume",
-              "title": "T FINRA short volume 31% of reported volume (9,952,764.138 shares)",
+              "title": "XOM FINRA short volume 37% of reported volume (1,666,813.862 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "COIN",
+          "name": "Coinbase",
+          "mentions": 18,
+          "momentum": 0,
+          "sentiment": -0.07,
+          "priceMove": -1.571219748474968,
+          "lastPrice": 158.18,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2668391429864259,
+          "optionsActivity": 0,
+          "signalScore": 37.3472304069583,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 7
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "COIN $158.18, price -4.0%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/COIN",
+              "published": "2026-06-24T02:07:09.365Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "COIN FINRA short volume 53% of reported volume (1,555,327.389 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "mentions": 12,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.1337430576762376,
+          "lastPrice": 334.14,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2677365109416743,
+          "optionsActivity": 0,
+          "signalScore": 37.32763881517419,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "JPM $334.14, price +0.8%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/JPM",
+              "published": "2026-06-24T02:07:10.598Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "JPM FINRA short volume 41% of reported volume (971,712.853 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SPY",
+          "name": "SPDR S&P 500 ETF",
+          "mentions": 17,
+          "momentum": 0,
+          "sentiment": -0.1188235294117647,
+          "priceMove": -0.34169357573356746,
+          "lastPrice": 733.58,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4631545238759756,
+          "optionsActivity": 0,
+          "signalScore": 37.27951599619623,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "SPY $733.58, price -1.5%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/SPY",
+              "published": "2026-06-24T02:07:12.770Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "SPY FINRA short volume 63% of reported volume (12,477,589.974 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "HOOD",
+          "name": "Robinhood",
+          "mentions": 18,
+          "momentum": 0,
+          "sentiment": -0.12222222222222223,
+          "priceMove": -0.6464223677403801,
+          "lastPrice": 103.25,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4001495607447363,
+          "optionsActivity": 0,
+          "signalScore": 37.22556060930092,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "HOOD $103.25, price -2.3%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/HOOD",
+              "published": "2026-06-24T02:07:10.324Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "HOOD FINRA short volume 58% of reported volume (9,661,458.138 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "PYPL",
+          "name": "PayPal",
+          "mentions": 15,
+          "momentum": 0,
+          "sentiment": -0.048,
+          "priceMove": -0.40308622281934176,
+          "lastPrice": 41.7,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.281472072338359,
+          "optionsActivity": 0,
+          "signalScore": 37.08943314628246,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "PYPL $41.70, price -1.5%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/PYPL",
+              "published": "2026-06-24T02:07:11.841Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "PYPL FINRA short volume 50% of reported volume (1,773,337.027 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "UBER",
+          "name": "Uber",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": -0.056249999999999994,
+          "priceMove": -0.7699847305300632,
+          "lastPrice": 69.67,
+          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2574431118709992,
+          "optionsActivity": 0,
+          "signalScore": 37.069815346865624,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "UBER $69.67, price -2.5%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/UBER",
+              "published": "2026-06-24T02:07:13.075Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "UBER FINRA short volume 41% of reported volume (2,887,935.511 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -408,7 +1721,7 @@
               "source": "Price/Volume",
               "title": "ROKU $135.06, price -0.1%, volume 0.4x",
               "url": "https://finance.yahoo.com/quote/ROKU",
-              "published": "2026-06-24T01:59:28.926Z"
+              "published": "2026-06-24T02:07:12.300Z"
             },
             {
               "source": "FINRA Short Volume",
@@ -419,59 +1732,18 @@
           ]
         },
         {
-          "ticker": "MU",
-          "name": "Micron",
-          "mentions": 27,
-          "momentum": -6.896551724137931,
-          "sentiment": -0.11333333333333334,
-          "priceMove": -8.295925956716646,
-          "lastPrice": 1051.77,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "ticker": "SMCI",
+          "name": "Super Micro Computer",
+          "mentions": 19,
+          "momentum": 0,
+          "sentiment": -0.07578947368421052,
+          "priceMove": -2.541038548667943,
+          "lastPrice": 33.32,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.197740625754933,
+          "relativeVolume": 1.124359737775266,
           "optionsActivity": 0,
-          "signalScore": 36.948125378275975,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 17
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "MU $1051.77, price -13.2%, volume 1.1x",
-              "url": "https://finance.yahoo.com/quote/MU",
-              "published": "2026-06-24T01:59:26.898Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "MU FINRA short volume 35% of reported volume (8,778,492.641 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SOFI",
-          "name": "SoFi",
-          "mentions": 15,
-          "momentum": -76.19047619047619,
-          "sentiment": 0.06666666666666667,
-          "priceMove": 0.2962956948019161,
-          "lastPrice": 17.29,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.240051859518262,
-          "optionsActivity": 0,
-          "signalScore": 35.31767367449586,
+          "signalScore": 36.99703578587188,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -483,36 +1755,159 @@
             "CNBC": 0,
             "MarketWatch": 0,
             "FINRA Short Volume": 11,
-            "Price/Volume": 4
+            "Price/Volume": 8
           },
           "latest": [
             {
               "source": "Price/Volume",
-              "title": "SOFI $17.29, price +1.1%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/SOFI",
-              "published": "2026-06-24T01:59:29.550Z"
+              "title": "SMCI $33.32, price -6.0%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/SMCI",
+              "published": "2026-06-24T02:07:12.483Z"
             },
             {
               "source": "FINRA Short Volume",
-              "title": "SOFI FINRA short volume 36% of reported volume (21,752,486.818 shares)",
+              "title": "SMCI FINRA short volume 41% of reported volume (10,640,063.954 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "WMT",
-          "name": "Walmart",
-          "mentions": 14,
-          "momentum": -58.82352941176471,
-          "sentiment": 0.08928571428571429,
-          "priceMove": 0.6827102653398053,
-          "lastPrice": 119.42,
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": -0.056249999999999994,
+          "priceMove": -0.9547220256704734,
+          "lastPrice": 380.15,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1529645690584602,
+          "relativeVolume": 1.230548884043328,
           "optionsActivity": 0,
-          "signalScore": 35.22281080553287,
+          "signalScore": 36.972996126686006,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "AVGO $380.15, price -3.1%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/AVGO",
+              "published": "2026-06-24T02:07:09.060Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "AVGO FINRA short volume 42% of reported volume (4,367,987.845 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "mentions": 12,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.013720557921481394,
+          "lastPrice": 72.82,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.220552381878215,
+          "optionsActivity": 0,
+          "signalScore": 36.89028983519326,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "NFLX $72.82, price -0.1%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/NFLX",
+              "published": "2026-06-24T02:07:11.336Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "NFLX FINRA short volume 33% of reported volume (6,440,415.774 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "GME",
+          "name": "GameStop",
+          "mentions": 14,
+          "momentum": 0,
+          "sentiment": -0.08571428571428573,
+          "priceMove": -0.04054560844758379,
+          "lastPrice": 21.08,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4183064675127182,
+          "optionsActivity": 0,
+          "signalScore": 36.84833539500288,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "GME $21.08, price -0.3%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/GME",
+              "published": "2026-06-24T02:07:10.140Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "GME FINRA short volume 56% of reported volume (907,881.037 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "mentions": 13,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": 0.17447309750119458,
+          "lastPrice": 234.11,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1699537877602644,
+          "optionsActivity": 0,
+          "signalScore": 36.81478643141607,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -524,18 +1919,305 @@
             "CNBC": 0,
             "MarketWatch": 0,
             "FINRA Short Volume": 9,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "AMZN $234.11, price +0.6%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/AMZN",
+              "published": "2026-06-24T02:07:08.876Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "AMZN FINRA short volume 24% of reported volume (4,617,925.943 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "ORCL",
+          "name": "Oracle",
+          "mentions": 19,
+          "momentum": 0,
+          "sentiment": -0.09473684210526315,
+          "priceMove": -2.9792615013015116,
+          "lastPrice": 165.16,
+          "quoteAsOf": "2026-06-23T20:04:19.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.339121046904173,
+          "optionsActivity": 0,
+          "signalScore": 36.67844717542768,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 9,
+            "Price/Volume": 10
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "ORCL $165.16, price -5.7%, volume 1.5x",
+              "url": "https://finance.yahoo.com/quote/ORCL",
+              "published": "2026-06-24T02:07:11.519Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "ORCL FINRA short volume 21% of reported volume (2,569,024.403 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "RIVN",
+          "name": "Rivian",
+          "mentions": 16,
+          "momentum": 0,
+          "sentiment": -0.12000000000000001,
+          "priceMove": -0.34768274199421917,
+          "lastPrice": 14.89,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3714923124210596,
+          "optionsActivity": 0,
+          "signalScore": 36.307178183131555,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "RIVN $14.89, price -1.4%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/RIVN",
+              "published": "2026-06-24T02:07:12.116Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "RIVN FINRA short volume 56% of reported volume (5,118,093.015 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "CVNA",
+          "name": "Carvana",
+          "mentions": 17,
+          "momentum": 0,
+          "sentiment": -0.12352941176470589,
+          "priceMove": -0.8117233341920468,
+          "lastPrice": 64.83,
+          "quoteAsOf": "2026-06-23T20:03:38.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.309644460300771,
+          "optionsActivity": 0,
+          "signalScore": 36.25965287656919,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
             "Price/Volume": 5
           },
           "latest": [
             {
               "source": "Price/Volume",
-              "title": "WMT $119.42, price +1.9%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/WMT",
-              "published": "2026-06-24T01:59:30.650Z"
+              "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/CVNA",
+              "published": "2026-06-24T02:07:09.641Z"
             },
             {
               "source": "FINRA Short Volume",
-              "title": "WMT FINRA short volume 28% of reported volume (2,177,119.981 shares)",
+              "title": "CVNA FINRA short volume 58% of reported volume (2,208,642.543 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "PLTR",
+          "name": "Palantir",
+          "mentions": 15,
+          "momentum": 0,
+          "sentiment": -0.05999999999999999,
+          "priceMove": -0.7810320781032071,
+          "lastPrice": 116.7,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2135922115532736,
+          "optionsActivity": 0,
+          "signalScore": 36.153637076027586,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "PLTR $116.70, price -2.3%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/PLTR",
+              "published": "2026-06-24T02:07:11.750Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "PLTR FINRA short volume 34% of reported volume (6,439,590.214 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "BABA",
+          "name": "Alibaba",
+          "mentions": 15,
+          "momentum": 0,
+          "sentiment": -0.05999999999999999,
+          "priceMove": -0.7525963586873168,
+          "lastPrice": 102.6,
+          "quoteAsOf": "2026-06-23T20:03:21.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1874454497703268,
+          "optionsActivity": 0,
+          "signalScore": 36.05950873360898,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "BABA $102.60, price -2.3%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/BABA",
+              "published": "2026-06-24T02:07:09.274Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "BABA FINRA short volume 37% of reported volume (1,805,030.155 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SHOP",
+          "name": "Shopify",
+          "mentions": 12,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.09261077594830529,
+          "lastPrice": 107.68,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.2409192084591865,
+          "optionsActivity": 0,
+          "signalScore": 35.96361041088476,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 8,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "SHOP $107.68, price -0.3%, volume 1.3x",
+              "url": "https://finance.yahoo.com/quote/SHOP",
+              "published": "2026-06-24T02:07:12.391Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "SHOP FINRA short volume 22% of reported volume (1,261,407.764 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-23T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "mentions": 11,
+          "momentum": 0,
+          "sentiment": 0,
+          "priceMove": -0.05320485484951736,
+          "lastPrice": 562.2,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.1556383351766522,
+          "optionsActivity": 0,
+          "signalScore": 35.93610057381611,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 9,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "Price/Volume",
+              "title": "META $562.20, price -0.3%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/META",
+              "published": "2026-06-24T02:07:10.782Z"
+            },
+            {
+              "source": "FINRA Short Volume",
+              "title": "META FINRA short volume 27% of reported volume (1,281,458.326 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-23T22:00:00.000Z"
             }
@@ -572,7 +2254,7 @@
               "source": "Price/Volume",
               "title": "WBD $26.88, price -0.3%, volume 0.8x",
               "url": "https://finance.yahoo.com/quote/WBD",
-              "published": "2026-06-24T01:59:30.488Z"
+              "published": "2026-06-24T02:07:13.259Z"
             },
             {
               "source": "FINRA Short Volume",
@@ -583,1568 +2265,10 @@
           ]
         },
         {
-          "ticker": "SNOW",
-          "name": "Snowflake",
-          "mentions": 14,
-          "momentum": -63.1578947368421,
-          "sentiment": 0.07142857142857142,
-          "priceMove": 0.4816759942561616,
-          "lastPrice": 230.41,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1921163137308548,
-          "optionsActivity": 0,
-          "signalScore": 34.95658650336988,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "SNOW $230.41, price +1.7%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/SNOW",
-              "published": "2026-06-24T01:59:29.394Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "SNOW FINRA short volume 39% of reported volume (839,096.634 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "NIO",
-          "name": "NIO",
-          "mentions": 16,
-          "momentum": -63.63636363636363,
-          "sentiment": 0,
-          "priceMove": 0.1980188502691715,
-          "lastPrice": 5.09,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.400797997893271,
-          "optionsActivity": 0,
-          "signalScore": 34.72300206565558,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "NIO $5.09, price +0.8%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/NIO",
-              "published": "2026-06-24T01:59:27.366Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "NIO FINRA short volume 53% of reported volume (8,869,043.555 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "DIS",
-          "name": "Disney",
-          "mentions": 14,
-          "momentum": -75,
-          "sentiment": 0.05357142857142857,
-          "priceMove": 0.225894809439177,
-          "lastPrice": 103.53,
-          "quoteAsOf": "2026-06-23T20:03:05.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2283583101161628,
-          "optionsActivity": 0,
-          "signalScore": 34.57039327990669,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 3
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "DIS $103.53, price +1.1%, volume 0.5x",
-              "url": "https://finance.yahoo.com/quote/DIS",
-              "published": "2026-06-24T01:59:24.711Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "DIS FINRA short volume 42% of reported volume (1,815,055.555 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "MSFT",
-          "name": "Microsoft",
-          "mentions": 13,
-          "momentum": -73.46938775510205,
-          "sentiment": 0.07692307692307693,
-          "priceMove": 0.5528312674408995,
-          "lastPrice": 373.94,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1461467283854292,
-          "optionsActivity": 0,
-          "signalScore": 34.35392922567794,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 9,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "MSFT $373.94, price +1.8%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/MSFT",
-              "published": "2026-06-24T01:59:26.586Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "MSFT FINRA short volume 26% of reported volume (3,945,379.585 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "ORCL",
-          "name": "Oracle",
-          "mentions": 19,
-          "momentum": -9.523809523809524,
-          "sentiment": -0.09473684210526315,
-          "priceMove": -2.9792615013015116,
-          "lastPrice": 165.16,
-          "quoteAsOf": "2026-06-23T20:04:19.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.339121046904173,
-          "optionsActivity": 0,
-          "signalScore": 34.2974947944753,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 9,
-            "Price/Volume": 10
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "ORCL $165.16, price -5.7%, volume 1.5x",
-              "url": "https://finance.yahoo.com/quote/ORCL",
-              "published": "2026-06-24T01:59:27.678Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "ORCL FINRA short volume 21% of reported volume (2,569,024.403 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "COST",
-          "name": "Costco",
-          "mentions": 15,
-          "momentum": -69.38775510204081,
-          "sentiment": 0,
-          "priceMove": 0.1774327591039258,
-          "lastPrice": 957.68,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4013309483591618,
-          "optionsActivity": 0,
-          "signalScore": 34.0415049038795,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "COST $957.68, price +0.7%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/COST",
-              "published": "2026-06-24T01:59:23.930Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "COST FINRA short volume 54% of reported volume (418,760.382 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "INTC",
-          "name": "Intel",
-          "mentions": 22,
-          "momentum": -50,
-          "sentiment": -0.07363636363636362,
-          "priceMove": -2.5136428339124035,
-          "lastPrice": 132.28,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2586712267352775,
-          "optionsActivity": 0,
-          "signalScore": 34.01988739634035,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 9
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "INTC $132.28, price -6.1%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/INTC",
-              "published": "2026-06-24T01:59:25.649Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "INTC FINRA short volume 53% of reported volume (30,077,155.039 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "F",
-          "name": "Ford",
-          "mentions": 16,
-          "momentum": -69.23076923076923,
-          "sentiment": 0,
-          "priceMove": -0.1948966324481645,
-          "lastPrice": 14,
-          "quoteAsOf": "2026-06-23T20:03:10.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3064294668285166,
-          "optionsActivity": 0,
-          "signalScore": 33.98723765328412,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "F $14.00, price -0.8%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/F",
-              "published": "2026-06-24T01:59:25.024Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "F FINRA short volume 43% of reported volume (18,787,247.58 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "DKNG",
-          "name": "DraftKings",
-          "mentions": 20,
-          "momentum": -67.74193548387096,
-          "sentiment": -0.12400000000000003,
-          "priceMove": -0.5847948841711419,
-          "lastPrice": 25.15,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5966861066442708,
-          "optionsActivity": 0,
-          "signalScore": 33.73631671231979,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 6
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "DKNG $25.15, price -1.9%, volume 1.3x",
-              "url": "https://finance.yahoo.com/quote/DKNG",
-              "published": "2026-06-24T01:59:24.867Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "DKNG FINRA short volume 73% of reported volume (4,728,328.725 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "CRWD",
-          "name": "CrowdStrike",
-          "mentions": 14,
-          "momentum": -41.66666666666667,
-          "sentiment": 0,
-          "priceMove": 0.1738548482297051,
-          "lastPrice": 680.92,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3328990700245378,
-          "optionsActivity": 0,
-          "signalScore": 33.54163968499463,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 3
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "CRWD $680.92, price +0.8%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/CRWD",
-              "published": "2026-06-24T01:59:24.242Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "CRWD FINRA short volume 50% of reported volume (505,167.247 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "QQQ",
-          "name": "Invesco QQQ ETF",
-          "mentions": 21,
-          "momentum": -46.15384615384615,
-          "sentiment": -0.12666666666666668,
-          "priceMove": -1.09763587438467,
-          "lastPrice": 713.65,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4756142836374202,
-          "optionsActivity": 0,
-          "signalScore": 33.50717176005219,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "QQQ $713.65, price -3.3%, volume 1.1x",
-              "url": "https://finance.yahoo.com/quote/QQQ",
-              "published": "2026-06-24T01:59:28.302Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "QQQ FINRA short volume 67% of reported volume (11,504,801.734 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "TSLA",
-          "name": "Tesla",
-          "mentions": 21,
-          "momentum": -66.66666666666666,
-          "sentiment": -0.07714285714285714,
-          "priceMove": -2.4801158762814417,
-          "lastPrice": 381.61,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.292318690406183,
-          "optionsActivity": 0,
-          "signalScore": 33.47860014142654,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 9
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "TSLA $381.61, price -5.8%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/TSLA",
-              "published": "2026-06-24T01:59:30.019Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "TSLA FINRA short volume 48% of reported volume (10,435,987.27 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "LCID",
-          "name": "Lucid",
-          "mentions": 14,
-          "momentum": -63.1578947368421,
-          "sentiment": 0,
-          "priceMove": 0.12458535496276767,
-          "lastPrice": 5.19,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3305010571016722,
-          "optionsActivity": 0,
-          "signalScore": 33.43446785193844,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 3
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "LCID $5.19, price +0.6%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/LCID",
-              "published": "2026-06-24T01:59:26.118Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "LCID FINRA short volume 50% of reported volume (2,098,949.057 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "AAPL",
-          "name": "Apple",
-          "mentions": 15,
-          "momentum": -71.69811320754717,
-          "sentiment": 0,
-          "priceMove": -0.2433147863951115,
-          "lastPrice": 294.3,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.329722993010114,
-          "optionsActivity": 0,
-          "signalScore": 33.42885074641507,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "AAPL $294.30, price -0.9%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/AAPL",
-              "published": "2026-06-24T01:59:21.894Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "AAPL FINRA short volume 46% of reported volume (6,749,884.689 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "ARM",
-          "name": "Arm Holdings",
-          "mentions": 24,
-          "momentum": -45.45454545454545,
-          "sentiment": -0.09000000000000001,
-          "priceMove": -5.06842944875922,
-          "lastPrice": 366.39,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.0818325723399622,
-          "optionsActivity": 0,
-          "signalScore": 33.33078525202184,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 12
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "ARM $366.39, price -10.1%, volume 0.6x",
-              "url": "https://finance.yahoo.com/quote/ARM",
-              "published": "2026-06-24T01:59:23.150Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "ARM FINRA short volume 52% of reported volume (2,043,123.519 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "AMD",
-          "name": "Advanced Micro Devices",
-          "mentions": 20,
-          "momentum": -66.66666666666666,
-          "sentiment": -0.072,
-          "priceMove": -2.304443529286539,
-          "lastPrice": 519.85,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2666981926016754,
-          "optionsActivity": 0,
-          "signalScore": 33.21121736462359,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "AMD $519.85, price -5.8%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/AMD",
-              "published": "2026-06-24T01:59:22.838Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "AMD FINRA short volume 54% of reported volume (5,649,776.498 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "MSTR",
-          "name": "MicroStrategy",
-          "mentions": 20,
-          "momentum": -64.28571428571429,
-          "sentiment": -0.072,
-          "priceMove": -2.053717935859136,
-          "lastPrice": 103.84,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2639453319750713,
-          "optionsActivity": 0,
-          "signalScore": 33.20130706636782,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "MSTR $103.84, price -5.1%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/MSTR",
-              "published": "2026-06-24T01:59:26.742Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "MSTR FINRA short volume 50% of reported volume (4,206,508.008 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "RBLX",
-          "name": "Roblox",
-          "mentions": 13,
-          "momentum": -78.68852459016394,
-          "sentiment": 0,
-          "priceMove": -0.052074158667629385,
-          "lastPrice": 47.11,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3697908916545378,
-          "optionsActivity": 0,
-          "signalScore": 33.10833073350999,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "RBLX $47.11, price -0.3%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/RBLX",
-              "published": "2026-06-24T01:59:28.458Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "RBLX FINRA short volume 49% of reported volume (2,628,090.805 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "PFE",
-          "name": "Pfizer",
-          "mentions": 19,
-          "momentum": -65.45454545454545,
-          "sentiment": -0.12526315789473683,
-          "priceMove": -0.453286231177517,
-          "lastPrice": 24.72,
-          "quoteAsOf": "2026-06-23T20:03:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5303915052382209,
-          "optionsActivity": 0,
-          "signalScore": 32.88882533670844,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 6
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "PFE $24.72, price -1.4%, volume 1.5x",
-              "url": "https://finance.yahoo.com/quote/PFE",
-              "published": "2026-06-24T01:59:27.834Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "PFE FINRA short volume 56% of reported volume (14,193,301.675 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "XOM",
-          "name": "Exxon Mobil",
-          "mentions": 13,
-          "momentum": -72.3404255319149,
-          "sentiment": 0,
-          "priceMove": 0.20998696216161614,
-          "lastPrice": 139.73,
-          "quoteAsOf": "2026-06-23T20:03:21.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1843778266436051,
-          "optionsActivity": 0,
-          "signalScore": 32.3992791622554,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 3
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "XOM $139.73, price +0.9%, volume 0.6x",
-              "url": "https://finance.yahoo.com/quote/XOM",
-              "published": "2026-06-24T01:59:30.806Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "XOM FINRA short volume 37% of reported volume (1,666,813.862 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "COIN",
-          "name": "Coinbase",
-          "mentions": 18,
-          "momentum": -68.96551724137932,
-          "sentiment": -0.07,
-          "priceMove": -1.571219748474968,
-          "lastPrice": 158.18,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2668391429864259,
-          "optionsActivity": 0,
-          "signalScore": 32.34723040695831,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "COIN $158.18, price -4.0%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/COIN",
-              "published": "2026-06-24T01:59:23.774Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "COIN FINRA short volume 53% of reported volume (1,555,327.389 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "JPM",
-          "name": "JPMorgan Chase",
-          "mentions": 12,
-          "momentum": -75,
-          "sentiment": 0,
-          "priceMove": 0.1337430576762376,
-          "lastPrice": 334.14,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2677365109416743,
-          "optionsActivity": 0,
-          "signalScore": 32.3276388151742,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "JPM $334.14, price +0.8%, volume 0.6x",
-              "url": "https://finance.yahoo.com/quote/JPM",
-              "published": "2026-06-24T01:59:25.962Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "JPM FINRA short volume 41% of reported volume (971,712.853 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SPY",
-          "name": "SPDR S&P 500 ETF",
-          "mentions": 17,
-          "momentum": -58.536585365853654,
-          "sentiment": -0.1188235294117647,
-          "priceMove": -0.34169357573356746,
-          "lastPrice": 733.58,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4631545238759756,
-          "optionsActivity": 0,
-          "signalScore": 32.27951599619623,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "SPY $733.58, price -1.5%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/SPY",
-              "published": "2026-06-24T01:59:29.707Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "SPY FINRA short volume 63% of reported volume (12,477,589.974 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "HOOD",
-          "name": "Robinhood",
-          "mentions": 18,
-          "momentum": -70,
-          "sentiment": -0.12222222222222223,
-          "priceMove": -0.6464223677403801,
-          "lastPrice": 103.25,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4001495607447363,
-          "optionsActivity": 0,
-          "signalScore": 32.22556060930092,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "HOOD $103.25, price -2.3%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/HOOD",
-              "published": "2026-06-24T01:59:25.493Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "HOOD FINRA short volume 58% of reported volume (9,661,458.138 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "NVDA",
-          "name": "NVIDIA Corporation",
-          "mentions": 18,
-          "momentum": -66.66666666666666,
-          "sentiment": -0.07,
-          "priceMove": -1.6047596729885858,
-          "lastPrice": 200.04,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2090519936188076,
-          "optionsActivity": 0,
-          "signalScore": 32.139196669234884,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "NVDA $200.04, price -4.1%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/NVDA",
-              "published": "2026-06-24T01:59:27.522Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "NVDA FINRA short volume 35% of reported volume (16,480,701.544 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "PYPL",
-          "name": "PayPal",
-          "mentions": 15,
-          "momentum": -73.68421052631578,
-          "sentiment": -0.048,
-          "priceMove": -0.40308622281934176,
-          "lastPrice": 41.7,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.281472072338359,
-          "optionsActivity": 0,
-          "signalScore": 32.08943314628247,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "PYPL $41.70, price -1.5%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/PYPL",
-              "published": "2026-06-24T01:59:28.146Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "PYPL FINRA short volume 50% of reported volume (1,773,337.027 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "UBER",
-          "name": "Uber",
-          "mentions": 16,
-          "momentum": -71.42857142857143,
-          "sentiment": -0.056249999999999994,
-          "priceMove": -0.7699847305300632,
-          "lastPrice": 69.67,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2574431118709992,
-          "optionsActivity": 0,
-          "signalScore": 32.069815346865624,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "UBER $69.67, price -2.5%, volume 0.9x",
-              "url": "https://finance.yahoo.com/quote/UBER",
-              "published": "2026-06-24T01:59:30.175Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "UBER FINRA short volume 41% of reported volume (2,887,935.511 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SMCI",
-          "name": "Super Micro Computer",
-          "mentions": 19,
-          "momentum": -69.84126984126983,
-          "sentiment": -0.07578947368421052,
-          "priceMove": -2.541038548667943,
-          "lastPrice": 33.32,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.124359737775266,
-          "optionsActivity": 0,
-          "signalScore": 31.997035785871883,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "SMCI $33.32, price -6.0%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/SMCI",
-              "published": "2026-06-24T01:59:29.238Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "SMCI FINRA short volume 41% of reported volume (10,640,063.954 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "AVGO",
-          "name": "Broadcom",
-          "mentions": 16,
-          "momentum": -60,
-          "sentiment": -0.056249999999999994,
-          "priceMove": -0.9547220256704734,
-          "lastPrice": 380.15,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.230548884043328,
-          "optionsActivity": 0,
-          "signalScore": 31.97299612668601,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "AVGO $380.15, price -3.1%, volume 0.8x",
-              "url": "https://finance.yahoo.com/quote/AVGO",
-              "published": "2026-06-24T01:59:23.306Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "AVGO FINRA short volume 42% of reported volume (4,367,987.845 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "NFLX",
-          "name": "Netflix",
-          "mentions": 12,
-          "momentum": -70,
-          "sentiment": 0,
-          "priceMove": -0.013720557921481394,
-          "lastPrice": 72.82,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.220552381878215,
-          "optionsActivity": 0,
-          "signalScore": 31.89028983519326,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "NFLX $72.82, price -0.1%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/NFLX",
-              "published": "2026-06-24T01:59:27.210Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "NFLX FINRA short volume 33% of reported volume (6,440,415.774 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "GME",
-          "name": "GameStop",
-          "mentions": 14,
-          "momentum": -76.66666666666667,
-          "sentiment": -0.08571428571428573,
-          "priceMove": -0.04054560844758379,
-          "lastPrice": 21.08,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4183064675127182,
-          "optionsActivity": 0,
-          "signalScore": 31.848335395002877,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "GME $21.08, price -0.3%, volume 0.6x",
-              "url": "https://finance.yahoo.com/quote/GME",
-              "published": "2026-06-24T01:59:25.180Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "GME FINRA short volume 56% of reported volume (907,881.037 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "AMZN",
-          "name": "Amazon",
-          "mentions": 13,
-          "momentum": -72.3404255319149,
-          "sentiment": 0,
-          "priceMove": 0.17447309750119458,
-          "lastPrice": 234.11,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1699537877602644,
-          "optionsActivity": 0,
-          "signalScore": 31.814786431416067,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 9,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "AMZN $234.11, price +0.6%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/AMZN",
-              "published": "2026-06-24T01:59:22.994Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "AMZN FINRA short volume 24% of reported volume (4,617,925.943 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "RIVN",
-          "name": "Rivian",
-          "mentions": 16,
-          "momentum": -73.33333333333333,
-          "sentiment": -0.12000000000000001,
-          "priceMove": -0.34768274199421917,
-          "lastPrice": 14.89,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3714923124210596,
-          "optionsActivity": 0,
-          "signalScore": 31.30717818313156,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "RIVN $14.89, price -1.4%, volume 0.8x",
-              "url": "https://finance.yahoo.com/quote/RIVN",
-              "published": "2026-06-24T01:59:28.614Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "RIVN FINRA short volume 56% of reported volume (5,118,093.015 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "CVNA",
-          "name": "Carvana",
-          "mentions": 17,
-          "momentum": -71.1864406779661,
-          "sentiment": -0.12352941176470589,
-          "priceMove": -0.8117233341920468,
-          "lastPrice": 64.83,
-          "quoteAsOf": "2026-06-23T20:03:38.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.309644460300771,
-          "optionsActivity": 0,
-          "signalScore": 31.25965287656919,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "CVNA $64.83, price -2.8%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/CVNA",
-              "published": "2026-06-24T01:59:24.399Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "CVNA FINRA short volume 58% of reported volume (2,208,642.543 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "PLTR",
-          "name": "Palantir",
-          "mentions": 15,
-          "momentum": -74.57627118644068,
-          "sentiment": -0.05999999999999999,
-          "priceMove": -0.7810320781032071,
-          "lastPrice": 116.7,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2135922115532736,
-          "optionsActivity": 0,
-          "signalScore": 31.153637076027586,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "PLTR $116.70, price -2.3%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/PLTR",
-              "published": "2026-06-24T01:59:27.990Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "PLTR FINRA short volume 34% of reported volume (6,439,590.214 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "BABA",
-          "name": "Alibaba",
-          "mentions": 15,
-          "momentum": -59.45945945945946,
-          "sentiment": -0.05999999999999999,
-          "priceMove": -0.7525963586873168,
-          "lastPrice": 102.6,
-          "quoteAsOf": "2026-06-23T20:03:21.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1874454497703268,
-          "optionsActivity": 0,
-          "signalScore": 31.05950873360898,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 10,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "BABA $102.60, price -2.3%, volume 0.8x",
-              "url": "https://finance.yahoo.com/quote/BABA",
-              "published": "2026-06-24T01:59:23.618Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "BABA FINRA short volume 37% of reported volume (1,805,030.155 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SHOP",
-          "name": "Shopify",
-          "mentions": 12,
-          "momentum": -64.70588235294117,
-          "sentiment": 0,
-          "priceMove": -0.09261077594830529,
-          "lastPrice": 107.68,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.2409192084591865,
-          "optionsActivity": 0,
-          "signalScore": 30.963610410884762,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 8,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "SHOP $107.68, price -0.3%, volume 1.3x",
-              "url": "https://finance.yahoo.com/quote/SHOP",
-              "published": "2026-06-24T01:59:29.082Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "SHOP FINRA short volume 22% of reported volume (1,261,407.764 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "META",
-          "name": "Meta Platforms",
-          "mentions": 11,
-          "momentum": -77.55102040816327,
-          "sentiment": 0,
-          "priceMove": -0.05320485484951736,
-          "lastPrice": 562.2,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.1556383351766522,
-          "optionsActivity": 0,
-          "signalScore": 30.936100573816113,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 9,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "META $562.20, price -0.3%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/META",
-              "published": "2026-06-24T01:59:26.274Z"
-            },
-            {
-              "source": "FINRA Short Volume",
-              "title": "META FINRA short volume 27% of reported volume (1,281,458.326 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-23T22:00:00.000Z"
-            }
-          ]
-        },
-        {
           "ticker": "GOOGL",
           "name": "Alphabet",
           "mentions": 13,
-          "momentum": -62.857142857142854,
+          "momentum": 0,
           "sentiment": -0.05538461538461538,
           "priceMove": -0.3123728727924951,
           "lastPrice": 346.13,
@@ -2152,7 +2276,7 @@
           "quoteSource": "Yahoo public chart",
           "relativeVolume": 1.1376998913395684,
           "optionsActivity": 0,
-          "signalScore": 30.004671264244227,
+          "signalScore": 35.00467126424423,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -2171,7 +2295,7 @@
               "source": "Price/Volume",
               "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
               "url": "https://finance.yahoo.com/quote/GOOGL",
-              "published": "2026-06-24T01:59:25.337Z"
+              "published": "2026-06-24T02:07:10.232Z"
             },
             {
               "source": "FINRA Short Volume",
@@ -2180,228 +2304,128 @@
               "published": "2026-06-23T22:00:00.000Z"
             }
           ]
-        },
-        {
-          "ticker": "AI",
-          "name": "C3.ai",
-          "mentions": 2,
-          "momentum": 0,
-          "sentiment": 0,
-          "priceMove": -0.2061836047257837,
-          "lastPrice": 9.68,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 0.6758401898734178,
-          "optionsActivity": 0,
-          "signalScore": 20.360018612404122,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 0,
-            "Price/Volume": 2
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "AI $9.68, price -0.2%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/AI",
-              "published": "2026-06-24T01:59:22.525Z"
-            }
-          ]
-        },
-        {
-          "ticker": "BA",
-          "name": "Boeing",
-          "mentions": 4,
-          "momentum": -91.66666666666666,
-          "sentiment": -0.18,
-          "priceMove": -1.8656893523945512,
-          "lastPrice": 216.71,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 0.8205754848755467,
-          "optionsActivity": 0,
-          "signalScore": 14.010403246188412,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 0,
-            "Price/Volume": 4
-          },
-          "latest": [
-            {
-              "source": "Price/Volume",
-              "title": "BA $216.71, price -1.9%, volume 0.8x",
-              "url": "https://finance.yahoo.com/quote/BA",
-              "published": "2026-06-24T01:59:23.462Z"
-            }
-          ]
         }
       ],
       "events": [
         {
-          "source": "Price/Volume",
-          "ticker": "AAPL",
-          "name": "Apple",
-          "title": "AAPL $294.30, price -0.9%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/AAPL",
-          "mentions": 4,
-          "sentiment": 0,
-          "priceMove": -0.9124304489816681,
-          "relativeVolume": 0.9722108519752499,
-          "lastPrice": 294.3,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:21.894Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "AI",
-          "name": "C3.ai",
-          "title": "AI $9.68, price -0.2%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/AI",
+          "source": "GDELT News",
+          "ticker": "NVDA",
+          "name": "NVIDIA Corporation",
+          "title": "Better Artificial Intelligence ( AI ) Stock to Buy : SpaceX vs . Nvidia fool.com",
+          "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?source=iedfolrf0000001",
           "mentions": 2,
           "sentiment": 0,
-          "priceMove": -0.2061836047257837,
-          "relativeVolume": 0.6758401898734178,
-          "lastPrice": 9.68,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:22.525Z"
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
         },
         {
-          "source": "Price/Volume",
-          "ticker": "AMC",
-          "name": "AMC Entertainment",
-          "title": "AMC $2.08, price -24.6%, volume 1.9x",
-          "url": "https://finance.yahoo.com/quote/AMC",
-          "mentions": 30,
-          "sentiment": -0.18,
-          "priceMove": -24.637680899017724,
-          "relativeVolume": 1.8775722954884921,
-          "lastPrice": 2.08,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:22.681Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "AMD",
-          "name": "Advanced Micro Devices",
-          "title": "AMD $519.85, price -5.8%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/AMD",
-          "mentions": 8,
-          "sentiment": -0.18,
-          "priceMove": -5.761108823216348,
-          "relativeVolume": 0.8638547704528367,
-          "lastPrice": 519.85,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:22.838Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "AMZN",
-          "name": "Amazon",
-          "title": "AMZN $234.11, price +0.6%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/AMZN",
-          "mentions": 4,
+          "source": "GDELT News",
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "title": "Better Artificial Intelligence ( AI ) Stock to Buy : SpaceX vs . Nvidia fool.com",
+          "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?source=iedfolrf0000001",
+          "mentions": 2,
           "sentiment": 0,
-          "priceMove": 0.5670375668788824,
-          "relativeVolume": 1.0177599270652746,
-          "lastPrice": 234.11,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:22.994Z"
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "title": "Does a Lower Stock Price and New Contracts Make SpaceX Stock a Buy ?  fool.com",
+          "url": "https://www.fool.com/investing/2026/06/23/does-a-lower-stock-price-and-new-contracts-make-spacex-stock-a-buy/?source=iedfolrf0000001",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "title": "SpaceX shares eke out a gain to snap three day losing streak economictimes.indiatimes.com",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/spacex-shares-eke-out-a-gain-to-snap-three-day-losing-streak/articleshow/131952468.cms",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "ticker": "COST",
+          "name": "Costco",
+          "title": "Royal Mail increases annual earnings despite staff cost pressures hampshirechronicle.co.uk",
+          "url": "https://www.hampshirechronicle.co.uk/news/national/26218660.royal-mail-increases-annual-earnings-despite-staff-cost-pressures/",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "ticker": "COST",
+          "name": "Costco",
+          "title": "Royal Mail increases annual earnings despite staff cost pressures surreycomet.co.uk",
+          "url": "https://www.surreycomet.co.uk/news/national/26218660.royal-mail-increases-annual-earnings-despite-staff-cost-pressures/",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
+        },
+        {
+          "source": "GDELT News",
+          "ticker": "MSCI",
+          "name": "MSCI Inc.",
+          "title": "MSCI ( MSCI ) Stock Gets Fair Value Bump As AI Debate Shapes Analyst Views finance.yahoo.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/msci-msci-stock-gets-fair-011138981.html",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-24T01:45:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "ticker": "ARM",
-          "name": "Arm Holdings",
-          "title": "ARM $366.39, price -10.1%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/ARM",
-          "mentions": 12,
-          "sentiment": -0.18,
-          "priceMove": -10.13685889751844,
-          "relativeVolume": 0.643056517252223,
-          "lastPrice": 366.39,
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "title": "SPCX $156.11, price +1.0%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/SPCX",
+          "mentions": 3,
+          "sentiment": 0,
+          "priceMove": 0.9767101144053908,
+          "relativeVolume": 0.7310796097046426,
+          "lastPrice": 156.11,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.150Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "AVGO",
-          "name": "Broadcom",
-          "title": "AVGO $380.15, price -3.1%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/AVGO",
-          "mentions": 5,
-          "sentiment": -0.18,
-          "priceMove": -3.0551104821455146,
-          "relativeVolume": 0.8031250043688268,
-          "lastPrice": 380.15,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.306Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "BA",
-          "name": "Boeing",
-          "title": "BA $216.71, price -1.9%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/BA",
-          "mentions": 4,
-          "sentiment": -0.18,
-          "priceMove": -1.8656893523945512,
-          "relativeVolume": 0.8205754848755467,
-          "lastPrice": 216.71,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.462Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "BABA",
-          "name": "Alibaba",
-          "title": "BABA $102.60, price -2.3%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/BABA",
-          "mentions": 5,
-          "sentiment": -0.18,
-          "priceMove": -2.2577890760619503,
-          "relativeVolume": 0.8175239260871296,
-          "lastPrice": 102.6,
-          "quoteAsOf": "2026-06-23T20:03:21.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.618Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "COIN",
-          "name": "Coinbase",
-          "title": "COIN $158.18, price -4.0%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/COIN",
-          "mentions": 7,
-          "sentiment": -0.18,
-          "priceMove": -4.040279353221346,
-          "relativeVolume": 0.8532451015557082,
-          "lastPrice": 158.18,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.774Z"
+          "published": "2026-06-24T02:07:08.139Z"
         },
         {
           "source": "Price/Volume",
@@ -2416,337 +2440,22 @@
           "lastPrice": 957.68,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:23.930Z"
+          "published": "2026-06-24T02:07:08.231Z"
         },
         {
           "source": "Price/Volume",
-          "ticker": "CRM",
-          "name": "Salesforce",
-          "title": "CRM $153.42, price +2.2%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CRM",
-          "mentions": 4,
-          "sentiment": 0.25,
-          "priceMove": 2.198244730980986,
-          "relativeVolume": 0.6970291189921883,
-          "lastPrice": 153.42,
-          "quoteAsOf": "2026-06-23T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.086Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "CRWD",
-          "name": "CrowdStrike",
-          "title": "CRWD $680.92, price +0.8%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CRWD",
+          "ticker": "MSCI",
+          "name": "MSCI Inc.",
+          "title": "MSCI $581.51, price +0.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/MSCI",
           "mentions": 3,
           "sentiment": 0,
-          "priceMove": 0.8113226250719572,
-          "relativeVolume": 0.7131849128853149,
-          "lastPrice": 680.92,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.242Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "CVNA",
-          "name": "Carvana",
-          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CVNA",
-          "mentions": 5,
-          "sentiment": -0.18,
-          "priceMove": -2.7598593362529593,
-          "relativeVolume": 0.6532798464651521,
-          "lastPrice": 64.83,
-          "quoteAsOf": "2026-06-23T20:03:38.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.399Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "DELL",
-          "name": "Dell Technologies",
-          "title": "DELL $427.78, price +2.2%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/DELL",
-          "mentions": 4,
-          "sentiment": 0.25,
-          "priceMove": 2.1661791526402916,
-          "relativeVolume": 0.6009827942188576,
-          "lastPrice": 427.78,
-          "quoteAsOf": "2026-06-23T20:04:48.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.555Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "DIS",
-          "name": "Disney",
-          "title": "DIS $103.53, price +1.1%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/DIS",
-          "mentions": 3,
-          "sentiment": 0.25,
-          "priceMove": 1.054175777382826,
-          "relativeVolume": 0.5101343982303161,
-          "lastPrice": 103.53,
-          "quoteAsOf": "2026-06-23T20:03:05.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.711Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "DKNG",
-          "name": "DraftKings",
-          "title": "DKNG $25.15, price -1.9%, volume 1.3x",
-          "url": "https://finance.yahoo.com/quote/DKNG",
-          "mentions": 6,
-          "sentiment": -0.18,
-          "priceMove": -1.949316280570473,
-          "relativeVolume": 1.2813407674071473,
-          "lastPrice": 25.15,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:24.867Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "F",
-          "name": "Ford",
-          "title": "F $14.00, price -0.8%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/F",
-          "mentions": 4,
-          "sentiment": 0,
-          "priceMove": -0.779586529792658,
-          "relativeVolume": 0.9405837759450105,
-          "lastPrice": 14,
-          "quoteAsOf": "2026-06-23T20:03:10.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.024Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "GME",
-          "name": "GameStop",
-          "title": "GME $21.08, price -0.3%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/GME",
-          "mentions": 2,
-          "sentiment": 0,
-          "priceMove": -0.28381925913308653,
-          "relativeVolume": 0.5912396948512719,
-          "lastPrice": 21.08,
+          "priceMove": 0.11363078967106532,
+          "relativeVolume": 0.8602348533967293,
+          "lastPrice": 581.51,
           "quoteAsOf": "2026-06-23T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.180Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "GOOGL",
-          "name": "Alphabet",
-          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/GOOGL",
-          "mentions": 4,
-          "sentiment": -0.18,
-          "priceMove": -1.015211836575609,
-          "relativeVolume": 0.8307721775595311,
-          "lastPrice": 346.13,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.337Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "HOOD",
-          "name": "Robinhood",
-          "title": "HOOD $103.25, price -2.3%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/HOOD",
-          "mentions": 5,
-          "sentiment": -0.18,
-          "priceMove": -2.3271205238653683,
-          "relativeVolume": 0.931180770865954,
-          "lastPrice": 103.25,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.493Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "INTC",
-          "name": "Intel",
-          "title": "INTC $132.28, price -6.1%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/INTC",
-          "mentions": 9,
-          "sentiment": -0.18,
-          "priceMove": -6.144460260674764,
-          "relativeVolume": 0.861616532216841,
-          "lastPrice": 132.28,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.649Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
-          "url": "https://finance.yahoo.com/quote/IONQ",
-          "mentions": 4,
-          "sentiment": 0,
-          "priceMove": -0.8058979720226728,
-          "relativeVolume": 1.1892625756004647,
-          "lastPrice": 57.85,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.806Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "JPM",
-          "name": "JPMorgan Chase",
-          "title": "JPM $334.14, price +0.8%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/JPM",
-          "mentions": 2,
-          "sentiment": 0,
-          "priceMove": 0.8024583460574256,
-          "relativeVolume": 0.562675277991155,
-          "lastPrice": 334.14,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:25.962Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "LCID",
-          "name": "Lucid",
-          "title": "LCID $5.19, price +0.6%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/LCID",
-          "mentions": 3,
-          "sentiment": 0,
-          "priceMove": 0.5813983231595824,
-          "relativeVolume": 0.7052154413565014,
-          "lastPrice": 5.19,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.118Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "META",
-          "name": "Meta Platforms",
-          "title": "META $562.20, price -0.3%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/META",
-          "mentions": 2,
-          "sentiment": 0,
-          "priceMove": -0.2926267016723455,
-          "relativeVolume": 0.6515721709128395,
-          "lastPrice": 562.2,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.274Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "MRNA",
-          "name": "Moderna",
-          "title": "MRNA $61.00, price +2.8%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/MRNA",
-          "mentions": 4,
-          "sentiment": 0.25,
-          "priceMove": 2.7887753732483054,
-          "relativeVolume": 0.4678335128268854,
-          "lastPrice": 61,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.430Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "MSFT",
-          "name": "Microsoft",
-          "title": "MSFT $373.94, price +1.8%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/MSFT",
-          "mentions": 4,
-          "sentiment": 0.25,
-          "priceMove": 1.7967016191829235,
-          "relativeVolume": 0.8838536404606124,
-          "lastPrice": 373.94,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.586Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "MSTR",
-          "name": "MicroStrategy",
-          "title": "MSTR $103.84, price -5.1%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/MSTR",
-          "mentions": 8,
-          "sentiment": -0.18,
-          "priceMove": -5.134294839647841,
-          "relativeVolume": 0.9155783279850538,
-          "lastPrice": 103.84,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.742Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "MU",
-          "name": "Micron",
-          "title": "MU $1051.77, price -13.2%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/MU",
-          "mentions": 17,
-          "sentiment": -0.18,
-          "priceMove": -13.175882401844085,
-          "relativeVolume": 1.110615525876381,
-          "lastPrice": 1051.77,
-          "quoteAsOf": "2026-06-23T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:26.898Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "NET",
-          "name": "Cloudflare",
-          "title": "NET $224.94, price +3.0%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/NET",
-          "mentions": 5,
-          "sentiment": 0.25,
-          "priceMove": 3.0039357864781326,
-          "relativeVolume": 0.7395349331713245,
-          "lastPrice": 224.94,
-          "quoteAsOf": "2026-06-23T20:03:58.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.054Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "NFLX",
-          "name": "Netflix",
-          "title": "NFLX $72.82, price -0.1%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/NFLX",
-          "mentions": 2,
-          "sentiment": 0,
-          "priceMove": -0.08232334752888837,
-          "relativeVolume": 0.698149293736281,
-          "lastPrice": 72.82,
-          "quoteAsOf": "2026-06-23T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.210Z"
-        },
-        {
-          "source": "Price/Volume",
-          "ticker": "NIO",
-          "name": "NIO",
-          "title": "NIO $5.09, price +0.8%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NIO",
-          "mentions": 4,
-          "sentiment": 0,
-          "priceMove": 0.792075401076686,
-          "relativeVolume": 1.024932354211146,
-          "lastPrice": 5.09,
-          "quoteAsOf": "2026-06-23T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.366Z"
+          "published": "2026-06-24T02:07:08.323Z"
         },
         {
           "source": "Price/Volume",
@@ -2761,7 +2470,487 @@
           "lastPrice": 200.04,
           "quoteAsOf": "2026-06-23T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.522Z"
+          "published": "2026-06-24T02:07:08.415Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "title": "AAPL $294.30, price -0.9%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/AAPL",
+          "mentions": 4,
+          "sentiment": 0,
+          "priceMove": -0.9124304489816681,
+          "relativeVolume": 0.9722108519752499,
+          "lastPrice": 294.3,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.506Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AI",
+          "name": "C3.ai",
+          "title": "AI $9.68, price -0.2%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/AI",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": -0.2061836047257837,
+          "relativeVolume": 0.6758401898734178,
+          "lastPrice": 9.68,
+          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.600Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AMC",
+          "name": "AMC Entertainment",
+          "title": "AMC $2.08, price -24.6%, volume 1.9x",
+          "url": "https://finance.yahoo.com/quote/AMC",
+          "mentions": 30,
+          "sentiment": -0.18,
+          "priceMove": -24.637680899017724,
+          "relativeVolume": 1.8775722954884921,
+          "lastPrice": 2.08,
+          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.692Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "title": "AMD $519.85, price -5.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/AMD",
+          "mentions": 8,
+          "sentiment": -0.18,
+          "priceMove": -5.761108823216348,
+          "relativeVolume": 0.8638547704528367,
+          "lastPrice": 519.85,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.785Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "title": "AMZN $234.11, price +0.6%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/AMZN",
+          "mentions": 4,
+          "sentiment": 0,
+          "priceMove": 0.5670375668788824,
+          "relativeVolume": 1.0177599270652746,
+          "lastPrice": 234.11,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.876Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "title": "ARM $366.39, price -10.1%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/ARM",
+          "mentions": 12,
+          "sentiment": -0.18,
+          "priceMove": -10.13685889751844,
+          "relativeVolume": 0.643056517252223,
+          "lastPrice": 366.39,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:08.968Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "title": "AVGO $380.15, price -3.1%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/AVGO",
+          "mentions": 5,
+          "sentiment": -0.18,
+          "priceMove": -3.0551104821455146,
+          "relativeVolume": 0.8031250043688268,
+          "lastPrice": 380.15,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.060Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "BA",
+          "name": "Boeing",
+          "title": "BA $216.71, price -1.9%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/BA",
+          "mentions": 4,
+          "sentiment": -0.18,
+          "priceMove": -1.8656893523945512,
+          "relativeVolume": 0.8205754848755467,
+          "lastPrice": 216.71,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.181Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "BABA",
+          "name": "Alibaba",
+          "title": "BABA $102.60, price -2.3%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/BABA",
+          "mentions": 5,
+          "sentiment": -0.18,
+          "priceMove": -2.2577890760619503,
+          "relativeVolume": 0.8175239260871296,
+          "lastPrice": 102.6,
+          "quoteAsOf": "2026-06-23T20:03:21.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.274Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "COIN",
+          "name": "Coinbase",
+          "title": "COIN $158.18, price -4.0%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/COIN",
+          "mentions": 7,
+          "sentiment": -0.18,
+          "priceMove": -4.040279353221346,
+          "relativeVolume": 0.8532451015557082,
+          "lastPrice": 158.18,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.365Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "title": "CRM $153.42, price +2.2%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CRM",
+          "mentions": 4,
+          "sentiment": 0.25,
+          "priceMove": 2.198244730980986,
+          "relativeVolume": 0.6970291189921883,
+          "lastPrice": 153.42,
+          "quoteAsOf": "2026-06-23T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.457Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "CRWD",
+          "name": "CrowdStrike",
+          "title": "CRWD $680.92, price +0.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CRWD",
+          "mentions": 3,
+          "sentiment": 0,
+          "priceMove": 0.8113226250719572,
+          "relativeVolume": 0.7131849128853149,
+          "lastPrice": 680.92,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.549Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "CVNA",
+          "name": "Carvana",
+          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CVNA",
+          "mentions": 5,
+          "sentiment": -0.18,
+          "priceMove": -2.7598593362529593,
+          "relativeVolume": 0.6532798464651521,
+          "lastPrice": 64.83,
+          "quoteAsOf": "2026-06-23T20:03:38.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.641Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "DELL",
+          "name": "Dell Technologies",
+          "title": "DELL $427.78, price +2.2%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/DELL",
+          "mentions": 4,
+          "sentiment": 0.25,
+          "priceMove": 2.1661791526402916,
+          "relativeVolume": 0.6009827942188576,
+          "lastPrice": 427.78,
+          "quoteAsOf": "2026-06-23T20:04:48.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.734Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "DIS",
+          "name": "Disney",
+          "title": "DIS $103.53, price +1.1%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/DIS",
+          "mentions": 3,
+          "sentiment": 0.25,
+          "priceMove": 1.054175777382826,
+          "relativeVolume": 0.5101343982303161,
+          "lastPrice": 103.53,
+          "quoteAsOf": "2026-06-23T20:03:05.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.846Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "DKNG",
+          "name": "DraftKings",
+          "title": "DKNG $25.15, price -1.9%, volume 1.3x",
+          "url": "https://finance.yahoo.com/quote/DKNG",
+          "mentions": 6,
+          "sentiment": -0.18,
+          "priceMove": -1.949316280570473,
+          "relativeVolume": 1.2813407674071473,
+          "lastPrice": 25.15,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:09.938Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "F",
+          "name": "Ford",
+          "title": "F $14.00, price -0.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/F",
+          "mentions": 4,
+          "sentiment": 0,
+          "priceMove": -0.779586529792658,
+          "relativeVolume": 0.9405837759450105,
+          "lastPrice": 14,
+          "quoteAsOf": "2026-06-23T20:03:10.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.048Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "GME",
+          "name": "GameStop",
+          "title": "GME $21.08, price -0.3%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/GME",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": -0.28381925913308653,
+          "relativeVolume": 0.5912396948512719,
+          "lastPrice": 21.08,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.140Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "GOOGL",
+          "name": "Alphabet",
+          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/GOOGL",
+          "mentions": 4,
+          "sentiment": -0.18,
+          "priceMove": -1.015211836575609,
+          "relativeVolume": 0.8307721775595311,
+          "lastPrice": 346.13,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.232Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "HOOD",
+          "name": "Robinhood",
+          "title": "HOOD $103.25, price -2.3%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/HOOD",
+          "mentions": 5,
+          "sentiment": -0.18,
+          "priceMove": -2.3271205238653683,
+          "relativeVolume": 0.931180770865954,
+          "lastPrice": 103.25,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.324Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "INTC",
+          "name": "Intel",
+          "title": "INTC $132.28, price -6.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/INTC",
+          "mentions": 9,
+          "sentiment": -0.18,
+          "priceMove": -6.144460260674764,
+          "relativeVolume": 0.861616532216841,
+          "lastPrice": 132.28,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.415Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
+          "url": "https://finance.yahoo.com/quote/IONQ",
+          "mentions": 4,
+          "sentiment": 0,
+          "priceMove": -0.8058979720226728,
+          "relativeVolume": 1.1892625756004647,
+          "lastPrice": 57.85,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.507Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "title": "JPM $334.14, price +0.8%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/JPM",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": 0.8024583460574256,
+          "relativeVolume": 0.562675277991155,
+          "lastPrice": 334.14,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.598Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "LCID",
+          "name": "Lucid",
+          "title": "LCID $5.19, price +0.6%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/LCID",
+          "mentions": 3,
+          "sentiment": 0,
+          "priceMove": 0.5813983231595824,
+          "relativeVolume": 0.7052154413565014,
+          "lastPrice": 5.19,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.690Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "title": "META $562.20, price -0.3%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/META",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": -0.2926267016723455,
+          "relativeVolume": 0.6515721709128395,
+          "lastPrice": 562.2,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.782Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "MRNA",
+          "name": "Moderna",
+          "title": "MRNA $61.00, price +2.8%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/MRNA",
+          "mentions": 4,
+          "sentiment": 0.25,
+          "priceMove": 2.7887753732483054,
+          "relativeVolume": 0.4678335128268854,
+          "lastPrice": 61,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.874Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "title": "MSFT $373.94, price +1.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/MSFT",
+          "mentions": 4,
+          "sentiment": 0.25,
+          "priceMove": 1.7967016191829235,
+          "relativeVolume": 0.8838536404606124,
+          "lastPrice": 373.94,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:10.969Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "MSTR",
+          "name": "MicroStrategy",
+          "title": "MSTR $103.84, price -5.1%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/MSTR",
+          "mentions": 8,
+          "sentiment": -0.18,
+          "priceMove": -5.134294839647841,
+          "relativeVolume": 0.9155783279850538,
+          "lastPrice": 103.84,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:11.062Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "MU",
+          "name": "Micron",
+          "title": "MU $1051.77, price -13.2%, volume 1.1x",
+          "url": "https://finance.yahoo.com/quote/MU",
+          "mentions": 17,
+          "sentiment": -0.18,
+          "priceMove": -13.175882401844085,
+          "relativeVolume": 1.110615525876381,
+          "lastPrice": 1051.77,
+          "quoteAsOf": "2026-06-23T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:11.153Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "NET",
+          "name": "Cloudflare",
+          "title": "NET $224.94, price +3.0%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/NET",
+          "mentions": 5,
+          "sentiment": 0.25,
+          "priceMove": 3.0039357864781326,
+          "relativeVolume": 0.7395349331713245,
+          "lastPrice": 224.94,
+          "quoteAsOf": "2026-06-23T20:03:58.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:11.245Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "title": "NFLX $72.82, price -0.1%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/NFLX",
+          "mentions": 2,
+          "sentiment": 0,
+          "priceMove": -0.08232334752888837,
+          "relativeVolume": 0.698149293736281,
+          "lastPrice": 72.82,
+          "quoteAsOf": "2026-06-23T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:11.336Z"
+        },
+        {
+          "source": "Price/Volume",
+          "ticker": "NIO",
+          "name": "NIO",
+          "title": "NIO $5.09, price +0.8%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NIO",
+          "mentions": 4,
+          "sentiment": 0,
+          "priceMove": 0.792075401076686,
+          "relativeVolume": 1.024932354211146,
+          "lastPrice": 5.09,
+          "quoteAsOf": "2026-06-23T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "published": "2026-06-24T02:07:11.428Z"
         },
         {
           "source": "Price/Volume",
@@ -2776,7 +2965,7 @@
           "lastPrice": 165.16,
           "quoteAsOf": "2026-06-23T20:04:19.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.678Z"
+          "published": "2026-06-24T02:07:11.519Z"
         },
         {
           "source": "Price/Volume",
@@ -2791,7 +2980,7 @@
           "lastPrice": 24.72,
           "quoteAsOf": "2026-06-23T20:03:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.834Z"
+          "published": "2026-06-24T02:07:11.658Z"
         },
         {
           "source": "Price/Volume",
@@ -2806,7 +2995,7 @@
           "lastPrice": 116.7,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:27.990Z"
+          "published": "2026-06-24T02:07:11.750Z"
         },
         {
           "source": "Price/Volume",
@@ -2821,7 +3010,7 @@
           "lastPrice": 41.7,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.146Z"
+          "published": "2026-06-24T02:07:11.841Z"
         },
         {
           "source": "Price/Volume",
@@ -2836,7 +3025,7 @@
           "lastPrice": 713.65,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.302Z"
+          "published": "2026-06-24T02:07:11.933Z"
         },
         {
           "source": "Price/Volume",
@@ -2851,7 +3040,7 @@
           "lastPrice": 47.11,
           "quoteAsOf": "2026-06-23T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.458Z"
+          "published": "2026-06-24T02:07:12.024Z"
         },
         {
           "source": "Price/Volume",
@@ -2866,7 +3055,7 @@
           "lastPrice": 14.89,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.614Z"
+          "published": "2026-06-24T02:07:12.116Z"
         },
         {
           "source": "Price/Volume",
@@ -2881,7 +3070,7 @@
           "lastPrice": 95.12,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.770Z"
+          "published": "2026-06-24T02:07:12.208Z"
         },
         {
           "source": "Price/Volume",
@@ -2896,7 +3085,7 @@
           "lastPrice": 135.055,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:28.926Z"
+          "published": "2026-06-24T02:07:12.300Z"
         },
         {
           "source": "Price/Volume",
@@ -2911,7 +3100,7 @@
           "lastPrice": 107.68,
           "quoteAsOf": "2026-06-23T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.082Z"
+          "published": "2026-06-24T02:07:12.391Z"
         },
         {
           "source": "Price/Volume",
@@ -2926,7 +3115,7 @@
           "lastPrice": 33.32,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.238Z"
+          "published": "2026-06-24T02:07:12.483Z"
         },
         {
           "source": "Price/Volume",
@@ -2941,7 +3130,7 @@
           "lastPrice": 230.41,
           "quoteAsOf": "2026-06-23T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.394Z"
+          "published": "2026-06-24T02:07:12.574Z"
         },
         {
           "source": "Price/Volume",
@@ -2956,7 +3145,7 @@
           "lastPrice": 17.29,
           "quoteAsOf": "2026-06-23T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.550Z"
+          "published": "2026-06-24T02:07:12.666Z"
         },
         {
           "source": "Price/Volume",
@@ -2971,7 +3160,7 @@
           "lastPrice": 733.58,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.707Z"
+          "published": "2026-06-24T02:07:12.770Z"
         },
         {
           "source": "Price/Volume",
@@ -2986,7 +3175,7 @@
           "lastPrice": 22.81,
           "quoteAsOf": "2026-06-23T20:01:40.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:29.863Z"
+          "published": "2026-06-24T02:07:12.891Z"
         },
         {
           "source": "Price/Volume",
@@ -3001,7 +3190,7 @@
           "lastPrice": 381.61,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.019Z"
+          "published": "2026-06-24T02:07:12.983Z"
         },
         {
           "source": "Price/Volume",
@@ -3016,7 +3205,7 @@
           "lastPrice": 69.67,
           "quoteAsOf": "2026-06-23T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.175Z"
+          "published": "2026-06-24T02:07:13.075Z"
         },
         {
           "source": "Price/Volume",
@@ -3031,7 +3220,7 @@
           "lastPrice": 31.46,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.332Z"
+          "published": "2026-06-24T02:07:13.168Z"
         },
         {
           "source": "Price/Volume",
@@ -3046,7 +3235,7 @@
           "lastPrice": 26.88,
           "quoteAsOf": "2026-06-23T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.488Z"
+          "published": "2026-06-24T02:07:13.259Z"
         },
         {
           "source": "Price/Volume",
@@ -3061,7 +3250,7 @@
           "lastPrice": 119.42,
           "quoteAsOf": "2026-06-23T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.650Z"
+          "published": "2026-06-24T02:07:13.365Z"
         },
         {
           "source": "Price/Volume",
@@ -3076,7 +3265,7 @@
           "lastPrice": 139.73,
           "quoteAsOf": "2026-06-23T20:03:21.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T01:59:30.806Z"
+          "published": "2026-06-24T02:07:13.469Z"
         },
         {
           "source": "FINRA Short Volume",
@@ -3455,6 +3644,21 @@
         },
         {
           "source": "FINRA Short Volume",
+          "ticker": "MSCI",
+          "name": "MSCI Inc.",
+          "title": "MSCI FINRA short volume 55% of reported volume (159,024.677 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "mentions": 11,
+          "sentiment": 0,
+          "priceMove": 0,
+          "relativeVolume": 1.5474786446782325,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-23T22:00:00.000Z"
+        },
+        {
+          "source": "FINRA Short Volume",
           "ticker": "MSFT",
           "name": "Microsoft",
           "title": "MSFT FINRA short volume 26% of reported volume (3,945,379.585 shares)",
@@ -3755,6 +3959,21 @@
         },
         {
           "source": "FINRA Short Volume",
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "title": "SPCX FINRA short volume 66% of reported volume (42,354,258.236 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "mentions": 14,
+          "sentiment": -0.1,
+          "priceMove": 0,
+          "relativeVolume": 1.6574888409184751,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "published": "2026-06-23T22:00:00.000Z"
+        },
+        {
+          "source": "FINRA Short Volume",
           "ticker": "SPY",
           "name": "SPDR S&P 500 ETF",
           "title": "SPY FINRA short volume 63% of reported volume (12,477,589.974 shares)",
@@ -3879,8 +4098,7 @@
         "Wallstreetbets: 403 Blocked",
         "Reddit Finance: 403 Blocked",
         "Reddit Finance: 403 Blocked",
-        "Reddit Finance: 403 Blocked",
-        "GDELT News: 429 Too Many Requests"
+        "Reddit Finance: 403 Blocked"
       ]
     }
   ]
