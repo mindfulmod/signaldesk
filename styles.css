@@ -662,7 +662,32 @@ td {
 }
 
 .cap-toggle {
-  background: var(--panel-2);
+  display: inline-flex;
+  gap: 6px;
+}
+
+.cap-toggle button {
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.cap-toggle button:hover {
+  border-color: var(--green);
+  color: var(--ink);
+}
+
+.cap-toggle button.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
 }
 
 .table-scroll {
@@ -684,6 +709,10 @@ td {
 }
 
 th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--panel);
   color: #40504a;
   font-size: 0.76rem;
   text-transform: uppercase;
@@ -698,9 +727,16 @@ tbody tr {
   cursor: pointer;
 }
 
-tbody tr:hover,
-tbody tr.selected {
+tbody tr:hover {
   background: #edf6ef;
+}
+
+tbody tr.selected {
+  background: #e0f0e5;
+}
+
+tbody tr.selected td:first-child {
+  box-shadow: inset 3px 0 0 var(--green);
 }
 
 .ticker-cell {
@@ -809,6 +845,10 @@ tbody tr.selected {
 
 .side-panel {
   align-self: start;
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
 }
 
 .selected-stock {
@@ -889,6 +929,12 @@ tbody tr.selected {
 
   .dashboard-grid {
     grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    position: static;
+    max-height: none;
+    overflow: visible;
   }
 }
 

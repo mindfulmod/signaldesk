@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T23:11:23.916Z",
+  "generatedAt": "2026-06-24T23:21:30.351Z",
   "dataMode": "real-public-no-key",
   "sourceNote": "Real snapshot from public no-key sources with dynamic ticker discovery. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
   "discoveryNote": "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
@@ -66,7 +66,7 @@
           "source": "Price/Volume",
           "title": "PLSM $6.59, price +93.3%, volume 8758.0x",
           "url": "https://finance.yahoo.com/quote/PLSM",
-          "published": "2026-06-24T23:10:22.055Z"
+          "published": "2026-06-24T23:20:20.176Z"
         }
       ],
       "marketCap": 42853742,
@@ -109,7 +109,7 @@
           "source": "Price/Volume",
           "title": "SCAG $0.71, price +100.7%, volume 547.8x",
           "url": "https://finance.yahoo.com/quote/SCAG",
-          "published": "2026-06-24T23:10:14.649Z"
+          "published": "2026-06-24T23:20:10.248Z"
         }
       ],
       "marketCap": 51336581,
@@ -152,7 +152,7 @@
           "source": "Price/Volume",
           "title": "FMFC $0.32, price +29.6%, volume 246.2x",
           "url": "https://finance.yahoo.com/quote/FMFC",
-          "published": "2026-06-24T23:10:11.930Z"
+          "published": "2026-06-24T23:20:06.522Z"
         }
       ]
     },
@@ -193,7 +193,7 @@
           "source": "Price/Volume",
           "title": "CUPR $5.74, price +45.7%, volume 101.1x",
           "url": "https://finance.yahoo.com/quote/CUPR",
-          "published": "2026-06-24T23:10:18.125Z"
+          "published": "2026-06-24T23:20:14.810Z"
         }
       ],
       "marketCap": 42275100,
@@ -236,7 +236,7 @@
           "source": "Price/Volume",
           "title": "BOXL $4.88, price +37.1%, volume 77.0x",
           "url": "https://finance.yahoo.com/quote/BOXL",
-          "published": "2026-06-24T23:10:10.419Z"
+          "published": "2026-06-24T23:20:04.525Z"
         }
       ],
       "marketCap": 19528330,
@@ -279,7 +279,7 @@
           "source": "Price/Volume",
           "title": "NWGL $0.27, price +21.8%, volume 15.1x",
           "url": "https://finance.yahoo.com/quote/NWGL",
-          "published": "2026-06-24T23:10:21.450Z"
+          "published": "2026-06-24T23:20:19.326Z"
         }
       ],
       "marketCap": 35489986,
@@ -322,11 +322,11 @@
           "source": "Price/Volume",
           "title": "WEN $7.86, price +25.6%, volume 19.3x",
           "url": "https://finance.yahoo.com/quote/WEN",
-          "published": "2026-06-24T23:10:08.604Z"
+          "published": "2026-06-24T23:20:02.143Z"
         }
       ],
       "marketCap": 1497177830,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "VTAK",
@@ -365,7 +365,7 @@
           "source": "Price/Volume",
           "title": "VTAK $1.19, price +29.3%, volume 5.0x",
           "url": "https://finance.yahoo.com/quote/VTAK",
-          "published": "2026-06-24T23:10:16.010Z"
+          "published": "2026-06-24T23:20:12.036Z"
         }
       ],
       "marketCap": 3204043,
@@ -408,7 +408,7 @@
           "source": "Price/Volume",
           "title": "MGN $0.22, price +26.9%, volume 3.2x",
           "url": "https://finance.yahoo.com/quote/MGN",
-          "published": "2026-06-24T23:10:20.692Z"
+          "published": "2026-06-24T23:20:18.344Z"
         }
       ],
       "marketCap": 3547375,
@@ -451,11 +451,11 @@
           "source": "Price/Volume",
           "title": "RUN $14.42, price +12.6%, volume 6.5x",
           "url": "https://finance.yahoo.com/quote/RUN",
-          "published": "2026-06-24T23:10:14.500Z"
+          "published": "2026-06-24T23:20:10.051Z"
         }
       ],
       "marketCap": 3439880719,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "TGHL",
@@ -494,7 +494,7 @@
           "source": "Price/Volume",
           "title": "TGHL $0.45, price +6.2%, volume 20.2x",
           "url": "https://finance.yahoo.com/quote/TGHL",
-          "published": "2026-06-24T23:10:24.623Z"
+          "published": "2026-06-24T23:20:24.000Z"
         }
       ]
     },
@@ -535,7 +535,7 @@
           "source": "Price/Volume",
           "title": "JUNS $0.25, price +7.2%, volume 5.3x",
           "url": "https://finance.yahoo.com/quote/JUNS",
-          "published": "2026-06-24T23:10:20.241Z"
+          "published": "2026-06-24T23:20:17.732Z"
         }
       ],
       "marketCap": 9179157,
@@ -578,7 +578,7 @@
           "source": "Price/Volume",
           "title": "CHWY $19.01, price +6.5%, volume 1.2x",
           "url": "https://finance.yahoo.com/quote/CHWY",
-          "published": "2026-06-24T23:10:17.670Z"
+          "published": "2026-06-24T23:20:14.215Z"
         }
       ]
     },
@@ -619,7 +619,7 @@
           "source": "Price/Volume",
           "title": "UMC $28.01, price +6.9%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/UMC",
-          "published": "2026-06-24T23:10:15.857Z"
+          "published": "2026-06-24T23:20:11.839Z"
         }
       ],
       "marketCap": 352594259195,
@@ -662,11 +662,11 @@
           "source": "Price/Volume",
           "title": "LEG $11.44, price +4.8%, volume 2.0x",
           "url": "https://finance.yahoo.com/quote/LEG",
-          "published": "2026-06-24T23:10:04.067Z"
+          "published": "2026-06-24T23:19:55.994Z"
         }
       ],
       "marketCap": 1560787297,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "JBLU",
@@ -705,11 +705,11 @@
           "source": "Price/Volume",
           "title": "JBLU $5.79, price +4.7%, volume 1.2x",
           "url": "https://finance.yahoo.com/quote/JBLU",
-          "published": "2026-06-24T23:10:20.087Z"
+          "published": "2026-06-24T23:20:17.529Z"
         }
       ],
       "marketCap": 2153989396,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "SKYQ",
@@ -748,7 +748,7 @@
           "source": "Price/Volume",
           "title": "SKYQ $2.62, price +59.8%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/SKYQ",
-          "published": "2026-06-24T23:10:15.253Z"
+          "published": "2026-06-24T23:20:11.049Z"
         }
       ],
       "marketCap": 12561973,
@@ -791,7 +791,7 @@
           "source": "Price/Volume",
           "title": "QXO $16.93, price +4.4%, volume 1.6x",
           "url": "https://finance.yahoo.com/quote/QXO",
-          "published": "2026-06-24T23:10:05.279Z"
+          "published": "2026-06-24T23:19:57.672Z"
         }
       ],
       "marketCap": 12277094748,
@@ -834,7 +834,7 @@
           "source": "Price/Volume",
           "title": "XRT $88.22, price +2.8%, volume 1.7x",
           "url": "https://finance.yahoo.com/quote/XRT",
-          "published": "2026-06-24T23:10:09.209Z"
+          "published": "2026-06-24T23:20:02.936Z"
         }
       ]
     },
@@ -875,7 +875,7 @@
           "source": "Price/Volume",
           "title": "KMB $106.73, price +2.7%, volume 1.6x",
           "url": "https://finance.yahoo.com/quote/KMB",
-          "published": "2026-06-24T23:10:07.094Z"
+          "published": "2026-06-24T23:20:00.075Z"
         }
       ],
       "marketCap": 35427994303,
@@ -918,11 +918,11 @@
           "source": "Price/Volume",
           "title": "ATEC $8.70, price +2.4%, volume 1.7x",
           "url": "https://finance.yahoo.com/quote/ATEC",
-          "published": "2026-06-24T23:10:04.371Z"
+          "published": "2026-06-24T23:19:56.397Z"
         }
       ],
       "marketCap": 1316802594,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "OPEN",
@@ -961,11 +961,11 @@
           "source": "Price/Volume",
           "title": "OPEN $4.28, price +1.9%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/OPEN",
-          "published": "2026-06-24T23:10:21.753Z"
+          "published": "2026-06-24T23:20:19.733Z"
         }
       ],
       "marketCap": 4129072785,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "BLZE",
@@ -1004,11 +1004,11 @@
           "source": "Price/Volume",
           "title": "BLZE $11.97, price +2.7%, volume 1.3x",
           "url": "https://finance.yahoo.com/quote/BLZE",
-          "published": "2026-06-24T23:10:17.066Z"
+          "published": "2026-06-24T23:20:13.419Z"
         }
       ],
       "marketCap": 718200000,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "DRAM",
@@ -1047,7 +1047,7 @@
           "source": "Price/Volume",
           "title": "DRAM $69.93, price +1.0%, volume 1.2x",
           "url": "https://finance.yahoo.com/quote/DRAM",
-          "published": "2026-06-24T23:10:18.729Z"
+          "published": "2026-06-24T23:20:15.605Z"
         }
       ]
     },
@@ -1088,7 +1088,7 @@
           "source": "Price/Volume",
           "title": "GDC $0.02, price +2.9%, volume 1.2x",
           "url": "https://finance.yahoo.com/quote/GDC",
-          "published": "2026-06-24T23:10:06.187Z"
+          "published": "2026-06-24T23:19:58.863Z"
         }
       ],
       "marketCap": 1312410,
@@ -1131,7 +1131,7 @@
           "source": "Price/Volume",
           "title": "ALIT $0.57, price +9.3%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/ALIT",
-          "published": "2026-06-24T23:10:09.511Z"
+          "published": "2026-06-24T23:20:03.332Z"
         }
       ],
       "marketCap": 255921318,
@@ -1174,7 +1174,7 @@
           "source": "Price/Volume",
           "title": "TAGG $42.66, price +0.5%, volume 6.6x",
           "url": "https://finance.yahoo.com/quote/TAGG",
-          "published": "2026-06-24T23:10:03.751Z"
+          "published": "2026-06-24T23:19:55.588Z"
         }
       ]
     },
@@ -1215,7 +1215,7 @@
           "source": "Price/Volume",
           "title": "SCHP $26.47, price +0.3%, volume 4.4x",
           "url": "https://finance.yahoo.com/quote/SCHP",
-          "published": "2026-06-24T23:10:03.302Z"
+          "published": "2026-06-24T23:19:55.387Z"
         }
       ]
     },
@@ -1256,7 +1256,7 @@
           "source": "Price/Volume",
           "title": "CNH $10.31, price +3.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/CNH",
-          "published": "2026-06-24T23:10:04.674Z"
+          "published": "2026-06-24T23:19:56.870Z"
         }
       ],
       "marketCap": 12783890036,
@@ -1299,7 +1299,7 @@
           "source": "Price/Volume",
           "title": "IJR $144.42, price +1.2%, volume 1.8x",
           "url": "https://finance.yahoo.com/quote/IJR",
-          "published": "2026-06-24T23:10:06.642Z"
+          "published": "2026-06-24T23:19:59.473Z"
         }
       ]
     },
@@ -1340,7 +1340,7 @@
           "source": "Price/Volume",
           "title": "RKT $14.73, price +9.4%, volume 1.4x",
           "url": "https://finance.yahoo.com/quote/RKT",
-          "published": "2026-06-24T23:10:14.347Z"
+          "published": "2026-06-24T23:20:09.841Z"
         }
       ]
     },
@@ -1381,7 +1381,7 @@
           "source": "Price/Volume",
           "title": "FRSH $9.37, price +2.0%, volume 1.3x",
           "url": "https://finance.yahoo.com/quote/FRSH",
-          "published": "2026-06-24T23:10:12.083Z"
+          "published": "2026-06-24T23:20:06.719Z"
         }
       ]
     },
@@ -1422,11 +1422,11 @@
           "source": "Price/Volume",
           "title": "ABCL $6.03, price +7.1%, volume 2.2x",
           "url": "https://finance.yahoo.com/quote/ABCL",
-          "published": "2026-06-24T23:10:16.159Z"
+          "published": "2026-06-24T23:20:12.236Z"
         }
       ],
       "marketCap": 1841413620,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "XBI",
@@ -1465,7 +1465,7 @@
           "source": "Price/Volume",
           "title": "XBI $149.71, price +1.8%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/XBI",
-          "published": "2026-06-24T23:10:08.907Z"
+          "published": "2026-06-24T23:20:02.541Z"
         }
       ]
     },
@@ -1576,11 +1576,11 @@
           "source": "Price/Volume",
           "title": "RXRX $3.23, price +2.2%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/RXRX",
-          "published": "2026-06-24T23:10:22.961Z"
+          "published": "2026-06-24T23:20:21.763Z"
         }
       ],
       "marketCap": 543676006,
-      "capTier": "small"
+      "capTier": "large"
     },
     {
       "ticker": "TLT",
@@ -1654,11 +1654,11 @@
           "source": "Price/Volume",
           "title": "CAG $13.61, price +1.3%, volume 1.2x",
           "url": "https://finance.yahoo.com/quote/CAG",
-          "published": "2026-06-24T23:10:10.721Z"
+          "published": "2026-06-24T23:20:04.939Z"
         }
       ],
       "marketCap": 6511529693,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "KRE",
@@ -1697,7 +1697,7 @@
           "source": "Price/Volume",
           "title": "KRE $73.97, price +1.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/KRE",
-          "published": "2026-06-24T23:10:05.130Z"
+          "published": "2026-06-24T23:19:57.474Z"
         }
       ]
     },
@@ -2753,7 +2753,7 @@
           "source": "Price/Volume",
           "title": "BURU $0.15, price -0.5%, volume 0.5x",
           "url": "https://finance.yahoo.com/quote/BURU",
-          "published": "2026-06-24T23:10:17.368Z"
+          "published": "2026-06-24T23:20:13.818Z"
         }
       ],
       "marketCap": 26190718,
@@ -2831,7 +2831,7 @@
           "source": "Price/Volume",
           "title": "XLU $45.54, price +1.0%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/XLU",
-          "published": "2026-06-24T23:10:09.060Z"
+          "published": "2026-06-24T23:20:02.737Z"
         }
       ]
     },
@@ -2872,11 +2872,11 @@
           "source": "Price/Volume",
           "title": "COMP $10.65, price +7.7%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/COMP",
-          "published": "2026-06-24T23:10:17.823Z"
+          "published": "2026-06-24T23:20:14.414Z"
         }
       ],
       "marketCap": 7957179929,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "IBRX",
@@ -2915,11 +2915,11 @@
           "source": "Price/Volume",
           "title": "IBRX $7.80, price +6.6%, volume 1.4x",
           "url": "https://finance.yahoo.com/quote/IBRX",
-          "published": "2026-06-24T23:10:19.785Z"
+          "published": "2026-06-24T23:20:17.128Z"
         }
       ],
       "marketCap": 8169361021,
-      "capTier": "mid"
+      "capTier": "large"
     },
     {
       "ticker": "FRTT",
@@ -2958,7 +2958,7 @@
           "source": "Price/Volume",
           "title": "FRTT $1.27, price -28.2%, volume 2133.1x",
           "url": "https://finance.yahoo.com/quote/FRTT",
-          "published": "2026-06-24T23:10:12.232Z"
+          "published": "2026-06-24T23:20:06.916Z"
         }
       ]
     }
@@ -5977,7 +5977,7 @@
       "lastPrice": 26.47,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:03.302Z"
+      "published": "2026-06-24T23:19:55.387Z"
     },
     {
       "source": "Price/Volume",
@@ -5992,7 +5992,7 @@
       "lastPrice": 42.655,
       "quoteAsOf": "2026-06-24T19:59:59.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:03.751Z"
+      "published": "2026-06-24T23:19:55.588Z"
     },
     {
       "source": "Price/Volume",
@@ -6007,7 +6007,7 @@
       "lastPrice": 26.39,
       "quoteAsOf": "2026-06-24T19:59:59.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:03.904Z"
+      "published": "2026-06-24T23:19:55.796Z"
     },
     {
       "source": "Price/Volume",
@@ -6022,7 +6022,7 @@
       "lastPrice": 11.44,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.067Z"
+      "published": "2026-06-24T23:19:55.994Z"
     },
     {
       "source": "Price/Volume",
@@ -6037,7 +6037,7 @@
       "lastPrice": 0.0095,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.222Z"
+      "published": "2026-06-24T23:19:56.196Z"
     },
     {
       "source": "Price/Volume",
@@ -6052,7 +6052,7 @@
       "lastPrice": 8.7,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.371Z"
+      "published": "2026-06-24T23:19:56.397Z"
     },
     {
       "source": "Price/Volume",
@@ -6067,7 +6067,7 @@
       "lastPrice": 20.32,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.525Z"
+      "published": "2026-06-24T23:19:56.592Z"
     },
     {
       "source": "Price/Volume",
@@ -6082,7 +6082,7 @@
       "lastPrice": 10.31,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.674Z"
+      "published": "2026-06-24T23:19:56.870Z"
     },
     {
       "source": "Price/Volume",
@@ -6097,7 +6097,7 @@
       "lastPrice": 0.1867,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.828Z"
+      "published": "2026-06-24T23:19:57.070Z"
     },
     {
       "source": "Price/Volume",
@@ -6112,7 +6112,7 @@
       "lastPrice": 73.73,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:04.977Z"
+      "published": "2026-06-24T23:19:57.265Z"
     },
     {
       "source": "Price/Volume",
@@ -6127,7 +6127,7 @@
       "lastPrice": 73.97,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.130Z"
+      "published": "2026-06-24T23:19:57.474Z"
     },
     {
       "source": "Price/Volume",
@@ -6142,7 +6142,7 @@
       "lastPrice": 16.93,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.279Z"
+      "published": "2026-06-24T23:19:57.672Z"
     },
     {
       "source": "Price/Volume",
@@ -6157,7 +6157,7 @@
       "lastPrice": 33.59,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.432Z"
+      "published": "2026-06-24T23:19:57.871Z"
     },
     {
       "source": "Price/Volume",
@@ -6172,7 +6172,7 @@
       "lastPrice": 122.6,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.582Z"
+      "published": "2026-06-24T23:19:58.072Z"
     },
     {
       "source": "Price/Volume",
@@ -6187,7 +6187,7 @@
       "lastPrice": 6.23,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.736Z"
+      "published": "2026-06-24T23:19:58.267Z"
     },
     {
       "source": "Price/Volume",
@@ -6202,7 +6202,7 @@
       "lastPrice": 182.26,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:05.885Z"
+      "published": "2026-06-24T23:19:58.461Z"
     },
     {
       "source": "Price/Volume",
@@ -6217,7 +6217,7 @@
       "lastPrice": 15.47,
       "quoteAsOf": "2026-06-24T20:00:46.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.038Z"
+      "published": "2026-06-24T23:19:58.664Z"
     },
     {
       "source": "Price/Volume",
@@ -6232,7 +6232,7 @@
       "lastPrice": 0.0216,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.187Z"
+      "published": "2026-06-24T23:19:58.863Z"
     },
     {
       "source": "Price/Volume",
@@ -6247,7 +6247,7 @@
       "lastPrice": 23.29,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.340Z"
+      "published": "2026-06-24T23:19:59.074Z"
     },
     {
       "source": "Price/Volume",
@@ -6262,7 +6262,7 @@
       "lastPrice": 3,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.489Z"
+      "published": "2026-06-24T23:19:59.275Z"
     },
     {
       "source": "Price/Volume",
@@ -6277,7 +6277,7 @@
       "lastPrice": 144.42,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.642Z"
+      "published": "2026-06-24T23:19:59.473Z"
     },
     {
       "source": "Price/Volume",
@@ -6292,7 +6292,7 @@
       "lastPrice": 10.93,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.791Z"
+      "published": "2026-06-24T23:19:59.673Z"
     },
     {
       "source": "Price/Volume",
@@ -6307,7 +6307,7 @@
       "lastPrice": 53.6,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:06.945Z"
+      "published": "2026-06-24T23:19:59.870Z"
     },
     {
       "source": "Price/Volume",
@@ -6322,7 +6322,7 @@
       "lastPrice": 106.73,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.094Z"
+      "published": "2026-06-24T23:20:00.075Z"
     },
     {
       "source": "Price/Volume",
@@ -6337,7 +6337,7 @@
       "lastPrice": 14,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.247Z"
+      "published": "2026-06-24T23:20:00.271Z"
     },
     {
       "source": "Price/Volume",
@@ -6352,7 +6352,7 @@
       "lastPrice": 41.82,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.396Z"
+      "published": "2026-06-24T23:20:00.481Z"
     },
     {
       "source": "Price/Volume",
@@ -6367,7 +6367,7 @@
       "lastPrice": 22.31,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.549Z"
+      "published": "2026-06-24T23:20:00.694Z"
     },
     {
       "source": "Price/Volume",
@@ -6382,7 +6382,7 @@
       "lastPrice": 22.98,
       "quoteAsOf": "2026-06-24T20:04:38.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.698Z"
+      "published": "2026-06-24T23:20:00.892Z"
     },
     {
       "source": "Price/Volume",
@@ -6397,7 +6397,7 @@
       "lastPrice": 77.7,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:07.851Z"
+      "published": "2026-06-24T23:20:01.093Z"
     },
     {
       "source": "Price/Volume",
@@ -6412,7 +6412,7 @@
       "lastPrice": 2.73,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.000Z"
+      "published": "2026-06-24T23:20:01.287Z"
     },
     {
       "source": "Price/Volume",
@@ -6427,7 +6427,7 @@
       "lastPrice": 154.54,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.153Z"
+      "published": "2026-06-24T23:20:01.486Z"
     },
     {
       "source": "Price/Volume",
@@ -6442,7 +6442,7 @@
       "lastPrice": 78.98,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.302Z"
+      "published": "2026-06-24T23:20:01.681Z"
     },
     {
       "source": "Price/Volume",
@@ -6457,7 +6457,7 @@
       "lastPrice": 45.68,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.456Z"
+      "published": "2026-06-24T23:20:01.943Z"
     },
     {
       "source": "Price/Volume",
@@ -6472,7 +6472,7 @@
       "lastPrice": 7.86,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.604Z"
+      "published": "2026-06-24T23:20:02.143Z"
     },
     {
       "source": "Price/Volume",
@@ -6487,7 +6487,7 @@
       "lastPrice": 2.19,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.758Z"
+      "published": "2026-06-24T23:20:02.340Z"
     },
     {
       "source": "Price/Volume",
@@ -6502,7 +6502,7 @@
       "lastPrice": 149.71,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:08.907Z"
+      "published": "2026-06-24T23:20:02.541Z"
     },
     {
       "source": "Price/Volume",
@@ -6517,7 +6517,7 @@
       "lastPrice": 45.54,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.060Z"
+      "published": "2026-06-24T23:20:02.737Z"
     },
     {
       "source": "Price/Volume",
@@ -6532,7 +6532,7 @@
       "lastPrice": 88.22,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.209Z"
+      "published": "2026-06-24T23:20:02.936Z"
     },
     {
       "source": "Price/Volume",
@@ -6547,7 +6547,7 @@
       "lastPrice": 10.49,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.362Z"
+      "published": "2026-06-24T23:20:03.134Z"
     },
     {
       "source": "Price/Volume",
@@ -6562,7 +6562,7 @@
       "lastPrice": 0.5728,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.511Z"
+      "published": "2026-06-24T23:20:03.332Z"
     },
     {
       "source": "Price/Volume",
@@ -6577,7 +6577,7 @@
       "lastPrice": 2.05,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.664Z"
+      "published": "2026-06-24T23:20:03.529Z"
     },
     {
       "source": "Price/Volume",
@@ -6592,7 +6592,7 @@
       "lastPrice": 41.98,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.813Z"
+      "published": "2026-06-24T23:20:03.728Z"
     },
     {
       "source": "Price/Volume",
@@ -6607,7 +6607,7 @@
       "lastPrice": 0.78,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:09.966Z"
+      "published": "2026-06-24T23:20:03.932Z"
     },
     {
       "source": "Price/Volume",
@@ -6622,7 +6622,7 @@
       "lastPrice": 10.78,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.116Z"
+      "published": "2026-06-24T23:20:04.131Z"
     },
     {
       "source": "Price/Volume",
@@ -6637,7 +6637,7 @@
       "lastPrice": 0.7489,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.269Z"
+      "published": "2026-06-24T23:20:04.328Z"
     },
     {
       "source": "Price/Volume",
@@ -6652,7 +6652,7 @@
       "lastPrice": 4.88,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.419Z"
+      "published": "2026-06-24T23:20:04.525Z"
     },
     {
       "source": "Price/Volume",
@@ -6667,7 +6667,7 @@
       "lastPrice": 3.91,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.572Z"
+      "published": "2026-06-24T23:20:04.722Z"
     },
     {
       "source": "Price/Volume",
@@ -6682,7 +6682,7 @@
       "lastPrice": 13.61,
       "quoteAsOf": "2026-06-24T20:04:39.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.721Z"
+      "published": "2026-06-24T23:20:04.939Z"
     },
     {
       "source": "Price/Volume",
@@ -6697,7 +6697,7 @@
       "lastPrice": 4.15,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:10.874Z"
+      "published": "2026-06-24T23:20:05.136Z"
     },
     {
       "source": "Price/Volume",
@@ -6712,7 +6712,7 @@
       "lastPrice": 1.02,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.023Z"
+      "published": "2026-06-24T23:20:05.329Z"
     },
     {
       "source": "Price/Volume",
@@ -6727,7 +6727,7 @@
       "lastPrice": 100.88,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.176Z"
+      "published": "2026-06-24T23:20:05.534Z"
     },
     {
       "source": "Price/Volume",
@@ -6742,7 +6742,7 @@
       "lastPrice": 67.91,
       "quoteAsOf": "2026-06-24T20:04:34.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.325Z"
+      "published": "2026-06-24T23:20:05.733Z"
     },
     {
       "source": "Price/Volume",
@@ -6757,7 +6757,7 @@
       "lastPrice": 0.3402,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.478Z"
+      "published": "2026-06-24T23:20:05.931Z"
     },
     {
       "source": "Price/Volume",
@@ -6772,7 +6772,7 @@
       "lastPrice": 67.25,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.627Z"
+      "published": "2026-06-24T23:20:06.128Z"
     },
     {
       "source": "Price/Volume",
@@ -6787,7 +6787,7 @@
       "lastPrice": 11.16,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.781Z"
+      "published": "2026-06-24T23:20:06.324Z"
     },
     {
       "source": "Price/Volume",
@@ -6802,7 +6802,7 @@
       "lastPrice": 0.324,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:11.930Z"
+      "published": "2026-06-24T23:20:06.522Z"
     },
     {
       "source": "Price/Volume",
@@ -6817,7 +6817,7 @@
       "lastPrice": 9.37,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.083Z"
+      "published": "2026-06-24T23:20:06.719Z"
     },
     {
       "source": "Price/Volume",
@@ -6832,7 +6832,7 @@
       "lastPrice": 1.27,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.232Z"
+      "published": "2026-06-24T23:20:06.916Z"
     },
     {
       "source": "Price/Volume",
@@ -6847,7 +6847,7 @@
       "lastPrice": 32.36,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.385Z"
+      "published": "2026-06-24T23:20:07.115Z"
     },
     {
       "source": "Price/Volume",
@@ -6862,7 +6862,7 @@
       "lastPrice": 0.6977,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.534Z"
+      "published": "2026-06-24T23:20:07.311Z"
     },
     {
       "source": "Price/Volume",
@@ -6877,7 +6877,7 @@
       "lastPrice": 14.1,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.687Z"
+      "published": "2026-06-24T23:20:07.510Z"
     },
     {
       "source": "Price/Volume",
@@ -6892,7 +6892,7 @@
       "lastPrice": 3.23,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.836Z"
+      "published": "2026-06-24T23:20:07.706Z"
     },
     {
       "source": "Price/Volume",
@@ -6907,7 +6907,7 @@
       "lastPrice": 109.41,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:12.989Z"
+      "published": "2026-06-24T23:20:07.906Z"
     },
     {
       "source": "Price/Volume",
@@ -6922,7 +6922,7 @@
       "lastPrice": 94.13,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.138Z"
+      "published": "2026-06-24T23:20:08.108Z"
     },
     {
       "source": "Price/Volume",
@@ -6937,7 +6937,7 @@
       "lastPrice": 7.68,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.291Z"
+      "published": "2026-06-24T23:20:08.304Z"
     },
     {
       "source": "Price/Volume",
@@ -6952,7 +6952,7 @@
       "lastPrice": 9.52,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.440Z"
+      "published": "2026-06-24T23:20:08.507Z"
     },
     {
       "source": "Price/Volume",
@@ -6967,7 +6967,7 @@
       "lastPrice": 710.62,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.593Z"
+      "published": "2026-06-24T23:20:08.706Z"
     },
     {
       "source": "Price/Volume",
@@ -6982,7 +6982,7 @@
       "lastPrice": 7.12,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.742Z"
+      "published": "2026-06-24T23:20:08.905Z"
     },
     {
       "source": "Price/Volume",
@@ -6997,7 +6997,7 @@
       "lastPrice": 9.7,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:13.895Z"
+      "published": "2026-06-24T23:20:09.102Z"
     },
     {
       "source": "Price/Volume",
@@ -7012,7 +7012,7 @@
       "lastPrice": 19.53,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.044Z"
+      "published": "2026-06-24T23:20:09.298Z"
     },
     {
       "source": "Price/Volume",
@@ -7027,7 +7027,7 @@
       "lastPrice": 5.04,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.198Z"
+      "published": "2026-06-24T23:20:09.647Z"
     },
     {
       "source": "Price/Volume",
@@ -7042,7 +7042,7 @@
       "lastPrice": 14.73,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.347Z"
+      "published": "2026-06-24T23:20:09.841Z"
     },
     {
       "source": "Price/Volume",
@@ -7057,7 +7057,7 @@
       "lastPrice": 14.42,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.500Z"
+      "published": "2026-06-24T23:20:10.051Z"
     },
     {
       "source": "Price/Volume",
@@ -7072,7 +7072,7 @@
       "lastPrice": 0.7106,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.649Z"
+      "published": "2026-06-24T23:20:10.248Z"
     },
     {
       "source": "Price/Volume",
@@ -7087,7 +7087,7 @@
       "lastPrice": 23.83,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.802Z"
+      "published": "2026-06-24T23:20:10.450Z"
     },
     {
       "source": "Price/Volume",
@@ -7102,7 +7102,7 @@
       "lastPrice": 0.905,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:14.951Z"
+      "published": "2026-06-24T23:20:10.654Z"
     },
     {
       "source": "Price/Volume",
@@ -7117,7 +7117,7 @@
       "lastPrice": 100.62,
       "quoteAsOf": "2026-06-24T20:02:32.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.104Z"
+      "published": "2026-06-24T23:20:10.850Z"
     },
     {
       "source": "Price/Volume",
@@ -7132,7 +7132,7 @@
       "lastPrice": 2.62,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.253Z"
+      "published": "2026-06-24T23:20:11.049Z"
     },
     {
       "source": "Price/Volume",
@@ -7147,7 +7147,7 @@
       "lastPrice": 229.57,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.406Z"
+      "published": "2026-06-24T23:20:11.251Z"
     },
     {
       "source": "Price/Volume",
@@ -7162,7 +7162,7 @@
       "lastPrice": 5.84,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.555Z"
+      "published": "2026-06-24T23:20:11.447Z"
     },
     {
       "source": "Price/Volume",
@@ -7177,7 +7177,7 @@
       "lastPrice": 73.3,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.708Z"
+      "published": "2026-06-24T23:20:11.644Z"
     },
     {
       "source": "Price/Volume",
@@ -7192,7 +7192,7 @@
       "lastPrice": 28.01,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:15.857Z"
+      "published": "2026-06-24T23:20:11.839Z"
     },
     {
       "source": "Price/Volume",
@@ -7207,7 +7207,7 @@
       "lastPrice": 1.19,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.010Z"
+      "published": "2026-06-24T23:20:12.036Z"
     },
     {
       "source": "Price/Volume",
@@ -7222,7 +7222,7 @@
       "lastPrice": 6.03,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.159Z"
+      "published": "2026-06-24T23:20:12.236Z"
     },
     {
       "source": "Price/Volume",
@@ -7237,7 +7237,7 @@
       "lastPrice": 0.7407,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.313Z"
+      "published": "2026-06-24T23:20:12.433Z"
     },
     {
       "source": "Price/Volume",
@@ -7252,7 +7252,7 @@
       "lastPrice": 5.05,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.461Z"
+      "published": "2026-06-24T23:20:12.628Z"
     },
     {
       "source": "Price/Volume",
@@ -7267,7 +7267,7 @@
       "lastPrice": 68.01,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.615Z"
+      "published": "2026-06-24T23:20:12.824Z"
     },
     {
       "source": "Price/Volume",
@@ -7282,7 +7282,7 @@
       "lastPrice": 91.59,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.764Z"
+      "published": "2026-06-24T23:20:13.024Z"
     },
     {
       "source": "Price/Volume",
@@ -7297,7 +7297,7 @@
       "lastPrice": 8.15,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:16.917Z"
+      "published": "2026-06-24T23:20:13.221Z"
     },
     {
       "source": "Price/Volume",
@@ -7312,7 +7312,7 @@
       "lastPrice": 11.97,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.066Z"
+      "published": "2026-06-24T23:20:13.419Z"
     },
     {
       "source": "Price/Volume",
@@ -7327,7 +7327,7 @@
       "lastPrice": 3.89,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.219Z"
+      "published": "2026-06-24T23:20:13.624Z"
     },
     {
       "source": "Price/Volume",
@@ -7342,7 +7342,7 @@
       "lastPrice": 0.1463,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.368Z"
+      "published": "2026-06-24T23:20:13.818Z"
     },
     {
       "source": "Price/Volume",
@@ -7357,7 +7357,7 @@
       "lastPrice": 0.6817,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.521Z"
+      "published": "2026-06-24T23:20:14.017Z"
     },
     {
       "source": "Price/Volume",
@@ -7372,7 +7372,7 @@
       "lastPrice": 19.01,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.670Z"
+      "published": "2026-06-24T23:20:14.215Z"
     },
     {
       "source": "Price/Volume",
@@ -7387,7 +7387,7 @@
       "lastPrice": 10.65,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.823Z"
+      "published": "2026-06-24T23:20:14.414Z"
     },
     {
       "source": "Price/Volume",
@@ -7402,7 +7402,7 @@
       "lastPrice": 4.54,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:17.972Z"
+      "published": "2026-06-24T23:20:14.611Z"
     },
     {
       "source": "Price/Volume",
@@ -7417,7 +7417,7 @@
       "lastPrice": 5.74,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.125Z"
+      "published": "2026-06-24T23:20:14.810Z"
     },
     {
       "source": "Price/Volume",
@@ -7432,7 +7432,7 @@
       "lastPrice": 1.82,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.274Z"
+      "published": "2026-06-24T23:20:15.006Z"
     },
     {
       "source": "Price/Volume",
@@ -7447,7 +7447,7 @@
       "lastPrice": 24.53,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.427Z"
+      "published": "2026-06-24T23:20:15.211Z"
     },
     {
       "source": "Price/Volume",
@@ -7462,7 +7462,7 @@
       "lastPrice": 29.38,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.576Z"
+      "published": "2026-06-24T23:20:15.409Z"
     },
     {
       "source": "Price/Volume",
@@ -7477,7 +7477,7 @@
       "lastPrice": 69.93,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.729Z"
+      "published": "2026-06-24T23:20:15.605Z"
     },
     {
       "source": "Price/Volume",
@@ -7492,7 +7492,7 @@
       "lastPrice": 3.7,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:18.879Z"
+      "published": "2026-06-24T23:20:15.806Z"
     },
     {
       "source": "Price/Volume",
@@ -7507,7 +7507,7 @@
       "lastPrice": 11.92,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.032Z"
+      "published": "2026-06-24T23:20:16.004Z"
     },
     {
       "source": "Price/Volume",
@@ -7522,7 +7522,7 @@
       "lastPrice": 21.56,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.181Z"
+      "published": "2026-06-24T23:20:16.200Z"
     },
     {
       "source": "Price/Volume",
@@ -7537,7 +7537,7 @@
       "lastPrice": 4.09,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.334Z"
+      "published": "2026-06-24T23:20:16.400Z"
     },
     {
       "source": "Price/Volume",
@@ -7552,7 +7552,7 @@
       "lastPrice": 14.52,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.483Z"
+      "published": "2026-06-24T23:20:16.610Z"
     },
     {
       "source": "Price/Volume",
@@ -7567,7 +7567,7 @@
       "lastPrice": 97.19,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.636Z"
+      "published": "2026-06-24T23:20:16.928Z"
     },
     {
       "source": "Price/Volume",
@@ -7582,7 +7582,7 @@
       "lastPrice": 7.8,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.785Z"
+      "published": "2026-06-24T23:20:17.128Z"
     },
     {
       "source": "Price/Volume",
@@ -7597,7 +7597,7 @@
       "lastPrice": 296.69,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:19.938Z"
+      "published": "2026-06-24T23:20:17.327Z"
     },
     {
       "source": "Price/Volume",
@@ -7612,7 +7612,7 @@
       "lastPrice": 5.79,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.087Z"
+      "published": "2026-06-24T23:20:17.529Z"
     },
     {
       "source": "Price/Volume",
@@ -7627,7 +7627,7 @@
       "lastPrice": 0.253,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.241Z"
+      "published": "2026-06-24T23:20:17.732Z"
     },
     {
       "source": "Price/Volume",
@@ -7642,7 +7642,7 @@
       "lastPrice": 6.12,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.390Z"
+      "published": "2026-06-24T23:20:17.933Z"
     },
     {
       "source": "Price/Volume",
@@ -7657,7 +7657,7 @@
       "lastPrice": 2.12,
       "quoteAsOf": "2026-06-24T20:02:17.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.543Z"
+      "published": "2026-06-24T23:20:18.141Z"
     },
     {
       "source": "Price/Volume",
@@ -7672,7 +7672,7 @@
       "lastPrice": 0.2183,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.692Z"
+      "published": "2026-06-24T23:20:18.344Z"
     },
     {
       "source": "Price/Volume",
@@ -7687,7 +7687,7 @@
       "lastPrice": 1.97,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.845Z"
+      "published": "2026-06-24T23:20:18.541Z"
     },
     {
       "source": "Price/Volume",
@@ -7702,7 +7702,7 @@
       "lastPrice": 9.01,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:20.994Z"
+      "published": "2026-06-24T23:20:18.735Z"
     },
     {
       "source": "Price/Volume",
@@ -7717,7 +7717,7 @@
       "lastPrice": 259.66,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.147Z"
+      "published": "2026-06-24T23:20:18.932Z"
     },
     {
       "source": "Price/Volume",
@@ -7732,7 +7732,7 @@
       "lastPrice": 3.95,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.296Z"
+      "published": "2026-06-24T23:20:19.127Z"
     },
     {
       "source": "Price/Volume",
@@ -7747,7 +7747,7 @@
       "lastPrice": 0.268,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.450Z"
+      "published": "2026-06-24T23:20:19.326Z"
     },
     {
       "source": "Price/Volume",
@@ -7762,7 +7762,7 @@
       "lastPrice": 5.3,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.599Z"
+      "published": "2026-06-24T23:20:19.523Z"
     },
     {
       "source": "Price/Volume",
@@ -7777,7 +7777,7 @@
       "lastPrice": 4.28,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.753Z"
+      "published": "2026-06-24T23:20:19.733Z"
     },
     {
       "source": "Price/Volume",
@@ -7792,7 +7792,7 @@
       "lastPrice": 24.04,
       "quoteAsOf": "2026-06-24T20:04:49.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:21.902Z"
+      "published": "2026-06-24T23:20:19.981Z"
     },
     {
       "source": "Price/Volume",
@@ -7807,7 +7807,7 @@
       "lastPrice": 6.59,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.055Z"
+      "published": "2026-06-24T23:20:20.176Z"
     },
     {
       "source": "Price/Volume",
@@ -7822,7 +7822,7 @@
       "lastPrice": 10.66,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.204Z"
+      "published": "2026-06-24T23:20:20.372Z"
     },
     {
       "source": "Price/Volume",
@@ -7837,7 +7837,7 @@
       "lastPrice": 27.42,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.357Z"
+      "published": "2026-06-24T23:20:20.568Z"
     },
     {
       "source": "Price/Volume",
@@ -7852,7 +7852,7 @@
       "lastPrice": 14.64,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.506Z"
+      "published": "2026-06-24T23:20:20.768Z"
     },
     {
       "source": "Price/Volume",
@@ -7867,7 +7867,7 @@
       "lastPrice": 1.91,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.659Z"
+      "published": "2026-06-24T23:20:20.964Z"
     },
     {
       "source": "Price/Volume",
@@ -7882,7 +7882,7 @@
       "lastPrice": 13.45,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.808Z"
+      "published": "2026-06-24T23:20:21.199Z"
     },
     {
       "source": "Price/Volume",
@@ -7897,7 +7897,7 @@
       "lastPrice": 3.23,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:22.961Z"
+      "published": "2026-06-24T23:20:21.763Z"
     },
     {
       "source": "Price/Volume",
@@ -7912,7 +7912,7 @@
       "lastPrice": 6.82,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.111Z"
+      "published": "2026-06-24T23:20:21.961Z"
     },
     {
       "source": "Price/Volume",
@@ -7927,7 +7927,7 @@
       "lastPrice": 31.72,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.264Z"
+      "published": "2026-06-24T23:20:22.163Z"
     },
     {
       "source": "Price/Volume",
@@ -7942,7 +7942,7 @@
       "lastPrice": 0.981,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.413Z"
+      "published": "2026-06-24T23:20:22.386Z"
     },
     {
       "source": "Price/Volume",
@@ -7957,7 +7957,7 @@
       "lastPrice": 2.71,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.567Z"
+      "published": "2026-06-24T23:20:22.585Z"
     },
     {
       "source": "Price/Volume",
@@ -7972,7 +7972,7 @@
       "lastPrice": 1.37,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.716Z"
+      "published": "2026-06-24T23:20:22.783Z"
     },
     {
       "source": "Price/Volume",
@@ -7987,7 +7987,7 @@
       "lastPrice": 51.78,
       "quoteAsOf": "2026-06-24T20:00:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:23.870Z"
+      "published": "2026-06-24T23:20:22.988Z"
     },
     {
       "source": "Price/Volume",
@@ -8002,7 +8002,7 @@
       "lastPrice": 17.31,
       "quoteAsOf": "2026-06-24T20:00:03.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:24.019Z"
+      "published": "2026-06-24T23:20:23.187Z"
     },
     {
       "source": "Price/Volume",
@@ -8017,7 +8017,7 @@
       "lastPrice": 6.34,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:24.172Z"
+      "published": "2026-06-24T23:20:23.381Z"
     },
     {
       "source": "Price/Volume",
@@ -8032,7 +8032,7 @@
       "lastPrice": 733.24,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:24.321Z"
+      "published": "2026-06-24T23:20:23.603Z"
     },
     {
       "source": "Price/Volume",
@@ -8047,7 +8047,7 @@
       "lastPrice": 0.842,
       "quoteAsOf": "2026-06-24T20:00:02.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:24.474Z"
+      "published": "2026-06-24T23:20:23.803Z"
     },
     {
       "source": "Price/Volume",
@@ -8062,7 +8062,7 @@
       "lastPrice": 0.447,
       "quoteAsOf": "2026-06-24T20:00:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "published": "2026-06-24T23:10:24.623Z"
+      "published": "2026-06-24T23:20:24.000Z"
     }
   ]
 }

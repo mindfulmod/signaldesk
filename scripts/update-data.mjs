@@ -18,9 +18,9 @@ const FINRA_MIN_RATIO = 0.30;
 const FINRA_MIN_SHORT_VOL = 50_000;
 // SEC requires a descriptive User-Agent with contact info for its public data APIs.
 const SEC_USER_AGENT = "SignalDesk/1.0 (m.aali9@gmail.com)";
-// Market-cap tier thresholds (USD). Used to let users filter the ranking by size.
-const LARGE_CAP_MIN = 10_000_000_000; // >= $10B
-const SMALL_CAP_MAX = 2_000_000_000; //  < $2B
+// Market-cap split (USD). A single $500M threshold makes the UI a clean two-way toggle.
+const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
+const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 
 const SOURCES = [
   "Wallstreetbets",
@@ -164,7 +164,12 @@ async function main() {
 
   for (const { ticker } of rankedStockEntries(events, PRICE_UNIVERSE_LIMIT)) {
     try {
-      const market = await fetchMarket(ticker);
+      let market = await fetchMarket(ticker);
+      if (!market?.lastPrice) {
+        // Yahoo throttles long bursts; pause and retry once before giving up.
+        await sleep(400);
+        market = await fetchMarket(ticker);
+      }
       if (market) {
         events.push({
           source: "Price/Volume",
@@ -185,6 +190,8 @@ async function main() {
     } catch (error) {
       failures.push(`Price/Volume ${ticker}: ${error.message}`);
     }
+    // Gentle pacing to stay under Yahoo/Stooq burst limits.
+    await sleep(70);
   }
 
   for (const { ticker } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
@@ -888,10 +895,8 @@ async function enrichMarketCaps(signals, failures) {
 }
 
 function capTierFor(marketCap) {
-  if (!Number.isFinite(marketCap)) return null;
-  if (marketCap >= LARGE_CAP_MIN) return "large";
-  if (marketCap < SMALL_CAP_MAX) return "small";
-  return "mid";
+  if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
+  return marketCap >= LARGE_CAP_MIN ? "large" : "small";
 }
 
 let secTickerMapCache = null;

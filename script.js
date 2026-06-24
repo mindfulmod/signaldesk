@@ -35,8 +35,8 @@ let rankMode = "signal";
 let capFilter = "all"; // "all" | "large" | "small"
 let selectedDays = 1;
 
-const LARGE_CAP_MIN = 10_000_000_000; // >= $10B
-const SMALL_CAP_MAX = 2_000_000_000; //  < $2B
+const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
+const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 
 const byId = (id) => document.getElementById(id);
 const fmt = new Intl.NumberFormat("en-US");
@@ -320,10 +320,8 @@ function filteredSignals() {
 }
 
 function capTierFor(marketCap) {
-  if (!Number.isFinite(marketCap)) return null;
-  if (marketCap >= LARGE_CAP_MIN) return "large";
-  if (marketCap < SMALL_CAP_MAX) return "small";
-  return "mid";
+  if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
+  return marketCap >= LARGE_CAP_MIN ? "large" : "small";
 }
 
 function applyCapFilter(items) {
@@ -503,7 +501,7 @@ function updateMetrics(items) {
 }
 
 function renderTable(items) {
-  const capLabel = capFilter === "large" ? " large-cap (≥$10B)" : capFilter === "small" ? " small-cap (<$2B)" : "";
+  const capLabel = capFilter === "large" ? " large-cap (≥$500M)" : capFilter === "small" ? " small-cap (<$500M)" : "";
   byId("rankSubhead").textContent = items.length
     ? `Showing ${items.length}${capLabel} real-data tickers`
     : `No${capLabel} tickers in this snapshot${capFilter === "all" ? "" : " — market caps come from SEC filings and may be missing for ETFs or new listings"}`;
@@ -546,6 +544,10 @@ function renderTable(items) {
     row.addEventListener("click", () => {
       selectedTicker = row.dataset.ticker;
       render();
+      // On narrow screens the detail panel sits below the table; bring it into view.
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        document.querySelector(".side-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 }
@@ -789,7 +791,7 @@ function sentimentLabel(value) {
 }
 
 function formatPrice(value) {
-  if (!Number.isFinite(value)) return "-";
+  if (!Number.isFinite(value) || value <= 0) return "-";
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -802,13 +804,13 @@ function formatQuoteCell(item) {
   const price = formatPrice(item.lastPrice);
   if (price === "-") return "-";
   const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
-  const cap = Number.isFinite(item.marketCap) ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
+  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
   return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
 }
 
 function capLabelFor(item) {
   const tier = item.capTier || capTierFor(item.marketCap);
-  const tierName = tier === "large" ? "Large cap" : tier === "small" ? "Small cap" : tier === "mid" ? "Mid cap" : "";
+  const tierName = tier === "large" ? "Large cap" : tier === "small" ? "Small cap" : "";
   return `$${shortFmt.format(item.marketCap)}${tierName ? ` • ${tierName}` : ""}`;
 }
 
@@ -881,9 +883,8 @@ function bindEvents() {
   byId("viewSignal").addEventListener("click", () => setRankMode("signal"));
   byId("viewMentions").addEventListener("click", () => setRankMode("mentions"));
   byId("viewMomentum").addEventListener("click", () => setRankMode("momentum"));
-  byId("capAll").addEventListener("click", () => setCapFilter("all"));
-  byId("capLarge").addEventListener("click", () => setCapFilter("large"));
-  byId("capSmall").addEventListener("click", () => setCapFilter("small"));
+  byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
+  byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
   byId("refreshData").addEventListener("click", async () => {
     await loadSnapshot(true);
     render();
@@ -902,9 +903,10 @@ function setRankMode(mode) {
 
 function setCapFilter(filter) {
   capFilter = filter;
-  byId("capAll").classList.toggle("active", filter === "all");
   byId("capLarge").classList.toggle("active", filter === "large");
+  byId("capLarge").setAttribute("aria-pressed", String(filter === "large"));
   byId("capSmall").classList.toggle("active", filter === "small");
+  byId("capSmall").setAttribute("aria-pressed", String(filter === "small"));
   render();
 }
 
