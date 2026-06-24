@@ -280,7 +280,10 @@ async function yahooTickerNews(ticker) {
 
 async function collectTickerNews(events, failures, ticker, name) {
   const jobs = [
-    ["GDELT News", () => gdeltTickerNews(ticker, name)],
+    ["GDELT News", async () => {
+      await delay(1300);
+      return gdeltTickerNews(ticker, name);
+    }],
     ["Google News", () => newsRssItems("Google News", ticker, name)],
     ["Bing News", () => newsRssItems("Bing News", ticker, name)],
   ];
@@ -384,6 +387,10 @@ function parseGdeltDate(value) {
   const digits = String(value).replace(/\D/g, "");
   if (digits.length < 14) return new Date().toISOString();
   return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)}T${digits.slice(8, 10)}:${digits.slice(10, 12)}:${digits.slice(12, 14)}.000Z`;
+}
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function fetchMarket(ticker) {
