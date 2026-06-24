@@ -201,6 +201,7 @@
                 <p id="rankSubhead">Showing the top 30 tickers</p>
               </div>
               <div class="toggle-stack">
+                <button id="togglePanel" class="panel-toggle" type="button" aria-pressed="false" aria-controls="detailPanel">Hide details</button>
                 <div class="view-toggle" role="group" aria-label="Table display mode">
                   <button id="viewSignal" class="active" type="button">Signal</button>
                   <button id="viewMentions" type="button">Mentions</button>
@@ -235,7 +236,7 @@
             </div>
           </div>
 
-          <aside class="side-panel" aria-label="Selected stock detail">
+          <aside id="detailPanel" class="side-panel" aria-label="Selected stock detail">
             <div class="selected-stock">
               <span id="selectedRank">Rank #1</span>
               <h2 id="selectedTicker">NVDA</h2>

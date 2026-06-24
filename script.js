@@ -935,6 +935,7 @@ function bindEvents() {
     render();
   });
   byId("exportCsv").addEventListener("click", exportCsv);
+  byId("togglePanel").addEventListener("click", toggleDetailPanel);
   window.addEventListener("resize", render);
 }
 
@@ -962,6 +963,14 @@ function setAttentionFilter(filter) {
   byId("attnQuiet").classList.toggle("active", filter === "quiet");
   byId("attnQuiet").setAttribute("aria-pressed", String(filter === "quiet"));
   render();
+}
+
+function toggleDetailPanel() {
+  const grid = document.querySelector(".dashboard-grid");
+  const hidden = grid.classList.toggle("details-hidden");
+  const button = byId("togglePanel");
+  button.textContent = hidden ? "Show details" : "Hide details";
+  button.setAttribute("aria-pressed", String(hidden));
 }
 
 function setDataStatus(message) {

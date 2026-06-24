@@ -627,6 +627,33 @@ td {
   gap: 18px;
 }
 
+.dashboard-grid.details-hidden {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.dashboard-grid.details-hidden .side-panel {
+  display: none;
+}
+
+.panel-toggle {
+  align-self: flex-end;
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.panel-toggle:hover {
+  border-color: var(--green);
+  color: var(--ink);
+}
+
 .table-panel,
 .side-panel {
   padding: 18px;
