@@ -326,18 +326,18 @@ function render() {
   }
 
   const items = filteredSignals();
-  const top30 = items.slice(0, 30);
-  if (!selectedTicker || !top30.some((item) => item.ticker === selectedTicker)) {
-    selectedTicker = top30[0]?.ticker || "";
+  const top50 = items.slice(0, 50);
+  if (!selectedTicker || !top50.some((item) => item.ticker === selectedTicker)) {
+    selectedTicker = top50[0]?.ticker || "";
   }
 
   updateStatus();
   updateRangeNote();
   updateMetrics(items);
   renderBuyCandidates(items);
-  renderTable(top30);
+  renderTable(top50);
   renderChart(state, items);
-  renderDetail(items, top30);
+  renderDetail(items, top50);
 }
 
 function renderEmptyState() {
@@ -658,7 +658,7 @@ function updateRangeNote() {
 }
 
 function renderDetail(items, top30) {
-  const selected = items.find((item) => item.ticker === selectedTicker) || top30[0];
+  const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
   if (!selected) return;
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
   byId("selectedRank").textContent = `Signal rank #${rank}`;
@@ -735,7 +735,7 @@ function setPreset(days) {
 }
 
 function exportCsv() {
-  const data = filteredSignals().slice(0, 30);
+  const data = filteredSignals().slice(0, 50);
   const header = ["rank", "ticker", "name", "market_price", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
   const lines = [header.join(",")].concat(
     data.map((item, index) =>

@@ -7,9 +7,15 @@ const HISTORY = new URL("data/history.json", ROOT);
 const HISTORY_JS = new URL("data/history.js", ROOT);
 const HISTORY_DAYS = 120;
 const USER_AGENT = "SignalDeskDaily/1.0 (+https://openai.com/; codex automation)";
+// Reddit blocks generic bot UAs; use a transparent but descriptive string for Reddit requests
+const REDDIT_USER_AGENT = "bot:SignalDeskPublic:1.0 (by /u/mindfulmod; read-only public data aggregation)";
 const DISCOVERY_LIMIT = 80;
 const PRICE_UNIVERSE_LIMIT = 140;
 const NEWS_UNIVERSE_LIMIT = 70;
+// FINRA universe: how many candidates to register from the short-volume file
+const FINRA_UNIVERSE_LIMIT = 200;
+const FINRA_MIN_RATIO = 0.30;
+const FINRA_MIN_SHORT_VOL = 50_000;
 
 const SOURCES = [
   "Wallstreetbets",
@@ -25,68 +31,12 @@ const SOURCES = [
   "Price/Volume",
 ];
 
-const STOCKS = [
-  ["NVDA", "NVIDIA Corporation", ["nvidia", "nvda"]],
-  ["TSLA", "Tesla", ["tesla", "tsla"]],
-  ["SPCX", "SpaceX", ["spacex", "spcx"]],
-  ["AMD", "Advanced Micro Devices", ["advanced micro devices", "amd"]],
-  ["AAPL", "Apple", ["apple", "aapl"]],
-  ["PLTR", "Palantir", ["palantir", "pltr"]],
-  ["SMCI", "Super Micro Computer", ["super micro", "smci"]],
-  ["GME", "GameStop", ["gamestop", "gme"]],
-  ["AMZN", "Amazon", ["amazon", "amzn"]],
-  ["META", "Meta Platforms", ["meta platforms", "meta"]],
-  ["MSFT", "Microsoft", ["microsoft", "msft"]],
-  ["COIN", "Coinbase", ["coinbase", "coin"]],
-  ["MSTR", "MicroStrategy", ["microstrategy", "mstr"]],
-  ["RIVN", "Rivian", ["rivian", "rivn"]],
-  ["SOFI", "SoFi", ["sofi"]],
-  ["HOOD", "Robinhood", ["robinhood", "hood"]],
-  ["NFLX", "Netflix", ["netflix", "nflx"]],
-  ["GOOGL", "Alphabet", ["alphabet", "google", "googl"]],
-  ["BABA", "Alibaba", ["alibaba", "baba"]],
-  ["NIO", "NIO", ["nio"]],
-  ["LCID", "Lucid", ["lucid", "lcid"]],
-  ["INTC", "Intel", ["intel", "intc"]],
-  ["AVGO", "Broadcom", ["broadcom", "avgo"]],
-  ["ARM", "Arm Holdings", ["arm holdings"]],
-  ["SHOP", "Shopify", ["shopify", "shop"]],
-  ["SNOW", "Snowflake", ["snowflake", "snow"]],
-  ["DKNG", "DraftKings", ["draftkings", "dkng"]],
-  ["SPY", "SPDR S&P 500 ETF", ["spy", "s&p 500", "s&p"]],
-  ["QQQ", "Invesco QQQ ETF", ["qqq", "nasdaq 100"]],
-  ["UBER", "Uber", ["uber"]],
-  ["DIS", "Disney", ["disney", "dis"]],
-  ["PYPL", "PayPal", ["paypal", "pypl"]],
-  ["T", "AT&T", ["at&t", " att "]],
-  ["F", "Ford", ["ford", " f "]],
-  ["AMC", "AMC Entertainment", ["amc entertainment", "amc"]],
-  ["RBLX", "Roblox", ["roblox", "rblx"]],
-  ["WMT", "Walmart", ["walmart", "wmt"]],
-  ["JPM", "JPMorgan Chase", ["jpmorgan", "jpm"]],
-  ["COST", "Costco", ["costco", "cost"]],
-  ["PFE", "Pfizer", ["pfizer", "pfe"]],
-  ["BA", "Boeing", ["boeing", "ba"]],
-  ["XOM", "Exxon Mobil", ["exxon", "xom"]],
-  ["CVNA", "Carvana", ["carvana", "cvna"]],
-  ["UPST", "Upstart", ["upstart", "upst"]],
-  ["AI", "C3.ai", ["c3.ai"]],
-  ["RKLB", "Rocket Lab", ["rocket lab", "rklb"]],
-  ["IONQ", "IonQ", ["ionq"]],
-  ["DELL", "Dell Technologies", ["dell"]],
-  ["ORCL", "Oracle", ["oracle", "orcl"]],
-  ["CRM", "Salesforce", ["salesforce", "crm"]],
-  ["MU", "Micron", ["micron", "mu"]],
-  ["WBD", "Warner Bros. Discovery", ["warner bros", "wbd"]],
-  ["MRNA", "Moderna", ["moderna", "mrna"]],
-  ["CRWD", "CrowdStrike", ["crowdstrike", "crwd"]],
-  ["NET", "Cloudflare", ["cloudflare"]],
-  ["ROKU", "Roku", ["roku"]],
-];
-
-const stockRegistry = new Map(
-  STOCKS.map(([ticker, name, aliases]) => [ticker, { ticker, name, aliases, seeded: true, discoveredMentions: 0 }])
-);
+// No hardcoded seed list. The universe is built dynamically each run:
+//   1. FINRA short-volume file  → primary universe (hundreds of actively traded tickers)
+//   2. News article extraction  → discovery of mentioned tickers not yet in registry
+//   3. SEC / GDELT / RSS feeds  → additional discovery signals
+// This means the dashboard reflects whatever is actually being traded and discussed today.
+const stockRegistry = new Map();
 
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
@@ -131,11 +81,18 @@ const TICKER_STOPWORDS = new Set([
 ]);
 
 const feeds = [
+  // Reddit JSON (primary) — may return 403 on GitHub Actions; RSS feeds below act as fallback
   { source: "Wallstreetbets", type: "reddit", url: "https://www.reddit.com/r/wallstreetbets/hot.json?limit=100" },
   { source: "Wallstreetbets", type: "reddit", url: "https://www.reddit.com/r/wallstreetbets/new.json?limit=100" },
   { source: "Reddit Finance", type: "reddit", url: "https://www.reddit.com/r/stocks/hot.json?limit=100" },
   { source: "Reddit Finance", type: "reddit", url: "https://www.reddit.com/r/investing/hot.json?limit=100" },
   { source: "Reddit Finance", type: "reddit", url: "https://www.reddit.com/r/options/hot.json?limit=100" },
+  // Reddit RSS fallbacks
+  { source: "Wallstreetbets", type: "rss-reddit", url: "https://www.reddit.com/r/wallstreetbets/.rss?limit=100" },
+  { source: "Wallstreetbets", type: "rss-reddit", url: "https://old.reddit.com/r/wallstreetbets/new/.rss?limit=100" },
+  { source: "Reddit Finance", type: "rss-reddit", url: "https://www.reddit.com/r/stocks/.rss?limit=100" },
+  { source: "Reddit Finance", type: "rss-reddit", url: "https://www.reddit.com/r/investing/.rss?limit=100" },
+  { source: "Reddit Finance", type: "rss-reddit", url: "https://www.reddit.com/r/options/.rss?limit=100" },
   { source: "SEC Filings", type: "atom", url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=&company=&dateb=&owner=include&start=0&count=100&output=atom" },
   { source: "CNBC", type: "rss", url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" },
   { source: "MarketWatch", type: "rss", url: "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
@@ -155,9 +112,22 @@ async function main() {
   const discovery = new Map();
   const failures = [];
 
+  // Step 1: Build the dynamic universe from FINRA short-volume data.
+  // This runs first so stockRegistry is populated before any text-matching starts.
+  const finraEvents = await buildFinraUniverse(failures);
+  events.push(...finraEvents);
+  console.log(`FINRA universe built: ${stockRegistry.size} tickers registered`);
+
   for (const feed of feeds) {
     try {
-      const items = feed.type === "reddit" ? await redditItems(feed) : await xmlItems(feed);
+      let items;
+      if (feed.type === "reddit") {
+        items = await redditItems(feed);
+      } else if (feed.type === "rss-reddit") {
+        items = await redditRssItems(feed);
+      } else {
+        items = await xmlItems(feed);
+      }
       for (const item of items) {
         collectMentions(events, feed.source, item.title, item.url, item.score || 1, item.published, "", discovery);
       }
@@ -227,13 +197,6 @@ async function main() {
     await collectTickerNews(events, failures, ticker, name);
   }
 
-  try {
-    const shortEvents = await finraShortVolumeEvents();
-    events.push(...shortEvents);
-  } catch (error) {
-    failures.push(`FINRA Short Volume: ${error.message}`);
-  }
-
   const signals = aggregate(events, previous);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
@@ -264,7 +227,7 @@ async function main() {
     sourceNote:
       "Real snapshot from public no-key sources with dynamic ticker discovery. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
     discoveryNote:
-      "SignalDesk starts with a seed universe, then extracts ticker candidates from public market articles and admits them only after public quote validation.",
+      "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
     sources: SOURCES,
     failures: failures.slice(0, 20),
     signals,
@@ -431,23 +394,42 @@ function bingNewsSearchUrl(query) {
   return `https://www.bing.com/news/search?q=${q}&format=rss`;
 }
 
-async function finraShortVolumeEvents() {
-  const text = await fetchRecentFinraShortFile();
+// Builds the dynamic ticker universe from FINRA short-volume data.
+// Runs before any other step so stockRegistry is populated for text matching.
+async function buildFinraUniverse(failures) {
+  let text;
+  try {
+    text = await fetchRecentFinraShortFile();
+  } catch (error) {
+    failures.push(`FINRA Short Volume: ${error.message}`);
+    return [];
+  }
+
   const lines = text.trim().split(/\r?\n/).filter(Boolean);
-  const events = [];
-  const tracked = new Set([...stockRegistry.keys()]);
+  const candidates = [];
+
   for (const line of lines.slice(1)) {
     const [date, symbol, shortVolume, , totalVolume] = line.split("|");
-    if (!tracked.has(symbol)) continue;
+    if (!symbol || !isPossibleTicker(symbol) || AMBIGUOUS_TICKERS.has(symbol)) continue;
     const shortVol = Number(shortVolume);
     const totalVol = Number(totalVolume);
     if (!Number.isFinite(shortVol) || !Number.isFinite(totalVol) || totalVol <= 0) continue;
     const ratio = shortVol / totalVol;
-    if (ratio < 0.38 && shortVol < 1_000_000) continue;
+    if (ratio < FINRA_MIN_RATIO || shortVol < FINRA_MIN_SHORT_VOL) continue;
+    candidates.push({ date, symbol, shortVol, totalVol, ratio });
+  }
+
+  // Sort by significance: high short-volume × high ratio floats to top
+  candidates.sort((a, b) => b.shortVol * b.ratio - a.shortVol * a.ratio);
+
+  const events = [];
+  for (const { date, symbol, shortVol, totalVol, ratio } of candidates.slice(0, FINRA_UNIVERSE_LIMIT)) {
+    // Register with symbol as placeholder name; price fetch will later add quote data
+    registerStock(symbol, symbol, [symbol]);
     events.push({
       source: "FINRA Short Volume",
       ticker: symbol,
-      name: stockName(symbol),
+      name: symbol,
       title: `${symbol} FINRA short volume ${(ratio * 100).toFixed(0)}% of reported volume (${shortVol.toLocaleString()} shares)`,
       url: "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
       mentions: Math.max(1, Math.round(ratio * 10 + Math.log10(shortVol + 1))),
@@ -460,7 +442,26 @@ async function finraShortVolumeEvents() {
       published: finraDateToIso(date),
     });
   }
+
   return events;
+}
+
+// Reddit RSS fallback — used when the JSON endpoint returns 403.
+// Uses REDDIT_USER_AGENT and parses the Atom/RSS feed Reddit serves at /.rss
+async function redditRssItems(feed) {
+  const xml = await fetchTextWithUA(feed.url, REDDIT_USER_AGENT);
+  const blocks = [...xml.matchAll(/<(item|entry)\b[\s\S]*?<\/\1>/gi)].map((m) => m[0]);
+  return blocks.map((block) => ({
+    title: cleanXml(
+      textBetween(block, "title") ||
+      textBetween(block, "summary") ||
+      textBetween(block, "content") ||
+      ""
+    ),
+    url: cleanXml(textBetween(block, "link") || attrBetween(block, "link", "href") || feed.url),
+    score: 1.5,
+    published: cleanXml(textBetween(block, "published") || textBetween(block, "updated") || textBetween(block, "pubDate") || ""),
+  })).filter((item) => item.title.length > 5);
 }
 
 async function fetchRecentFinraShortFile() {
@@ -613,25 +614,15 @@ function rankedStockEntries(events, limit) {
   }
   return [...stockRegistry.values()]
     .sort((a, b) => {
-      const scoreA = (mentionScores.get(a.ticker) || 0) + (a.seeded ? 2 : 0) + (a.discoveredMentions || 0);
-      const scoreB = (mentionScores.get(b.ticker) || 0) + (b.seeded ? 2 : 0) + (b.discoveredMentions || 0);
+      const scoreA = (mentionScores.get(a.ticker) || 0) + (a.discoveredMentions || 0);
+      const scoreB = (mentionScores.get(b.ticker) || 0) + (b.discoveredMentions || 0);
       return scoreB - scoreA || a.ticker.localeCompare(b.ticker);
     })
     .slice(0, limit);
 }
 
 function newsUniverseEntries(events, limit) {
-  const entries = [];
-  const seen = new Set();
-  const add = (entry) => {
-    if (!entry || seen.has(entry.ticker)) return;
-    seen.add(entry.ticker);
-    entries.push(entry);
-  };
-
-  for (const [ticker] of STOCKS) add(stockRegistry.get(ticker));
-  for (const entry of rankedStockEntries(events, limit)) add(entry);
-  return entries.slice(0, limit);
+  return rankedStockEntries(events, limit);
 }
 
 async function fetchMarket(ticker) {
@@ -807,7 +798,7 @@ function aggregate(events, previous) {
       };
     })
     .sort((a, b) => b.signalScore - a.signalScore)
-    .slice(0, 55);
+    .slice(0, 75);
 }
 
 function scoreSentiment(text) {
@@ -849,6 +840,12 @@ async function fetchJson(url) {
 
 async function fetchText(url) {
   const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" } });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.text();
+}
+
+async function fetchTextWithUA(url, ua) {
+  const response = await fetch(url, { headers: { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" } });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.text();
 }
