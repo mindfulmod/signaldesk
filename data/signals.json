@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T00:22:40.930Z",
+  "generatedAt": "2026-06-24T01:00:54.005Z",
   "dataMode": "real-public-no-key",
   "sourceNote": "Real snapshot from public no-key sources. Coverage is best-effort and less complete than paid APIs for X, Google Trends, StockTwits, and options flow.",
   "sources": [
@@ -20,16 +20,75 @@
   ],
   "signals": [
     {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "mentions": 13,
+      "momentum": 333.33333333333337,
+      "sentiment": 0,
+      "priceMove": 0.1872277142059779,
+      "lastPrice": 680.9199829101562,
+      "relativeVolume": 0.9338119029735343,
+      "optionsActivity": 0,
+      "signalScore": 51.13070794973008,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 10,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "SEC Filings",
+          "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177856426000100/0001778564-26-000100-index.htm",
+          "published": "2026-06-23T20:30:16-04:00"
+        },
+        {
+          "source": "SEC Filings",
+          "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177856426000099/0001778564-26-000099-index.htm",
+          "published": "2026-06-23T20:30:13-04:00"
+        },
+        {
+          "source": "SEC Filings",
+          "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1535527/000192160226000006/0001921602-26-000006-index.htm",
+          "published": "2026-06-23T20:30:09-04:00"
+        },
+        {
+          "source": "SEC Filings",
+          "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1535527/000196827026000013/0001968270-26-000013-index.htm",
+          "published": "2026-06-23T20:30:08-04:00"
+        },
+        {
+          "source": "SEC Filings",
+          "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000018/0001778610-26-000018-index.htm",
+          "published": "2026-06-23T20:30:06-04:00"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "CRWD $680.92, price +0.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CRWD",
+          "published": "2026-06-24T01:00:51.122Z"
+        }
+      ]
+    },
+    {
       "ticker": "AMC",
       "name": "AMC Entertainment",
       "mentions": 44,
-      "momentum": 158.8235294117647,
+      "momentum": 0,
       "sentiment": -0.10757575757575756,
       "priceMove": -16.79842067951667,
       "lastPrice": 2.0799999237060547,
       "relativeVolume": 1.598344746923972,
       "optionsActivity": 0,
-      "signalScore": 64.34143093574784,
+      "signalScore": 47.84143093574784,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -44,7 +103,7 @@
           "source": "Price/Volume",
           "title": "AMC $2.08, price -24.6%, volume 1.9x",
           "url": "https://finance.yahoo.com/quote/AMC",
-          "published": "2026-06-24T00:22:36.455Z"
+          "published": "2026-06-24T01:00:49.843Z"
         },
         {
           "source": "Yahoo Public News",
@@ -79,302 +138,61 @@
       ]
     },
     {
-      "ticker": "NIO",
-      "name": "NIO",
-      "mentions": 16,
-      "momentum": 60,
-      "sentiment": -0.041666666666666664,
-      "priceMove": 0.19801960565474083,
-      "lastPrice": 5.090000152587891,
-      "relativeVolume": 1.0062330885527864,
-      "optionsActivity": 0,
-      "signalScore": 52.15450938304359,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 12,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "NIO $5.09, price +0.8%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NIO",
-          "published": "2026-06-24T00:22:35.544Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 01:21:37 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
-          "published": "Sun, 21 Jun 2026 11:10:36 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
-          "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 14:27:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
-          "published": "Fri, 19 Jun 2026 13:00:08 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
-          "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
-          "published": "Thu, 18 Jun 2026 04:37:20 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "PYPL",
-      "name": "PayPal",
-      "mentions": 14,
-      "momentum": 133.33333333333331,
-      "sentiment": -0.09904761904761905,
-      "priceMove": -0.4318775810391811,
-      "lastPrice": 41.70000076293945,
-      "relativeVolume": 0.9081597773138483,
-      "optionsActivity": 0,
-      "signalScore": 48.72226829256389,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "PYPL $41.70, price -1.5%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/PYPL",
-          "published": "2026-06-24T00:22:36.197Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Paypal (PYPL) Suffers a Larger Drop Than the General Market: Key Insights",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/paypal-pypl-suffers-larger-drop-214506461.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "64% of UK Consumers Want to Use Agentic AI for Shopping, According to New Research from Commerce and PayPal",
-          "url": "https://finance.yahoo.com/technology/ai/articles/64-uk-consumers-want-agentic-120000671.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "SoFi vs. PayPal: Two Beaten-Down Fintech Stocks. Which Is the Better Comeback Story?",
-          "url": "https://www.fool.com/investing/2026/06/23/sofi-vs-paypal-two-beaten-down-fintech-stocks-whic/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 10:37:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/paypals-checkout-recovery-branded-tpv-172300701.html?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 17:23:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "PayPal Ad Executive Explains How Shoppable Ads Are Disrupting Retail",
-          "url": "https://finance.yahoo.com/video/paypal-ad-executive-explains-shoppable-163200448.html?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 16:32:00 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
-      "mentions": 12,
-      "momentum": 200,
-      "sentiment": -0.18000000000000002,
-      "priceMove": -10.136855304749513,
-      "lastPrice": 366.3900146484375,
-      "relativeVolume": 0.643056517252223,
-      "optionsActivity": 0,
-      "signalScore": 43.18207224787884,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 12
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "ARM $366.39, price -10.1%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/ARM",
-          "published": "2026-06-24T00:22:35.752Z"
-        }
-      ]
-    },
-    {
-      "ticker": "WBD",
-      "name": "Warner Bros. Discovery",
-      "mentions": 3,
-      "momentum": 50,
-      "sentiment": 0,
-      "priceMove": -0.2597461973697415,
-      "lastPrice": 26.8799991607666,
-      "relativeVolume": 0.7763608065861805,
-      "optionsActivity": 0,
-      "signalScore": 37.7603663157797,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "WBD $26.88, price -0.3%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/WBD",
-          "published": "2026-06-24T00:22:37.796Z"
-        }
-      ]
-    },
-    {
-      "ticker": "DIS",
-      "name": "Disney",
-      "mentions": 13,
-      "momentum": 8.333333333333332,
-      "sentiment": 0.0064102564102564135,
-      "priceMove": 0.2432710582780815,
-      "lastPrice": 103.52999877929688,
-      "relativeVolume": 0.8869540918993036,
-      "optionsActivity": 0,
-      "signalScore": 37.01186522507919,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 10,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "DIS $103.53, price +1.1%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/DIS",
-          "published": "2026-06-24T00:22:36.127Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "As America Celebrates 250 Years, Disney’s Economic Impact Reaches All 50 States",
-          "url": "https://finance.yahoo.com/economy/articles/america-celebrates-250-years-disney-130000374.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:56:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "OMNICOM AND DISNEY ADVERTISING TEAM UP TO ENABLE SMARTER SEQUENTIAL ADVERTISING IN STREAMING",
-          "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-disney-advertising-team-enable-173000613.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:30:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "New Report from Disney at Cannes Lions Shows ‘Eventizing’ of Streaming Content",
-          "url": "https://finance.yahoo.com/video/report-disney-cannes-lions-shows-154452410.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 15:44:52 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Disney Faces Fresh Trump-ABC Fight",
-          "url": "https://finance.yahoo.com/media-advertising/articles/disney-faces-fresh-trump-abc-122449612.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 12:24:49 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Walt Disney (DIS) Suffers a Larger Drop Than the General Market: Key Insights",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-suffers-larger-214505458.html?.tsrc=rss",
-          "published": "Mon, 22 Jun 2026 21:45:05 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "BABA",
-      "name": "Alibaba",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
       "mentions": 11,
-      "momentum": 22.22222222222222,
-      "sentiment": -0.0818181818181818,
-      "priceMove": -1.0262684225887533,
-      "lastPrice": 102.5999984741211,
-      "relativeVolume": 0.9170563300396044,
+      "momentum": 57.14285714285714,
+      "sentiment": -0.05393939393939395,
+      "priceMove": -2.6259724216501725,
+      "lastPrice": 200.0399932861328,
+      "relativeVolume": 0.9908517987048012,
       "optionsActivity": 0,
-      "signalScore": 36.88972604165914,
+      "signalScore": 47.50496563637764,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "SEC Filings": 0,
-        "Yahoo Public News": 6,
+        "Yahoo Public News": 4,
         "CNBC": 0,
         "MarketWatch": 0,
-        "Price/Volume": 5
+        "Price/Volume": 7
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "BABA $102.60, price -2.3%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/BABA",
-          "published": "2026-06-24T00:22:35.512Z"
+          "title": "NVDA $200.04, price -4.1%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NVDA",
+          "published": "2026-06-24T01:00:47.807Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Alibaba sues Pentagon to remove it from military blacklist",
-          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-pentagon-remove-military-192941272.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 19:29:41 +0000"
+          "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia",
+          "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:47:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Alibaba sues US for being linked to Chinese military",
-          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-us-department-defense-172113802.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:21:13 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Alibaba (BABA) Launches $1.5 Billion Pupu Bid As Meituan Rivalry Heats Up",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/alibaba-baba-launches-1-5-101503395.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 10:15:03 +0000"
+          "title": "Nvidia's banned AI chips double in price on China's black market, FT reports",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-banned-ai-chips-double-002552897.html?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:25:52 +0000"
         }
       ]
     },
     {
       "ticker": "SOFI",
       "name": "SoFi",
-      "mentions": 18,
-      "momentum": -61.702127659574465,
-      "sentiment": 0.09259259259259259,
-      "priceMove": 0.24691426877069894,
+      "mentions": 20,
+      "momentum": 11.11111111111111,
+      "sentiment": 0.08333333333333333,
+      "priceMove": 0.22222284189362904,
       "lastPrice": 17.290000915527344,
-      "relativeVolume": 0.9829860595643479,
+      "relativeVolume": 0.9846874536079131,
       "optionsActivity": 0,
-      "signalScore": 34.709075343041825,
+      "signalScore": 45.16474692767173,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "SEC Filings": 0,
+        "SEC Filings": 2,
         "Yahoo Public News": 14,
         "CNBC": 0,
         "MarketWatch": 0,
@@ -382,10 +200,16 @@
       },
       "latest": [
         {
+          "source": "SEC Filings",
+          "title": "4 - SoFi Technologies, Inc. (0001818874) (Issuer)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1818874/000203245826000020/0002032458-26-000020-index.htm",
+          "published": "2026-06-23T20:28:01-04:00"
+        },
+        {
           "source": "Price/Volume",
           "title": "SOFI $17.29, price +1.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/SOFI",
-          "published": "2026-06-24T00:22:35.331Z"
+          "published": "2026-06-24T01:00:48.626Z"
         },
         {
           "source": "Yahoo Public News",
@@ -410,12 +234,6 @@
           "title": "Introducing Composer by SoFi: AI-Powered Investing From Idea to Execution",
           "url": "https://finance.yahoo.com/technology/ai/articles/introducing-composer-sofi-ai-powered-120000411.html?.tsrc=rss",
           "published": "Tue, 23 Jun 2026 12:00:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "SoFi Expands AI Offerings With a Trading Assistant",
-          "url": "https://finance.yahoo.com/m/63ccee7a-991f-3c91-8658-ffc350be3cca/sofi-expands-ai-offerings.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
         }
       ]
     },
@@ -423,13 +241,13 @@
       "ticker": "RBLX",
       "name": "Roblox",
       "mentions": 18,
-      "momentum": -25,
+      "momentum": 0,
       "sentiment": 0.1111111111111111,
       "priceMove": -0.03760897112631162,
       "lastPrice": 47.11000061035156,
       "relativeVolume": 0.9653626923522197,
       "optionsActivity": 0,
-      "signalScore": 34.620943812842384,
+      "signalScore": 40.120943812842384,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -444,7 +262,7 @@
           "source": "Price/Volume",
           "title": "RBLX $47.11, price -0.3%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/RBLX",
-          "published": "2026-06-24T00:22:36.497Z"
+          "published": "2026-06-24T01:00:49.879Z"
         },
         {
           "source": "Yahoo Public News",
@@ -482,13 +300,13 @@
       "ticker": "T",
       "name": "AT&T",
       "mentions": 10,
-      "momentum": -47.368421052631575,
+      "momentum": 0,
       "sentiment": 0.15,
       "priceMove": 1.9275992910877193,
       "lastPrice": 22.809999465942383,
       "relativeVolume": 0.9385719470928333,
       "optionsActivity": 0,
-      "signalScore": 34.482853780659234,
+      "signalScore": 39.982853780659234,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -503,7 +321,7 @@
           "source": "Price/Volume",
           "title": "T $22.81, price +3.2%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/T",
-          "published": "2026-06-24T00:22:36.289Z"
+          "published": "2026-06-24T01:00:49.647Z"
         },
         {
           "source": "Yahoo Public News",
@@ -523,13 +341,13 @@
       "ticker": "SMCI",
       "name": "Super Micro Computer",
       "mentions": 20,
-      "momentum": -58.333333333333336,
+      "momentum": 0,
       "sentiment": 0.027999999999999997,
       "priceMove": -2.4139869654824753,
       "lastPrice": 33.31999969482422,
       "relativeVolume": 0.8921315650619395,
       "optionsActivity": 0,
-      "signalScore": 33.22880784843073,
+      "signalScore": 38.72880784843073,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -544,7 +362,7 @@
           "source": "Price/Volume",
           "title": "SMCI $33.32, price -6.0%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/SMCI",
-          "published": "2026-06-24T00:22:34.866Z"
+          "published": "2026-06-24T01:00:48.119Z"
         },
         {
           "source": "Yahoo Public News",
@@ -582,13 +400,13 @@
       "ticker": "NET",
       "name": "Cloudflare",
       "mentions": 5,
-      "momentum": -87.8048780487805,
+      "momentum": 0,
       "sentiment": 0.25,
       "priceMove": 3.003936904440491,
       "lastPrice": 224.94000244140625,
       "relativeVolume": 0.7395349331713245,
       "optionsActivity": 0,
-      "signalScore": 33.079011478514914,
+      "signalScore": 38.579011478514914,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -603,7 +421,7 @@
           "source": "Price/Volume",
           "title": "NET $224.94, price +3.0%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/NET",
-          "published": "2026-06-24T00:22:37.907Z"
+          "published": "2026-06-24T01:00:51.169Z"
         }
       ]
     },
@@ -611,13 +429,13 @@
       "ticker": "RIVN",
       "name": "Rivian",
       "mentions": 16,
-      "momentum": -30.434782608695656,
+      "momentum": 0,
       "sentiment": 0.07999999999999999,
       "priceMove": -0.347682173579079,
       "lastPrice": 14.890000343322754,
       "relativeVolume": 0.9515104356714822,
       "optionsActivity": 0,
-      "signalScore": 32.66815098878032,
+      "signalScore": 38.16815098878032,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -632,7 +450,7 @@
           "source": "Price/Volume",
           "title": "RIVN $14.89, price -1.4%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/RIVN",
-          "published": "2026-06-24T00:22:35.291Z"
+          "published": "2026-06-24T01:00:48.581Z"
         },
         {
           "source": "Yahoo Public News",
@@ -670,13 +488,13 @@
       "ticker": "SNOW",
       "name": "Snowflake",
       "mentions": 12,
-      "momentum": -42.857142857142854,
+      "momentum": 0,
       "sentiment": 0.13888888888888887,
       "priceMove": 0.5619558653599108,
       "lastPrice": 230.41000366210938,
       "relativeVolume": 0.8976133655281275,
       "optionsActivity": 0,
-      "signalScore": 32.66706851455942,
+      "signalScore": 38.16706851455941,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -691,7 +509,7 @@
           "source": "Price/Volume",
           "title": "SNOW $230.41, price +1.7%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/SNOW",
-          "published": "2026-06-24T00:22:35.817Z"
+          "published": "2026-06-24T01:00:49.180Z"
         },
         {
           "source": "Yahoo Public News",
@@ -720,16 +538,75 @@
       ]
     },
     {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "mentions": 16,
+      "momentum": 0,
+      "sentiment": -0.003333333333333334,
+      "priceMove": -0.2538026100524039,
+      "lastPrice": 346.1300048828125,
+      "relativeVolume": 0.9576930443898828,
+      "optionsActivity": 0,
+      "signalScore": 37.19288142365392,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 8,
+        "CNBC": 4,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
+          "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
+          "published": "Tue, 23 Jun 2026 22:44:45 GMT"
+        },
+        {
+          "source": "CNBC",
+          "title": "Google’s online dominance is showing signs of cracking in AI era",
+          "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
+          "published": "Tue, 23 Jun 2026 15:21:38 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/GOOGL",
+          "published": "2026-06-24T01:00:48.753Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "GOOGL Stock Gains After-Hours As Alphabet Is Set To Replace Verizon In Dow Jones — Retail Eyes ‘$400’ Level",
+          "url": "https://stocktwits.com/news-articles/markets/equity/googl-stock-gains-after-hours-alphabet-replace-verizon-dow-jones-retail-eyes-400-level/cZKUA3aR7OE?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:01:28 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
+          "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Google's YouTube settles case over social media harm to children",
+          "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:02:22 +0000"
+        }
+      ]
+    },
+    {
       "ticker": "GME",
       "name": "GameStop",
       "mentions": 16,
-      "momentum": -60,
+      "momentum": 0,
       "sentiment": 0.041666666666666664,
       "priceMove": -0.035477452503950034,
       "lastPrice": 21.079999923706055,
       "relativeVolume": 0.9489049618564089,
       "optionsActivity": 0,
-      "signalScore": 31.672014807805738,
+      "signalScore": 37.17201480780574,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -744,7 +621,7 @@
           "source": "Price/Volume",
           "title": "GME $21.08, price -0.3%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/GME",
-          "published": "2026-06-24T00:22:34.940Z"
+          "published": "2026-06-24T01:00:48.177Z"
         },
         {
           "source": "Yahoo Public News",
@@ -782,13 +659,13 @@
       "ticker": "WMT",
       "name": "Walmart",
       "mentions": 5,
-      "momentum": -70.58823529411765,
+      "momentum": 0,
       "sentiment": 0.25,
       "priceMove": 1.9115871803514508,
       "lastPrice": 119.41999816894531,
       "relativeVolume": 0.9178193538547571,
       "optionsActivity": 0,
-      "signalScore": 31.60744971307056,
+      "signalScore": 37.107449713070565,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -803,66 +680,7 @@
           "source": "Price/Volume",
           "title": "WMT $119.42, price +1.9%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/WMT",
-          "published": "2026-06-24T00:22:36.606Z"
-        }
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "mentions": 16,
-      "momentum": -89.04109589041096,
-      "sentiment": -0.045,
-      "priceMove": -0.2538026100524039,
-      "lastPrice": 346.1300048828125,
-      "relativeVolume": 0.9576930443898828,
-      "optionsActivity": 0,
-      "signalScore": 30.62145285222535,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 4,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "CNBC",
-          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
-          "url": "https://www.cnbc.com/2026/06/23/alphabet-verizon-dow-djia.html",
-          "published": "Tue, 23 Jun 2026 22:44:45 GMT"
-        },
-        {
-          "source": "CNBC",
-          "title": "Google’s online dominance is showing signs of cracking in AI era",
-          "url": "https://www.cnbc.com/2026/06/23/googles-online-dominance-is-showing-signs-of-cracking-in-ai-era.html",
-          "published": "Tue, 23 Jun 2026 15:21:38 GMT"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "GOOGL $346.13, price -1.0%, volume 0.8x",
-          "url": "https://finance.yahoo.com/quote/GOOGL",
-          "published": "2026-06-24T00:22:35.444Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
-          "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:13:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Google's YouTube settles case over social media harm to children",
-          "url": "https://finance.yahoo.com/healthcare/articles/googles-youtube-settles-plaintiff-ahead-220222527.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:02:22 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Alphabet Set to Join and Honeywell International to Remain in Dow Jones Industrial Average",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-set-join-honeywell-international-220200121.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:02:00 +0000"
+          "published": "2026-06-24T01:00:50.017Z"
         }
       ]
     },
@@ -870,13 +688,13 @@
       "ticker": "MRNA",
       "name": "Moderna",
       "mentions": 4,
-      "momentum": -88.23529411764706,
+      "momentum": 0,
       "sentiment": 0.25,
       "priceMove": 2.7887753732483054,
       "lastPrice": 61,
       "relativeVolume": 0.4678335128268854,
       "optionsActivity": 0,
-      "signalScore": 30.49422513513706,
+      "signalScore": 35.994225135137064,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -891,7 +709,7 @@
           "source": "Price/Volume",
           "title": "MRNA $61.00, price +2.8%, volume 0.5x",
           "url": "https://finance.yahoo.com/quote/MRNA",
-          "published": "2026-06-24T00:22:37.836Z"
+          "published": "2026-06-24T01:00:51.089Z"
         }
       ]
     },
@@ -899,13 +717,13 @@
       "ticker": "DKNG",
       "name": "DraftKings",
       "mentions": 16,
-      "momentum": -23.809523809523807,
+      "momentum": 0,
       "sentiment": -0.03625,
       "priceMove": -0.7309941629182122,
       "lastPrice": 25.149999618530273,
       "relativeVolume": 1.1055027877776802,
       "optionsActivity": 0,
-      "signalScore": 30.294834682919397,
+      "signalScore": 35.7948346829194,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -920,7 +738,7 @@
           "source": "Price/Volume",
           "title": "DKNG $25.15, price -1.9%, volume 1.3x",
           "url": "https://finance.yahoo.com/quote/DKNG",
-          "published": "2026-06-24T00:22:35.850Z"
+          "published": "2026-06-24T01:00:49.245Z"
         },
         {
           "source": "Yahoo Public News",
@@ -958,13 +776,13 @@
       "ticker": "MSFT",
       "name": "Microsoft",
       "mentions": 8,
-      "momentum": -89.74358974358975,
+      "momentum": 0,
       "sentiment": 0.125,
       "priceMove": 0.8983511419002597,
       "lastPrice": 373.94000244140625,
       "relativeVolume": 0.9419268202303062,
       "optionsActivity": 0,
-      "signalScore": 30.285023974629798,
+      "signalScore": 35.7850239746298,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -979,7 +797,7 @@
           "source": "Price/Volume",
           "title": "MSFT $373.94, price +1.8%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/MSFT",
-          "published": "2026-06-24T00:22:35.174Z"
+          "published": "2026-06-24T01:00:48.309Z"
         },
         {
           "source": "Yahoo Public News",
@@ -999,13 +817,13 @@
       "ticker": "CRM",
       "name": "Salesforce",
       "mentions": 4,
-      "momentum": -77.77777777777779,
+      "momentum": 0,
       "sentiment": 0.25,
       "priceMove": 2.1982435112536116,
       "lastPrice": 153.4199981689453,
       "relativeVolume": 0.6970291189921883,
       "optionsActivity": 0,
-      "signalScore": 30.229943835808886,
+      "signalScore": 35.72994383580889,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1020,7 +838,66 @@
           "source": "Price/Volume",
           "title": "CRM $153.42, price +2.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/CRM",
-          "published": "2026-06-24T00:22:37.666Z"
+          "published": "2026-06-24T01:00:50.900Z"
+        }
+      ]
+    },
+    {
+      "ticker": "NIO",
+      "name": "NIO",
+      "mentions": 16,
+      "momentum": 0,
+      "sentiment": -0.041666666666666664,
+      "priceMove": 0.19801960565474083,
+      "lastPrice": 5.090000152587891,
+      "relativeVolume": 1.0062330885527864,
+      "optionsActivity": 0,
+      "signalScore": 35.65450938304359,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 12,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "NIO $5.09, price +0.8%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/NIO",
+          "published": "2026-06-24T01:00:48.844Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "NIO Stock Rises Overnight: Firefly Makes HK Debut As EV Maker Expands, Pushes Into Right-Hand-Drive Markets",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nio-firefly-hk-debut-right-hand-drive-markets/cZKtWCUR7Jw?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 01:21:37 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "China’s Auto industry is Unlikely to Return to ‘golden era,’ NIO Inc. (NIO) CEO Says",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/china-auto-industry-unlikely-return-111036508.html?.tsrc=rss",
+          "published": "Sun, 21 Jun 2026 11:10:36 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "It's Rough in China's Auto Market. When Will the Other Shoe Drop for Nio?",
+          "url": "https://www.fool.com/investing/2026/06/19/when-will-the-other-shoe-drop-for-nio/?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 14:27:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Here is What to Know Beyond Why NIO Inc. (NIO) is a Trending Stock",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-nio-inc-130008496.html?.tsrc=rss",
+          "published": "Fri, 19 Jun 2026 13:00:08 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Why Is NIO Stock Spiking Nearly 4% In Overnight Trading?",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-is-nio-spiking-overnight-trading/cZKjAVIR7en?.tsrc=rss",
+          "published": "Thu, 18 Jun 2026 04:37:20 +0000"
         }
       ]
     },
@@ -1028,13 +905,13 @@
       "ticker": "PLTR",
       "name": "Palantir",
       "mentions": 17,
-      "momentum": -63.04347826086957,
+      "momentum": 0,
       "sentiment": -0.05294117647058823,
       "priceMove": -0.6891467023770153,
       "lastPrice": 116.69999694824219,
       "relativeVolume": 0.9868399754919892,
       "optionsActivity": 0,
-      "signalScore": 29.947747893680376,
+      "signalScore": 35.44774789368038,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1049,7 +926,7 @@
           "source": "Price/Volume",
           "title": "PLTR $116.70, price -2.3%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/PLTR",
-          "published": "2026-06-24T00:22:34.828Z"
+          "published": "2026-06-24T01:00:48.076Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1087,13 +964,13 @@
       "ticker": "DELL",
       "name": "Dell Technologies",
       "mentions": 4,
-      "momentum": -86.66666666666667,
+      "momentum": 0,
       "sentiment": 0.25,
       "priceMove": 2.1661788611012494,
       "lastPrice": 427.7799987792969,
       "relativeVolume": 0.6009827942188576,
       "optionsActivity": 0,
-      "signalScore": 29.78162923641084,
+      "signalScore": 35.28162923641084,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1108,7 +985,7 @@
           "source": "Price/Volume",
           "title": "DELL $427.78, price +2.2%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/DELL",
-          "published": "2026-06-24T00:22:37.518Z"
+          "published": "2026-06-24T01:00:50.806Z"
         }
       ]
     },
@@ -1116,13 +993,13 @@
       "ticker": "NFLX",
       "name": "Netflix",
       "mentions": 14,
-      "momentum": -41.66666666666667,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": -0.011760538038035081,
       "lastPrice": 72.81999969482422,
       "relativeVolume": 0.9568784705337544,
       "optionsActivity": 0,
-      "signalScore": 29.464081840953718,
+      "signalScore": 34.96408184095372,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1137,7 +1014,7 @@
           "source": "Price/Volume",
           "title": "NFLX $72.82, price -0.1%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/NFLX",
-          "published": "2026-06-24T00:22:35.403Z"
+          "published": "2026-06-24T01:00:48.716Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1172,61 +1049,114 @@
       ]
     },
     {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "mentions": 12,
-      "momentum": -88.88888888888889,
-      "sentiment": 0,
-      "priceMove": -0.048770756121539034,
-      "lastPrice": 562.2000122070312,
-      "relativeVolume": 0.9419286951521398,
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "mentions": 16,
+      "momentum": 0,
+      "sentiment": -0.048333333333333325,
+      "priceMove": -2.8805566245101466,
+      "lastPrice": 519.8499755859375,
+      "relativeVolume": 0.9319273852264183,
       "optionsActivity": 0,
-      "signalScore": 29.29184667376422,
+      "signalScore": 34.789818787000065,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "SEC Filings": 0,
-        "Yahoo Public News": 6,
-        "CNBC": 4,
+        "Yahoo Public News": 8,
+        "CNBC": 0,
         "MarketWatch": 0,
-        "Price/Volume": 2
+        "Price/Volume": 8
       },
       "latest": [
         {
-          "source": "CNBC",
-          "title": "Meta announces new smart glasses starting at $299, as Zuckerberg keeps pushing wearables",
-          "url": "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html",
-          "published": "Tue, 23 Jun 2026 15:56:53 GMT"
+          "source": "Price/Volume",
+          "title": "AMD $519.85, price -5.8%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/AMD",
+          "published": "2026-06-24T01:00:47.956Z"
         },
         {
-          "source": "CNBC",
-          "title": "Meta is building a prediction markets app. These stocks fell in response",
-          "url": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
-          "published": "Tue, 23 Jun 2026 20:09:00 GMT"
+          "source": "Yahoo Public News",
+          "title": "Why AMD (AMD) Stock Is Trading Lower Today",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-trading-225646127.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:56:46 +0000"
         },
+        {
+          "source": "Yahoo Public News",
+          "title": "With Its MEXT Acquisition, Advanced Micro Devices Stock Could Rally to Higher Highs",
+          "url": "https://www.barchart.com/story/news/2610732/with-its-mext-acquisition-advanced-micro-devices-stock-could-rally-to-higher-highs?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 18:20:17 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Over 40 Analysts Rate AMD a Buy, Here’s Why We Agree",
+          "url": "https://247wallst.com/investing/2026/06/23/over-40-analysts-rate-amd-a-buy-heres-why-we-agree/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:28:08 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is “Healthy”",
+          "url": "https://247wallst.com/investing/2026/06/23/amd-and-intel-drop-5-nvidia-slips-3-amid-korean-led-chip-selloff-bulls-say-is-healthy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:23:22 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "mentions": 13,
+      "momentum": 0,
+      "sentiment": 0.0064102564102564135,
+      "priceMove": 0.2432710582780815,
+      "lastPrice": 103.52999877929688,
+      "relativeVolume": 0.8869540918993036,
+      "optionsActivity": 0,
+      "signalScore": 34.72019855841253,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
         {
           "source": "Price/Volume",
-          "title": "META $562.20, price -0.3%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/META",
-          "published": "2026-06-24T00:22:35.115Z"
+          "title": "DIS $103.53, price +1.1%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/DIS",
+          "published": "2026-06-24T01:00:49.519Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Meta Platforms Is Building A Prediction Market App",
-          "url": "https://www.cryptoprowl.com/releases/meta-platforms-is-building-a-prediction-market-app-5963?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 23:13:00 +0000"
+          "title": "As America Celebrates 250 Years, Disney’s Economic Impact Reaches All 50 States",
+          "url": "https://finance.yahoo.com/economy/articles/america-celebrates-250-years-disney-130000374.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:56:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Meta unveils cheaper AI smart glasses, but the competition is heating up",
-          "url": "https://finance.yahoo.com/video/meta-unveils-cheaper-ai-smart-205015115.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:50:15 +0000"
+          "title": "OMNICOM AND DISNEY ADVERTISING TEAM UP TO ENABLE SMARTER SEQUENTIAL ADVERTISING IN STREAMING",
+          "url": "https://finance.yahoo.com/media-advertising/articles/omnicom-disney-advertising-team-enable-173000613.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:30:00 +0000"
         },
         {
           "source": "Yahoo Public News",
-          "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
-          "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:27:27 +0000"
+          "title": "New Report from Disney at Cannes Lions Shows ‘Eventizing’ of Streaming Content",
+          "url": "https://finance.yahoo.com/video/report-disney-cannes-lions-shows-154452410.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 15:44:52 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Disney Faces Fresh Trump-ABC Fight",
+          "url": "https://finance.yahoo.com/media-advertising/articles/disney-faces-fresh-trump-abc-122449612.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:24:49 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Walt Disney (DIS) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/walt-disney-dis-suffers-larger-214505458.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 21:45:05 +0000"
         }
       ]
     },
@@ -1234,13 +1164,13 @@
       "ticker": "SHOP",
       "name": "Shopify",
       "mentions": 10,
-      "momentum": -61.53846153846154,
+      "momentum": 0,
       "sentiment": 0.06666666666666667,
       "priceMove": -0.11113281808897027,
       "lastPrice": 107.68000030517578,
       "relativeVolume": 1.109124892930692,
       "optionsActivity": 0,
-      "signalScore": 29.167009838978082,
+      "signalScore": 34.66700983897808,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1255,7 +1185,7 @@
           "source": "Price/Volume",
           "title": "SHOP $107.68, price -0.3%, volume 1.3x",
           "url": "https://finance.yahoo.com/quote/SHOP",
-          "published": "2026-06-24T00:22:35.786Z"
+          "published": "2026-06-24T01:00:49.144Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1281,13 +1211,13 @@
       "ticker": "TSLA",
       "name": "Tesla",
       "mentions": 17,
-      "momentum": -81.91489361702128,
+      "momentum": 0,
       "sentiment": -0.09529411764705882,
       "priceMove": -3.063674467645667,
       "lastPrice": 381.6099853515625,
       "relativeVolume": 1.0253988912343364,
       "optionsActivity": 0,
-      "signalScore": 29.012907926397663,
+      "signalScore": 34.512907926397666,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1302,7 +1232,13 @@
           "source": "Price/Volume",
           "title": "TSLA $381.61, price -5.8%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/TSLA",
-          "published": "2026-06-24T00:22:34.682Z"
+          "published": "2026-06-24T01:00:47.921Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Ross Gerber Calls Waymo 'Way Safer And Better' Than Tesla's FSD, Questions Whether Elon Musk Can 'Catch Up'",
+          "url": "https://finance.yahoo.com/technology/ai/articles/ross-gerber-calls-waymo-way-233113756.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:31:13 +0000"
         },
         {
           "source": "Yahoo Public News",
@@ -1321,12 +1257,6 @@
           "title": "Micron, Sandisk, SpaceX, Tesla, Carnival, and More Stocks That Explain Today’s Market",
           "url": "https://finance.yahoo.com/m/b2c73f09-fd59-3c3a-b892-dfef8b936f4f/micron%2C-sandisk%2C-spacex%2C.html?.tsrc=rss",
           "published": "Tue, 23 Jun 2026 20:32:00 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Why Tesla Stock Dropped on Tuesday",
-          "url": "https://www.fool.com/investing/2026/06/23/why-tesla-stock-dropped-on-tuesday/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:00:42 +0000"
         }
       ]
     },
@@ -1334,13 +1264,13 @@
       "ticker": "AAPL",
       "name": "Apple",
       "mentions": 10,
-      "momentum": -94.41340782122904,
+      "momentum": 0,
       "sentiment": 0.06666666666666667,
       "priceMove": -0.36497382358187436,
       "lastPrice": 294.29998779296875,
       "relativeVolume": 0.9888843407901,
       "optionsActivity": 0,
-      "signalScore": 28.68604763041571,
+      "signalScore": 34.186047630415715,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1355,7 +1285,7 @@
           "source": "Price/Volume",
           "title": "AAPL $294.30, price -0.9%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/AAPL",
-          "published": "2026-06-24T00:22:34.797Z"
+          "published": "2026-06-24T01:00:48.046Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1381,13 +1311,13 @@
       "ticker": "MU",
       "name": "Micron",
       "mentions": 19,
-      "momentum": -94.63276836158192,
+      "momentum": 0,
       "sentiment": -0.16105263157894736,
       "priceMove": -11.788945969579506,
       "lastPrice": 1051.77001953125,
       "relativeVolume": 1.098971786310446,
       "optionsActivity": 0,
-      "signalScore": 28.68268169625198,
+      "signalScore": 34.18268169625198,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1408,7 +1338,7 @@
           "source": "Price/Volume",
           "title": "MU $1051.77, price -13.2%, volume 1.1x",
           "url": "https://finance.yahoo.com/quote/MU",
-          "published": "2026-06-24T00:22:37.763Z"
+          "published": "2026-06-24T01:00:50.989Z"
         }
       ]
     },
@@ -1416,13 +1346,13 @@
       "ticker": "HOOD",
       "name": "Robinhood",
       "mentions": 13,
-      "momentum": -82.43243243243244,
+      "momentum": 0,
       "sentiment": -0.017948717948717944,
       "priceMove": -0.8950463553328339,
       "lastPrice": 103.25,
       "relativeVolume": 0.9735310657176746,
       "optionsActivity": 0,
-      "signalScore": 28.45359071075622,
+      "signalScore": 33.953590710756224,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1437,7 +1367,7 @@
           "source": "Price/Volume",
           "title": "HOOD $103.25, price -2.3%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/HOOD",
-          "published": "2026-06-24T00:22:35.371Z"
+          "published": "2026-06-24T01:00:48.664Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1469,13 +1399,13 @@
       "ticker": "INTC",
       "name": "Intel",
       "mentions": 15,
-      "momentum": -96.30541871921181,
+      "momentum": 0,
       "sentiment": -0.06355555555555555,
       "priceMove": -3.6866766760741236,
       "lastPrice": 132.27999877929688,
       "relativeVolume": 0.9169699193301046,
       "optionsActivity": 0,
-      "signalScore": 28.264105920954687,
+      "signalScore": 33.76410592095469,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1490,7 +1420,7 @@
           "source": "Price/Volume",
           "title": "INTC $132.28, price -6.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/INTC",
-          "published": "2026-06-24T00:22:35.658Z"
+          "published": "2026-06-24T01:00:48.976Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1513,45 +1443,16 @@
       ]
     },
     {
-      "ticker": "CVNA",
-      "name": "Carvana",
-      "mentions": 5,
-      "momentum": 25,
-      "sentiment": -0.18,
-      "priceMove": -2.759856589808172,
-      "lastPrice": 64.83000183105469,
-      "relativeVolume": 0.6532798464651521,
-      "optionsActivity": 0,
-      "signalScore": 28.043974465666384,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CVNA",
-          "published": "2026-06-24T00:22:37.321Z"
-        }
-      ]
-    },
-    {
       "ticker": "AVGO",
       "name": "Broadcom",
       "mentions": 13,
-      "momentum": -74.50980392156863,
+      "momentum": 0,
       "sentiment": -0.030769230769230764,
       "priceMove": -1.1750430917879209,
       "lastPrice": 380.1499938964844,
       "relativeVolume": 0.9242788478341641,
       "optionsActivity": 0,
-      "signalScore": 27.926911509551847,
+      "signalScore": 33.42691150955185,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1566,7 +1467,7 @@
           "source": "Price/Volume",
           "title": "AVGO $380.15, price -3.1%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/AVGO",
-          "published": "2026-06-24T00:22:35.710Z"
+          "published": "2026-06-24T01:00:49.034Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1598,13 +1499,13 @@
       "ticker": "COIN",
       "name": "Coinbase",
       "mentions": 15,
-      "momentum": -25,
+      "momentum": 0,
       "sentiment": -0.084,
       "priceMove": -1.8854657716768954,
       "lastPrice": 158.17999267578125,
       "relativeVolume": 0.9315143807259971,
       "optionsActivity": 0,
-      "signalScore": 27.796569480823972,
+      "signalScore": 33.296569480823976,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1619,7 +1520,7 @@
           "source": "Price/Volume",
           "title": "COIN $158.18, price -4.0%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/COIN",
-          "published": "2026-06-24T00:22:35.215Z"
+          "published": "2026-06-24T01:00:48.346Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1651,13 +1552,13 @@
       "ticker": "UBER",
       "name": "Uber",
       "mentions": 15,
-      "momentum": -51.61290322580645,
+      "momentum": 0,
       "sentiment": -0.10444444444444442,
       "priceMove": -0.8213179003738293,
       "lastPrice": 69.66999816894531,
       "relativeVolume": 0.9732541706243992,
       "optionsActivity": 0,
-      "signalScore": 27.437814354703292,
+      "signalScore": 32.93781435470329,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1672,7 +1573,7 @@
           "source": "Price/Volume",
           "title": "UBER $69.67, price -2.5%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/UBER",
-          "published": "2026-06-24T00:22:36.019Z"
+          "published": "2026-06-24T01:00:49.415Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1707,69 +1608,16 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "mentions": 16,
-      "momentum": -93.24894514767934,
-      "sentiment": -0.13166666666666665,
-      "priceMove": -2.8805566245101466,
-      "lastPrice": 519.8499755859375,
-      "relativeVolume": 0.9319273852264183,
-      "optionsActivity": 0,
-      "signalScore": 27.14696164414292,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 8,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "AMD $519.85, price -5.8%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/AMD",
-          "published": "2026-06-24T00:22:34.717Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Why AMD (AMD) Stock Is Trading Lower Today",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-trading-225646127.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:56:46 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "Over 40 Analysts Rate AMD a Buy, Here’s Why We Agree",
-          "url": "https://247wallst.com/investing/2026/06/23/over-40-analysts-rate-amd-a-buy-heres-why-we-agree/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:28:08 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AMD and Intel Drop 5%, NVIDIA Slips 3% Amid Korean-Led Chip Selloff Bulls Say Is “Healthy”",
-          "url": "https://247wallst.com/investing/2026/06/23/amd-and-intel-drop-5-nvidia-slips-3-amid-korean-led-chip-selloff-bulls-say-is-healthy/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:23:22 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "AMD (AMD) Stock Sees Modest Fair Value Lift As AI Target Revisions Split Analysts",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-amd-stock-sees-modest-171526878.html?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 17:15:26 +0000"
-        }
-      ]
-    },
-    {
       "ticker": "F",
       "name": "Ford",
       "mentions": 10,
-      "momentum": -58.333333333333336,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": -0.3118346119170632,
       "lastPrice": 14,
       "relativeVolume": 0.9762335103780042,
       "optionsActivity": 0,
-      "signalScore": 26.921158594481614,
+      "signalScore": 32.42115859448162,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1784,7 +1632,7 @@
           "source": "Price/Volume",
           "title": "F $14.00, price -0.8%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/F",
-          "published": "2026-06-24T00:22:36.408Z"
+          "published": "2026-06-24T01:00:49.754Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1807,16 +1655,75 @@
       ]
     },
     {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "mentions": 14,
+      "momentum": 0,
+      "sentiment": -0.09904761904761905,
+      "priceMove": -0.4318775810391811,
+      "lastPrice": 41.70000076293945,
+      "relativeVolume": 0.9081597773138483,
+      "optionsActivity": 0,
+      "signalScore": 32.22226829256389,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 10,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "PYPL $41.70, price -1.5%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/PYPL",
+          "published": "2026-06-24T01:00:49.565Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Paypal (PYPL) Suffers a Larger Drop Than the General Market: Key Insights",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paypal-pypl-suffers-larger-drop-214506461.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:45:06 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "64% of UK Consumers Want to Use Agentic AI for Shopping, According to New Research from Commerce and PayPal",
+          "url": "https://finance.yahoo.com/technology/ai/articles/64-uk-consumers-want-agentic-120000671.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 12:00:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "SoFi vs. PayPal: Two Beaten-Down Fintech Stocks. Which Is the Better Comeback Story?",
+          "url": "https://www.fool.com/investing/2026/06/23/sofi-vs-paypal-two-beaten-down-fintech-stocks-whic/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 10:37:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "PayPal's Checkout Recovery: Can Branded TPV Reaccelerate?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paypals-checkout-recovery-branded-tpv-172300701.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 17:23:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "PayPal Ad Executive Explains How Shoppable Ads Are Disrupting Retail",
+          "url": "https://finance.yahoo.com/video/paypal-ad-executive-explains-shoppable-163200448.html?.tsrc=rss",
+          "published": "Mon, 22 Jun 2026 16:32:00 +0000"
+        }
+      ]
+    },
+    {
       "ticker": "ORCL",
       "name": "Oracle",
       "mentions": 12,
-      "momentum": -57.14285714285714,
+      "momentum": 0,
       "sentiment": -0.15,
       "priceMove": -4.717162300563124,
       "lastPrice": 165.16000366210938,
       "relativeVolume": 1.377085219440514,
       "optionsActivity": 0,
-      "signalScore": 26.03247277091772,
+      "signalScore": 31.53247277091772,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1837,36 +1744,54 @@
           "source": "Price/Volume",
           "title": "ORCL $165.16, price -5.7%, volume 1.5x",
           "url": "https://finance.yahoo.com/quote/ORCL",
-          "published": "2026-06-24T00:22:37.587Z"
+          "published": "2026-06-24T01:00:50.863Z"
         }
       ]
     },
     {
-      "ticker": "PFE",
-      "name": "Pfizer",
-      "mentions": 6,
+      "ticker": "BABA",
+      "name": "Alibaba",
+      "mentions": 11,
       "momentum": 0,
-      "sentiment": -0.18000000000000002,
-      "priceMove": -1.435409136549812,
-      "lastPrice": 24.719999313354492,
-      "relativeVolume": 1.4588394631487824,
+      "sentiment": -0.0818181818181818,
+      "priceMove": -1.0262684225887533,
+      "lastPrice": 102.5999984741211,
+      "relativeVolume": 0.9170563300396044,
       "optionsActivity": 0,
-      "signalScore": 25.35644918359222,
+      "signalScore": 30.778614930548027,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "SEC Filings": 0,
-        "Yahoo Public News": 0,
+        "Yahoo Public News": 6,
         "CNBC": 0,
         "MarketWatch": 0,
-        "Price/Volume": 6
+        "Price/Volume": 5
       },
       "latest": [
         {
           "source": "Price/Volume",
-          "title": "PFE $24.72, price -1.4%, volume 1.5x",
-          "url": "https://finance.yahoo.com/quote/PFE",
-          "published": "2026-06-24T00:22:37.016Z"
+          "title": "BABA $102.60, price -2.3%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/BABA",
+          "published": "2026-06-24T01:00:48.810Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba sues Pentagon to remove it from military blacklist",
+          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-pentagon-remove-military-192941272.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 19:29:41 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba sues US for being linked to Chinese military",
+          "url": "https://finance.yahoo.com/technology/articles/alibaba-sues-us-department-defense-172113802.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 17:21:13 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Alibaba (BABA) Launches $1.5 Billion Pupu Bid As Meituan Rivalry Heats Up",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/alibaba-baba-launches-1-5-101503395.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 10:15:03 +0000"
         }
       ]
     },
@@ -1874,13 +1799,13 @@
       "ticker": "MSTR",
       "name": "MicroStrategy",
       "mentions": 12,
-      "momentum": -20,
+      "momentum": 0,
       "sentiment": -0.12,
       "priceMove": -3.422865456841425,
       "lastPrice": 103.83999633789062,
       "relativeVolume": 0.9437188853233692,
       "optionsActivity": 0,
-      "signalScore": 25.070436005877706,
+      "signalScore": 30.570436005877706,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1895,7 +1820,7 @@
           "source": "Price/Volume",
           "title": "MSTR $103.84, price -5.1%, volume 0.9x",
           "url": "https://finance.yahoo.com/quote/MSTR",
-          "published": "2026-06-24T00:22:35.258Z"
+          "published": "2026-06-24T01:00:48.547Z"
         },
         {
           "source": "Yahoo Public News",
@@ -1915,13 +1840,13 @@
       "ticker": "AMZN",
       "name": "Amazon",
       "mentions": 6,
-      "momentum": -94.73684210526315,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": 0.37802521937910183,
       "lastPrice": 234.11000061035156,
       "relativeVolume": 1.0118399513768497,
       "optionsActivity": 0,
-      "signalScore": 24.595930146691263,
+      "signalScore": 30.095930146691263,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1936,13 +1861,13 @@
           "source": "Price/Volume",
           "title": "AMZN $234.11, price +0.6%, volume 1.0x",
           "url": "https://finance.yahoo.com/quote/AMZN",
-          "published": "2026-06-24T00:22:35.041Z"
+          "published": "2026-06-24T01:00:48.211Z"
         },
         {
           "source": "Yahoo Public News",
-          "title": "Worried About Amazon’s AI Bill? What If It’s Already Paid For?",
-          "url": "https://www.trefis.com/articles/604076/worried-about-amazons-ai-bill-what-if-its-already-paid-for/2026-06-23?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 20:44:14 +0000"
+          "title": "Walmart-backed Flipkart expands quick-commerce push as Amazon ramps up in India",
+          "url": "https://finance.yahoo.com/small-business/articles/walmart-backed-flipkart-expands-quick-003000842.html?.tsrc=rss",
+          "published": "Wed, 24 Jun 2026 00:30:00 +0000"
         }
       ]
     },
@@ -1950,13 +1875,13 @@
       "ticker": "LCID",
       "name": "Lucid",
       "mentions": 11,
-      "momentum": -42.10526315789473,
+      "momentum": 0,
       "sentiment": -0.1212121212121212,
       "priceMove": 0.15856348147724494,
       "lastPrice": 5.190000057220459,
       "relativeVolume": 0.9196042112790458,
       "optionsActivity": 0,
-      "signalScore": 24.592946405473267,
+      "signalScore": 30.092946405473267,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -1971,7 +1896,7 @@
           "source": "Price/Volume",
           "title": "LCID $5.19, price +0.6%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/LCID",
-          "published": "2026-06-24T00:22:35.577Z"
+          "published": "2026-06-24T01:00:48.895Z"
         },
         {
           "source": "Yahoo Public News",
@@ -2000,6 +1925,344 @@
       ]
     },
     {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "mentions": 10,
+      "momentum": -16.666666666666664,
+      "sentiment": 0,
+      "priceMove": -0.058524907345846845,
+      "lastPrice": 562.2000122070312,
+      "relativeVolume": 0.9303144341825679,
+      "optionsActivity": 0,
+      "signalScore": 28.797006099223683,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 4,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Meta announces new smart glasses starting at $299, as Zuckerberg keeps pushing wearables",
+          "url": "https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html",
+          "published": "Tue, 23 Jun 2026 15:56:53 GMT"
+        },
+        {
+          "source": "CNBC",
+          "title": "Meta is building a prediction markets app. These stocks fell in response",
+          "url": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
+          "published": "Tue, 23 Jun 2026 20:09:00 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "META $562.20, price -0.3%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/META",
+          "published": "2026-06-24T01:00:48.247Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta Platforms Is Building A Prediction Market App",
+          "url": "https://www.cryptoprowl.com/releases/meta-platforms-is-building-a-prediction-market-app-5963?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 23:13:00 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "Meta unveils cheaper AI smart glasses, but the competition is heating up",
+          "url": "https://finance.yahoo.com/video/meta-unveils-cheaper-ai-smart-205015115.html?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 20:50:15 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Invesco QQQ ETF",
+      "mentions": 9,
+      "momentum": 0,
+      "sentiment": -0.14,
+      "priceMove": -2.561147800393285,
+      "lastPrice": 713.6500244140625,
+      "relativeVolume": 1.0706581600689142,
+      "optionsActivity": 0,
+      "signalScore": 28.464928860560732,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 2,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 7
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "QQQ $713.65, price -3.3%, volume 1.1x",
+          "url": "https://finance.yahoo.com/quote/QQQ",
+          "published": "2026-06-24T01:00:49.383Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "ProShares UltraPro QQQ Charges 0.82% Annually, but the Real Cost Compounds Every Trading Day",
+          "url": "https://247wallst.com/investing/2026/06/23/proshares-ultrapro-qqq-charges-0-82-annually-but-the-real-cost-compounds-every-trading-day/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:36:33 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "mentions": 10,
+      "momentum": 0,
+      "sentiment": -0.2053333333333333,
+      "priceMove": -0.5808781604196624,
+      "lastPrice": 733.5800170898438,
+      "relativeVolume": 0.9719132408290948,
+      "optionsActivity": 0,
+      "signalScore": 28.266734659143122,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 4,
+        "CNBC": 2,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "CNBC",
+          "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
+          "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
+          "published": "Tue, 23 Jun 2026 16:40:57 GMT"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SPY $733.58, price -1.5%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/SPY",
+          "published": "2026-06-24T01:00:49.314Z"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
+          "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 22:21:50 +0000"
+        },
+        {
+          "source": "Yahoo Public News",
+          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
+          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
+        }
+      ]
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "mentions": 4,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": 0.6653720767633473,
+      "lastPrice": 957.6799926757812,
+      "relativeVolume": 1.0181428053951547,
+      "optionsActivity": 0,
+      "signalScore": 27.520084283868794,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "COST $957.68, price +0.7%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/COST",
+          "published": "2026-06-24T01:00:50.198Z"
+        }
+      ]
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IonQ",
+      "mentions": 4,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": -0.8059005884131318,
+      "lastPrice": 57.849998474121094,
+      "relativeVolume": 1.1892625756004647,
+      "optionsActivity": 0,
+      "signalScore": 26.87381921116334,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 4
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
+          "url": "https://finance.yahoo.com/quote/IONQ",
+          "published": "2026-06-24T01:00:50.765Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "mentions": 12,
+      "momentum": 0,
+      "sentiment": -0.18000000000000002,
+      "priceMove": -10.136855304749513,
+      "lastPrice": 366.3900146484375,
+      "relativeVolume": 0.643056517252223,
+      "optionsActivity": 0,
+      "signalScore": 26.68207224787884,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 12
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "ARM $366.39, price -10.1%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/ARM",
+          "published": "2026-06-24T01:00:49.076Z"
+        }
+      ]
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "mentions": 6,
+      "momentum": 0,
+      "sentiment": -0.18000000000000002,
+      "priceMove": -1.435409136549812,
+      "lastPrice": 24.719999313354492,
+      "relativeVolume": 1.4588394631487824,
+      "optionsActivity": 0,
+      "signalScore": 25.35644918359222,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "PFE $24.72, price -1.4%, volume 1.5x",
+          "url": "https://finance.yahoo.com/quote/PFE",
+          "published": "2026-06-24T01:00:50.303Z"
+        }
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "mentions": 3,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": 0.9099404172226956,
+      "lastPrice": 139.72999572753906,
+      "relativeVolume": 0.5503982991955573,
+      "optionsActivity": 0,
+      "signalScore": 24.926397120662596,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "XOM $139.73, price +0.9%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/XOM",
+          "published": "2026-06-24T01:00:50.552Z"
+        }
+      ]
+    },
+    {
+      "ticker": "WBD",
+      "name": "Warner Bros. Discovery",
+      "mentions": 3,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": -0.2597461973697415,
+      "lastPrice": 26.8799991607666,
+      "relativeVolume": 0.7763608065861805,
+      "optionsActivity": 0,
+      "signalScore": 24.010366315779695,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "WBD $26.88, price -0.3%, volume 0.8x",
+          "url": "https://finance.yahoo.com/quote/WBD",
+          "published": "2026-06-24T01:00:51.055Z"
+        }
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "mentions": 2,
+      "momentum": 0,
+      "sentiment": 0,
+      "priceMove": 0.8024627651587374,
+      "lastPrice": 334.1400146484375,
+      "relativeVolume": 0.562675277991155,
+      "optionsActivity": 0,
+      "signalScore": 23.323076704378977,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 2
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "JPM $334.14, price +0.8%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/JPM",
+          "published": "2026-06-24T01:00:50.126Z"
+        }
+      ]
+    },
+    {
       "ticker": "UPST",
       "name": "Upstart",
       "mentions": 2,
@@ -2024,263 +2287,7 @@
           "source": "Price/Volume",
           "title": "UPST $31.46, price +0.4%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/UPST",
-          "published": "2026-06-24T00:22:37.356Z"
-        }
-      ]
-    },
-    {
-      "ticker": "QQQ",
-      "name": "Invesco QQQ ETF",
-      "mentions": 9,
-      "momentum": -90.52631578947368,
-      "sentiment": -0.14,
-      "priceMove": -2.561147800393285,
-      "lastPrice": 713.6500244140625,
-      "relativeVolume": 1.0706581600689142,
-      "optionsActivity": 0,
-      "signalScore": 22.964928860560732,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 2,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "QQQ $713.65, price -3.3%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/QQQ",
-          "published": "2026-06-24T00:22:35.985Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "ProShares UltraPro QQQ Charges 0.82% Annually, but the Real Cost Compounds Every Trading Day",
-          "url": "https://247wallst.com/investing/2026/06/23/proshares-ultrapro-qqq-charges-0-82-annually-but-the-real-cost-compounds-every-trading-day/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:36:33 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF",
-      "mentions": 10,
-      "momentum": -92.24806201550388,
-      "sentiment": -0.2053333333333333,
-      "priceMove": -0.5808781604196624,
-      "lastPrice": 733.5800170898438,
-      "relativeVolume": 0.9719132408290948,
-      "optionsActivity": 0,
-      "signalScore": 22.766734659143122,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 4,
-        "CNBC": 2,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "CNBC",
-          "title": "Factory job cuts in June neared financial crisis and Covid levels, S&P says",
-          "url": "https://www.cnbc.com/2026/06/23/factory-job-cuts-reported-around-financial-crisis-and-covid-levels-for-june-sp-says.html",
-          "published": "Tue, 23 Jun 2026 16:40:57 GMT"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SPY $733.58, price -1.5%, volume 0.9x",
-          "url": "https://finance.yahoo.com/quote/SPY",
-          "published": "2026-06-24T00:22:35.926Z"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "JEPI’s 0.35% Fee Is a Trap: The Real Cost Is the 14.48% Return Gap vs. SPY",
-          "url": "https://247wallst.com/investing/2026/06/23/jepis-0-35-fee-is-a-trap-the-real-cost-is-the-14-48-return-gap-vs-spy/?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 22:21:50 +0000"
-        },
-        {
-          "source": "Yahoo Public News",
-          "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
-          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-drop-as-broader-tech-and-ai-selloff-continues/cZKwiu0R7OT?.tsrc=rss",
-          "published": "Tue, 23 Jun 2026 21:47:22 +0000"
-        }
-      ]
-    },
-    {
-      "ticker": "COST",
-      "name": "Costco",
-      "mentions": 4,
-      "momentum": -98.22222222222223,
-      "sentiment": 0,
-      "priceMove": 0.6653720767633473,
-      "lastPrice": 957.6799926757812,
-      "relativeVolume": 1.0181428053951547,
-      "optionsActivity": 0,
-      "signalScore": 22.020084283868794,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "COST $957.68, price +0.7%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/COST",
-          "published": "2026-06-24T00:22:36.846Z"
-        }
-      ]
-    },
-    {
-      "ticker": "IONQ",
-      "name": "IonQ",
-      "mentions": 4,
-      "momentum": -42.857142857142854,
-      "sentiment": 0,
-      "priceMove": -0.8059005884131318,
-      "lastPrice": 57.849998474121094,
-      "relativeVolume": 1.1892625756004647,
-      "optionsActivity": 0,
-      "signalScore": 21.37381921116334,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "IONQ $57.85, price -0.8%, volume 1.2x",
-          "url": "https://finance.yahoo.com/quote/IONQ",
-          "published": "2026-06-24T00:22:37.471Z"
-        }
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "mentions": 3,
-      "momentum": -84.21052631578947,
-      "sentiment": 0,
-      "priceMove": 0.8113200948925708,
-      "lastPrice": 680.9199829101562,
-      "relativeVolume": 0.7131849128853149,
-      "optionsActivity": 0,
-      "signalScore": 19.880302930761374,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "CRWD $680.92, price +0.8%, volume 0.7x",
-          "url": "https://finance.yahoo.com/quote/CRWD",
-          "published": "2026-06-24T00:22:37.876Z"
-        }
-      ]
-    },
-    {
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
-      "mentions": 3,
-      "momentum": -66.66666666666666,
-      "sentiment": 0,
-      "priceMove": 0.9099404172226956,
-      "lastPrice": 139.72999572753906,
-      "relativeVolume": 0.5503982991955573,
-      "optionsActivity": 0,
-      "signalScore": 19.426397120662596,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "XOM $139.73, price +0.9%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/XOM",
-          "published": "2026-06-24T00:22:37.289Z"
-        }
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "mentions": 7,
-      "momentum": -96.3917525773196,
-      "sentiment": -0.18,
-      "priceMove": -4.126528091164557,
-      "lastPrice": 200.0399932861328,
-      "relativeVolume": 0.9856242551075447,
-      "optionsActivity": 0,
-      "signalScore": 18.851214691549306,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "NVDA $200.04, price -4.1%, volume 1.0x",
-          "url": "https://finance.yahoo.com/quote/NVDA",
-          "published": "2026-06-24T00:22:34.603Z"
-        }
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "mentions": 2,
-      "momentum": -77.77777777777779,
-      "sentiment": 0,
-      "priceMove": 0.8024627651587374,
-      "lastPrice": 334.1400146484375,
-      "relativeVolume": 0.562675277991155,
-      "optionsActivity": 0,
-      "signalScore": 17.82307670437898,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "Price/Volume",
-          "title": "JPM $334.14, price +0.8%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/JPM",
-          "published": "2026-06-24T00:22:36.772Z"
+          "published": "2026-06-24T01:00:50.650Z"
         }
       ]
     },
@@ -2288,13 +2295,13 @@
       "ticker": "RKLB",
       "name": "Rocket Lab",
       "mentions": 7,
-      "momentum": -97.17741935483872,
+      "momentum": 0,
       "sentiment": -0.18,
       "priceMove": -5.155048481154087,
       "lastPrice": 95.12000274658203,
       "relativeVolume": 0.5612845213164767,
       "optionsActivity": 0,
-      "signalScore": 17.153855756385035,
+      "signalScore": 22.653855756385035,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2309,7 +2316,7 @@
           "source": "Price/Volume",
           "title": "RKLB $95.12, price -5.2%, volume 0.6x",
           "url": "https://finance.yahoo.com/quote/RKLB",
-          "published": "2026-06-24T00:22:37.423Z"
+          "published": "2026-06-24T01:00:50.730Z"
         }
       ]
     },
@@ -2317,13 +2324,13 @@
       "ticker": "AI",
       "name": "C3.ai",
       "mentions": 2,
-      "momentum": -66.66666666666666,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": -0.20618045858364417,
       "lastPrice": 9.680000305175781,
       "relativeVolume": 0.6758401898734178,
       "optionsActivity": 0,
-      "signalScore": 16.670810821590557,
+      "signalScore": 22.170810821590553,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2338,7 +2345,36 @@
           "source": "Price/Volume",
           "title": "AI $9.68, price -0.2%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/AI",
-          "published": "2026-06-24T00:22:37.386Z"
+          "published": "2026-06-24T01:00:50.696Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CVNA",
+      "name": "Carvana",
+      "mentions": 5,
+      "momentum": 0,
+      "sentiment": -0.18,
+      "priceMove": -2.759856589808172,
+      "lastPrice": 64.83000183105469,
+      "relativeVolume": 0.6532798464651521,
+      "optionsActivity": 0,
+      "signalScore": 21.168974465666384,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CVNA $64.83, price -2.8%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/CVNA",
+          "published": "2026-06-24T01:00:50.612Z"
         }
       ]
     },
@@ -2346,13 +2382,13 @@
       "ticker": "BA",
       "name": "Boeing",
       "mentions": 4,
-      "momentum": -91.48936170212765,
+      "momentum": 0,
       "sentiment": -0.18,
       "priceMove": -1.8656863121069436,
       "lastPrice": 216.7100067138672,
       "relativeVolume": 0.8205754848755467,
       "optionsActivity": 0,
-      "signalScore": 15.27049941969224,
+      "signalScore": 20.77049941969224,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2367,7 +2403,7 @@
           "source": "Price/Volume",
           "title": "BA $216.71, price -1.9%, volume 0.8x",
           "url": "https://finance.yahoo.com/quote/BA",
-          "published": "2026-06-24T00:22:37.133Z"
+          "published": "2026-06-24T01:00:50.424Z"
         }
       ]
     },
@@ -2375,13 +2411,13 @@
       "ticker": "ROKU",
       "name": "Roku",
       "mentions": 1,
-      "momentum": -75,
+      "momentum": 0,
       "sentiment": 0,
       "priceMove": -0.10725168323520645,
       "lastPrice": 135.05499267578125,
       "relativeVolume": 0.44162979906769545,
       "optionsActivity": 0,
-      "signalScore": 13.860617936365808,
+      "signalScore": 19.360617936365806,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2396,12 +2432,90 @@
           "source": "Price/Volume",
           "title": "ROKU $135.05, price -0.1%, volume 0.4x",
           "url": "https://finance.yahoo.com/quote/ROKU",
-          "published": "2026-06-24T00:22:37.943Z"
+          "published": "2026-06-24T01:00:51.199Z"
         }
       ]
     }
   ],
   "events": [
+    {
+      "source": "SEC Filings",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177856426000100/0001778564-26-000100-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:30:16-04:00"
+    },
+    {
+      "source": "SEC Filings",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177856426000099/0001778564-26-000099-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:30:13-04:00"
+    },
+    {
+      "source": "SEC Filings",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000192160226000006/0001921602-26-000006-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:30:09-04:00"
+    },
+    {
+      "source": "SEC Filings",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000196827026000013/0001968270-26-000013-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:30:08-04:00"
+    },
+    {
+      "source": "SEC Filings",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "title": "4 - CrowdStrike Holdings, Inc. (0001535527) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000177861026000018/0001778610-26-000018-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:30:06-04:00"
+    },
+    {
+      "source": "SEC Filings",
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "title": "4 - SoFi Technologies, Inc. (0001818874) (Issuer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1818874/000203245826000020/0002032458-26-000020-index.htm",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "2026-06-23T20:28:01-04:00"
+    },
     {
       "source": "CNBC",
       "ticker": "GOOGL",
@@ -2504,7 +2618,7 @@
       "priceMove": -4.126528091164557,
       "relativeVolume": 0.9856242551075447,
       "lastPrice": 200.0399932861328,
-      "published": "2026-06-24T00:22:34.603Z"
+      "published": "2026-06-24T01:00:47.807Z"
     },
     {
       "source": "Price/Volume",
@@ -2517,7 +2631,7 @@
       "priceMove": -5.786940661108482,
       "relativeVolume": 1.047975683442635,
       "lastPrice": 381.6099853515625,
-      "published": "2026-06-24T00:22:34.682Z"
+      "published": "2026-06-24T01:00:47.921Z"
     },
     {
       "source": "Price/Volume",
@@ -2530,7 +2644,7 @@
       "priceMove": -5.761113249020293,
       "relativeVolume": 0.8638547704528367,
       "lastPrice": 519.8499755859375,
-      "published": "2026-06-24T00:22:34.717Z"
+      "published": "2026-06-24T01:00:47.956Z"
     },
     {
       "source": "Price/Volume",
@@ -2543,7 +2657,7 @@
       "priceMove": -0.9124345589546858,
       "relativeVolume": 0.9722108519752499,
       "lastPrice": 294.29998779296875,
-      "published": "2026-06-24T00:22:34.797Z"
+      "published": "2026-06-24T01:00:48.046Z"
     },
     {
       "source": "Price/Volume",
@@ -2556,7 +2670,7 @@
       "priceMove": -2.3430987880818517,
       "relativeVolume": 0.9552559166727632,
       "lastPrice": 116.69999694824219,
-      "published": "2026-06-24T00:22:34.828Z"
+      "published": "2026-06-24T01:00:48.076Z"
     },
     {
       "source": "Price/Volume",
@@ -2569,7 +2683,7 @@
       "priceMove": -6.034967413706188,
       "relativeVolume": 0.7303289126548485,
       "lastPrice": 33.31999969482422,
-      "published": "2026-06-24T00:22:34.866Z"
+      "published": "2026-06-24T01:00:48.119Z"
     },
     {
       "source": "Price/Volume",
@@ -2582,7 +2696,7 @@
       "priceMove": -0.2838196200316003,
       "relativeVolume": 0.5912396948512719,
       "lastPrice": 21.079999923706055,
-      "published": "2026-06-24T00:22:34.940Z"
+      "published": "2026-06-24T01:00:48.177Z"
     },
     {
       "source": "Price/Volume",
@@ -2595,7 +2709,7 @@
       "priceMove": 0.5670378290686527,
       "relativeVolume": 1.0177599270652746,
       "lastPrice": 234.11000061035156,
-      "published": "2026-06-24T00:22:35.041Z"
+      "published": "2026-06-24T01:00:48.211Z"
     },
     {
       "source": "Price/Volume",
@@ -2608,7 +2722,7 @@
       "priceMove": -0.2926245367292342,
       "relativeVolume": 0.6515721709128395,
       "lastPrice": 562.2000122070312,
-      "published": "2026-06-24T00:22:35.115Z"
+      "published": "2026-06-24T01:00:48.247Z"
     },
     {
       "source": "Price/Volume",
@@ -2621,7 +2735,7 @@
       "priceMove": 1.7967022838005193,
       "relativeVolume": 0.8838536404606124,
       "lastPrice": 373.94000244140625,
-      "published": "2026-06-24T00:22:35.174Z"
+      "published": "2026-06-24T01:00:48.309Z"
     },
     {
       "source": "Price/Volume",
@@ -2634,7 +2748,7 @@
       "priceMove": -4.04028379645049,
       "relativeVolume": 0.8532451015557082,
       "lastPrice": 158.17999267578125,
-      "published": "2026-06-24T00:22:35.215Z"
+      "published": "2026-06-24T01:00:48.346Z"
     },
     {
       "source": "Price/Volume",
@@ -2647,7 +2761,7 @@
       "priceMove": -5.134298185262137,
       "relativeVolume": 0.9155783279850538,
       "lastPrice": 103.83999633789062,
-      "published": "2026-06-24T00:22:35.258Z"
+      "published": "2026-06-24T01:00:48.547Z"
     },
     {
       "source": "Price/Volume",
@@ -2660,7 +2774,7 @@
       "priceMove": -1.390728694316316,
       "relativeVolume": 0.8060417426859288,
       "lastPrice": 14.890000343322754,
-      "published": "2026-06-24T00:22:35.291Z"
+      "published": "2026-06-24T01:00:48.581Z"
     },
     {
       "source": "Price/Volume",
@@ -2673,7 +2787,7 @@
       "priceMove": 1.1111142094681452,
       "relativeVolume": 0.9234372680395654,
       "lastPrice": 17.290000915527344,
-      "published": "2026-06-24T00:22:35.331Z"
+      "published": "2026-06-24T01:00:48.626Z"
     },
     {
       "source": "Price/Volume",
@@ -2686,7 +2800,7 @@
       "priceMove": -2.3271205238653683,
       "relativeVolume": 0.931180770865954,
       "lastPrice": 103.25,
-      "published": "2026-06-24T00:22:35.371Z"
+      "published": "2026-06-24T01:00:48.664Z"
     },
     {
       "source": "Price/Volume",
@@ -2699,7 +2813,7 @@
       "priceMove": -0.08232376626624557,
       "relativeVolume": 0.698149293736281,
       "lastPrice": 72.81999969482422,
-      "published": "2026-06-24T00:22:35.403Z"
+      "published": "2026-06-24T01:00:48.716Z"
     },
     {
       "source": "Price/Volume",
@@ -2712,7 +2826,7 @@
       "priceMove": -1.0152104402096156,
       "relativeVolume": 0.8307721775595311,
       "lastPrice": 346.1300048828125,
-      "published": "2026-06-24T00:22:35.444Z"
+      "published": "2026-06-24T01:00:48.753Z"
     },
     {
       "source": "Price/Volume",
@@ -2725,7 +2839,7 @@
       "priceMove": -2.2577905296952574,
       "relativeVolume": 0.8175239260871296,
       "lastPrice": 102.5999984741211,
-      "published": "2026-06-24T00:22:35.512Z"
+      "published": "2026-06-24T01:00:48.810Z"
     },
     {
       "source": "Price/Volume",
@@ -2738,7 +2852,7 @@
       "priceMove": 0.7920784226189633,
       "relativeVolume": 1.024932354211146,
       "lastPrice": 5.090000152587891,
-      "published": "2026-06-24T00:22:35.544Z"
+      "published": "2026-06-24T01:00:48.844Z"
     },
     {
       "source": "Price/Volume",
@@ -2751,7 +2865,7 @@
       "priceMove": 0.5813994320832314,
       "relativeVolume": 0.7052154413565014,
       "lastPrice": 5.190000057220459,
-      "published": "2026-06-24T00:22:35.577Z"
+      "published": "2026-06-24T01:00:48.895Z"
     },
     {
       "source": "Price/Volume",
@@ -2764,7 +2878,7 @@
       "priceMove": -6.1444611267902065,
       "relativeVolume": 0.861616532216841,
       "lastPrice": 132.27999877929688,
-      "published": "2026-06-24T00:22:35.658Z"
+      "published": "2026-06-24T01:00:48.976Z"
     },
     {
       "source": "Price/Volume",
@@ -2777,7 +2891,7 @@
       "priceMove": -3.055112038648594,
       "relativeVolume": 0.8031250043688268,
       "lastPrice": 380.1499938964844,
-      "published": "2026-06-24T00:22:35.710Z"
+      "published": "2026-06-24T01:00:49.034Z"
     },
     {
       "source": "Price/Volume",
@@ -2790,7 +2904,7 @@
       "priceMove": -10.136855304749513,
       "relativeVolume": 0.643056517252223,
       "lastPrice": 366.3900146484375,
-      "published": "2026-06-24T00:22:35.752Z"
+      "published": "2026-06-24T01:00:49.076Z"
     },
     {
       "source": "Price/Volume",
@@ -2803,7 +2917,7 @@
       "priceMove": -0.27783204522242566,
       "relativeVolume": 1.27281223232673,
       "lastPrice": 107.68000030517578,
-      "published": "2026-06-24T00:22:35.786Z"
+      "published": "2026-06-24T01:00:49.144Z"
     },
     {
       "source": "Price/Volume",
@@ -2816,7 +2930,7 @@
       "priceMove": 1.6858675960797325,
       "relativeVolume": 0.6928400965843824,
       "lastPrice": 230.41000366210938,
-      "published": "2026-06-24T00:22:35.817Z"
+      "published": "2026-06-24T01:00:49.180Z"
     },
     {
       "source": "Price/Volume",
@@ -2829,7 +2943,7 @@
       "priceMove": -1.9493177677818991,
       "relativeVolume": 1.2813407674071473,
       "lastPrice": 25.149999618530273,
-      "published": "2026-06-24T00:22:35.850Z"
+      "published": "2026-06-24T01:00:49.245Z"
     },
     {
       "source": "Price/Volume",
@@ -2842,7 +2956,7 @@
       "priceMove": -1.4521954010491562,
       "relativeVolume": 0.9297831020727371,
       "lastPrice": 733.5800170898438,
-      "published": "2026-06-24T00:22:35.926Z"
+      "published": "2026-06-24T01:00:49.314Z"
     },
     {
       "source": "Price/Volume",
@@ -2855,7 +2969,7 @@
       "priceMove": -3.2929043147913664,
       "relativeVolume": 1.0908462058028896,
       "lastPrice": 713.6500244140625,
-      "published": "2026-06-24T00:22:35.985Z"
+      "published": "2026-06-24T01:00:49.383Z"
     },
     {
       "source": "Price/Volume",
@@ -2868,7 +2982,7 @@
       "priceMove": -2.463953701121488,
       "relativeVolume": 0.9197625118731979,
       "lastPrice": 69.66999816894531,
-      "published": "2026-06-24T00:22:36.019Z"
+      "published": "2026-06-24T01:00:49.415Z"
     },
     {
       "source": "Price/Volume",
@@ -2881,7 +2995,7 @@
       "priceMove": 1.0541745858716864,
       "relativeVolume": 0.5101343982303161,
       "lastPrice": 103.52999877929688,
-      "published": "2026-06-24T00:22:36.127Z"
+      "published": "2026-06-24T01:00:49.519Z"
     },
     {
       "source": "Price/Volume",
@@ -2894,7 +3008,7 @@
       "priceMove": -1.5115715336371338,
       "relativeVolume": 0.6785592205984691,
       "lastPrice": 41.70000076293945,
-      "published": "2026-06-24T00:22:36.197Z"
+      "published": "2026-06-24T01:00:49.565Z"
     },
     {
       "source": "Price/Volume",
@@ -2907,7 +3021,7 @@
       "priceMove": 3.212665485146199,
       "relativeVolume": 0.8976199118213889,
       "lastPrice": 22.809999465942383,
-      "published": "2026-06-24T00:22:36.289Z"
+      "published": "2026-06-24T01:00:49.647Z"
     },
     {
       "source": "Price/Volume",
@@ -2920,7 +3034,7 @@
       "priceMove": -0.779586529792658,
       "relativeVolume": 0.9405837759450105,
       "lastPrice": 14,
-      "published": "2026-06-24T00:22:36.408Z"
+      "published": "2026-06-24T01:00:49.754Z"
     },
     {
       "source": "Price/Volume",
@@ -2933,7 +3047,7 @@
       "priceMove": -24.637683663291117,
       "relativeVolume": 1.8775722954884921,
       "lastPrice": 2.0799999237060547,
-      "published": "2026-06-24T00:22:36.455Z"
+      "published": "2026-06-24T01:00:49.843Z"
     },
     {
       "source": "Price/Volume",
@@ -2946,7 +3060,7 @@
       "priceMove": -0.33848074013680457,
       "relativeVolume": 0.6882642311699765,
       "lastPrice": 47.11000061035156,
-      "published": "2026-06-24T00:22:36.497Z"
+      "published": "2026-06-24T01:00:49.879Z"
     },
     {
       "source": "Price/Volume",
@@ -2959,7 +3073,7 @@
       "priceMove": 1.9115871803514508,
       "relativeVolume": 0.9178193538547571,
       "lastPrice": 119.41999816894531,
-      "published": "2026-06-24T00:22:36.606Z"
+      "published": "2026-06-24T01:00:50.017Z"
     },
     {
       "source": "Price/Volume",
@@ -2972,7 +3086,7 @@
       "priceMove": 0.8024627651587374,
       "relativeVolume": 0.562675277991155,
       "lastPrice": 334.1400146484375,
-      "published": "2026-06-24T00:22:36.772Z"
+      "published": "2026-06-24T01:00:50.126Z"
     },
     {
       "source": "Price/Volume",
@@ -2985,7 +3099,7 @@
       "priceMove": 0.6653720767633473,
       "relativeVolume": 1.0181428053951547,
       "lastPrice": 957.6799926757812,
-      "published": "2026-06-24T00:22:36.846Z"
+      "published": "2026-06-24T01:00:50.198Z"
     },
     {
       "source": "Price/Volume",
@@ -2998,7 +3112,7 @@
       "priceMove": -1.4354091365498118,
       "relativeVolume": 1.4588394631487824,
       "lastPrice": 24.719999313354492,
-      "published": "2026-06-24T00:22:37.016Z"
+      "published": "2026-06-24T01:00:50.303Z"
     },
     {
       "source": "Price/Volume",
@@ -3011,7 +3125,7 @@
       "priceMove": -1.8656863121069436,
       "relativeVolume": 0.8205754848755467,
       "lastPrice": 216.7100067138672,
-      "published": "2026-06-24T00:22:37.133Z"
+      "published": "2026-06-24T01:00:50.424Z"
     },
     {
       "source": "Price/Volume",
@@ -3024,7 +3138,7 @@
       "priceMove": 0.9099404172226955,
       "relativeVolume": 0.5503982991955573,
       "lastPrice": 139.72999572753906,
-      "published": "2026-06-24T00:22:37.289Z"
+      "published": "2026-06-24T01:00:50.552Z"
     },
     {
       "source": "Price/Volume",
@@ -3037,7 +3151,7 @@
       "priceMove": -2.759856589808172,
       "relativeVolume": 0.6532798464651521,
       "lastPrice": 64.83000183105469,
-      "published": "2026-06-24T00:22:37.321Z"
+      "published": "2026-06-24T01:00:50.612Z"
     },
     {
       "source": "Price/Volume",
@@ -3050,7 +3164,7 @@
       "priceMove": 0.4469967784564604,
       "relativeVolume": 0.6802524287968115,
       "lastPrice": 31.459999084472656,
-      "published": "2026-06-24T00:22:37.356Z"
+      "published": "2026-06-24T01:00:50.650Z"
     },
     {
       "source": "Price/Volume",
@@ -3063,7 +3177,7 @@
       "priceMove": -0.20618045858364417,
       "relativeVolume": 0.6758401898734178,
       "lastPrice": 9.680000305175781,
-      "published": "2026-06-24T00:22:37.386Z"
+      "published": "2026-06-24T01:00:50.696Z"
     },
     {
       "source": "Price/Volume",
@@ -3076,7 +3190,7 @@
       "priceMove": -5.155048481154087,
       "relativeVolume": 0.5612845213164767,
       "lastPrice": 95.12000274658203,
-      "published": "2026-06-24T00:22:37.423Z"
+      "published": "2026-06-24T01:00:50.730Z"
     },
     {
       "source": "Price/Volume",
@@ -3089,7 +3203,7 @@
       "priceMove": -0.8059005884131318,
       "relativeVolume": 1.1892625756004647,
       "lastPrice": 57.849998474121094,
-      "published": "2026-06-24T00:22:37.471Z"
+      "published": "2026-06-24T01:00:50.765Z"
     },
     {
       "source": "Price/Volume",
@@ -3102,7 +3216,7 @@
       "priceMove": 2.1661788611012494,
       "relativeVolume": 0.6009827942188576,
       "lastPrice": 427.7799987792969,
-      "published": "2026-06-24T00:22:37.518Z"
+      "published": "2026-06-24T01:00:50.806Z"
     },
     {
       "source": "Price/Volume",
@@ -3115,7 +3229,7 @@
       "priceMove": -5.660594760675748,
       "relativeVolume": 1.452502263328617,
       "lastPrice": 165.16000366210938,
-      "published": "2026-06-24T00:22:37.587Z"
+      "published": "2026-06-24T01:00:50.863Z"
     },
     {
       "source": "Price/Volume",
@@ -3128,7 +3242,7 @@
       "priceMove": 2.1982435112536116,
       "relativeVolume": 0.6970291189921883,
       "lastPrice": 153.4199981689453,
-      "published": "2026-06-24T00:22:37.666Z"
+      "published": "2026-06-24T01:00:50.900Z"
     },
     {
       "source": "Price/Volume",
@@ -3141,7 +3255,7 @@
       "priceMove": -13.175880789530037,
       "relativeVolume": 1.110615525876381,
       "lastPrice": 1051.77001953125,
-      "published": "2026-06-24T00:22:37.763Z"
+      "published": "2026-06-24T01:00:50.989Z"
     },
     {
       "source": "Price/Volume",
@@ -3154,7 +3268,7 @@
       "priceMove": -0.2597461973697415,
       "relativeVolume": 0.7763608065861805,
       "lastPrice": 26.8799991607666,
-      "published": "2026-06-24T00:22:37.796Z"
+      "published": "2026-06-24T01:00:51.055Z"
     },
     {
       "source": "Price/Volume",
@@ -3167,7 +3281,7 @@
       "priceMove": 2.7887753732483054,
       "relativeVolume": 0.4678335128268854,
       "lastPrice": 61,
-      "published": "2026-06-24T00:22:37.836Z"
+      "published": "2026-06-24T01:00:51.089Z"
     },
     {
       "source": "Price/Volume",
@@ -3180,7 +3294,7 @@
       "priceMove": 0.8113200948925708,
       "relativeVolume": 0.7131849128853149,
       "lastPrice": 680.9199829101562,
-      "published": "2026-06-24T00:22:37.876Z"
+      "published": "2026-06-24T01:00:51.122Z"
     },
     {
       "source": "Price/Volume",
@@ -3193,7 +3307,7 @@
       "priceMove": 3.003936904440491,
       "relativeVolume": 0.7395349331713245,
       "lastPrice": 224.94000244140625,
-      "published": "2026-06-24T00:22:37.907Z"
+      "published": "2026-06-24T01:00:51.169Z"
     },
     {
       "source": "Price/Volume",
@@ -3206,7 +3320,46 @@
       "priceMove": -0.10725168323520645,
       "relativeVolume": 0.44162979906769545,
       "lastPrice": 135.05499267578125,
-      "published": "2026-06-24T00:22:37.943Z"
+      "published": "2026-06-24T01:00:51.199Z"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "title": "Better Artificial Intelligence (AI) Stock to Buy: SpaceX vs. Nvidia",
+      "url": "https://www.fool.com/investing/2026/06/23/better-artificial-intelligence-ai-stock-to-buy-spa/?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Wed, 24 Jun 2026 00:47:00 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "title": "Nvidia's banned AI chips double in price on China's black market, FT reports",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-banned-ai-chips-double-002552897.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Wed, 24 Jun 2026 00:25:52 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "title": "Ross Gerber Calls Waymo 'Way Safer And Better' Than Tesla's FSD, Questions Whether Elon Musk Can 'Catch Up'",
+      "url": "https://finance.yahoo.com/technology/ai/articles/ross-gerber-calls-waymo-way-233113756.html?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 23:31:13 +0000"
     },
     {
       "source": "Yahoo Public News",
@@ -3249,19 +3402,6 @@
     },
     {
       "source": "Yahoo Public News",
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "title": "Why Tesla Stock Dropped on Tuesday",
-      "url": "https://www.fool.com/investing/2026/06/23/why-tesla-stock-dropped-on-tuesday/?.tsrc=rss",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "Tue, 23 Jun 2026 20:00:42 +0000"
-    },
-    {
-      "source": "Yahoo Public News",
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "title": "Why AMD (AMD) Stock Is Trading Lower Today",
@@ -3272,6 +3412,19 @@
       "relativeVolume": 1,
       "lastPrice": null,
       "published": "Tue, 23 Jun 2026 22:56:46 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "title": "With Its MEXT Acquisition, Advanced Micro Devices Stock Could Rally to Higher Highs",
+      "url": "https://www.barchart.com/story/news/2610732/with-its-mext-acquisition-advanced-micro-devices-stock-could-rally-to-higher-highs?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.6666666666666666,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Tue, 23 Jun 2026 18:20:17 +0000"
     },
     {
       "source": "Yahoo Public News",
@@ -3298,19 +3451,6 @@
       "relativeVolume": 1,
       "lastPrice": null,
       "published": "Tue, 23 Jun 2026 17:23:22 +0000"
-    },
-    {
-      "source": "Yahoo Public News",
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "title": "AMD (AMD) Stock Sees Modest Fair Value Lift As AI Target Revisions Split Analysts",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/amd-amd-stock-sees-modest-171526878.html?.tsrc=rss",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "Tue, 23 Jun 2026 17:15:26 +0000"
     },
     {
       "source": "Yahoo Public News",
@@ -3602,14 +3742,14 @@
       "source": "Yahoo Public News",
       "ticker": "AMZN",
       "name": "Amazon",
-      "title": "Worried About Amazon’s AI Bill? What If It’s Already Paid For?",
-      "url": "https://www.trefis.com/articles/604076/worried-about-amazons-ai-bill-what-if-its-already-paid-for/2026-06-23?.tsrc=rss",
+      "title": "Walmart-backed Flipkart expands quick-commerce push as Amazon ramps up in India",
+      "url": "https://finance.yahoo.com/small-business/articles/walmart-backed-flipkart-expands-quick-003000842.html?.tsrc=rss",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
-      "published": "Tue, 23 Jun 2026 20:44:14 +0000"
+      "published": "Wed, 24 Jun 2026 00:30:00 +0000"
     },
     {
       "source": "Yahoo Public News",
@@ -3636,19 +3776,6 @@
       "relativeVolume": 1,
       "lastPrice": null,
       "published": "Tue, 23 Jun 2026 20:50:15 +0000"
-    },
-    {
-      "source": "Yahoo Public News",
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "title": "META Eyes Prediction Markets With New App, Says Report — DKNG, FLUT Stocks Slide",
-      "url": "https://stocktwits.com/news-articles/markets/equity/meta-eyes-prediction-markets-new-app-report-dkng-flut-slide/cZKwWY6R7a6?.tsrc=rss",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "Tue, 23 Jun 2026 20:27:27 +0000"
     },
     {
       "source": "Yahoo Public News",
@@ -4057,6 +4184,19 @@
       "source": "Yahoo Public News",
       "ticker": "GOOGL",
       "name": "Alphabet",
+      "title": "GOOGL Stock Gains After-Hours As Alphabet Is Set To Replace Verizon In Dow Jones — Retail Eyes ‘$400’ Level",
+      "url": "https://stocktwits.com/news-articles/markets/equity/googl-stock-gains-after-hours-alphabet-replace-verizon-dow-jones-retail-eyes-400-level/cZKUA3aR7OE?.tsrc=rss",
+      "mentions": 2,
+      "sentiment": 0.3333333333333333,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "published": "Wed, 24 Jun 2026 00:01:28 +0000"
+    },
+    {
+      "source": "Yahoo Public News",
+      "ticker": "GOOGL",
+      "name": "Alphabet",
       "title": "Alphabet to Join Dow Jones Industrial Average, Replacing Verizon",
       "url": "https://finance.yahoo.com/m/b7b0dc82-a120-37f2-91f8-a6dcb9988297/alphabet-to-join-dow-jones.html?.tsrc=rss",
       "mentions": 2,
@@ -4091,19 +4231,6 @@
       "relativeVolume": 1,
       "lastPrice": null,
       "published": "Tue, 23 Jun 2026 22:02:00 +0000"
-    },
-    {
-      "source": "Yahoo Public News",
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "title": "Google-Parent Alphabet To Join Dow Jones Industrial Average, Replacing Verizon",
-      "url": "https://finance.yahoo.com/m/a1077ce3-f550-3d55-a667-1472e8e22b80/google-parent-alphabet-to.html?.tsrc=rss",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "published": "Tue, 23 Jun 2026 21:50:33 +0000"
     },
     {
       "source": "Yahoo Public News",
