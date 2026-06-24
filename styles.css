@@ -202,6 +202,13 @@ button {
   color: #aab8b1;
 }
 
+.range-note {
+  margin: 12px 0 0;
+  color: #b9c6c0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
 .check-row {
   display: flex;
   align-items: center;
@@ -227,6 +234,14 @@ button {
 
 .google {
   background: var(--blue);
+}
+
+.gdelt {
+  background: var(--teal);
+}
+
+.bing {
+  background: var(--purple);
 }
 
 .reddit {
@@ -264,6 +279,10 @@ button {
 
 .marketwatch {
   background: #355b48;
+}
+
+.finra {
+  background: #8f4b2e;
 }
 
 .price-volume {
@@ -666,6 +685,21 @@ tbody tr.selected {
   margin-top: 2px;
   color: var(--muted);
   font-weight: 500;
+}
+
+.quote-price {
+  display: block;
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.quote-meta {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.25;
+  max-width: 120px;
 }
 
 .momentum {
