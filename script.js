@@ -1,28 +1,38 @@
 const SOURCES = [
   "Wallstreetbets",
   "Reddit Finance",
+  "GDELT News",
+  "Google News",
+  "Bing News",
   "SEC Filings",
   "Yahoo Public News",
   "CNBC",
   "MarketWatch",
+  "FINRA Short Volume",
   "Price/Volume",
 ];
 
 const SOURCE_COLORS = {
   Wallstreetbets: "#b3414a",
   "Reddit Finance": "#7a5a40",
+  "GDELT News": "#087d7f",
+  "Google News": "#315fba",
+  "Bing News": "#7255b7",
   "SEC Filings": "#5e7468",
   "Yahoo Public News": "#ad6b12",
   CNBC: "#386c87",
   MarketWatch: "#355b48",
+  "FINRA Short Volume": "#8f4b2e",
   "Price/Volume": "#111f4d",
 };
 
 const LINE_COLORS = ["#146c43", "#315fba", "#b3414a", "#ad6b12", "#087d7f", "#7255b7", "#8f4b2e", "#3f6f53"];
 
 let snapshot = null;
+let history = null;
 let selectedTicker = "";
 let rankMode = "signal";
+let selectedDays = 1;
 
 const byId = (id) => document.getElementById(id);
 const fmt = new Intl.NumberFormat("en-US");
@@ -46,9 +56,10 @@ function getState() {
   };
 }
 
-async function loadSnapshot() {
-  if (window.SIGNALDESK_DATA?.dataMode === "real-public-no-key") {
+async function loadSnapshot(force = false) {
+  if (!force && window.SIGNALDESK_DATA?.dataMode === "real-public-no-key") {
     snapshot = window.SIGNALDESK_DATA;
+    await loadHistory(force);
     return true;
   }
 
@@ -56,14 +67,80 @@ async function loadSnapshot() {
     const response = await fetch(`data/signals.json?ts=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error("No real data snapshot found.");
     snapshot = await response.json();
+    await loadHistory(force);
     return snapshot?.dataMode === "real-public-no-key";
   } catch {
     snapshot = null;
+    history = null;
     return false;
   }
 }
 
-function realSignals() {
+async function loadHistory(force = false) {
+  if (!force && window.SIGNALDESK_HISTORY?.dataMode === "real-public-no-key-history") {
+    history = window.SIGNALDESK_HISTORY;
+    return true;
+  }
+
+  try {
+    const response = await fetch(`data/history.json?ts=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("No history found.");
+    const data = await response.json();
+    history = data?.dataMode === "real-public-no-key-history" ? data : null;
+    return Boolean(history);
+  } catch {
+    history = null;
+    return false;
+  }
+}
+
+function currentSnapshotEntry() {
+  if (!snapshot?.signals?.length) return null;
+  return {
+    date: (snapshot.generatedAt || new Date().toISOString()).slice(0, 10),
+    generatedAt: snapshot.generatedAt || new Date().toISOString(),
+    signals: snapshot.signals,
+    events: snapshot.events || [],
+    failures: snapshot.failures || [],
+  };
+}
+
+function historySnapshots() {
+  const snapshots = Array.isArray(history?.snapshots) ? history.snapshots.filter((item) => item?.signals?.length) : [];
+  if (snapshots.length) return snapshots;
+  const current = currentSnapshotEntry();
+  return current ? [current] : [];
+}
+
+function selectedRangeSnapshots() {
+  const state = getState();
+  const start = state.start || "0000-01-01";
+  const end = state.end || "9999-12-31";
+  const snapshots = historySnapshots().filter((item) => item.date >= start && item.date <= end);
+  if (snapshots.length) return snapshots;
+  const current = currentSnapshotEntry();
+  return current ? [current] : [];
+}
+
+function previousRangeSnapshots() {
+  const state = getState();
+  if (!state.start || !state.end) return [];
+  const start = new Date(`${state.start}T00:00:00`);
+  const end = new Date(`${state.end}T00:00:00`);
+  const spanDays = Math.max(1, Math.round((end - start) / 86400000) + 1);
+  const previousEnd = new Date(start);
+  previousEnd.setDate(start.getDate() - 1);
+  const previousStart = new Date(previousEnd);
+  previousStart.setDate(previousEnd.getDate() - spanDays + 1);
+  const startKey = isoDate(previousStart);
+  const endKey = isoDate(previousEnd);
+  return historySnapshots().filter((item) => item.date >= startKey && item.date <= endKey);
+}
+
+function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = previousRangeSnapshots()) {
+  if (snapshots.length > 1 || previousSnapshots.length) {
+    return aggregateSnapshotSignals(snapshots, previousSnapshots);
+  }
   if (!snapshot?.signals?.length) return [];
   return snapshot.signals.map((item) => ({
     ticker: item.ticker,
@@ -72,6 +149,8 @@ function realSignals() {
     momentum: Number(item.momentum) || 0,
     sentiment: Number(item.sentiment) || 0,
     lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
+    quoteAsOf: item.quoteAsOf || null,
+    quoteSource: item.quoteSource || null,
     priceMove: Number(item.priceMove) || 0,
     relativeVolume: Number(item.relativeVolume) || 1,
     optionsActivity: Number(item.optionsActivity) || 0,
@@ -79,6 +158,100 @@ function realSignals() {
     sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
     latest: item.latest || [],
   }));
+}
+
+function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
+  const previousMentions = aggregateMentionTotals(previousSnapshots);
+  const map = new Map();
+
+  snapshots.forEach((daily) => {
+    (daily.signals || []).forEach((signal) => {
+      const mentions = Number(signal.mentions) || 0;
+      const item =
+        map.get(signal.ticker) ||
+        {
+          ticker: signal.ticker,
+          name: signal.name,
+          mentions: 0,
+          weightedSentiment: 0,
+          weightedPrice: 0,
+          weightedVolume: 0,
+          lastPrice: null,
+          quoteAsOf: null,
+          quoteSource: null,
+          latestGeneratedAt: "",
+          sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
+          latest: [],
+        };
+
+      item.mentions += mentions;
+      item.weightedSentiment += (Number(signal.sentiment) || 0) * mentions;
+      item.weightedPrice += (Number(signal.priceMove) || 0) * mentions;
+      item.weightedVolume += (Number(signal.relativeVolume) || 1) * mentions;
+      SOURCES.forEach((source) => {
+        item.sources[source] += Number(signal.sources?.[source]) || 0;
+      });
+      if ((daily.generatedAt || "") >= item.latestGeneratedAt && Number.isFinite(Number(signal.lastPrice))) {
+        item.lastPrice = Number(signal.lastPrice);
+        item.quoteAsOf = signal.quoteAsOf || null;
+        item.quoteSource = signal.quoteSource || null;
+        item.latestGeneratedAt = daily.generatedAt || "";
+      }
+      item.latest.push(...(signal.latest || []).map((entry) => ({ ...entry, date: daily.date })));
+      map.set(signal.ticker, item);
+    });
+  });
+
+  const maxMentions = Math.max(1, ...[...map.values()].map((item) => item.mentions));
+  return [...map.values()]
+    .map((item) => {
+      const prev = previousMentions.get(item.ticker) || 0;
+      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : snapshots.length > 1 ? 0 : item.mentions > 2 ? 35 : 0;
+      const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
+      const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
+      const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
+      const sourceBreadth = SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length;
+      const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
+      const signalScore = clamp(
+        0,
+        100,
+        27 * Math.sqrt(item.mentions / maxMentions) +
+          20 * clamp(0, 1, momentum / 80 + 0.25) +
+          17 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
+          12 * clamp(0, 1, priceMove / 6) +
+          9 * clamp(0, 1, relativeVolume / 2.5) +
+          9 * sourceBreadth +
+          6 * shortPressure
+      );
+      return {
+        ticker: item.ticker,
+        name: item.name,
+        mentions: item.mentions,
+        momentum,
+        sentiment,
+        priceMove,
+        lastPrice: item.lastPrice,
+        quoteAsOf: item.quoteAsOf,
+        quoteSource: item.quoteSource,
+        relativeVolume,
+        optionsActivity: 0,
+        signalScore,
+        sources: item.sources,
+        latest: item.latest.slice(0, 6),
+      };
+    })
+    .sort((a, b) => b.signalScore - a.signalScore)
+    .slice(0, 55);
+}
+
+function aggregateMentionTotals(snapshots) {
+  const totals = new Map();
+  snapshots.forEach((daily) => {
+    (daily.signals || []).forEach((signal) => {
+      totals.set(signal.ticker, (totals.get(signal.ticker) || 0) + (Number(signal.mentions) || 0));
+    });
+  });
+  return totals;
 }
 
 function filteredSignals() {
@@ -119,6 +292,7 @@ function render() {
   }
 
   updateStatus();
+  updateRangeNote();
   updateMetrics(items);
   renderBuyCandidates(items);
   renderTable(top30);
@@ -167,8 +341,9 @@ function buyScore(item) {
   const sentiment = clamp(0, 1, (item.sentiment + 0.2) / 0.65);
   const price = clamp(0, 1, (item.priceMove + 1) / 7);
   const volume = clamp(0, 1, item.relativeVolume / 2.5);
+  const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
   const sourceBreadth = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
-  return 100 * (0.34 * signal + 0.18 * momentum + 0.16 * sentiment + 0.14 * price + 0.1 * volume + 0.08 * sourceBreadth);
+  return 100 * (0.31 * signal + 0.17 * momentum + 0.15 * sentiment + 0.13 * price + 0.09 * volume + 0.08 * sourceBreadth + 0.07 * shortPressure);
 }
 
 function renderBuyCandidates(items) {
@@ -222,6 +397,7 @@ function buyReasons(item) {
   if (item.sentiment > 0.08) reasons.push(`${sentimentLabel(item.sentiment)} public sentiment`);
   if (item.priceMove > 0) reasons.push(`${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% price confirmation`);
   if (item.relativeVolume > 1.1) reasons.push(`${item.relativeVolume.toFixed(1)}x relative volume`);
+  if ((item.sources["FINRA Short Volume"] || 0) > 0) reasons.push("FINRA short-volume pressure");
   const sourceCount = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length;
   reasons.push(`${sourceCount} public sources detected`);
   return reasons.slice(0, 4);
@@ -229,8 +405,9 @@ function buyReasons(item) {
 
 function updateStatus() {
   const warnings = snapshot.failures?.length ? ` Source warnings: ${snapshot.failures.length}.` : "";
+  const historyCount = historySnapshots().length;
   setDataStatus(
-    `Real public no-key data loaded: ${formatDateTime(snapshot.generatedAt)}. Sources: Reddit public JSON, SEC EDGAR, public news RSS, and public price/volume data.${warnings}`
+    `Real public no-key data loaded: ${formatDateTime(snapshot.generatedAt)}. History: ${historyCount} daily snapshot${historyCount === 1 ? "" : "s"}. Sources: GDELT, Google/Bing/Yahoo public news, SEC EDGAR, FINRA short volume, public price/volume, and best-effort Reddit.${warnings}`
   );
 }
 
@@ -276,7 +453,7 @@ function renderTable(items) {
             </div>
           </td>
           <td><span class="signal-pill">${item.signalScore.toFixed(0)}</span></td>
-          <td>${formatPrice(item.lastPrice)}</td>
+          <td>${formatQuoteCell(item)}</td>
           <td>${fmt.format(item.mentions)}</td>
           <td><span class="momentum ${momentumClass}">${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%</span></td>
           <td><span class="momentum ${sentimentClass}">${sentimentLabel(item.sentiment)}</span></td>
@@ -303,18 +480,22 @@ function renderChart(state, items) {
   const selected = items.some((item) => item.ticker === selectedTicker)
     ? [items.find((item) => item.ticker === selectedTicker), ...items.filter((item) => item.ticker !== selectedTicker).slice(0, 7)]
     : items.slice(0, 8);
-  const labels = ["Previous", "Latest"];
-  const series = selected.map((item, index) => ({
-    item,
-    color: LINE_COLORS[index % LINE_COLORS.length],
-    values: twoPointValues(item, state.metric),
-  }));
+  const dailySnapshots = selectedRangeSnapshots();
+  const chartPoints = dailySnapshots.length > 1 ? dailyChartPoints(selected, state.metric, dailySnapshots) : null;
+  const labels = chartPoints?.labels || ["Previous", "Latest"];
+  const series =
+    chartPoints?.series ||
+    selected.map((item, index) => ({
+      item,
+      color: LINE_COLORS[index % LINE_COLORS.length],
+      values: twoPointValues(item, state.metric),
+    }));
   const values = series.flatMap((line) => line.values);
   const min = metricMin(state.metric, values);
   const max = metricMax(state.metric, values);
   const innerW = width - padding.left - padding.right;
   const innerH = height - padding.top - padding.bottom;
-  const x = (index) => padding.left + index * innerW;
+  const x = (index) => padding.left + index * (innerW / Math.max(1, labels.length - 1));
   const y = (value) => {
     if (state.metric === "rank") return padding.top + ((value - min) / (max - min || 1)) * innerH;
     return padding.top + innerH - ((value - min) / (max - min || 1)) * innerH;
@@ -329,19 +510,46 @@ function renderChart(state, items) {
       const path = line.values.map((value, index) => `${index === 0 ? "M" : "L"} ${x(index).toFixed(1)} ${y(value).toFixed(1)}`).join(" ");
       return `
         <path d="${path}" fill="none" stroke="${line.color}" stroke-width="${line.item.ticker === selectedTicker ? 3.6 : 2.4}" stroke-linecap="round"></path>
-        <circle cx="${x(1)}" cy="${y(line.values[1])}" r="${line.item.ticker === selectedTicker ? 4.5 : 3.2}" fill="${line.color}"></circle>`;
+        <circle cx="${x(line.values.length - 1)}" cy="${y(line.values.at(-1))}" r="${line.item.ticker === selectedTicker ? 4.5 : 3.2}" fill="${line.color}"></circle>`;
     })
     .join("");
   svg.innerHTML = `
     <rect x="0" y="0" width="${width}" height="${height}" fill="transparent"></rect>
     ${axis}
     <text class="axis-label" x="${padding.left}" y="${height - 10}">${labels[0]}</text>
-    <text class="axis-label" text-anchor="end" x="${width - padding.right}" y="${height - 10}">${labels[1]}</text>
+    <text class="axis-label" text-anchor="end" x="${width - padding.right}" y="${height - 10}">${labels.at(-1)}</text>
     ${lines}`;
   byId("chartLegend").innerHTML = series
     .map((line) => `<span class="legend-item"><span class="legend-swatch" style="background:${line.color}"></span>${line.item.ticker}</span>`)
     .join("");
   byId("chartSubhead").textContent = chartDescription(state.metric);
+}
+
+function dailyChartPoints(selected, metric, snapshots) {
+  const labels = snapshots.map((daily) => daily.date.slice(5));
+  const dailyAggregates = snapshots.map((daily, index) => {
+    const previous = index > 0 ? [snapshots[index - 1]] : [];
+    return aggregateSnapshotSignals([daily], previous).sort(sortForMode);
+  });
+  const series = selected.map((item, index) => ({
+    item,
+    color: LINE_COLORS[index % LINE_COLORS.length],
+    values: dailyAggregates.map((dailyItems) => {
+      const found = dailyItems.find((entry) => entry.ticker === item.ticker);
+      if (metric === "rank") return found ? dailyItems.findIndex((entry) => entry.ticker === item.ticker) + 1 : 30;
+      return found ? metricValue(found, metric) : 0;
+    }),
+  }));
+  return { labels, series };
+}
+
+function metricValue(item, metric) {
+  if (metric === "mentions") return item.mentions;
+  if (metric === "momentum") return item.momentum;
+  if (metric === "sentiment") return item.sentiment * 100;
+  if (metric === "price") return item.priceMove;
+  if (metric === "volume") return item.relativeVolume;
+  return item.signalScore;
 }
 
 function twoPointValues(item, metric) {
@@ -391,6 +599,18 @@ function chartDescription(metric) {
   return copy[metric];
 }
 
+function updateRangeNote() {
+  const note = byId("rangeNote");
+  if (!note) return;
+  const available = selectedRangeSnapshots().length;
+  const label = selectedDays === "all" ? "All" : `${selectedDays}D`;
+  if (available <= 1) {
+    note.textContent = `${label} view has ${available} saved daily snapshot${available === 1 ? "" : "s"} available. Ranges become stronger as daily GitHub refreshes accumulate.`;
+    return;
+  }
+  note.textContent = `${label} view is aggregating ${available} saved daily snapshots.`;
+}
+
 function renderDetail(items, top30) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top30[0];
   if (!selected) return;
@@ -409,9 +629,12 @@ function renderDetail(items, top30) {
   ).join("");
 
   const latest = selected.latest?.slice(0, 4) || [];
+  const shortMentions = selected.sources["FINRA Short Volume"] || 0;
+  const sourceCount = SOURCES.filter((source) => (selected.sources[source] || 0) > 0).length;
   const notes = [
     `${selected.ticker} scores ${selected.signalScore.toFixed(0)}/100 using only real public no-key data.`,
-    `Sentiment ${sentimentLabel(selected.sentiment).toLowerCase()}, price ${selected.priceMove >= 0 ? "+" : ""}${selected.priceMove.toFixed(1)}%, volume ${selected.relativeVolume.toFixed(1)}x.`,
+    `${sourceCount} source${sourceCount === 1 ? "" : "s"} active${shortMentions ? `, including FINRA short-volume pressure` : ""}.`,
+    `Sentiment ${sentimentLabel(selected.sentiment).toLowerCase()}, quote ${formatPrice(selected.lastPrice)}${selected.quoteAsOf ? ` as of ${formatShortDateTime(selected.quoteAsOf)}` : ""}, price move ${selected.priceMove >= 0 ? "+" : ""}${selected.priceMove.toFixed(1)}%, volume ${selected.relativeVolume.toFixed(1)}x.`,
     ...latest.map((item) => `${item.source}: ${item.title}`),
   ];
   byId("attentionNotes").innerHTML = notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("");
@@ -435,7 +658,24 @@ function formatPrice(value) {
   }).format(value);
 }
 
+function formatQuoteCell(item) {
+  const price = formatPrice(item.lastPrice);
+  if (price === "-") return "-";
+  const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
+  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span><small class="quote-meta">${escapeHtml(meta)}</small>`;
+}
+
+function formatShortDateTime(value) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  }).format(new Date(value));
+}
+
 function setPreset(days) {
+  selectedDays = days === "all" ? "all" : Number(days);
   const generated = new Date(snapshot?.generatedAt || Date.now());
   const start = new Date(generated);
   if (days === "all") {
@@ -495,7 +735,7 @@ function bindEvents() {
   byId("viewMentions").addEventListener("click", () => setRankMode("mentions"));
   byId("viewMomentum").addEventListener("click", () => setRankMode("momentum"));
   byId("refreshData").addEventListener("click", async () => {
-    await loadSnapshot();
+    await loadSnapshot(true);
     render();
   });
   byId("exportCsv").addEventListener("click", exportCsv);
@@ -524,15 +764,16 @@ function escapeHtml(value) {
 
 async function init() {
   const loaded = await loadSnapshot();
-  const generated = new Date(snapshot?.generatedAt || Date.now());
-  const min = new Date(generated);
-  min.setDate(generated.getDate() - 119);
+  const snapshots = historySnapshots();
+  const generated = new Date(snapshot?.generatedAt || snapshots.at(-1)?.generatedAt || Date.now());
+  const min = snapshots[0]?.date ? new Date(`${snapshots[0].date}T00:00:00`) : new Date(generated);
+  if (!snapshots[0]?.date) min.setDate(generated.getDate() - 119);
   byId("startDate").min = isoDate(min);
   byId("startDate").max = isoDate(generated);
   byId("endDate").min = isoDate(min);
   byId("endDate").max = isoDate(generated);
   bindEvents();
-  if (loaded) setPreset("7");
+  if (loaded) setPreset("1");
   else renderEmptyState();
 }
 
