@@ -16,6 +16,9 @@ const SOURCE_COLORS = {
   Wallstreetbets: "#b3414a",
   "Reddit Finance": "#7a5a40",
   StockTwits: "#18a0c4",
+  ApeWisdom: "#c9892f",
+  "Hacker News": "#ff6600",
+  "4chan": "#5d7c46",
   "GDELT News": "#087d7f",
   "Google News": "#315fba",
   "Bing News": "#7255b7",
@@ -747,7 +750,8 @@ const NEWS_BUZZ = 4; // news hits that count as media attention
 const ATTENTION_HIGH = 5; // social + news that counts as "big attention"
 
 function attentionStats(item) {
-  const social = (item.sources["Wallstreetbets"] || 0) + (item.sources["Reddit Finance"] || 0) + (item.sources["StockTwits"] || 0);
+  const socialSources = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
+  const social = socialSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
   const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
   const news = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
   return {

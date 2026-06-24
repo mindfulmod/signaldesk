@@ -286,6 +286,18 @@ button {
   background: #18a0c4;
 }
 
+.apewisdom {
+  background: #c9892f;
+}
+
+.hackernews {
+  background: #ff6600;
+}
+
+.fourchan {
+  background: #5d7c46;
+}
+
 .news {
   background: var(--amber);
 }

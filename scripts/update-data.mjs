@@ -15,6 +15,10 @@ const NEWS_UNIVERSE_LIMIT = 70;
 // StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
 // may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
 const STOCKTWITS_LIMIT = 45;
+// Hacker News (Algolia) comment search — keyless. Per-ticker cashtag lookups for
+// the most-mentioned tickers, limited to recent comments.
+const HN_LIMIT = 35;
+const HN_LOOKBACK_DAYS = 21;
 // FINRA universe: how many candidates to register from the short-volume file
 const FINRA_UNIVERSE_LIMIT = 200;
 const FINRA_MIN_RATIO = 0.30;
@@ -29,6 +33,9 @@ const SOURCES = [
   "Wallstreetbets",
   "Reddit Finance",
   "StockTwits",
+  "ApeWisdom",
+  "Hacker News",
+  "4chan",
   "GDELT News",
   "Google News",
   "Bing News",
@@ -131,6 +138,12 @@ async function main() {
   // they are discoverable even if no other feed mentions them today.
   await collectStockTwitsTrending(events, failures);
 
+  // ApeWisdom — pre-aggregated Reddit+4chan social mention counts per ticker.
+  await collectApeWisdom(events, failures);
+
+  // 4chan /biz/ — raw board chatter; parse cashtags from thread subjects/bodies.
+  await collectFourChanBiz(events, failures, discovery);
+
   for (const feed of feeds) {
     try {
       let items;
@@ -222,6 +235,12 @@ async function main() {
   for (const { ticker, name } of newsUniverseEntries(events, STOCKTWITS_LIMIT)) {
     await collectStockTwitsSentiment(events, failures, ticker, name);
     await sleep(350);
+  }
+
+  // Hacker News comments mentioning the top tickers (keyless Algolia search).
+  for (const { ticker, name } of newsUniverseEntries(events, HN_LIMIT)) {
+    await collectHackerNews(events, failures, ticker, name);
+    await sleep(150);
   }
 
   const signals = aggregate(events, previous);
@@ -823,6 +842,134 @@ async function collectStockTwitsSentiment(events, failures, ticker, name) {
     }
   } catch (error) {
     failures.push(`StockTwits ${ticker}: ${error.message}`);
+  }
+}
+
+// ApeWisdom — free, keyless aggregator of Reddit + 4chan social mentions, already
+// mapped to tickers with 24h mention deltas. https://apewisdom.io/api/v1.0/
+async function collectApeWisdom(events, failures) {
+  let added = 0;
+  for (const page of [1, 2]) {
+    try {
+      const json = await fetchJson(`https://apewisdom.io/api/v1.0/filter/all-stocks/page/${page}`);
+      const results = Array.isArray(json?.results) ? json.results : [];
+      for (const row of results) {
+        const ticker = String(row?.ticker || "").toUpperCase();
+        if (!isPossibleTicker(ticker)) continue;
+        const name = row?.name || ticker;
+        registerStock(ticker, name, [ticker, name]);
+        const rawMentions = Number(row?.mentions) || 0;
+        if (rawMentions <= 0) continue;
+        // Log-scale so ApeWisdom's large counts boost rather than swamp the signal.
+        const weight = Math.max(1, Math.round(Math.log10(rawMentions + 1) * 3));
+        const prevMentions = Number(row?.mentions_24h_ago) || 0;
+        const rising = rawMentions > prevMentions;
+        events.push({
+          source: "ApeWisdom",
+          ticker,
+          name,
+          title: `${rrFormat(rawMentions)} social mentions on ApeWisdom${prevMentions ? ` (${rising ? "up" : "down"} from ${rrFormat(prevMentions)} a day ago)` : ""}`,
+          url: `https://apewisdom.io/stocks/${encodeURIComponent(ticker)}/`,
+          mentions: weight,
+          sentiment: 0,
+          priceMove: 0,
+          relativeVolume: 1,
+          lastPrice: null,
+          quoteAsOf: null,
+          quoteSource: null,
+          published: new Date().toISOString(),
+        });
+        added += 1;
+      }
+    } catch (error) {
+      failures.push(`ApeWisdom p${page}: ${error.message}`);
+      break;
+    }
+  }
+  console.log(`ApeWisdom: ${added} ticker mention rows added`);
+}
+
+function rrFormat(value) {
+  return Number(value).toLocaleString("en-US");
+}
+
+// Strip corporate suffixes so a company name searches/matches cleanly on HN.
+function cleanCompanyForSearch(name) {
+  return String(name || "")
+    .replace(/\b(inc|incorporated|corp|corporation|company|co|ltd|limited|plc|holdings?|group|class [a-c]|common stock|the)\b/gi, " ")
+    .replace(/[.,&]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Hacker News comments (Algolia, keyless) that mention a ticker by cashtag in the
+// recent window. https://hn.algolia.com/api/v1/search_by_date
+async function collectHackerNews(events, failures, ticker, name) {
+  if (AMBIGUOUS_TICKERS.has(ticker)) return;
+  // HN users write "Nvidia", not "$NVDA", so search by company name when we have
+  // one and fall back to the symbol otherwise.
+  const cleanName = cleanCompanyForSearch(name);
+  const hasName = cleanName && cleanName.toUpperCase() !== ticker;
+  const query = hasName ? cleanName : ticker;
+  const nameToken = hasName ? cleanName.split(" ").find((word) => word.length >= 4)?.toLowerCase() : "";
+  const cutoff = Math.floor(Date.now() / 1000) - HN_LOOKBACK_DAYS * 86400;
+  const url = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(query)}&tags=comment&numericFilters=created_at_i>${cutoff}&hitsPerPage=20`;
+  try {
+    const json = await fetchJson(url);
+    const hits = Array.isArray(json?.hits) ? json.hits : [];
+    const cashtag = new RegExp(`\\$${escapeRegExp(ticker)}\\b`, "i");
+    const wordTag = new RegExp(`(^|[^A-Za-z0-9])${escapeRegExp(ticker)}([^A-Za-z0-9]|$)`);
+    for (const hit of hits) {
+      const text = cleanXml(String(hit?.comment_text || ""));
+      const lower = text.toLowerCase();
+      // Accept a cashtag, the company name token, or (for 4+ char symbols only) a
+      // word-boundary symbol match — keeps out common-word false positives.
+      const matches =
+        cashtag.test(text) ||
+        (nameToken && lower.includes(nameToken)) ||
+        (ticker.length >= 4 && wordTag.test(text));
+      if (!matches) continue;
+      events.push({
+        source: "Hacker News",
+        ticker,
+        name: name || ticker,
+        title: text.slice(0, 240) || `${ticker} discussed on Hacker News`,
+        url: hit?.objectID ? `https://news.ycombinator.com/item?id=${hit.objectID}` : "https://news.ycombinator.com/",
+        mentions: 1,
+        sentiment: scoreSentiment(` ${text.toLowerCase()} `),
+        priceMove: 0,
+        relativeVolume: 1,
+        lastPrice: null,
+        quoteAsOf: null,
+        quoteSource: null,
+        published: hit?.created_at || new Date().toISOString(),
+      });
+    }
+  } catch (error) {
+    failures.push(`Hacker News ${ticker}: ${error.message}`);
+  }
+}
+
+// 4chan /biz/ — official keyless read-only JSON. Parse cashtags from thread
+// subjects and bodies in the board catalog. https://a.4cdn.org/biz/catalog.json
+async function collectFourChanBiz(events, failures, discovery) {
+  try {
+    const pages = await fetchJson("https://a.4cdn.org/biz/catalog.json");
+    let scanned = 0;
+    for (const page of Array.isArray(pages) ? pages : []) {
+      for (const thread of page?.threads || []) {
+        const text = cleanXml(`${thread?.sub || ""} ${thread?.com || ""}`);
+        if (!text) continue;
+        const url = thread?.no ? `https://boards.4chan.org/biz/thread/${thread.no}` : "https://boards.4chan.org/biz/";
+        // replies count gives a rough "how active" weight, capped to avoid swamping.
+        const weight = Math.min(5, 1 + Math.round((Number(thread?.replies) || 0) / 40));
+        collectMentions(events, "4chan", text, url, weight, new Date().toISOString(), "", discovery);
+        scanned += 1;
+      }
+    }
+    console.log(`4chan /biz/: ${scanned} threads scanned`);
+  } catch (error) {
+    failures.push(`4chan /biz/: ${error.message}`);
   }
 }
 
