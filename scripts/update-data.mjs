@@ -308,12 +308,15 @@ async function gdeltMarketNews() {
   const query = encodeURIComponent(`("stock" OR "stocks" OR "shares" OR "earnings" OR "analyst")`);
   const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=100&timespan=2d&sort=datedesc`;
   const json = await fetchJson(url);
-  return (json.articles || []).slice(0, 80).map((item) => ({
-    title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
-    url: item.url || url,
-    score: 2,
-    published: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
-  }));
+  return (json.articles || [])
+    .map((item) => ({
+      title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
+      url: item.url || url,
+      score: 2,
+      published: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
+    }))
+    .filter((item) => hasMarketContext(item.title))
+    .slice(0, 80);
 }
 
 async function newsRssItems(source, ticker, name) {
@@ -392,6 +395,10 @@ function parseGdeltDate(value) {
   const digits = String(value).replace(/\D/g, "");
   if (digits.length < 14) return new Date().toISOString();
   return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)}T${digits.slice(8, 10)}:${digits.slice(10, 12)}:${digits.slice(12, 14)}.000Z`;
+}
+
+function hasMarketContext(value) {
+  return /\b(stock|stocks|share|shares|earnings|analyst|analysts|investor|investors|market|markets|nasdaq|dow|nyse|revenue|profit|guidance|valuation|trading|trader|traders|wall street)\b/i.test(value);
 }
 
 async function fetchMarket(ticker) {
