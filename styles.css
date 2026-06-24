@@ -654,6 +654,17 @@ td {
   box-shadow: 0 6px 14px rgba(29, 40, 36, 0.1);
 }
 
+.toggle-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.cap-toggle {
+  background: var(--panel-2);
+}
+
 .table-scroll {
   overflow-x: auto;
 }
@@ -744,6 +755,14 @@ tbody tr.selected {
   display: block;
   color: var(--ink);
   font-weight: 850;
+}
+
+.quote-cap {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.72rem;
 }
 
 .quote-meta {

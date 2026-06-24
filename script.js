@@ -32,7 +32,11 @@ let snapshot = null;
 let history = null;
 let selectedTicker = "";
 let rankMode = "signal";
+let capFilter = "all"; // "all" | "large" | "small"
 let selectedDays = 1;
+
+const LARGE_CAP_MIN = 10_000_000_000; // >= $10B
+const SMALL_CAP_MAX = 2_000_000_000; //  < $2B
 
 const byId = (id) => document.getElementById(id);
 const fmt = new Intl.NumberFormat("en-US");
@@ -162,6 +166,8 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     quoteSource: item.quoteSource || null,
     priceMove: Number(item.priceMove) || 0,
     relativeVolume: Number(item.relativeVolume) || 1,
+    marketCap: Number.isFinite(Number(item.marketCap)) ? Number(item.marketCap) : null,
+    capTier: item.capTier || capTierFor(Number(item.marketCap)),
     optionsActivity: Number(item.optionsActivity) || 0,
     sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
     latest: item.latest || [],
@@ -203,6 +209,8 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
           lastPrice: null,
           quoteAsOf: null,
           quoteSource: null,
+          marketCap: null,
+          capTier: null,
           latestGeneratedAt: "",
           sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
           latest: [],
@@ -219,6 +227,8 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         item.lastPrice = Number(signal.lastPrice);
         item.quoteAsOf = signal.quoteAsOf || null;
         item.quoteSource = signal.quoteSource || null;
+        item.marketCap = Number.isFinite(Number(signal.marketCap)) ? Number(signal.marketCap) : item.marketCap;
+        item.capTier = signal.capTier || capTierFor(Number(signal.marketCap)) || item.capTier;
         item.latestGeneratedAt = daily.generatedAt || "";
       }
       item.latest.push(...(signal.latest || []).map((entry) => ({ ...entry, date: daily.date })));
@@ -255,6 +265,8 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         lastPrice: item.lastPrice,
         quoteAsOf: item.quoteAsOf,
         quoteSource: item.quoteSource,
+        marketCap: item.marketCap,
+        capTier: item.capTier,
         relativeVolume,
         optionsActivity: 0,
         signalScore,
@@ -307,6 +319,21 @@ function filteredSignals() {
   return signals.sort(sortForMode);
 }
 
+function capTierFor(marketCap) {
+  if (!Number.isFinite(marketCap)) return null;
+  if (marketCap >= LARGE_CAP_MIN) return "large";
+  if (marketCap < SMALL_CAP_MAX) return "small";
+  return "mid";
+}
+
+function applyCapFilter(items) {
+  if (capFilter === "all") return items;
+  return items.filter((item) => {
+    const tier = item.capTier || capTierFor(item.marketCap);
+    return tier === capFilter;
+  });
+}
+
 function sortForMode(a, b) {
   if (rankMode === "mentions") return b.mentions - a.mentions;
   if (rankMode === "momentum") return b.momentum - a.momentum;
@@ -326,7 +353,8 @@ function render() {
   }
 
   const items = filteredSignals();
-  const top50 = items.slice(0, 50);
+  const ranked = applyCapFilter(items);
+  const top50 = ranked.slice(0, 50);
   if (!selectedTicker || !top50.some((item) => item.ticker === selectedTicker)) {
     selectedTicker = top50[0]?.ticker || "";
   }
@@ -475,7 +503,10 @@ function updateMetrics(items) {
 }
 
 function renderTable(items) {
-  byId("rankSubhead").textContent = `Showing ${items.length} real-data tickers`;
+  const capLabel = capFilter === "large" ? " large-cap (≥$10B)" : capFilter === "small" ? " small-cap (<$2B)" : "";
+  byId("rankSubhead").textContent = items.length
+    ? `Showing ${items.length}${capLabel} real-data tickers`
+    : `No${capLabel} tickers in this snapshot${capFilter === "all" ? "" : " — market caps come from SEC filings and may be missing for ETFs or new listings"}`;
   byId("rankingBody").innerHTML = items
     .map((item, index) => {
       const total = Math.max(1, item.mentions);
@@ -771,7 +802,14 @@ function formatQuoteCell(item) {
   const price = formatPrice(item.lastPrice);
   if (price === "-") return "-";
   const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
-  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span><small class="quote-meta">${escapeHtml(meta)}</small>`;
+  const cap = Number.isFinite(item.marketCap) ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
+  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
+}
+
+function capLabelFor(item) {
+  const tier = item.capTier || capTierFor(item.marketCap);
+  const tierName = tier === "large" ? "Large cap" : tier === "small" ? "Small cap" : tier === "mid" ? "Mid cap" : "";
+  return `$${shortFmt.format(item.marketCap)}${tierName ? ` • ${tierName}` : ""}`;
 }
 
 function formatShortDateTime(value) {
@@ -843,6 +881,9 @@ function bindEvents() {
   byId("viewSignal").addEventListener("click", () => setRankMode("signal"));
   byId("viewMentions").addEventListener("click", () => setRankMode("mentions"));
   byId("viewMomentum").addEventListener("click", () => setRankMode("momentum"));
+  byId("capAll").addEventListener("click", () => setCapFilter("all"));
+  byId("capLarge").addEventListener("click", () => setCapFilter("large"));
+  byId("capSmall").addEventListener("click", () => setCapFilter("small"));
   byId("refreshData").addEventListener("click", async () => {
     await loadSnapshot(true);
     render();
@@ -856,6 +897,14 @@ function setRankMode(mode) {
   byId("viewSignal").classList.toggle("active", mode === "signal");
   byId("viewMentions").classList.toggle("active", mode === "mentions");
   byId("viewMomentum").classList.toggle("active", mode === "momentum");
+  render();
+}
+
+function setCapFilter(filter) {
+  capFilter = filter;
+  byId("capAll").classList.toggle("active", filter === "all");
+  byId("capLarge").classList.toggle("active", filter === "large");
+  byId("capSmall").classList.toggle("active", filter === "small");
   render();
 }
 

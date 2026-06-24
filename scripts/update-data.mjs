@@ -16,6 +16,11 @@ const NEWS_UNIVERSE_LIMIT = 70;
 const FINRA_UNIVERSE_LIMIT = 200;
 const FINRA_MIN_RATIO = 0.30;
 const FINRA_MIN_SHORT_VOL = 50_000;
+// SEC requires a descriptive User-Agent with contact info for its public data APIs.
+const SEC_USER_AGENT = "SignalDesk/1.0 (m.aali9@gmail.com)";
+// Market-cap tier thresholds (USD). Used to let users filter the ranking by size.
+const LARGE_CAP_MIN = 10_000_000_000; // >= $10B
+const SMALL_CAP_MAX = 2_000_000_000; //  < $2B
 
 const SOURCES = [
   "Wallstreetbets",
@@ -198,6 +203,7 @@ async function main() {
   }
 
   const signals = aggregate(events, previous);
+  await enrichMarketCaps(signals, failures);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -848,6 +854,81 @@ async function fetchTextWithUA(url, ua) {
   const response = await fetch(url, { headers: { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" } });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.text();
+}
+
+// Enrich each signal with an estimated market cap and a size tier (large/mid/small),
+// using only free, no-key SEC data: shares outstanding (SEC XBRL) × our public price.
+async function enrichMarketCaps(signals, failures) {
+  const withPrice = signals.filter((signal) => Number.isFinite(signal.lastPrice) && signal.lastPrice > 0);
+  if (!withPrice.length) return;
+
+  let tickerToCik;
+  try {
+    tickerToCik = await fetchSecTickerMap();
+  } catch (error) {
+    failures.push(`SEC ticker map: ${error.message}`);
+    return;
+  }
+
+  for (const signal of withPrice) {
+    const cik = tickerToCik.get(signal.ticker.toUpperCase());
+    if (!cik) continue;
+    try {
+      const shares = await fetchSharesOutstanding(cik);
+      if (!Number.isFinite(shares) || shares <= 0) continue;
+      const marketCap = shares * signal.lastPrice;
+      signal.marketCap = Math.round(marketCap);
+      signal.capTier = capTierFor(marketCap);
+    } catch {
+      // Best-effort: leave marketCap/capTier unset if SEC has no data for this issuer.
+    }
+    // Be polite to SEC's rate limits (<10 req/s).
+    await sleep(120);
+  }
+}
+
+function capTierFor(marketCap) {
+  if (!Number.isFinite(marketCap)) return null;
+  if (marketCap >= LARGE_CAP_MIN) return "large";
+  if (marketCap < SMALL_CAP_MAX) return "small";
+  return "mid";
+}
+
+let secTickerMapCache = null;
+async function fetchSecTickerMap() {
+  if (secTickerMapCache) return secTickerMapCache;
+  const json = await fetchJsonWithUA("https://www.sec.gov/files/company_tickers.json", SEC_USER_AGENT);
+  const map = new Map();
+  for (const entry of Object.values(json)) {
+    if (entry?.ticker && Number.isFinite(entry.cik_str)) {
+      map.set(String(entry.ticker).toUpperCase(), String(entry.cik_str).padStart(10, "0"));
+    }
+  }
+  secTickerMapCache = map;
+  return map;
+}
+
+async function fetchSharesOutstanding(cik) {
+  const url = `https://data.sec.gov/api/xbrl/companyconcept/CIK${cik}/dei/EntityCommonStockSharesOutstanding.json`;
+  const json = await fetchJsonWithUA(url, SEC_USER_AGENT);
+  const points = json?.units?.shares;
+  if (!Array.isArray(points) || !points.length) return null;
+  // Latest reported value by filing date.
+  const latest = points
+    .filter((point) => Number.isFinite(point.val))
+    .sort((a, b) => String(a.filed || a.end).localeCompare(String(b.filed || b.end)))
+    .at(-1);
+  return latest ? latest.val : null;
+}
+
+async function fetchJsonWithUA(url, ua) {
+  const response = await fetch(url, { headers: { "User-Agent": ua, Accept: "application/json" } });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.json();
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function stockName(ticker) {

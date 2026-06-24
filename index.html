@@ -200,10 +200,17 @@
                 <h2>Ranking</h2>
                 <p id="rankSubhead">Showing the top 30 tickers</p>
               </div>
-              <div class="view-toggle" role="group" aria-label="Table display mode">
-                <button id="viewSignal" class="active" type="button">Signal</button>
-                <button id="viewMentions" type="button">Mentions</button>
-                <button id="viewMomentum" type="button">Momentum</button>
+              <div class="toggle-stack">
+                <div class="view-toggle" role="group" aria-label="Table display mode">
+                  <button id="viewSignal" class="active" type="button">Signal</button>
+                  <button id="viewMentions" type="button">Mentions</button>
+                  <button id="viewMomentum" type="button">Momentum</button>
+                </div>
+                <div class="view-toggle cap-toggle" role="group" aria-label="Market cap filter">
+                  <button id="capAll" class="active" type="button">All caps</button>
+                  <button id="capLarge" type="button">Large cap</button>
+                  <button id="capSmall" type="button">Small cap</button>
+                </div>
               </div>
             </div>
             <div class="table-scroll">
