@@ -1,12 +1,12 @@
 window.SIGNALDESK_HISTORY = {
   "dataMode": "real-public-no-key-history",
-  "updatedAt": "2026-06-24T23:21:30.351Z",
+  "updatedAt": "2026-06-24T23:24:17.871Z",
   "retentionDays": 120,
   "sourceNote": "Daily real public no-key snapshots retained for range aggregation. Longer ranges become more complete as scheduled refreshes accumulate.",
   "snapshots": [
     {
       "date": "2026-06-24",
-      "generatedAt": "2026-06-24T23:21:30.351Z",
+      "generatedAt": "2026-06-24T23:24:17.871Z",
       "signals": [
         {
           "ticker": "PLSM",
@@ -45,7 +45,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "PLSM $6.59, price +93.3%, volume 8758.0x",
               "url": "https://finance.yahoo.com/quote/PLSM",
-              "published": "2026-06-24T23:20:20.176Z"
+              "published": "2026-06-24T23:23:13.592Z"
             }
           ],
           "marketCap": 42853742,
@@ -88,7 +88,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "SCAG $0.71, price +100.7%, volume 547.8x",
               "url": "https://finance.yahoo.com/quote/SCAG",
-              "published": "2026-06-24T23:20:10.248Z"
+              "published": "2026-06-24T23:23:05.638Z"
             }
           ],
           "marketCap": 51336581,
@@ -131,7 +131,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "FMFC $0.32, price +29.6%, volume 246.2x",
               "url": "https://finance.yahoo.com/quote/FMFC",
-              "published": "2026-06-24T23:20:06.522Z"
+              "published": "2026-06-24T23:23:02.725Z"
             }
           ]
         },
@@ -172,7 +172,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "CUPR $5.74, price +45.7%, volume 101.1x",
               "url": "https://finance.yahoo.com/quote/CUPR",
-              "published": "2026-06-24T23:20:14.810Z"
+              "published": "2026-06-24T23:23:09.361Z"
             }
           ],
           "marketCap": 42275100,
@@ -215,7 +215,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "BOXL $4.88, price +37.1%, volume 77.0x",
               "url": "https://finance.yahoo.com/quote/BOXL",
-              "published": "2026-06-24T23:20:04.525Z"
+              "published": "2026-06-24T23:23:01.100Z"
             }
           ],
           "marketCap": 19528330,
@@ -258,7 +258,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "NWGL $0.27, price +21.8%, volume 15.1x",
               "url": "https://finance.yahoo.com/quote/NWGL",
-              "published": "2026-06-24T23:20:19.326Z"
+              "published": "2026-06-24T23:23:12.937Z"
             }
           ],
           "marketCap": 35489986,
@@ -301,7 +301,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "WEN $7.86, price +25.6%, volume 19.3x",
               "url": "https://finance.yahoo.com/quote/WEN",
-              "published": "2026-06-24T23:20:02.143Z"
+              "published": "2026-06-24T23:22:59.154Z"
             }
           ],
           "marketCap": 1497177830,
@@ -344,7 +344,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "VTAK $1.19, price +29.3%, volume 5.0x",
               "url": "https://finance.yahoo.com/quote/VTAK",
-              "published": "2026-06-24T23:20:12.036Z"
+              "published": "2026-06-24T23:23:07.093Z"
             }
           ],
           "marketCap": 3204043,
@@ -387,7 +387,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "MGN $0.22, price +26.9%, volume 3.2x",
               "url": "https://finance.yahoo.com/quote/MGN",
-              "published": "2026-06-24T23:20:18.344Z"
+              "published": "2026-06-24T23:23:12.128Z"
             }
           ],
           "marketCap": 3547375,
@@ -430,7 +430,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "RUN $14.42, price +12.6%, volume 6.5x",
               "url": "https://finance.yahoo.com/quote/RUN",
-              "published": "2026-06-24T23:20:10.051Z"
+              "published": "2026-06-24T23:23:05.476Z"
             }
           ],
           "marketCap": 3439880719,
@@ -473,7 +473,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "TGHL $0.45, price +6.2%, volume 20.2x",
               "url": "https://finance.yahoo.com/quote/TGHL",
-              "published": "2026-06-24T23:20:24.000Z"
+              "published": "2026-06-24T23:23:16.377Z"
             }
           ]
         },
@@ -514,181 +514,11 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "JUNS $0.25, price +7.2%, volume 5.3x",
               "url": "https://finance.yahoo.com/quote/JUNS",
-              "published": "2026-06-24T23:20:17.732Z"
+              "published": "2026-06-24T23:23:11.642Z"
             }
           ],
           "marketCap": 9179157,
           "capTier": "small"
-        },
-        {
-          "ticker": "CHWY",
-          "name": "CHWY",
-          "mentions": 22,
-          "momentum": 35,
-          "sentiment": 0.05909090909090908,
-          "priceMove": 2.953907801731842,
-          "lastPrice": 19.01,
-          "quoteAsOf": "2026-06-24T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3836222813436445,
-          "optionsActivity": 0,
-          "signalScore": 37.83417327808549,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 10
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "CHWY FINRA short volume 56% of reported volume (3,340,605.956 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "CHWY $19.01, price +6.5%, volume 1.2x",
-              "url": "https://finance.yahoo.com/quote/CHWY",
-              "published": "2026-06-24T23:20:14.215Z"
-            }
-          ]
-        },
-        {
-          "ticker": "UMC",
-          "name": "UMC",
-          "mentions": 23,
-          "momentum": 35,
-          "sentiment": 0.05217391304347826,
-          "priceMove": 3.0036494927873987,
-          "lastPrice": 28.01,
-          "quoteAsOf": "2026-06-24T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3616497003374326,
-          "optionsActivity": 0,
-          "signalScore": 37.822672532945866,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 10
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "UMC FINRA short volume 62% of reported volume (4,327,735.183 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "UMC $28.01, price +6.9%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/UMC",
-              "published": "2026-06-24T23:20:11.839Z"
-            }
-          ],
-          "marketCap": 352594259195,
-          "capTier": "large"
-        },
-        {
-          "ticker": "LEG",
-          "name": "LEG",
-          "mentions": 27,
-          "momentum": 35,
-          "sentiment": 0.04259259259259259,
-          "priceMove": 1.9400349751740291,
-          "lastPrice": 11.44,
-          "quoteAsOf": "2026-06-24T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.935800855841036,
-          "optionsActivity": 0,
-          "signalScore": 37.760498858118915,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 16,
-            "Price/Volume": 11
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "LEG FINRA short volume 91% of reported volume (2,912,780.046 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "LEG $11.44, price +4.8%, volume 2.0x",
-              "url": "https://finance.yahoo.com/quote/LEG",
-              "published": "2026-06-24T23:19:55.994Z"
-            }
-          ],
-          "marketCap": 1560787297,
-          "capTier": "large"
-        },
-        {
-          "ticker": "JBLU",
-          "name": "JBLU",
-          "mentions": 20,
-          "momentum": 35,
-          "sentiment": 0.1,
-          "priceMove": 1.880649405622074,
-          "lastPrice": 5.79,
-          "quoteAsOf": "2026-06-24T20:00:02.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.403147585511313,
-          "optionsActivity": 0,
-          "signalScore": 37.04244004459897,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "JBLU FINRA short volume 53% of reported volume (10,848,524.999 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "JBLU $5.79, price +4.7%, volume 1.2x",
-              "url": "https://finance.yahoo.com/quote/JBLU",
-              "published": "2026-06-24T23:20:17.529Z"
-            }
-          ],
-          "marketCap": 2153989396,
-          "capTier": "large"
         },
         {
           "ticker": "SKYQ",
@@ -727,25 +557,25 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "SKYQ $2.62, price +59.8%, volume 1.1x",
               "url": "https://finance.yahoo.com/quote/SKYQ",
-              "published": "2026-06-24T23:20:11.049Z"
+              "published": "2026-06-24T23:23:06.284Z"
             }
           ],
           "marketCap": 12561973,
           "capTier": "small"
         },
         {
-          "ticker": "QXO",
-          "name": "QXO",
-          "mentions": 24,
+          "ticker": "CVNA",
+          "name": "CVNA",
+          "mentions": 20,
           "momentum": 35,
-          "sentiment": 0.03125,
-          "priceMove": 1.6414936421905528,
-          "lastPrice": 16.93,
-          "quoteAsOf": "2026-06-24T20:00:03.000Z",
+          "sentiment": 0.0225,
+          "priceMove": 1.6628093917691018,
+          "lastPrice": 67.91,
+          "quoteAsOf": "2026-06-24T20:04:34.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.7236304453361753,
+          "relativeVolume": 1.3215438435924056,
           "optionsActivity": 0,
-          "signalScore": 36.26918227253454,
+          "signalScore": 34.73084368884211,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -756,322 +586,23 @@ window.SIGNALDESK_HISTORY = {
             "Yahoo Public News": 0,
             "CNBC": 0,
             "MarketWatch": 0,
-            "FINRA Short Volume": 15,
-            "Price/Volume": 9
+            "FINRA Short Volume": 13,
+            "Price/Volume": 7
           },
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "QXO FINRA short volume 83% of reported volume (9,198,668.833 shares)",
+              "title": "CVNA FINRA short volume 65% of reported volume (2,808,296.936 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             },
             {
               "source": "Price/Volume",
-              "title": "QXO $16.93, price +4.4%, volume 1.6x",
-              "url": "https://finance.yahoo.com/quote/QXO",
-              "published": "2026-06-24T23:19:57.672Z"
-            }
-          ],
-          "marketCap": 12277094748,
-          "capTier": "large"
-        },
-        {
-          "ticker": "XRT",
-          "name": "XRT",
-          "mentions": 22,
-          "momentum": 35,
-          "sentiment": 0.027272727272727268,
-          "priceMove": 1.0343590391597406,
-          "lastPrice": 88.22,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.7769731183755362,
-          "optionsActivity": 0,
-          "signalScore": 35.18386603898337,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "XRT FINRA short volume 81% of reported volume (2,249,951.619 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "XRT $88.22, price +2.8%, volume 1.7x",
-              "url": "https://finance.yahoo.com/quote/XRT",
-              "published": "2026-06-24T23:20:02.936Z"
+              "title": "CVNA $67.91, price +4.8%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/CVNA",
+              "published": "2026-06-24T23:23:02.070Z"
             }
           ]
-        },
-        {
-          "ticker": "KMB",
-          "name": "KMB",
-          "mentions": 22,
-          "momentum": 35,
-          "sentiment": 0.027272727272727268,
-          "priceMove": 0.9724966140619984,
-          "lastPrice": 106.73,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.720063218219911,
-          "optionsActivity": 0,
-          "signalScore": 34.855265548227635,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 8
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "KMB FINRA short volume 78% of reported volume (3,810,925.02 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "KMB $106.73, price +2.7%, volume 1.6x",
-              "url": "https://finance.yahoo.com/quote/KMB",
-              "published": "2026-06-24T23:20:00.075Z"
-            }
-          ],
-          "marketCap": 35427994303,
-          "capTier": "large"
-        },
-        {
-          "ticker": "ATEC",
-          "name": "ATEC",
-          "mentions": 22,
-          "momentum": 35,
-          "sentiment": 0.011363636363636364,
-          "priceMove": 0.7486631016042754,
-          "lastPrice": 8.7,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.781912529270477,
-          "optionsActivity": 0,
-          "signalScore": 34.51661967945786,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 15,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "ATEC FINRA short volume 81% of reported volume (2,585,200.079 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "ATEC $8.70, price +2.4%, volume 1.7x",
-              "url": "https://finance.yahoo.com/quote/ATEC",
-              "published": "2026-06-24T23:19:56.397Z"
-            }
-          ],
-          "marketCap": 1316802594,
-          "capTier": "large"
-        },
-        {
-          "ticker": "OPEN",
-          "name": "OPEN",
-          "mentions": 17,
-          "momentum": 35,
-          "sentiment": 0.07352941176470588,
-          "priceMove": 0.5602254507557239,
-          "lastPrice": 4.28,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3691487865374967,
-          "optionsActivity": 0,
-          "signalScore": 34.2136107556432,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "OPEN FINRA short volume 52% of reported volume (12,935,033.239 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "OPEN $4.28, price +1.9%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/OPEN",
-              "published": "2026-06-24T23:20:19.733Z"
-            }
-          ],
-          "marketCap": 4129072785,
-          "capTier": "large"
-        },
-        {
-          "ticker": "BLZE",
-          "name": "BLZE",
-          "mentions": 19,
-          "momentum": 35,
-          "sentiment": 0.02894736842105262,
-          "priceMove": 0.979507581706612,
-          "lastPrice": 11.97,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4858362971604147,
-          "optionsActivity": 0,
-          "signalScore": 33.98292105266653,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "BLZE FINRA short volume 58% of reported volume (3,176,752.779 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "BLZE $11.97, price +2.7%, volume 1.3x",
-              "url": "https://finance.yahoo.com/quote/BLZE",
-              "published": "2026-06-24T23:20:13.419Z"
-            }
-          ],
-          "marketCap": 718200000,
-          "capTier": "large"
-        },
-        {
-          "ticker": "DRAM",
-          "name": "DRAM",
-          "mentions": 17,
-          "momentum": 35,
-          "sentiment": 0.07352941176470588,
-          "priceMove": 0.301680391070231,
-          "lastPrice": 69.93,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3910202511724477,
-          "optionsActivity": 0,
-          "signalScore": 33.77525790895804,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "DRAM FINRA short volume 48% of reported volume (10,799,159.112 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "DRAM $69.93, price +1.0%, volume 1.2x",
-              "url": "https://finance.yahoo.com/quote/DRAM",
-              "published": "2026-06-24T23:20:15.605Z"
-            }
-          ]
-        },
-        {
-          "ticker": "GDC",
-          "name": "GDC",
-          "mentions": 21,
-          "momentum": 35,
-          "sentiment": 0.01666666666666666,
-          "priceMove": 0.9523814146210627,
-          "lastPrice": 0.0216,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4537630871892517,
-          "optionsActivity": 0,
-          "signalScore": 33.762669807883555,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 7
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "GDC FINRA short volume 56% of reported volume (341,694,661.269 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "GDC $0.02, price +2.9%, volume 1.2x",
-              "url": "https://finance.yahoo.com/quote/GDC",
-              "published": "2026-06-24T23:19:58.863Z"
-            }
-          ],
-          "marketCap": 1312410,
-          "capTier": "small"
         },
         {
           "ticker": "ALIT",
@@ -1110,177 +641,11 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "ALIT $0.57, price +9.3%, volume 1.1x",
               "url": "https://finance.yahoo.com/quote/ALIT",
-              "published": "2026-06-24T23:20:03.332Z"
+              "published": "2026-06-24T23:23:00.128Z"
             }
           ],
           "marketCap": 255921318,
           "capTier": "small"
-        },
-        {
-          "ticker": "TAGG",
-          "name": "TAGG",
-          "mentions": 37,
-          "momentum": 35,
-          "sentiment": -0.04594594594594595,
-          "priceMove": 0.2738382711976463,
-          "lastPrice": 42.655,
-          "quoteAsOf": "2026-06-24T19:59:59.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 4.467329535831132,
-          "optionsActivity": 0,
-          "signalScore": 33.65759166878502,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 17,
-            "Price/Volume": 20
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "TAGG FINRA short volume 99% of reported volume (5,052,982 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "TAGG $42.66, price +0.5%, volume 6.6x",
-              "url": "https://finance.yahoo.com/quote/TAGG",
-              "published": "2026-06-24T23:19:55.588Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SCHP",
-          "name": "SCHP",
-          "mentions": 31,
-          "momentum": 35,
-          "sentiment": -0.05483870967741936,
-          "priceMove": 0.154077109901517,
-          "lastPrice": 26.47,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 3.0673435805999447,
-          "optionsActivity": 0,
-          "signalScore": 33.65005493885941,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 17,
-            "Price/Volume": 14
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SCHP FINRA short volume 98% of reported volume (14,328,065.67 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "SCHP $26.47, price +0.3%, volume 4.4x",
-              "url": "https://finance.yahoo.com/quote/SCHP",
-              "published": "2026-06-24T23:19:55.387Z"
-            }
-          ]
-        },
-        {
-          "ticker": "CNH",
-          "name": "CNH",
-          "mentions": 20,
-          "momentum": 35,
-          "sentiment": -0.0125,
-          "priceMove": 0.8008013919254058,
-          "lastPrice": 10.31,
-          "quoteAsOf": "2026-06-24T20:00:03.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5568440905460479,
-          "optionsActivity": 0,
-          "signalScore": 33.60390857818783,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 15,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "CNH FINRA short volume 84% of reported volume (3,180,855.971 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "CNH $10.31, price +3.2%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/CNH",
-              "published": "2026-06-24T23:19:56.870Z"
-            }
-          ],
-          "marketCap": 12783890036,
-          "capTier": "large"
-        },
-        {
-          "ticker": "IJR",
-          "name": "IJR",
-          "mentions": 20,
-          "momentum": 35,
-          "sentiment": 0.004999999999999993,
-          "priceMove": 0.34671058587143,
-          "lastPrice": 144.42,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.7583865057242232,
-          "optionsActivity": 0,
-          "signalScore": 33.5462796607213,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 6
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "IJR FINRA short volume 75% of reported volume (2,394,402.742 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "IJR $144.42, price +1.2%, volume 1.8x",
-              "url": "https://finance.yahoo.com/quote/IJR",
-              "published": "2026-06-24T23:19:59.473Z"
-            }
-          ]
         },
         {
           "ticker": "RKT",
@@ -1319,48 +684,7 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "RKT $14.73, price +9.4%, volume 1.4x",
               "url": "https://finance.yahoo.com/quote/RKT",
-              "published": "2026-06-24T23:20:09.841Z"
-            }
-          ]
-        },
-        {
-          "ticker": "FRSH",
-          "name": "FRSH",
-          "mentions": 19,
-          "momentum": 35,
-          "sentiment": 0.010526315789473682,
-          "priceMove": 0.6185227461275188,
-          "lastPrice": 9.37,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.4748662645183785,
-          "optionsActivity": 0,
-          "signalScore": 33.089880316628594,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 6
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "FRSH FINRA short volume 57% of reported volume (15,549,679.068 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "FRSH $9.37, price +2.0%, volume 1.3x",
-              "url": "https://finance.yahoo.com/quote/FRSH",
-              "published": "2026-06-24T23:20:06.719Z"
+              "published": "2026-06-24T23:23:05.314Z"
             }
           ]
         },
@@ -1401,288 +725,15 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "ABCL $6.03, price +7.1%, volume 2.2x",
               "url": "https://finance.yahoo.com/quote/ABCL",
-              "published": "2026-06-24T23:20:12.236Z"
+              "published": "2026-06-24T23:23:07.256Z"
             }
           ],
           "marketCap": 1841413620,
           "capTier": "large"
         },
         {
-          "ticker": "XBI",
-          "name": "XBI",
-          "mentions": 19,
-          "momentum": 35,
-          "sentiment": -0.00789473684210527,
-          "priceMove": 0.47967318573610074,
-          "lastPrice": 149.71,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5110262270802417,
-          "optionsActivity": 0,
-          "signalScore": 32.810778113700046,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 14,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "XBI FINRA short volume 70% of reported volume (3,500,950.078 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "XBI $149.71, price +1.8%, volume 1.0x",
-              "url": "https://finance.yahoo.com/quote/XBI",
-              "published": "2026-06-24T23:20:02.541Z"
-            }
-          ]
-        },
-        {
-          "ticker": "TSLL",
-          "name": "TSLL",
-          "mentions": 12,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.516560939456255,
-          "optionsActivity": 0,
-          "signalScore": 32.67510079098879,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "TSLL FINRA short volume 52% of reported volume (7,671,246.856 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "VALE",
-          "name": "VALE",
-          "mentions": 12,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.5035297571306385,
-          "optionsActivity": 0,
-          "signalScore": 32.62818853461657,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "VALE FINRA short volume 50% of reported volume (6,218,715.972 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "RXRX",
-          "name": "RXRX",
-          "mentions": 17,
-          "momentum": 35,
-          "sentiment": 0.002941176470588225,
-          "priceMove": 0.6515256167907778,
-          "lastPrice": 3.23,
-          "quoteAsOf": "2026-06-24T20:00:01.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.351519634739398,
-          "optionsActivity": 0,
-          "signalScore": 32.618460426954435,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "RXRX FINRA short volume 56% of reported volume (5,061,270.621 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "RXRX $3.23, price +2.2%, volume 0.8x",
-              "url": "https://finance.yahoo.com/quote/RXRX",
-              "published": "2026-06-24T23:20:21.763Z"
-            }
-          ],
-          "marketCap": 543676006,
-          "capTier": "large"
-        },
-        {
-          "ticker": "TLT",
-          "name": "TLT",
-          "mentions": 12,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.5008265031583887,
-          "optionsActivity": 0,
-          "signalScore": 32.61845682031647,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 12,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "TLT FINRA short volume 50% of reported volume (8,919,877.131 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "CAG",
-          "name": "CAG",
-          "mentions": 18,
-          "momentum": 35,
-          "sentiment": -0.00277777777777778,
-          "priceMove": 0.37230017939523097,
-          "lastPrice": 13.61,
-          "quoteAsOf": "2026-06-24T20:04:39.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5103238925672613,
-          "optionsActivity": 0,
-          "signalScore": 32.6107266732125,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 13,
-            "Price/Volume": 5
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "CAG FINRA short volume 64% of reported volume (4,561,068.495 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "CAG $13.61, price +1.3%, volume 1.2x",
-              "url": "https://finance.yahoo.com/quote/CAG",
-              "published": "2026-06-24T23:20:04.939Z"
-            }
-          ],
-          "marketCap": 6511529693,
-          "capTier": "large"
-        },
-        {
-          "ticker": "KRE",
-          "name": "KRE",
-          "mentions": 18,
-          "momentum": 35,
-          "sentiment": -0.041666666666666664,
-          "priceMove": 0.19374480796175397,
-          "lastPrice": 73.97,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
-          "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.6648636710799591,
-          "optionsActivity": 0,
-          "signalScore": 32.53218135521348,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 15,
-            "Price/Volume": 3
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "KRE FINRA short volume 85% of reported volume (3,406,836.369 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            },
-            {
-              "source": "Price/Volume",
-              "title": "KRE $73.97, price +1.2%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/KRE",
-              "published": "2026-06-24T23:19:57.474Z"
-            }
-          ]
-        },
-        {
-          "ticker": "ICCM",
-          "name": "ICCM",
+          "ticker": "AMD",
+          "name": "AMD",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1690,9 +741,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.480185968223723,
+          "relativeVolume": 1.449455762534152,
           "optionsActivity": 0,
-          "signalScore": 32.51963439969924,
+          "signalScore": 32.40900565921679,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1709,15 +760,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "ICCM FINRA short volume 48% of reported volume (4,132,915.702 shares)",
+              "title": "AMD FINRA short volume 45% of reported volume (4,705,244.185 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "WULF",
-          "name": "WULF",
+          "ticker": "TSLA",
+          "name": "TSLA",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1725,9 +776,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4745068477206318,
+          "relativeVolume": 1.4405603093590986,
           "optionsActivity": 0,
-          "signalScore": 32.499189565888116,
+          "signalScore": 32.376982027786596,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1744,15 +795,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "WULF FINRA short volume 47% of reported volume (5,474,713.138 shares)",
+              "title": "TSLA FINRA short volume 44% of reported volume (8,485,699.252 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "AMZD",
-          "name": "AMZD",
+          "ticker": "RKLB",
+          "name": "RKLB",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1760,9 +811,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4718039980682676,
+          "relativeVolume": 1.4368298694341317,
           "optionsActivity": 0,
-          "signalScore": 32.4894593071396,
+          "signalScore": 32.36355244405671,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1779,15 +830,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "AMZD FINRA short volume 47% of reported volume (5,042,218.881 shares)",
+              "title": "RKLB FINRA short volume 44% of reported volume (4,957,039.564 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "CIFR",
-          "name": "CIFR",
+          "ticker": "NIO",
+          "name": "NIO",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1795,9 +846,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4703883737594126,
+          "relativeVolume": 1.4301654618199733,
           "optionsActivity": 0,
-          "signalScore": 32.484363059627725,
+          "signalScore": 32.33956057664574,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1814,15 +865,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "CIFR FINRA short volume 47% of reported volume (4,342,379.949 shares)",
+              "title": "NIO FINRA short volume 43% of reported volume (4,884,171.854 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "HBAN",
-          "name": "HBAN",
+          "ticker": "MU",
+          "name": "MU",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1830,9 +881,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4641936156518058,
+          "relativeVolume": 1.418998914085392,
           "optionsActivity": 0,
-          "signalScore": 32.46206193044034,
+          "signalScore": 32.29936100480125,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1849,15 +900,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "HBAN FINRA short volume 46% of reported volume (5,498,140.967 shares)",
+              "title": "MU FINRA short volume 42% of reported volume (10,452,557.052 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "XLE",
-          "name": "XLE",
+          "ticker": "SMCI",
+          "name": "SMCI",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1865,9 +916,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4640952309030757,
+          "relativeVolume": 1.417189902388475,
           "optionsActivity": 0,
-          "signalScore": 32.46170774534491,
+          "signalScore": 32.29284856269234,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1884,15 +935,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "XLE FINRA short volume 46% of reported volume (6,249,544.432 shares)",
+              "title": "SMCI FINRA short volume 42% of reported volume (8,695,281.665 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "GLW",
-          "name": "GLW",
+          "ticker": "AAPL",
+          "name": "AAPL",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1900,9 +951,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4632202784511135,
+          "relativeVolume": 1.4164855317978693,
           "optionsActivity": 0,
-          "signalScore": 32.45855791651785,
+          "signalScore": 32.290312828566165,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1919,15 +970,15 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "GLW FINRA short volume 46% of reported volume (4,003,007.726 shares)",
+              "title": "AAPL FINRA short volume 42% of reported volume (6,141,822.661 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "BTCZ",
-          "name": "BTCZ",
+          "ticker": "INTC",
+          "name": "INTC",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -1935,9 +986,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.4621511226381985,
+          "relativeVolume": 1.4064231692537286,
           "optionsActivity": 0,
-          "signalScore": 32.45470895559135,
+          "signalScore": 32.25408832340726,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -1954,760 +1005,25 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "BTCZ FINRA short volume 46% of reported volume (7,461,282.867 shares)",
+              "title": "INTC FINRA short volume 41% of reported volume (20,415,266.784 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "HYG",
-          "name": "HYG",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4619163155614106,
-          "optionsActivity": 0,
-          "signalScore": 32.45386365011491,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "HYG FINRA short volume 46% of reported volume (7,110,206.657 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "IOVA",
-          "name": "IOVA",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4574367181542014,
-          "optionsActivity": 0,
-          "signalScore": 32.43773709944897,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "IOVA FINRA short volume 46% of reported volume (4,258,970.728 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "OWL",
-          "name": "OWL",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.450049449916313,
-          "optionsActivity": 0,
-          "signalScore": 32.41114293379256,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "OWL FINRA short volume 45% of reported volume (8,073,105.676 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SMR",
-          "name": "SMR",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4496625803529022,
-          "optionsActivity": 0,
-          "signalScore": 32.40975020336428,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SMR FINRA short volume 45% of reported volume (6,508,328.36 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "PLTD",
-          "name": "PLTD",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.447851392130695,
-          "optionsActivity": 0,
-          "signalScore": 32.403229925764336,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "PLTD FINRA short volume 45% of reported volume (9,553,141.231 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "CMCSA",
-          "name": "CMCSA",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.447044586169183,
-          "optionsActivity": 0,
-          "signalScore": 32.40032542430289,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "CMCSA FINRA short volume 45% of reported volume (5,516,453.156 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "UWMC",
-          "name": "UWMC",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4432770148281582,
-          "optionsActivity": 0,
-          "signalScore": 32.38676216747521,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "UWMC FINRA short volume 44% of reported volume (6,832,495 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "BMNR",
-          "name": "BMNR",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4409466353900413,
-          "optionsActivity": 0,
-          "signalScore": 32.37837280149799,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "BMNR FINRA short volume 44% of reported volume (7,643,837.341 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "TSLG",
-          "name": "TSLG",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.439337819727718,
-          "optionsActivity": 0,
-          "signalScore": 32.37258106511362,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "TSLG FINRA short volume 44% of reported volume (5,475,585.551 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SNXX",
-          "name": "SNXX",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.434026418282162,
-          "optionsActivity": 0,
-          "signalScore": 32.35346001990962,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SNXX FINRA short volume 43% of reported volume (4,511,406.982 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "WKSP",
-          "name": "WKSP",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4305647337642888,
-          "optionsActivity": 0,
-          "signalScore": 32.34099795564528,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "WKSP FINRA short volume 43% of reported volume (9,579,810.391 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SQQQ",
-          "name": "SQQQ",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4305118786264575,
-          "optionsActivity": 0,
-          "signalScore": 32.34080767714909,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SQQQ FINRA short volume 43% of reported volume (11,501,210.878 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SPCH",
-          "name": "SPCH",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4214938699651256,
-          "optionsActivity": 0,
-          "signalScore": 32.30834284596828,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SPCH FINRA short volume 42% of reported volume (4,433,632.68 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "JOBY",
-          "name": "JOBY",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4200027457414368,
-          "optionsActivity": 0,
-          "signalScore": 32.30297479876301,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "JOBY FINRA short volume 42% of reported volume (16,445,219.123 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SSPC",
-          "name": "SSPC",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4166468269085863,
-          "optionsActivity": 0,
-          "signalScore": 32.29089349096475,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SSPC FINRA short volume 42% of reported volume (5,432,150.204 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "DNN",
-          "name": "DNN",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.405616509909173,
-          "optionsActivity": 0,
-          "signalScore": 32.25118434976686,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "DNN FINRA short volume 41% of reported volume (5,180,770.787 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "SNDQ",
-          "name": "SNDQ",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.4046328943764836,
-          "optionsActivity": 0,
-          "signalScore": 32.247643333849176,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "SNDQ FINRA short volume 40% of reported volume (9,407,693.103 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "ORBS",
-          "name": "ORBS",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.3952715627608914,
-          "optionsActivity": 0,
-          "signalScore": 32.213942540033045,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "ORBS FINRA short volume 40% of reported volume (6,742,184.746 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "NU",
-          "name": "NU",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.3819075310833047,
-          "optionsActivity": 0,
-          "signalScore": 32.16583202599374,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "NU FINRA short volume 38% of reported volume (5,200,512.341 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "PLUG",
-          "name": "PLUG",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.3776088879592854,
-          "optionsActivity": 0,
-          "signalScore": 32.15035691074726,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "PLUG FINRA short volume 38% of reported volume (11,785,670.475 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "HIVE",
-          "name": "HIVE",
-          "mentions": 11,
-          "momentum": 35,
-          "sentiment": 0,
-          "priceMove": 0,
-          "lastPrice": null,
-          "quoteAsOf": null,
-          "quoteSource": null,
-          "relativeVolume": 1.3718776870204874,
-          "optionsActivity": 0,
-          "signalScore": 32.12972458736759,
-          "sources": {
-            "Wallstreetbets": 0,
-            "Reddit Finance": 0,
-            "GDELT News": 0,
-            "Google News": 0,
-            "Bing News": 0,
-            "SEC Filings": 0,
-            "Yahoo Public News": 0,
-            "CNBC": 0,
-            "MarketWatch": 0,
-            "FINRA Short Volume": 11,
-            "Price/Volume": 0
-          },
-          "latest": [
-            {
-              "source": "FINRA Short Volume",
-              "title": "HIVE FINRA short volume 37% of reported volume (6,558,207.378 shares)",
-              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-              "published": "2026-06-24T22:00:00.000Z"
-            }
-          ]
-        },
-        {
-          "ticker": "BURU",
-          "name": "BURU",
+          "ticker": "SPY",
+          "name": "SPY",
           "mentions": 14,
           "momentum": 35,
           "sentiment": 0,
-          "priceMove": -0.06802719935455397,
-          "lastPrice": 0.1463,
-          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "priceMove": -0.006621482162283094,
+          "lastPrice": 733.24,
+          "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.3625473298408288,
+          "relativeVolume": 1.3762851935344893,
           "optionsActivity": 0,
-          "signalScore": 32.12783153008362,
+          "signalScore": 32.177287839380796,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -2724,23 +1040,21 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "BURU FINRA short volume 51% of reported volume (4,517,436.51 shares)",
+              "title": "SPY FINRA short volume 50% of reported volume (7,516,535.579 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             },
             {
               "source": "Price/Volume",
-              "title": "BURU $0.15, price -0.5%, volume 0.5x",
-              "url": "https://finance.yahoo.com/quote/BURU",
-              "published": "2026-06-24T23:20:13.818Z"
+              "title": "SPY $733.24, price -0.0%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/SPY",
+              "published": "2026-06-24T23:23:16.053Z"
             }
-          ],
-          "marketCap": 26190718,
-          "capTier": "small"
+          ]
         },
         {
-          "ticker": "INLF",
-          "name": "INLF",
+          "ticker": "UBER",
+          "name": "UBER",
           "mentions": 11,
           "momentum": 35,
           "sentiment": 0,
@@ -2748,9 +1062,9 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": null,
           "quoteAsOf": null,
           "quoteSource": null,
-          "relativeVolume": 1.370818112442453,
+          "relativeVolume": 1.3836161414072219,
           "optionsActivity": 0,
-          "signalScore": 32.125910118886665,
+          "signalScore": 32.17198302315984,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -2767,25 +1081,325 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "INLF FINRA short volume 37% of reported volume (25,828,794.94 shares)",
+              "title": "UBER FINRA short volume 38% of reported volume (5,737,632.592 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             }
           ]
         },
         {
-          "ticker": "XLU",
-          "name": "XLU",
+          "ticker": "IEUR",
+          "name": "IEUR",
+          "mentions": 23,
+          "momentum": 35,
+          "sentiment": -0.06521739130434782,
+          "priceMove": -0.07061851603978332,
+          "lastPrice": 73.73,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 2.0933985992204573,
+          "optionsActivity": 0,
+          "signalScore": 32.120477036766104,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 15,
+            "Price/Volume": 8
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "IEUR FINRA short volume 88% of reported volume (3,233,800.677 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "IEUR $73.73, price -0.2%, volume 2.5x",
+              "url": "https://finance.yahoo.com/quote/IEUR",
+              "published": "2026-06-24T23:22:55.130Z"
+            }
+          ]
+        },
+        {
+          "ticker": "TE",
+          "name": "TE",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3761394138179874,
+          "optionsActivity": 0,
+          "signalScore": 32.11940819186141,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "TE FINRA short volume 38% of reported volume (4,839,091.291 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "BBAI",
+          "name": "BBAI",
+          "mentions": 11,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3656478625604906,
+          "optionsActivity": 0,
+          "signalScore": 32.107297219311604,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BBAI FINRA short volume 37% of reported volume (10,969,533.699 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "PATH",
+          "name": "PATH",
+          "mentions": 11,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3652157851193787,
+          "optionsActivity": 0,
+          "signalScore": 32.1057417405236,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "PATH FINRA short volume 37% of reported volume (24,413,228.008 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "BYND",
+          "name": "BYND",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0.16050784524577372,
+          "lastPrice": 0.6817,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.495347447638692,
+          "optionsActivity": 0,
+          "signalScore": 32.08277643887331,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BYND FINRA short volume 52% of reported volume (11,063,136.932 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "BYND $0.68, price +0.5%, volume 1.4x",
+              "url": "https://finance.yahoo.com/quote/BYND",
+              "published": "2026-06-24T23:23:08.714Z"
+            }
+          ],
+          "marketCap": 351308909,
+          "capTier": "small"
+        },
+        {
+          "ticker": "AAL",
+          "name": "AAL",
+          "mentions": 11,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3549183427922817,
+          "optionsActivity": 0,
+          "signalScore": 32.06867094814605,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "AAL FINRA short volume 35% of reported volume (61,384,518.556 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "DAMD",
+          "name": "DAMD",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0.16249687254787126,
+          "lastPrice": 1.82,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4803812946215817,
+          "optionsActivity": 0,
+          "signalScore": 32.032876342615914,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "DAMD FINRA short volume 49% of reported volume (6,777,079.277 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "DAMD $1.82, price +0.6%, volume 1.5x",
+              "url": "https://finance.yahoo.com/quote/DAMD",
+              "published": "2026-06-24T23:23:09.523Z"
+            }
+          ]
+        },
+        {
+          "ticker": "GRAB",
+          "name": "GRAB",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3466197924661345,
+          "optionsActivity": 0,
+          "signalScore": 32.013137554994735,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "GRAB FINRA short volume 35% of reported volume (9,794,673.437 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "INFY",
+          "name": "INFY",
           "mentions": 17,
           "momentum": 35,
           "sentiment": -0.03823529411764707,
-          "priceMove": 0.18402758128854077,
-          "lastPrice": 45.54,
+          "priceMove": 0.22897024255889756,
+          "lastPrice": 10.93,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "relativeVolume": 1.5549444366921321,
+          "relativeVolume": 1.4978334399412336,
           "optionsActivity": 0,
-          "signalScore": 32.12167599592098,
+          "signalScore": 32.00596173015846,
           "sources": {
             "Wallstreetbets": 0,
             "Reddit Finance": 0,
@@ -2802,15 +1416,535 @@ window.SIGNALDESK_HISTORY = {
           "latest": [
             {
               "source": "FINRA Short Volume",
-              "title": "XLU FINRA short volume 73% of reported volume (4,511,579.266 shares)",
+              "title": "INFY FINRA short volume 71% of reported volume (8,298,450.811 shares)",
               "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
               "published": "2026-06-24T22:00:00.000Z"
             },
             {
               "source": "Price/Volume",
-              "title": "XLU $45.54, price +1.0%, volume 0.7x",
-              "url": "https://finance.yahoo.com/quote/XLU",
-              "published": "2026-06-24T23:20:02.737Z"
+              "title": "INFY $10.93, price +1.3%, volume 0.5x",
+              "url": "https://finance.yahoo.com/quote/INFY",
+              "published": "2026-06-24T23:22:57.164Z"
+            }
+          ],
+          "marketCap": 44327617532,
+          "capTier": "large"
+        },
+        {
+          "ticker": "IBIT",
+          "name": "IBIT",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3423998311446086,
+          "optionsActivity": 0,
+          "signalScore": 31.99794569423724,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "IBIT FINRA short volume 34% of reported volume (8,681,871.342 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "ABEV",
+          "name": "ABEV",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.341593266880024,
+          "optionsActivity": 0,
+          "signalScore": 31.99504206288474,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "ABEV FINRA short volume 34% of reported volume (6,272,965.093 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "NOK",
+          "name": "NOK",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3411427723081562,
+          "optionsActivity": 0,
+          "signalScore": 31.993420282426012,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "NOK FINRA short volume 34% of reported volume (12,142,282.615 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "ABSI",
+          "name": "ABSI",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.340632926965576,
+          "optionsActivity": 0,
+          "signalScore": 31.991584839192722,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "ABSI FINRA short volume 34% of reported volume (5,934,260.186 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "IREN",
+          "name": "IREN",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3356115513984472,
+          "optionsActivity": 0,
+          "signalScore": 31.97350788715106,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "IREN FINRA short volume 34% of reported volume (5,368,927.761 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "BB",
+          "name": "BB",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.32874698087234,
+          "optionsActivity": 0,
+          "signalScore": 31.948795433257075,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BB FINRA short volume 33% of reported volume (5,505,992.12 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "BTBT",
+          "name": "BTBT",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3234657467141568,
+          "optionsActivity": 0,
+          "signalScore": 31.929782990287617,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BTBT FINRA short volume 32% of reported volume (6,328,027.973 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SCHD",
+          "name": "SCHD",
+          "mentions": 15,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": -0.18738316894116966,
+          "lastPrice": 31.72,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3907416629828817,
+          "optionsActivity": 0,
+          "signalScore": 31.908305567284152,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SCHD FINRA short volume 53% of reported volume (5,685,631.385 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SCHD $31.72, price -0.9%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/SCHD",
+              "published": "2026-06-24T23:23:14.887Z"
+            }
+          ]
+        },
+        {
+          "ticker": "TZA",
+          "name": "TZA",
+          "mentions": 11,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3079268893119138,
+          "optionsActivity": 0,
+          "signalScore": 31.899501715616726,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 11,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "TZA FINRA short volume 31% of reported volume (66,422,093.578 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3054235226622048,
+          "optionsActivity": 0,
+          "signalScore": 31.86483098370059,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "NVDA FINRA short volume 31% of reported volume (14,337,257 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "PLTR",
+          "name": "PLTR",
+          "mentions": 10,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.3049950999101598,
+          "optionsActivity": 0,
+          "signalScore": 31.863288661793227,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 10,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "PLTR FINRA short volume 30% of reported volume (7,253,172.628 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SOFI",
+          "name": "SOFI",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": 0.028917124658297048,
+          "lastPrice": 17.31,
+          "quoteAsOf": "2026-06-24T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4355880369790552,
+          "optionsActivity": 0,
+          "signalScore": 31.848701966297558,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SOFI FINRA short volume 48% of reported volume (40,157,376.521 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SOFI $17.31, price +0.1%, volume 1.3x",
+              "url": "https://finance.yahoo.com/quote/SOFI",
+              "published": "2026-06-24T23:23:15.713Z"
+            }
+          ],
+          "marketCap": 22204250172,
+          "capTier": "large"
+        },
+        {
+          "ticker": "POET",
+          "name": "POET",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": 0,
+          "priceMove": -0.1630930690182928,
+          "lastPrice": 10.66,
+          "quoteAsOf": "2026-06-24T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4380375899427489,
+          "optionsActivity": 0,
+          "signalScore": 31.79968610765026,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "POET FINRA short volume 52% of reported volume (5,298,100.97 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "POET $10.66, price -0.7%, volume 1.2x",
+              "url": "https://finance.yahoo.com/quote/POET",
+              "published": "2026-06-24T23:23:13.754Z"
+            }
+          ],
+          "marketCap": 1410219278,
+          "capTier": "large"
+        },
+        {
+          "ticker": "CGSM",
+          "name": "CGSM",
+          "mentions": 21,
+          "momentum": 35,
+          "sentiment": -0.0761904761904762,
+          "priceMove": -0.002706028733933629,
+          "lastPrice": 26.39,
+          "quoteAsOf": "2026-06-24T19:59:59.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.9012213989062776,
+          "optionsActivity": 0,
+          "signalScore": 31.78508343143497,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 16,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "CGSM FINRA short volume 97% of reported volume (3,390,879 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "CGSM $26.39, price -0.0%, volume 1.7x",
+              "url": "https://finance.yahoo.com/quote/CGSM",
+              "published": "2026-06-24T23:22:53.971Z"
             }
           ]
         },
@@ -2851,10 +1985,135 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "COMP $10.65, price +7.7%, volume 1.1x",
               "url": "https://finance.yahoo.com/quote/COMP",
-              "published": "2026-06-24T23:20:14.414Z"
+              "published": "2026-06-24T23:23:09.038Z"
             }
           ],
           "marketCap": 7957179929,
+          "capTier": "large"
+        },
+        {
+          "ticker": "BKLN",
+          "name": "BKLN",
+          "mentions": 21,
+          "momentum": 35,
+          "sentiment": -0.07142857142857142,
+          "priceMove": -0.028094047531748753,
+          "lastPrice": 20.32,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.8442799302885031,
+          "optionsActivity": 0,
+          "signalScore": 31.410026117200093,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 15,
+            "Price/Volume": 6
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BKLN FINRA short volume 76% of reported volume (11,383,219.11 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "BKLN $20.32, price -0.1%, volume 2.1x",
+              "url": "https://finance.yahoo.com/quote/BKLN",
+              "published": "2026-06-24T23:22:54.630Z"
+            }
+          ]
+        },
+        {
+          "ticker": "VCSH",
+          "name": "VCSH",
+          "mentions": 19,
+          "momentum": 35,
+          "sentiment": -0.0736842105263158,
+          "priceMove": 0.04338735386798934,
+          "lastPrice": 78.98,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.7399620593748952,
+          "optionsActivity": 0,
+          "signalScore": 31.16463108532232,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "VCSH FINRA short volume 74% of reported volume (3,107,299.291 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "VCSH $78.98, price +0.2%, volume 1.7x",
+              "url": "https://finance.yahoo.com/quote/VCSH",
+              "published": "2026-06-24T23:22:58.803Z"
+            }
+          ]
+        },
+        {
+          "ticker": "NLY",
+          "name": "NLY",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.08750000000000001,
+          "priceMove": 0.022451471381976545,
+          "lastPrice": 22.31,
+          "quoteAsOf": "2026-06-24T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.6216565654562876,
+          "optionsActivity": 0,
+          "signalScore": 31.130617362262957,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "NLY FINRA short volume 75% of reported volume (2,652,848.161 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "NLY $22.31, price +0.2%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/NLY",
+              "published": "2026-06-24T23:22:57.993Z"
+            }
+          ],
+          "marketCap": 16348237669,
           "capTier": "large"
         },
         {
@@ -2894,11 +2153,52 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "IBRX $7.80, price +6.6%, volume 1.4x",
               "url": "https://finance.yahoo.com/quote/IBRX",
-              "published": "2026-06-24T23:20:17.128Z"
+              "published": "2026-06-24T23:23:11.152Z"
             }
           ],
           "marketCap": 8169361021,
           "capTier": "large"
+        },
+        {
+          "ticker": "SH",
+          "name": "SH",
+          "mentions": 20,
+          "momentum": 35,
+          "sentiment": -0.075,
+          "priceMove": -0.2066717897215336,
+          "lastPrice": 33.59,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.6819524738646359,
+          "optionsActivity": 0,
+          "signalScore": 30.934838831426784,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 15,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SH FINRA short volume 78% of reported volume (4,591,964.411 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SH $33.59, price -0.8%, volume 1.4x",
+              "url": "https://finance.yahoo.com/quote/SH",
+              "published": "2026-06-24T23:22:55.616Z"
+            }
+          ]
         },
         {
           "ticker": "FRTT",
@@ -2937,7 +2237,737 @@ window.SIGNALDESK_HISTORY = {
               "source": "Price/Volume",
               "title": "FRTT $1.27, price -28.2%, volume 2133.1x",
               "url": "https://finance.yahoo.com/quote/FRTT",
-              "published": "2026-06-24T23:20:06.916Z"
+              "published": "2026-06-24T23:23:03.049Z"
+            }
+          ]
+        },
+        {
+          "ticker": "TQQQ",
+          "name": "TQQQ",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.042352941176470586,
+          "priceMove": -0.36033833929185166,
+          "lastPrice": 73.3,
+          "quoteAsOf": "2026-06-24T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.3849378860223818,
+          "optionsActivity": 0,
+          "signalScore": 30.68865607446221,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "TQQQ FINRA short volume 54% of reported volume (16,523,584.805 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "TQQQ $73.30, price -1.5%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/TQQQ",
+              "published": "2026-06-24T23:23:06.768Z"
+            }
+          ]
+        },
+        {
+          "ticker": "EEM",
+          "name": "EEM",
+          "mentions": 15,
+          "momentum": 35,
+          "sentiment": -0.08666666666666667,
+          "priceMove": 0.015880469105362126,
+          "lastPrice": 67.25,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5019339028488086,
+          "optionsActivity": 0,
+          "signalScore": 30.635596664250304,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "EEM FINRA short volume 64% of reported volume (3,437,415.802 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "EEM $67.25, price +0.1%, volume 0.6x",
+              "url": "https://finance.yahoo.com/quote/EEM",
+              "published": "2026-06-24T23:23:02.394Z"
+            }
+          ]
+        },
+        {
+          "ticker": "AGNC",
+          "name": "AGNC",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.08125,
+          "priceMove": 0.0897996078059894,
+          "lastPrice": 10.49,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5043669276553648,
+          "optionsActivity": 0,
+          "signalScore": 30.619856653313374,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "AGNC FINRA short volume 68% of reported volume (4,184,473.672 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "AGNC $10.49, price +0.5%, volume 0.7x",
+              "url": "https://finance.yahoo.com/quote/AGNC",
+              "published": "2026-06-24T23:22:59.966Z"
+            }
+          ],
+          "marketCap": 12041778063,
+          "capTier": "large"
+        },
+        {
+          "ticker": "FCEL",
+          "name": "FCEL",
+          "mentions": 20,
+          "momentum": 35,
+          "sentiment": -0.072,
+          "priceMove": -0.4766263949781684,
+          "lastPrice": 21.56,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.8123871314827287,
+          "optionsActivity": 0,
+          "signalScore": 30.57726074170906,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 8
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "FCEL FINRA short volume 54% of reported volume (6,414,116.808 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "FCEL $21.56, price -1.2%, volume 2.2x",
+              "url": "https://finance.yahoo.com/quote/FCEL",
+              "published": "2026-06-24T23:23:10.495Z"
+            }
+          ],
+          "marketCap": 1457632210,
+          "capTier": "large"
+        },
+        {
+          "ticker": "URG",
+          "name": "URG",
+          "mentions": 12,
+          "momentum": 35,
+          "sentiment": -0.10000000000000002,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.5949899335777828,
+          "optionsActivity": 0,
+          "signalScore": 30.528873741254863,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "URG FINRA short volume 59% of reported volume (3,423,975.299 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SCHH",
+          "name": "SCHH",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.08125,
+          "priceMove": -0.11728488201083997,
+          "lastPrice": 23.83,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5223092985964382,
+          "optionsActivity": 0,
+          "signalScore": 30.504849973089257,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SCHH FINRA short volume 68% of reported volume (2,733,184.407 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SCHH $23.83, price -0.6%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/SCHH",
+              "published": "2026-06-24T23:23:05.800Z"
+            }
+          ]
+        },
+        {
+          "ticker": "LQD",
+          "name": "LQD",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.07647058823529412,
+          "priceMove": 0.108021479381939,
+          "lastPrice": 109.41,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4915767897814793,
+          "optionsActivity": 0,
+          "signalScore": 30.460027658187407,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "LQD FINRA short volume 64% of reported volume (8,578,367.871 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "LQD $109.41, price +0.5%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/LQD",
+              "published": "2026-06-24T23:23:03.859Z"
+            }
+          ]
+        },
+        {
+          "ticker": "XLF",
+          "name": "XLF",
+          "mentions": 12,
+          "momentum": 35,
+          "sentiment": -0.10000000000000002,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.5632904565159587,
+          "optionsActivity": 0,
+          "signalScore": 30.414755623832296,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "XLF FINRA short volume 56% of reported volume (5,880,691.28 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "UVIX",
+          "name": "UVIX",
+          "mentions": 12,
+          "momentum": 35,
+          "sentiment": -0.10000000000000002,
+          "priceMove": 0,
+          "lastPrice": null,
+          "quoteAsOf": null,
+          "quoteSource": null,
+          "relativeVolume": 1.5512697338048433,
+          "optionsActivity": 0,
+          "signalScore": 30.37148102207228,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 0
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "UVIX FINRA short volume 55% of reported volume (7,156,025.753 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "ticker": "HUMA",
+          "name": "HUMA",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.07647058823529412,
+          "priceMove": -0.07731052498284444,
+          "lastPrice": 0.6977,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.517677180594686,
+          "optionsActivity": 0,
+          "signalScore": 30.337946106351076,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "HUMA FINRA short volume 60% of reported volume (13,445,329.321 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "HUMA $0.70, price -0.3%, volume 1.2x",
+              "url": "https://finance.yahoo.com/quote/HUMA",
+              "published": "2026-06-24T23:23:03.373Z"
+            }
+          ],
+          "marketCap": 154902732,
+          "capTier": "small"
+        },
+        {
+          "ticker": "IWM",
+          "name": "IWM",
+          "mentions": 15,
+          "momentum": 35,
+          "sentiment": -0.08000000000000002,
+          "priceMove": 0.09278021412732755,
+          "lastPrice": 296.69,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4421109694932626,
+          "optionsActivity": 0,
+          "signalScore": 30.335938356119037,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "IWM FINRA short volume 57% of reported volume (5,004,378.315 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "IWM $296.69, price +0.5%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/IWM",
+              "published": "2026-06-24T23:23:11.318Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SGOV",
+          "name": "SGOV",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.08125,
+          "priceMove": 0.0018635180873758793,
+          "lastPrice": 100.62,
+          "quoteAsOf": "2026-06-24T20:02:32.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.466884047934803,
+          "optionsActivity": 0,
+          "signalScore": 30.30904610688212,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SGOV FINRA short volume 58% of reported volume (8,034,065.213 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SGOV $100.62, price +0.0%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/SGOV",
+              "published": "2026-06-24T23:23:06.123Z"
+            }
+          ]
+        },
+        {
+          "ticker": "QQQ",
+          "name": "QQQ",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.08125,
+          "priceMove": -0.07960899014936303,
+          "lastPrice": 710.62,
+          "quoteAsOf": "2026-06-24T20:00:03.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4542564054183598,
+          "optionsActivity": 0,
+          "signalScore": 30.259859557648173,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "QQQ FINRA short volume 61% of reported volume (8,493,992.557 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "QQQ $710.62, price -0.4%, volume 0.8x",
+              "url": "https://finance.yahoo.com/quote/QQQ",
+              "published": "2026-06-24T23:23:04.505Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SOXL",
+          "name": "SOXL",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.07647058823529412,
+          "priceMove": -0.18809683270884942,
+          "lastPrice": 229.57,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4880308328256133,
+          "optionsActivity": 0,
+          "signalScore": 30.23121925438241,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SOXL FINRA short volume 63% of reported volume (11,223,134.248 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SOXL $229.57, price -0.8%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/SOXL",
+              "published": "2026-06-24T23:23:06.446Z"
+            }
+          ]
+        },
+        {
+          "ticker": "SPCX",
+          "name": "SPCX",
+          "mentions": 16,
+          "momentum": 35,
+          "sentiment": -0.11000000000000001,
+          "priceMove": -0.12571268690452692,
+          "lastPrice": 154.54,
+          "quoteAsOf": "2026-06-24T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.5231142822707566,
+          "optionsActivity": 0,
+          "signalScore": 30.184533628602512,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 14,
+            "Price/Volume": 2
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SPCX FINRA short volume 69% of reported volume (20,566,422.231 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SPCX $154.54, price -1.0%, volume 0.4x",
+              "url": "https://finance.yahoo.com/quote/SPCX",
+              "published": "2026-06-24T23:22:58.641Z"
+            }
+          ]
+        },
+        {
+          "ticker": "ALLO",
+          "name": "ALLO",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.07647058823529412,
+          "priceMove": -0.2273365602477183,
+          "lastPrice": 2.05,
+          "quoteAsOf": "2026-06-24T20:00:01.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4723035361452357,
+          "optionsActivity": 0,
+          "signalScore": 30.174600986333054,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 13,
+            "Price/Volume": 4
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "ALLO FINRA short volume 64% of reported volume (4,376,231.231 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "ALLO $2.05, price -1.0%, volume 0.9x",
+              "url": "https://finance.yahoo.com/quote/ALLO",
+              "published": "2026-06-24T23:23:00.291Z"
+            }
+          ],
+          "marketCap": 707566850,
+          "capTier": "large"
+        },
+        {
+          "ticker": "SOUN",
+          "name": "SOUN",
+          "mentions": 17,
+          "momentum": 35,
+          "sentiment": -0.05294117647058823,
+          "priceMove": -0.45670467816926463,
+          "lastPrice": 6.34,
+          "quoteAsOf": "2026-06-24T20:00:02.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4020299296567753,
+          "optionsActivity": 0,
+          "signalScore": 30.14010339793258,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 5
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "SOUN FINRA short volume 45% of reported volume (9,652,405.523 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "SOUN $6.34, price -1.6%, volume 1.3x",
+              "url": "https://finance.yahoo.com/quote/SOUN",
+              "published": "2026-06-24T23:23:15.875Z"
+            }
+          ],
+          "marketCap": 110702740,
+          "capTier": "small"
+        },
+        {
+          "ticker": "BIL",
+          "name": "BIL",
+          "mentions": 15,
+          "momentum": 35,
+          "sentiment": -0.08000000000000002,
+          "priceMove": 0.0021834830193081614,
+          "lastPrice": 91.59,
+          "quoteAsOf": "2026-06-24T20:00:00.000Z",
+          "quoteSource": "Yahoo public chart",
+          "relativeVolume": 1.4349627726213205,
+          "optionsActivity": 0,
+          "signalScore": 30.129011385164006,
+          "sources": {
+            "Wallstreetbets": 0,
+            "Reddit Finance": 0,
+            "GDELT News": 0,
+            "Google News": 0,
+            "Bing News": 0,
+            "SEC Filings": 0,
+            "Yahoo Public News": 0,
+            "CNBC": 0,
+            "MarketWatch": 0,
+            "FINRA Short Volume": 12,
+            "Price/Volume": 3
+          },
+          "latest": [
+            {
+              "source": "FINRA Short Volume",
+              "title": "BIL FINRA short volume 55% of reported volume (3,486,701.976 shares)",
+              "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+              "published": "2026-06-24T22:00:00.000Z"
+            },
+            {
+              "source": "Price/Volume",
+              "title": "BIL $91.59, price +0.0%, volume 1.0x",
+              "url": "https://finance.yahoo.com/quote/BIL",
+              "published": "2026-06-24T23:23:07.904Z"
             }
           ]
         }
@@ -5956,7 +5986,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 26.47,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:55.387Z"
+          "published": "2026-06-24T23:22:53.646Z"
         },
         {
           "source": "Price/Volume",
@@ -5971,7 +6001,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 42.655,
           "quoteAsOf": "2026-06-24T19:59:59.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:55.588Z"
+          "published": "2026-06-24T23:22:53.809Z"
         },
         {
           "source": "Price/Volume",
@@ -5986,7 +6016,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 26.39,
           "quoteAsOf": "2026-06-24T19:59:59.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:55.796Z"
+          "published": "2026-06-24T23:22:53.971Z"
         },
         {
           "source": "Price/Volume",
@@ -6001,7 +6031,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 11.44,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:55.994Z"
+          "published": "2026-06-24T23:22:54.144Z"
         },
         {
           "source": "Price/Volume",
@@ -6016,7 +6046,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.0095,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:56.196Z"
+          "published": "2026-06-24T23:22:54.306Z"
         },
         {
           "source": "Price/Volume",
@@ -6031,7 +6061,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 8.7,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:56.397Z"
+          "published": "2026-06-24T23:22:54.468Z"
         },
         {
           "source": "Price/Volume",
@@ -6046,7 +6076,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 20.32,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:56.592Z"
+          "published": "2026-06-24T23:22:54.630Z"
         },
         {
           "source": "Price/Volume",
@@ -6061,7 +6091,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.31,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:56.870Z"
+          "published": "2026-06-24T23:22:54.806Z"
         },
         {
           "source": "Price/Volume",
@@ -6076,7 +6106,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.1867,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:57.070Z"
+          "published": "2026-06-24T23:22:54.967Z"
         },
         {
           "source": "Price/Volume",
@@ -6091,7 +6121,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 73.73,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:57.265Z"
+          "published": "2026-06-24T23:22:55.130Z"
         },
         {
           "source": "Price/Volume",
@@ -6106,7 +6136,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 73.97,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:57.474Z"
+          "published": "2026-06-24T23:22:55.291Z"
         },
         {
           "source": "Price/Volume",
@@ -6121,7 +6151,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 16.93,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:57.672Z"
+          "published": "2026-06-24T23:22:55.453Z"
         },
         {
           "source": "Price/Volume",
@@ -6136,7 +6166,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 33.59,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:57.871Z"
+          "published": "2026-06-24T23:22:55.616Z"
         },
         {
           "source": "Price/Volume",
@@ -6151,7 +6181,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 122.6,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:58.072Z"
+          "published": "2026-06-24T23:22:55.778Z"
         },
         {
           "source": "Price/Volume",
@@ -6166,7 +6196,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.23,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:58.267Z"
+          "published": "2026-06-24T23:22:55.940Z"
         },
         {
           "source": "Price/Volume",
@@ -6181,7 +6211,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 182.26,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:58.461Z"
+          "published": "2026-06-24T23:22:56.102Z"
         },
         {
           "source": "Price/Volume",
@@ -6196,7 +6226,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 15.47,
           "quoteAsOf": "2026-06-24T20:00:46.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:58.664Z"
+          "published": "2026-06-24T23:22:56.264Z"
         },
         {
           "source": "Price/Volume",
@@ -6211,7 +6241,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.0216,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:58.863Z"
+          "published": "2026-06-24T23:22:56.426Z"
         },
         {
           "source": "Price/Volume",
@@ -6226,7 +6256,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 23.29,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:59.074Z"
+          "published": "2026-06-24T23:22:56.678Z"
         },
         {
           "source": "Price/Volume",
@@ -6241,7 +6271,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:59.275Z"
+          "published": "2026-06-24T23:22:56.840Z"
         },
         {
           "source": "Price/Volume",
@@ -6256,7 +6286,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 144.42,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:59.473Z"
+          "published": "2026-06-24T23:22:57.002Z"
         },
         {
           "source": "Price/Volume",
@@ -6271,7 +6301,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.93,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:59.673Z"
+          "published": "2026-06-24T23:22:57.164Z"
         },
         {
           "source": "Price/Volume",
@@ -6286,7 +6316,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 53.6,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:19:59.870Z"
+          "published": "2026-06-24T23:22:57.326Z"
         },
         {
           "source": "Price/Volume",
@@ -6301,7 +6331,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 106.73,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:00.075Z"
+          "published": "2026-06-24T23:22:57.501Z"
         },
         {
           "source": "Price/Volume",
@@ -6316,7 +6346,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:00.271Z"
+          "published": "2026-06-24T23:22:57.663Z"
         },
         {
           "source": "Price/Volume",
@@ -6331,7 +6361,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 41.82,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:00.481Z"
+          "published": "2026-06-24T23:22:57.831Z"
         },
         {
           "source": "Price/Volume",
@@ -6346,7 +6376,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 22.31,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:00.694Z"
+          "published": "2026-06-24T23:22:57.993Z"
         },
         {
           "source": "Price/Volume",
@@ -6361,7 +6391,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 22.98,
           "quoteAsOf": "2026-06-24T20:04:38.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:00.892Z"
+          "published": "2026-06-24T23:22:58.155Z"
         },
         {
           "source": "Price/Volume",
@@ -6376,7 +6406,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 77.7,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:01.093Z"
+          "published": "2026-06-24T23:22:58.317Z"
         },
         {
           "source": "Price/Volume",
@@ -6391,7 +6421,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.73,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:01.287Z"
+          "published": "2026-06-24T23:22:58.479Z"
         },
         {
           "source": "Price/Volume",
@@ -6406,7 +6436,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 154.54,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:01.486Z"
+          "published": "2026-06-24T23:22:58.641Z"
         },
         {
           "source": "Price/Volume",
@@ -6421,7 +6451,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 78.98,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:01.681Z"
+          "published": "2026-06-24T23:22:58.803Z"
         },
         {
           "source": "Price/Volume",
@@ -6436,7 +6466,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 45.68,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:01.943Z"
+          "published": "2026-06-24T23:22:58.992Z"
         },
         {
           "source": "Price/Volume",
@@ -6451,7 +6481,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 7.86,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:02.143Z"
+          "published": "2026-06-24T23:22:59.154Z"
         },
         {
           "source": "Price/Volume",
@@ -6466,7 +6496,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.19,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:02.340Z"
+          "published": "2026-06-24T23:22:59.316Z"
         },
         {
           "source": "Price/Volume",
@@ -6481,7 +6511,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 149.71,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:02.541Z"
+          "published": "2026-06-24T23:22:59.481Z"
         },
         {
           "source": "Price/Volume",
@@ -6496,7 +6526,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 45.54,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:02.737Z"
+          "published": "2026-06-24T23:22:59.642Z"
         },
         {
           "source": "Price/Volume",
@@ -6511,7 +6541,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 88.22,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:02.936Z"
+          "published": "2026-06-24T23:22:59.804Z"
         },
         {
           "source": "Price/Volume",
@@ -6526,7 +6556,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.49,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:03.134Z"
+          "published": "2026-06-24T23:22:59.966Z"
         },
         {
           "source": "Price/Volume",
@@ -6541,7 +6571,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.5728,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:03.332Z"
+          "published": "2026-06-24T23:23:00.128Z"
         },
         {
           "source": "Price/Volume",
@@ -6556,7 +6586,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.05,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:03.529Z"
+          "published": "2026-06-24T23:23:00.291Z"
         },
         {
           "source": "Price/Volume",
@@ -6571,7 +6601,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 41.98,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:03.728Z"
+          "published": "2026-06-24T23:23:00.452Z"
         },
         {
           "source": "Price/Volume",
@@ -6586,7 +6616,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.78,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:03.932Z"
+          "published": "2026-06-24T23:23:00.614Z"
         },
         {
           "source": "Price/Volume",
@@ -6601,7 +6631,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.78,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:04.131Z"
+          "published": "2026-06-24T23:23:00.776Z"
         },
         {
           "source": "Price/Volume",
@@ -6616,7 +6646,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.7489,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:04.328Z"
+          "published": "2026-06-24T23:23:00.939Z"
         },
         {
           "source": "Price/Volume",
@@ -6631,7 +6661,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 4.88,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:04.525Z"
+          "published": "2026-06-24T23:23:01.100Z"
         },
         {
           "source": "Price/Volume",
@@ -6646,7 +6676,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.91,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:04.722Z"
+          "published": "2026-06-24T23:23:01.262Z"
         },
         {
           "source": "Price/Volume",
@@ -6661,7 +6691,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 13.61,
           "quoteAsOf": "2026-06-24T20:04:39.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:04.939Z"
+          "published": "2026-06-24T23:23:01.423Z"
         },
         {
           "source": "Price/Volume",
@@ -6676,7 +6706,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 4.15,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:05.136Z"
+          "published": "2026-06-24T23:23:01.584Z"
         },
         {
           "source": "Price/Volume",
@@ -6691,7 +6721,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.02,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:05.329Z"
+          "published": "2026-06-24T23:23:01.746Z"
         },
         {
           "source": "Price/Volume",
@@ -6706,7 +6736,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 100.88,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:05.534Z"
+          "published": "2026-06-24T23:23:01.908Z"
         },
         {
           "source": "Price/Volume",
@@ -6721,7 +6751,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 67.91,
           "quoteAsOf": "2026-06-24T20:04:34.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:05.733Z"
+          "published": "2026-06-24T23:23:02.070Z"
         },
         {
           "source": "Price/Volume",
@@ -6736,7 +6766,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.3402,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:05.931Z"
+          "published": "2026-06-24T23:23:02.233Z"
         },
         {
           "source": "Price/Volume",
@@ -6751,7 +6781,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 67.25,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:06.128Z"
+          "published": "2026-06-24T23:23:02.394Z"
         },
         {
           "source": "Price/Volume",
@@ -6766,7 +6796,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 11.16,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:06.324Z"
+          "published": "2026-06-24T23:23:02.563Z"
         },
         {
           "source": "Price/Volume",
@@ -6781,7 +6811,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.324,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:06.522Z"
+          "published": "2026-06-24T23:23:02.725Z"
         },
         {
           "source": "Price/Volume",
@@ -6796,7 +6826,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 9.37,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:06.719Z"
+          "published": "2026-06-24T23:23:02.887Z"
         },
         {
           "source": "Price/Volume",
@@ -6811,7 +6841,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.27,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:06.916Z"
+          "published": "2026-06-24T23:23:03.049Z"
         },
         {
           "source": "Price/Volume",
@@ -6826,7 +6856,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 32.36,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:07.115Z"
+          "published": "2026-06-24T23:23:03.211Z"
         },
         {
           "source": "Price/Volume",
@@ -6841,7 +6871,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.6977,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:07.311Z"
+          "published": "2026-06-24T23:23:03.373Z"
         },
         {
           "source": "Price/Volume",
@@ -6856,7 +6886,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14.1,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:07.510Z"
+          "published": "2026-06-24T23:23:03.535Z"
         },
         {
           "source": "Price/Volume",
@@ -6871,7 +6901,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.23,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:07.706Z"
+          "published": "2026-06-24T23:23:03.697Z"
         },
         {
           "source": "Price/Volume",
@@ -6886,7 +6916,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 109.41,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:07.906Z"
+          "published": "2026-06-24T23:23:03.859Z"
         },
         {
           "source": "Price/Volume",
@@ -6901,7 +6931,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 94.13,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:08.108Z"
+          "published": "2026-06-24T23:23:04.021Z"
         },
         {
           "source": "Price/Volume",
@@ -6916,7 +6946,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 7.68,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:08.304Z"
+          "published": "2026-06-24T23:23:04.181Z"
         },
         {
           "source": "Price/Volume",
@@ -6931,7 +6961,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 9.52,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:08.507Z"
+          "published": "2026-06-24T23:23:04.343Z"
         },
         {
           "source": "Price/Volume",
@@ -6946,7 +6976,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 710.62,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:08.706Z"
+          "published": "2026-06-24T23:23:04.505Z"
         },
         {
           "source": "Price/Volume",
@@ -6961,7 +6991,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 7.12,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:08.905Z"
+          "published": "2026-06-24T23:23:04.667Z"
         },
         {
           "source": "Price/Volume",
@@ -6976,7 +7006,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 9.7,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:09.102Z"
+          "published": "2026-06-24T23:23:04.829Z"
         },
         {
           "source": "Price/Volume",
@@ -6991,7 +7021,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 19.53,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:09.298Z"
+          "published": "2026-06-24T23:23:04.991Z"
         },
         {
           "source": "Price/Volume",
@@ -7006,7 +7036,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.04,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:09.647Z"
+          "published": "2026-06-24T23:23:05.152Z"
         },
         {
           "source": "Price/Volume",
@@ -7021,7 +7051,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14.73,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:09.841Z"
+          "published": "2026-06-24T23:23:05.314Z"
         },
         {
           "source": "Price/Volume",
@@ -7036,7 +7066,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14.42,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:10.051Z"
+          "published": "2026-06-24T23:23:05.476Z"
         },
         {
           "source": "Price/Volume",
@@ -7051,7 +7081,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.7106,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:10.248Z"
+          "published": "2026-06-24T23:23:05.638Z"
         },
         {
           "source": "Price/Volume",
@@ -7066,7 +7096,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 23.83,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:10.450Z"
+          "published": "2026-06-24T23:23:05.800Z"
         },
         {
           "source": "Price/Volume",
@@ -7081,7 +7111,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.905,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:10.654Z"
+          "published": "2026-06-24T23:23:05.962Z"
         },
         {
           "source": "Price/Volume",
@@ -7096,7 +7126,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 100.62,
           "quoteAsOf": "2026-06-24T20:02:32.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:10.850Z"
+          "published": "2026-06-24T23:23:06.123Z"
         },
         {
           "source": "Price/Volume",
@@ -7111,7 +7141,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.62,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:11.049Z"
+          "published": "2026-06-24T23:23:06.284Z"
         },
         {
           "source": "Price/Volume",
@@ -7126,7 +7156,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 229.57,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:11.251Z"
+          "published": "2026-06-24T23:23:06.446Z"
         },
         {
           "source": "Price/Volume",
@@ -7141,7 +7171,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.84,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:11.447Z"
+          "published": "2026-06-24T23:23:06.607Z"
         },
         {
           "source": "Price/Volume",
@@ -7156,7 +7186,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 73.3,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:11.644Z"
+          "published": "2026-06-24T23:23:06.768Z"
         },
         {
           "source": "Price/Volume",
@@ -7171,7 +7201,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 28.01,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:11.839Z"
+          "published": "2026-06-24T23:23:06.930Z"
         },
         {
           "source": "Price/Volume",
@@ -7186,7 +7216,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.19,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:12.036Z"
+          "published": "2026-06-24T23:23:07.093Z"
         },
         {
           "source": "Price/Volume",
@@ -7201,7 +7231,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.03,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:12.236Z"
+          "published": "2026-06-24T23:23:07.256Z"
         },
         {
           "source": "Price/Volume",
@@ -7216,7 +7246,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.7407,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:12.433Z"
+          "published": "2026-06-24T23:23:07.418Z"
         },
         {
           "source": "Price/Volume",
@@ -7231,7 +7261,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.05,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:12.628Z"
+          "published": "2026-06-24T23:23:07.580Z"
         },
         {
           "source": "Price/Volume",
@@ -7246,7 +7276,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 68.01,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:12.824Z"
+          "published": "2026-06-24T23:23:07.742Z"
         },
         {
           "source": "Price/Volume",
@@ -7261,7 +7291,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 91.59,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:13.024Z"
+          "published": "2026-06-24T23:23:07.904Z"
         },
         {
           "source": "Price/Volume",
@@ -7276,7 +7306,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 8.15,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:13.221Z"
+          "published": "2026-06-24T23:23:08.066Z"
         },
         {
           "source": "Price/Volume",
@@ -7291,7 +7321,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 11.97,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:13.419Z"
+          "published": "2026-06-24T23:23:08.229Z"
         },
         {
           "source": "Price/Volume",
@@ -7306,7 +7336,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.89,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:13.624Z"
+          "published": "2026-06-24T23:23:08.390Z"
         },
         {
           "source": "Price/Volume",
@@ -7321,7 +7351,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.1463,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:13.818Z"
+          "published": "2026-06-24T23:23:08.552Z"
         },
         {
           "source": "Price/Volume",
@@ -7336,7 +7366,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.6817,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:14.017Z"
+          "published": "2026-06-24T23:23:08.714Z"
         },
         {
           "source": "Price/Volume",
@@ -7351,7 +7381,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 19.01,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:14.215Z"
+          "published": "2026-06-24T23:23:08.876Z"
         },
         {
           "source": "Price/Volume",
@@ -7366,7 +7396,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.65,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:14.414Z"
+          "published": "2026-06-24T23:23:09.038Z"
         },
         {
           "source": "Price/Volume",
@@ -7381,7 +7411,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 4.54,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:14.611Z"
+          "published": "2026-06-24T23:23:09.200Z"
         },
         {
           "source": "Price/Volume",
@@ -7396,7 +7426,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.74,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:14.810Z"
+          "published": "2026-06-24T23:23:09.361Z"
         },
         {
           "source": "Price/Volume",
@@ -7411,7 +7441,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.82,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:15.006Z"
+          "published": "2026-06-24T23:23:09.523Z"
         },
         {
           "source": "Price/Volume",
@@ -7426,7 +7456,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 24.53,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:15.211Z"
+          "published": "2026-06-24T23:23:09.685Z"
         },
         {
           "source": "Price/Volume",
@@ -7441,7 +7471,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 29.38,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:15.409Z"
+          "published": "2026-06-24T23:23:09.847Z"
         },
         {
           "source": "Price/Volume",
@@ -7456,7 +7486,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 69.93,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:15.605Z"
+          "published": "2026-06-24T23:23:10.010Z"
         },
         {
           "source": "Price/Volume",
@@ -7471,7 +7501,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.7,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:15.806Z"
+          "published": "2026-06-24T23:23:10.172Z"
         },
         {
           "source": "Price/Volume",
@@ -7486,7 +7516,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 11.92,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:16.004Z"
+          "published": "2026-06-24T23:23:10.333Z"
         },
         {
           "source": "Price/Volume",
@@ -7501,7 +7531,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 21.56,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:16.200Z"
+          "published": "2026-06-24T23:23:10.495Z"
         },
         {
           "source": "Price/Volume",
@@ -7516,7 +7546,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 4.09,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:16.400Z"
+          "published": "2026-06-24T23:23:10.666Z"
         },
         {
           "source": "Price/Volume",
@@ -7531,7 +7561,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14.52,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:16.610Z"
+          "published": "2026-06-24T23:23:10.827Z"
         },
         {
           "source": "Price/Volume",
@@ -7546,7 +7576,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 97.19,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:16.928Z"
+          "published": "2026-06-24T23:23:10.989Z"
         },
         {
           "source": "Price/Volume",
@@ -7561,7 +7591,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 7.8,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:17.128Z"
+          "published": "2026-06-24T23:23:11.152Z"
         },
         {
           "source": "Price/Volume",
@@ -7576,7 +7606,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 296.69,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:17.327Z"
+          "published": "2026-06-24T23:23:11.318Z"
         },
         {
           "source": "Price/Volume",
@@ -7591,7 +7621,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.79,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:17.529Z"
+          "published": "2026-06-24T23:23:11.480Z"
         },
         {
           "source": "Price/Volume",
@@ -7606,7 +7636,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.253,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:17.732Z"
+          "published": "2026-06-24T23:23:11.642Z"
         },
         {
           "source": "Price/Volume",
@@ -7621,7 +7651,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.12,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:17.933Z"
+          "published": "2026-06-24T23:23:11.804Z"
         },
         {
           "source": "Price/Volume",
@@ -7636,7 +7666,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.12,
           "quoteAsOf": "2026-06-24T20:02:17.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:18.141Z"
+          "published": "2026-06-24T23:23:11.966Z"
         },
         {
           "source": "Price/Volume",
@@ -7651,7 +7681,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.2183,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:18.344Z"
+          "published": "2026-06-24T23:23:12.128Z"
         },
         {
           "source": "Price/Volume",
@@ -7666,7 +7696,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.97,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:18.541Z"
+          "published": "2026-06-24T23:23:12.290Z"
         },
         {
           "source": "Price/Volume",
@@ -7681,7 +7711,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 9.01,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:18.735Z"
+          "published": "2026-06-24T23:23:12.453Z"
         },
         {
           "source": "Price/Volume",
@@ -7696,7 +7726,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 259.66,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:18.932Z"
+          "published": "2026-06-24T23:23:12.615Z"
         },
         {
           "source": "Price/Volume",
@@ -7711,7 +7741,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.95,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:19.127Z"
+          "published": "2026-06-24T23:23:12.776Z"
         },
         {
           "source": "Price/Volume",
@@ -7726,7 +7756,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.268,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:19.326Z"
+          "published": "2026-06-24T23:23:12.937Z"
         },
         {
           "source": "Price/Volume",
@@ -7741,7 +7771,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 5.3,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:19.523Z"
+          "published": "2026-06-24T23:23:13.099Z"
         },
         {
           "source": "Price/Volume",
@@ -7756,7 +7786,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 4.28,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:19.733Z"
+          "published": "2026-06-24T23:23:13.261Z"
         },
         {
           "source": "Price/Volume",
@@ -7771,7 +7801,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 24.04,
           "quoteAsOf": "2026-06-24T20:04:49.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:19.981Z"
+          "published": "2026-06-24T23:23:13.431Z"
         },
         {
           "source": "Price/Volume",
@@ -7786,7 +7816,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.59,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:20.176Z"
+          "published": "2026-06-24T23:23:13.592Z"
         },
         {
           "source": "Price/Volume",
@@ -7801,7 +7831,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 10.66,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:20.372Z"
+          "published": "2026-06-24T23:23:13.754Z"
         },
         {
           "source": "Price/Volume",
@@ -7816,7 +7846,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 27.42,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:20.568Z"
+          "published": "2026-06-24T23:23:13.917Z"
         },
         {
           "source": "Price/Volume",
@@ -7831,7 +7861,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 14.64,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:20.768Z"
+          "published": "2026-06-24T23:23:14.079Z"
         },
         {
           "source": "Price/Volume",
@@ -7846,7 +7876,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.91,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:20.964Z"
+          "published": "2026-06-24T23:23:14.241Z"
         },
         {
           "source": "Price/Volume",
@@ -7861,7 +7891,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 13.45,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:21.199Z"
+          "published": "2026-06-24T23:23:14.402Z"
         },
         {
           "source": "Price/Volume",
@@ -7876,7 +7906,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 3.23,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:21.763Z"
+          "published": "2026-06-24T23:23:14.564Z"
         },
         {
           "source": "Price/Volume",
@@ -7891,7 +7921,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.82,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:21.961Z"
+          "published": "2026-06-24T23:23:14.726Z"
         },
         {
           "source": "Price/Volume",
@@ -7906,7 +7936,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 31.72,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:22.163Z"
+          "published": "2026-06-24T23:23:14.887Z"
         },
         {
           "source": "Price/Volume",
@@ -7921,7 +7951,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.981,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:22.386Z"
+          "published": "2026-06-24T23:23:15.065Z"
         },
         {
           "source": "Price/Volume",
@@ -7936,7 +7966,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 2.71,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:22.585Z"
+          "published": "2026-06-24T23:23:15.227Z"
         },
         {
           "source": "Price/Volume",
@@ -7951,7 +7981,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 1.37,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:22.783Z"
+          "published": "2026-06-24T23:23:15.389Z"
         },
         {
           "source": "Price/Volume",
@@ -7966,7 +7996,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 51.78,
           "quoteAsOf": "2026-06-24T20:00:00.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:22.988Z"
+          "published": "2026-06-24T23:23:15.551Z"
         },
         {
           "source": "Price/Volume",
@@ -7981,7 +8011,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 17.31,
           "quoteAsOf": "2026-06-24T20:00:03.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:23.187Z"
+          "published": "2026-06-24T23:23:15.713Z"
         },
         {
           "source": "Price/Volume",
@@ -7996,7 +8026,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 6.34,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:23.381Z"
+          "published": "2026-06-24T23:23:15.875Z"
         },
         {
           "source": "Price/Volume",
@@ -8011,7 +8041,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 733.24,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:23.603Z"
+          "published": "2026-06-24T23:23:16.053Z"
         },
         {
           "source": "Price/Volume",
@@ -8026,7 +8056,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.842,
           "quoteAsOf": "2026-06-24T20:00:02.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:23.803Z"
+          "published": "2026-06-24T23:23:16.215Z"
         },
         {
           "source": "Price/Volume",
@@ -8041,7 +8071,7 @@ window.SIGNALDESK_HISTORY = {
           "lastPrice": 0.447,
           "quoteAsOf": "2026-06-24T20:00:01.000Z",
           "quoteSource": "Yahoo public chart",
-          "published": "2026-06-24T23:20:24.000Z"
+          "published": "2026-06-24T23:23:16.377Z"
         }
       ],
       "failures": [
