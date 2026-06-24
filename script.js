@@ -936,6 +936,7 @@ function bindEvents() {
   });
   byId("exportCsv").addEventListener("click", exportCsv);
   byId("togglePanel").addEventListener("click", toggleDetailPanel);
+  byId("toggleSidebar").addEventListener("click", toggleSidebar);
   window.addEventListener("resize", render);
 }
 
@@ -970,6 +971,16 @@ function toggleDetailPanel() {
   const hidden = grid.classList.toggle("details-hidden");
   const button = byId("togglePanel");
   button.textContent = hidden ? "Show details" : "Hide details";
+  button.setAttribute("aria-pressed", String(hidden));
+}
+
+function toggleSidebar() {
+  const shell = document.querySelector(".app-shell");
+  const hidden = shell.classList.toggle("sidebar-hidden");
+  const button = byId("toggleSidebar");
+  button.querySelector("span").textContent = hidden ? "☰ Controls" : "☰ Hide";
+  button.setAttribute("title", hidden ? "Show controls" : "Hide controls");
+  button.setAttribute("aria-label", hidden ? "Show controls" : "Hide controls");
   button.setAttribute("aria-pressed", String(hidden));
 }
 

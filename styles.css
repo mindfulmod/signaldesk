@@ -49,6 +49,15 @@ button {
   min-height: 100vh;
 }
 
+.app-shell.sidebar-hidden {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "main";
+}
+
+.app-shell.sidebar-hidden .sidebar {
+  display: none;
+}
+
 .sidebar {
   grid-area: sidebar;
   position: sticky;
