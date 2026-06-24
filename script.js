@@ -416,6 +416,7 @@ function buyCard(item, index) {
         <button type="button" data-buy-ticker="${item.ticker}" class="buy-ticker">${item.ticker}</button>
       </div>
       <p class="buy-name">${item.name}</p>
+      <p class="buy-why">${escapeHtml(trendInterpretation(item))}</p>
       <div class="buy-score-row">
         <span>Buy score</span>
         <strong>${item.buyScore.toFixed(0)}</strong>
@@ -483,6 +484,12 @@ function renderTable(items) {
       ).join("");
       const momentumClass = item.momentum >= 0 ? "up" : "down";
       const sentimentClass = item.sentiment >= 0 ? "up" : "down";
+      const highlights = trendHighlights(item);
+      const chips = highlights.length
+        ? `<div class="why-chips">${highlights
+            .map((tag) => `<span class="why-chip"><span aria-hidden="true">${tag.icon}</span>${escapeHtml(tag.text)}</span>`)
+            .join("")}</div>`
+        : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
           <td>#${index + 1}</td>
@@ -491,6 +498,7 @@ function renderTable(items) {
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
               <span>${item.ticker}<small>${item.name}</small></span>
             </div>
+            ${chips}
           </td>
           <td><span class="signal-pill">${item.signalScore.toFixed(0)}</span></td>
           <td>${formatQuoteCell(item)}</td>
@@ -657,7 +665,7 @@ function updateRangeNote() {
   }
 }
 
-function renderDetail(items, top30) {
+function renderDetail(items, top50) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
   if (!selected) return;
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
@@ -678,12 +686,67 @@ function renderDetail(items, top30) {
   const shortMentions = selected.sources["FINRA Short Volume"] || 0;
   const sourceCount = SOURCES.filter((source) => (selected.sources[source] || 0) > 0).length;
   const notes = [
+    trendInterpretation(selected),
     `${selected.ticker} scores ${selected.signalScore.toFixed(0)}/100 using only real public no-key data.`,
     `${sourceCount} source${sourceCount === 1 ? "" : "s"} active${shortMentions ? `, including FINRA short-volume pressure` : ""}.`,
     `Sentiment ${sentimentLabel(selected.sentiment).toLowerCase()}, quote ${formatPrice(selected.lastPrice)}${selected.quoteAsOf ? ` as of ${formatShortDateTime(selected.quoteAsOf)}` : ""}, price move ${selected.priceMove >= 0 ? "+" : ""}${selected.priceMove.toFixed(1)}%, volume ${selected.relativeVolume.toFixed(1)}x.`,
     ...latest.map((item) => `${item.source}: ${item.title}`),
   ];
   byId("attentionNotes").innerHTML = notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("");
+}
+
+// ---- Phase 1: "Why it's trending" interpretation layer ----
+// Turns raw metrics into plain-English catalyst chips and a one-line takeaway,
+// using only data already in the snapshot (no new dependencies).
+function trendHighlights(item) {
+  const tags = [];
+  const wsb = item.sources["Wallstreetbets"] || 0;
+  const redditFin = item.sources["Reddit Finance"] || 0;
+  const social = wsb + redditFin;
+  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+  const newsCount = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
+  const shortVol = item.sources["FINRA Short Volume"] || 0;
+  const secFilings = item.sources["SEC Filings"] || 0;
+
+  if (item.relativeVolume >= 1.3) tags.push({ icon: "📈", text: `${item.relativeVolume.toFixed(1)}× normal volume` });
+  if (item.momentum >= 20) tags.push({ icon: "🚀", text: `+${item.momentum.toFixed(0)}% mentions vs prior` });
+  if (social >= 3) tags.push({ icon: "🔥", text: `${fmt.format(social)} social mentions` });
+  if (item.sentiment > 0.25) tags.push({ icon: "🟢", text: "Bullish chatter" });
+  else if (item.sentiment < -0.18) tags.push({ icon: "🔴", text: "Bearish chatter" });
+  if (item.priceMove >= 3) tags.push({ icon: "💹", text: `+${item.priceMove.toFixed(1)}% price` });
+  if (shortVol > 0) tags.push({ icon: "🩳", text: "Elevated short volume" });
+  if (secFilings > 0) tags.push({ icon: "📄", text: "Fresh SEC filing" });
+  if (newsCount >= 4) tags.push({ icon: "📰", text: `${fmt.format(newsCount)} news hits` });
+  return tags.slice(0, 4);
+}
+
+function trendInterpretation(item) {
+  const wsb = item.sources["Wallstreetbets"] || 0;
+  const redditFin = item.sources["Reddit Finance"] || 0;
+  const social = wsb + redditFin;
+  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+  const newsCount = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
+  const volHot = item.relativeVolume >= 1.3;
+  const priceHot = item.priceMove >= 3;
+  const momentumHot = item.momentum >= 20;
+
+  // Quiet mover: trading volume jumping without a big news/social crowd yet.
+  if (volHot && social < 3 && newsCount < 4) {
+    return `Under-the-radar: trading volume is running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` and price is up ${item.priceMove.toFixed(1)}%` : ""}, but the crowd hasn't piled in yet — an early mover worth a look.`;
+  }
+  // Social-led attention.
+  if (social >= 3 && social >= newsCount) {
+    return `Retail-driven: ${fmt.format(social)} social mentions are leading the attention${momentumHot ? `, up ${item.momentum.toFixed(0)}% vs the prior snapshot` : ""}${volHot ? `, with volume ${item.relativeVolume.toFixed(1)}× normal` : ""}.`;
+  }
+  // News-led attention.
+  if (newsCount >= 4) {
+    return `News-driven: ${fmt.format(newsCount)} headlines are fueling attention${priceHot ? `, and price is confirming with a ${item.priceMove.toFixed(1)}% move` : ""}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""}.`;
+  }
+  // Price/momentum-led.
+  if (priceHot || momentumHot) {
+    return `Momentum building: ${priceHot ? `price up ${item.priceMove.toFixed(1)}%` : `mentions up ${item.momentum.toFixed(0)}%`}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""} — watch for a follow-through catalyst.`;
+  }
+  return `Steady signal: a ${item.signalScore.toFixed(0)}/100 composite across ${SOURCES.filter((source) => (item.sources[source] || 0) > 0).length} public sources, without a single dominant catalyst yet.`;
 }
 
 function sentimentLabel(value) {
