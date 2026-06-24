@@ -113,6 +113,15 @@ async function main() {
     }
   }
 
+  try {
+    const items = await gdeltMarketNews();
+    for (const item of items) {
+      collectMentions(events, "GDELT News", item.title, item.url, item.score || 2, item.published);
+    }
+  } catch (error) {
+    failures.push(`GDELT News: ${error.message}`);
+  }
+
   for (const [ticker] of STOCKS) {
     try {
       const market = await fetchMarket(ticker);
@@ -280,10 +289,6 @@ async function yahooTickerNews(ticker) {
 
 async function collectTickerNews(events, failures, ticker, name) {
   const jobs = [
-    ["GDELT News", async () => {
-      await delay(1300);
-      return gdeltTickerNews(ticker, name);
-    }],
     ["Google News", () => newsRssItems("Google News", ticker, name)],
     ["Bing News", () => newsRssItems("Bing News", ticker, name)],
   ];
@@ -299,14 +304,14 @@ async function collectTickerNews(events, failures, ticker, name) {
   }
 }
 
-async function gdeltTickerNews(ticker, name) {
-  const query = encodeURIComponent(`("${name}" OR ${ticker}) stock`);
-  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=12&timespan=2d&sort=datedesc`;
+async function gdeltMarketNews() {
+  const query = encodeURIComponent(`("stock" OR "stocks" OR "shares" OR "earnings" OR "analyst")`);
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=100&timespan=2d&sort=datedesc`;
   const json = await fetchJson(url);
-  return (json.articles || []).slice(0, 8).map((item) => ({
-    title: `${item.title || ""} ${item.sourceCountry || ""}`.trim(),
+  return (json.articles || []).slice(0, 80).map((item) => ({
+    title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
     url: item.url || url,
-    score: 3,
+    score: 2,
     published: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
   }));
 }
@@ -387,10 +392,6 @@ function parseGdeltDate(value) {
   const digits = String(value).replace(/\D/g, "");
   if (digits.length < 14) return new Date().toISOString();
   return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)}T${digits.slice(8, 10)}:${digits.slice(10, 12)}:${digits.slice(12, 14)}.000Z`;
-}
-
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function fetchMarket(ticker) {
