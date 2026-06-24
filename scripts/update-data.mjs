@@ -3,15 +3,22 @@ import { writeFile, readFile, mkdir } from "node:fs/promises";
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
 const OUT_JS = new URL("data/signals.js", ROOT);
+const HISTORY = new URL("data/history.json", ROOT);
+const HISTORY_JS = new URL("data/history.js", ROOT);
+const HISTORY_DAYS = 120;
 const USER_AGENT = "SignalDeskDaily/1.0 (+https://openai.com/; codex automation)";
 
 const SOURCES = [
   "Wallstreetbets",
   "Reddit Finance",
+  "GDELT News",
+  "Google News",
+  "Bing News",
   "SEC Filings",
   "Yahoo Public News",
   "CNBC",
   "MarketWatch",
+  "FINRA Short Volume",
   "Price/Volume",
 ];
 
@@ -73,6 +80,8 @@ const STOCKS = [
   ["ROKU", "Roku", ["roku"]],
 ];
 
+const NEWS_UNIVERSE = STOCKS.slice(0, 42);
+
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
 const AMBIGUOUS_TICKERS = new Set(["AI", "ARM", "NET", "T", "F", "ON", "ARE", "CAN", "NOW", "A", "GO", "IT"]);
@@ -119,6 +128,8 @@ async function main() {
           priceMove: market.priceMove,
           relativeVolume: market.relativeVolume,
           lastPrice: market.lastPrice,
+          quoteAsOf: market.quoteAsOf,
+          quoteSource: market.quoteSource,
           published: new Date().toISOString(),
         });
       }
@@ -127,7 +138,7 @@ async function main() {
     }
   }
 
-  for (const [ticker] of STOCKS.slice(0, 35)) {
+  for (const [ticker] of NEWS_UNIVERSE) {
     try {
       const items = await yahooTickerNews(ticker);
       for (const item of items) {
@@ -138,6 +149,17 @@ async function main() {
     }
   }
 
+  for (const [ticker, name] of NEWS_UNIVERSE) {
+    await collectTickerNews(events, failures, ticker, name);
+  }
+
+  try {
+    const shortEvents = await finraShortVolumeEvents();
+    events.push(...shortEvents);
+  } catch (error) {
+    failures.push(`FINRA Short Volume: ${error.message}`);
+  }
+
   const signals = aggregate(events, previous);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
@@ -146,6 +168,12 @@ async function main() {
     console.warn(
       `No fresh public data could be fetched (likely network/DNS restrictions). Keeping previous snapshot from ${previous.generatedAt || "unknown time"}.`
     );
+    await mkdir(new URL("data/", ROOT), { recursive: true });
+    const history = await updateHistory(previous);
+    const historyJson = JSON.stringify(history, null, 2);
+    await writeFile(HISTORY, `${historyJson}\n`);
+    await writeFile(HISTORY_JS, `window.SIGNALDESK_HISTORY = ${historyJson};\n`);
+    console.log(`History now contains ${history.snapshots.length} daily snapshots.`);
     return;
   }
 
@@ -160,7 +188,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     dataMode: "real-public-no-key",
     sourceNote:
-      "Real snapshot from public no-key sources. Coverage is best-effort and less complete than paid APIs for X, Google Trends, StockTwits, and options flow.",
+      "Real snapshot from public no-key sources. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
     sources: SOURCES,
     failures: failures.slice(0, 20),
     signals,
@@ -168,10 +196,15 @@ async function main() {
   };
 
   await mkdir(new URL("data/", ROOT), { recursive: true });
+  const history = await updateHistory(payload);
   const json = JSON.stringify(payload, null, 2);
+  const historyJson = JSON.stringify(history, null, 2);
   await writeFile(OUT, `${json}\n`);
   await writeFile(OUT_JS, `window.SIGNALDESK_DATA = ${json};\n`);
+  await writeFile(HISTORY, `${historyJson}\n`);
+  await writeFile(HISTORY_JS, `window.SIGNALDESK_HISTORY = ${historyJson};\n`);
   console.log(`Wrote ${signals.length} ticker signals from ${events.length} source events to ${OUT.pathname}`);
+  console.log(`History now contains ${history.snapshots.length} daily snapshots.`);
   if (failures.length) console.log(`Source warnings: ${failures.slice(0, 5).join(" | ")}`);
 }
 
@@ -181,6 +214,41 @@ async function readPrevious() {
   } catch {
     return null;
   }
+}
+
+async function readHistory() {
+  try {
+    const parsed = JSON.parse(await readFile(HISTORY, "utf8"));
+    return Array.isArray(parsed.snapshots) ? parsed.snapshots : [];
+  } catch {
+    return [];
+  }
+}
+
+async function updateHistory(payload) {
+  const existing = await readHistory();
+  const date = payload.generatedAt.slice(0, 10);
+  const dailySnapshot = {
+    date,
+    generatedAt: payload.generatedAt,
+    signals: payload.signals,
+    events: payload.events,
+    failures: payload.failures,
+  };
+  const snapshots = existing
+    .filter((item) => item?.date && item.date !== date)
+    .concat(dailySnapshot)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(-HISTORY_DAYS);
+
+  return {
+    dataMode: "real-public-no-key-history",
+    updatedAt: payload.generatedAt,
+    retentionDays: HISTORY_DAYS,
+    sourceNote:
+      "Daily real public no-key snapshots retained for range aggregation. Longer ranges become more complete as scheduled refreshes accumulate.",
+    snapshots,
+  };
 }
 
 async function redditItems(feed) {
@@ -210,21 +278,135 @@ async function yahooTickerNews(ticker) {
   return xmlItems({ source: "Yahoo Public News", type: "rss", url }).then((items) => items.slice(0, 8));
 }
 
+async function collectTickerNews(events, failures, ticker, name) {
+  const jobs = [
+    ["GDELT News", () => gdeltTickerNews(ticker, name)],
+    ["Google News", () => newsRssItems("Google News", ticker, name)],
+    ["Bing News", () => newsRssItems("Bing News", ticker, name)],
+  ];
+  for (const [source, load] of jobs) {
+    try {
+      const items = await load();
+      for (const item of items) {
+        collectMentions(events, source, item.title, item.url, item.score || 2, item.published, ticker);
+      }
+    } catch (error) {
+      failures.push(`${source} ${ticker}: ${error.message}`);
+    }
+  }
+}
+
+async function gdeltTickerNews(ticker, name) {
+  const query = encodeURIComponent(`("${name}" OR ${ticker}) stock`);
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=12&timespan=2d&sort=datedesc`;
+  const json = await fetchJson(url);
+  return (json.articles || []).slice(0, 8).map((item) => ({
+    title: `${item.title || ""} ${item.sourceCountry || ""}`.trim(),
+    url: item.url || url,
+    score: 3,
+    published: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
+  }));
+}
+
+async function newsRssItems(source, ticker, name) {
+  const query = encodeURIComponent(`"${name}" ${ticker} stock`);
+  const url =
+    source === "Google News"
+      ? `https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`
+      : `https://www.bing.com/news/search?q=${query}&format=rss`;
+  const items = await xmlItems({ source, type: "rss", url });
+  return items.slice(0, 8).map((item) => ({ ...item, score: 2 }));
+}
+
+async function finraShortVolumeEvents() {
+  const text = await fetchRecentFinraShortFile();
+  const lines = text.trim().split(/\r?\n/).filter(Boolean);
+  const events = [];
+  const tracked = new Set(STOCKS.map(([ticker]) => ticker));
+  for (const line of lines.slice(1)) {
+    const [date, symbol, shortVolume, , totalVolume] = line.split("|");
+    if (!tracked.has(symbol)) continue;
+    const shortVol = Number(shortVolume);
+    const totalVol = Number(totalVolume);
+    if (!Number.isFinite(shortVol) || !Number.isFinite(totalVol) || totalVol <= 0) continue;
+    const ratio = shortVol / totalVol;
+    if (ratio < 0.38 && shortVol < 1_000_000) continue;
+    events.push({
+      source: "FINRA Short Volume",
+      ticker: symbol,
+      name: stockName(symbol),
+      title: `${symbol} FINRA short volume ${(ratio * 100).toFixed(0)}% of reported volume (${shortVol.toLocaleString()} shares)`,
+      url: "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+      mentions: Math.max(1, Math.round(ratio * 10 + Math.log10(shortVol + 1))),
+      sentiment: ratio > 0.55 ? -0.1 : 0,
+      priceMove: 0,
+      relativeVolume: 1 + Math.min(2, ratio),
+      lastPrice: null,
+      quoteAsOf: null,
+      quoteSource: null,
+      published: finraDateToIso(date),
+    });
+  }
+  return events;
+}
+
+async function fetchRecentFinraShortFile() {
+  const dates = recentMarketDates(9);
+  const failures = [];
+  for (const date of dates) {
+    const url = `https://cdn.finra.org/equity/regsho/daily/CNMSshvol${date}.txt`;
+    try {
+      return await fetchText(url);
+    } catch (error) {
+      failures.push(`${date}: ${error.message}`);
+    }
+  }
+  throw new Error(`No recent FINRA file available (${failures.slice(0, 3).join("; ")})`);
+}
+
+function recentMarketDates(days) {
+  const dates = [];
+  const cursor = new Date();
+  while (dates.length < days) {
+    const day = cursor.getUTCDay();
+    if (day !== 0 && day !== 6) dates.push(cursor.toISOString().slice(0, 10).replaceAll("-", ""));
+    cursor.setUTCDate(cursor.getUTCDate() - 1);
+  }
+  return dates;
+}
+
+function finraDateToIso(value) {
+  if (!/^\d{8}$/.test(value || "")) return new Date().toISOString();
+  return `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(6, 8)}T22:00:00.000Z`;
+}
+
+function parseGdeltDate(value) {
+  const digits = String(value).replace(/\D/g, "");
+  if (digits.length < 14) return new Date().toISOString();
+  return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)}T${digits.slice(8, 10)}:${digits.slice(10, 12)}:${digits.slice(12, 14)}.000Z`;
+}
+
 async function fetchMarket(ticker) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=5d&interval=1d`;
   const json = await fetchJson(url);
   const result = json.chart?.result?.[0];
+  if (result?.meta?.symbol && result.meta.symbol.toUpperCase() !== ticker.toUpperCase()) return null;
   const quote = result?.indicators?.quote?.[0];
   const closes = (quote?.close || []).filter(Number.isFinite);
   const volumes = (quote?.volume || []).filter(Number.isFinite);
   if (closes.length < 2 || volumes.length < 2) return null;
-  const last = closes.at(-1);
+  const last = Number.isFinite(result?.meta?.regularMarketPrice) ? result.meta.regularMarketPrice : closes.at(-1);
   const prev = closes.at(-2);
   const avgVolume = volumes.slice(0, -1).reduce((sum, value) => sum + value, 0) / Math.max(1, volumes.length - 1);
+  const quoteAsOf = result?.meta?.regularMarketTime
+    ? new Date(result.meta.regularMarketTime * 1000).toISOString()
+    : new Date().toISOString();
   return {
     lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    quoteAsOf,
+    quoteSource: "Yahoo public chart",
   };
 }
 
@@ -248,6 +430,8 @@ function collectMentions(events, source, text, url, weight = 1, published = "", 
         priceMove: 0,
         relativeVolume: 1,
         lastPrice: null,
+        quoteAsOf: null,
+        quoteSource: null,
         published: published || new Date().toISOString(),
       });
     }
@@ -268,6 +452,8 @@ function aggregate(events, previous) {
         weightedPrice: 0,
         weightedVolume: 0,
         lastPrice: previousByTicker.get(event.ticker)?.lastPrice ?? null,
+        quoteAsOf: previousByTicker.get(event.ticker)?.quoteAsOf ?? null,
+        quoteSource: previousByTicker.get(event.ticker)?.quoteSource ?? null,
         sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
         latest: [],
       };
@@ -275,7 +461,11 @@ function aggregate(events, previous) {
     item.weightedSentiment += event.sentiment * event.mentions;
     item.weightedPrice += event.priceMove * event.mentions;
     item.weightedVolume += event.relativeVolume * event.mentions;
-    if (Number.isFinite(event.lastPrice)) item.lastPrice = event.lastPrice;
+    if (Number.isFinite(event.lastPrice)) {
+      item.lastPrice = event.lastPrice;
+      item.quoteAsOf = event.quoteAsOf;
+      item.quoteSource = event.quoteSource;
+    }
     item.sources[event.source] = (item.sources[event.source] || 0) + event.mentions;
     item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published });
     map.set(event.ticker, item);
@@ -290,15 +480,17 @@ function aggregate(events, previous) {
       const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
       const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
       const sourceBreadth = SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length;
+      const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
       const signalScore = clamp(
         0,
         100,
-        30 * Math.sqrt(item.mentions / maxMentions) +
-          22 * clamp(0, 1, momentum / 80 + 0.25) +
-          18 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
+        27 * Math.sqrt(item.mentions / maxMentions) +
+          20 * clamp(0, 1, momentum / 80 + 0.25) +
+          17 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
           12 * clamp(0, 1, priceMove / 6) +
-          10 * clamp(0, 1, relativeVolume / 2.5) +
-          8 * sourceBreadth
+          9 * clamp(0, 1, relativeVolume / 2.5) +
+          9 * sourceBreadth +
+          6 * shortPressure
       );
       return {
         ticker: item.ticker,
@@ -308,6 +500,8 @@ function aggregate(events, previous) {
         sentiment,
         priceMove,
         lastPrice: item.lastPrice,
+        quoteAsOf: item.quoteAsOf,
+        quoteSource: item.quoteSource,
         relativeVolume,
         optionsActivity: 0,
         signalScore,
