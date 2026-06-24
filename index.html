@@ -206,6 +206,10 @@
                   <button id="viewMentions" type="button">Mentions</button>
                   <button id="viewMomentum" type="button">Momentum</button>
                 </div>
+                <div class="cap-toggle" role="group" aria-label="Attention filter">
+                  <button id="attnAttention" type="button" aria-pressed="false">📣 Big attention</button>
+                  <button id="attnQuiet" type="button" aria-pressed="false">🤫 Quiet movers</button>
+                </div>
                 <div class="cap-toggle" role="group" aria-label="Market cap filter">
                   <button id="capLarge" type="button" aria-pressed="false">Large cap</button>
                   <button id="capSmall" type="button" aria-pressed="false">Small cap</button>
@@ -220,11 +224,10 @@
                     <th>Ticker</th>
                     <th>Signal</th>
                     <th>Last public quote</th>
-                    <th>Mentions</th>
+                    <th class="col-secondary">Mentions</th>
                     <th>Momentum</th>
-                    <th>Sentiment</th>
-                    <th>Price/Vol</th>
-                    <th>Source mix</th>
+                    <th class="col-tertiary">Price/Vol</th>
+                    <th class="col-secondary">Source mix</th>
                   </tr>
                 </thead>
                 <tbody id="rankingBody"></tbody>

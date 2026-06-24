@@ -697,7 +697,30 @@ td {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 980px;
+  min-width: 620px;
+}
+
+/* Secondary/tertiary columns collapse on narrower screens to keep the table compact. */
+@media (max-width: 1180px) {
+  .col-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .col-tertiary {
+    display: none;
+  }
+}
+
+.ticker-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticker-name strong {
+  font-weight: 850;
+  line-height: 1.1;
 }
 
 th,

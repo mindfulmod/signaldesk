@@ -33,6 +33,8 @@ let history = null;
 let selectedTicker = "";
 let rankMode = "signal";
 let capFilter = "all"; // "all" | "large" | "small"
+let attentionFilter = "all"; // "all" | "quiet" | "attention"
+let attentionHighThreshold = Infinity; // peer-relative cutoff, recomputed each render
 let selectedDays = 1;
 
 const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
@@ -332,6 +334,11 @@ function applyCapFilter(items) {
   });
 }
 
+function applyAttentionFilter(items) {
+  if (attentionFilter === "all") return items;
+  return items.filter((item) => attentionGroupFor(item) === attentionFilter);
+}
+
 function sortForMode(a, b) {
   if (rankMode === "mentions") return b.mentions - a.mentions;
   if (rankMode === "momentum") return b.momentum - a.momentum;
@@ -351,7 +358,8 @@ function render() {
   }
 
   const items = filteredSignals();
-  const ranked = applyCapFilter(items);
+  attentionHighThreshold = computeAttentionThreshold(items);
+  const ranked = applyAttentionFilter(applyCapFilter(items));
   const top50 = ranked.slice(0, 50);
   if (!selectedTicker || !top50.some((item) => item.ticker === selectedTicker)) {
     selectedTicker = top50[0]?.ticker || "";
@@ -501,10 +509,12 @@ function updateMetrics(items) {
 }
 
 function renderTable(items) {
-  const capLabel = capFilter === "large" ? " large-cap (≥$500M)" : capFilter === "small" ? " small-cap (<$500M)" : "";
+  const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
+  const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
+  const filterLabel = `${attnLabel}${capLabel}`;
   byId("rankSubhead").textContent = items.length
-    ? `Showing ${items.length}${capLabel} real-data tickers`
-    : `No${capLabel} tickers in this snapshot${capFilter === "all" ? "" : " — market caps come from SEC filings and may be missing for ETFs or new listings"}`;
+    ? `Showing ${items.length}${filterLabel} real-data tickers`
+    : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
   byId("rankingBody").innerHTML = items
     .map((item, index) => {
       const total = Math.max(1, item.mentions);
@@ -512,30 +522,29 @@ function renderTable(items) {
         (source) => `<span style="width:${((item.sources[source] || 0) / total) * 100}%; background:${SOURCE_COLORS[source]}"></span>`
       ).join("");
       const momentumClass = item.momentum >= 0 ? "up" : "down";
-      const sentimentClass = item.sentiment >= 0 ? "up" : "down";
       const highlights = trendHighlights(item);
       const chips = highlights.length
         ? `<div class="why-chips">${highlights
             .map((tag) => `<span class="why-chip"><span aria-hidden="true">${tag.icon}</span>${escapeHtml(tag.text)}</span>`)
             .join("")}</div>`
         : "";
+      const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
           <td>#${index + 1}</td>
           <td>
             <div class="ticker-cell">
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
-              <span>${item.ticker}<small>${item.name}</small></span>
+              <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
             </div>
             ${chips}
           </td>
           <td><span class="signal-pill">${item.signalScore.toFixed(0)}</span></td>
           <td>${formatQuoteCell(item)}</td>
-          <td>${fmt.format(item.mentions)}</td>
+          <td class="col-secondary">${fmt.format(item.mentions)}</td>
           <td><span class="momentum ${momentumClass}">${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%</span></td>
-          <td><span class="momentum ${sentimentClass}">${sentimentLabel(item.sentiment)}</span></td>
-          <td>${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x</td>
-          <td><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
+          <td class="col-tertiary">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x</td>
+          <td class="col-secondary"><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
         </tr>`;
     })
     .join("");
@@ -728,52 +737,86 @@ function renderDetail(items, top50) {
   byId("attentionNotes").innerHTML = notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("");
 }
 
-// ---- Phase 1: "Why it's trending" interpretation layer ----
-// Turns raw metrics into plain-English catalyst chips and a one-line takeaway,
-// using only data already in the snapshot (no new dependencies).
+// ---- "Why it's trending" interpretation + attention grouping ----
+// Shared definition of the human-attention a stock is getting, so the chips,
+// the plain-English takeaway, and the Quiet/Big-attention split all agree.
+const VOL_HOT = 1.3; // relative volume that counts as "elevated"
+const SOCIAL_BUZZ = 3; // social mentions that count as a crowd forming
+const NEWS_BUZZ = 4; // news hits that count as media attention
+const ATTENTION_HIGH = 5; // social + news that counts as "big attention"
+
+function attentionStats(item) {
+  const social = (item.sources["Wallstreetbets"] || 0) + (item.sources["Reddit Finance"] || 0);
+  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+  const news = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
+  return {
+    social,
+    news,
+    attention: social + news,
+    volHot: item.relativeVolume >= VOL_HOT,
+    priceHot: item.priceMove >= 3,
+    momentumHot: item.momentum >= 20,
+  };
+}
+
+// Peer-relative cutoff for "big attention": the 70th-percentile of combined
+// social + news chatter across the current set (min ATTENTION_HIGH so a near-dead
+// snapshot doesn't crown noise). Recomputed each render so the split always divides
+// the data meaningfully even when a source like Reddit is blocked.
+function computeAttentionThreshold(items) {
+  const values = items
+    .map((item) => attentionStats(item).attention)
+    .filter((value) => value > 0)
+    .sort((a, b) => a - b);
+  if (!values.length) return Infinity;
+  const p70 = values[Math.min(values.length - 1, Math.floor(values.length * 0.7))];
+  return Math.max(ATTENTION_HIGH, p70);
+}
+
+// Big attention = top tier of combined social + news chatter.
+// Quiet mover  = elevated volume but attention below that tier (the crowd hasn't arrived).
+function attentionGroupFor(item) {
+  const { attention, volHot } = attentionStats(item);
+  if (attention > 0 && attention >= attentionHighThreshold) return "attention";
+  if (volHot && attention < attentionHighThreshold) return "quiet";
+  return null;
+}
+
 function trendHighlights(item) {
   const tags = [];
-  const wsb = item.sources["Wallstreetbets"] || 0;
-  const redditFin = item.sources["Reddit Finance"] || 0;
-  const social = wsb + redditFin;
-  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
-  const newsCount = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
+  const { social, news } = attentionStats(item);
   const shortVol = item.sources["FINRA Short Volume"] || 0;
   const secFilings = item.sources["SEC Filings"] || 0;
+  const group = attentionGroupFor(item);
 
-  if (item.relativeVolume >= 1.3) tags.push({ icon: "📈", text: `${item.relativeVolume.toFixed(1)}× normal volume` });
+  if (group === "quiet") tags.push({ icon: "🤫", text: "Quiet mover" });
+  else if (group === "attention") tags.push({ icon: "📣", text: "Big attention" });
+  if (item.relativeVolume >= VOL_HOT) tags.push({ icon: "📈", text: `${item.relativeVolume.toFixed(1)}× normal volume` });
   if (item.momentum >= 20) tags.push({ icon: "🚀", text: `+${item.momentum.toFixed(0)}% mentions vs prior` });
-  if (social >= 3) tags.push({ icon: "🔥", text: `${fmt.format(social)} social mentions` });
+  if (social >= SOCIAL_BUZZ) tags.push({ icon: "🔥", text: `${fmt.format(social)} social mentions` });
   if (item.sentiment > 0.25) tags.push({ icon: "🟢", text: "Bullish chatter" });
   else if (item.sentiment < -0.18) tags.push({ icon: "🔴", text: "Bearish chatter" });
   if (item.priceMove >= 3) tags.push({ icon: "💹", text: `+${item.priceMove.toFixed(1)}% price` });
   if (shortVol > 0) tags.push({ icon: "🩳", text: "Elevated short volume" });
   if (secFilings > 0) tags.push({ icon: "📄", text: "Fresh SEC filing" });
-  if (newsCount >= 4) tags.push({ icon: "📰", text: `${fmt.format(newsCount)} news hits` });
+  if (news >= NEWS_BUZZ) tags.push({ icon: "📰", text: `${fmt.format(news)} news hits` });
   return tags.slice(0, 4);
 }
 
 function trendInterpretation(item) {
-  const wsb = item.sources["Wallstreetbets"] || 0;
-  const redditFin = item.sources["Reddit Finance"] || 0;
-  const social = wsb + redditFin;
-  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
-  const newsCount = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
-  const volHot = item.relativeVolume >= 1.3;
-  const priceHot = item.priceMove >= 3;
-  const momentumHot = item.momentum >= 20;
+  const { social, news, volHot, priceHot, momentumHot } = attentionStats(item);
 
   // Quiet mover: trading volume jumping without a big news/social crowd yet.
-  if (volHot && social < 3 && newsCount < 4) {
-    return `Under-the-radar: trading volume is running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` and price is up ${item.priceMove.toFixed(1)}%` : ""}, but the crowd hasn't piled in yet — an early mover worth a look.`;
+  if (volHot && social < SOCIAL_BUZZ && news < NEWS_BUZZ) {
+    return `Under-the-radar: trading volume is running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` and price is up ${item.priceMove.toFixed(1)}%` : ""}, but the crowd hasn't piled in yet (fewer than ${SOCIAL_BUZZ} social mentions and ${NEWS_BUZZ} news hits) — an early mover worth a look.`;
   }
   // Social-led attention.
-  if (social >= 3 && social >= newsCount) {
+  if (social >= SOCIAL_BUZZ && social >= news) {
     return `Retail-driven: ${fmt.format(social)} social mentions are leading the attention${momentumHot ? `, up ${item.momentum.toFixed(0)}% vs the prior snapshot` : ""}${volHot ? `, with volume ${item.relativeVolume.toFixed(1)}× normal` : ""}.`;
   }
   // News-led attention.
-  if (newsCount >= 4) {
-    return `News-driven: ${fmt.format(newsCount)} headlines are fueling attention${priceHot ? `, and price is confirming with a ${item.priceMove.toFixed(1)}% move` : ""}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""}.`;
+  if (news >= NEWS_BUZZ) {
+    return `News-driven: ${fmt.format(news)} headlines are fueling attention${priceHot ? `, and price is confirming with a ${item.priceMove.toFixed(1)}% move` : ""}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""}.`;
   }
   // Price/momentum-led.
   if (priceHot || momentumHot) {
@@ -885,6 +928,8 @@ function bindEvents() {
   byId("viewMomentum").addEventListener("click", () => setRankMode("momentum"));
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
+  byId("attnAttention").addEventListener("click", () => setAttentionFilter(attentionFilter === "attention" ? "all" : "attention"));
+  byId("attnQuiet").addEventListener("click", () => setAttentionFilter(attentionFilter === "quiet" ? "all" : "quiet"));
   byId("refreshData").addEventListener("click", async () => {
     await loadSnapshot(true);
     render();
@@ -907,6 +952,15 @@ function setCapFilter(filter) {
   byId("capLarge").setAttribute("aria-pressed", String(filter === "large"));
   byId("capSmall").classList.toggle("active", filter === "small");
   byId("capSmall").setAttribute("aria-pressed", String(filter === "small"));
+  render();
+}
+
+function setAttentionFilter(filter) {
+  attentionFilter = filter;
+  byId("attnAttention").classList.toggle("active", filter === "attention");
+  byId("attnAttention").setAttribute("aria-pressed", String(filter === "attention"));
+  byId("attnQuiet").classList.toggle("active", filter === "quiet");
+  byId("attnQuiet").setAttribute("aria-pressed", String(filter === "quiet"));
   render();
 }
 

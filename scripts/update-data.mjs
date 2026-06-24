@@ -863,25 +863,33 @@ async function fetchTextWithUA(url, ua) {
   return response.text();
 }
 
-// Enrich each signal with an estimated market cap and a size tier (large/mid/small),
-// using only free, no-key SEC data: shares outstanding (SEC XBRL) × our public price.
+// Enrich each signal with the issuer's real company name and an estimated market
+// cap + size tier, using only free, no-key SEC data: the official ticker→company
+// map (names) and XBRL shares outstanding × our public price (cap).
 async function enrichMarketCaps(signals, failures) {
-  const withPrice = signals.filter((signal) => Number.isFinite(signal.lastPrice) && signal.lastPrice > 0);
-  if (!withPrice.length) return;
-
-  let tickerToCik;
+  let secMap;
   try {
-    tickerToCik = await fetchSecTickerMap();
+    secMap = await fetchSecTickerMap();
   } catch (error) {
     failures.push(`SEC ticker map: ${error.message}`);
     return;
   }
 
+  // Names for every ticker we can match — no extra network calls.
+  for (const signal of signals) {
+    const record = secMap.get(signal.ticker.toUpperCase());
+    if (record?.title && (!signal.name || signal.name === signal.ticker)) {
+      signal.name = cleanCompanyName(record.title);
+    }
+  }
+
+  // Market caps only where we have a price to multiply by.
+  const withPrice = signals.filter((signal) => Number.isFinite(signal.lastPrice) && signal.lastPrice > 0);
   for (const signal of withPrice) {
-    const cik = tickerToCik.get(signal.ticker.toUpperCase());
-    if (!cik) continue;
+    const record = secMap.get(signal.ticker.toUpperCase());
+    if (!record?.cik) continue;
     try {
-      const shares = await fetchSharesOutstanding(cik);
+      const shares = await fetchSharesOutstanding(record.cik);
       if (!Number.isFinite(shares) || shares <= 0) continue;
       const marketCap = shares * signal.lastPrice;
       signal.marketCap = Math.round(marketCap);
@@ -892,6 +900,12 @@ async function enrichMarketCaps(signals, failures) {
     // Be polite to SEC's rate limits (<10 req/s).
     await sleep(120);
   }
+}
+
+// SEC company titles are often ALL CAPS ("NVIDIA CORP"); make them human-friendly.
+function cleanCompanyName(title) {
+  if (title !== title.toUpperCase()) return title;
+  return title.toLowerCase().replace(/\b([a-z])/g, (match) => match.toUpperCase());
 }
 
 function capTierFor(marketCap) {
@@ -906,7 +920,10 @@ async function fetchSecTickerMap() {
   const map = new Map();
   for (const entry of Object.values(json)) {
     if (entry?.ticker && Number.isFinite(entry.cik_str)) {
-      map.set(String(entry.ticker).toUpperCase(), String(entry.cik_str).padStart(10, "0"));
+      map.set(String(entry.ticker).toUpperCase(), {
+        cik: String(entry.cik_str).padStart(10, "0"),
+        title: entry.title || "",
+      });
     }
   }
   secTickerMapCache = map;
