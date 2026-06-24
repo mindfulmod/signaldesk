@@ -7,6 +7,9 @@ const HISTORY = new URL("data/history.json", ROOT);
 const HISTORY_JS = new URL("data/history.js", ROOT);
 const HISTORY_DAYS = 120;
 const USER_AGENT = "SignalDeskDaily/1.0 (+https://openai.com/; codex automation)";
+const DISCOVERY_LIMIT = 80;
+const PRICE_UNIVERSE_LIMIT = 140;
+const NEWS_UNIVERSE_LIMIT = 70;
 
 const SOURCES = [
   "Wallstreetbets",
@@ -80,11 +83,51 @@ const STOCKS = [
   ["ROKU", "Roku", ["roku"]],
 ];
 
-const NEWS_UNIVERSE = STOCKS.slice(0, 42);
+const stockRegistry = new Map(
+  STOCKS.map(([ticker, name, aliases]) => [ticker, { ticker, name, aliases, seeded: true, discoveredMentions: 0 }])
+);
 
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
 const AMBIGUOUS_TICKERS = new Set(["AI", "ARM", "NET", "T", "F", "ON", "ARE", "CAN", "NOW", "A", "GO", "IT"]);
+const TICKER_STOPWORDS = new Set([
+  "CEO",
+  "CFO",
+  "IPO",
+  "ETF",
+  "ETFS",
+  "SEC",
+  "USA",
+  "US",
+  "USD",
+  "EPS",
+  "GDP",
+  "AI",
+  "API",
+  "URL",
+  "RSS",
+  "FAQ",
+  "THE",
+  "AND",
+  "FOR",
+  "NEW",
+  "OLD",
+  "BUY",
+  "SELL",
+  "HOLD",
+  "CALL",
+  "PUT",
+  "PUTS",
+  "MOON",
+  "YOLO",
+  "ATH",
+  "CEO",
+  "CPI",
+  "FOMC",
+  "FED",
+  "NYSE",
+  "NASDAQ",
+]);
 
 const feeds = [
   { source: "Wallstreetbets", type: "reddit", url: "https://www.reddit.com/r/wallstreetbets/hot.json?limit=100" },
@@ -97,16 +140,25 @@ const feeds = [
   { source: "MarketWatch", type: "rss", url: "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
 ];
 
+const DISCOVERY_QUERIES = [
+  "\"stock\" \"ticker\" \"shares\"",
+  "\"shares\" \"surge\" OR \"shares\" \"plunge\" stock",
+  "\"IPO\" \"stock\" \"ticker\"",
+  "\"retail investors\" \"stock\" \"ticker\"",
+  "\"most active stocks\" OR \"trending stocks\"",
+];
+
 async function main() {
   const previous = await readPrevious();
   const events = [];
+  const discovery = new Map();
   const failures = [];
 
   for (const feed of feeds) {
     try {
       const items = feed.type === "reddit" ? await redditItems(feed) : await xmlItems(feed);
       for (const item of items) {
-        collectMentions(events, feed.source, item.title, item.url, item.score || 1, item.published);
+        collectMentions(events, feed.source, item.title, item.url, item.score || 1, item.published, "", discovery);
       }
     } catch (error) {
       failures.push(`${feed.source}: ${error.message}`);
@@ -116,13 +168,25 @@ async function main() {
   try {
     const items = await gdeltMarketNews();
     for (const item of items) {
-      collectMentions(events, "GDELT News", item.title, item.url, item.score || 2, item.published);
+      collectMentions(events, "GDELT News", item.title, item.url, item.score || 2, item.published, "", discovery);
     }
   } catch (error) {
     failures.push(`GDELT News: ${error.message}`);
   }
 
-  for (const [ticker] of STOCKS) {
+  try {
+    const items = await discoveryNewsItems();
+    for (const item of items) {
+      collectMentions(events, item.source, item.title, item.url, item.score || 2, item.published, "", discovery);
+    }
+  } catch (error) {
+    failures.push(`Discovery News: ${error.message}`);
+  }
+
+  const discoveredEvents = await validateDiscoveredTickers(discovery, failures);
+  events.push(...discoveredEvents);
+
+  for (const { ticker } of rankedStockEntries(events, PRICE_UNIVERSE_LIMIT)) {
     try {
       const market = await fetchMarket(ticker);
       if (market) {
@@ -147,7 +211,7 @@ async function main() {
     }
   }
 
-  for (const [ticker] of NEWS_UNIVERSE) {
+  for (const { ticker } of rankedStockEntries(events, NEWS_UNIVERSE_LIMIT)) {
     try {
       const items = await yahooTickerNews(ticker);
       for (const item of items) {
@@ -158,7 +222,7 @@ async function main() {
     }
   }
 
-  for (const [ticker, name] of NEWS_UNIVERSE) {
+  for (const { ticker, name } of rankedStockEntries(events, NEWS_UNIVERSE_LIMIT)) {
     await collectTickerNews(events, failures, ticker, name);
   }
 
@@ -197,7 +261,9 @@ async function main() {
     generatedAt: new Date().toISOString(),
     dataMode: "real-public-no-key",
     sourceNote:
-      "Real snapshot from public no-key sources. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
+      "Real snapshot from public no-key sources with dynamic ticker discovery. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
+    discoveryNote:
+      "SignalDesk starts with a seed universe, then extracts ticker candidates from public market articles and admits them only after public quote validation.",
     sources: SOURCES,
     failures: failures.slice(0, 20),
     signals,
@@ -319,21 +385,56 @@ async function gdeltMarketNews() {
     .slice(0, 80);
 }
 
+async function discoveryNewsItems() {
+  const jobs = DISCOVERY_QUERIES.flatMap((query) => [
+    ["Google News", googleNewsSearchUrl(query)],
+    ["Bing News", bingNewsSearchUrl(query)],
+  ]);
+  const results = [];
+  const seen = new Set();
+
+  for (const [source, url] of jobs) {
+    try {
+      const items = await xmlItems({ source, type: "rss", url });
+      for (const item of items.slice(0, 12)) {
+        const key = `${item.title}|${item.url}`;
+        if (seen.has(key) || !hasMarketContext(item.title)) continue;
+        seen.add(key);
+        results.push({ ...item, source, score: 2.5 });
+      }
+    } catch {
+      // Broad discovery is opportunistic; source-specific failures are covered by normal feeds.
+    }
+  }
+
+  return results.slice(0, 100);
+}
+
 async function newsRssItems(source, ticker, name) {
   const query = encodeURIComponent(`"${name}" ${ticker} stock`);
   const url =
     source === "Google News"
-      ? `https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`
-      : `https://www.bing.com/news/search?q=${query}&format=rss`;
+      ? googleNewsSearchUrl(query)
+      : bingNewsSearchUrl(query);
   const items = await xmlItems({ source, type: "rss", url });
   return items.slice(0, 8).map((item) => ({ ...item, score: 2 }));
+}
+
+function googleNewsSearchUrl(query) {
+  const q = query.includes("%") ? query : encodeURIComponent(query);
+  return `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`;
+}
+
+function bingNewsSearchUrl(query) {
+  const q = query.includes("%") ? query : encodeURIComponent(query);
+  return `https://www.bing.com/news/search?q=${q}&format=rss`;
 }
 
 async function finraShortVolumeEvents() {
   const text = await fetchRecentFinraShortFile();
   const lines = text.trim().split(/\r?\n/).filter(Boolean);
   const events = [];
-  const tracked = new Set(STOCKS.map(([ticker]) => ticker));
+  const tracked = new Set([...stockRegistry.keys()]);
   for (const line of lines.slice(1)) {
     const [date, symbol, shortVolume, , totalVolume] = line.split("|");
     if (!tracked.has(symbol)) continue;
@@ -401,6 +502,123 @@ function hasMarketContext(value) {
   return /\b(stock|stocks|share|shares|earnings|analyst|analysts|investor|investors|market|markets|nasdaq|dow|nyse|revenue|profit|guidance|valuation|trading|trader|traders|wall street)\b/i.test(value);
 }
 
+function discoverTickerMentions(discovery, source, text, url, weight = 1, published = "") {
+  if (!discovery || !hasMarketContext(text)) return;
+  for (const candidate of extractTickerCandidates(text)) {
+    if (stockRegistry.has(candidate.ticker)) continue;
+    const existing =
+      discovery.get(candidate.ticker) ||
+      {
+        ticker: candidate.ticker,
+        mentions: 0,
+        score: 0,
+        events: [],
+      };
+    const mentions = Math.max(1, Math.round(weight * candidate.confidence));
+    existing.mentions += mentions;
+    existing.score += mentions + candidate.confidence;
+    existing.events.push({ source, text, url, mentions, published: published || new Date().toISOString() });
+    discovery.set(candidate.ticker, existing);
+  }
+}
+
+function extractTickerCandidates(text) {
+  const raw = String(text || "");
+  const candidates = new Map();
+  const add = (ticker, confidence) => {
+    const normalized = ticker.toUpperCase();
+    if (!isPossibleTicker(normalized)) return;
+    candidates.set(normalized, Math.max(candidates.get(normalized) || 0, confidence));
+  };
+
+  for (const match of raw.matchAll(/\$([A-Z][A-Z0-9]{0,4})(?![A-Z0-9])/g)) add(match[1], 3);
+  for (const match of raw.matchAll(/\(([A-Z][A-Z0-9]{1,4})\)/g)) add(match[1], 2.4);
+  for (const match of raw.matchAll(/\bticker[:\s]+([A-Z][A-Z0-9]{0,4})\b/g)) add(match[1], 2.6);
+  for (const match of raw.matchAll(/\b[A-Z][A-Z0-9]{1,4}\b/g)) {
+    const token = match[0];
+    if (AMBIGUOUS_TICKERS.has(token)) continue;
+    add(token, 1);
+  }
+
+  return [...candidates.entries()].map(([ticker, confidence]) => ({ ticker, confidence }));
+}
+
+function isPossibleTicker(ticker) {
+  if (!/^[A-Z][A-Z0-9]{0,4}$/.test(ticker)) return false;
+  if (TICKER_STOPWORDS.has(ticker)) return false;
+  if (/^\d+$/.test(ticker)) return false;
+  return true;
+}
+
+async function validateDiscoveredTickers(discovery, failures) {
+  const events = [];
+  const candidates = [...discovery.values()].sort((a, b) => b.score - a.score).slice(0, DISCOVERY_LIMIT);
+
+  for (const candidate of candidates) {
+    try {
+      const market = await fetchMarket(candidate.ticker);
+      if (!market?.lastPrice) continue;
+      const name = market.name || candidate.ticker;
+      registerStock(candidate.ticker, name, [candidate.ticker, name]);
+      stockRegistry.get(candidate.ticker).discoveredMentions = candidate.mentions;
+      for (const item of candidate.events.slice(0, 8)) {
+        events.push({
+          source: item.source,
+          ticker: candidate.ticker,
+          name,
+          title: item.text.slice(0, 240),
+          url: item.url,
+          mentions: item.mentions,
+          sentiment: scoreSentiment(` ${item.text.toLowerCase()} `),
+          priceMove: 0,
+          relativeVolume: 1,
+          lastPrice: null,
+          quoteAsOf: null,
+          quoteSource: null,
+          published: item.published,
+        });
+      }
+    } catch (error) {
+      failures.push(`Discovery ${candidate.ticker}: ${error.message}`);
+    }
+  }
+
+  return events;
+}
+
+function registerStock(ticker, name, aliases = []) {
+  const normalized = ticker.toUpperCase();
+  if (!isPossibleTicker(normalized)) return;
+  const existing = stockRegistry.get(normalized);
+  const normalizedAliases = [...new Set([normalized, ...aliases].filter(Boolean).map((value) => String(value).toLowerCase()))];
+  if (existing) {
+    existing.aliases = [...new Set([...(existing.aliases || []), ...normalizedAliases])];
+    if (name && existing.name === existing.ticker) existing.name = name;
+    return;
+  }
+  stockRegistry.set(normalized, {
+    ticker: normalized,
+    name: name || normalized,
+    aliases: normalizedAliases,
+    seeded: false,
+    discoveredMentions: 0,
+  });
+}
+
+function rankedStockEntries(events, limit) {
+  const mentionScores = new Map();
+  for (const event of events) {
+    mentionScores.set(event.ticker, (mentionScores.get(event.ticker) || 0) + (Number(event.mentions) || 0));
+  }
+  return [...stockRegistry.values()]
+    .sort((a, b) => {
+      const scoreA = (mentionScores.get(a.ticker) || 0) + (a.seeded ? 2 : 0) + (a.discoveredMentions || 0);
+      const scoreB = (mentionScores.get(b.ticker) || 0) + (b.seeded ? 2 : 0) + (b.discoveredMentions || 0);
+      return scoreB - scoreA || a.ticker.localeCompare(b.ticker);
+    })
+    .slice(0, limit);
+}
+
 async function fetchMarket(ticker) {
   const [yahoo, stooq] = await Promise.allSettled([fetchYahooMarket(ticker), fetchStooqMarket(ticker)]);
   const yahooMarket = yahoo.status === "fulfilled" ? yahoo.value : null;
@@ -441,6 +659,7 @@ async function fetchYahooMarket(ticker) {
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
     quoteAsOf,
     quoteSource: "Yahoo public chart",
+    name: result?.meta?.longName || result?.meta?.shortName || result?.meta?.symbol || ticker,
   };
 }
 
@@ -468,12 +687,14 @@ async function fetchStooqMarket(ticker) {
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
     quoteAsOf: `${lastRow[0]}T20:00:00.000Z`,
     quoteSource: "Stooq public daily quote",
+    name: ticker,
   };
 }
 
-function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "") {
+function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
   const normalized = ` ${text.toLowerCase().replace(/[^a-z0-9.$&+ -]/g, " ")} `;
-  for (const [ticker, name, aliases] of STOCKS) {
+  if (!forceTicker) discoverTickerMentions(discovery, source, text, url, weight, published);
+  for (const { ticker, name, aliases } of stockRegistry.values()) {
     if (forceTicker && forceTicker !== ticker) continue;
     const cashtag = normalized.includes(`$${ticker.toLowerCase()}`);
     const tickerWord = new RegExp(`(^|[^a-z])${escapeRegExp(ticker.toLowerCase())}([^a-z]|$)`).test(normalized);
@@ -581,11 +802,11 @@ function scoreSentiment(text) {
 }
 
 function countWord(text, word) {
-  return (text.match(new RegExp(`\\b${escapeRegExp(word)}\\b`, "g")) || []).length;
+  return (text.match(new RegExp(`\b${escapeRegExp(word)}\b`, "g")) || []).length;
 }
 
 function textBetween(xml, tag) {
-  return xml.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"))?.[1] || "";
+  return xml.match(new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`, "i"))?.[1] || "";
 }
 
 function attrBetween(xml, tag, attr) {
@@ -618,7 +839,7 @@ async function fetchText(url) {
 }
 
 function stockName(ticker) {
-  return STOCKS.find(([symbol]) => symbol === ticker)?.[1] || ticker;
+  return stockRegistry.get(ticker)?.name || ticker;
 }
 
 function signed(value) {
