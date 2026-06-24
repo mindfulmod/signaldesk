@@ -209,12 +209,32 @@ button {
   line-height: 1.4;
 }
 
+.range-note-warn {
+  color: #f0b429;
+}
+
 .check-row {
   display: flex;
   align-items: center;
   gap: 10px;
   min-height: 34px;
   color: #f5faf6;
+}
+
+.source-status {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.source-blocked {
+  background: rgba(180, 50, 50, 0.25);
+  color: #f08080;
+  border: 1px solid rgba(180, 50, 50, 0.4);
 }
 
 .check-row input {

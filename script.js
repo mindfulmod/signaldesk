@@ -278,13 +278,31 @@ function aggregateMentionTotals(snapshots) {
 
 function filteredSignals() {
   const state = getState();
-  const signals = realSignals()
+  const base = realSignals()
     .map((item) => ({
       ...item,
       mentions: state.sources.reduce((sum, source) => sum + (item.sources[source] || 0), 0),
     }))
     .filter((item) => item.mentions > 0)
     .filter((item) => (!state.query ? true : `${item.ticker} ${item.name}`.toUpperCase().includes(state.query)));
+
+  // Recompute signalScore peer-relatively based on the active source selection,
+  // so rankings reflect only what the user has checked.
+  const maxMentions = Math.max(1, ...base.map((item) => item.mentions));
+  const rawScores = base.map((item) => {
+    const activeBreadth = state.sources.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
+    return (
+      30 * Math.sqrt(item.mentions / maxMentions) +
+      22 * clamp(0, 1, item.momentum / 80 + 0.25) +
+      18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
+      12 * clamp(0, 1, item.priceMove / 6) +
+      10 * clamp(0, 1, item.relativeVolume / 2.5) +
+      8 * activeBreadth
+    );
+  });
+  const maxRaw = Math.max(1, ...rawScores);
+  const scale = 85 / maxRaw;
+  const signals = base.map((item, i) => ({ ...item, signalScore: clamp(0, 100, rawScores[i] * scale) }));
 
   return signals.sort(sortForMode);
 }
@@ -358,7 +376,7 @@ function renderEmptyState() {
 }
 
 function buyScore(item) {
-  const signal = clamp(0, 1, item.signalScore / 100);
+  const signal = clamp(0, 1, item.signalScore / 85); // peer-scale ceiling is 85
   const momentum = clamp(0, 1, (item.momentum + 10) / 80);
   const sentiment = clamp(0, 1, (item.sentiment + 0.2) / 0.65);
   const price = clamp(0, 1, (item.priceMove + 1) / 7);
@@ -626,11 +644,17 @@ function updateRangeNote() {
   if (!note) return;
   const available = selectedRangeSnapshots().length;
   const label = selectedDays === "all" ? "All" : `${selectedDays}D`;
-  if (available <= 1) {
-    note.textContent = `${label} view has ${available} saved daily snapshot${available === 1 ? "" : "s"} available. Ranges become stronger as daily GitHub refreshes accumulate.`;
-    return;
+  const wantMulti = selectedDays === "all" || Number(selectedDays) > 1;
+  if (wantMulti && available <= 1) {
+    note.textContent = `⚠ Only ${available} day of history so far — ${label} view is showing today's snapshot. History builds automatically with each daily refresh.`;
+    note.classList.add("range-note-warn");
+  } else if (available <= 1) {
+    note.textContent = "Showing today's snapshot. History builds automatically with each daily refresh.";
+    note.classList.remove("range-note-warn");
+  } else {
+    note.textContent = `${label} view is aggregating ${available} daily snapshots.`;
+    note.classList.remove("range-note-warn");
   }
-  note.textContent = `${label} view is aggregating ${available} saved daily snapshots.`;
 }
 
 function renderDetail(items, top30) {
@@ -784,8 +808,36 @@ function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 }
 
+function markBlockedSources() {
+  // Parse failures like "Wallstreetbets: 403 Blocked" and badge each affected source.
+  const failures = snapshot?.failures || [];
+  const blockedSources = new Set(
+    failures
+      .map((f) => {
+        const match = f.match(/^([^:]+):/);
+        return match ? match[1].trim() : null;
+      })
+      .filter(Boolean)
+  );
+
+  document.querySelectorAll('input[name="source"]').forEach((input) => {
+    const row = input.closest(".check-row");
+    if (!row) return;
+    // Remove any prior badge
+    row.querySelector(".source-status")?.remove();
+    if (blockedSources.has(input.value)) {
+      const badge = document.createElement("span");
+      badge.className = "source-status source-blocked";
+      badge.textContent = "blocked";
+      badge.title = failures.find((f) => f.startsWith(input.value)) || "Source unavailable";
+      row.appendChild(badge);
+    }
+  });
+}
+
 async function init() {
   const loaded = await loadSnapshot();
+  if (loaded) markBlockedSources();
   const snapshots = historySnapshots();
   const generated = new Date(snapshot?.generatedAt || snapshots.at(-1)?.generatedAt || Date.now());
   const min = snapshots[0]?.date ? new Date(`${snapshots[0].date}T00:00:00`) : new Date(generated);

@@ -12,9 +12,6 @@ on:
     paths:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
-      - "script.js"
-      - "index.html"
-      - "styles.css"
 
 permissions:
   contents: write
