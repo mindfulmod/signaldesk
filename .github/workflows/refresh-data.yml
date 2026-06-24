@@ -6,9 +6,22 @@ on:
     # GitHub Actions schedules use UTC.
     - cron: "0 16 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/refresh-data.yml"
+      - "scripts/update-data.mjs"
+      - "scripts/update-history.mjs"
+      - "history-support.js"
+      - "script.js"
 
 permissions:
   contents: write
+
+concurrency:
+  group: signaldesk-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh-data:
