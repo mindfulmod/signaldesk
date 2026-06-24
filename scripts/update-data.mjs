@@ -28,6 +28,7 @@ const SOURCES = [
 const STOCKS = [
   ["NVDA", "NVIDIA Corporation", ["nvidia", "nvda"]],
   ["TSLA", "Tesla", ["tesla", "tsla"]],
+  ["SPCX", "SpaceX", ["spacex", "spcx"]],
   ["AMD", "Advanced Micro Devices", ["advanced micro devices", "amd"]],
   ["AAPL", "Apple", ["apple", "aapl"]],
   ["PLTR", "Palantir", ["palantir", "pltr"]],
@@ -211,7 +212,7 @@ async function main() {
     }
   }
 
-  for (const { ticker } of rankedStockEntries(events, NEWS_UNIVERSE_LIMIT)) {
+  for (const { ticker } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
     try {
       const items = await yahooTickerNews(ticker);
       for (const item of items) {
@@ -222,7 +223,7 @@ async function main() {
     }
   }
 
-  for (const { ticker, name } of rankedStockEntries(events, NEWS_UNIVERSE_LIMIT)) {
+  for (const { ticker, name } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
     await collectTickerNews(events, failures, ticker, name);
   }
 
@@ -617,6 +618,20 @@ function rankedStockEntries(events, limit) {
       return scoreB - scoreA || a.ticker.localeCompare(b.ticker);
     })
     .slice(0, limit);
+}
+
+function newsUniverseEntries(events, limit) {
+  const entries = [];
+  const seen = new Set();
+  const add = (entry) => {
+    if (!entry || seen.has(entry.ticker)) return;
+    seen.add(entry.ticker);
+    entries.push(entry);
+  };
+
+  for (const [ticker] of STOCKS) add(stockRegistry.get(ticker));
+  for (const entry of rankedStockEntries(events, limit)) add(entry);
+  return entries.slice(0, limit);
 }
 
 async function fetchMarket(ticker) {
