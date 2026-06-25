@@ -412,7 +412,7 @@ h1 {
 
 .metrics-grid article,
 .buy-panel,
-.chart-section,
+.movers-panel,
 .table-panel,
 .side-panel {
   background: rgba(255, 255, 255, 0.86);
@@ -457,6 +457,89 @@ td {
   width: min(1260px, 100%);
   margin: 0 auto 18px;
   padding: 18px;
+}
+
+.movers-panel {
+  width: min(1260px, 100%);
+  margin: 0 auto 18px;
+  padding: 18px;
+}
+
+.movers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mover-col {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdfb;
+  padding: 12px 12px 6px;
+}
+
+.mover-head h3 {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.mover-head p {
+  margin: 2px 0 8px;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.mover-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mover-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 6px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: background 0.12s ease;
+}
+
+.mover-row:first-child {
+  border-top: 0;
+}
+
+.mover-row:hover {
+  background: rgba(34, 139, 76, 0.08);
+}
+
+.mover-tk {
+  font-weight: 900;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.mover-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.mover-val {
+  font-weight: 800;
+  font-size: 0.86rem;
+  color: var(--green);
+  white-space: nowrap;
 }
 
 .buy-grid {
@@ -1191,6 +1274,10 @@ tbody tr.selected td:first-child {
 
   .buy-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .movers-grid {
+    grid-template-columns: 1fr;
   }
 
   .dashboard-grid {

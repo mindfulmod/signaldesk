@@ -20,7 +20,7 @@
             <strong>Stock Mentions</strong>
           </div>
         </div>
-        <a class="dashboard-link" href="#chart-heading">View charts and rankings</a>
+        <a class="dashboard-link" href="#ranking-heading">View rankings</a>
 
         <section class="control-group" aria-labelledby="range-heading">
           <h2 id="range-heading">Time Range</h2>
@@ -125,18 +125,6 @@
         <section class="control-group" aria-labelledby="display-heading">
           <h2 id="display-heading">Display</h2>
           <label class="field">
-            <span>Trend metric</span>
-            <select id="metricSelect">
-              <option value="mentions">Mentions</option>
-              <option value="signal">Early signal</option>
-              <option value="momentum">Momentum</option>
-              <option value="sentiment">Sentiment</option>
-              <option value="price">Price move</option>
-              <option value="volume">Relative volume</option>
-              <option value="rank">Rank</option>
-            </select>
-          </label>
-          <label class="field">
             <span>Focus ticker</span>
             <input id="tickerSearch" type="search" placeholder="Search symbol or name" />
           </label>
@@ -203,24 +191,21 @@
           <p class="buy-disclaimer">Informational signal screen only. Not financial advice; review fundamentals, risk, and your own plan before trading.</p>
         </section>
 
-        <section class="chart-section" aria-labelledby="chart-heading">
-          <div class="section-head">
+        <section class="movers-panel" aria-labelledby="movers-heading">
+          <div class="section-head compact">
             <div>
-              <h2 id="chart-heading">Mention Trend</h2>
-              <p id="chartSubhead">Top tickers over the selected range</p>
+              <h2 id="movers-heading">Today's Movers</h2>
+              <p>The standout tickers in each signal — click any to open its profile</p>
             </div>
-            <div class="legend" id="chartLegend" aria-label="Chart legend"></div>
           </div>
-          <div class="chart-wrap">
-            <svg id="trendChart" role="img" aria-label="Trend chart"></svg>
-          </div>
+          <div id="moversBoard" class="movers-grid"></div>
         </section>
 
         <section class="dashboard-grid">
           <div class="table-panel">
             <div class="section-head compact">
               <div>
-                <h2>Ranking</h2>
+                <h2 id="ranking-heading">Ranking</h2>
                 <p id="rankSubhead">Showing the top 30 tickers</p>
               </div>
               <div class="toggle-stack">

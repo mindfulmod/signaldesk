@@ -30,7 +30,6 @@ const SOURCE_COLORS = {
   "Price/Volume": "#111f4d",
 };
 
-const LINE_COLORS = ["#146c43", "#315fba", "#b3414a", "#ad6b12", "#087d7f", "#7255b7", "#8f4b2e", "#3f6f53"];
 
 let snapshot = null;
 let history = null;
@@ -61,7 +60,6 @@ function getState() {
     start: byId("startDate").value,
     end: byId("endDate").value,
     sources: [...document.querySelectorAll('input[name="source"]:checked')].map((input) => input.value),
-    metric: byId("metricSelect").value,
     query: byId("tickerSearch").value.trim().toUpperCase(),
   };
 }
@@ -374,7 +372,7 @@ function render() {
   updateMetrics(items);
   renderBuyCandidates(items);
   renderTable(top50);
-  renderChart(state, items);
+  renderMovers(ranked);
   renderDetail(items, top50);
 }
 
@@ -401,16 +399,16 @@ function renderEmptyState() {
   byId("trackedUniverse").textContent = "0";
   byId("rankingBody").innerHTML = "";
   byId("buyCandidates").innerHTML = "";
-  byId("trendChart").innerHTML = "";
-  byId("chartLegend").innerHTML = "";
-  byId("sourceBreakdown").innerHTML = "";
-  byId("attentionNotes").innerHTML = [
-    "<li>No generated or dummy fallback stock data is shown.</li>",
-    "<li>If sources are unreachable, the dashboard stays empty until the next successful refresh.</li>",
-    snapshot?.failures?.length
-      ? `<li>Most recent refresh warnings: ${snapshot.failures.slice(0, 4).join(" | ")}${snapshot.failures.length > 4 ? " | …" : ""}</li>`
-      : "",
-  ].join("");
+  byId("moversBoard").innerHTML = `<p class="muted-note">No signals in this snapshot yet.</p>`;
+  const warnings = snapshot?.failures?.length
+    ? `<p class="muted-note">Most recent refresh warnings: ${snapshot.failures.slice(0, 4).join(" | ")}${snapshot.failures.length > 4 ? " | …" : ""}</p>`
+    : "";
+  byId("detailPanel").innerHTML = `
+    <div class="selected-stock">
+      <span id="selectedRank">No data</span>
+      <h2 id="selectedTicker">-</h2>
+      <p id="selectedName">No generated or dummy fallback data is shown — the dashboard stays empty until the next successful refresh.</p>
+    </div>${warnings}`;
 }
 
 function buyScore(item) {
@@ -565,132 +563,75 @@ function renderTable(items) {
   });
 }
 
-function renderChart(state, items) {
-  const svg = byId("trendChart");
-  const width = svg.clientWidth || 900;
-  const height = svg.clientHeight || 360;
-  const padding = { top: 26, right: 26, bottom: 34, left: 54 };
-  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-  const selected = items.some((item) => item.ticker === selectedTicker)
-    ? [items.find((item) => item.ticker === selectedTicker), ...items.filter((item) => item.ticker !== selectedTicker).slice(0, 7)]
-    : items.slice(0, 8);
-  const dailySnapshots = selectedRangeSnapshots();
-  const chartPoints = dailySnapshots.length > 1 ? dailyChartPoints(selected, state.metric, dailySnapshots) : null;
-  const labels = chartPoints?.labels || ["Previous", "Latest"];
-  const series =
-    chartPoints?.series ||
-    selected.map((item, index) => ({
-      item,
-      color: LINE_COLORS[index % LINE_COLORS.length],
-      values: twoPointValues(item, state.metric),
-    }));
-  const values = series.flatMap((line) => line.values);
-  const min = metricMin(state.metric, values);
-  const max = metricMax(state.metric, values);
-  const innerW = width - padding.left - padding.right;
-  const innerH = height - padding.top - padding.bottom;
-  const x = (index) => padding.left + index * (innerW / Math.max(1, labels.length - 1));
-  const y = (value) => {
-    if (state.metric === "rank") return padding.top + ((value - min) / (max - min || 1)) * innerH;
-    return padding.top + innerH - ((value - min) / (max - min || 1)) * innerH;
-  };
-  const axis = Array.from({ length: 5 }, (_, index) => {
-    const value = min + ((max - min) / 4) * index;
-    const yy = padding.top + innerH - (index / 4) * innerH;
-    return `<text class="axis-label" x="12" y="${yy + 4}">${formatAxis(value, state.metric)}</text>`;
-  }).join("");
-  const lines = series
-    .map((line) => {
-      const path = line.values.map((value, index) => `${index === 0 ? "M" : "L"} ${x(index).toFixed(1)} ${y(value).toFixed(1)}`).join(" ");
-      return `
-        <path d="${path}" fill="none" stroke="${line.color}" stroke-width="${line.item.ticker === selectedTicker ? 3.6 : 2.4}" stroke-linecap="round"></path>
-        <circle cx="${x(line.values.length - 1)}" cy="${y(line.values.at(-1))}" r="${line.item.ticker === selectedTicker ? 4.5 : 3.2}" fill="${line.color}"></circle>`;
-    })
-    .join("");
-  svg.innerHTML = `
-    <rect x="0" y="0" width="${width}" height="${height}" fill="transparent"></rect>
-    ${axis}
-    <text class="axis-label" x="${padding.left}" y="${height - 10}">${labels[0]}</text>
-    <text class="axis-label" text-anchor="end" x="${width - padding.right}" y="${height - 10}">${labels.at(-1)}</text>
-    ${lines}`;
-  byId("chartLegend").innerHTML = series
-    .map((line) => `<span class="legend-item"><span class="legend-swatch" style="background:${line.color}"></span>${line.item.ticker}</span>`)
-    .join("");
-  byId("chartSubhead").textContent = chartDescription(state.metric);
-}
+// "Today's Movers" — three mini-leaderboards that turn the raw signals into an
+// at-a-glance read: who's accelerating, who's seeing unusual volume, and who the
+// crowd is talking about. Each row is clickable and opens the ticker's profile.
+function renderMovers(items) {
+  const board = byId("moversBoard");
+  if (!board) return;
+  if (!items.length) {
+    board.innerHTML = `<p class="muted-note">No signals in this snapshot yet.</p>`;
+    return;
+  }
 
-function dailyChartPoints(selected, metric, snapshots) {
-  const labels = snapshots.map((daily) => daily.date.slice(5));
-  const dailyAggregates = snapshots.map((daily, index) => {
-    const previous = index > 0 ? [snapshots[index - 1]] : [];
-    return aggregateSnapshotSignals([daily], previous).sort(sortForMode);
+  const momentum = [...items]
+    .filter((item) => Number.isFinite(item.momentum) && item.momentum > 0)
+    .sort((a, b) => b.momentum - a.momentum)
+    .slice(0, 5);
+  // Guard against broken relative-volume values (thin names can divide by a
+  // near-zero average and report absurd multiples).
+  const volume = [...items]
+    .filter((item) => Number.isFinite(item.relativeVolume) && item.relativeVolume > 1.2 && item.relativeVolume < 100)
+    .sort((a, b) => b.relativeVolume - a.relativeVolume)
+    .slice(0, 5);
+  const social = [...items]
+    .map((item) => ({ item, social: attentionStats(item).social }))
+    .filter((row) => row.social > 0)
+    .sort((a, b) => b.social - a.social)
+    .slice(0, 5)
+    .map((row) => row.item);
+
+  const columns = [
+    { title: "🚀 Momentum risers", sub: "Mentions accelerating fastest", list: momentum, value: (item) => `+${item.momentum.toFixed(0)}%` },
+    { title: "📊 Volume spikes", sub: "Trading well above normal", list: volume, value: (item) => `${item.relativeVolume.toFixed(1)}×` },
+    { title: "🗣️ Social buzz", sub: "Most talked about right now", list: social, value: (item) => `${shortFmt.format(attentionStats(item).social)}` },
+  ];
+
+  board.innerHTML = columns.map(moverColumn).join("");
+
+  board.querySelectorAll("[data-mover-ticker]").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedTicker = button.dataset.moverTicker;
+      byId("tickerSearch").value = "";
+      render();
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        document.querySelector(".side-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   });
-  const series = selected.map((item, index) => ({
-    item,
-    color: LINE_COLORS[index % LINE_COLORS.length],
-    values: dailyAggregates.map((dailyItems) => {
-      const found = dailyItems.find((entry) => entry.ticker === item.ticker);
-      if (metric === "rank") return found ? dailyItems.findIndex((entry) => entry.ticker === item.ticker) + 1 : 30;
-      return found ? metricValue(found, metric) : 0;
-    }),
-  }));
-  return { labels, series };
 }
 
-function metricValue(item, metric) {
-  if (metric === "mentions") return item.mentions;
-  if (metric === "momentum") return item.momentum;
-  if (metric === "sentiment") return item.sentiment * 100;
-  if (metric === "price") return item.priceMove;
-  if (metric === "volume") return item.relativeVolume;
-  return item.signalScore;
-}
-
-function twoPointValues(item, metric) {
-  if (metric === "mentions") return [Math.max(0, item.mentions / (1 + item.momentum / 100 || 1)), item.mentions];
-  if (metric === "momentum") return [0, item.momentum];
-  if (metric === "sentiment") return [0, item.sentiment * 100];
-  if (metric === "price") return [0, item.priceMove];
-  if (metric === "volume") return [1, item.relativeVolume];
-  if (metric === "rank") return [30, filteredSignals().findIndex((entry) => entry.ticker === item.ticker) + 1 || 30];
-  return [Math.max(0, item.signalScore - item.momentum / 5), item.signalScore];
-}
-
-function metricMin(metric, values) {
-  if (metric === "rank") return 1;
-  if (metric === "sentiment") return Math.min(-60, ...values);
-  if (metric === "price" || metric === "momentum") return Math.min(0, ...values);
-  if (metric === "volume") return Math.min(0, ...values);
-  return Math.min(0, ...values);
-}
-
-function metricMax(metric, values) {
-  if (metric === "rank") return Math.max(30, ...values);
-  if (metric === "sentiment") return Math.max(60, ...values);
-  if (metric === "volume") return Math.max(2, ...values);
-  if (metric === "signal") return Math.max(100, ...values);
-  return Math.max(10, ...values);
-}
-
-function formatAxis(value, metric) {
-  if (metric === "rank") return Math.round(value);
-  if (metric === "sentiment" || metric === "price" || metric === "momentum") return `${Math.round(value)}%`;
-  if (metric === "volume") return `${value.toFixed(1)}x`;
-  if (metric === "signal") return Math.round(value);
-  return shortFmt.format(value);
-}
-
-function chartDescription(metric) {
-  const copy = {
-    mentions: "Real public mention count",
-    signal: "Real public-data early-signal score",
-    momentum: "Change versus previous real snapshot when available",
-    sentiment: "Headline/post sentiment from public text",
-    price: "Public price move confirmation",
-    volume: "Public relative volume confirmation",
-    rank: "Lower rank is better",
-  };
-  return copy[metric];
+function moverColumn(column) {
+  const rows = column.list.length
+    ? column.list
+        .map(
+          (item) => `
+          <button type="button" class="mover-row" data-mover-ticker="${item.ticker}">
+            <span class="mover-tk">${escapeHtml(item.ticker)}</span>
+            <span class="mover-name">${escapeHtml(item.name || item.ticker)}</span>
+            <span class="mover-val">${column.value(item)}</span>
+          </button>`
+        )
+        .join("")
+    : `<p class="muted-note">Nothing standout here in this snapshot.</p>`;
+  return `
+    <div class="mover-col">
+      <div class="mover-head">
+        <h3>${column.title}</h3>
+        <p>${column.sub}</p>
+      </div>
+      <div class="mover-list">${rows}</div>
+    </div>`;
 }
 
 function updateRangeNote() {
@@ -1074,7 +1015,7 @@ function bindEvents() {
       setPreset(button.dataset.days);
     });
   });
-  ["startDate", "endDate", "metricSelect", "tickerSearch"].forEach((id) => byId(id).addEventListener("input", render));
+  ["startDate", "endDate", "tickerSearch"].forEach((id) => byId(id).addEventListener("input", render));
   document.querySelectorAll('input[name="source"]').forEach((input) => input.addEventListener("change", render));
   byId("clearFocus").addEventListener("click", () => {
     byId("tickerSearch").value = "";
