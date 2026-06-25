@@ -19,6 +19,8 @@ const STOCKTWITS_LIMIT = 45;
 // the most-mentioned tickers, limited to recent comments.
 const HN_LIMIT = 35;
 const HN_LOOKBACK_DAYS = 21;
+// Company profile blurbs (Wikipedia REST, keyless) for the top-ranked tickers.
+const DESCRIPTION_LIMIT = 60;
 // FINRA universe: how many candidates to register from the short-volume file
 const FINRA_UNIVERSE_LIMIT = 200;
 const FINRA_MIN_RATIO = 0.30;
@@ -245,6 +247,7 @@ async function main() {
 
   const signals = aggregate(events, previous);
   await enrichMarketCaps(signals, failures);
+  await enrichProfiles(signals, failures);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -785,6 +788,12 @@ async function collectStockTwitsTrending(events, failures) {
       if (!isPossibleTicker(ticker)) return;
       const name = entry?.title || ticker;
       registerStock(ticker, name, [ticker, name]);
+      // StockTwits tags each symbol with a sector/industry — capture for the profile card.
+      const reg = stockRegistry.get(ticker);
+      if (reg) {
+        if (entry?.sector && !reg.sector) reg.sector = spaceCamelCase(entry.sector);
+        if (entry?.industry && !reg.industry) reg.industry = spaceCamelCase(entry.industry);
+      }
       // Earlier in the trending list = hotter; weight 5 down to 1.
       const weight = Math.max(1, Math.round((symbols.length - index) / Math.max(1, symbols.length) * 5));
       events.push({
@@ -1134,6 +1143,64 @@ async function enrichMarketCaps(signals, failures) {
     // Be polite to SEC's rate limits (<10 req/s).
     await sleep(120);
   }
+}
+
+// Add a glanceable company profile to each signal: sector/industry (from the
+// StockTwits tags we captured) plus a one-line "what it is" blurb from Wikipedia's
+// free, keyless REST summary API. Only the top-ranked tickers are enriched to keep
+// runtime and request volume bounded.
+async function enrichProfiles(signals, failures) {
+  // Sector/industry for any ticker we tagged during discovery — no network cost.
+  for (const signal of signals) {
+    const reg = stockRegistry.get(signal.ticker.toUpperCase());
+    if (reg?.sector && !signal.sector) signal.sector = reg.sector;
+    if (reg?.industry && !signal.industry) signal.industry = reg.industry;
+  }
+
+  const ranked = [...signals].sort((a, b) => b.signalScore - a.signalScore).slice(0, DESCRIPTION_LIMIT);
+  for (const signal of ranked) {
+    try {
+      const profile = await fetchCompanyBlurb(signal.name, signal.ticker);
+      if (profile?.extract) {
+        signal.description = profile.extract;
+        signal.descriptionUrl = profile.url || null;
+      }
+    } catch (error) {
+      failures.push(`Profile ${signal.ticker}: ${error.message}`);
+    }
+    await sleep(120);
+  }
+}
+
+// Resolve a company to its Wikipedia article (via keyless opensearch) and return a
+// trimmed one/two-sentence summary. Falls back gracefully if nothing matches.
+async function fetchCompanyBlurb(name, ticker) {
+  const query = cleanCompanyForSearch(name) || name || ticker;
+  if (!query) return null;
+  const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(query)}&limit=1&namespace=0&format=json`;
+  const search = await fetchJson(searchUrl);
+  const title = Array.isArray(search?.[1]) ? search[1][0] : null;
+  if (!title) return null;
+  const summary = await fetchJson(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`);
+  // Skip disambiguation pages — they don't describe a single company.
+  if (!summary?.extract || summary.type === "disambiguation") return null;
+  const extract = trimToSentences(summary.extract, 2, 280);
+  return { extract, url: summary?.content_urls?.desktop?.page || null };
+}
+
+function trimToSentences(text, maxSentences, maxChars) {
+  const sentences = String(text).match(/[^.!?]+[.!?]+/g) || [String(text)];
+  let out = sentences.slice(0, maxSentences).join(" ").trim();
+  if (out.length > maxChars) out = `${out.slice(0, maxChars - 1).trim()}…`;
+  return out;
+}
+
+// "ElectronicTechnology" → "Electronic Technology"; leaves already-spaced text alone.
+function spaceCamelCase(value) {
+  return String(value || "")
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // SEC company titles are often ALL CAPS ("NVIDIA CORP"); make them human-friendly.

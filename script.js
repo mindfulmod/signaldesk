@@ -715,30 +715,183 @@ function renderDetail(items, top50) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
   if (!selected) return;
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
-  byId("selectedRank").textContent = `Signal rank #${rank}`;
-  byId("selectedTicker").textContent = selected.ticker;
-  byId("selectedName").textContent = selected.name;
-  const max = Math.max(...SOURCES.map((source) => selected.sources[source] || 0), 1);
-  byId("sourceBreakdown").innerHTML = SOURCES.map(
-    (source) => `
-      <div class="source-row">
-        <span>${source}</span>
-        <div class="source-track"><div class="source-fill" style="width:${((selected.sources[source] || 0) / max) * 100}%; background:${SOURCE_COLORS[source]}"></div></div>
-        <strong>${shortFmt.format(selected.sources[source] || 0)}</strong>
-      </div>`
-  ).join("");
+  byId("detailPanel").innerHTML = detailMarkup(selected, rank);
+}
 
-  const latest = selected.latest?.slice(0, 4) || [];
-  const shortMentions = selected.sources["FINRA Short Volume"] || 0;
-  const sourceCount = SOURCES.filter((source) => (selected.sources[source] || 0) > 0).length;
-  const notes = [
-    trendInterpretation(selected),
-    `${selected.ticker} scores ${selected.signalScore.toFixed(0)}/100 using only real public no-key data.`,
-    `${sourceCount} source${sourceCount === 1 ? "" : "s"} active${shortMentions ? `, including FINRA short-volume pressure` : ""}.`,
-    `Sentiment ${sentimentLabel(selected.sentiment).toLowerCase()}, quote ${formatPrice(selected.lastPrice)}${selected.quoteAsOf ? ` as of ${formatShortDateTime(selected.quoteAsOf)}` : ""}, price move ${selected.priceMove >= 0 ? "+" : ""}${selected.priceMove.toFixed(1)}%, volume ${selected.relativeVolume.toFixed(1)}x.`,
-    ...latest.map((item) => `${item.source}: ${item.title}`),
+function detailMarkup(item, rank) {
+  return `
+    <div class="selected-stock">
+      <span id="selectedRank">Signal rank #${rank}</span>
+      <h2 id="selectedTicker">${escapeHtml(item.ticker)}</h2>
+      <p id="selectedName">${escapeHtml(item.name || item.ticker)}</p>
+      ${profileMetaMarkup(item)}
+      ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
+    </div>
+
+    <div class="stat-grid">
+      ${statBlock("Signal", `${item.signalScore.toFixed(0)}`, "/ 100")}
+      ${statBlock("Price", formatPrice(item.lastPrice), priceMoveText(item), priceTone(item.priceMove))}
+      ${statBlock("Rel. volume", item.relativeVolume ? `${item.relativeVolume.toFixed(1)}×` : "-", item.relativeVolume >= VOL_HOT ? "elevated" : "normal", item.relativeVolume >= VOL_HOT ? "up" : "")}
+      ${statBlock("Momentum", `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, "vs prior", momentumTone(item.momentum))}
+      ${statBlock("Sentiment", sentimentLabel(item.sentiment), null, sentimentTone(item.sentiment))}
+      ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
+    </div>
+
+    <div class="detail-section">
+      <h3>Why it's on the radar</h3>
+      <p class="why-line">${escapeHtml(trendInterpretation(item))}</p>
+      <div class="why-chips">${whyChips(item).map((chip) => `<span class="why-chip">${escapeHtml(chip)}</span>`).join("")}</div>
+    </div>
+
+    ${attentionMarkup(item)}
+
+    ${headlinesMarkup(item)}
+
+    <div class="detail-section research-links">
+      <h3>Dig deeper</h3>
+      <div class="research-row">
+        <a href="https://finance.yahoo.com/quote/${encodeURIComponent(item.ticker)}" target="_blank" rel="noopener">Yahoo Finance</a>
+        <a href="https://stocktwits.com/symbol/${encodeURIComponent(item.ticker)}" target="_blank" rel="noopener">StockTwits</a>
+        <a href="https://apewisdom.io/stocks/${encodeURIComponent(item.ticker)}/" target="_blank" rel="noopener">ApeWisdom</a>
+      </div>
+    </div>`;
+}
+
+function profileMetaMarkup(item) {
+  const bits = [item.sector, item.industry].filter(Boolean);
+  if (!bits.length) return "";
+  return `<p class="company-meta">${bits.map((bit) => escapeHtml(bit)).join(" · ")}</p>`;
+}
+
+function statBlock(label, value, sub, tone = "") {
+  return `
+    <div class="stat-block${tone ? ` tone-${tone}` : ""}">
+      <span class="stat-label">${escapeHtml(label)}</span>
+      <strong class="stat-value">${value}</strong>
+      ${sub ? `<span class="stat-sub">${escapeHtml(sub)}</span>` : ""}
+    </div>`;
+}
+
+function priceMoveText(item) {
+  if (!Number.isFinite(item.priceMove)) return "";
+  return `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% today`;
+}
+
+function priceTone(move) {
+  if (!Number.isFinite(move) || Math.abs(move) < 0.05) return "";
+  return move > 0 ? "up" : "down";
+}
+
+function momentumTone(value) {
+  if (value >= 15) return "up";
+  if (value <= -15) return "down";
+  return "";
+}
+
+function sentimentTone(value) {
+  if (value > 0.08) return "up";
+  if (value < -0.08) return "down";
+  return "";
+}
+
+function capTierName(item) {
+  const tier = item.capTier;
+  if (tier === "large") return "Large cap";
+  if (tier === "small") return "Small cap";
+  return Number.isFinite(item.marketCap) && item.marketCap > 0 ? "" : "no SEC cap";
+}
+
+// Compact "why" chips highlighting only the signals that are actually firing.
+function whyChips(item) {
+  const { social, news, volHot, priceHot, momentumHot } = attentionStats(item);
+  const chips = [];
+  if (social > 0) chips.push(`${fmt.format(social)} social`);
+  if (news > 0) chips.push(`${fmt.format(news)} news`);
+  if (volHot) chips.push(`${item.relativeVolume.toFixed(1)}× volume`);
+  if (priceHot) chips.push(`+${item.priceMove.toFixed(1)}% price`);
+  if (momentumHot) chips.push(`+${item.momentum.toFixed(0)}% momentum`);
+  if ((item.sources["FINRA Short Volume"] || 0) > 0) chips.push("short pressure");
+  if (!chips.length) chips.push("steady, no single catalyst");
+  return chips;
+}
+
+// Condensed attention: group totals (Social / News / Market) and only list the
+// individual sources that actually returned something, so empty rows don't bury
+// the signal.
+function attentionMarkup(item) {
+  const groups = [
+    { label: "Social", sources: ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"], color: "#18a0c4" },
+    { label: "News", sources: ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"], color: "#ad6b12" },
+    { label: "Market", sources: ["FINRA Short Volume", "Price/Volume"], color: "#111f4d" },
   ];
-  byId("attentionNotes").innerHTML = notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("");
+  const totals = groups.map((group) => ({
+    ...group,
+    value: group.sources.reduce((sum, source) => sum + (item.sources[source] || 0), 0),
+  }));
+  const grandMax = Math.max(...totals.map((group) => group.value), 1);
+
+  const active = SOURCES.map((source) => ({ source, value: item.sources[source] || 0 }))
+    .filter((row) => row.value > 0)
+    .sort((a, b) => b.value - a.value);
+
+  if (!active.length) {
+    return `
+      <div class="detail-section">
+        <h3>Where the attention is</h3>
+        <p class="muted-note">No mentions captured in this snapshot — this stock is here on price/volume signals.</p>
+      </div>`;
+  }
+
+  const groupBars = totals
+    .filter((group) => group.value > 0)
+    .map(
+      (group) => `
+        <div class="attn-group">
+          <span class="attn-group-label">${group.label}</span>
+          <div class="attn-track"><div class="attn-fill" style="width:${(group.value / grandMax) * 100}%; background:${group.color}"></div></div>
+          <strong>${shortFmt.format(group.value)}</strong>
+        </div>`
+    )
+    .join("");
+
+  const activeMax = Math.max(...active.map((row) => row.value), 1);
+  const activeRows = active
+    .map(
+      (row) => `
+        <div class="source-row">
+          <span><span class="src-dot" style="background:${SOURCE_COLORS[row.source] || "#888"}"></span>${escapeHtml(row.source)}</span>
+          <div class="source-track"><div class="source-fill" style="width:${(row.value / activeMax) * 100}%; background:${SOURCE_COLORS[row.source] || "#888"}"></div></div>
+          <strong>${shortFmt.format(row.value)}</strong>
+        </div>`
+    )
+    .join("");
+
+  return `
+    <div class="detail-section">
+      <h3>Where the attention is</h3>
+      <div class="attn-groups">${groupBars}</div>
+      <div class="attn-detail">${activeRows}</div>
+    </div>`;
+}
+
+function headlinesMarkup(item) {
+  const latest = (item.latest || []).filter((entry) => entry.title).slice(0, 5);
+  if (!latest.length) return "";
+  return `
+    <div class="detail-section">
+      <h3>Recent chatter & headlines</h3>
+      <ul class="headline-list">
+        ${latest
+          .map(
+            (entry) => `
+            <li>
+              <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "#555"}">${escapeHtml(entry.source)}</span>
+              ${entry.url ? `<a href="${entry.url}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a>` : escapeHtml(entry.title)}
+            </li>`
+          )
+          .join("")}
+      </ul>
+    </div>`;
 }
 
 // ---- "Why it's trending" interpretation + attention grouping ----
