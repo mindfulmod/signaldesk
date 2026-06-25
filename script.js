@@ -215,6 +215,10 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
           quoteSource: null,
           marketCap: null,
           capTier: null,
+          description: null,
+          descriptionUrl: null,
+          sector: null,
+          industry: null,
           latestGeneratedAt: "",
           sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
           latest: [],
@@ -235,6 +239,13 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         item.capTier = signal.capTier || capTierFor(Number(signal.marketCap)) || item.capTier;
         item.latestGeneratedAt = daily.generatedAt || "";
       }
+      // Profile fields are static per ticker; keep the first non-empty value seen.
+      if (!item.description && signal.description) {
+        item.description = signal.description;
+        item.descriptionUrl = signal.descriptionUrl || null;
+      }
+      if (!item.sector && signal.sector) item.sector = signal.sector;
+      if (!item.industry && signal.industry) item.industry = signal.industry;
       item.latest.push(...(signal.latest || []).map((entry) => ({ ...entry, date: daily.date })));
       map.set(signal.ticker, item);
     });
@@ -271,6 +282,10 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         quoteSource: item.quoteSource,
         marketCap: item.marketCap,
         capTier: item.capTier,
+        description: item.description,
+        descriptionUrl: item.descriptionUrl,
+        sector: item.sector,
+        industry: item.industry,
         relativeVolume,
         optionsActivity: 0,
         signalScore,
