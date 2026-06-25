@@ -38,10 +38,20 @@ let rankMode = "signal";
 let capFilter = "all"; // "all" | "large" | "small"
 let attentionFilter = "all"; // "all" | "quiet" | "attention"
 let attentionHighThreshold = Infinity; // peer-relative cutoff, recomputed each render
-let selectedDays = 1;
+let rangeStart = ""; // ISO date; empty = all available snapshots
+let rangeEnd = "";
 
 const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
 const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
+// Relative-volume values above this are almost always a data artifact (thin name
+// divided by a near-zero average), so we treat them as unknown rather than a signal.
+const MAX_PLAUSIBLE_REL_VOL = 100;
+
+function sanitizeRelVol(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num) || num <= 0 || num > MAX_PLAUSIBLE_REL_VOL) return 1;
+  return num;
+}
 
 const byId = (id) => document.getElementById(id);
 const fmt = new Intl.NumberFormat("en-US");
@@ -57,8 +67,8 @@ function clamp(min, max, value) {
 
 function getState() {
   return {
-    start: byId("startDate").value,
-    end: byId("endDate").value,
+    start: rangeStart,
+    end: rangeEnd,
     sources: [...document.querySelectorAll('input[name="source"]:checked')].map((input) => input.value),
     query: byId("tickerSearch").value.trim().toUpperCase(),
   };
@@ -169,7 +179,7 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     quoteAsOf: item.quoteAsOf || null,
     quoteSource: item.quoteSource || null,
     priceMove: Number(item.priceMove) || 0,
-    relativeVolume: Number(item.relativeVolume) || 1,
+    relativeVolume: sanitizeRelVol(item.relativeVolume),
     marketCap: Number.isFinite(Number(item.marketCap)) ? Number(item.marketCap) : null,
     capTier: item.capTier || capTierFor(Number(item.marketCap)),
     optionsActivity: Number(item.optionsActivity) || 0,
@@ -227,7 +237,7 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
       item.mentions += mentions;
       item.weightedSentiment += (Number(signal.sentiment) || 0) * mentions;
       item.weightedPrice += (Number(signal.priceMove) || 0) * mentions;
-      item.weightedVolume += (Number(signal.relativeVolume) || 1) * mentions;
+      item.weightedVolume += sanitizeRelVol(signal.relativeVolume) * mentions;
       SOURCES.forEach((source) => {
         item.sources[source] += Number(signal.sources?.[source]) || 0;
       });
@@ -405,13 +415,10 @@ function renderEmptyState() {
   byId("totalMentions").textContent = "0";
   byId("mentionDelta").textContent =
     snapshot?.dataMode === "real-public-no-key" ? "Real snapshot loaded (0 signals)" : "No real data loaded";
-  byId("fastestRiser").textContent = "-";
-  byId("fastestRiserMeta").textContent = "Run the data update";
   byId("bestSignal").textContent = "-";
   byId("bestSignalMeta").textContent = "No signal data";
-  byId("dominantSource").textContent = "-";
-  byId("dominantSourceMeta").textContent = "No source data";
   byId("trackedUniverse").textContent = "0";
+  byId("trackedUniverseMeta").textContent = "validated stocks and ETFs tracked";
   byId("rankingBody").innerHTML = "";
   byId("buyCandidates").innerHTML = "";
   byId("moversBoard").innerHTML = `<p class="muted-note">No signals in this snapshot yet.</p>`;
@@ -453,7 +460,7 @@ function renderBuyCandidates(items) {
       selectedTicker = button.dataset.buyTicker;
       byId("tickerSearch").value = "";
       render();
-      document.getElementById("chart-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 }
@@ -505,24 +512,14 @@ function updateStatus() {
 
 function updateMetrics(items) {
   const total = items.reduce((sum, item) => sum + item.mentions, 0);
-  const fastest = [...items].sort((a, b) => b.momentum - a.momentum)[0];
   const bestSignal = [...items].sort((a, b) => b.signalScore - a.signalScore)[0];
-  const sourceTotals = SOURCES.map((source) => ({
-    source,
-    mentions: items.reduce((sum, item) => sum + (item.sources[source] || 0), 0),
-  })).sort((a, b) => b.mentions - a.mentions);
 
   byId("totalMentions").textContent = shortFmt.format(total);
-  byId("mentionDelta").textContent = `${items.length} tickers in the real snapshot`;
-  byId("fastestRiser").textContent = fastest?.ticker || "-";
-  byId("fastestRiserMeta").textContent = fastest ? `${fastest.momentum.toFixed(1)}% mention momentum` : "Momentum unavailable";
+  byId("mentionDelta").textContent = `across ${items.length} ranked ticker${items.length === 1 ? "" : "s"}`;
   byId("bestSignal").textContent = bestSignal?.ticker || "-";
-  byId("bestSignalMeta").textContent = bestSignal ? `${bestSignal.signalScore.toFixed(0)}/100 composite score` : "Signal unavailable";
-  byId("dominantSource").textContent = sourceTotals[0]?.mentions ? sourceTotals[0].source : "-";
-  byId("dominantSourceMeta").textContent = sourceTotals[0]?.mentions
-    ? `${Math.round((sourceTotals[0].mentions / Math.max(1, total)) * 100)}% of selected mentions`
-    : "No source selected";
+  byId("bestSignalMeta").textContent = bestSignal ? `${bestSignal.signalScore.toFixed(0)}/100 composite early signal` : "Signal unavailable";
   byId("trackedUniverse").textContent = snapshot.signals.length;
+  byId("trackedUniverseMeta").textContent = "validated stocks and ETFs tracked";
 }
 
 function renderTable(items) {
@@ -652,19 +649,12 @@ function moverColumn(column) {
 function updateRangeNote() {
   const note = byId("rangeNote");
   if (!note) return;
-  const available = selectedRangeSnapshots().length;
-  const label = selectedDays === "all" ? "All" : `${selectedDays}D`;
-  const wantMulti = selectedDays === "all" || Number(selectedDays) > 1;
-  if (wantMulti && available <= 1) {
-    note.textContent = `⚠ Only ${available} day of history so far — ${label} view is showing today's snapshot. History builds automatically with each daily refresh.`;
-    note.classList.add("range-note-warn");
-  } else if (available <= 1) {
-    note.textContent = "Showing today's snapshot. History builds automatically with each daily refresh.";
-    note.classList.remove("range-note-warn");
-  } else {
-    note.textContent = `${label} view is aggregating ${available} daily snapshots.`;
-    note.classList.remove("range-note-warn");
-  }
+  const history = historySnapshots().length;
+  note.classList.remove("range-note-warn");
+  note.textContent =
+    history <= 1
+      ? "Showing the latest daily snapshot. History builds automatically with each daily refresh."
+      : `Showing the latest of ${history} daily snapshots. Multi-day ranges unlock as history grows.`;
 }
 
 function renderDetail(items, top50) {
@@ -980,20 +970,6 @@ function formatShortDateTime(value) {
   }).format(new Date(value));
 }
 
-function setPreset(days) {
-  selectedDays = days === "all" ? "all" : Number(days);
-  const generated = new Date(snapshot?.generatedAt || Date.now());
-  const start = new Date(generated);
-  if (days === "all") {
-    start.setDate(generated.getDate() - 119);
-  } else {
-    start.setDate(generated.getDate() - Number(days) + 1);
-  }
-  byId("startDate").value = isoDate(start);
-  byId("endDate").value = isoDate(generated);
-  render();
-}
-
 function exportCsv() {
   const data = filteredSignals().slice(0, 50);
   const header = ["rank", "ticker", "name", "market_price", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
@@ -1023,23 +999,16 @@ function exportCsv() {
 }
 
 function bindEvents() {
-  document.querySelectorAll(".preset").forEach((button) => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".preset").forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
-      setPreset(button.dataset.days);
-    });
-  });
-  ["startDate", "endDate", "tickerSearch"].forEach((id) => byId(id).addEventListener("input", render));
+  byId("tickerSearch").addEventListener("input", render);
   document.querySelectorAll('input[name="source"]').forEach((input) => input.addEventListener("change", render));
   byId("clearFocus").addEventListener("click", () => {
     byId("tickerSearch").value = "";
     selectedTicker = "";
     render();
   });
-  byId("viewSignal").addEventListener("click", () => setRankMode("signal"));
-  byId("viewMentions").addEventListener("click", () => setRankMode("mentions"));
-  byId("viewMomentum").addEventListener("click", () => setRankMode("momentum"));
+  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+    th.addEventListener("click", () => setRankMode(th.dataset.sort));
+  });
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
   byId("attnAttention").addEventListener("click", () => setAttentionFilter(attentionFilter === "attention" ? "all" : "attention"));
@@ -1056,9 +1025,11 @@ function bindEvents() {
 
 function setRankMode(mode) {
   rankMode = mode;
-  byId("viewSignal").classList.toggle("active", mode === "signal");
-  byId("viewMentions").classList.toggle("active", mode === "mentions");
-  byId("viewMomentum").classList.toggle("active", mode === "momentum");
+  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+    const active = th.dataset.sort === mode;
+    th.classList.toggle("sort-active", active);
+    th.setAttribute("aria-sort", active ? "descending" : "none");
+  });
   render();
 }
 
@@ -1140,16 +1111,13 @@ function markBlockedSources() {
 async function init() {
   const loaded = await loadSnapshot();
   if (loaded) markBlockedSources();
+  // Default to the latest daily snapshot (start === end === latest date).
   const snapshots = historySnapshots();
-  const generated = new Date(snapshot?.generatedAt || snapshots.at(-1)?.generatedAt || Date.now());
-  const min = snapshots[0]?.date ? new Date(`${snapshots[0].date}T00:00:00`) : new Date(generated);
-  if (!snapshots[0]?.date) min.setDate(generated.getDate() - 119);
-  byId("startDate").min = isoDate(min);
-  byId("startDate").max = isoDate(generated);
-  byId("endDate").min = isoDate(min);
-  byId("endDate").max = isoDate(generated);
+  const latestDate = snapshots.at(-1)?.date || isoDate(new Date(snapshot?.generatedAt || Date.now()));
+  rangeStart = latestDate;
+  rangeEnd = latestDate;
   bindEvents();
-  if (loaded) setPreset("1");
+  if (loaded) render();
   else renderEmptyState();
 }
 

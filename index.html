@@ -23,24 +23,8 @@
         <a class="dashboard-link" href="#ranking-heading">View rankings</a>
 
         <section class="control-group" aria-labelledby="range-heading">
-          <h2 id="range-heading">Time Range</h2>
-          <div class="preset-grid" role="group" aria-label="Preset ranges">
-            <button class="preset active" data-days="1">1D</button>
-            <button class="preset" data-days="7">7D</button>
-            <button class="preset" data-days="14">14D</button>
-            <button class="preset" data-days="30">30D</button>
-            <button class="preset" data-days="60">60D</button>
-            <button class="preset" data-days="all">All</button>
-          </div>
-          <label class="field">
-            <span>Start</span>
-            <input id="startDate" type="date" />
-          </label>
-          <label class="field">
-            <span>End</span>
-            <input id="endDate" type="date" />
-          </label>
-          <p id="rangeNote" class="range-note">Current build uses the latest daily snapshot.</p>
+          <h2 id="range-heading">Snapshot</h2>
+          <p id="rangeNote" class="range-note">Showing the latest daily snapshot.</p>
         </section>
 
         <section class="control-group" aria-labelledby="platform-heading">
@@ -156,27 +140,17 @@
           <article>
             <span>Total mentions</span>
             <strong id="totalMentions">0</strong>
-            <p id="mentionDelta">0% vs previous period</p>
+            <p id="mentionDelta">across selected platforms</p>
           </article>
           <article>
-            <span>Fastest riser</span>
-            <strong id="fastestRiser">-</strong>
-            <p id="fastestRiserMeta">Momentum unavailable</p>
-          </article>
-          <article>
-            <span>Best early signal</span>
+            <span>Top signal</span>
             <strong id="bestSignal">-</strong>
             <p id="bestSignalMeta">Signal unavailable</p>
           </article>
           <article>
-            <span>Dominant source</span>
-            <strong id="dominantSource">-</strong>
-            <p id="dominantSourceMeta">No source selected</p>
-          </article>
-          <article>
             <span>Discovered universe</span>
             <strong id="trackedUniverse">0</strong>
-            <p>validated stocks and ETFs</p>
+            <p id="trackedUniverseMeta">validated stocks and ETFs</p>
           </article>
         </section>
 
@@ -210,11 +184,6 @@
               </div>
               <div class="toggle-stack">
                 <button id="togglePanel" class="panel-toggle" type="button" aria-pressed="false" aria-controls="detailPanel">Hide details</button>
-                <div class="view-toggle" role="group" aria-label="Table display mode">
-                  <button id="viewSignal" class="active" type="button">Signal</button>
-                  <button id="viewMentions" type="button">Mentions</button>
-                  <button id="viewMomentum" type="button">Momentum</button>
-                </div>
                 <div class="cap-toggle" role="group" aria-label="Attention filter">
                   <button id="attnAttention" type="button" aria-pressed="false">📣 Big attention</button>
                   <button id="attnQuiet" type="button" aria-pressed="false">🤫 Quiet movers</button>
@@ -231,10 +200,10 @@
                   <tr>
                     <th>Rank</th>
                     <th>Ticker</th>
-                    <th>Signal</th>
+                    <th class="sortable sort-active" data-sort="signal" aria-sort="descending">Signal</th>
                     <th>Last public quote</th>
-                    <th class="col-secondary">Mentions</th>
-                    <th>Momentum</th>
+                    <th class="col-secondary sortable" data-sort="mentions">Mentions</th>
+                    <th class="sortable" data-sort="momentum">Momentum</th>
                     <th class="col-tertiary">Price/Vol</th>
                     <th class="col-secondary">Source mix</th>
                   </tr>
