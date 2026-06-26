@@ -905,8 +905,9 @@ function rrFormat(value) {
 // Strip corporate suffixes so a company name searches/matches cleanly on HN.
 function cleanCompanyForSearch(name) {
   return String(name || "")
+    .replace(/\/[a-z]{2}\s*$/i, " ") // SEC state-of-incorporation tags: "Inc/De", "Corp /Ny"
     .replace(/\b(inc|incorporated|corp|corporation|company|co|ltd|limited|plc|holdings?|group|class [a-c]|common stock|the)\b/gi, " ")
-    .replace(/[.,&]/g, " ")
+    .replace(/[.,&/]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -1177,15 +1178,95 @@ async function enrichProfiles(signals, failures) {
 async function fetchCompanyBlurb(name, ticker) {
   const query = cleanCompanyForSearch(name) || name || ticker;
   if (!query) return null;
-  const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(query)}&limit=1&namespace=0&format=json`;
-  const search = await fetchJson(searchUrl);
-  const title = Array.isArray(search?.[1]) ? search[1][0] : null;
-  if (!title) return null;
-  const summary = await fetchJson(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`);
-  // Skip disambiguation pages — they don't describe a single company.
-  if (!summary?.extract || summary.type === "disambiguation") return null;
-  const extract = trimToSentences(summary.extract, 2, 280);
-  return { extract, url: summary?.content_urls?.desktop?.page || null };
+  // The bare token alone is ambiguous: "Compass" resolves to the biggest namesake
+  // ("Compass Group", a British caterer) rather than the actual issuer ("Compass, Inc.").
+  // Keeping the legal suffix ("Compass Inc") disambiguates, so search that fuller form
+  // first, then fall back to the bare token for articles that drop the suffix entirely.
+  const fuller = String(name || "")
+    .replace(/\/[a-z]{2}\/?\s*$/i, " ")
+    .replace(/[.,&/]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const searchQueries = [];
+  if (fuller && fuller.toLowerCase() !== query.toLowerCase()) searchQueries.push(fuller);
+  searchQueries.push(query);
+  // Pull several candidates instead of blindly trusting the top lexical hit — the
+  // closest title is frequently an unrelated city, object, or arena that merely shares
+  // a word (e.g. "Corning, New York" for Corning Inc, or a Soxhlet extractor for SOXL).
+  const seen = new Set();
+  const titles = [];
+  for (const q of searchQueries) {
+    const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(q)}&limit=5&namespace=0&format=json`;
+    const search = await fetchJson(searchUrl);
+    for (const title of (Array.isArray(search?.[1]) ? search[1] : [])) {
+      const key = title && title.toLowerCase();
+      if (key && !seen.has(key)) {
+        seen.add(key);
+        titles.push(title);
+      }
+    }
+  }
+  // Prefer an article whose title is the company's exact name ("Tesla, Inc." over
+  // "Tesla Cybertruck"); otherwise keep the lexical order from the searches above.
+  const norm = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  const exact = norm(fuller) || norm(query);
+  const ordered = titles
+    .map((title, index) => ({ title, index, hit: norm(title) === exact ? 0 : 1 }))
+    .sort((a, b) => a.hit - b.hit || a.index - b.index)
+    .map((entry) => entry.title);
+  for (const title of ordered) {
+    const summary = await fetchJson(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`);
+    // Skip disambiguation pages — they don't describe a single company.
+    if (!summary?.extract || summary.type === "disambiguation") continue;
+    if (!isCompanyMatch(query, summary)) continue;
+    const extract = trimToSentences(summary.extract, 2, 280);
+    return { extract, url: summary?.content_urls?.desktop?.page || null };
+  }
+  return null;
+}
+
+const COMPANY_STOPWORDS = new Set([
+  "the", "inc", "incorporated", "corp", "corporation", "company", "co", "ltd",
+  "limited", "plc", "llc", "lp", "sa", "ag", "nv", "holdings", "holding", "group",
+  "class", "common", "stock", "ordinary", "shares", "share", "new", "ny",
+]);
+
+// One-line Wikidata descriptions that signal the article is NOT a business/fund.
+const NON_COMPANY_DESCRIPTION = /\b(city|town|village|township|municipality|county|borough|hamlet|district|region|province|island|river|lake|mountain|peak|ocean|sea|desert|valley|park|species|genus|plant|animal|bird|fish|insect|dinosaur|mineral|apparatus|instrument|arena|stadium|venue|amphitheatre|amphitheater|skyscraper|bridge|castle|palace|church|cathedral|temple|mosque|film|movie|tv series|web series|miniseries|sitcom|album|song|single|soundtrack|music group|musical group|girl group|boy group|vocal group|rock band|pop band|band|novel|magazine|newspaper|video game|comic|character|deity|goddess|mytholog|saint|emperor|princess|footballer|cricketer|actor|actress|singer|rapper|musician|composer|painter|poet|politician|senator|philosopher|given name|surname|family name|language|dialect|battle|treaty|university|college|polytechnic|academy|degree mill|lawsuit|antitrust|court case|legal case)\b/;
+// Strong business terms that override the backstop (e.g. "American film studio company").
+const COMPANY_DESCRIPTION = /\b(compan|corporation|incorporated|firm|manufactur|supplier|retailer|bank|insurer|insurance|conglomerate|enterprise|fund|etf|exchange-traded|trust|fintech|biotech|pharmaceutical|technolog|software|semiconductor|airline|automaker|provider|operator|holding)\b/;
+
+// Guard against the opensearch returning a lexically-close but semantically-wrong
+// article. Require the company name and the article title to actually line up, then
+// reject titles whose one-line description is clearly a non-company topic.
+function isCompanyMatch(query, summary) {
+  const tokens = (value) =>
+    String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]+/g, " ")
+      .split(/\s+/)
+      .filter((word) => word && !COMPANY_STOPWORDS.has(word));
+  const qTokens = tokens(query);
+  const tTokens = new Set(tokens(summary.title));
+  if (!qTokens.length || !tTokens.size) return false;
+  const description = String(summary.description || "").toLowerCase();
+  // The article title must line up with the company name. A short Wikipedia title
+  // ("AbCellera") still matches "AbCellera Biologics" (title ⊆ name). But when the title
+  // carries EXTRA significant words — "Advanced Micro Devices, Inc. v. Intel Corp." (a
+  // lawsuit) or "Atlantic International University" (a degree mill) — only trust it if the
+  // title still contains the whole name AND the one-liner positively reads as a company.
+  const queryInTitle = qTokens.every((word) => tTokens.has(word));
+  const titleInQuery = [...tTokens].every((word) => qTokens.includes(word));
+  if (!titleInQuery) {
+    if (!queryInTitle) return false;
+    if (!COMPANY_DESCRIPTION.test(description)) return false;
+  }
+  // Category backstop: reject places/objects/works/people/bands/schools/legal cases
+  // unless the description also carries a clear business term.
+  if (description && NON_COMPANY_DESCRIPTION.test(description) && !COMPANY_DESCRIPTION.test(description)) {
+    return false;
+  }
+  return true;
 }
 
 function trimToSentences(text, maxSentences, maxChars) {

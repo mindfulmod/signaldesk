@@ -8,21 +8,40 @@
   </head>
   <body>
     <div class="app-shell">
-      <aside id="sidebar" class="sidebar" aria-label="Dashboard controls">
-        <div class="brand">
-          <div class="brand-mark" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+      <header class="appbar">
+        <div class="appbar-inner">
+          <a class="brand" href="#top" aria-label="SignalDesk — back to top">
+            <span class="brand-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">SignalDesk</span>
+              <span class="brand-tag">Stock Mentions</span>
+            </span>
+          </a>
+
+          <div class="appbar-search">
+            <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M8.5 3a5.5 5.5 0 0 1 4.383 8.86l3.629 3.63a1 1 0 0 1-1.414 1.414l-3.63-3.63A5.5 5.5 0 1 1 8.5 3Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+            </svg>
+            <input id="tickerSearch" type="search" placeholder="Search a ticker or company…" aria-label="Search ticker or company" />
+            <button id="clearFocus" class="search-clear" type="button" aria-label="Clear search">Clear</button>
           </div>
-          <div>
-            <p>SignalDesk</p>
-            <strong>Stock Mentions</strong>
+
+          <div class="appbar-actions">
+            <span id="dataStatus" class="status-chip">Loading public data…</span>
+            <button id="exportCsv" class="appbar-btn" type="button" title="Export CSV" aria-label="Export CSV">CSV</button>
+            <button id="refreshData" class="appbar-btn icon-only" type="button" title="Reload real data" aria-label="Reload real data">↻</button>
+            <button id="toggleSidebar" class="appbar-btn" type="button" title="Hide filters" aria-label="Hide filters" aria-pressed="true" aria-controls="sidebar"><span>☰ Filters</span></button>
           </div>
         </div>
-        <a class="dashboard-link" href="#ranking-heading">View rankings</a>
+      </header>
 
-        <section class="control-group" aria-labelledby="range-heading">
+      <div class="app-body">
+        <aside id="sidebar" class="sidebar" aria-label="Dashboard controls">
+          <section class="control-group" aria-labelledby="range-heading">
           <h2 id="range-heading">Snapshot</h2>
           <p id="rangeNote" class="range-note">Showing the latest daily snapshot.</p>
         </section>
@@ -106,35 +125,14 @@
           </label>
         </section>
 
-        <section class="control-group" aria-labelledby="display-heading">
-          <h2 id="display-heading">Display</h2>
-          <label class="field">
-            <span>Focus ticker</span>
-            <input id="tickerSearch" type="search" placeholder="Search symbol or name" />
-          </label>
-          <button id="clearFocus" class="secondary-button" type="button">Clear focus</button>
-        </section>
-      </aside>
+        </aside>
 
-      <main class="main-content">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">Cross-platform market attention monitor</p>
-            <h1>Top Stocks by Signal</h1>
-            <p id="dataStatus" class="data-status">Loading public data snapshot...</p>
-          </div>
-          <div class="top-actions">
-            <button id="toggleSidebar" class="icon-button" type="button" title="Hide controls" aria-label="Hide controls" aria-pressed="false" aria-controls="sidebar">
-              <span aria-hidden="true">☰ Hide</span>
-            </button>
-            <button id="exportCsv" class="icon-button" type="button" title="Export CSV" aria-label="Export CSV">
-              <span aria-hidden="true">CSV</span>
-            </button>
-            <button id="refreshData" class="icon-button" type="button" title="Reload real data" aria-label="Reload real data">
-              <span aria-hidden="true">↻</span>
-            </button>
-          </div>
-        </header>
+        <main class="main-content">
+        <section class="page-hero" id="top">
+          <p class="eyebrow">Cross-platform market attention monitor</p>
+          <h1>Top stocks by signal</h1>
+          <p class="hero-sub">See where retail and news attention is piling up right now — Reddit, news wires, SEC filings, short volume, and price action, distilled into one early signal. Free, no login, no API keys.</p>
+        </section>
 
         <section class="metrics-grid" aria-label="Summary metrics">
           <article>
@@ -222,6 +220,20 @@
           </aside>
         </section>
       </main>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="brand-name">SignalDesk</span>
+            <p>Cross-platform market attention, distilled into one early signal. Built entirely on free, public, no-key data — Reddit, GDELT, Google/Bing/Yahoo news, SEC EDGAR, FINRA short volume, and public price/volume.</p>
+          </div>
+          <div class="footer-meta">
+            <p class="footer-note">Informational signal screen only — <strong>not financial advice</strong>. Review fundamentals, risk, and your own plan before trading.</p>
+            <p class="footer-sub">Refreshes daily · Free &amp; open · No login, no API keys</p>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="data/signals.js"></script>

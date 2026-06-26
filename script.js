@@ -46,7 +46,8 @@ const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
 const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 // Relative-volume values above this are almost always a data artifact (thin name
 // divided by a near-zero average), so we treat them as unknown rather than a signal.
-const MAX_PLAUSIBLE_REL_VOL = 100;
+// Genuine single-day surges top out around 10-20x; anything past ~25x is noise.
+const MAX_PLAUSIBLE_REL_VOL = 25;
 
 function sanitizeRelVol(value) {
   const num = Number(value);
@@ -404,14 +405,9 @@ function render() {
 
 function renderEmptyState() {
   if (snapshot?.dataMode === "real-public-no-key") {
-    const warnings = snapshot.failures?.length ? ` Source warnings: ${snapshot.failures.length}.` : "";
-    setDataStatus(
-      `Real public no-key snapshot loaded: ${formatDateTime(snapshot.generatedAt)}. 0 ticker signals in this refresh.${warnings}`
-    );
+    setDataStatus(`No signals in snapshot · ${formatDateTime(snapshot.generatedAt)}`);
   } else {
-    setDataStatus(
-      "No real public snapshot is available (or it could not be fetched). Run `node scripts/update-data.mjs` to refresh data/signals.json and data/signals.js from public no-key sources."
-    );
+    setDataStatus("No public snapshot available");
   }
   byId("totalMentions").textContent = "0";
   byId("mentionDelta").textContent =
@@ -504,11 +500,7 @@ function buyReasons(item) {
 }
 
 function updateStatus() {
-  const warnings = snapshot.failures?.length ? ` Source warnings: ${snapshot.failures.length}.` : "";
-  const historyCount = historySnapshots().length;
-  setDataStatus(
-    `Real public no-key data loaded: ${formatDateTime(snapshot.generatedAt)}. History: ${historyCount} daily snapshot${historyCount === 1 ? "" : "s"}. Sources: GDELT, Google/Bing/Yahoo public news, SEC EDGAR, FINRA short volume, public price/volume, and best-effort Reddit.${warnings}`
-  );
+  setDataStatus(`Updated ${formatDateTime(snapshot.generatedAt)}`);
 }
 
 function updateMetrics(items) {
@@ -1064,10 +1056,9 @@ function toggleSidebar() {
   const shell = document.querySelector(".app-shell");
   const hidden = shell.classList.toggle("sidebar-hidden");
   const button = byId("toggleSidebar");
-  button.querySelector("span").textContent = hidden ? "☰ Controls" : "☰ Hide";
-  button.setAttribute("title", hidden ? "Show controls" : "Hide controls");
-  button.setAttribute("aria-label", hidden ? "Show controls" : "Hide controls");
-  button.setAttribute("aria-pressed", String(hidden));
+  button.setAttribute("title", hidden ? "Show filters" : "Hide filters");
+  button.setAttribute("aria-label", hidden ? "Show filters" : "Hide filters");
+  button.setAttribute("aria-pressed", String(!hidden));
 }
 
 function setDataStatus(message) {
