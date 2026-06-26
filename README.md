@@ -1,25 +1,30 @@
 # SignalDesk Stock Mentions
 
-SignalDesk is a static stock-attention dashboard that can be hosted for free on GitHub Pages and refreshed during market sessions with GitHub Actions.
+SignalDesk is a static stock-attention dashboard hosted on GitHub Pages and refreshed during market sessions with GitHub Actions.
+
+The GitHub repository is the baseline going forward. Local drafts should be treated as prototypes unless they have been merged into `main`.
 
 ## Free Mobile Access With GitHub Pages
 
-1. Create a new public GitHub repository, for example `signaldesk`.
-2. Upload all files from this folder into the repository.
-3. In GitHub, open **Settings** > **Pages**.
-4. Under **Build and deployment**, choose:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main`
-   - **Folder:** `/root`
-5. Save.
-
-Your website will be available at:
+The public site is available at:
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/signaldesk/
+https://mindfulmod.github.io/signaldesk/
 ```
 
 Open that link from your phone to view the dashboard.
+
+## Live Baseline
+
+The current live app is a dark, mobile-first market scanner with:
+
+- dynamic ticker discovery instead of a fixed watchlist,
+- FINRA short-volume seeded market universe,
+- StockTwits, ApeWisdom, Hacker News, 4chan, Reddit, news, SEC, FINRA, and public price/volume sources,
+- market-cap filters,
+- big-attention and quiet-mover filters,
+- ranking, movers, research candidates, ticker detail panels, sparklines, and CSV export,
+- an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse.
 
 ## Weekday Data Refresh
 
@@ -46,13 +51,20 @@ You can also refresh manually in GitHub:
 
 The updater uses public no-key sources only:
 
-- Wallstreetbets public Reddit JSON
-- Reddit finance subreddit public JSON
-- SEC EDGAR current filings feed
-- Yahoo public ticker news RSS
+- FINRA short-volume files
+- StockTwits public endpoints
+- ApeWisdom public stock-ranking API
+- Hacker News Algolia public search
+- 4chan `/biz/` public catalog
+- Wallstreetbets and finance Reddit public JSON/RSS, best effort
+- SEC EDGAR public feeds and company data
+- GDELT public news search
+- Google and Bing public news RSS
+- Yahoo ticker news RSS
 - CNBC RSS
 - MarketWatch RSS
-- public price/volume chart data
+- public Yahoo/Stooq price and volume data
+- Wikipedia public summaries for company context
 
 No API keys are required. If public sources are temporarily unreachable, the updater keeps the last working snapshot instead of replacing the dashboard with empty data.
 
