@@ -893,7 +893,11 @@ h1 {
 }
 
 .table-scroll {
-  overflow-x: auto;
+  /* Must NOT create a scroll container on desktop: overflow-x:auto would
+     force overflow-y:auto, scoping the sticky `th { top: 60px }` to this box
+     and shoving the header down over the first row. Horizontal scroll is
+     re-enabled below 760px, where the header switches to top:0. */
+  overflow-x: visible;
 }
 
 table {
@@ -1485,6 +1489,10 @@ tbody tr.selected td:first-child {
 
   th {
     top: 0;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
   }
 }
 
