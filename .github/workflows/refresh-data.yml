@@ -14,6 +14,7 @@ on:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
       - "script.js"
+      - "enhancements.js"
       - "index.html"
       - "styles.css"
 
@@ -40,6 +41,7 @@ jobs:
       - name: Validate scripts
         run: |
           node --check script.js
+          node --check enhancements.js
           node --check scripts/update-data.mjs
 
       - name: Refresh public no-key data
