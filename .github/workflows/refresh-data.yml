@@ -2,9 +2,10 @@ name: Refresh SignalDesk Data
 
 on:
   schedule:
-    # 12:00 PM America/Toronto during daylight saving time.
-    # GitHub Actions schedules use UTC.
-    - cron: "0 16 * * *"
+    # Weekday market-session refreshes in America/Toronto.
+    # Offset from :00 because GitHub warns top-of-hour schedules are more likely to be delayed.
+    - cron: "17 9,12,15,17 * * 1-5"
+      timezone: "America/Toronto"
   workflow_dispatch:
   push:
     branches:
@@ -12,6 +13,9 @@ on:
     paths:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
+      - "script.js"
+      - "index.html"
+      - "styles.css"
 
 permissions:
   contents: write
@@ -23,6 +27,7 @@ concurrency:
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
