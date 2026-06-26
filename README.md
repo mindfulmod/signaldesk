@@ -1,6 +1,6 @@
 # SignalDesk Stock Mentions
 
-SignalDesk is a static stock-attention dashboard that can be hosted for free on GitHub Pages and refreshed daily with GitHub Actions.
+SignalDesk is a static stock-attention dashboard that can be hosted for free on GitHub Pages and refreshed during market sessions with GitHub Actions.
 
 ## Free Mobile Access With GitHub Pages
 
@@ -21,16 +21,19 @@ https://YOUR-GITHUB-USERNAME.github.io/signaldesk/
 
 Open that link from your phone to view the dashboard.
 
-## Daily Data Refresh
+## Weekday Data Refresh
 
-The workflow at `.github/workflows/refresh-data.yml` runs every day at 16:00 UTC, which is 12:00 PM in America/Toronto during daylight saving time.
+The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 
 It:
 
 - validates the JavaScript files,
 - runs `scripts/update-data.mjs`,
 - refreshes `data/signals.json` and `data/signals.js`,
+- updates `data/history.json` and `data/history.js` so longer-range views improve over time,
 - commits those updated data files back to the repository.
+
+The latest refresh appears on the public GitHub Pages site after GitHub Pages finishes publishing the commit.
 
 You can also refresh manually in GitHub:
 
@@ -56,4 +59,3 @@ No API keys are required. If public sources are temporarily unreachable, the upd
 ## Local Use
 
 Open `index.html` directly in a browser, or run any local static server from this folder.
-
