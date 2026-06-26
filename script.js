@@ -12,22 +12,23 @@ const SOURCES = [
   "Price/Volume",
 ];
 
+// Source hues tuned for legibility on the dark terminal theme.
 const SOURCE_COLORS = {
-  Wallstreetbets: "#b3414a",
-  "Reddit Finance": "#7a5a40",
-  StockTwits: "#18a0c4",
-  ApeWisdom: "#c9892f",
-  "Hacker News": "#ff6600",
-  "4chan": "#5d7c46",
-  "GDELT News": "#087d7f",
-  "Google News": "#315fba",
-  "Bing News": "#7255b7",
-  "SEC Filings": "#5e7468",
-  "Yahoo Public News": "#ad6b12",
-  CNBC: "#386c87",
-  MarketWatch: "#355b48",
-  "FINRA Short Volume": "#8f4b2e",
-  "Price/Volume": "#111f4d",
+  Wallstreetbets: "#ff6b74",
+  "Reddit Finance": "#d98a5b",
+  StockTwits: "#3cc6e8",
+  ApeWisdom: "#e0a84a",
+  "Hacker News": "#ff8a3d",
+  "4chan": "#86b06a",
+  "GDELT News": "#2bd4d6",
+  "Google News": "#6ba8ff",
+  "Bing News": "#a98be0",
+  "SEC Filings": "#9bb6a8",
+  "Yahoo Public News": "#e0b94a",
+  CNBC: "#5fb0d6",
+  MarketWatch: "#6fcf97",
+  "FINRA Short Volume": "#d98a5b",
+  "Price/Volume": "#7c9aff",
 };
 
 
