@@ -140,6 +140,99 @@ function historySnapshots() {
   return current ? [current] : [];
 }
 
+// ---- Tier 1: per-ticker history, rank deltas, sparklines ----
+// All of these read the full daily snapshot history (independent of the active
+// date-range filter) so the trend story is consistent regardless of what slice
+// the user is viewing. The tracked universe churns day to day, so most tickers
+// have a single data point until they recur — these helpers degrade to "no
+// trend yet" / "NEW" rather than inventing continuity.
+function tickerHistory(ticker) {
+  return historySnapshots()
+    .map((snap) => {
+      const s = (snap.signals || []).find((x) => x.ticker === ticker);
+      return s ? { date: snap.date, mentions: Number(s.mentions) || 0, signalScore: Number(s.signalScore) || 0 } : null;
+    })
+    .filter(Boolean);
+}
+
+// Rank of every ticker in the snapshot immediately before the latest one,
+// ranked by the same metric the user is currently sorting by, so the delta the
+// row shows always matches the visible ordering. Returns null when there is no
+// prior snapshot to compare against.
+function previousRankMap() {
+  const snaps = historySnapshots();
+  if (snaps.length < 2) return null;
+  const prev = snaps[snaps.length - 2];
+  const sorted = [...(prev.signals || [])].sort((a, b) => {
+    if (rankMode === "mentions") return (Number(b.mentions) || 0) - (Number(a.mentions) || 0);
+    if (rankMode === "momentum") return (Number(b.momentum) || 0) - (Number(a.momentum) || 0);
+    return (Number(b.signalScore) || 0) - (Number(a.signalScore) || 0);
+  });
+  const map = new Map();
+  sorted.forEach((s, i) => map.set(s.ticker, i + 1));
+  return map;
+}
+
+// Tiny inline SVG trend line. Fixed-size (1:1 viewBox) for table rows so the
+// end-dot stays circular; `fluid` stretches to its container for the detail
+// panel. Returns "" for fewer than two points so callers can fall back.
+function sparkline(values, { w = 66, h = 22, pad = 2, fluid = false } = {}) {
+  if (!Array.isArray(values) || values.length < 2) return "";
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const span = max - min || 1;
+  const step = (w - pad * 2) / (values.length - 1);
+  const pts = values.map((v, i) => [pad + i * step, h - pad - ((v - min) / span) * (h - pad * 2)]);
+  const line = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" ");
+  const last = pts[pts.length - 1];
+  const area = `${line} L${last[0].toFixed(1)} ${h} L${pts[0][0].toFixed(1)} ${h} Z`;
+  const up = values[values.length - 1] >= values[0];
+  const par = fluid ? ' preserveAspectRatio="none"' : "";
+  const dot = fluid ? "" : `<circle class="spark-dot" cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="1.8"/>`;
+  return `<svg class="spark ${up ? "up" : "down"}${fluid ? " spark-fluid" : ""}" viewBox="0 0 ${w} ${h}"${par} aria-hidden="true"><path class="spark-area" d="${area}"/><path class="spark-line" d="${line}"/>${dot}</svg>`;
+}
+
+// Always-on bull/bear pill for the table (every row has a sentiment score).
+function sentimentChip(item) {
+  const tone = sentimentTone(item.sentiment); // "up" | "down" | ""
+  const icon = item.sentiment > 0.08 ? "🟢" : item.sentiment < -0.08 ? "🔴" : "⚪";
+  return `<span class="why-chip sent-chip ${tone || "flat"}"><span aria-hidden="true">${icon}</span>${sentimentLabel(item.sentiment)}</span>`;
+}
+
+// Rank movement vs the prior snapshot: ▲/▼ with magnitude, a flat dot for no
+// change, or "NEW" for a first appearance. Empty until there's history to diff.
+function rankBadge(ticker, currentRank, prevRanks) {
+  if (!prevRanks) return "";
+  const prev = prevRanks.get(ticker);
+  if (prev == null) return `<span class="rank-delta new">NEW</span>`;
+  const diff = prev - currentRank; // positive = moved up the board
+  if (diff === 0) return `<span class="rank-delta flat" title="Unchanged vs prior snapshot">●</span>`;
+  const up = diff > 0;
+  return `<span class="rank-delta ${up ? "up" : "down"}" title="${up ? "Up" : "Down"} ${Math.abs(diff)} vs prior snapshot">${up ? "▲" : "▼"}${Math.abs(diff)}</span>`;
+}
+
+function detailTrendMarkup(item) {
+  const hist = tickerHistory(item.ticker);
+  if (hist.length < 2) {
+    return `
+    <div class="detail-section trend-section">
+      <h3>Attention trend</h3>
+      <p class="muted-note">First appearance in the tracked window — a trend line builds as ${escapeHtml(item.ticker)} recurs across daily snapshots.</p>
+    </div>`;
+  }
+  const mentions = hist.map((h) => h.mentions);
+  const first = mentions[0];
+  const last = mentions[mentions.length - 1];
+  const pct = first ? ((last - first) / first) * 100 : 0;
+  const dir = last >= first ? "up" : "down";
+  return `
+    <div class="detail-section trend-section">
+      <h3>Attention trend <span class="trend-span">${hist.length}-day</span></h3>
+      <div class="trend-spark">${sparkline(mentions, { w: 300, h: 56, pad: 3, fluid: true })}</div>
+      <p class="trend-foot"><span class="momentum ${dir}">${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%</span> mentions, ${shortFmt.format(first)} → ${shortFmt.format(last)} over ${hist.length} snapshots.</p>
+    </div>`;
+}
+
 function selectedRangeSnapshots() {
   const state = getState();
   const start = state.start || "0000-01-01";
@@ -522,6 +615,7 @@ function renderTable(items) {
   byId("rankSubhead").textContent = items.length
     ? `Showing ${items.length}${filterLabel} real-data tickers`
     : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
+  const prevRanks = previousRankMap();
   byId("rankingBody").innerHTML = items
     .map((item, index) => {
       const total = Math.max(1, item.mentions);
@@ -530,19 +624,19 @@ function renderTable(items) {
       ).join("");
       const momentumClass = item.momentum >= 0 ? "up" : "down";
       const highlights = trendHighlights(item);
-      const chips = highlights.length
-        ? `<div class="why-chips">${highlights
-            .map((tag) => `<span class="why-chip"><span aria-hidden="true">${tag.icon}</span>${escapeHtml(tag.text)}</span>`)
-            .join("")}</div>`
-        : "";
+      const chips = `<div class="why-chips">${sentimentChip(item)}${highlights
+        .map((tag) => `<span class="why-chip"><span aria-hidden="true">${tag.icon}</span>${escapeHtml(tag.text)}</span>`)
+        .join("")}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
+      const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
-          <td>#${index + 1}</td>
+          <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
           <td>
             <div class="ticker-cell">
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
               <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
+              ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
             </div>
             ${chips}
           </td>
@@ -675,6 +769,8 @@ function detailMarkup(item, rank) {
       ${statBlock("Sentiment", sentimentLabel(item.sentiment), null, sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
     </div>
+
+    ${detailTrendMarkup(item)}
 
     <div class="detail-section">
       <h3>Why it's on the radar</h3>
@@ -891,8 +987,6 @@ function trendHighlights(item) {
   if (item.relativeVolume >= VOL_HOT) tags.push({ icon: "📈", text: `${item.relativeVolume.toFixed(1)}× normal volume` });
   if (item.momentum >= 20) tags.push({ icon: "🚀", text: `+${item.momentum.toFixed(0)}% mentions vs prior` });
   if (social >= SOCIAL_BUZZ) tags.push({ icon: "🔥", text: `${fmt.format(social)} social mentions` });
-  if (item.sentiment > 0.25) tags.push({ icon: "🟢", text: "Bullish chatter" });
-  else if (item.sentiment < -0.18) tags.push({ icon: "🔴", text: "Bearish chatter" });
   if (item.priceMove >= 3) tags.push({ icon: "💹", text: `+${item.priceMove.toFixed(1)}% price` });
   if (shortVol > 0) tags.push({ icon: "🩳", text: "Elevated short volume" });
   if (secFilings > 0) tags.push({ icon: "📄", text: "Fresh SEC filing" });

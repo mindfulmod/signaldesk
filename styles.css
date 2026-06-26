@@ -1081,6 +1081,105 @@ tbody tr.selected td:first-child {
   background: var(--panel-3);
 }
 
+/* ===== Rank delta (▲/▼/NEW vs prior snapshot) ===== */
+.rank-num {
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-delta {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-delta.up { color: var(--up); }
+.rank-delta.down { color: var(--down); }
+.rank-delta.flat { color: var(--faint); }
+.rank-delta.new {
+  color: var(--blue);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+/* ===== Sentiment chip (always-on bull/bear pill) ===== */
+.sent-chip.up {
+  color: var(--up);
+  border-color: rgba(63, 220, 127, 0.4);
+}
+
+.sent-chip.down {
+  color: var(--down);
+  border-color: rgba(255, 93, 93, 0.4);
+}
+
+.sent-chip.flat { color: var(--muted); }
+
+/* ===== Sparklines ===== */
+.ticker-spark {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.spark {
+  width: 66px;
+  height: 22px;
+  display: block;
+}
+
+.spark-fluid {
+  width: 100%;
+  height: 56px;
+}
+
+.spark-line {
+  fill: none;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.spark-area {
+  stroke: none;
+  opacity: 0.16;
+}
+
+.spark-dot { stroke: none; }
+
+.spark.up .spark-line { stroke: var(--up); }
+.spark.up .spark-area,
+.spark.up .spark-dot { fill: var(--up); }
+.spark.down .spark-line { stroke: var(--down); }
+.spark.down .spark-area,
+.spark.down .spark-dot { fill: var(--down); }
+
+.trend-spark {
+  margin: 4px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  padding: 8px 10px;
+}
+
+.trend-span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
+
+.trend-foot {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* ===== Detail side panel ===== */
 .side-panel {
   align-self: start;
