@@ -1180,6 +1180,40 @@ tbody tr.selected td:first-child {
   color: var(--muted);
 }
 
+/* ===== Watchlist star ===== */
+.star-btn {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  color: var(--faint);
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: color 120ms ease, transform 120ms ease;
+}
+
+.star-btn:hover {
+  color: var(--amber);
+  transform: scale(1.15);
+}
+
+.star-btn.on {
+  color: var(--amber);
+}
+
+.selected-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.selected-head .star-btn {
+  font-size: 1.6rem;
+  padding: 0 4px;
+}
+
 /* ===== Detail side panel ===== */
 .side-panel {
   align-self: start;

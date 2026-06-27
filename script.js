@@ -41,6 +41,50 @@ let attentionFilter = "all"; // "all" | "quiet" | "attention"
 let attentionHighThreshold = Infinity; // peer-relative cutoff, recomputed each render
 let rangeStart = ""; // ISO date; empty = all available snapshots
 let rangeEnd = "";
+let watchlist = new Set(); // starred tickers, persisted to localStorage
+let watchlistFilter = false; // when true, show only starred tickers
+
+const WATCHLIST_KEY = "signaldesk:watchlist";
+
+function loadWatchlist() {
+  try {
+    const raw = localStorage.getItem(WATCHLIST_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr.map((t) => String(t).toUpperCase()) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveWatchlist() {
+  try {
+    localStorage.setItem(WATCHLIST_KEY, JSON.stringify([...watchlist]));
+  } catch {
+    /* private mode / storage disabled — watchlist stays in-memory for the session */
+  }
+}
+
+function toggleWatch(ticker) {
+  if (!ticker) return;
+  if (watchlist.has(ticker)) watchlist.delete(ticker);
+  else watchlist.add(ticker);
+  saveWatchlist();
+  render();
+}
+
+function bindStars(root) {
+  root.querySelectorAll("[data-star]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      toggleWatch(btn.dataset.star);
+    });
+  });
+}
+
+function starButton(ticker) {
+  const on = watchlist.has(ticker);
+  return `<button type="button" class="star-btn${on ? " on" : ""}" data-star="${ticker}" aria-pressed="${on}" aria-label="${on ? "Remove" : "Add"} ${escapeHtml(ticker)} ${on ? "from" : "to"} watchlist" title="${on ? "Remove from" : "Add to"} watchlist">${on ? "★" : "☆"}</button>`;
+}
 
 const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
 const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
@@ -461,6 +505,11 @@ function applyAttentionFilter(items) {
   return items.filter((item) => attentionGroupFor(item) === attentionFilter);
 }
 
+function applyWatchlistFilter(items) {
+  if (!watchlistFilter) return items;
+  return items.filter((item) => watchlist.has(item.ticker));
+}
+
 function sortForMode(a, b) {
   if (rankMode === "mentions") return b.mentions - a.mentions;
   if (rankMode === "momentum") return b.momentum - a.momentum;
@@ -481,9 +530,12 @@ function render() {
 
   const items = filteredSignals();
   attentionHighThreshold = computeAttentionThreshold(items);
-  const ranked = applyAttentionFilter(applyCapFilter(items));
+  const ranked = applyWatchlistFilter(applyAttentionFilter(applyCapFilter(items)));
   const top50 = ranked.slice(0, 50);
-  if (!selectedTicker || !top50.some((item) => item.ticker === selectedTicker)) {
+  // Keep the current selection if it exists anywhere in the filtered set (so a
+  // deep-linked or starred ticker ranked beyond #50 still drives the detail
+  // panel); otherwise fall back to the top visible row.
+  if (!selectedTicker || !items.some((item) => item.ticker === selectedTicker)) {
     selectedTicker = top50[0]?.ticker || "";
   }
 
@@ -494,6 +546,7 @@ function render() {
   renderTable(top50);
   renderMovers(ranked);
   renderDetail(items, top50);
+  updateUrl();
 }
 
 function renderEmptyState() {
@@ -611,10 +664,15 @@ function updateMetrics(items) {
 function renderTable(items) {
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
-  const filterLabel = `${attnLabel}${capLabel}`;
-  byId("rankSubhead").textContent = items.length
-    ? `Showing ${items.length}${filterLabel} real-data tickers`
-    : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
+  const watchLabel = watchlistFilter ? " watchlist" : "";
+  const filterLabel = `${watchLabel}${attnLabel}${capLabel}`;
+  if (watchlistFilter && watchlist.size === 0) {
+    byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
+  } else {
+    byId("rankSubhead").textContent = items.length
+      ? `Showing ${items.length}${filterLabel} real-data ticker${items.length === 1 ? "" : "s"}`
+      : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
+  }
   const prevRanks = previousRankMap();
   byId("rankingBody").innerHTML = items
     .map((item, index) => {
@@ -634,6 +692,7 @@ function renderTable(items) {
           <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
           <td>
             <div class="ticker-cell">
+              ${starButton(item.ticker)}
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
               <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
               ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
@@ -660,6 +719,7 @@ function renderTable(items) {
       }
     });
   });
+  bindStars(byId("rankingBody"));
 }
 
 // "Today's Movers" — three mini-leaderboards that turn the raw signals into an
@@ -749,13 +809,17 @@ function renderDetail(items, top50) {
   if (!selected) return;
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
   byId("detailPanel").innerHTML = detailMarkup(selected, rank);
+  bindStars(byId("detailPanel"));
 }
 
 function detailMarkup(item, rank) {
   return `
     <div class="selected-stock">
       <span id="selectedRank">Signal rank #${rank}</span>
-      <h2 id="selectedTicker">${escapeHtml(item.ticker)}</h2>
+      <div class="selected-head">
+        <h2 id="selectedTicker">${escapeHtml(item.ticker)}</h2>
+        ${starButton(item.ticker)}
+      </div>
       <p id="selectedName">${escapeHtml(item.name || item.ticker)}</p>
       ${profileMetaMarkup(item)}
       ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
@@ -1100,6 +1164,7 @@ function bindEvents() {
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
   byId("attnAttention").addEventListener("click", () => setAttentionFilter(attentionFilter === "attention" ? "all" : "attention"));
   byId("attnQuiet").addEventListener("click", () => setAttentionFilter(attentionFilter === "quiet" ? "all" : "quiet"));
+  byId("watchFilter").addEventListener("click", () => setWatchlistFilter(!watchlistFilter));
   byId("refreshData").addEventListener("click", async () => {
     await loadSnapshot(true);
     render();
@@ -1136,6 +1201,72 @@ function setAttentionFilter(filter) {
   byId("attnQuiet").classList.toggle("active", filter === "quiet");
   byId("attnQuiet").setAttribute("aria-pressed", String(filter === "quiet"));
   render();
+}
+
+function setWatchlistFilter(on) {
+  watchlistFilter = on;
+  byId("watchFilter").classList.toggle("active", on);
+  byId("watchFilter").setAttribute("aria-pressed", String(on));
+  render();
+}
+
+// Mirror the current filter/sort state onto the control buttons. Used after
+// hydrating state from the URL so deep-linked views show the right active
+// toggles without firing a render per control.
+function syncControls() {
+  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+    const active = th.dataset.sort === rankMode;
+    th.classList.toggle("sort-active", active);
+    th.setAttribute("aria-sort", active ? "descending" : "none");
+  });
+  byId("capLarge").classList.toggle("active", capFilter === "large");
+  byId("capLarge").setAttribute("aria-pressed", String(capFilter === "large"));
+  byId("capSmall").classList.toggle("active", capFilter === "small");
+  byId("capSmall").setAttribute("aria-pressed", String(capFilter === "small"));
+  byId("attnAttention").classList.toggle("active", attentionFilter === "attention");
+  byId("attnAttention").setAttribute("aria-pressed", String(attentionFilter === "attention"));
+  byId("attnQuiet").classList.toggle("active", attentionFilter === "quiet");
+  byId("attnQuiet").setAttribute("aria-pressed", String(attentionFilter === "quiet"));
+  byId("watchFilter").classList.toggle("active", watchlistFilter);
+  byId("watchFilter").setAttribute("aria-pressed", String(watchlistFilter));
+}
+
+// Hydrate shareable state from the query string (ticker, sort, cap, attention,
+// watchlist). Unknown values are ignored so a malformed link degrades to the
+// default view rather than breaking.
+function applyUrlParams() {
+  let params;
+  try {
+    params = new URLSearchParams(location.search);
+  } catch {
+    return;
+  }
+  const ticker = params.get("ticker");
+  if (ticker) selectedTicker = ticker.toUpperCase();
+  const sort = params.get("sort");
+  if (["signal", "mentions", "momentum"].includes(sort)) rankMode = sort;
+  const cap = params.get("cap");
+  if (["large", "small"].includes(cap)) capFilter = cap;
+  const attn = params.get("attn");
+  if (["attention", "quiet"].includes(attn)) attentionFilter = attn;
+  if (params.get("watch") === "1") watchlistFilter = true;
+}
+
+// Reflect the current view back into the URL so it can be copied and shared.
+// replaceState keeps it out of history; wrapped because file:// can reject it.
+function updateUrl() {
+  try {
+    const params = new URLSearchParams();
+    if (selectedTicker) params.set("ticker", selectedTicker);
+    if (rankMode !== "signal") params.set("sort", rankMode);
+    if (capFilter !== "all") params.set("cap", capFilter);
+    if (attentionFilter !== "all") params.set("attn", attentionFilter);
+    if (watchlistFilter) params.set("watch", "1");
+    const qs = params.toString();
+    history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
+  } catch {
+    /* file:// or sandboxed — sharing via URL just won't reflect, no functional impact */
+  }
 }
 
 function toggleDetailPanel() {
@@ -1202,7 +1333,10 @@ async function init() {
   const latestDate = snapshots.at(-1)?.date || isoDate(new Date(snapshot?.generatedAt || Date.now()));
   rangeStart = latestDate;
   rangeEnd = latestDate;
+  watchlist = loadWatchlist();
+  applyUrlParams();
   bindEvents();
+  syncControls();
   if (loaded) render();
   else renderEmptyState();
 }
