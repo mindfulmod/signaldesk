@@ -54,18 +54,9 @@
 
     .table-scroll table {
       width: 100% !important;
-      min-width: 620px;
-      table-layout: fixed;
+      min-width: 0;
+      table-layout: auto;
     }
-
-    th:nth-child(1), td:nth-child(1) { width: 58px; }
-    th:nth-child(2), td:nth-child(2) { width: 35%; }
-    th:nth-child(3), td:nth-child(3) { width: 88px; }
-    th:nth-child(4), td:nth-child(4) { width: 150px; }
-    th:nth-child(5), td:nth-child(5) { width: 96px; }
-    th:nth-child(6), td:nth-child(6) { width: 110px; }
-    th:nth-child(7), td:nth-child(7) { width: 118px; }
-    th:nth-child(8), td:nth-child(8) { width: 128px; }
 
     .ticker-cell,
     .ticker-name,
@@ -112,6 +103,37 @@
       th {
         top: 60px;
       }
+
+      th:nth-child(1), td:nth-child(1) { width: 56px; }
+      th:nth-child(3), td:nth-child(3) { width: 80px; }
+      th:nth-child(4), td:nth-child(4) { width: 145px; }
+      th:nth-child(5), td:nth-child(5) { width: 84px; }
+      th:nth-child(6), td:nth-child(6) { width: 96px; }
+      th:nth-child(7), td:nth-child(7) { width: 108px; }
+      th:nth-child(8), td:nth-child(8) { width: 112px; }
+    }
+
+    @media (min-width: 1181px) and (max-width: 1500px) {
+      th.col-secondary,
+      td.col-secondary {
+        display: none !important;
+      }
+
+      .ticker-spark {
+        display: none;
+      }
+
+      .why-chip {
+        padding: 3px 7px;
+        font-size: 0.72rem;
+        line-height: 1.2;
+      }
+
+      th:nth-child(1), td:nth-child(1) { width: 54px; }
+      th:nth-child(3), td:nth-child(3) { width: 76px; }
+      th:nth-child(4), td:nth-child(4) { width: 140px; }
+      th:nth-child(6), td:nth-child(6) { width: 92px; }
+      th:nth-child(7), td:nth-child(7) { width: 104px; }
     }
 
     @media (max-width: 1180px) {
@@ -161,6 +183,7 @@
 
       .table-scroll table {
         border-collapse: separate;
+        table-layout: auto;
       }
 
       .table-scroll thead {
