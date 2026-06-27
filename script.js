@@ -541,7 +541,6 @@ function render() {
 
   updateStatus();
   updateRangeNote();
-  updateMetrics(items);
   renderBuyCandidates(items);
   renderTable(top50);
   renderMovers(ranked);
@@ -555,13 +554,6 @@ function renderEmptyState() {
   } else {
     setDataStatus("No public snapshot available");
   }
-  byId("totalMentions").textContent = "0";
-  byId("mentionDelta").textContent =
-    snapshot?.dataMode === "real-public-no-key" ? "Real snapshot loaded (0 signals)" : "No real data loaded";
-  byId("bestSignal").textContent = "-";
-  byId("bestSignalMeta").textContent = "No signal data";
-  byId("trackedUniverse").textContent = "0";
-  byId("trackedUniverseMeta").textContent = "validated stocks and ETFs tracked";
   byId("rankingBody").innerHTML = "";
   byId("buyCandidates").innerHTML = "";
   byId("moversBoard").innerHTML = `<p class="muted-note">No signals in this snapshot yet.</p>`;
@@ -647,18 +639,6 @@ function buyReasons(item) {
 
 function updateStatus() {
   setDataStatus(`Updated ${formatDateTime(snapshot.generatedAt)}`);
-}
-
-function updateMetrics(items) {
-  const total = items.reduce((sum, item) => sum + item.mentions, 0);
-  const bestSignal = [...items].sort((a, b) => b.signalScore - a.signalScore)[0];
-
-  byId("totalMentions").textContent = shortFmt.format(total);
-  byId("mentionDelta").textContent = `across ${items.length} ranked ticker${items.length === 1 ? "" : "s"}`;
-  byId("bestSignal").textContent = bestSignal?.ticker || "-";
-  byId("bestSignalMeta").textContent = bestSignal ? `${bestSignal.signalScore.toFixed(0)}/100 composite early signal` : "Signal unavailable";
-  byId("trackedUniverse").textContent = snapshot.signals.length;
-  byId("trackedUniverseMeta").textContent = "validated stocks and ETFs tracked";
 }
 
 function renderTable(items) {

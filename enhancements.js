@@ -330,39 +330,18 @@
 
   function installPulsePanel() {
     if (document.querySelector(".market-pulse")) return;
-    const metrics = document.querySelector(".metrics-grid");
-    if (!metrics) return;
-    metrics.insertAdjacentHTML(
+    const anchor = document.querySelector(".page-hero") || document.querySelector(".buy-panel");
+    if (!anchor) return;
+    anchor.insertAdjacentHTML(
       "afterend",
       `<section class="market-pulse" aria-labelledby="pulse-heading">
         <div class="section-head compact">
           <div>
-            <h2 id="pulse-heading">Market Pulse</h2>
-            <p>Higher-confidence context for longer-term watchlist review</p>
+            <h2 id="pulse-heading">Driving the tape</h2>
+            <p>The biggest price &amp; volume moves right now — with the news or chatter behind each</p>
           </div>
         </div>
-        <div class="pulse-grid">
-          <article id="pulseToneCard">
-            <span>Market tone</span>
-            <strong id="pulseTone">Loading</strong>
-            <p id="pulseToneMeta">Checking broad price confirmation</p>
-          </article>
-          <article id="pulseQualityCard">
-            <span>Quality setups</span>
-            <strong id="pulseQuality">0</strong>
-            <p id="pulseQualityMeta">High-confidence candidates</p>
-          </article>
-          <article id="pulseMoveCard">
-            <span>Interesting movement</span>
-            <strong id="pulseMove">-</strong>
-            <p id="pulseMoveMeta">Waiting for price and volume confirmation</p>
-          </article>
-          <article id="pulseBreadthCard">
-            <span>Breadth</span>
-            <strong id="pulseBreadth">-</strong>
-            <p id="pulseBreadthMeta">Positive vs negative price confirmation</p>
-          </article>
-        </div>
+        <div class="pulse-headlines" id="pulseHeadlines"></div>
       </section>`
     );
   }
@@ -391,84 +370,107 @@
   }
 
   function refreshMarketPulse() {
+    const container = document.getElementById("pulseHeadlines");
+    if (!container) return;
     const items = typeof filteredSignals === "function" ? filteredSignals() : [];
-    if (!items.length || !document.getElementById("pulseTone")) return;
-    const tone = marketToneInfo(items);
-    const quality = qualityInfo(items);
-    const move = movementInfo(items);
-    const breadth = breadthInfo(items);
-    writePulse("pulseTone", "pulseToneMeta", "pulseToneCard", tone);
-    writePulse("pulseQuality", "pulseQualityMeta", "pulseQualityCard", quality);
-    writePulse("pulseMove", "pulseMoveMeta", "pulseMoveCard", move);
-    writePulse("pulseBreadth", "pulseBreadthMeta", "pulseBreadthCard", breadth);
-  }
-
-  function writePulse(valueId, metaId, cardId, info) {
-    document.getElementById(valueId).textContent = info.label;
-    document.getElementById(metaId).textContent = info.meta;
-    document.getElementById(cardId).dataset.status = info.status;
-  }
-
-  function marketToneInfo(items) {
-    const broadTickers = new Set(["SPY", "QQQ", "IWM", "DIA"]);
-    const broad = items.filter((item) => broadTickers.has(item.ticker) && Number.isFinite(Number(item.priceMove)));
-    const sample = broad.length ? broad : items.filter((item) => Number.isFinite(Number(item.priceMove))).slice(0, 20);
-    if (!sample.length) return { label: "Unknown", meta: "No quote-confirmed tickers loaded", status: "warn" };
-    const avgMove = sample.reduce((sum, item) => sum + Number(item.priceMove || 0), 0) / sample.length;
-    const scope = broad.length ? broad.map((item) => item.ticker).join(", ") : "top signal universe";
-    if (avgMove >= 0.7) return { label: "Risk-on", meta: `${scope}: ${signed(avgMove)}% average price move`, status: "good" };
-    if (avgMove <= -0.7) return { label: "Defensive", meta: `${scope}: ${signed(avgMove)}% average price move`, status: "bad" };
-    return { label: "Mixed", meta: `${scope}: ${signed(avgMove)}% average price move`, status: "warn" };
-  }
-
-  function qualityInfo(items) {
-    const qualified = items
-      .filter((item) => item.signalScore >= 58 && item.mentions >= 2 && sourceCount(item) >= 2 && Number.isFinite(Number(item.lastPrice)))
-      .sort((a, b) => b.signalScore - a.signalScore);
-    if (!qualified.length) return { label: "0", meta: "No high-confidence setups in this window", status: "warn" };
-    const top = qualified[0];
-    return {
-      label: String(qualified.length),
-      meta: `Top: ${top.ticker}, ${top.signalScore.toFixed(0)}/100 signal across ${sourceCount(top)} sources`,
-      status: qualified.length >= 3 ? "good" : "warn",
-    };
-  }
-
-  function movementInfo(items) {
-    const candidate = [...items]
-      .filter((item) => Number.isFinite(Number(item.lastPrice)))
-      .map((item) => ({
-        ...item,
-        movementScore:
-          Math.abs(Number(item.priceMove || 0)) * 1.7 +
-          Math.max(0, safeRelVol(item.relativeVolume) - 1) * 7 +
-          Math.max(0, Number(item.momentum || 0)) / 12 +
-          sourceCount(item) * 0.5,
-      }))
-      .sort((a, b) => b.movementScore - a.movementScore)[0];
-    if (!candidate || candidate.movementScore < 3) {
-      return { label: "-", meta: "No strong price/volume divergence yet", status: "warn" };
+    const headlines = topHeadlines(items, 6);
+    if (!headlines.length) {
+      container.innerHTML = emptyStateMarkup();
+      return;
     }
-    return {
-      label: candidate.ticker,
-      meta: `${signed(candidate.priceMove)}% price, ${safeRelVol(candidate.relativeVolume).toFixed(1)}x volume, ${signed(candidate.momentum)}% mention momentum`,
-      status: candidate.priceMove >= 0 ? "good" : "bad",
-    };
+    container.innerHTML = headlines
+      .map((entry, index) => renderHeadline(entry, index === 0))
+      .join("");
   }
 
-  function breadthInfo(items) {
-    const priced = items.filter((item) => Number.isFinite(Number(item.lastPrice)));
-    if (!priced.length) return { label: "Unknown", meta: "No quote-confirmed tickers loaded", status: "warn" };
-    const positive = priced.filter((item) => Number(item.priceMove) > 0.25).length;
-    const negative = priced.filter((item) => Number(item.priceMove) < -0.25).length;
-    const neutral = priced.length - positive - negative;
-    const ratio = positive / Math.max(1, positive + negative);
-    const status = ratio >= 0.58 ? "good" : ratio <= 0.42 ? "bad" : "warn";
-    return {
-      label: `${positive}/${priced.length}`,
-      meta: `${positive} positive, ${negative} negative, ${neutral} flat price confirmations`,
-      status,
-    };
+  // News-first: only surface tickers whose move is backed by a genuine news
+  // article or filing, and rank by the size of that move (the market impact).
+  function topHeadlines(items, limit) {
+    return items
+      .filter((item) => Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
+      .map((item) => ({ item, stories: newsStories(item) }))
+      .filter((entry) => entry.stories.length > 0)
+      .map((entry) => ({
+        item: entry.item,
+        story: entry.stories[0],
+        coverage: entry.stories.length,
+        impact:
+          Math.abs(Number(entry.item.priceMove || 0)) +
+          entry.stories.length * 5 +
+          Math.max(0, safeRelVol(entry.item.relativeVolume) - 1) * 4,
+      }))
+      .sort((a, b) => b.impact - a.impact)
+      .slice(0, limit);
+  }
+
+  // All genuine news articles / filings for a ticker, newest first.
+  function newsStories(item) {
+    const latest = Array.isArray(item.latest) ? item.latest : [];
+    return latest
+      .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title)
+      .map((entry) => ({
+        source: entry.source,
+        title: cleanTitle(entry.title),
+        url: entry.url,
+        published: entry.published,
+      }))
+      .filter((entry) => entry.title.length >= 12)
+      .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
+  }
+
+  function renderHeadline(entry, featured) {
+    const { item, story, coverage } = entry;
+    const pm = Number(item.priceMove || 0);
+    const rv = safeRelVol(item.relativeVolume);
+    const dir = pm >= 0 ? "up" : "down";
+    const price = Number.isFinite(Number(item.lastPrice)) ? `$${Number(item.lastPrice).toFixed(2)}` : "";
+    const moveBits = [`${item.ticker} ${signed(pm)}%`];
+    if (rv >= 1.5) moveBits.push(`${rv.toFixed(1)}× vol`);
+    if (price) moveBits.push(price);
+    const when = relativeTime(story.published);
+    const more = coverage > 1 ? ` · +${coverage - 1} more article${coverage - 1 === 1 ? "" : "s"}` : "";
+    const href = story.url || `https://finance.yahoo.com/quote/${encodeURIComponent(item.ticker)}`;
+    return `<a class="pulse-headline${featured ? " featured" : ""}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" data-dir="${dir}">
+      <span class="ph-badge">${signed(pm)}%</span>
+      <span class="ph-body">
+        <span class="ph-headline">${escapeHtml(story.title)}</span>
+        <span class="ph-meta"><span class="ph-src ph-src-news">${escapeHtml(story.source)}</span>${escapeHtml(moveBits.join(" · "))}${when ? ` · ${when}` : ""}${more}</span>
+      </span>
+    </a>`;
+  }
+
+  // Honest empty state — explains *why* there are no headlines, including when
+  // the latest refresh was throttled on news sources.
+  function emptyStateMarkup() {
+    const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
+    const failures = Array.isArray(data?.failures) ? data.failures : [];
+    const newsThrottled = failures.some((f) => NEWS_SOURCES.some((src) => String(f).includes(src)));
+    const reason = newsThrottled
+      ? "The latest refresh was rate-limited on several news feeds, so no market-moving articles came through. Headlines will populate on the next clean refresh."
+      : "No market-moving news matched a notable price move in this window. Headlines appear when a covered name moves on a real catalyst.";
+    return `<p class="pulse-empty">${reason}</p>`;
+  }
+
+  function relativeTime(value) {
+    if (!value) return "";
+    const then = new Date(value).getTime();
+    if (!Number.isFinite(then)) return "";
+    const mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins}m ago`;
+    const hrs = Math.round(mins / 60);
+    if (hrs < 24) return `${hrs}h ago`;
+    const days = Math.round(hrs / 24);
+    return `${days}d ago`;
+  }
+
+  function cleanTitle(text) {
+    return String(text || "")
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   function refreshFooterCadence() {
@@ -533,53 +535,99 @@
         border: 1px solid var(--line);
         border-radius: var(--radius);
       }
-      .pulse-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
+      .pulse-headlines {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
-      .pulse-grid article {
-        min-width: 0;
-        padding: 15px;
+      .pulse-headline {
+        display: flex;
+        align-items: flex-start;
+        gap: 13px;
+        padding: 13px 15px;
         border: 1px solid var(--line);
         border-left: 3px solid var(--line-2);
         border-radius: var(--radius);
         background: var(--panel-2);
+        text-decoration: none;
+        transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
       }
-      .pulse-grid article[data-status="good"] { border-left-color: var(--up); }
-      .pulse-grid article[data-status="warn"] { border-left-color: var(--amber); }
-      .pulse-grid article[data-status="bad"] { border-left-color: var(--down); }
-      .pulse-grid span {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--faint);
-        font-size: 0.72rem;
+      .pulse-headline:hover {
+        background: var(--panel-3);
+        border-color: var(--line-2);
+        transform: translateX(2px);
+      }
+      .pulse-headline[data-dir="up"] { border-left-color: var(--up); }
+      .pulse-headline[data-dir="down"] { border-left-color: var(--down); }
+      .pulse-headline.featured {
+        background: linear-gradient(180deg, var(--panel-2), var(--panel-3));
+        padding: 16px 17px;
+      }
+      .ph-badge {
+        flex: 0 0 auto;
+        min-width: 62px;
+        padding: 6px 8px;
+        border-radius: 8px;
+        text-align: center;
+        font-family: var(--mono);
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-      }
-      .pulse-grid strong {
-        display: block;
+        font-size: 0.86rem;
+        line-height: 1.1;
+        background: var(--panel-3);
         color: var(--ink);
-        font-size: clamp(1.18rem, 1.8vw, 1.55rem);
-        line-height: 1.08;
+      }
+      .pulse-headline[data-dir="up"] .ph-badge { color: var(--up); }
+      .pulse-headline[data-dir="down"] .ph-badge { color: var(--down); }
+      .pulse-headline.featured .ph-badge { font-size: 1rem; min-width: 72px; padding: 9px 10px; }
+      .ph-body { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+      .ph-headline {
+        color: var(--ink);
+        font-weight: 700;
+        font-size: 0.98rem;
+        line-height: 1.32;
+        overflow-wrap: anywhere;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .pulse-headline.featured .ph-headline { font-size: 1.12rem; -webkit-line-clamp: 3; }
+      .ph-meta {
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.4;
         overflow-wrap: anywhere;
       }
-      .pulse-grid p {
-        margin: 9px 0 0;
-        color: var(--muted);
-        font-size: 0.83rem;
-        line-height: 1.4;
+      .ph-src {
+        display: inline-block;
+        margin-right: 8px;
+        padding: 1px 6px;
+        border-radius: 5px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        vertical-align: middle;
+        background: var(--accent-dim);
+        color: var(--accent);
       }
-      @media (max-width: 1180px) {
-        .pulse-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pulse-empty {
+        margin: 0;
+        padding: 18px 16px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        border: 1px dashed var(--line-2);
+        border-radius: var(--radius);
+        background: var(--panel-2);
       }
       @media (max-width: 680px) {
         .main-content {
           padding-inline: 8px;
         }
         .page-hero,
-        .metrics-grid,
         .market-pulse,
         .buy-panel,
         .movers-panel,
@@ -588,7 +636,9 @@
           max-width: 100%;
         }
         .market-pulse { padding: 14px; }
-        .pulse-grid { grid-template-columns: 1fr; }
+        .pulse-headline { padding: 12px; gap: 10px; }
+        .ph-badge { min-width: 56px; font-size: 0.8rem; }
+        .ph-headline { font-size: 0.94rem; }
         .table-panel {
           padding-inline: 10px;
         }
