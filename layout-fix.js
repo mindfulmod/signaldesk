@@ -155,6 +155,10 @@
     }
 
     @media (min-width: 1181px) and (max-width: 1500px) {
+      .table-scroll table {
+        table-layout: fixed;
+      }
+
       th.col-secondary,
       td.col-secondary {
         display: none !important;
@@ -164,11 +168,24 @@
         display: none;
       }
 
+      #rankingBody .why-chip:nth-child(n+2) {
+        display: none;
+      }
+
+      .quote-meta {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-width: none;
+        overflow: hidden;
+      }
+
       th:nth-child(1), td:nth-child(1) { width: 54px; }
-      th:nth-child(3), td:nth-child(3) { width: 76px; }
-      th:nth-child(4), td:nth-child(4) { width: 140px; }
-      th:nth-child(6), td:nth-child(6) { width: 92px; }
-      th:nth-child(7), td:nth-child(7) { width: 104px; }
+      th:nth-child(2), td:nth-child(2) { width: auto; }
+      th:nth-child(3), td:nth-child(3) { width: 74px; }
+      th:nth-child(4), td:nth-child(4) { width: 126px; }
+      th:nth-child(6), td:nth-child(6) { width: 88px; }
+      th:nth-child(7), td:nth-child(7) { width: 96px; }
     }
 
     @media (max-width: 1180px) {
@@ -309,6 +326,7 @@
         line-height: 1.25;
       }
 
+      #rankingBody .why-chip:nth-child(n+2),
       #rankingBody .why-chip:nth-child(n+3) {
         display: inline-flex;
       }
