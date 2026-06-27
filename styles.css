@@ -57,6 +57,17 @@ button {
   cursor: pointer;
 }
 
+/* Keyboard / assistive-tech focus indicator on interactive controls.
+   Uses :focus-visible so mouse clicks don't trigger the ring. */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Numeric emphasis — tabular figures everywhere numbers matter */
 .metrics-grid strong,
 .stat-value,
@@ -1643,6 +1654,11 @@ tbody tr.selected td:first-child {
   .panel-toggle {
     min-height: 44px;
     padding-block: 8px;
+  }
+
+  /* Left-align filter button rows on mobile instead of right-rail */
+  .toggle-stack {
+    align-items: flex-start;
   }
 }
 
