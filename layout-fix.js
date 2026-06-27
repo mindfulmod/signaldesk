@@ -77,6 +77,47 @@
       overflow: hidden;
     }
 
+    @media (min-width: 761px) {
+      #rankingBody td {
+        vertical-align: top;
+      }
+
+      #rankingBody .ticker-cell {
+        align-items: flex-start;
+      }
+
+      #rankingBody .ticker-name small {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      #rankingBody .why-chips {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        margin-top: 7px;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      #rankingBody .why-chip {
+        flex: 0 1 auto;
+        max-width: 170px;
+        overflow: hidden;
+        padding: 3px 7px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.72rem;
+        line-height: 1.2;
+      }
+
+      #rankingBody .why-chip:nth-child(n+3) {
+        display: none;
+      }
+    }
+
     @media (min-width: 1181px) {
       .dashboard-grid:not(.details-hidden) {
         grid-template-columns: minmax(0, 1fr) 340px !important;
@@ -121,12 +162,6 @@
 
       .ticker-spark {
         display: none;
-      }
-
-      .why-chip {
-        padding: 3px 7px;
-        font-size: 0.72rem;
-        line-height: 1.2;
       }
 
       th:nth-child(1), td:nth-child(1) { width: 54px; }
@@ -272,6 +307,10 @@
       .why-chip {
         white-space: normal;
         line-height: 1.25;
+      }
+
+      #rankingBody .why-chip:nth-child(n+3) {
+        display: inline-flex;
       }
 
       .quote-meta {
