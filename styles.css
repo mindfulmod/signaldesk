@@ -1617,8 +1617,17 @@ tbody tr.selected td:first-child {
   .appbar-inner {
     flex-wrap: wrap;
     height: auto;
-    gap: 10px;
+    gap: 8px;
     padding-block: 10px;
+    justify-content: space-between;
+  }
+
+  .appbar-actions {
+    margin-left: 0;
+  }
+
+  .brand-tag {
+    display: none;
   }
 
   .appbar-search {
