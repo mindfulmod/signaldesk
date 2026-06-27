@@ -487,6 +487,30 @@
     style.id = "signaldesk-enhancement-styles";
     style.textContent = `
       .window-mode-field { margin-top: 12px; }
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      .app-shell,
+      .app-body,
+      .main-content,
+      .dashboard-grid,
+      .table-panel,
+      .table-scroll {
+        min-width: 0;
+        max-width: 100%;
+      }
+      .dashboard-grid {
+        width: 100%;
+      }
+      .table-panel {
+        overflow: hidden;
+      }
+      .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
       .market-pulse {
         width: min(1320px, 100%);
         margin: 0 auto 16px;
@@ -537,8 +561,27 @@
         .pulse-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
       @media (max-width: 680px) {
+        .main-content {
+          padding-inline: 8px;
+        }
+        .page-hero,
+        .metrics-grid,
+        .market-pulse,
+        .buy-panel,
+        .movers-panel,
+        .dashboard-grid {
+          width: 100%;
+          max-width: 100%;
+        }
         .market-pulse { padding: 14px; }
         .pulse-grid { grid-template-columns: 1fr; }
+        .table-panel {
+          padding-inline: 10px;
+        }
+        .table-scroll table {
+          width: max-content;
+          min-width: 620px;
+        }
       }
     `;
     document.head.appendChild(style);
