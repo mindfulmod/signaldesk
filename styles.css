@@ -866,6 +866,7 @@ h1 {
 .cap-toggle {
   display: inline-flex;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .cap-toggle button {
@@ -1626,6 +1627,22 @@ tbody tr.selected td:first-child {
 
   .table-scroll {
     overflow-x: auto;
+  }
+
+  /* Minimum 44×44 touch targets for interactive controls */
+  .star-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .cap-toggle button,
+  .panel-toggle {
+    min-height: 44px;
+    padding-block: 8px;
   }
 }
 

@@ -1059,25 +1059,34 @@ function trendHighlights(item) {
 }
 
 function trendInterpretation(item) {
-  const { social, news, volHot, priceHot, momentumHot } = attentionStats(item);
+  const { social, news, volHot, priceHot } = attentionStats(item);
+  const activeSources = SOURCES.filter((s) => (item.sources[s] || 0) > 0).length;
 
-  // Quiet mover: trading volume jumping without a big news/social crowd yet.
+  // Quiet mover: volume spike with crowd still absent — lead with the anomaly.
   if (volHot && social < SOCIAL_BUZZ && news < NEWS_BUZZ) {
-    return `Under-the-radar: trading volume is running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` and price is up ${item.priceMove.toFixed(1)}%` : ""}, but the crowd hasn't piled in yet (fewer than ${SOCIAL_BUZZ} social mentions and ${NEWS_BUZZ} news hits) — an early mover worth a look.`;
+    return `Under-the-radar: volume running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` with price up ${item.priceMove.toFixed(1)}%` : ""} — crowd attention hasn't arrived yet, making this an early-mover signal.`;
   }
-  // Social-led attention.
-  if (social >= SOCIAL_BUZZ && social >= news) {
-    return `Retail-driven: ${fmt.format(social)} social mentions are leading the attention${momentumHot ? `, up ${item.momentum.toFixed(0)}% vs the prior snapshot` : ""}${volHot ? `, with volume ${item.relativeVolume.toFixed(1)}× normal` : ""}.`;
+
+  // Build a differentiated description from the most distinctive signals.
+  // Ranked in descending order of user interest so each card feels unique.
+  const parts = [];
+  if (priceHot) parts.push(`${item.priceMove >= 10 ? "strong " : ""}${item.priceMove.toFixed(1)}% price move`);
+  if (volHot) parts.push(`${item.relativeVolume.toFixed(1)}× normal volume`);
+  if (social >= SOCIAL_BUZZ) parts.push(`${fmt.format(social)} social mention${social === 1 ? "" : "s"}`);
+  if (news >= NEWS_BUZZ) parts.push(`${fmt.format(news)} news hit${news === 1 ? "" : "s"}`);
+  if (activeSources >= 4) parts.push(`${activeSources} data platforms`);
+  if (item.sector) parts.push(item.sector);
+
+  const lead =
+    social >= news && social >= SOCIAL_BUZZ ? "Retail" :
+    news >= NEWS_BUZZ ? "News" :
+    priceHot || volHot ? "Price/volume" : "Multi-source";
+
+  if (parts.length === 0) {
+    return `Composite signal: ${item.signalScore.toFixed(0)}/100 across ${activeSources} data source${activeSources === 1 ? "" : "s"} — no single dominant catalyst yet.`;
   }
-  // News-led attention.
-  if (news >= NEWS_BUZZ) {
-    return `News-driven: ${fmt.format(news)} headlines are fueling attention${priceHot ? `, and price is confirming with a ${item.priceMove.toFixed(1)}% move` : ""}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""}.`;
-  }
-  // Price/momentum-led.
-  if (priceHot || momentumHot) {
-    return `Momentum building: ${priceHot ? `price up ${item.priceMove.toFixed(1)}%` : `mentions up ${item.momentum.toFixed(0)}%`}${volHot ? ` on ${item.relativeVolume.toFixed(1)}× volume` : ""} — watch for a follow-through catalyst.`;
-  }
-  return `Steady signal: a ${item.signalScore.toFixed(0)}/100 composite across ${SOURCES.filter((source) => (item.sources[source] || 0) > 0).length} public sources, without a single dominant catalyst yet.`;
+
+  return `${lead}: ${parts.join(" · ")}.`;
 }
 
 function sentimentLabel(value) {
@@ -1337,6 +1346,20 @@ async function init() {
   applyUrlParams();
   bindEvents();
   syncControls();
+  // On narrow viewports default the sidebar to hidden so main content isn't
+  // pushed below a long filter panel. The Filters button reveals it on demand.
+  if (window.innerWidth <= 980 && !location.search.includes("watch=1")) {
+    const shell = document.querySelector(".app-shell");
+    if (shell && !shell.classList.contains("sidebar-hidden")) {
+      shell.classList.add("sidebar-hidden");
+      const toggleBtn = byId("toggleSidebar");
+      if (toggleBtn) {
+        toggleBtn.setAttribute("aria-pressed", "false");
+        toggleBtn.setAttribute("title", "Show filters");
+        toggleBtn.setAttribute("aria-label", "Show filters");
+      }
+    }
+  }
   if (loaded) render();
   else renderEmptyState();
 }
