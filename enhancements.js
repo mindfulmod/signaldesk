@@ -487,6 +487,11 @@
     style.id = "signaldesk-enhancement-styles";
     style.textContent = `
       .window-mode-field { margin-top: 12px; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
       html,
       body {
         max-width: 100%;
@@ -501,13 +506,22 @@
         min-width: 0;
         max-width: 100%;
       }
+      .dashboard-grid > * {
+        min-width: 0;
+        max-width: 100%;
+      }
       .dashboard-grid {
         width: 100%;
+        grid-template-columns: minmax(0, 1fr) !important;
       }
       .table-panel {
+        width: 100%;
+        box-sizing: border-box;
         overflow: hidden;
       }
       .table-scroll {
+        width: 100%;
+        box-sizing: border-box;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
