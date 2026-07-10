@@ -110,7 +110,9 @@
           .filter((item) => item.mentions > 0)
           .filter((item) => (!state.query ? true : `${item.ticker} ${item.name}`.toUpperCase().includes(state.query)));
 
-        return scoreSignals(base, selectedSources).sort(sortForMode);
+        return scoreSignals(base, selectedSources)
+          .map((item) => ({ ...item, discovery: typeof discoveryProfile === "function" ? discoveryProfile(item) : null }))
+          .sort(sortForMode);
       };
     }
 
@@ -145,23 +147,28 @@
     if (typeof exportCsv === "function") {
       exportCsv = function enhancedExportCsv() {
         const data = filteredSignals().slice(0, 50);
-        const header = ["rank", "ticker", "name", "market_price", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...LIVE_SOURCES];
+        const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...LIVE_SOURCES];
         const lines = [header.join(",")].concat(
-          data.map((item, index) =>
-            [
+          data.map((item, index) => {
+            const profile = typeof discoveryProfile === "function" ? (item.discovery || discoveryProfile(item)) : null;
+            return [
               index + 1,
               item.ticker,
               `"${String(item.name || item.ticker).replaceAll('"', '""')}"`,
               item.lastPrice ?? "",
+              profile?.score ?? "",
               item.signalScore.toFixed(1),
+              `"${profile?.stage || ""}"`,
+              `"${profile?.evidence || ""}"`,
+              `"${(profile?.risks || []).join(" | ")}"`,
               item.mentions,
               item.momentum.toFixed(2),
               item.sentiment.toFixed(3),
               item.priceMove.toFixed(2),
               item.relativeVolume.toFixed(2),
               ...LIVE_SOURCES.map((source) => item.sources[source] || 0),
-            ].join(",")
-          )
+            ].join(",");
+          })
         );
         const blob = new Blob([lines.join("\n")], { type: "text/csv" });
         const link = document.createElement("a");
@@ -330,7 +337,7 @@
 
   function installPulsePanel() {
     if (document.querySelector(".market-pulse")) return;
-    const anchor = document.querySelector(".page-hero") || document.querySelector(".buy-panel");
+    const anchor = document.getElementById("freshnessNotice") || document.querySelector(".page-hero") || document.querySelector(".buy-panel");
     if (!anchor) return;
     anchor.insertAdjacentHTML(
       "afterend",
@@ -338,7 +345,7 @@
         <div class="section-head compact">
           <div>
             <h2 id="pulse-heading">Driving the tape</h2>
-            <p>The biggest price &amp; volume moves right now — with the news or chatter behind each</p>
+            <p>The news behind today's biggest market moves — headlines that pushed a stock and rattled the tape</p>
           </div>
         </div>
         <div class="pulse-headlines" id="pulseHeadlines"></div>
@@ -357,6 +364,9 @@
     if (!note || typeof historySnapshots !== "function") return;
     const snapshots = historySnapshots();
     const latest = currentSnapshotEntry?.();
+    const latestTime = new Date(latest?.generatedAt || 0).getTime();
+    const stale = Number.isFinite(latestTime) && latestTime > 0 && Date.now() - latestTime > 36 * 60 * 60 * 1000;
+    note.classList.toggle("range-note-warn", stale);
     if (dataWindowMode === "history") {
       note.textContent =
         snapshots.length > 1
@@ -365,15 +375,14 @@
       return;
     }
     note.textContent = latest
-      ? `Latest refresh window from ${formatShort(latest.generatedAt)}. Switch to Full saved history for accumulated trends.`
+      ? `${stale ? "Stale snapshot" : "Latest refresh"} from ${formatShort(latest.generatedAt)}. ${stale ? "Treat signals as historical until the next successful refresh." : "Switch to Full saved history for accumulated trends."}`
       : "Latest refresh window has no saved data yet.";
   }
 
   function refreshMarketPulse() {
     const container = document.getElementById("pulseHeadlines");
     if (!container) return;
-    const items = typeof filteredSignals === "function" ? filteredSignals() : [];
-    const headlines = topHeadlines(items, 6);
+    const headlines = marketNewsFeed(8);
     if (!headlines.length) {
       container.innerHTML = emptyStateMarkup();
       return;
@@ -383,58 +392,89 @@
       .join("");
   }
 
-  // News-first: only surface tickers whose move is backed by a genuine news
-  // article or filing, and rank by the size of that move (the market impact).
-  function topHeadlines(items, limit) {
-    return items
-      .filter((item) => Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
-      .map((item) => ({ item, stories: newsStories(item) }))
-      .filter((entry) => entry.stories.length > 0)
+  // Standalone market-moving-news feed, published by the data pipeline and
+  // independent of the ranking table: each entry is a headline that explains a real
+  // price move (the pipeline already filtered to news + a notable move and ranked by
+  // impact). The frontend just reads, cleans, and renders it.
+  function marketNewsFeed(limit) {
+    const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
+    const feed = Array.isArray(data?.marketNews) ? data.marketNews : [];
+    const published = feed
+      .filter((entry) => entry && entry.title && Number.isFinite(Number(entry.priceMove)))
+      .slice(0, limit)
       .map((entry) => ({
-        item: entry.item,
-        story: entry.stories[0],
-        coverage: entry.stories.length,
-        impact:
-          Math.abs(Number(entry.item.priceMove || 0)) +
-          entry.stories.length * 5 +
-          Math.max(0, safeRelVol(entry.item.relativeVolume) - 1) * 4,
-      }))
-      .sort((a, b) => b.impact - a.impact)
-      .slice(0, limit);
-  }
-
-  // All genuine news articles / filings for a ticker, newest first.
-  function newsStories(item) {
-    const latest = Array.isArray(item.latest) ? item.latest : [];
-    return latest
-      .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title)
-      .map((entry) => ({
+        ticker: entry.ticker,
+        name: entry.name,
+        priceMove: Number(entry.priceMove),
+        lastPrice: Number(entry.lastPrice),
+        relativeVolume: safeRelVol(entry.relativeVolume),
         source: entry.source,
-        title: cleanTitle(entry.title),
+        title: cleanTitle(cleanNewsTitle(entry.source, entry.title)),
         url: entry.url,
         published: entry.published,
-      }))
-      .filter((entry) => entry.title.length >= 12)
-      .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
+        coverage: Number(entry.coverage) || 1,
+      }));
+    if (published.length) return published;
+
+    // Older snapshots predate the standalone marketNews field. Derive the same
+    // evidence-first view client-side so a deploy remains useful until the next
+    // scheduled updater run publishes the new field.
+    const items = typeof filteredSignals === "function" ? filteredSignals() : [];
+    return items
+      .filter((item) => Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
+      .map((item) => {
+        const stories = (item.latest || [])
+          .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title)
+          .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
+        return { item, stories };
+      })
+      .filter((entry) => entry.stories.length)
+      .sort((a, b) =>
+        Math.abs(Number(b.item.priceMove || 0)) + b.stories.length * 5 + Math.max(0, safeRelVol(b.item.relativeVolume) - 1) * 4 -
+        (Math.abs(Number(a.item.priceMove || 0)) + a.stories.length * 5 + Math.max(0, safeRelVol(a.item.relativeVolume) - 1) * 4)
+      )
+      .slice(0, limit)
+      .map(({ item, stories }) => ({
+        ticker: item.ticker,
+        name: item.name,
+        priceMove: Number(item.priceMove),
+        lastPrice: Number(item.lastPrice),
+        relativeVolume: safeRelVol(item.relativeVolume),
+        source: stories[0].source,
+        title: cleanTitle(cleanNewsTitle(stories[0].source, stories[0].title)),
+        url: stories[0].url,
+        published: stories[0].published,
+        coverage: stories.length,
+      }));
+  }
+
+  // GDELT headlines arrive with an appended "<domain> <country>" used upstream for
+  // ticker matching; strip it so the displayed headline reads cleanly.
+  function cleanNewsTitle(source, title) {
+    let out = String(title || "").replace(/\s+/g, " ").trim();
+    if (source === "GDELT News") {
+      out = out.replace(/\s+[a-z0-9.-]+\.[a-z]{2,}(\s+[a-z]{2,})?\s*$/i, "");
+      out = out.replace(/\s*\.\s*$/, "").trim();
+    }
+    return out;
   }
 
   function renderHeadline(entry, featured) {
-    const { item, story, coverage } = entry;
-    const pm = Number(item.priceMove || 0);
-    const rv = safeRelVol(item.relativeVolume);
+    const pm = Number(entry.priceMove || 0);
+    const rv = safeRelVol(entry.relativeVolume);
     const dir = pm >= 0 ? "up" : "down";
-    const price = Number.isFinite(Number(item.lastPrice)) ? `$${Number(item.lastPrice).toFixed(2)}` : "";
-    const moveBits = [`${item.ticker} ${signed(pm)}%`];
+    const price = Number.isFinite(Number(entry.lastPrice)) ? `$${Number(entry.lastPrice).toFixed(2)}` : "";
+    const moveBits = [`${entry.ticker} ${signed(pm)}%`];
     if (rv >= 1.5) moveBits.push(`${rv.toFixed(1)}× vol`);
     if (price) moveBits.push(price);
-    const when = relativeTime(story.published);
-    const more = coverage > 1 ? ` · +${coverage - 1} more article${coverage - 1 === 1 ? "" : "s"}` : "";
-    const href = story.url || `https://finance.yahoo.com/quote/${encodeURIComponent(item.ticker)}`;
+    const when = relativeTime(entry.published);
+    const more = entry.coverage > 1 ? ` · +${entry.coverage - 1} more article${entry.coverage - 1 === 1 ? "" : "s"}` : "";
+    const href = entry.url || `https://finance.yahoo.com/quote/${encodeURIComponent(entry.ticker)}`;
     return `<a class="pulse-headline${featured ? " featured" : ""}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" data-dir="${dir}">
       <span class="ph-badge">${signed(pm)}%</span>
       <span class="ph-body">
-        <span class="ph-headline">${escapeHtml(story.title)}</span>
-        <span class="ph-meta"><span class="ph-src ph-src-news">${escapeHtml(story.source)}</span>${escapeHtml(moveBits.join(" · "))}${when ? ` · ${when}` : ""}${more}</span>
+        <span class="ph-headline">${escapeHtml(entry.title)}</span>
+        <span class="ph-meta"><span class="ph-src ph-src-news">${escapeHtml(entry.source)}</span>${escapeHtml(moveBits.join(" · "))}${when ? ` · ${when}` : ""}${more}</span>
       </span>
     </a>`;
   }
@@ -550,7 +590,7 @@
         border-radius: var(--radius);
         background: var(--panel-2);
         text-decoration: none;
-        transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+        transition: border-color 160ms var(--ease-out), background 160ms var(--ease-out), transform 160ms var(--ease-out);
       }
       .pulse-headline:hover {
         background: var(--panel-3);

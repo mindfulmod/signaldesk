@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SignalDesk Stock Mentions</title>
+    <meta name="description" content="SignalDesk finds stocks gaining attention, separates early evidence from crowded moves, and explains every discovery signal." />
+    <meta name="theme-color" content="#0b0f14" />
+    <title>SignalDesk — Stock Attention Intelligence</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,7 +20,7 @@
             </span>
             <span class="brand-text">
               <span class="brand-name">SignalDesk</span>
-              <span class="brand-tag">Stock Mentions</span>
+              <span class="brand-tag">Attention Intelligence</span>
             </span>
           </a>
 
@@ -129,27 +131,39 @@
 
         <main class="main-content">
         <section class="page-hero" id="top">
-          <p class="eyebrow">Cross-platform market attention monitor</p>
-          <h1>Top stocks by signal</h1>
-          <p class="hero-sub">See where retail and news attention is piling up right now — Reddit, news wires, SEC filings, short volume, and price action, distilled into one early signal. Free, no login, no API keys.</p>
+          <div class="hero-layout">
+            <div class="hero-copy">
+              <p class="eyebrow">Evidence-weighted stock discovery</p>
+              <h1>Find the signal before the crowd gets loud.</h1>
+              <p class="hero-sub">SignalDesk tracks where attention is forming, then checks whether price, volume, independent sources, and real catalysts agree. Every setup shows its evidence and its risk — because attention alone is not conviction.</p>
+            </div>
+            <div class="hero-method" aria-label="How SignalDesk evaluates a setup">
+              <div><span>01</span><strong>Attention</strong><p>Is interest accelerating across more than one channel?</p></div>
+              <div><span>02</span><strong>Confirmation</strong><p>Do price, volume, filings, or credible news support the move?</p></div>
+              <div><span>03</span><strong>Risk</strong><p>Is the move already extended, concentrated, or thinly evidenced?</p></div>
+            </div>
+          </div>
         </section>
+        <p id="freshnessNotice" class="freshness-notice" role="status" hidden></p>
 
         <section class="buy-panel" aria-labelledby="buy-heading">
           <div class="section-head compact">
             <div>
-              <h2 id="buy-heading">Buy Candidates</h2>
-              <p>Top 5 data-driven stocks to research, including dynamically discovered tickers</p>
+              <p class="section-kicker">Best evidence right now</p>
+              <h2 id="buy-heading">Research radar</h2>
+              <p>Setups with the strongest balance of early attention, confirmation, and manageable crowding risk</p>
             </div>
           </div>
           <div id="buyCandidates" class="buy-grid"></div>
-          <p class="buy-disclaimer">Informational signal screen only. Not financial advice; review fundamentals, risk, and your own plan before trading.</p>
+          <p class="buy-disclaimer">A high setup score is a research priority, not a forecast or recommendation. Prices can move against any signal.</p>
         </section>
 
         <section class="movers-panel" aria-labelledby="movers-heading">
           <div class="section-head compact">
             <div>
-              <h2 id="movers-heading">Today's Movers</h2>
-              <p>The standout tickers in each signal — click any to open its profile</p>
+              <p class="section-kicker">Market psychology at a glance</p>
+              <h2 id="movers-heading">Attention map</h2>
+              <p>Separate early ignition from confirmed participation and moves that may already be crowded</p>
             </div>
           </div>
           <div id="moversBoard" class="movers-grid"></div>
@@ -159,7 +173,8 @@
           <div class="table-panel">
             <div class="section-head compact">
               <div>
-                <h2 id="ranking-heading">Ranking</h2>
+                <p class="section-kicker">All discovered names</p>
+                <h2 id="ranking-heading">Discovery board</h2>
                 <p id="rankSubhead">Showing the top 30 tickers</p>
               </div>
               <div class="toggle-stack">
@@ -181,12 +196,12 @@
                   <tr>
                     <th>Rank</th>
                     <th>Ticker</th>
-                    <th class="sortable sort-active" data-sort="signal" aria-sort="descending">Signal</th>
-                    <th>Last public quote</th>
-                    <th class="col-secondary sortable" data-sort="mentions">Mentions</th>
-                    <th class="sortable" data-sort="momentum">Momentum</th>
+                    <th class="sortable sort-active" data-sort="signal" aria-sort="descending">Setup</th>
+                    <th>Public quote</th>
+                    <th class="col-secondary sortable" data-sort="mentions">Attention</th>
+                    <th class="sortable" data-sort="momentum">Acceleration</th>
                     <th class="col-tertiary">Price/Vol</th>
-                    <th class="col-secondary">Source mix</th>
+                    <th class="col-secondary">Evidence mix</th>
                   </tr>
                 </thead>
                 <tbody id="rankingBody"></tbody>
@@ -209,10 +224,10 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <span class="brand-name">SignalDesk</span>
-            <p>Cross-platform market attention, distilled into one early signal. Built entirely on free, public, no-key data — Reddit, GDELT, Google/Bing/Yahoo news, SEC EDGAR, FINRA short volume, and public price/volume.</p>
+            <p>Cross-platform market attention separated from confirmation and crowding risk. Built on free public data from social channels, news, SEC EDGAR, FINRA daily short-sale volume, and public price/volume feeds.</p>
           </div>
           <div class="footer-meta">
-            <p class="footer-note">Informational signal screen only — <strong>not financial advice</strong>. Review fundamentals, risk, and your own plan before trading.</p>
+            <p class="footer-note">For discovery and research only — <strong>not financial advice</strong>. No score predicts returns or removes the risk of loss.</p>
             <p class="footer-sub">Refreshes market weekdays at 9:17, 12:17, 15:17, and 17:17 ET</p>
           </div>
         </div>

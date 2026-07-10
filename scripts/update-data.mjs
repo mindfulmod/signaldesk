@@ -12,6 +12,23 @@ const REDDIT_USER_AGENT = "bot:SignalDeskPublic:1.0 (by /u/mindfulmod; read-only
 const DISCOVERY_LIMIT = 80;
 const PRICE_UNIVERSE_LIMIT = 140;
 const NEWS_UNIVERSE_LIMIT = 70;
+// Beyond the most-mentioned tickers, also fetch news for the biggest price movers
+// (whatever moved hardest today) so "Driving the tape" can explain the move even
+// when the ticker has little social chatter.
+const MOVER_NEWS_LIMIT = 45;
+const MOVER_MIN_MOVE = 2.0; // percent; |move| at/above this qualifies as a mover
+// "Driving the tape" — a standalone feed of market-moving news, independent of the
+// ranking table. An entry needs a real news headline AND a price move of at least
+// this magnitude, so we only show stories that actually moved a stock.
+const MARKET_NEWS_LIMIT = 14;
+const MARKET_NEWS_MIN_MOVE = 1.5; // percent
+// News sources that count as "real" press coverage for the market-news feed.
+const MARKET_NEWS_SOURCES = new Set([
+  "GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings",
+]);
+// Headline words that signal an article is explaining a market move (used to pick
+// the most relevant story when a ticker has several).
+const IMPACT_WORDS = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|earnings|upgrade|downgrade|spook|spooks|spooked|%)\b/i;
 // StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
 // may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
 const STOCKTWITS_LIMIT = 45;
@@ -49,7 +66,32 @@ const SOURCES = [
   "Price/Volume",
 ];
 
-// No hardcoded seed list. The universe is built dynamically each run:
+// Always-covered "majors" watchlist. The dynamic FINRA/social universe is great
+// for surfacing squeezes and micro-cap pumps, but those names rarely carry the
+// causal, market-moving news the "Driving the tape" section is built for ("Apple
+// raised prices and spooked the market"). These high-profile large/mega caps are
+// therefore always price-checked AND news-checked on top of the dynamic universe,
+// so when one of them actually moves we can explain why. They do NOT get a ranking
+// head-start — they only earn a spot in the table if their real signal warrants it.
+const MAJORS = [
+  ["AAPL", "Apple Inc."], ["MSFT", "Microsoft Corp."], ["NVDA", "NVIDIA Corp."],
+  ["AMZN", "Amazon.com Inc."], ["GOOGL", "Alphabet Inc."], ["META", "Meta Platforms Inc."],
+  ["TSLA", "Tesla Inc."], ["AVGO", "Broadcom Inc."], ["AMD", "Advanced Micro Devices Inc."],
+  ["NFLX", "Netflix Inc."], ["INTC", "Intel Corp."], ["MU", "Micron Technology Inc."],
+  ["QCOM", "Qualcomm Inc."], ["ORCL", "Oracle Corp."], ["CRM", "Salesforce Inc."],
+  ["ADBE", "Adobe Inc."], ["PLTR", "Palantir Technologies Inc."], ["SMCI", "Super Micro Computer Inc."],
+  ["COIN", "Coinbase Global Inc."], ["MSTR", "MicroStrategy Inc."], ["JPM", "JPMorgan Chase & Co."],
+  ["BAC", "Bank of America Corp."], ["GS", "Goldman Sachs Group Inc."], ["WFC", "Wells Fargo & Co."],
+  ["V", "Visa Inc."], ["MA", "Mastercard Inc."], ["XOM", "Exxon Mobil Corp."],
+  ["CVX", "Chevron Corp."], ["BA", "Boeing Co."], ["DIS", "Walt Disney Co."],
+  ["WMT", "Walmart Inc."], ["COST", "Costco Wholesale Corp."], ["NKE", "Nike Inc."],
+  ["SBUX", "Starbucks Corp."], ["MCD", "McDonald's Corp."], ["KO", "Coca-Cola Co."],
+  ["PEP", "PepsiCo Inc."], ["PFE", "Pfizer Inc."], ["LLY", "Eli Lilly & Co."],
+  ["UNH", "UnitedHealth Group Inc."], ["GM", "General Motors Co."], ["UBER", "Uber Technologies Inc."],
+  ["ABNB", "Airbnb Inc."], ["PYPL", "PayPal Holdings Inc."], ["SHOP", "Shopify Inc."],
+];
+
+// No hardcoded seed list for the ranking universe. It is built dynamically each run:
 //   1. FINRA short-volume file  → primary universe (hundreds of actively traded tickers)
 //   2. News article extraction  → discovery of mentioned tickers not yet in registry
 //   3. SEC / GDELT / RSS feeds  → additional discovery signals
@@ -59,6 +101,19 @@ const stockRegistry = new Map();
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
 const AMBIGUOUS_TICKERS = new Set(["AI", "ARM", "NET", "T", "F", "ON", "ARE", "CAN", "NOW", "A", "GO", "IT"]);
+// Brand words too generic to use as a headline-matching alias on their own — a
+// company literally named "Block" or "Open" would otherwise hoover up unrelated
+// articles. For these we keep only the symbol/cashtag match.
+const BRAND_STOPWORDS = new Set([
+  "block", "open", "square", "beyond", "match", "unity", "carnival", "national",
+  "general", "global", "american", "united", "first", "next", "core", "energy",
+  "power", "capital", "financial", "holdings", "group", "trust", "fund", "growth",
+  "value", "metals", "mining", "gold", "silver", "bank", "health", "medical",
+  "digital", "data", "cloud", "systems", "solutions", "technologies", "industries",
+  "international", "enterprise", "partners", "realty", "resources", "materials",
+  "motors", "auto", "retail", "media", "five", "best", "good", "real", "world",
+  "service", "services", "products", "brands", "company", "corporation",
+]);
 const TICKER_STOPWORDS = new Set([
   "CEO",
   "CFO",
@@ -146,6 +201,15 @@ async function main() {
   // 4chan /biz/ — raw board chatter; parse cashtags from thread subjects/bodies.
   await collectFourChanBiz(events, failures, discovery);
 
+  // Always-covered majors: register them so they get priced + news-checked below.
+  // They feed "Driving the tape" (a standalone market-moving-news feed) even when
+  // they never earn a spot in the dynamic ranking table.
+  for (const [ticker, name] of MAJORS) registerStock(ticker, name, [ticker, name]);
+
+  // Give the freshly-registered universe real company names + brand aliases now,
+  // so the market-wide news steps below can match "Apple"/"Nvidia" style headlines.
+  await enrichRegistryNamesFromSec(failures);
+
   for (const feed of feeds) {
     try {
       let items;
@@ -185,7 +249,7 @@ async function main() {
   const discoveredEvents = await validateDiscoveredTickers(discovery, failures);
   events.push(...discoveredEvents);
 
-  for (const { ticker } of rankedStockEntries(events, PRICE_UNIVERSE_LIMIT)) {
+  for (const { ticker } of dedupeEntries([...rankedStockEntries(events, PRICE_UNIVERSE_LIMIT), ...majorEntries()])) {
     try {
       let market = await fetchMarket(ticker);
       if (!market?.lastPrice) {
@@ -194,6 +258,8 @@ async function main() {
         market = await fetchMarket(ticker);
       }
       if (market) {
+        // Fill in a real name + brand aliases for any ticker the SEC map missed.
+        if (market.name && market.name !== ticker) enrichRegistryName(ticker, market.name);
         events.push({
           source: "Price/Volume",
           ticker,
@@ -217,7 +283,8 @@ async function main() {
     await sleep(70);
   }
 
-  for (const { ticker } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
+  const newsTargets = dedupeEntries([...newsTargetEntries(events, NEWS_UNIVERSE_LIMIT), ...majorEntries()]);
+  for (const { ticker } of newsTargets) {
     try {
       const items = await yahooTickerNews(ticker);
       for (const item of items) {
@@ -228,7 +295,7 @@ async function main() {
     }
   }
 
-  for (const { ticker, name } of newsUniverseEntries(events, NEWS_UNIVERSE_LIMIT)) {
+  for (const { ticker, name } of newsTargets) {
     await collectTickerNews(events, failures, ticker, name);
   }
 
@@ -248,6 +315,10 @@ async function main() {
   const signals = aggregate(events, previous);
   await enrichMarketCaps(signals, failures);
   await enrichProfiles(signals, failures);
+
+  // Standalone market-moving-news feed for "Driving the tape" (not tied to ranking).
+  const marketNews = buildMarketNews(events);
+  console.log(`Market news feed: ${marketNews.length} move-driving headlines`);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -281,6 +352,7 @@ async function main() {
     sources: SOURCES,
     failures: failures.slice(0, 20),
     signals,
+    marketNews,
     events: events.slice(0, 400),
   };
 
@@ -387,7 +459,7 @@ async function collectTickerNews(events, failures, ticker, name) {
 async function gdeltMarketNews() {
   const query = encodeURIComponent(`("stock" OR "stocks" OR "shares" OR "earnings" OR "analyst")`);
   const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=ArtList&format=json&maxrecords=100&timespan=2d&sort=datedesc`;
-  const json = await fetchJson(url);
+  const json = await fetchJsonRetry(url);
   return (json.articles || [])
     .map((item) => ({
       title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
@@ -657,6 +729,56 @@ function registerStock(ticker, name, aliases = []) {
   });
 }
 
+// Derive distinctive headline-matching aliases from a company name so news that
+// says "Apple" (not "$AAPL") still attaches to the ticker. We keep the full
+// suffix-stripped brand ("palantir technologies") and, when it is distinctive
+// enough, the lead brand word ("palantir"). Generic single words are dropped so a
+// company called "Block" doesn't match every article containing that word.
+function brandAliasesFor(name) {
+  const cleaned = cleanCompanyForSearch(name).toLowerCase();
+  if (!cleaned || !/[a-z]/.test(cleaned)) return [];
+  const aliases = new Set();
+  const words = cleaned.split(" ").filter(Boolean);
+  if (words.length > 1 && cleaned.length >= 6) aliases.add(cleaned);
+  const lead = words[0];
+  if (lead && lead.length >= 4 && !BRAND_STOPWORDS.has(lead)) aliases.add(lead);
+  return [...aliases];
+}
+
+// Write a real company name + brand aliases back into the registry. FINRA seeds
+// tickers with the symbol as a placeholder name, so this is what gives most of the
+// universe a human name and a chance to match news headlines.
+function enrichRegistryName(ticker, name) {
+  const entry = stockRegistry.get(String(ticker).toUpperCase());
+  if (!entry || !name) return;
+  if (!entry.name || entry.name === entry.ticker) entry.name = name;
+  if (AMBIGUOUS_TICKERS.has(entry.ticker)) return; // symbol-only matching for these
+  const merged = new Set([...(entry.aliases || []), ...brandAliasesFor(name)]);
+  entry.aliases = [...merged];
+}
+
+// Pre-enrich the freshly-built universe with real names from the SEC ticker map
+// BEFORE market-wide news (GDELT / RSS) is matched, so a headline like
+// "Apple raises prices, spooking the market" can attach to AAPL in the same run.
+async function enrichRegistryNamesFromSec(failures) {
+  let secMap;
+  try {
+    secMap = await fetchSecTickerMap();
+  } catch (error) {
+    failures.push(`SEC name pre-enrich: ${error.message}`);
+    return;
+  }
+  let named = 0;
+  for (const entry of stockRegistry.values()) {
+    const record = secMap.get(entry.ticker.toUpperCase());
+    if (record?.title) {
+      enrichRegistryName(entry.ticker, cleanCompanyName(record.title));
+      named += 1;
+    }
+  }
+  console.log(`SEC name pre-enrich: named ${named}/${stockRegistry.size} tickers`);
+}
+
 function rankedStockEntries(events, limit) {
   const mentionScores = new Map();
   for (const event of events) {
@@ -673,6 +795,115 @@ function rankedStockEntries(events, limit) {
 
 function newsUniverseEntries(events, limit) {
   return rankedStockEntries(events, limit);
+}
+
+// Registry entries for the always-covered majors (those that registered cleanly).
+function majorEntries() {
+  return MAJORS.map(([ticker]) => stockRegistry.get(ticker.toUpperCase())).filter(Boolean);
+}
+
+// De-duplicate a list of registry entries by ticker, preserving first-seen order.
+function dedupeEntries(entries) {
+  const seen = new Set();
+  const out = [];
+  for (const entry of entries) {
+    if (!entry || seen.has(entry.ticker)) continue;
+    seen.add(entry.ticker);
+    out.push(entry);
+  }
+  return out;
+}
+
+// Build the standalone "Driving the tape" feed: news headlines that explain a real
+// price move, ranked by impact. Decoupled from the ranking table — a story counts
+// as long as we have a news headline for the ticker AND a meaningful price move,
+// regardless of whether that ticker appears in the dashboard ranking.
+function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
+  const market = new Map(); // ticker -> latest Price/Volume snapshot
+  for (const event of events) {
+    if (event.source === "Price/Volume") {
+      market.set(event.ticker, {
+        priceMove: Number(event.priceMove),
+        lastPrice: Number(event.lastPrice),
+        relativeVolume: Number(event.relativeVolume) || 1,
+      });
+    }
+  }
+
+  const stories = new Map(); // ticker -> [{source,title,url,published}]
+  for (const event of events) {
+    if (!MARKET_NEWS_SOURCES.has(event.source) || !event.title) continue;
+    const title = String(event.title).trim();
+    if (title.length < 12) continue;
+    if (!stories.has(event.ticker)) stories.set(event.ticker, []);
+    stories.get(event.ticker).push({ source: event.source, title, url: event.url, published: event.published });
+  }
+
+  const rows = [];
+  for (const [ticker, list] of stories) {
+    const quote = market.get(ticker);
+    if (!quote || !Number.isFinite(quote.priceMove)) continue;
+    const move = Math.abs(quote.priceMove);
+    if (move < MARKET_NEWS_MIN_MOVE) continue;
+
+    // De-dupe by headline text and rank stories: impact-word headlines first, then newest.
+    const seenTitles = new Set();
+    const unique = [];
+    for (const story of list) {
+      const key = story.title.toLowerCase().replace(/\s+/g, " ").slice(0, 90);
+      if (seenTitles.has(key)) continue;
+      seenTitles.add(key);
+      unique.push(story);
+    }
+    unique.sort((a, b) => {
+      const impactA = IMPACT_WORDS.test(a.title) ? 1 : 0;
+      const impactB = IMPACT_WORDS.test(b.title) ? 1 : 0;
+      if (impactA !== impactB) return impactB - impactA;
+      return new Date(b.published || 0) - new Date(a.published || 0);
+    });
+
+    const best = unique[0];
+    rows.push({
+      ticker,
+      name: stockName(ticker),
+      priceMove: quote.priceMove,
+      lastPrice: Number.isFinite(quote.lastPrice) ? quote.lastPrice : null,
+      relativeVolume: quote.relativeVolume,
+      source: best.source,
+      title: best.title.slice(0, 200),
+      url: best.url,
+      published: best.published,
+      coverage: unique.length,
+      impact: move + unique.length * 3 + Math.max(0, quote.relativeVolume - 1) * 3,
+    });
+  }
+
+  rows.sort((a, b) => b.impact - a.impact);
+  return rows.slice(0, limit).map(({ impact, ...row }) => row);
+}
+
+// The set of tickers we fetch per-ticker news for: the most-mentioned tickers
+// UNION the biggest price movers. Movers are included even with little chatter so
+// "Driving the tape" can show why a stock jumped or dropped today.
+function newsTargetEntries(events, mentionLimit) {
+  const base = rankedStockEntries(events, mentionLimit);
+  const seen = new Set(base.map((entry) => entry.ticker));
+
+  const moveByTicker = new Map();
+  for (const event of events) {
+    if (event.source !== "Price/Volume") continue;
+    const move = Math.abs(Number(event.priceMove) || 0);
+    if (move > (moveByTicker.get(event.ticker) || 0)) moveByTicker.set(event.ticker, move);
+  }
+
+  const movers = [...stockRegistry.values()]
+    .map((entry) => ({ entry, move: moveByTicker.get(entry.ticker) || 0 }))
+    .filter((row) => row.move >= MOVER_MIN_MOVE && !seen.has(row.entry.ticker))
+    .sort((a, b) => b.move - a.move)
+    .slice(0, MOVER_NEWS_LIMIT)
+    .map((row) => row.entry);
+
+  return [...base, ...movers];
 }
 
 async function fetchMarket(ticker) {
@@ -1093,6 +1324,32 @@ async function fetchJson(url) {
   const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.json();
+}
+
+// Retry wrapper for rate-limited JSON endpoints (GDELT routinely 429s on shared
+// CI IPs). Backs off exponentially with jitter; also retries when the body isn't
+// valid JSON, which GDELT returns as an HTML throttle page.
+async function fetchJsonRetry(url, { retries = 4, baseDelay = 1000 } = {}) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
+      if (response.status === 429 || response.status >= 500) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      const text = await response.text();
+      try {
+        return JSON.parse(text);
+      } catch {
+        throw new Error("non-JSON response (likely a throttle page)");
+      }
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) await sleep(baseDelay * 2 ** attempt + Math.random() * 400);
+    }
+  }
+  throw lastError;
 }
 
 async function fetchText(url) {

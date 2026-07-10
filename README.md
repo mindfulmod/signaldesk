@@ -1,6 +1,6 @@
 # SignalDesk Stock Mentions
 
-SignalDesk is a static stock-attention dashboard hosted on GitHub Pages and refreshed during market sessions with GitHub Actions.
+SignalDesk is a static, evidence-weighted stock-attention dashboard hosted on GitHub Pages and refreshed during market sessions with GitHub Actions.
 
 The GitHub repository is the baseline going forward. Local drafts should be treated as prototypes unless they have been merged into `main`.
 
@@ -23,7 +23,8 @@ The current live app is a dark, mobile-first market scanner with:
 - StockTwits, ApeWisdom, Hacker News, 4chan, Reddit, news, SEC, FINRA, and public price/volume sources,
 - market-cap filters,
 - big-attention and quiet-mover filters,
-- ranking, movers, research candidates, ticker detail panels, sparklines, and CSV export,
+- an explainable discovery score that separates attention, confirmation, catalyst evidence, and crowding risk,
+- research radar, market-psychology stages, ticker detail panels, sparklines, watchlists, and CSV export,
 - an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse.
 
 ## Weekday Data Refresh
@@ -67,6 +68,12 @@ The updater uses public no-key sources only:
 - Wikipedia public summaries for company context
 
 No API keys are required. If public sources are temporarily unreachable, the updater keeps the last working snapshot instead of replacing the dashboard with empty data.
+
+## Discovery model
+
+SignalDesk does not claim that any stock is bound to rise. Attention can create buying pressure, but it can also identify an already crowded or manipulated move. The dashboard therefore shows raw attention separately from setup quality and surfaces risk flags beside confirming evidence.
+
+See [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md) for the scoring logic, market-psychology rationale, data caveats, and validation roadmap.
 
 ## Local Use
 

@@ -1,6 +1,10 @@
 const SOURCES = [
   "Wallstreetbets",
   "Reddit Finance",
+  "StockTwits",
+  "ApeWisdom",
+  "Hacker News",
+  "4chan",
   "GDELT News",
   "Google News",
   "Bing News",
@@ -30,6 +34,11 @@ const SOURCE_COLORS = {
   "FINRA Short Volume": "#d98a5b",
   "Price/Volume": "#7c9aff",
 };
+
+const DISCOVERY_SOCIAL_SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
+const DISCOVERY_NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+const DISCOVERY_CATALYST_SOURCES = [...DISCOVERY_NEWS_SOURCES, "SEC Filings"];
+const DISCOVERY_MARKET_SOURCES = ["FINRA Short Volume", "Price/Volume"];
 
 
 let snapshot = null;
@@ -210,7 +219,7 @@ function previousRankMap() {
   const sorted = [...(prev.signals || [])].sort((a, b) => {
     if (rankMode === "mentions") return (Number(b.mentions) || 0) - (Number(a.mentions) || 0);
     if (rankMode === "momentum") return (Number(b.momentum) || 0) - (Number(a.momentum) || 0);
-    return (Number(b.signalScore) || 0) - (Number(a.signalScore) || 0);
+    return discoveryProfile(b).score - discoveryProfile(a).score;
   });
   const map = new Map();
   sorted.forEach((s, i) => map.set(s.ticker, i + 1));
@@ -234,13 +243,6 @@ function sparkline(values, { w = 66, h = 22, pad = 2, fluid = false } = {}) {
   const par = fluid ? ' preserveAspectRatio="none"' : "";
   const dot = fluid ? "" : `<circle class="spark-dot" cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="1.8"/>`;
   return `<svg class="spark ${up ? "up" : "down"}${fluid ? " spark-fluid" : ""}" viewBox="0 0 ${w} ${h}"${par} aria-hidden="true"><path class="spark-area" d="${area}"/><path class="spark-line" d="${line}"/>${dot}</svg>`;
-}
-
-// Always-on bull/bear pill for the table (every row has a sentiment score).
-function sentimentChip(item) {
-  const tone = sentimentTone(item.sentiment); // "up" | "down" | ""
-  const icon = item.sentiment > 0.08 ? "🟢" : item.sentiment < -0.08 ? "🔴" : "⚪";
-  return `<span class="why-chip sent-chip ${tone || "flat"}"><span aria-hidden="true">${icon}</span>${sentimentLabel(item.sentiment)}</span>`;
 }
 
 // Rank movement vs the prior snapshot: ▲/▼ with magnitude, a flat dot for no
@@ -321,6 +323,10 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     relativeVolume: sanitizeRelVol(item.relativeVolume),
     marketCap: Number.isFinite(Number(item.marketCap)) ? Number(item.marketCap) : null,
     capTier: item.capTier || capTierFor(Number(item.marketCap)),
+    description: item.description || null,
+    descriptionUrl: item.descriptionUrl || null,
+    sector: item.sector || null,
+    industry: item.industry || null,
     optionsActivity: Number(item.optionsActivity) || 0,
     sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
     latest: item.latest || [],
@@ -484,7 +490,7 @@ function filteredSignals() {
   const scale = 85 / maxRaw;
   const signals = base.map((item, i) => ({ ...item, signalScore: clamp(0, 100, rawScores[i] * scale) }));
 
-  return signals.sort(sortForMode);
+  return signals.map((item) => ({ ...item, discovery: discoveryProfile(item) })).sort(sortForMode);
 }
 
 function capTierFor(marketCap) {
@@ -513,7 +519,7 @@ function applyWatchlistFilter(items) {
 function sortForMode(a, b) {
   if (rankMode === "mentions") return b.mentions - a.mentions;
   if (rankMode === "momentum") return b.momentum - a.momentum;
-  return b.signalScore - a.signalScore;
+  return (b.discovery || discoveryProfile(b)).score - (a.discovery || discoveryProfile(a)).score;
 }
 
 function render() {
@@ -568,27 +574,136 @@ function renderEmptyState() {
     </div>${warnings}`;
 }
 
-function buyScore(item) {
-  const signal = clamp(0, 1, item.signalScore / 85); // peer-scale ceiling is 85
-  const momentum = clamp(0, 1, (item.momentum + 10) / 80);
-  const sentiment = clamp(0, 1, (item.sentiment + 0.2) / 0.65);
-  const price = clamp(0, 1, (item.priceMove + 1) / 7);
-  const volume = clamp(0, 1, item.relativeVolume / 2.5);
-  const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
-  const sourceBreadth = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
-  return 100 * (0.31 * signal + 0.17 * momentum + 0.15 * sentiment + 0.13 * price + 0.09 * volume + 0.08 * sourceBreadth + 0.07 * shortPressure);
+function sourceTotal(item, sources) {
+  return sources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0);
+}
+
+// The discovery score is deliberately not a return forecast. It rewards attention
+// that is early, independently corroborated, and confirmed by the market, then
+// subtracts visible crowding and data-quality risks. This keeps a parabolic one-
+// source move from automatically becoming the site's top "opportunity."
+function discoveryProfile(item) {
+  const social = sourceTotal(item, DISCOVERY_SOCIAL_SOURCES);
+  const catalyst = sourceTotal(item, DISCOVERY_CATALYST_SOURCES);
+  const market = sourceTotal(item, DISCOVERY_MARKET_SOURCES);
+  const allSources = [...new Set([...DISCOVERY_SOCIAL_SOURCES, ...DISCOVERY_CATALYST_SOURCES, ...DISCOVERY_MARKET_SOURCES])];
+  const activeSources = allSources.filter((source) => (item.sources?.[source] || 0) > 0);
+  const catalystSources = DISCOVERY_CATALYST_SOURCES.filter((source) => (item.sources?.[source] || 0) > 0);
+  const activeGroups = [social > 0, catalyst > 0, market > 0].filter(Boolean).length;
+  const total = Math.max(1, activeSources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0));
+  const concentration = activeSources.length
+    ? Math.max(...activeSources.map((source) => Number(item.sources?.[source]) || 0)) / total
+    : 1;
+
+  const attention = clamp(0, 1, (Number(item.signalScore) || 0) / 85);
+  const acceleration = item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
+  const breadth = 0.65 * (activeGroups / 3) + 0.35 * clamp(0, 1, activeSources.length / 6);
+  const priceConfirmation = clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5);
+  const volumeConfirmation = clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5);
+  const confirmation = 0.55 * priceConfirmation + 0.45 * volumeConfirmation;
+  const catalystEvidence = clamp(0, 1, catalystSources.length / 3 + ((item.sources?.["SEC Filings"] || 0) > 0 ? 0.2 : 0));
+
+  let penalty = 0;
+  const risks = [];
+  if (item.priceMove >= 12) {
+    penalty += Math.min(25, (item.priceMove - 12) * 1.1 + 5);
+    risks.push("Extended move");
+  }
+  if (item.relativeVolume >= 8) {
+    penalty += Math.min(8, (item.relativeVolume - 8) * 0.8 + 2);
+    risks.push("Extreme volume");
+  }
+  if (concentration >= 0.75) {
+    penalty += Math.min(8, (concentration - 0.75) * 28 + 2);
+    risks.push("One-source heavy");
+  }
+  if (Number.isFinite(item.marketCap) && item.marketCap > 0 && item.marketCap < 100_000_000) {
+    penalty += item.marketCap < 25_000_000 ? 8 : 5;
+    risks.push("Micro-cap volatility");
+  }
+  if (social > 0 && catalyst === 0) {
+    if (item.priceMove >= 5) penalty += 6;
+    risks.push("No verified catalyst");
+  }
+  if (activeGroups <= 1) {
+    penalty += 10;
+    risks.push("Thin evidence");
+  }
+  if (item.priceMove <= -3) {
+    penalty += 6;
+    risks.push("Price not confirming");
+  }
+
+  const raw = 100 * (0.14 * attention + 0.22 * acceleration + 0.2 * breadth + 0.22 * confirmation + 0.22 * catalystEvidence);
+  const score = Math.round(clamp(0, 100, raw - penalty));
+  const crowdAttention = social + catalyst;
+
+  let stage = "Watching";
+  let tone = "watch";
+  if (item.priceMove >= 12 || (item.relativeVolume >= 8 && crowdAttention >= 3)) {
+    stage = "Crowded";
+    tone = "crowded";
+  } else if (item.momentum <= -15 || item.priceMove <= -3) {
+    stage = "Cooling";
+    tone = "cooling";
+  } else if (catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
+    stage = "Confirmed";
+    tone = "confirmed";
+  } else if (item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
+    stage = "Early ignition";
+    tone = "early";
+  } else if (item.momentum >= 15 || crowdAttention >= 5) {
+    stage = "Building";
+    tone = "building";
+  }
+
+  let evidence = "Thin evidence";
+  if (catalystSources.length >= 2 && activeGroups === 3) evidence = "Strong evidence";
+  else if (catalystSources.length >= 1 && activeGroups >= 2) evidence = "Corroborated";
+  else if (activeGroups >= 2) evidence = "Developing";
+
+  const reasons = [];
+  if (catalystSources.length) reasons.push(`${catalystSources.length} catalyst source${catalystSources.length === 1 ? "" : "s"}`);
+  if (activeGroups >= 2) reasons.push(`${activeGroups}/3 evidence groups active`);
+  if (item.momentum >= 15) reasons.push(`Attention +${item.momentum.toFixed(0)}% vs prior`);
+  if (item.relativeVolume >= 1.2) reasons.push(`${item.relativeVolume.toFixed(1)}× relative volume`);
+  if (item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
+  if (!reasons.length) reasons.push("Monitoring for a second confirming signal");
+
+  const move = `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%`;
+  let summary = "Attention is present, but the setup still needs stronger independent confirmation.";
+  if (tone === "early") summary = `Unusual participation is appearing before broad attention. Watch for a credible catalyst and continued price confirmation.`;
+  if (tone === "confirmed") summary = `A public catalyst and market participation align. The next question is whether attention continues without the move becoming extended.`;
+  if (tone === "building") summary = `Attention is building across the tracked channels. Evidence is improving, but the move is not fully confirmed yet.`;
+  if (tone === "crowded") summary = `The ${move} move is already attention-grabbing. Treat this as crowding risk, not an invitation to chase.`;
+  if (tone === "cooling") summary = `Attention remains visible, but price or mention momentum is cooling. Wait for the signal to repair before prioritizing it.`;
+
+  return {
+    score,
+    stage,
+    tone,
+    evidence,
+    summary,
+    reasons: reasons.slice(0, 3),
+    risks: [...new Set(risks)].slice(0, 3),
+    activeSources: activeSources.length,
+    activeGroups,
+    concentration,
+    catalystSources: catalystSources.length,
+  };
 }
 
 function renderBuyCandidates(items) {
-  const candidates = [...items]
-    .map((item) => ({ ...item, buyScore: buyScore(item) }))
-    .filter((item) => item.signalScore >= 35 && item.mentions >= 2)
-    .sort((a, b) => b.buyScore - a.buyScore)
-    .slice(0, 5);
+  const scored = [...items]
+    .map((item) => ({ ...item, discovery: item.discovery || discoveryProfile(item) }))
+    .filter((item) => item.discovery.score >= 20 && item.mentions >= 2)
+    .sort((a, b) => b.discovery.score - a.discovery.score);
+  const lowerRisk = scored.filter((item) => !["crowded", "cooling"].includes(item.discovery.tone));
+  const candidates = (lowerRisk.length >= 4 ? lowerRisk : scored).slice(0, 4);
 
   byId("buyCandidates").innerHTML = candidates.length
     ? candidates.map((item, index) => buyCard(item, index)).join("")
-    : `<div class="buy-empty">No buy candidates meet the current real-data filters.</div>`;
+    : `<div class="buy-empty">No setup has enough independent evidence yet. The honest result is to wait for another confirming signal.</div>`;
 
   document.querySelectorAll("[data-buy-ticker]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -601,44 +716,41 @@ function renderBuyCandidates(items) {
 }
 
 function buyCard(item, index) {
-  const reasons = buyReasons(item);
+  const profile = item.discovery || discoveryProfile(item);
   return `
-    <article class="buy-card">
+    <article class="buy-card" data-stage="${profile.tone}">
       <div class="buy-card-top">
-        <span class="buy-rank">#${index + 1}</span>
+        <span class="stage-badge stage-${profile.tone}">${escapeHtml(profile.stage)}</span>
         <button type="button" data-buy-ticker="${item.ticker}" class="buy-ticker">${item.ticker}</button>
       </div>
-      <p class="buy-name">${item.name}</p>
-      <p class="buy-why">${escapeHtml(trendInterpretation(item))}</p>
+      <p class="buy-name">${escapeHtml(item.name || item.ticker)}</p>
+      <p class="buy-why">${escapeHtml(profile.summary)}</p>
       <div class="buy-score-row">
-        <span>Buy score</span>
-        <strong>${item.buyScore.toFixed(0)}</strong>
+        <span>Setup score</span>
+        <strong>${profile.score}</strong>
       </div>
-      <div class="buy-meter" aria-label="Buy score ${item.buyScore.toFixed(0)} out of 100">
-        <span style="width:${clamp(0, 100, item.buyScore)}%"></span>
+      <div class="buy-meter" aria-label="Setup score ${profile.score} out of 100">
+        <span style="width:${profile.score}%"></span>
       </div>
-      <ul>
-        ${reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}
-      </ul>
+      <div class="radar-evidence"><span>${escapeHtml(profile.evidence)}</span><span>${profile.activeSources} sources</span></div>
+      <ul>${profile.reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
+      ${profile.risks.length ? `<div class="risk-row" aria-label="Risk flags">${profile.risks.map((risk) => `<span>${escapeHtml(risk)}</span>`).join("")}</div>` : ""}
     </article>`;
 }
 
-function buyReasons(item) {
-  const reasons = [
-    `${item.signalScore.toFixed(0)}/100 early signal`,
-    `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}% mention momentum`,
-  ];
-  if (item.sentiment > 0.08) reasons.push(`${sentimentLabel(item.sentiment)} public sentiment`);
-  if (item.priceMove > 0) reasons.push(`${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% price confirmation`);
-  if (item.relativeVolume > 1.1) reasons.push(`${item.relativeVolume.toFixed(1)}x relative volume`);
-  if ((item.sources["FINRA Short Volume"] || 0) > 0) reasons.push("FINRA short-volume pressure");
-  const sourceCount = SOURCES.filter((source) => (item.sources[source] || 0) > 0).length;
-  reasons.push(`${sourceCount} public sources detected`);
-  return reasons.slice(0, 4);
-}
-
 function updateStatus() {
-  setDataStatus(`Updated ${formatDateTime(snapshot.generatedAt)}`);
+  const generated = new Date(snapshot.generatedAt).getTime();
+  const ageHours = Number.isFinite(generated) ? (Date.now() - generated) / 3_600_000 : Infinity;
+  const stale = ageHours > 36;
+  byId("dataStatus")?.classList.toggle("stale", stale);
+  setDataStatus(`${stale ? "Stale snapshot" : "Updated"} · ${formatDateTime(snapshot.generatedAt)}`);
+  const notice = byId("freshnessNotice");
+  if (notice) {
+    notice.hidden = !stale;
+    notice.textContent = stale
+      ? `Data freshness warning: this snapshot is from ${formatDateTime(snapshot.generatedAt)}. Use it to study prior market attention, not as a current trading signal.`
+      : "";
+  }
 }
 
 function renderTable(items) {
@@ -656,15 +768,13 @@ function renderTable(items) {
   const prevRanks = previousRankMap();
   byId("rankingBody").innerHTML = items
     .map((item, index) => {
+      const profile = item.discovery || discoveryProfile(item);
       const total = Math.max(1, item.mentions);
       const sourceBars = SOURCES.map(
         (source) => `<span style="width:${((item.sources[source] || 0) / total) * 100}%; background:${SOURCE_COLORS[source]}"></span>`
       ).join("");
       const momentumClass = item.momentum >= 0 ? "up" : "down";
-      const highlights = trendHighlights(item);
-      const chips = `<div class="why-chips">${sentimentChip(item)}${highlights
-        .map((tag) => `<span class="why-chip"><span aria-hidden="true">${tag.icon}</span>${escapeHtml(tag.text)}</span>`)
-        .join("")}</div>`;
+      const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
       return `
@@ -679,7 +789,7 @@ function renderTable(items) {
             </div>
             ${chips}
           </td>
-          <td><span class="signal-pill">${item.signalScore.toFixed(0)}</span></td>
+          <td><div class="setup-cell"><span class="signal-pill tone-${profile.tone}">${profile.score}</span><small>${escapeHtml(profile.stage)}</small></div></td>
           <td>${formatQuoteCell(item)}</td>
           <td class="col-secondary">${fmt.format(item.mentions)}</td>
           <td><span class="momentum ${momentumClass}">${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%</span></td>
@@ -702,9 +812,9 @@ function renderTable(items) {
   bindStars(byId("rankingBody"));
 }
 
-// "Today's Movers" — three mini-leaderboards that turn the raw signals into an
-// at-a-glance read: who's accelerating, who's seeing unusual volume, and who the
-// crowd is talking about. Each row is clickable and opens the ticker's profile.
+// Three market-psychology states are more useful than three versions of "hot."
+// They let the user distinguish early participation, corroborated moves, and
+// attention that may have arrived too late to offer a favorable setup.
 function renderMovers(items) {
   const board = byId("moversBoard");
   if (!board) return;
@@ -713,27 +823,24 @@ function renderMovers(items) {
     return;
   }
 
-  const momentum = [...items]
-    .filter((item) => Number.isFinite(item.momentum) && item.momentum > 0)
-    .sort((a, b) => b.momentum - a.momentum)
+  const staged = items.map((item) => ({ ...item, discovery: item.discovery || discoveryProfile(item) }));
+  const early = staged
+    .filter((item) => ["early", "building"].includes(item.discovery.tone))
+    .sort((a, b) => b.discovery.score - a.discovery.score)
     .slice(0, 5);
-  // Guard against broken relative-volume values (thin names can divide by a
-  // near-zero average and report absurd multiples).
-  const volume = [...items]
-    .filter((item) => Number.isFinite(item.relativeVolume) && item.relativeVolume > 1.2 && item.relativeVolume < 100)
-    .sort((a, b) => b.relativeVolume - a.relativeVolume)
+  const confirmed = staged
+    .filter((item) => item.discovery.tone === "confirmed")
+    .sort((a, b) => b.discovery.score - a.discovery.score)
     .slice(0, 5);
-  const social = [...items]
-    .map((item) => ({ item, social: attentionStats(item).social }))
-    .filter((row) => row.social > 0)
-    .sort((a, b) => b.social - a.social)
-    .slice(0, 5)
-    .map((row) => row.item);
+  const crowded = staged
+    .filter((item) => item.discovery.tone === "crowded")
+    .sort((a, b) => Math.abs(b.priceMove) - Math.abs(a.priceMove))
+    .slice(0, 5);
 
   const columns = [
-    { title: "🚀 Momentum risers", sub: "Mentions accelerating fastest", list: momentum, value: (item) => `+${item.momentum.toFixed(0)}%` },
-    { title: "📊 Volume spikes", sub: "Trading well above normal", list: volume, value: (item) => `${item.relativeVolume.toFixed(1)}×` },
-    { title: "🗣️ Social buzz", sub: "Most talked about right now", list: social, value: (item) => `${shortFmt.format(attentionStats(item).social)}` },
+    { title: "Early ignition", sub: "Participation before broad crowding", list: early, value: (item) => `${item.discovery.score} setup` },
+    { title: "Confirmed", sub: "Catalyst and market action agree", list: confirmed, value: (item) => `${item.discovery.score} setup` },
+    { title: "Crowded risk", sub: "Attention arrived after a large move", list: crowded, value: (item) => `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%` },
   ];
 
   board.innerHTML = columns.map(moverColumn).join("");
@@ -762,7 +869,7 @@ function moverColumn(column) {
           </button>`
         )
         .join("")
-    : `<p class="muted-note">Nothing standout here in this snapshot.</p>`;
+    : `<p class="muted-note">No names meet this state in the current snapshot.</p>`;
   return `
     <div class="mover-col">
       <div class="mover-head">
@@ -793,9 +900,10 @@ function renderDetail(items, top50) {
 }
 
 function detailMarkup(item, rank) {
+  const profile = item.discovery || discoveryProfile(item);
   return `
     <div class="selected-stock">
-      <span id="selectedRank">Signal rank #${rank}</span>
+      <span id="selectedRank">Discovery rank #${rank}</span>
       <div class="selected-head">
         <h2 id="selectedTicker">${escapeHtml(item.ticker)}</h2>
         ${starButton(item.ticker)}
@@ -805,21 +913,34 @@ function detailMarkup(item, rank) {
       ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
     </div>
 
+    <div class="setup-assessment" data-stage="${profile.tone}">
+      <div class="assessment-head">
+        <span class="stage-badge stage-${profile.tone}">${escapeHtml(profile.stage)}</span>
+        <strong>${profile.score}<small>/100 setup</small></strong>
+      </div>
+      <p>${escapeHtml(profile.summary)}</p>
+      <div class="assessment-grid">
+        <div><span>Evidence</span><strong>${escapeHtml(profile.evidence)}</strong></div>
+        <div><span>Coverage</span><strong>${profile.activeGroups}/3 groups · ${profile.activeSources} sources</strong></div>
+      </div>
+      ${profile.risks.length ? `<div class="risk-row" aria-label="Risk flags">${profile.risks.map((risk) => `<span>${escapeHtml(risk)}</span>`).join("")}</div>` : ""}
+    </div>
+
     <div class="stat-grid">
-      ${statBlock("Signal", `${item.signalScore.toFixed(0)}`, "/ 100")}
+      ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
       ${statBlock("Price", formatPrice(item.lastPrice), priceMoveText(item), priceTone(item.priceMove))}
       ${statBlock("Rel. volume", item.relativeVolume ? `${item.relativeVolume.toFixed(1)}×` : "-", item.relativeVolume >= VOL_HOT ? "elevated" : "normal", item.relativeVolume >= VOL_HOT ? "up" : "")}
-      ${statBlock("Momentum", `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, "vs prior", momentumTone(item.momentum))}
-      ${statBlock("Sentiment", sentimentLabel(item.sentiment), null, sentimentTone(item.sentiment))}
+      ${statBlock("Acceleration", `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, "attention vs prior", momentumTone(item.momentum))}
+      ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
     </div>
 
     ${detailTrendMarkup(item)}
 
     <div class="detail-section">
-      <h3>Why it's on the radar</h3>
+      <h3>What is supporting the setup</h3>
       <p class="why-line">${escapeHtml(trendInterpretation(item))}</p>
-      <div class="why-chips">${whyChips(item).map((chip) => `<span class="why-chip">${escapeHtml(chip)}</span>`).join("")}</div>
+      <div class="why-chips">${profile.reasons.map((chip) => `<span class="why-chip">${escapeHtml(chip)}</span>`).join("")}</div>
     </div>
 
     ${attentionMarkup(item)}
@@ -880,28 +1001,14 @@ function capTierName(item) {
   return Number.isFinite(item.marketCap) && item.marketCap > 0 ? "" : "no SEC cap";
 }
 
-// Compact "why" chips highlighting only the signals that are actually firing.
-function whyChips(item) {
-  const { social, news, volHot, priceHot, momentumHot } = attentionStats(item);
-  const chips = [];
-  if (social > 0) chips.push(`${fmt.format(social)} social`);
-  if (news > 0) chips.push(`${fmt.format(news)} news`);
-  if (volHot) chips.push(`${item.relativeVolume.toFixed(1)}× volume`);
-  if (priceHot) chips.push(`+${item.priceMove.toFixed(1)}% price`);
-  if (momentumHot) chips.push(`+${item.momentum.toFixed(0)}% momentum`);
-  if ((item.sources["FINRA Short Volume"] || 0) > 0) chips.push("short pressure");
-  if (!chips.length) chips.push("steady, no single catalyst");
-  return chips;
-}
-
 // Condensed attention: group totals (Social / News / Market) and only list the
 // individual sources that actually returned something, so empty rows don't bury
 // the signal.
 function attentionMarkup(item) {
   const groups = [
-    { label: "Social", sources: ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"], color: "#18a0c4" },
-    { label: "News", sources: ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"], color: "#ad6b12" },
-    { label: "Market", sources: ["FINRA Short Volume", "Price/Volume"], color: "#111f4d" },
+    { label: "Social", sources: DISCOVERY_SOCIAL_SOURCES, color: "#2bd4d6" },
+    { label: "News", sources: DISCOVERY_CATALYST_SOURCES, color: "#e0b94a" },
+    { label: "Market", sources: DISCOVERY_MARKET_SOURCES, color: "#7c9aff" },
   ];
   const totals = groups.map((group) => ({
     ...group,
@@ -947,9 +1054,10 @@ function attentionMarkup(item) {
 
   return `
     <div class="detail-section">
-      <h3>Where the attention is</h3>
+      <h3>Where the evidence is coming from</h3>
       <div class="attn-groups">${groupBars}</div>
       <div class="attn-detail">${activeRows}</div>
+      ${(item.sources["FINRA Short Volume"] || 0) > 0 ? `<p class="data-caveat">FINRA daily short-sale volume is trading activity, not short interest or proof of a squeeze.</p>` : ""}
     </div>`;
 }
 
@@ -958,7 +1066,7 @@ function headlinesMarkup(item) {
   if (!latest.length) return "";
   return `
     <div class="detail-section">
-      <h3>Recent chatter & headlines</h3>
+      <h3>Recent source evidence</h3>
       <ul class="headline-list">
         ${latest
           .map(
@@ -1017,25 +1125,6 @@ function attentionGroupFor(item) {
   if (attention > 0 && attention >= attentionHighThreshold) return "attention";
   if (volHot && attention < attentionHighThreshold) return "quiet";
   return null;
-}
-
-function trendHighlights(item) {
-  const tags = [];
-  const { social, news } = attentionStats(item);
-  const shortVol = item.sources["FINRA Short Volume"] || 0;
-  const secFilings = item.sources["SEC Filings"] || 0;
-  const group = attentionGroupFor(item);
-
-  if (group === "quiet") tags.push({ icon: "🤫", text: "Quiet mover" });
-  else if (group === "attention") tags.push({ icon: "📣", text: "Big attention" });
-  if (item.relativeVolume >= VOL_HOT) tags.push({ icon: "📈", text: `${item.relativeVolume.toFixed(1)}× normal volume` });
-  if (item.momentum >= 20) tags.push({ icon: "🚀", text: `+${item.momentum.toFixed(0)}% mentions vs prior` });
-  if (social >= SOCIAL_BUZZ) tags.push({ icon: "🔥", text: `${fmt.format(social)} social mentions` });
-  if (item.priceMove >= 3) tags.push({ icon: "💹", text: `+${item.priceMove.toFixed(1)}% price` });
-  if (shortVol > 0) tags.push({ icon: "🩳", text: "Elevated short volume" });
-  if (secFilings > 0) tags.push({ icon: "📄", text: "Fresh SEC filing" });
-  if (news >= NEWS_BUZZ) tags.push({ icon: "📰", text: `${fmt.format(news)} news hits` });
-  return tags.slice(0, 4);
 }
 
 function trendInterpretation(item) {
@@ -1112,23 +1201,28 @@ function formatShortDateTime(value) {
 
 function exportCsv() {
   const data = filteredSignals().slice(0, 50);
-  const header = ["rank", "ticker", "name", "market_price", "early_signal", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
+  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
   const lines = [header.join(",")].concat(
-    data.map((item, index) =>
-      [
+    data.map((item, index) => {
+      const profile = item.discovery || discoveryProfile(item);
+      return [
         index + 1,
         item.ticker,
-        `"${item.name.replaceAll('"', '""')}"`,
+        `"${String(item.name || item.ticker).replaceAll('"', '""')}"`,
         item.lastPrice ?? "",
+        profile.score,
         item.signalScore.toFixed(1),
+        `"${profile.stage}"`,
+        `"${profile.evidence}"`,
+        `"${profile.risks.join(" | ")}"`,
         item.mentions,
         item.momentum.toFixed(2),
         item.sentiment.toFixed(3),
         item.priceMove.toFixed(2),
         item.relativeVolume.toFixed(2),
         ...SOURCES.map((source) => item.sources[source] || 0),
-      ].join(",")
-    )
+      ].join(",");
+    })
   );
   const blob = new Blob([lines.join("\n")], { type: "text/csv" });
   const link = document.createElement("a");
@@ -1252,7 +1346,7 @@ function updateUrl() {
     if (attentionFilter !== "all") params.set("attn", attentionFilter);
     if (watchlistFilter) params.set("watch", "1");
     const qs = params.toString();
-    history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
+    window.history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
   } catch {
     /* file:// or sandboxed — sharing via URL just won't reflect, no functional impact */
   }
