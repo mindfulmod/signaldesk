@@ -671,6 +671,7 @@
         .market-pulse,
         .buy-panel,
         .movers-panel,
+        .whatchanged-panel,
         .themes-panel,
         .springs-panel,
         .dashboard-grid {

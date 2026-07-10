@@ -2,7 +2,21 @@ import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
 import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
 import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
-import { computeThemeHeat, saveThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
+import { computeThemeHeat, saveThemes, loadThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
+import {
+  loadAlertState,
+  saveAlertState,
+  loadAlertLog,
+  saveAlertLog,
+  detectSpringEvents,
+  detectThemeEvents,
+  nextSpringStateMap,
+  nextThemeStageMap,
+  isoWeekKey,
+  buildWeeklyDigest,
+  postNtfy,
+  ALERTS_LOG_MAX,
+} from "./lib/alerts.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -332,6 +346,7 @@ async function main() {
   await refreshThemeRegistryStep(failures);
   const hotTickers = await computeThemeHeatStep(failures);
   await computeSpringsStep(failures, hotTickers);
+  await runAlertsStep(failures, hotTickers);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -1722,6 +1737,53 @@ async function computeThemeHeatStep(failures) {
   } catch (error) {
     failures.push(`Theme heat: ${error.message}`);
     return new Set();
+  }
+}
+
+// Layer 4 alerts. Diffs this run's springs/themes output against the last
+// recorded state (data/alerts-state.json) so each condition fires at most
+// once per ticker/theme per state-change, posts every event to ntfy.sh if
+// SIGNALDESK_NTFY_TOPIC is set (silently a no-op otherwise -- alerts still
+// land in the on-site "What changed" log, data/alerts-log.json, either way),
+// and appends a weekly digest once per ISO week.
+async function runAlertsStep(failures, hotTickers = new Set()) {
+  try {
+    const state = await loadAlertState();
+    const springsPayload = await loadSprings();
+    const themesPayload = await loadThemes();
+
+    const springEvents = detectSpringEvents(state.springs || {}, springsPayload.springs || [], hotTickers);
+    const themeEvents = detectThemeEvents(state.themes || {}, themesPayload.themes || []);
+    const events = [...springEvents, ...themeEvents];
+
+    const now = new Date();
+    const weekKey = isoWeekKey(now);
+    const isNewWeek = state.lastDigestDate !== weekKey;
+    if (isNewWeek) events.push(buildWeeklyDigest(themesPayload.themes || [], springsPayload.springs || []));
+
+    const topic = process.env.SIGNALDESK_NTFY_TOPIC || "";
+    let sent = 0;
+    for (const event of events) {
+      const result = await postNtfy(topic, event);
+      if (result.sent) sent += 1;
+      else if (topic) failures.push(`ntfy ${event.type}: ${result.reason}`);
+    }
+
+    const log = await loadAlertLog();
+    const dateStr = now.toISOString();
+    log.entries = [...events.map((e) => ({ date: dateStr, ...e })), ...log.entries].slice(0, ALERTS_LOG_MAX);
+    log.generatedAt = dateStr;
+    await saveAlertLog(log);
+
+    await saveAlertState({
+      springs: nextSpringStateMap(springsPayload.springs || []),
+      themes: nextThemeStageMap(themesPayload.themes || []),
+      lastDigestDate: isNewWeek ? weekKey : state.lastDigestDate,
+    });
+
+    console.log(`Alerts: ${events.length} events${topic ? ` (${sent} sent to ntfy)` : " (no SIGNALDESK_NTFY_TOPIC set -- on-site log only)"}`);
+  } catch (error) {
+    failures.push(`Alerts: ${error.message}`);
   }
 }
 
