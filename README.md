@@ -25,7 +25,8 @@ The current live app is a dark, mobile-first market scanner with:
 - big-attention and quiet-mover filters,
 - an explainable discovery score that separates attention, confirmation, catalyst evidence, and crowding risk,
 - research radar, market-psychology stages, ticker detail panels, sparklines, watchlists, and CSV export,
-- an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse.
+- an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse,
+- a **Springs board** (`springs.js`) — sustained-attention/price-compression setups from the [Theme Engine](THEME_ENGINE.md)'s coil detector, shown as three honest states (Coiled, Released, Dead coil) with their backtested base rates, never as a buy signal.
 
 ## Weekday Data Refresh
 
@@ -37,7 +38,9 @@ It:
 - runs `scripts/update-data.mjs`,
 - refreshes `data/signals.json` and `data/signals.js`,
 - updates `data/history.json` and `data/history.js` so longer-range views improve over time,
-- upserts today's row into `data/ledger.json`/`data/ledger.js`, a per-ticker daily ledger (mentions, share-of-voice, close, relative volume, Wikipedia pageviews) that keeps a persistence trail even for tickers that fall out of the daily top-75 — the input the [Theme Engine](THEME_ENGINE.md)'s coil detector reads,
+- upserts today's row into `data/ledger.json`/`data/ledger.js`, a per-ticker daily ledger (mentions, share-of-voice, close, volume, Wikipedia pageviews) that keeps a persistence trail even for tickers that fall out of the daily top-75,
+- refreshes `data/theme-registry.json`/`data/theme-registry.js` (GICS sub-industry baseline + `data/theme-overrides.json` manual theme curation),
+- runs the frozen coil detector over the ledger and writes `data/springs.json`/`data/springs.js` for the Springs board,
 - commits those updated data files back to the repository.
 
 The latest refresh appears on the public GitHub Pages site after GitHub Pages finishes publishing the commit.

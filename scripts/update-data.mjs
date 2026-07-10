@@ -1,5 +1,7 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
+import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
+import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -272,6 +274,7 @@ async function main() {
           priceMove: market.priceMove,
           relativeVolume: market.relativeVolume,
           lastPrice: market.lastPrice,
+          volume: Number.isFinite(market.volume) ? market.volume : null,
           quoteAsOf: market.quoteAsOf,
           quoteSource: market.quoteSource,
           published: new Date().toISOString(),
@@ -322,6 +325,8 @@ async function main() {
   console.log(`Market news feed: ${marketNews.length} move-driving headlines`);
 
   await updateLedgerFromRun({ events, signals, failures });
+  await refreshThemeRegistryStep(failures);
+  await computeSpringsStep(failures);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -947,6 +952,7 @@ async function fetchYahooMarket(ticker) {
     lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    volume: volumes.at(-1),
     quoteAsOf,
     quoteSource: "Yahoo public chart",
     name: result?.meta?.longName || result?.meta?.shortName || result?.meta?.symbol || ticker,
@@ -975,6 +981,7 @@ async function fetchStooqMarket(ticker) {
     lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    volume: volumes.at(-1),
     quoteAsOf: `${lastRow[0]}T20:00:00.000Z`,
     quoteSource: "Stooq public daily quote",
     name: ticker,
@@ -1624,7 +1631,7 @@ async function updateLedgerFromRun({ events, signals, failures }) {
     if (!event.ticker) continue;
     mentionsByTicker.set(event.ticker, (mentionsByTicker.get(event.ticker) || 0) + (Number(event.mentions) || 0));
     if (event.source === "Price/Volume" && Number.isFinite(event.lastPrice)) {
-      priceByTicker.set(event.ticker, { close: event.lastPrice, relVolume: Number(event.relativeVolume) || null });
+      priceByTicker.set(event.ticker, { close: event.lastPrice, volume: Number.isFinite(event.volume) ? event.volume : null });
     }
   }
   const totalMentions = [...mentionsByTicker.values()].reduce((sum, value) => sum + value, 0);
@@ -1643,13 +1650,67 @@ async function updateLedgerFromRun({ events, signals, failures }) {
 
   const ledger = await loadLedger();
   try {
-    const stats = await updateLedger({ ledger, dateStr, mentionsByTicker, totalMentions, priceByTicker, registryMeta, failures });
+    const protectedTickers = await loadProtectedTickers();
+    const stats = await updateLedger({ ledger, dateStr, mentionsByTicker, totalMentions, priceByTicker, registryMeta, failures, protectedTickers });
     await saveLedger(ledger);
     console.log(
       `Ledger: upserted ${stats.upserted}, backfilled ${stats.backfilled}, pageviews ${stats.pageviewsFetched}, pruned ${stats.pruned}, tracking ${Object.keys(ledger.tickers).length} tickers`
     );
   } catch (error) {
     failures.push(`Ledger update: ${error.message}`);
+  }
+}
+
+// Tickers that should survive the ledger's 90-day-dormant prune even with no
+// recent mentions: current theme-registry members and any active/dead-but-
+// recent spring. Reads the *previous* run's committed files (this run's
+// theme-registry refresh happens after the ledger update; springs.json does
+// not exist until THEME_ENGINE.md build item 3 lands, and the read is
+// tolerant of that).
+async function loadProtectedTickers() {
+  const protectedTickers = new Set();
+  try {
+    const registry = JSON.parse(await readFile(new URL("data/theme-registry.json", ROOT), "utf8"));
+    for (const theme of registry.themes || []) {
+      for (const member of theme.members || []) protectedTickers.add(member.t);
+    }
+  } catch {
+    // No registry yet.
+  }
+  const springs = await loadSprings();
+  for (const spring of springs.springs || []) {
+    if (spring.state === "coiled" || spring.state === "released") protectedTickers.add(spring.ticker);
+  }
+  return protectedTickers;
+}
+
+// Runs the frozen coil detector (THEME_ENGINE.md Layer 3) over the ledger and
+// writes data/springs.json. Uses this run's freshly-refreshed GICS baseline
+// for sector classification. hotThemeTickers is left empty until Layer 1
+// (theme heat, build item 4) exists to say which themes are actually hot.
+async function computeSpringsStep(failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const springs = computeSprings(ledger, registry.gics || {});
+    await saveSprings(springs);
+    const counts = springs.springs.reduce((acc, s) => ({ ...acc, [s.state]: (acc[s.state] || 0) + 1 }), {});
+    console.log(`Springs: ${springs.springs.length} classified — ${JSON.stringify(counts)}`);
+  } catch (error) {
+    failures.push(`Springs: ${error.message}`);
+  }
+}
+
+// Refreshes data/theme-registry.json: GICS baseline (re-fetched monthly) +
+// manual overrides (re-merged every run so a same-day edit takes effect).
+// Independent of the social/news pipeline, so it runs even on a degraded run.
+async function refreshThemeRegistryStep(failures) {
+  try {
+    const registry = await refreshThemeRegistry({ failures });
+    await saveThemeRegistry(registry);
+    console.log(`Theme registry: ${registry.themes.length} themes, ${Object.keys(registry.gics).length} GICS tickers`);
+  } catch (error) {
+    failures.push(`Theme registry: ${error.message}`);
   }
 }
 

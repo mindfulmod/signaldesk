@@ -3,7 +3,13 @@
 // attention/price trail is lost once it falls out of the ranking; this ledger
 // keeps a row per tracked ticker per day regardless of rank.
 //
-// Row shape: [date, mentions, shareOfVoice, close, relVolume, wikiViews]
+// Row shape: [date, mentions, shareOfVoice, close, volume, wikiViews]
+// `volume` is raw daily share volume, not a pre-computed relative-volume
+// ratio — the coil detector needs a consistent 60d-average baseline for its
+// release trigger, and a stored ratio would carry whatever baseline window
+// happened to produce it (today's live quote uses a ~4d window, Yahoo's
+// backfill would otherwise use a 20d window). Storing raw volume lets the
+// detector compute one consistent ratio itself.
 import { readFile, writeFile } from "node:fs/promises";
 
 const ROOT = new URL("../../", import.meta.url);
@@ -17,7 +23,7 @@ export const ROW_DATE = 0;
 export const ROW_MENTIONS = 1;
 export const ROW_SOV = 2;
 export const ROW_CLOSE = 3;
-export const ROW_RELVOL = 4;
+export const ROW_VOLUME = 4;
 export const ROW_WIKI = 5;
 
 const YAHOO_UA = "SignalDeskDaily/1.0 (+https://openai.com/; codex automation)";
@@ -53,19 +59,19 @@ export function upsertRow(ledger, ticker, meta, row) {
   return entry;
 }
 
-// Merge historical [date, close, relVolume] rows fetched from Yahoo into a
+// Merge historical [date, close, volume] rows fetched from Yahoo into a
 // ticker's ledger, filling gaps without mention data (backfilled days show 0
 // mentions/shareOfVoice — no historical social data exists for them).
 export function mergeBackfillRows(ledger, ticker, backfillRows) {
   const entry = ledger.tickers[ticker] || { meta: {}, rows: [] };
   const byDate = new Map(entry.rows.map((r) => [r[ROW_DATE], r]));
-  for (const [date, close, relVolume] of backfillRows) {
+  for (const [date, close, volume] of backfillRows) {
     const existing = byDate.get(date);
     if (existing) {
       if (!Number.isFinite(existing[ROW_CLOSE]) && Number.isFinite(close)) existing[ROW_CLOSE] = close;
-      if (!Number.isFinite(existing[ROW_RELVOL]) && Number.isFinite(relVolume)) existing[ROW_RELVOL] = relVolume;
+      if (!Number.isFinite(existing[ROW_VOLUME]) && Number.isFinite(volume)) existing[ROW_VOLUME] = volume;
     } else {
-      byDate.set(date, [date, 0, 0, Number.isFinite(close) ? close : null, Number.isFinite(relVolume) ? relVolume : null, null]);
+      byDate.set(date, [date, 0, 0, Number.isFinite(close) ? close : null, Number.isFinite(volume) ? volume : null, null]);
     }
   }
   entry.rows = [...byDate.values()].sort((a, b) => a[ROW_DATE].localeCompare(b[ROW_DATE]));
@@ -119,11 +125,7 @@ export async function fetchYahooDailyHistory(ticker, days = 400) {
     const close = closes[i];
     if (!Number.isFinite(close)) continue;
     const date = new Date(timestamps[i] * 1000).toISOString().slice(0, 10);
-    const priorVolumes = volumes.slice(Math.max(0, i - 20), i).filter(Number.isFinite);
-    const avgVol = priorVolumes.length ? priorVolumes.reduce((sum, v) => sum + v, 0) / priorVolumes.length : null;
-    const volume = volumes[i];
-    const relVolume = Number.isFinite(volume) && avgVol ? volume / avgVol : null;
-    rows.push([date, close, relVolume]);
+    rows.push([date, close, Number.isFinite(volumes[i]) ? volumes[i] : null]);
   }
   return rows.slice(-days);
 }
@@ -198,9 +200,13 @@ export async function updateLedger({
     const wasNew = !prevEntry;
     const prevRow = prevEntry?.rows?.at(-1);
     const close = Number.isFinite(price?.close) ? price.close : prevRow ? prevRow[ROW_CLOSE] : null;
-    const relVolume = Number.isFinite(price?.relVolume) ? price.relVolume : null;
-    const meta = registryMeta.get(ticker) || {};
-    upsertRow(ledger, ticker, meta, [dateStr, mentions, Number(shareOfVoice.toFixed(6)), close, relVolume, null]);
+    const volume = Number.isFinite(price?.volume) ? price.volume : null;
+    // firstSeen marks where *real* observed shareOfVoice begins — backfilled
+    // pre-ledger days get shareOfVoice=0 as a placeholder (unknown, not
+    // confirmed zero), so the coil detector must not treat them as real
+    // attention history when it falls back to shareOfVoice.
+    const meta = { ...(registryMeta.get(ticker) || {}), ...(wasNew ? { firstSeen: dateStr } : {}) };
+    upsertRow(ledger, ticker, meta, [dateStr, mentions, Number(shareOfVoice.toFixed(6)), close, volume, null]);
     stats.upserted += 1;
     if (wasNew) newlySeen.push({ ticker, mentions });
   }
