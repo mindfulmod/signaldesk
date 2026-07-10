@@ -290,12 +290,12 @@
 
       .table-scroll td:nth-child(1)::before { content: "Rank"; }
       .table-scroll td:nth-child(2)::before { content: "Ticker"; }
-      .table-scroll td:nth-child(3)::before { content: "Signal"; }
+      .table-scroll td:nth-child(3)::before { content: "Setup"; }
       .table-scroll td:nth-child(4)::before { content: "Quote"; }
-      .table-scroll td:nth-child(5)::before { content: "Mentions"; }
-      .table-scroll td:nth-child(6)::before { content: "Momentum"; }
+      .table-scroll td:nth-child(5)::before { content: "Attention"; }
+      .table-scroll td:nth-child(6)::before { content: "Acceleration"; }
       .table-scroll td:nth-child(7)::before { content: "Price/Vol"; }
-      .table-scroll td:nth-child(8)::before { content: "Source mix"; }
+      .table-scroll td:nth-child(8)::before { content: "Evidence mix"; }
 
       .table-scroll td:nth-child(2) {
         grid-template-columns: 1fr;
