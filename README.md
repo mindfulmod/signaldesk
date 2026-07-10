@@ -26,7 +26,8 @@ The current live app is a dark, mobile-first market scanner with:
 - an explainable discovery score that separates attention, confirmation, catalyst evidence, and crowding risk,
 - research radar, market-psychology stages, ticker detail panels, sparklines, watchlists, and CSV export,
 - an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse,
-- a **Springs board** (`springs.js`) — sustained-attention/price-compression setups from the [Theme Engine](THEME_ENGINE.md)'s coil detector, shown as three honest states (Coiled, Released, Dead coil) with their backtested base rates, never as a buy signal.
+- a **Springs board** (`springs.js`) — sustained-attention/price-compression setups from the [Theme Engine](THEME_ENGINE.md)'s coil detector, shown as three honest states (Coiled, Released, Dead coil) with their backtested base rates, never as a buy signal,
+- a **Themes rail** (`themes.js`) — theme heat scored on breadth *in excess of the whole market* (so a market-wide rebound doesn't fake a hot theme), staged Quiet/Naming/Diffusion/Wave/Decay; hot themes (Diffusion/Wave) also waive the Springs board's defensive-sector discount for their members.
 
 ## Weekday Data Refresh
 
@@ -40,6 +41,7 @@ It:
 - updates `data/history.json` and `data/history.js` so longer-range views improve over time,
 - upserts today's row into `data/ledger.json`/`data/ledger.js`, a per-ticker daily ledger (mentions, share-of-voice, close, volume, Wikipedia pageviews) that keeps a persistence trail even for tickers that fall out of the daily top-75,
 - refreshes `data/theme-registry.json`/`data/theme-registry.js` (GICS sub-industry baseline + `data/theme-overrides.json` manual theme curation),
+- scores theme heat and writes `data/themes.json`/`data/themes.js` for the Themes rail,
 - runs the frozen coil detector over the ledger and writes `data/springs.json`/`data/springs.js` for the Springs board,
 - commits those updated data files back to the repository.
 

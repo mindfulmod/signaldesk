@@ -616,6 +616,7 @@ h1 {
 .metrics-grid article,
 .buy-panel,
 .movers-panel,
+.themes-panel,
 .springs-panel,
 .table-panel,
 .side-panel {
@@ -674,6 +675,7 @@ h1 {
 /* ===== Shared panels ===== */
 .buy-panel,
 .movers-panel,
+.themes-panel,
 .springs-panel {
   width: min(1320px, 100%);
   margin: 0 auto 16px;
@@ -1970,6 +1972,7 @@ tbody tr.selected td:first-child {
 
   .movers-panel,
   .buy-panel,
+  .themes-panel,
   .springs-panel,
   .table-panel,
   .side-panel {

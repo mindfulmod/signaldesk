@@ -17,6 +17,7 @@ on:
       - "script.js"
       - "enhancements.js"
       - "springs.js"
+      - "themes.js"
       - "index.html"
       - "styles.css"
 
@@ -45,18 +46,19 @@ jobs:
           node --check script.js
           node --check enhancements.js
           node --check springs.js
+          node --check themes.js
           node --check scripts/update-data.mjs
           for f in scripts/lib/*.mjs; do node --check "$f"; done
 
       - name: Run unit tests
-        run: node --test scripts/test/
+        run: node --test scripts/test/*.test.mjs
 
       - name: Refresh public no-key data
         run: node scripts/update-data.mjs
 
       - name: Commit refreshed data
         run: |
-          FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js"
+          FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js data/themes.json data/themes.js"
           if git diff --quiet -- $FILES; then
             echo "No data changes to commit."
             exit 0

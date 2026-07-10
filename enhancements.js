@@ -671,6 +671,7 @@
         .market-pulse,
         .buy-panel,
         .movers-panel,
+        .themes-panel,
         .springs-panel,
         .dashboard-grid {
           width: 100%;

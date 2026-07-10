@@ -2,6 +2,7 @@ import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
 import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
 import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
+import { computeThemeHeat, saveThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -77,6 +78,9 @@ const SOURCES = [
 // so when one of them actually moves we can explain why. They do NOT get a ranking
 // head-start — they only earn a spot in the table if their real signal warrants it.
 const MAJORS = [
+  // SPY first: the Theme Engine's Layer 1 beta guard needs a live SPY price
+  // series in the ledger to compute relative returns.
+  ["SPY", "SPDR S&P 500 ETF Trust"],
   ["AAPL", "Apple Inc."], ["MSFT", "Microsoft Corp."], ["NVDA", "NVIDIA Corp."],
   ["AMZN", "Amazon.com Inc."], ["GOOGL", "Alphabet Inc."], ["META", "Meta Platforms Inc."],
   ["TSLA", "Tesla Inc."], ["AVGO", "Broadcom Inc."], ["AMD", "Advanced Micro Devices Inc."],
@@ -326,7 +330,8 @@ async function main() {
 
   await updateLedgerFromRun({ events, signals, failures });
   await refreshThemeRegistryStep(failures);
-  await computeSpringsStep(failures);
+  const hotTickers = await computeThemeHeatStep(failures);
+  await computeSpringsStep(failures, hotTickers);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -1686,18 +1691,37 @@ async function loadProtectedTickers() {
 
 // Runs the frozen coil detector (THEME_ENGINE.md Layer 3) over the ledger and
 // writes data/springs.json. Uses this run's freshly-refreshed GICS baseline
-// for sector classification. hotThemeTickers is left empty until Layer 1
-// (theme heat, build item 4) exists to say which themes are actually hot.
-async function computeSpringsStep(failures) {
+// for sector classification, and this run's theme-heat output (Layer 1) to
+// rank hot-theme coils first / waive the defensive-sector discount for them
+// (the CEG/VST exception THEME_ENGINE.md calls out).
+async function computeSpringsStep(failures, hotTickers = new Set()) {
   try {
     const ledger = await loadLedger();
     const registry = await loadThemeRegistry();
-    const springs = computeSprings(ledger, registry.gics || {});
+    const springs = computeSprings(ledger, registry.gics || {}, { hotThemeTickers: hotTickers });
     await saveSprings(springs);
     const counts = springs.springs.reduce((acc, s) => ({ ...acc, [s.state]: (acc[s.state] || 0) + 1 }), {});
     console.log(`Springs: ${springs.springs.length} classified — ${JSON.stringify(counts)}`);
   } catch (error) {
     failures.push(`Springs: ${error.message}`);
+  }
+}
+
+// Runs Layer 1 (theme heat) over the ledger + theme registry and writes
+// data/themes.json. Returns the set of tickers inside a "hot" theme
+// (stage diffusion/wave) for computeSpringsStep to rank against.
+async function computeThemeHeatStep(failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const themes = computeThemeHeat(ledger, registry);
+    await saveThemes(themes);
+    const staged = themes.themes.reduce((acc, t) => ({ ...acc, [t.stage]: (acc[t.stage] || 0) + 1 }), {});
+    console.log(`Theme heat: ${themes.themes.length} themes — ${JSON.stringify(staged)}`);
+    return hotThemeTickers(themes);
+  } catch (error) {
+    failures.push(`Theme heat: ${error.message}`);
+    return new Set();
   }
 }
 
