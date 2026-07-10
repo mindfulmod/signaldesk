@@ -13,6 +13,7 @@ on:
     paths:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
+      - "scripts/lib/**"
       - "script.js"
       - "enhancements.js"
       - "index.html"
@@ -43,19 +44,20 @@ jobs:
           node --check script.js
           node --check enhancements.js
           node --check scripts/update-data.mjs
+          for f in scripts/lib/*.mjs; do node --check "$f"; done
 
       - name: Refresh public no-key data
         run: node scripts/update-data.mjs
 
       - name: Commit refreshed data
         run: |
-          if git diff --quiet -- data/signals.json data/signals.js data/history.json data/history.js; then
+          if git diff --quiet -- data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js; then
             echo "No data changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/signals.json data/signals.js data/history.json data/history.js
+          git add data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js
           git commit -m "Refresh public stock signal data"
           git push

@@ -1,4 +1,5 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
+import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -319,6 +320,8 @@ async function main() {
   // Standalone market-moving-news feed for "Driving the tape" (not tied to ranking).
   const marketNews = buildMarketNews(events);
   console.log(`Market news feed: ${marketNews.length} move-driving headlines`);
+
+  await updateLedgerFromRun({ events, signals, failures });
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -1606,6 +1609,48 @@ function clamp(min, max, value) {
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Builds this run's per-ticker mention/price maps and folds them into
+// data/ledger.json (today's row upserted, new tickers backfilled, pageviews
+// refreshed once/day, dormant tickers pruned). Skipped when the run produced
+// no fresh events, so a throttled run never writes a zeroed-out ledger day.
+async function updateLedgerFromRun({ events, signals, failures }) {
+  if (!events.length) return;
+  const dateStr = new Date().toISOString().slice(0, 10);
+  const mentionsByTicker = new Map();
+  const priceByTicker = new Map();
+  for (const event of events) {
+    if (!event.ticker) continue;
+    mentionsByTicker.set(event.ticker, (mentionsByTicker.get(event.ticker) || 0) + (Number(event.mentions) || 0));
+    if (event.source === "Price/Volume" && Number.isFinite(event.lastPrice)) {
+      priceByTicker.set(event.ticker, { close: event.lastPrice, relVolume: Number(event.relativeVolume) || null });
+    }
+  }
+  const totalMentions = [...mentionsByTicker.values()].reduce((sum, value) => sum + value, 0);
+
+  const signalByTicker = new Map(signals.map((item) => [item.ticker, item]));
+  const registryMeta = new Map();
+  for (const entry of stockRegistry.values()) {
+    const signal = signalByTicker.get(entry.ticker);
+    registryMeta.set(entry.ticker, {
+      name: signal?.name || entry.name,
+      sector: signal?.sector || entry.sector || null,
+      sub: signal?.industry || entry.industry || null,
+      article: articleFromWikipediaUrl(signal?.descriptionUrl) || undefined,
+    });
+  }
+
+  const ledger = await loadLedger();
+  try {
+    const stats = await updateLedger({ ledger, dateStr, mentionsByTicker, totalMentions, priceByTicker, registryMeta, failures });
+    await saveLedger(ledger);
+    console.log(
+      `Ledger: upserted ${stats.upserted}, backfilled ${stats.backfilled}, pageviews ${stats.pageviewsFetched}, pruned ${stats.pruned}, tracking ${Object.keys(ledger.tickers).length} tickers`
+    );
+  } catch (error) {
+    failures.push(`Ledger update: ${error.message}`);
+  }
 }
 
 main().catch((error) => {

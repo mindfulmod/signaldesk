@@ -37,6 +37,7 @@ It:
 - runs `scripts/update-data.mjs`,
 - refreshes `data/signals.json` and `data/signals.js`,
 - updates `data/history.json` and `data/history.js` so longer-range views improve over time,
+- upserts today's row into `data/ledger.json`/`data/ledger.js`, a per-ticker daily ledger (mentions, share-of-voice, close, relative volume, Wikipedia pageviews) that keeps a persistence trail even for tickers that fall out of the daily top-75 — the input the [Theme Engine](THEME_ENGINE.md)'s coil detector reads,
 - commits those updated data files back to the repository.
 
 The latest refresh appears on the public GitHub Pages site after GitHub Pages finishes publishing the commit.
