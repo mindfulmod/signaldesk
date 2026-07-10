@@ -14,6 +14,7 @@ on:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
       - "scripts/lib/**"
+      - "data/theme-overrides.json"
       - "script.js"
       - "enhancements.js"
       - "springs.js"

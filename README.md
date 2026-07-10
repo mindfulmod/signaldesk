@@ -82,7 +82,8 @@ The updater uses public no-key sources only:
 - CNBC RSS
 - MarketWatch RSS
 - public Yahoo/Stooq price and volume data
-- Wikipedia public summaries for company context
+- Wikipedia public summaries, pageviews, and S&P 500 constituent data for company context and the Theme Engine
+- [ntfy.sh](https://ntfy.sh) for optional push alerts
 
 No API keys are required. If public sources are temporarily unreachable, the updater keeps the last working snapshot instead of replacing the dashboard with empty data.
 
