@@ -78,15 +78,21 @@ export function relativeReturn(memberCloses, spyCloses, window = REL_RETURN_WIND
 
 // Did this series make a new `yearWindow`-session high at any point within
 // the last `lookback` sessions? (Causal: only counts a day as a "new high"
-// using the trailing window as of that day.)
+// using the *prior* trailing window as of that day -- today's own close must
+// not be included in the comparison set, and the comparison must be strict,
+// or a flat/tied series tautologically "makes a new high" every day. Requires
+// a genuinely full yearWindow of prior data -- a partial-window allowance
+// let `Math.max(...[])` degenerate to -Infinity for short series, which made
+// *any* finite close look like a "new high" once the ledger had only a
+// couple of rows.)
 export function madeNewHighRecently(closes, { lookback = NEW_HIGH_LOOKBACK, yearWindow = NEW_HIGH_YEAR_WINDOW } = {}) {
   const n = closes.length;
   for (let i = Math.max(0, n - lookback); i < n; i += 1) {
     if (!Number.isFinite(closes[i])) continue;
-    const start = Math.max(0, i - yearWindow + 1);
-    if (i + 1 - start < Math.min(yearWindow, i + 1)) continue;
-    const trailing = closes.slice(start, i + 1).filter(Number.isFinite);
-    if (closes[i] >= Math.max(...trailing)) return true;
+    const start = Math.max(0, i - yearWindow);
+    const priorTrailing = closes.slice(start, i).filter(Number.isFinite);
+    if (priorTrailing.length < yearWindow) continue;
+    if (closes[i] > Math.max(...priorTrailing)) return true;
   }
   return false;
 }

@@ -25,6 +25,23 @@ test("madeNewHighRecently: false for a series stuck well below its trailing high
   assert.equal(madeNewHighRecently(closes, { lookback: 60, yearWindow: 252 }), false);
 });
 
+// Regression test: today's own close must not be included in the trailing
+// max it's compared against, or the check is tautologically true for any
+// flat/monotonic-non-decreasing series (the bug this guards against).
+test("madeNewHighRecently: a flat series is not a 'new high' every day", () => {
+  const closes = Array.from({ length: 300 }, () => 100);
+  assert.equal(madeNewHighRecently(closes), false);
+});
+
+// Regression test: a ticker with only a couple of ledger rows must not
+// register as a "new high" -- Math.max(...[]) is -Infinity, which made any
+// finite close look like a record once the prior-window length check was
+// satisfied by an (incorrectly) near-empty window.
+test("madeNewHighRecently: a brand-new series with almost no history is false, not a trivial true", () => {
+  assert.equal(madeNewHighRecently([210.96, 210.96]), false);
+  assert.equal(madeNewHighRecently([100]), false);
+});
+
 test("computeDecaySignal: detects a theme index falling below its trailing average", () => {
   const spy = Array.from({ length: 150 }, () => 100);
   // Members outperform early, then fade back to flat -- equal-weight index

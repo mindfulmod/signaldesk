@@ -27,7 +27,7 @@ The current live app is a dark, mobile-first market scanner with:
 - research radar, market-psychology stages, ticker detail panels, sparklines, watchlists, and CSV export,
 - an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse,
 - a **Springs board** (`springs.js`) — sustained-attention/price-compression setups from the [Theme Engine](THEME_ENGINE.md)'s coil detector, shown as three honest states (Coiled, Released, Dead coil) with their backtested base rates, never as a buy signal,
-- a **Themes rail** (`themes.js`) — theme heat scored on breadth *in excess of the whole market* (so a market-wide rebound doesn't fake a hot theme), staged Quiet/Naming/Diffusion/Wave/Decay; hot themes (Diffusion/Wave) also waive the Springs board's defensive-sector discount for their members,
+- a **Themes rail** (`themes.js`) — theme heat scored on breadth *in excess of the whole market* (so a market-wide rebound doesn't fake a hot theme), staged Quiet/Naming/Diffusion/Wave/Decay; hot themes (Diffusion/Wave) also waive the Springs board's defensive-sector discount for their members. Click a theme card to open its **diffusion map** (Layer 2) — a supply-chain table of that theme's members ordered ran → running → coiled → lagging, so you can see who's next,
 - a **What changed** feed (`alerts.js`) — every coil release, new coil inside a hot theme, theme stage transition, and dead-coil demotion, logged on-site the moment it happens (each fires at most once per ticker/theme per state change), plus a weekly theme/springs digest; optional push notifications via [ntfy.sh](https://ntfy.sh) are off by default (see below).
 
 ## Weekday Data Refresh
@@ -44,6 +44,7 @@ It:
 - refreshes `data/theme-registry.json`/`data/theme-registry.js` (GICS sub-industry baseline + `data/theme-overrides.json` manual theme curation),
 - scores theme heat and writes `data/themes.json`/`data/themes.js` for the Themes rail,
 - runs the frozen coil detector over the ledger and writes `data/springs.json`/`data/springs.js` for the Springs board,
+- classifies each hot theme's members (ran/running/coiled/lagging/dead) and writes `data/diffusion-map.json`/`data/diffusion-map.js` (plus `data/diffusion-state.json`, internal — tracks how long each member has held its current state),
 - diffs this run's springs/themes against the last recorded state, appends any lifecycle changes to `data/alerts-log.json`/`data/alerts-log.js` (the What changed feed) and `data/alerts-state.json` (internal dedup bookkeeping — do not hand-edit),
 - commits those updated data files back to the repository.
 

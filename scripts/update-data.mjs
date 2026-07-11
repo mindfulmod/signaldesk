@@ -3,6 +3,7 @@ import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from ".
 import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
 import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
 import { computeThemeHeat, saveThemes, loadThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
+import { computeDiffusionMap, saveDiffusionMap, loadDiffusionState, saveDiffusionState } from "./lib/diffusion-map.mjs";
 import {
   loadAlertState,
   saveAlertState,
@@ -346,6 +347,7 @@ async function main() {
   await refreshThemeRegistryStep(failures);
   const hotTickers = await computeThemeHeatStep(failures);
   await computeSpringsStep(failures, hotTickers);
+  await computeDiffusionMapStep(failures);
   await runAlertsStep(failures, hotTickers);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
@@ -1719,6 +1721,29 @@ async function computeSpringsStep(failures, hotTickers = new Set()) {
     console.log(`Springs: ${springs.springs.length} classified — ${JSON.stringify(counts)}`);
   } catch (error) {
     failures.push(`Springs: ${error.message}`);
+  }
+}
+
+// Runs the Layer 2 diffusion map over the ledger + theme registry + this
+// run's springs.json: within each theme, who's ran, running, coiled, or
+// lagging. Writes data/diffusion-map.json and updates data/diffusion-state.json
+// (per-ticker "since" dates for the price-only states, which -- unlike
+// springs' own regime tracking -- have no other persisted start date).
+async function computeDiffusionMapStep(failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const springs = await loadSprings();
+    const springsByTicker = new Map((springs.springs || []).map((s) => [s.ticker, s.state]));
+    const prevStateHistory = await loadDiffusionState();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const { payload, nextStateHistory } = computeDiffusionMap(ledger, registry, springsByTicker, prevStateHistory, dateStr);
+    await saveDiffusionMap(payload);
+    await saveDiffusionState(nextStateHistory);
+    console.log(`Diffusion map: ${payload.themes.length} themes with classifiable members`);
+  } catch (error) {
+    failures.push(`Diffusion map: ${error.message}`);
   }
 }
 
