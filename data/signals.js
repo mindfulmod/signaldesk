@@ -1,5 +1,5 @@
 window.SIGNALDESK_DATA = {
-  "generatedAt": "2026-07-13T15:59:25.335Z",
+  "generatedAt": "2026-07-13T18:11:08.347Z",
   "dataMode": "real-public-no-key",
   "sourceNote": "Real snapshot from public no-key sources with dynamic ticker discovery. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
   "discoveryNote": "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
@@ -26,29 +26,102 @@ window.SIGNALDESK_DATA = {
     "Reddit Finance: 403 Blocked",
     "Reddit Finance: 403 Blocked",
     "Reddit Finance: 403 Blocked",
+    "Wallstreetbets: 429 Too Many Requests",
     "Reddit Finance: 429 Too Many Requests",
     "Reddit Finance: 429 Too Many Requests",
-    "Reddit Finance: 429 Too Many Requests"
+    "Reddit Finance: 429 Too Many Requests",
+    "GDELT News: fetch failed"
   ],
   "signals": [
     {
-      "ticker": "BATL",
-      "name": "Battalion Oil Corp",
-      "mentions": 45,
-      "momentum": 35,
-      "sentiment": 0.10555555555555554,
-      "priceMove": 5.738395442503237,
-      "lastPrice": 1.82,
-      "quoteAsOf": "2026-07-13T15:55:53.000Z",
+      "ticker": "SRXH",
+      "name": "SRX Global Inc.",
+      "mentions": 32,
+      "momentum": 60,
+      "sentiment": 0.09062499999999998,
+      "priceMove": 3.1249992549419554,
+      "lastPrice": 2.42,
+      "quoteAsOf": "2026-07-13T18:07:39.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.965357284106302,
+      "relativeVolume": 1.0388843566658048,
       "optionsActivity": 0,
-      "signalScore": 58.40150730658974,
+      "signalScore": 56.515286655205,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
-        "ApeWisdom": 3,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 14,
+        "Price/Volume": 10
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "SRXH FINRA short volume 69% of reported volume (8,450,699.341 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SRXH $2.42, price +10.0%, volume 0.2x",
+          "url": "https://finance.yahoo.com/quote/SRXH",
+          "published": "2026-07-13T18:08:00.761Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SRXH It would Beehoove the hell out of management to do the Buy-Back now while the stock is cheap, wouldn&#39;t you think? Let&#39;s all hope they already know that!",
+          "url": "https://stocktwits.com/Thunder_Struck/message/658926989",
+          "published": "2026-07-13T18:10:00Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SRXH all sorts of tickers halting up today, are we next?",
+          "url": "https://stocktwits.com/sleighbell/message/658926645",
+          "published": "2026-07-13T18:07:22Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SRXH BIG BANK WINS",
+          "url": "https://stocktwits.com/ProfeJR1984/message/658926566",
+          "published": "2026-07-13T18:06:48Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SRXH market cap based on float alone - not total outstanding shares  \nThus the market cap is wrong on this site - along with share count . Watch out for slippery bullshit",
+          "url": "https://stocktwits.com/Badcuda2/message/658926465",
+          "published": "2026-07-13T18:05:57Z"
+        }
+      ],
+      "marketCap": 1428416541,
+      "capTier": "large"
+    },
+    {
+      "ticker": "BATL",
+      "name": "Battalion Oil Corp",
+      "mentions": 51,
+      "momentum": 13.333333333333334,
+      "sentiment": 0.11176470588235293,
+      "priceMove": 8.736657811671282,
+      "lastPrice": 1.9,
+      "quoteAsOf": "2026-07-13T18:07:41.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0188619986750027,
+      "optionsActivity": 0,
+      "signalScore": 54.77333544484271,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 4,
         "Hacker News": 4,
         "4chan": 0,
         "GDELT News": 0,
@@ -59,7 +132,7 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 13,
-        "Price/Volume": 17
+        "Price/Volume": 22
       },
       "latest": [
         {
@@ -70,195 +143,51 @@ window.SIGNALDESK_DATA = {
         },
         {
           "source": "ApeWisdom",
-          "title": "12 social mentions on ApeWisdom (up from 1 a day ago)",
+          "title": "15 social mentions on ApeWisdom (up from 1 a day ago)",
           "url": "https://apewisdom.io/stocks/BATL/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
           "source": "Price/Volume",
-          "title": "BATL $1.82, price +15.2%, volume 0.5x",
+          "title": "BATL $1.90, price +20.3%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/BATL",
-          "published": "2026-07-13T15:56:00.276Z"
+          "published": "2026-07-13T18:07:49.499Z"
         },
         {
           "source": "StockTwits",
-          "title": "$BATL",
-          "url": "https://stocktwits.com/Hippie2366/message/658908253",
-          "published": "2026-07-13T15:56:51Z"
+          "title": "$BATL shorts mad at us... doesn&#39;t make sense but they mad",
+          "url": "https://stocktwits.com/Note7Creole/message/658926946",
+          "published": "2026-07-13T18:09:38Z"
         },
         {
           "source": "StockTwits",
-          "title": "$BATL can we do a welfare check on Geno?",
-          "url": "https://stocktwits.com/Yards/message/658908219",
-          "published": "2026-07-13T15:56:37Z"
+          "title": "$BATL BRING ON THE GOD CANDLES",
+          "url": "https://stocktwits.com/Seren6/message/658926737",
+          "published": "2026-07-13T18:08:03Z"
         },
         {
           "source": "StockTwits",
-          "title": "$BATL send",
-          "url": "https://stocktwits.com/nerodante/message/658908069",
-          "published": "2026-07-13T15:55:28Z"
+          "title": "$BATL America",
+          "url": "https://stocktwits.com/hailmaryfullofgrace/message/658926729",
+          "published": "2026-07-13T18:07:57Z"
         }
       ],
-      "marketCap": 40074305,
+      "marketCap": 41835813,
       "capTier": "small"
-    },
-    {
-      "ticker": "YOU",
-      "name": "CLEAR Secure",
-      "mentions": 123,
-      "momentum": 35,
-      "sentiment": 0.0024390243902439033,
-      "priceMove": -0.16673889590438018,
-      "lastPrice": 52.955,
-      "quoteAsOf": "2026-07-13T15:55:47.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9766287247851346,
-      "optionsActivity": 0,
-      "signalScore": 53.39652543013241,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 4,
-        "Hacker News": 18,
-        "4chan": 88,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "18 social mentions on ApeWisdom (up from 4 a day ago)",
-          "url": "https://apewisdom.io/stocks/YOU/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Who&#039;s still buying BTC at this level? BTC has already come a long way. Are you still buying here, waiting for a pullback, or just holding what you already have? >Curious what everyone&#039;s plan is.",
-          "url": "https://boards.4chan.org/biz/thread/62475235",
-          "published": "2026-07-13T15:54:59.269Z"
-        },
-        {
-          "source": "4chan",
-          "title": "when did you realize the economy is fake?",
-          "url": "https://boards.4chan.org/biz/thread/62472109",
-          "published": "2026-07-13T15:54:59.274Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
-        }
-      ],
-      "description": "Clear Secure, Inc.  is a biometrics-based technology company headquartered in New York City.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Clear_Secure"
-    },
-    {
-      "ticker": "S",
-      "name": "SentinelOne Inc",
-      "mentions": 108,
-      "momentum": 35,
-      "sentiment": 0.025462962962962958,
-      "priceMove": 0.18642826482829833,
-      "lastPrice": 18.6,
-      "quoteAsOf": "2026-07-13T15:55:47.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9725562038645437,
-      "optionsActivity": 0,
-      "signalScore": 52.01402310433795,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 11,
-        "ApeWisdom": 0,
-        "Hacker News": 4,
-        "4chan": 88,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#15)",
-          "url": "https://stocktwits.com/symbol/S",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/pmg/ - Precious Metals General >Why Gold & Silver? https://youtu.be/i3S4rl6ehiI https://youtu.be/gksenA5Al_A https://youtu.be/FI7NnOg2rxo >Huge deficits in minerals such as silver by 2050 inevitable https://youtu.be/iibsrDXdEos >Bullion de",
-          "url": "https://boards.4chan.org/biz/thread/62471263",
-          "published": "2026-07-13T15:54:59.266Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Who&#039;s still buying BTC at this level? BTC has already come a long way. Are you still buying here, waiting for a pullback, or just holding what you already have? >Curious what everyone&#039;s plan is.",
-          "url": "https://boards.4chan.org/biz/thread/62475235",
-          "published": "2026-07-13T15:54:59.269Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "it&#039;s over sell it all now before it&#039;s too late",
-          "url": "https://boards.4chan.org/biz/thread/62476047",
-          "published": "2026-07-13T15:54:59.300Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Sick of Elon Anyone else sick of Elon Musk? He&#039;s always so fuckin confident and always boasting about some shit that he will never do, taunting other companies and billionaires. It infuriates me that there are still people who can&#039",
-          "url": "https://boards.4chan.org/biz/thread/62472724",
-          "published": "2026-07-13T15:54:59.302Z"
-        }
-      ],
-      "sector": "Technology Services",
-      "industry": "Packaged Software",
-      "description": "SentinelOne, Inc.  is an American cybersecurity company listed on NYSE based in Mountain View, California.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/SentinelOne"
     },
     {
       "ticker": "SOXS",
       "name": "SOXS",
-      "mentions": 36,
-      "momentum": 35,
-      "sentiment": 0.04861111111111113,
-      "priceMove": 4.0713515139190495,
-      "lastPrice": 4.54,
-      "quoteAsOf": "2026-07-13T15:56:03.000Z",
+      "mentions": 39,
+      "momentum": 8.333333333333332,
+      "sentiment": 0.08717948717948719,
+      "priceMove": 5.630971209307839,
+      "lastPrice": 4.64,
+      "quoteAsOf": "2026-07-13T18:07:53.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9644695701881479,
+      "relativeVolume": 1.0040970869972983,
       "optionsActivity": 0,
-      "signalScore": 51.62382568911196,
+      "signalScore": 49.660503726051736,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -274,7 +203,7 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 12,
-        "Price/Volume": 13
+        "Price/Volume": 16
       },
       "latest": [
         {
@@ -285,51 +214,254 @@ window.SIGNALDESK_DATA = {
         },
         {
           "source": "ApeWisdom",
-          "title": "8 social mentions on ApeWisdom (up from 1 a day ago)",
+          "title": "10 social mentions on ApeWisdom (up from 1 a day ago)",
           "url": "https://apewisdom.io/stocks/SOXS/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
           "source": "Price/Volume",
-          "title": "SOXS $4.54, price +11.3%, volume 0.5x",
+          "title": "SOXS $4.64, price +13.7%, volume 0.7x",
           "url": "https://finance.yahoo.com/quote/SOXS",
-          "published": "2026-07-13T15:56:04.913Z"
+          "published": "2026-07-13T18:07:54.151Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SOXL $SOXS $TQQQ $SQQQ $SPY  \nBREAKING: Trump says the U.S. will take over the Strait of Hormuz and charge a 20% fee on all cargo shipped through the critical oil passageway. \n \nhttps://www.politico.com/news/2026/07/13/donald-trump-strait-",
-          "url": "https://stocktwits.com/chamono1942/message/658908090",
-          "published": "2026-07-13T15:55:36Z"
+          "title": "$SOXL $SOXS $TQQQ $SQQQ $SPY  \nIT IS OVER  \n \nSTOCKS WILL NEVER RECOVER",
+          "url": "https://stocktwits.com/chamono1942/message/658926362",
+          "published": "2026-07-13T18:05:09Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SOXL $SOXS $TQQQ $SQQQ $SPY  \n \n👀 The US military has imposed a 20% tariff on Hormuz!",
-          "url": "https://stocktwits.com/chamono1942/message/658907272",
-          "published": "2026-07-13T15:49:17Z"
+          "title": "$SOXS  I just sold half for 17% gains.",
+          "url": "https://stocktwits.com/MollyWantsACracker/message/658926320",
+          "published": "2026-07-13T18:04:55Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SOXS I have a feeling the sp will jump 10x on the 15th 😁",
-          "url": "https://stocktwits.com/TakehashiGoldstein/message/658906425",
-          "published": "2026-07-13T15:42:54Z"
+          "title": "$SOXS they forgot those 35%+ days single-day moves from before . . . especially with Selling just starting in $AMD $INTC.X",
+          "url": "https://stocktwits.com/sister/message/658925777",
+          "published": "2026-07-13T18:00:56Z"
         }
       ],
       "description": "Solar X-Ray Spectrometer, or SOXS, was an experimental payload launched onboard Indian geostationary satellite GSAT-2 by the Indian Space Research Organisation, ISRO.  SOXS collected data about X-ray emissions from solar flares with high energy and temporal resolutions.",
       "descriptionUrl": "https://en.wikipedia.org/wiki/SOXS"
     },
     {
+      "ticker": "APLD",
+      "name": "Applied Digital Corp.",
+      "mentions": 44,
+      "momentum": 41.935483870967744,
+      "sentiment": -0.052727272727272734,
+      "priceMove": -1.490587831384991,
+      "lastPrice": 28.88,
+      "quoteAsOf": "2026-07-13T18:07:46.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.108178220218866,
+      "optionsActivity": 0,
+      "signalScore": 45.25169631001486,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 12,
+        "ApeWisdom": 3,
+        "Hacker News": 7,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 9
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "APLD FINRA short volume 60% of reported volume (3,528,685.281 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#10)",
+          "url": "https://stocktwits.com/symbol/APLD",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "ApeWisdom",
+          "title": "7 social mentions on ApeWisdom (up from 1 a day ago)",
+          "url": "https://apewisdom.io/stocks/APLD/",
+          "published": "2026-07-13T18:06:22.734Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "APLD $28.88, price -7.3%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/APLD",
+          "published": "2026-07-13T18:07:46.965Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$APLD  Therefore, I don’t buy the argument that the uncertainty is mainly caused by AI companies’ high spending or debt. In my view, the biggest source of uncertainty is the current geopolitical situation. Ongoing conflicts and the actions ",
+          "url": "https://stocktwits.com/MoneyStarD/message/658926987",
+          "published": "2026-07-13T18:09:58Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$APLD $49 +2 deals ago. There’s nothing going on in the market until Trump stopped being Iran’s bitch. Nothing we can do about it.",
+          "url": "https://stocktwits.com/SniggleFritz/message/658926462",
+          "published": "2026-07-13T18:05:55Z"
+        }
+      ],
+      "marketCap": 8253024286,
+      "capTier": "large",
+      "sector": "Technology Services",
+      "industry": "Data Processing Services",
+      "description": "Applied Digital Data Systems, Inc.  (ADDS), was a supplier of video display computer terminals, founded in 1969 by Leeam Lowin and William J.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Applied_Digital_Data_Systems"
+    },
+    {
+      "ticker": "IREN",
+      "name": "IREN Ltd",
+      "mentions": 21,
+      "momentum": 90.9090909090909,
+      "sentiment": -0.06857142857142857,
+      "priceMove": -2.2408958266096843,
+      "lastPrice": 38.72,
+      "quoteAsOf": "2026-07-13T18:08:03.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.1286688695165803,
+      "optionsActivity": 0,
+      "signalScore": 44.6141340742532,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 2,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 8
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "IREN FINRA short volume 45% of reported volume (5,806,043.66 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#21)",
+          "url": "https://stocktwits.com/symbol/IREN",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "IREN $38.72, price -5.9%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/IREN",
+          "published": "2026-07-13T18:08:07.533Z"
+        }
+      ],
+      "marketCap": 13837702257,
+      "capTier": "large",
+      "sector": "Technology Services",
+      "industry": "Data Processing Services",
+      "description": "IREN Ltd is an Australian company headquartered in Sydney, New South Wales.  IREN operates data centers that are supplied entirely with renewable energy.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/IREN"
+    },
+    {
+      "ticker": "YOU",
+      "name": "CLEAR Secure",
+      "mentions": 122,
+      "momentum": -0.8130081300813009,
+      "sentiment": 0.0009836065573770487,
+      "priceMove": -0.18614078777300802,
+      "lastPrice": 53.13,
+      "quoteAsOf": "2026-07-13T18:06:59.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.9865562639352213,
+      "optionsActivity": 0,
+      "signalScore": 44.44366667689706,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 4,
+        "Hacker News": 17,
+        "4chan": 87,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "ApeWisdom",
+          "title": "18 social mentions on ApeWisdom (up from 7 a day ago)",
+          "url": "https://apewisdom.io/stocks/YOU/",
+          "published": "2026-07-13T18:06:22.734Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
+          "url": "https://boards.4chan.org/biz/thread/60278989",
+          "published": "2026-07-13T18:06:23.021Z"
+        },
+        {
+          "source": "4chan",
+          "title": "You can do everything right financially and still be fucked over by your rulers. Never forget that.",
+          "url": "https://boards.4chan.org/biz/thread/62475151",
+          "published": "2026-07-13T18:06:23.052Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Living in a car Serious replies only. >I have a wife and 2 kids. >I live in Las Vegas, currently. >I have 2 wfh jobs and doordash on the side I have chosen not to renew my lease and will be moving out at the end of August, my wife and the k",
+          "url": "https://boards.4chan.org/biz/thread/62471812",
+          "published": "2026-07-13T18:06:23.059Z"
+        },
+        {
+          "source": "4chan",
+          "title": "SPACE X STOCK.... don&#039;t hear much about that anymore, do you?",
+          "url": "https://boards.4chan.org/biz/thread/62475580",
+          "published": "2026-07-13T18:06:23.064Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
+          "url": "https://boards.4chan.org/biz/thread/62473140",
+          "published": "2026-07-13T18:06:23.064Z"
+        }
+      ],
+      "description": "Clear Secure, Inc.  is a biometrics-based technology company headquartered in New York City.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Clear_Secure"
+    },
+    {
       "ticker": "ON",
       "name": "ON Semiconductor",
-      "mentions": 115,
-      "momentum": 35,
-      "sentiment": -0.007826086956521738,
-      "priceMove": -0.19913184508056378,
-      "lastPrice": 91.565,
-      "quoteAsOf": "2026-07-13T15:55:48.000Z",
+      "mentions": 116,
+      "momentum": 0.8695652173913043,
+      "sentiment": -0.009310344827586208,
+      "priceMove": -0.2474090746286819,
+      "lastPrice": 91.37,
+      "quoteAsOf": "2026-07-13T18:07:21.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9676064405472712,
+      "relativeVolume": 0.9671385419558073,
       "optionsActivity": 0,
-      "signalScore": 51.62193957200779,
+      "signalScore": 43.27210557472831,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -345,69 +477,69 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 0,
-        "Price/Volume": 5
+        "Price/Volume": 6
       },
       "latest": [
         {
           "source": "ApeWisdom",
           "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
           "url": "https://apewisdom.io/stocks/ON/",
-          "published": "2026-07-13T15:54:59.127Z"
+          "published": "2026-07-13T18:06:22.882Z"
         },
         {
           "source": "4chan",
           "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
           "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
+          "published": "2026-07-13T18:06:23.021Z"
+        },
+        {
+          "source": "4chan",
+          "title": "There are people on this board who unironically bought Elon&#039;s bags.",
+          "url": "https://boards.4chan.org/biz/thread/62476613",
+          "published": "2026-07-13T18:06:23.035Z"
+        },
+        {
+          "source": "4chan",
+          "title": "so when DTCC and Swift actually start using chainlink for their every day operations, wouldn&#039;t that mean the chainlink LLC would be making boatloads of cash from the fees? And wouldn&#039;t these fees be used to buy chainlink on the op",
+          "url": "https://boards.4chan.org/biz/thread/62476675",
+          "published": "2026-07-13T18:06:23.039Z"
         },
         {
           "source": "4chan",
           "title": "/smg/ - stock market general Greedy navigator edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingv",
           "url": "https://boards.4chan.org/biz/thread/62476065",
-          "published": "2026-07-13T15:54:59.263Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
+          "published": "2026-07-13T18:06:23.042Z"
         },
         {
           "source": "4chan",
           "title": "/XSG/ XRP Schizo General #2552 Previous: >>62445417 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
           "url": "https://boards.4chan.org/biz/thread/62474905",
-          "published": "2026-07-13T15:54:59.280Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
+          "published": "2026-07-13T18:06:23.044Z"
         }
       ],
-      "marketCap": 35884615684,
+      "marketCap": 35808194562,
       "capTier": "large"
     },
     {
-      "ticker": "IT",
-      "name": "Gartner",
-      "mentions": 86,
-      "momentum": 35,
-      "sentiment": 0.021511627906976746,
-      "priceMove": 0.2648653878900422,
-      "lastPrice": 139.31,
-      "quoteAsOf": "2026-07-13T15:55:40.000Z",
+      "ticker": "S",
+      "name": "SentinelOne Inc",
+      "mentions": 106,
+      "momentum": -1.8518518518518516,
+      "sentiment": 0.02594339622641509,
+      "priceMove": 0.1622453854047132,
+      "lastPrice": 18.495,
+      "quoteAsOf": "2026-07-13T18:07:39.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9540246686551097,
+      "relativeVolume": 0.9851581355161209,
       "optionsActivity": 0,
-      "signalScore": 49.28477194590913,
+      "signalScore": 42.67688858187552,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 69,
+        "StockTwits": 9,
+        "ApeWisdom": 0,
+        "Hacker News": 4,
+        "4chan": 88,
         "GDELT News": 0,
         "Google News": 0,
         "Bing News": 0,
@@ -420,574 +552,65 @@ window.SIGNALDESK_DATA = {
       },
       "latest": [
         {
-          "source": "ApeWisdom",
-          "title": "14 social mentions on ApeWisdom (up from 5 a day ago)",
-          "url": "https://apewisdom.io/stocks/IT/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#25)",
+          "url": "https://stocktwits.com/symbol/S",
+          "published": "2026-07-13T18:06:22.457Z"
         },
         {
           "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
+          "title": "There are people on this board who unironically bought Elon&#039;s bags.",
+          "url": "https://boards.4chan.org/biz/thread/62476613",
+          "published": "2026-07-13T18:06:23.035Z"
         },
         {
           "source": "4chan",
-          "title": "A couple years ago I read some post on here talking about \"scanning the chain for unclaimed coins\". What the fuck did he mean? Is that real? I remember googling it for like 2 minutes and finding nothing and I just remembered it again",
-          "url": "https://boards.4chan.org/biz/thread/62469503",
-          "published": "2026-07-13T15:54:59.294Z"
+          "title": "/pmg/ - Precious Metals General >Why Gold & Silver? https://youtu.be/i3S4rl6ehiI https://youtu.be/gksenA5Al_A https://youtu.be/FI7NnOg2rxo >Huge deficits in minerals such as silver by 2050 inevitable https://youtu.be/iibsrDXdEos >Bullion de",
+          "url": "https://boards.4chan.org/biz/thread/62471263",
+          "published": "2026-07-13T18:06:23.036Z"
         },
         {
           "source": "4chan",
-          "title": "I was divorce-raped from \"made it\" back down to \"never gonna make it\". So this is what happens to every guy who makes it, huh?",
-          "url": "https://boards.4chan.org/biz/thread/62474981",
-          "published": "2026-07-13T15:54:59.298Z"
-        },
-        {
-          "source": "4chan",
-          "title": "it&#039;s over sell it all now before it&#039;s too late",
-          "url": "https://boards.4chan.org/biz/thread/62476047",
-          "published": "2026-07-13T15:54:59.300Z"
+          "title": "BTC. XRP. DOGE. That&#039;s it. That&#039;s the post.",
+          "url": "https://boards.4chan.org/biz/thread/62475458",
+          "published": "2026-07-13T18:06:23.042Z"
         },
         {
           "source": "4chan",
           "title": "Sick of Elon Anyone else sick of Elon Musk? He&#039;s always so fuckin confident and always boasting about some shit that he will never do, taunting other companies and billionaires. It infuriates me that there are still people who can&#039",
           "url": "https://boards.4chan.org/biz/thread/62472724",
-          "published": "2026-07-13T15:54:59.302Z"
+          "published": "2026-07-13T18:06:23.052Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Living in a car Serious replies only. >I have a wife and 2 kids. >I live in Las Vegas, currently. >I have 2 wfh jobs and doordash on the side I have chosen not to renew my lease and will be moving out at the end of August, my wife and the k",
+          "url": "https://boards.4chan.org/biz/thread/62471812",
+          "published": "2026-07-13T18:06:23.059Z"
         }
       ],
-      "marketCap": 9327067657,
-      "capTier": "large",
-      "description": "Gartner, Inc.  is an American research and advisory firm focusing on business and technology topics.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Gartner"
+      "sector": "Technology Services",
+      "industry": "Packaged Software",
+      "description": "SentinelOne, Inc.  is an American cybersecurity company listed on NYSE based in Mountain View, California.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/SentinelOne"
     },
     {
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "mentions": 84,
+      "ticker": "BURU",
+      "name": "Nuburu, Inc.",
+      "mentions": 44,
       "momentum": 35,
-      "sentiment": 0.005714285714285714,
-      "priceMove": -0.12852335581573432,
-      "lastPrice": 238.008,
-      "quoteAsOf": "2026-07-13T15:55:52.000Z",
+      "sentiment": -0.12363636363636363,
+      "priceMove": -8.971130779179145,
+      "lastPrice": 0.1226,
+      "quoteAsOf": "2026-07-13T18:07:59.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9674962763425683,
+      "relativeVolume": 1.6847024020545094,
       "optionsActivity": 0,
-      "signalScore": 48.75582518108202,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 4,
-        "Hacker News": 3,
-        "4chan": 65,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "15 social mentions on ApeWisdom (up from 7 a day ago)",
-          "url": "https://apewisdom.io/stocks/BE/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/pmg/ - Precious Metals General >Why Gold & Silver? https://youtu.be/i3S4rl6ehiI https://youtu.be/gksenA5Al_A https://youtu.be/FI7NnOg2rxo >Huge deficits in minerals such as silver by 2050 inevitable https://youtu.be/iibsrDXdEos >Bullion de",
-          "url": "https://boards.4chan.org/biz/thread/62471263",
-          "published": "2026-07-13T15:54:59.266Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/XSG/ XRP Schizo General #2552 Previous: >>62445417 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
-          "url": "https://boards.4chan.org/biz/thread/62474905",
-          "published": "2026-07-13T15:54:59.280Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Any advice for going to college for Accounting at the ripe age of 26? I used to be a NEET and then a wagie at a supermarket.",
-          "url": "https://boards.4chan.org/biz/thread/62475211",
-          "published": "2026-07-13T15:54:59.289Z"
-        }
-      ],
-      "marketCap": 67699916135,
-      "capTier": "large",
-      "description": "Bloom Energy is an American public company that designs and manufactures solid oxide fuel cells (SOFCs) which independently produce electricity onsite for power generation in data centers, manufacturing, and other commercial sectors.  It was founded in 2001 and headquartered in…",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Bloom_Energy"
-    },
-    {
-      "ticker": "HL",
-      "name": "Hecla Mining Co/De/",
-      "mentions": 30,
-      "momentum": 150,
-      "sentiment": -0.019999999999999997,
-      "priceMove": -0.7005896625077952,
-      "lastPrice": 15.155,
-      "quoteAsOf": "2026-07-13T15:55:57.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0593269844476054,
-      "optionsActivity": 0,
-      "signalScore": 47.53364098449512,
+      "signalScore": 42.67123447480331,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
         "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 5,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 5
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "HL FINRA short volume 47% of reported volume (7,129,554.86 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - Stock Market General Weather futures edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingvi",
-          "url": "https://boards.4chan.org/biz/thread/62472496",
-          "published": "2026-07-13T15:54:59.403Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "HL $15.15, price -4.2%, volume 0.2x",
-          "url": "https://finance.yahoo.com/quote/HL",
-          "published": "2026-07-13T15:55:59.276Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$HYMC LMAOOOO IT&#39;S NOT A SILVER CO, YOU GUYS HERE DON&#39;T EVEN BELIEVE THE COMPANY&#39;S MESSAGING. \n \nHYCROFT WILL ALWAYS BE GOLD FIRST - THIS IS WHY THEY USE AUEQ, AS SILVER IS A BYPRODUCT. \n \nIF YOU WANT A PURE SILVER CO THEN YOU L",
-          "url": "https://stocktwits.com/AllinCapital/message/658890492",
-          "published": "2026-07-13T13:57:05Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$HL The mining sector is pricing in the precious metals boom. Silver and gold demand is strong, especially from industrial uses.",
-          "url": "https://stocktwits.com/GoyaGains/message/658870349",
-          "published": "2026-07-13T05:47:11Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$MMTLP  $NEM  $HL  $VLO  $MPC  \nMr. Stockman.....explains.....there ARE other &quot;real&quot; assets besides....oil.....so to speak. \n \nhttps://internationalman.com/articles/china-dumps-us-treasuries-and-buys-gold-as-americas-debt-explodes",
-          "url": "https://stocktwits.com/Westexer/message/658829943",
-          "published": "2026-07-11T19:32:30Z"
-        }
-      ],
-      "marketCap": 10164646467,
-      "capTier": "large",
-      "description": "Hecla Mining Company is a gold, silver, and other precious metals mining company based in Coeur d'Alene, Idaho.  Founded in 1891, it is the largest silver mining company in the United States and the 9th biggest mining company in the United States overall.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Hecla_Mining"
-    },
-    {
-      "ticker": "OR",
-      "name": "Osisko Gold Royalties",
-      "mentions": 76,
-      "momentum": 35,
-      "sentiment": -0.003157894736842106,
-      "priceMove": -0.07010362845812208,
-      "lastPrice": 28.76,
-      "quoteAsOf": "2026-07-13T15:53:57.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9727110410273965,
-      "optionsActivity": 0,
-      "signalScore": 46.870045406866595,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 3,
-        "Hacker News": 0,
-        "4chan": 62,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "6 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/OR/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Who&#039;s still buying BTC at this level? BTC has already come a long way. Are you still buying here, waiting for a pullback, or just holding what you already have? >Curious what everyone&#039;s plan is.",
-          "url": "https://boards.4chan.org/biz/thread/62475235",
-          "published": "2026-07-13T15:54:59.269Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/XSG/ XRP Schizo General #2552 Previous: >>62445417 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
-          "url": "https://boards.4chan.org/biz/thread/62474905",
-          "published": "2026-07-13T15:54:59.280Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
-        },
-        {
-          "source": "4chan",
-          "title": "I&#039;ve been a NEET for a long time and I&#039;m finally trying to get a job. I&#039;m not young, 40 next year, and don&#039;t have a job history or references. High school graduate. How fucked am I?",
-          "url": "https://boards.4chan.org/biz/thread/62449961",
-          "published": "2026-07-13T15:54:59.299Z"
-        }
-      ],
-      "marketCap": 5382498279,
-      "capTier": "large"
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood Markets, Inc.",
-      "mentions": 54,
-      "momentum": 35,
-      "sentiment": -0.008518518518518519,
-      "priceMove": -0.04167787029483852,
-      "lastPrice": 110.71,
-      "quoteAsOf": "2026-07-13T15:55:50.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.13328681847175,
-      "optionsActivity": 0,
-      "signalScore": 46.62873447961815,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 4,
-        "Hacker News": 10,
-        "4chan": 17,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "HOOD FINRA short volume 64% of reported volume (8,121,844.593 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "15 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/HOOD/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/XSG/ XRP Schizo General #2552 Previous: >>62445417 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
-          "url": "https://boards.4chan.org/biz/thread/62474905",
-          "published": "2026-07-13T15:54:59.280Z"
-        },
-        {
-          "source": "4chan",
-          "title": "shill me the new memecoin scams releasing on robinhood",
-          "url": "https://boards.4chan.org/biz/thread/62462015",
-          "published": "2026-07-13T15:54:59.310Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/XSG/ XRP Schizo General #2551 Previous: >>62418207 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
-          "url": "https://boards.4chan.org/biz/thread/62445417",
-          "published": "2026-07-13T15:54:59.329Z"
-        },
-        {
-          "source": "4chan",
-          "title": "So what made this board suddenly switch from crypto to boomer stocks? There&#039;s even jeets shilling on Robinhood threads on here and my normie co-workers are now \"day trading\" Do you retards not understand that you can&#039;t get rich of",
-          "url": "https://boards.4chan.org/biz/thread/62473409",
-          "published": "2026-07-13T15:54:59.331Z"
-        }
-      ],
-      "description": "Robinhood Markets, Inc.  is an American financial services company based in Menlo Park, California.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Robinhood_Markets"
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow Inc",
-      "mentions": 59,
-      "momentum": 35,
-      "sentiment": 0.04576271186440677,
-      "priceMove": 0.4446970086558872,
-      "lastPrice": 112.42,
-      "quoteAsOf": "2026-07-13T15:55:52.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9433733945014136,
-      "optionsActivity": 0,
-      "signalScore": 46.31815783105545,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 12,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 37,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#8)",
-          "url": "https://stocktwits.com/symbol/NOW",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "16 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/NOW/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Swift is rolling out its own blockchain right now in live production DTCC is going live on-chain later this year. Yet crypto is in the shitter, why?",
-          "url": "https://boards.4chan.org/biz/thread/62463144",
-          "published": "2026-07-13T15:54:59.274Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Is anything worth buying right now?",
-          "url": "https://boards.4chan.org/biz/thread/62475844",
-          "published": "2026-07-13T15:54:59.291Z"
-        },
-        {
-          "source": "4chan",
-          "title": "it&#039;s over sell it all now before it&#039;s too late",
-          "url": "https://boards.4chan.org/biz/thread/62476047",
-          "published": "2026-07-13T15:54:59.300Z"
-        },
-        {
-          "source": "4chan",
-          "title": "\"Bitcoin is a CIA asset\" Is the best narrative for BTC now when you have this guy tirelessly exposing it to public as nothing more than an expensive shitty payment service.",
-          "url": "https://boards.4chan.org/biz/thread/62475993",
-          "published": "2026-07-13T15:54:59.304Z"
-        }
-      ],
-      "marketCap": 115905020000,
-      "capTier": "large",
-      "sector": "Technology Services",
-      "industry": "Packaged Software",
-      "description": "ServiceNow, Inc.  is an American software company that supplies cloud computing platforms for the creation and management of automated business workflows.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/ServiceNow"
-    },
-    {
-      "ticker": "PATH",
-      "name": "UiPath, Inc.",
-      "mentions": 32,
-      "momentum": 35,
-      "sentiment": 0.06875,
-      "priceMove": 0.33711439061845694,
-      "lastPrice": 11.995,
-      "quoteAsOf": "2026-07-13T15:55:56.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1324171398722722,
-      "optionsActivity": 0,
-      "signalScore": 45.45115891551663,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 11,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 3,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "PATH FINRA short volume 51% of reported volume (30,414,711.468 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#11)",
-          "url": "https://stocktwits.com/symbol/PATH",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom",
-          "url": "https://apewisdom.io/stocks/PATH/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Why do older people hate it when people do this one simple trick? Almost a guranteed path to wealth.",
-          "url": "https://boards.4chan.org/biz/thread/62464817",
-          "published": "2026-07-13T15:54:59.348Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "PATH $11.99, price +2.7%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/PATH",
-          "published": "2026-07-13T15:55:57.100Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$PATH cant ever hold 12",
-          "url": "https://stocktwits.com/Kriptonite/message/658908259",
-          "published": "2026-07-13T15:56:54Z"
-        }
-      ],
-      "sector": "Technology Services",
-      "industry": "Packaged Software",
-      "description": "UiPath Inc.  is a global software company that develops artificial intelligence (AI) and agentic automation and orchestration software.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/UiPath"
-    },
-    {
-      "ticker": "AS",
-      "name": "Amer Sports",
-      "mentions": 57,
-      "momentum": 35,
-      "sentiment": -0.0063157894736842095,
-      "priceMove": -0.05948772433912306,
-      "lastPrice": 34.21,
-      "quoteAsOf": "2026-07-13T15:55:43.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9705226939461365,
-      "optionsActivity": 0,
-      "signalScore": 45.14205924502352,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 1,
-        "Hacker News": 1,
-        "4chan": 39,
-        "GDELT News": 6,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/AS/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/pmg/ - Precious Metals General >Why Gold & Silver? https://youtu.be/i3S4rl6ehiI https://youtu.be/gksenA5Al_A https://youtu.be/FI7NnOg2rxo >Huge deficits in minerals such as silver by 2050 inevitable https://youtu.be/iibsrDXdEos >Bullion de",
-          "url": "https://boards.4chan.org/biz/thread/62471263",
-          "published": "2026-07-13T15:54:59.266Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
-        },
-        {
-          "source": "4chan",
-          "title": "\"Bitcoin is a CIA asset\" Is the best narrative for BTC now when you have this guy tirelessly exposing it to public as nothing more than an expensive shitty payment service.",
-          "url": "https://boards.4chan.org/biz/thread/62475993",
-          "published": "2026-07-13T15:54:59.304Z"
-        }
-      ],
-      "marketCap": 19077801309,
-      "capTier": "large",
-      "description": "Amer Sports, Inc.  is a Finnish multinational sporting equipment division based in Helsinki, Finland.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Amer_Sports"
-    },
-    {
-      "ticker": "SMR",
-      "name": "NUSCALE POWER Corp",
-      "mentions": 20,
-      "momentum": 66.66666666666666,
-      "sentiment": -0.063,
-      "priceMove": -1.9164821612791982,
-      "lastPrice": 8.545,
-      "quoteAsOf": "2026-07-13T15:56:16.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.098303756418076,
-      "optionsActivity": 0,
-      "signalScore": 44.78277291489805,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 1,
         "Hacker News": 0,
         "4chan": 0,
         "GDELT News": 0,
@@ -997,52 +620,70 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 7
+        "FINRA Short Volume": 13,
+        "Price/Volume": 23
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "SMR FINRA short volume 47% of reported volume (7,656,024.095 shares)",
+          "title": "BURU FINRA short volume 56% of reported volume (30,529,155.048 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (down from 2 a day ago)",
-          "url": "https://apewisdom.io/stocks/SMR/",
-          "published": "2026-07-13T15:54:59.127Z"
+          "source": "Price/Volume",
+          "title": "BURU $0.12, price -17.2%, volume 2.0x",
+          "url": "https://finance.yahoo.com/quote/BURU",
+          "published": "2026-07-13T18:08:04.007Z"
         },
         {
-          "source": "Price/Volume",
-          "title": "SMR $8.54, price -5.5%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/SMR",
-          "published": "2026-07-13T15:56:17.895Z"
+          "source": "StockTwits",
+          "title": "$BURU yes",
+          "url": "https://stocktwits.com/Walshcode88/message/658926974",
+          "published": "2026-07-13T18:09:53Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$BURU i told you I am never wrong lol",
+          "url": "https://stocktwits.com/Walshcode88/message/658926923",
+          "published": "2026-07-13T18:09:23Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$BURU i feel this can hit .60 than $2.X soon.",
+          "url": "https://stocktwits.com/sammy0000/message/658926747",
+          "published": "2026-07-13T18:08:07Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$BURU are u sure? shorting more💪",
+          "url": "https://stocktwits.com/Mrsnutley/message/658926663",
+          "published": "2026-07-13T18:07:32Z"
         }
       ],
-      "description": "NuScale Power Corporation is a publicly traded American company that designs and markets small modular reactors (SMRs).  It is headquartered in Tigard, Oregon.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/NuScale_Power"
+      "marketCap": 21947929,
+      "capTier": "small"
     },
     {
-      "ticker": "SO",
-      "name": "Southern Company",
-      "mentions": 54,
+      "ticker": "GPUS",
+      "name": "Hyperscale Data, Inc.",
+      "mentions": 49,
       "momentum": 35,
-      "sentiment": 0.011111111111111112,
-      "priceMove": 0.01055598914899828,
-      "lastPrice": 96.155,
-      "quoteAsOf": "2026-07-13T15:55:42.000Z",
+      "sentiment": -0.08653061224489794,
+      "priceMove": -2.8994170102302044,
+      "lastPrice": 0.1247,
+      "quoteAsOf": "2026-07-13T18:07:50.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9837535716593993,
+      "relativeVolume": 1.0555640404762296,
       "optionsActivity": 0,
-      "signalScore": 44.54380190166681,
+      "signalScore": 42.623094127925356,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
-        "ApeWisdom": 2,
-        "Hacker News": 10,
-        "4chan": 33,
+        "ApeWisdom": 0,
+        "Hacker News": 15,
+        "4chan": 0,
         "GDELT News": 0,
         "Google News": 0,
         "Bing News": 0,
@@ -1050,72 +691,119 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 1
+        "FINRA Short Volume": 13,
+        "Price/Volume": 13
       },
       "latest": [
         {
-          "source": "ApeWisdom",
-          "title": "3 social mentions on ApeWisdom (down from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/SO/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "source": "FINRA Short Volume",
+          "title": "GPUS FINRA short volume 63% of reported volume (12,085,070.583 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
         },
         {
-          "source": "4chan",
-          "title": "I was divorce-raped from \"made it\" back down to \"never gonna make it\". So this is what happens to every guy who makes it, huh?",
-          "url": "https://boards.4chan.org/biz/thread/62474981",
-          "published": "2026-07-13T15:54:59.298Z"
+          "source": "Price/Volume",
+          "title": "GPUS $0.12, price -10.9%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/GPUS",
+          "published": "2026-07-13T18:08:06.595Z"
         },
         {
-          "source": "4chan",
-          "title": "Sick of Elon Anyone else sick of Elon Musk? He&#039;s always so fuckin confident and always boasting about some shit that he will never do, taunting other companies and billionaires. It infuriates me that there are still people who can&#039",
-          "url": "https://boards.4chan.org/biz/thread/62472724",
-          "published": "2026-07-13T15:54:59.302Z"
+          "source": "StockTwits",
+          "title": "$GPUS i hope investors realize how fucked this stock is.  the float is 461 million shares and counting.  there is basically zero chance this recovers to even 0.20 anymore.  fat fuck ault destroyed investors.",
+          "url": "https://stocktwits.com/CantAffordMe/message/658926252",
+          "published": "2026-07-13T18:04:29Z"
         },
         {
-          "source": "4chan",
-          "title": "So what made this board suddenly switch from crypto to boomer stocks? There&#039;s even jeets shilling on Robinhood threads on here and my normie co-workers are now \"day trading\" Do you retards not understand that you can&#039;t get rich of",
-          "url": "https://boards.4chan.org/biz/thread/62473409",
-          "published": "2026-07-13T15:54:59.331Z"
+          "source": "StockTwits",
+          "title": "$YYGH The boning by $YYGH setting up for a fresh new leg once this new shelf is made effective. Updated F3 filing for $100M mixed shelf. \nHaven&#39;t had much to say since June 9th, beacuse I don&#39;t like repeating myself.   \nYou will be ",
+          "url": "https://stocktwits.com/TonyDenaro/message/658925665",
+          "published": "2026-07-13T18:00:06Z"
         },
         {
-          "source": "4chan",
-          "title": "Living in a car Serious replies only. >I have a wife and 2 kids. >I live in Las Vegas, currently. >I have 2 wfh jobs and doordash on the side I have chosen not to renew my lease and will be moving out at the end of August, my wife and the k",
-          "url": "https://boards.4chan.org/biz/thread/62471812",
-          "published": "2026-07-13T15:54:59.338Z"
+          "source": "StockTwits",
+          "title": "$GPUS $BTC.X  \nAdded another 103,000 shares of Hyperscale Data Inc.  Let&#39;s go! 💪",
+          "url": "https://stocktwits.com/WC25/message/658925648",
+          "published": "2026-07-13T17:59:58Z"
         },
         {
-          "source": "4chan",
-          "title": "i keep seeing tiktokers making thousands and becoming millionaires trading crypto scams daily but i havent been able to make anything the past 3 years. i know the crypto market has changed a lot since then but i remember how easy it was to ",
-          "url": "https://boards.4chan.org/biz/thread/62474990",
-          "published": "2026-07-13T15:54:59.352Z"
+          "source": "StockTwits",
+          "title": "$GPUS I hope fat fuck ault gets a heart attack.  share price would skyrocket.",
+          "url": "https://stocktwits.com/CantAffordMe/message/658923051",
+          "published": "2026-07-13T17:42:02Z"
         }
       ],
-      "marketCap": 108395637078,
-      "capTier": "large",
-      "description": "Southern Company is an American gas and electric utility holding company based in the Southern United States.  It is headquartered in Atlanta, Georgia, with executive offices located in Birmingham, Alabama.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Southern_Company"
+      "marketCap": 190790,
+      "capTier": "small"
     },
     {
-      "ticker": "TE",
-      "name": "T1 Energy Inc.",
-      "mentions": 47,
+      "ticker": "RIG",
+      "name": "Transocean Ltd.",
+      "mentions": 19,
       "momentum": 35,
-      "sentiment": -0.006382978723404252,
-      "priceMove": -0.4969714382476902,
-      "lastPrice": 6.53,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
+      "sentiment": -0.00789473684210527,
+      "priceMove": 0.7844139494951267,
+      "lastPrice": 5.355,
+      "quoteAsOf": "2026-07-13T18:07:58.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0146812688941458,
+      "relativeVolume": 1.4174161195387074,
       "optionsActivity": 0,
-      "signalScore": 44.41366732419226,
+      "signalScore": 42.57745433901867,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "StockTwits": 8,
+        "StockTwits": 0,
         "ApeWisdom": 0,
-        "Hacker News": 1,
-        "4chan": 22,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 14,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "RIG FINRA short volume 72% of reported volume (18,991,773.52 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "RIG $5.36, price +3.0%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/RIG",
+          "published": "2026-07-13T18:07:59.660Z"
+        }
+      ],
+      "marketCap": 5978542497,
+      "capTier": "large",
+      "description": "Transocean Ltd.  is a Swiss offshore drilling company.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Transocean"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia Corp",
+      "mentions": 34,
+      "momentum": 35,
+      "sentiment": 3.2653618371328133e-18,
+      "priceMove": -0.4719326843679344,
+      "lastPrice": 204.19,
+      "quoteAsOf": "2026-07-13T18:07:44.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.0596169020888762,
+      "optionsActivity": 0,
+      "signalScore": 42.230784547858875,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 12,
+        "ApeWisdom": 6,
+        "Hacker News": 0,
+        "4chan": 0,
         "GDELT News": 0,
         "Google News": 0,
         "Bing News": 0,
@@ -1129,467 +817,67 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "TE FINRA short volume 41% of reported volume (3,474,096.07 shares)",
+          "title": "NVDA FINRA short volume 40% of reported volume (26,602,058.8 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general Greedy navigator edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingv",
-          "url": "https://boards.4chan.org/biz/thread/62476065",
-          "published": "2026-07-13T15:54:59.263Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general Korean DRAM girl riding da wave edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https",
-          "url": "https://boards.4chan.org/biz/thread/62475533",
-          "published": "2026-07-13T15:54:59.294Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general wow edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingview.com https",
-          "url": "https://boards.4chan.org/biz/thread/62474785",
-          "published": "2026-07-13T15:54:59.323Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general sleep is for wagies edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradi",
-          "url": "https://boards.4chan.org/biz/thread/62474036",
-          "published": "2026-07-13T15:54:59.372Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - Stock Market General Weather futures edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingvi",
-          "url": "https://boards.4chan.org/biz/thread/62472496",
-          "published": "2026-07-13T15:54:59.403Z"
-        }
-      ],
-      "marketCap": 1823642111,
-      "capTier": "large"
-    },
-    {
-      "ticker": "JUST",
-      "name": "Goldman Sachs ETF Trust - Goldman Sachs Just Us Large Cap Equity ETF",
-      "mentions": 54,
-      "momentum": 35,
-      "sentiment": 0.011111111111111108,
-      "priceMove": -0.017591580752057905,
-      "lastPrice": 107.35,
-      "quoteAsOf": "2026-07-13T15:17:22.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9860975609756097,
-      "optionsActivity": 0,
-      "signalScore": 43.931128284907174,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 2,
-        "Hacker News": 0,
-        "4chan": 41,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "5 social mentions on ApeWisdom (up from 2 a day ago)",
-          "url": "https://apewisdom.io/stocks/JUST/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Who&#039;s still buying BTC at this level? BTC has already come a long way. Are you still buying here, waiting for a pullback, or just holding what you already have? >Curious what everyone&#039;s plan is.",
-          "url": "https://boards.4chan.org/biz/thread/62475235",
-          "published": "2026-07-13T15:54:59.269Z"
-        },
-        {
-          "source": "4chan",
-          "title": "A couple years ago I read some post on here talking about \"scanning the chain for unclaimed coins\". What the fuck did he mean? Is that real? I remember googling it for like 2 minutes and finding nothing and I just remembered it again",
-          "url": "https://boards.4chan.org/biz/thread/62469503",
-          "published": "2026-07-13T15:54:59.294Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Blogpost I just had a dream where 3 beautiful women in a group of friends were competing over me when I went on a trip to New York. I even met one of their dads. That one gave me locks of her red hair. When I went back home I texted them an",
-          "url": "https://boards.4chan.org/biz/thread/62472633",
-          "published": "2026-07-13T15:54:59.296Z"
-        },
-        {
-          "source": "4chan",
-          "title": "don&#039;t buy a house bro, just rent. https://www.youtube.com/watch?v=16e A5ebWMQQ",
-          "url": "https://boards.4chan.org/biz/thread/62472842",
-          "published": "2026-07-13T15:54:59.312Z"
-        },
-        {
-          "source": "4chan",
-          "title": "BTC Price Down. What&#039;s Your Plan? BTC is down again, but are you buying the dip or waiting for lower prices? >Do you think this is just a normal correction, or is there more downside ahead? What&#039;s your strategy?",
-          "url": "https://boards.4chan.org/biz/thread/62426512",
-          "published": "2026-07-13T15:54:59.314Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SRXH",
-      "name": "SRX Global Inc.",
-      "mentions": 20,
-      "momentum": 35,
-      "sentiment": 0.004999999999999993,
-      "priceMove": 1.636362950663934,
-      "lastPrice": 2.32,
-      "quoteAsOf": "2026-07-13T15:56:00.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2040602837834797,
-      "optionsActivity": 0,
-      "signalScore": 43.83765088616995,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SRXH FINRA short volume 69% of reported volume (8,450,699.341 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SRXH $2.32, price +5.5%, volume 0.1x",
-          "url": "https://finance.yahoo.com/quote/SRXH",
-          "published": "2026-07-13T15:56:09.784Z"
-        }
-      ],
-      "marketCap": 1369391064,
-      "capTier": "large"
-    },
-    {
-      "ticker": "IONS",
-      "name": "Ionis Pharmaceuticals Inc",
-      "mentions": 46,
-      "momentum": 35,
-      "sentiment": -0.03347826086956522,
-      "priceMove": -0.19257324127635742,
-      "lastPrice": 56.53,
-      "quoteAsOf": "2026-07-13T15:55:54.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1173175995637425,
-      "optionsActivity": 0,
-      "signalScore": 43.638017320322255,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 22,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "IONS FINRA short volume 60% of reported volume (3,252,818.998 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general Greedy navigator edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingv",
-          "url": "https://boards.4chan.org/biz/thread/62476065",
-          "published": "2026-07-13T15:54:59.263Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general Korean DRAM girl riding da wave edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https",
-          "url": "https://boards.4chan.org/biz/thread/62475533",
-          "published": "2026-07-13T15:54:59.294Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general wow edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingview.com https",
-          "url": "https://boards.4chan.org/biz/thread/62474785",
-          "published": "2026-07-13T15:54:59.323Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general sleep is for wagies edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradi",
-          "url": "https://boards.4chan.org/biz/thread/62474036",
-          "published": "2026-07-13T15:54:59.372Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - Stock Market General Weather futures edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingvi",
-          "url": "https://boards.4chan.org/biz/thread/62472496",
-          "published": "2026-07-13T15:54:59.403Z"
-        }
-      ],
-      "marketCap": 9342292291,
-      "capTier": "large",
-      "description": "Ionis Pharmaceuticals, Inc.  is a biotechnology company that specializes in discovering and developing antisense therapy, as well as RNA interference and CRISPR therapeutics.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Ionis_Pharmaceuticals"
-    },
-    {
-      "ticker": "SPCX",
-      "name": "Space Exploration Technologies Corp",
-      "mentions": 40,
-      "momentum": 35,
-      "sentiment": -0.0695,
-      "priceMove": -0.6054717407337511,
-      "lastPrice": 139.435,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.19267049076654,
-      "optionsActivity": 0,
-      "signalScore": 43.5243658051604,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 7,
-        "Hacker News": 1,
-        "4chan": 4,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SPCX FINRA short volume 71% of reported volume (12,178,705.407 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "194 social mentions on ApeWisdom (up from 26 a day ago)",
-          "url": "https://apewisdom.io/stocks/SPCX/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Sell SPCX you fools. Sell until it&#039;s too late.",
-          "url": "https://boards.4chan.org/biz/thread/62466527",
-          "published": "2026-07-13T15:54:59.350Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SPCX $139.44, price -4.0%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/SPCX",
-          "published": "2026-07-13T15:55:56.600Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SPCX Starship. The future of humanity.",
-          "url": "https://stocktwits.com/earleeretirement/message/658908366",
-          "published": "2026-07-13T15:57:42Z"
+          "title": "Trending on StockTwits (#9)",
+          "url": "https://stocktwits.com/symbol/NVDA",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "ApeWisdom",
+          "title": "82 social mentions on ApeWisdom (up from 24 a day ago)",
+          "url": "https://apewisdom.io/stocks/NVDA/",
+          "published": "2026-07-13T18:06:22.734Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "NVDA $204.19, price -3.2%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/NVDA",
+          "published": "2026-07-13T18:07:45.500Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SPCX is like free interest loans for 10 years for elon businesses ventures",
-          "url": "https://stocktwits.com/CmonManGiveMeABreak/message/658908207",
-          "published": "2026-07-13T15:56:33Z"
-        }
-      ]
-    },
-    {
-      "ticker": "ALL",
-      "name": "Allstate",
-      "mentions": 51,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0.017612063675936155,
-      "lastPrice": 253.87,
-      "quoteAsOf": "2026-07-13T15:55:34.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9836777624517332,
-      "optionsActivity": 0,
-      "signalScore": 43.18375738145986,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 3,
-        "Hacker News": 0,
-        "4chan": 39,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "9 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/ALL/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "title": "$NVDA tsm going to send the tech  sector to the roof. On Wednesday",
+          "url": "https://stocktwits.com/Take_Profit123/message/658926912",
+          "published": "2026-07-13T18:09:19Z"
         },
         {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Blogpost I just had a dream where 3 beautiful women in a group of friends were competing over me when I went on a trip to New York. I even met one of their dads. That one gave me locks of her red hair. When I went back home I texted them an",
-          "url": "https://boards.4chan.org/biz/thread/62472633",
-          "published": "2026-07-13T15:54:59.296Z"
-        },
-        {
-          "source": "4chan",
-          "title": "it&#039;s over sell it all now before it&#039;s too late",
-          "url": "https://boards.4chan.org/biz/thread/62476047",
-          "published": "2026-07-13T15:54:59.300Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Someday this will all be yours sonny...",
-          "url": "https://boards.4chan.org/biz/thread/62470543",
-          "published": "2026-07-13T15:54:59.307Z"
-        },
-        {
-          "source": "4chan",
-          "title": "PAIN. that&#039;s all that&#039;s in store for stinkies. pure unadulterated PAIN",
-          "url": "https://boards.4chan.org/biz/thread/62474586",
-          "published": "2026-07-13T15:54:59.311Z"
+          "source": "StockTwits",
+          "title": "$NVDA is this just chasing the max pain for 7/17 at $200? very silly",
+          "url": "https://stocktwits.com/Dwinterfell/message/658926868",
+          "published": "2026-07-13T18:08:59Z"
         }
       ],
-      "marketCap": 65351451499,
+      "marketCap": 4941398000000,
       "capTier": "large",
-      "description": "The Allstate Corporation is an American insurance company, headquartered in Glenview, Illinois since 2022.  Founded in 1931 as part of Sears, Roebuck and Co.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Allstate"
+      "sector": "Electronic Technology",
+      "industry": "Semiconductors",
+      "description": "Nvidia Corporation is an American multinational technology company headquartered in Santa Clara, California.  The company develops graphics processing units (GPUs), systems on chips (SoCs), and application programming interfaces (APIs) for data science, high-performance computin…",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Nvidia"
     },
     {
-      "ticker": "UP",
-      "name": "Wheels Up",
-      "mentions": 50,
+      "ticker": "NBIS",
+      "name": "Nebius Group N.V.",
+      "mentions": 34,
       "momentum": 35,
-      "sentiment": -0.009600000000000001,
-      "priceMove": -0.5891469493879846,
-      "lastPrice": 7.36,
-      "quoteAsOf": "2026-07-13T15:50:25.000Z",
+      "sentiment": -0.06000000000000001,
+      "priceMove": -1.442936679560402,
+      "lastPrice": 206.18,
+      "quoteAsOf": "2026-07-13T18:07:46.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9350095238095238,
+      "relativeVolume": 1.0881095412108241,
       "optionsActivity": 0,
-      "signalScore": 43.16889125271013,
+      "signalScore": 41.65268577979033,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
-        "ApeWisdom": 3,
-        "Hacker News": 5,
-        "4chan": 28,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 6
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "8 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/UP/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Sick of Elon Anyone else sick of Elon Musk? He&#039;s always so fuckin confident and always boasting about some shit that he will never do, taunting other companies and billionaires. It infuriates me that there are still people who can&#039",
-          "url": "https://boards.4chan.org/biz/thread/62472724",
-          "published": "2026-07-13T15:54:59.302Z"
-        },
-        {
-          "source": "4chan",
-          "title": "buckle up.",
-          "url": "https://boards.4chan.org/biz/thread/62472995",
-          "published": "2026-07-13T15:54:59.317Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Market Crash is Here - Sell Everything Samsung and Hynix stock down 10-15% everyday. AI is overhyped, only good in niche uses, such as game concept art, research, and looking up basic health and legal information. Not a multi-trillion dolla",
-          "url": "https://boards.4chan.org/biz/thread/62475673",
-          "published": "2026-07-13T15:54:59.320Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Have any UK anons faked a job reference before? How did you do it? Should I ask family or friends to pretend to be a former employer? Should I make up a fake business that recently shut down? Will any jobs I apply to accept gmail or hotmail",
-          "url": "https://boards.4chan.org/biz/thread/62470742",
-          "published": "2026-07-13T15:54:59.327Z"
-        }
-      ],
-      "marketCap": 266646448,
-      "capTier": "small",
-      "description": "Wheels Up is a provider of \"on demand\" private aviation in the United States and one of the largest private aviation companies in the world.  It was founded in 2013 by Kenny Dichter, using a membership/on-demand business model.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Wheels_Up"
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology Inc",
-      "mentions": 38,
-      "momentum": 35,
-      "sentiment": -0.03631578947368421,
-      "priceMove": -0.7690776180765828,
-      "lastPrice": 931.6,
-      "quoteAsOf": "2026-07-13T15:55:56.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9936276190414254,
-      "optionsActivity": 0,
-      "signalScore": 42.70279577056949,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 8,
-        "Hacker News": 4,
+        "ApeWisdom": 4,
+        "Hacker News": 0,
         "4chan": 2,
         "GDELT News": 0,
         "Google News": 0,
@@ -1598,70 +886,68 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 6
+        "FINRA Short Volume": 12,
+        "Price/Volume": 8
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "MU FINRA short volume 33% of reported volume (5,159,037.716 shares)",
+          "title": "NBIS FINRA short volume 60% of reported volume (3,011,132.653 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "ApeWisdom",
-          "title": "353 social mentions on ApeWisdom (up from 30 a day ago)",
-          "url": "https://apewisdom.io/stocks/MU/",
-          "published": "2026-07-13T15:54:58.984Z"
+          "title": "20 social mentions on ApeWisdom (up from 1 a day ago)",
+          "url": "https://apewisdom.io/stocks/NBIS/",
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
           "source": "4chan",
           "title": "Sell your crapto and pivot to AI, we still have plenty of room to grow: 1. Nebius Group (NBIS) — Hyper-growth Cloud Leader Q1 2026 revenue: +684% YoY. 2026 projections: ~544–550% revenue growth; 2027 ~225–234%. 2. Sandisk (SNDK) — Memory/St",
           "url": "https://boards.4chan.org/biz/thread/62469805",
-          "published": "2026-07-13T15:54:59.319Z"
+          "published": "2026-07-13T18:06:23.108Z"
         },
         {
           "source": "Price/Volume",
-          "title": "MU $931.60, price -4.9%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/MU",
-          "published": "2026-07-13T15:55:56.934Z"
+          "title": "NBIS $206.18, price -6.1%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/NBIS",
+          "published": "2026-07-13T18:07:48.621Z"
         },
         {
           "source": "StockTwits",
-          "title": "$SNDK $MU Quite seriously the dumbest shit I’ve seen in a while",
-          "url": "https://stocktwits.com/wireless_cowboy/message/658908339",
-          "published": "2026-07-13T15:57:30Z"
+          "title": "$NBIS absolutely.  All in for bounce action.",
+          "url": "https://stocktwits.com/dhowardu/message/658926992",
+          "published": "2026-07-13T18:10:00Z"
         },
         {
           "source": "StockTwits",
-          "title": "$MU POS 💩⬇️⬇️⬇️💩",
-          "url": "https://stocktwits.com/Undone_ai/message/658908066",
-          "published": "2026-07-13T15:55:26Z"
+          "title": "$NBIS $META needs more well I think you know who they will partner with… $ORCL ahead of the game as well they got ha,,reed for additional  … but turns out hey we’re right… expect a major deal announcement from Nebius shortly.",
+          "url": "https://stocktwits.com/nakedshortspoopmarket/message/658926791",
+          "published": "2026-07-13T18:08:27Z"
         }
       ],
-      "marketCap": 1052142659472,
-      "capTier": "large",
-      "description": "Micron Technology, Inc.  is an American multinational semiconductor company that manufactures computer memory and computer data storage products, including dynamic random-access memory (DRAM), flash memory, High Bandwidth Memory (HBM), and solid-state drives (SSDs).",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Micron_Technology"
+      "description": "Nebius Group N. V.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Nebius_Group"
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "mentions": 10,
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "mentions": 8,
       "momentum": 35,
-      "sentiment": 0.175,
-      "priceMove": 3.7301583393594875,
-      "lastPrice": 172.023,
-      "quoteAsOf": "2026-07-13T15:56:14.000Z",
+      "sentiment": 0.1875,
+      "priceMove": 3.1970018590056357,
+      "lastPrice": 144.8,
+      "quoteAsOf": "2026-07-13T18:08:14.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.6194503959881492,
+      "relativeVolume": 0.6795204288510004,
       "optionsActivity": 0,
-      "signalScore": 42.6603569806196,
+      "signalScore": 41.32926877825126,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 0,
-        "ApeWisdom": 3,
+        "ApeWisdom": 2,
         "Hacker News": 0,
         "4chan": 0,
         "GDELT News": 0,
@@ -1672,903 +958,36 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 0,
-        "Price/Volume": 7
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "8 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/CRM/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "CRM $172.02, price +5.3%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/CRM",
-          "published": "2026-07-13T15:56:19.062Z"
-        }
-      ],
-      "marketCap": 140886837000,
-      "capTier": "large",
-      "description": "Salesforce, Inc. , is an American cloud-based software company headquartered in San Francisco, California.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Salesforce"
-    },
-    {
-      "ticker": "CAN",
-      "name": "Canaan",
-      "mentions": 46,
-      "momentum": 35,
-      "sentiment": 0.01173913043478261,
-      "priceMove": -0.06472471750347082,
-      "lastPrice": 0.3044,
-      "quoteAsOf": "2026-07-13T15:55:31.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.9614372669120648,
-      "optionsActivity": 0,
-      "signalScore": 42.4793325948259,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 35,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/CAN/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/GME/ - Iwata Edition >Basic Information >gme.cac site redacted due to aids https://finra-markets.morningstar.c om/MarketData/EquityOptions/detail. jsp?query=14%3A0P000002CH https://gmetimeline.com (up to 2021) >Daily reminder s[Kek Melvies",
-          "url": "https://boards.4chan.org/biz/thread/62473140",
-          "published": "2026-07-13T15:54:59.275Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
-        },
-        {
-          "source": "4chan",
-          "title": "long time mentally unwell neet that can&#039;t get employed anywhere, i&#039;m in a desperate spot but i have a credit score of 676 currently, is there anyway i can utilize this to my advantage, ive never had a credit card or invested in an",
-          "url": "https://boards.4chan.org/biz/thread/62475968",
-          "published": "2026-07-13T15:54:59.307Z"
-        },
-        {
-          "source": "4chan",
-          "title": "You can do everything right financially and still be fucked over by your rulers. Never forget that.",
-          "url": "https://boards.4chan.org/biz/thread/62475151",
-          "published": "2026-07-13T15:54:59.322Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Have any UK anons faked a job reference before? How did you do it? Should I ask family or friends to pretend to be a former employer? Should I make up a fake business that recently shut down? Will any jobs I apply to accept gmail or hotmail",
-          "url": "https://boards.4chan.org/biz/thread/62470742",
-          "published": "2026-07-13T15:54:59.327Z"
-        }
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft Corp",
-      "mentions": 30,
-      "momentum": 35,
-      "sentiment": -0.004999999999999999,
-      "priceMove": 0.1512592522504042,
-      "lastPrice": 390.925,
-      "quoteAsOf": "2026-07-13T15:55:54.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0653610381781473,
-      "optionsActivity": 0,
-      "signalScore": 42.172167796711605,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 7,
-        "Hacker News": 0,
-        "4chan": 2,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "MSFT FINRA short volume 39% of reported volume (4,078,127.389 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "217 social mentions on ApeWisdom (up from 31 a day ago)",
-          "url": "https://apewisdom.io/stocks/MSFT/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "4chan",
-          "title": "I have a big problem I&#039;m 33 soon to be 34 I live in eastern europe I have 126K euros of savings I have a gf I own my place without mortgage and it is worth approximately 185K euros I had a call center job (for Microsoft) paying me 1600",
-          "url": "https://boards.4chan.org/biz/thread/62472194",
-          "published": "2026-07-13T15:54:59.366Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "MSFT $390.93, price +1.5%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/MSFT",
-          "published": "2026-07-13T15:55:57.445Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$MSFT doesn&#39;t look like it will hold here",
-          "url": "https://stocktwits.com/SmartTrade99/message/658908421",
-          "published": "2026-07-13T15:58:12Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$MSFT 420$ before earnings? Any Predictions?",
-          "url": "https://stocktwits.com/Techii1993/message/658908404",
-          "published": "2026-07-13T15:58:03Z"
-        }
-      ],
-      "marketCap": 2903960836661,
-      "capTier": "large",
-      "description": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.  The company became influential in the rise of personal computers through software like Windows and has since expanded into areas such as Internet services, cloud computin…",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Microsoft"
-    },
-    {
-      "ticker": "OPEN",
-      "name": "Opendoor Technologies Inc.",
-      "mentions": 30,
-      "momentum": 35,
-      "sentiment": -0.05466666666666667,
-      "priceMove": -0.25813194109554793,
-      "lastPrice": 4.642,
-      "quoteAsOf": "2026-07-13T15:55:57.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.200003061812906,
-      "optionsActivity": 0,
-      "signalScore": 41.94817010110545,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 3,
-        "Hacker News": 0,
-        "4chan": 2,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "OPEN FINRA short volume 60% of reported volume (31,050,887.35 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "12 social mentions on ApeWisdom (up from 2 a day ago)",
-          "url": "https://apewisdom.io/stocks/OPEN/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "What&#039;s a job that requires 0 social interaction or anyone seeing my face (text is fine) I was thinking twitter furry artist but I&#039;m open to other ideas",
-          "url": "https://boards.4chan.org/biz/thread/62474753",
-          "published": "2026-07-13T15:54:59.361Z"
-        },
-        {
-          "source": "4chan",
-          "title": ">2020+6.7 >ai is a bubble >gambling casino is back open and *checks notes* not a single good airdrop this year? what a strange timeline",
-          "url": "https://boards.4chan.org/biz/thread/62471236",
-          "published": "2026-07-13T15:54:59.382Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "OPEN $4.64, price -2.6%, volume 0.2x",
-          "url": "https://finance.yahoo.com/quote/OPEN",
-          "published": "2026-07-13T15:55:57.779Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$OPEN hold on…. Bought the dip at $4.57 for a swing! Need my mortgage paid this week!",
-          "url": "https://stocktwits.com/No_pulse_get_it/message/658907043",
-          "published": "2026-07-13T15:47:33Z"
-        }
-      ],
-      "marketCap": 4478307446,
-      "capTier": "large"
-    },
-    {
-      "ticker": "SPY",
-      "name": "Spdr S&P 500 Etf Trust",
-      "mentions": 32,
-      "momentum": 35,
-      "sentiment": -0.040625,
-      "priceMove": -0.014694732058538544,
-      "lastPrice": 751.4,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2334464505815226,
-      "optionsActivity": 0,
-      "signalScore": 41.88438565283302,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 11,
-        "ApeWisdom": 7,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SPY FINRA short volume 63% of reported volume (7,164,490.252 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#16)",
-          "url": "https://stocktwits.com/symbol/SPY",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "259 social mentions on ApeWisdom (up from 54 a day ago)",
-          "url": "https://apewisdom.io/stocks/SPY/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SPY $751.40, price -0.5%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/SPY",
-          "published": "2026-07-13T15:55:56.767Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SPY dont touch puts. Let the bulls get smoked.",
-          "url": "https://stocktwits.com/Skepticbull/message/658908425",
-          "published": "2026-07-13T15:58:13Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SPY $750 on the way, 😉 $IWM $290 😉",
-          "url": "https://stocktwits.com/jc15m/message/658908416",
-          "published": "2026-07-13T15:58:08Z"
-        }
-      ],
-      "sector": "Miscellaneous",
-      "industry": "Investment Trusts Or Mutual Funds",
-      "description": "The SPDR S&P 500 ETF Trust, commonly known by its ticker symbol SPY, is an exchange-traded fund (ETF) structured as a unit investment trust.  It seeks to track, before expenses, the price and yield performance of the S&P 500 Index by holding, as far as practicable, a portfolio o…",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/SPDR_S%26P_500_ETF_Trust"
-    },
-    {
-      "ticker": "PSKY",
-      "name": "Paramount Skydance Corp",
-      "mentions": 18,
-      "momentum": 35,
-      "sentiment": -0.01666666666666667,
-      "priceMove": 0.554965536423512,
-      "lastPrice": 9.645,
-      "quoteAsOf": "2026-07-13T15:56:04.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3336831666758677,
-      "optionsActivity": 0,
-      "signalScore": 41.78993322450623,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "PSKY FINRA short volume 66% of reported volume (2,231,308.563 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/PSKY/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "PSKY $9.64, price +2.5%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/PSKY",
-          "published": "2026-07-13T15:56:08.588Z"
-        }
-      ],
-      "marketCap": 10336227993,
-      "capTier": "large",
-      "description": "Paramount Skydance Corporation is an American multinational mass media and entertainment conglomerate.  The company's primary corporate headquarters is located at the Paramount Pictures lot in the Hollywood neighborhood of Los Angeles, California, and Paramount's secondary and o…",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Paramount_Skydance"
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir Technologies Inc.",
-      "mentions": 20,
-      "momentum": 35,
-      "sentiment": -0.015000000000000003,
-      "priceMove": 0.4937296414341027,
-      "lastPrice": 129.92,
-      "quoteAsOf": "2026-07-13T15:55:59.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2733630330736285,
-      "optionsActivity": 0,
-      "signalScore": 41.616159879440524,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 3,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "PLTR FINRA short volume 61% of reported volume (9,444,396.628 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "7 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/PLTR/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "PLTR $129.92, price +2.5%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/PLTR",
-          "published": "2026-07-13T15:56:01.777Z"
-        }
-      ],
-      "description": "Palantir Technologies Inc.  is an American publicly traded company that develops data integration and analytics software.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Palantir"
-    },
-    {
-      "ticker": "DRAM",
-      "name": "DRAM",
-      "mentions": 36,
-      "momentum": 35,
-      "sentiment": -0.03833333333333333,
-      "priceMove": -2.6779738256207613,
-      "lastPrice": 57.515,
-      "quoteAsOf": "2026-07-13T15:55:57.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0264490538637656,
-      "optionsActivity": 0,
-      "signalScore": 41.59274086599815,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 5,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 11
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "DRAM FINRA short volume 46% of reported volume (10,472,115.983 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/smg/ - stock market general Korean DRAM girl riding da wave edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https",
-          "url": "https://boards.4chan.org/biz/thread/62475533",
-          "published": "2026-07-13T15:54:59.294Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "DRAM $57.52, price -8.8%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/DRAM",
-          "published": "2026-07-13T15:55:59.109Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$DRAM vids still high 56s",
-          "url": "https://stocktwits.com/john_rubias/message/658907718",
-          "published": "2026-07-13T15:52:58Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "@MakeIGVGreatAgain I’d add $DRAM to that list",
-          "url": "https://stocktwits.com/drog61/message/658907464",
-          "published": "2026-07-13T15:50:53Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SNDK $mU $stX $draM",
-          "url": "https://stocktwits.com/powellpnd/message/658907273",
-          "published": "2026-07-13T15:49:17Z"
-        }
-      ]
-    },
-    {
-      "ticker": "QQQ",
-      "name": "Invesco Qqq Trust, Series 1",
-      "mentions": 31,
-      "momentum": 35,
-      "sentiment": -0.06258064516129033,
-      "priceMove": -0.13298777987220287,
-      "lastPrice": 715.54,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2832688385889284,
-      "optionsActivity": 0,
-      "signalScore": 41.58582510065848,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 6,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 3
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "QQQ FINRA short volume 74% of reported volume (7,023,558.953 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "71 social mentions on ApeWisdom (up from 16 a day ago)",
-          "url": "https://apewisdom.io/stocks/QQQ/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "QQQ $715.54, price -1.4%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/QQQ",
-          "published": "2026-07-13T15:55:57.270Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$QQQ easiest dip buy calls today they’re flying to safety mega caps. $MSFT  400$ strike 07-17 exp entered 1.7-1.8",
-          "url": "https://stocktwits.com/FatmanEZ/message/658908182",
-          "published": "2026-07-13T15:56:20Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$QQQ selling looks real weak here 👀 let’s see if buyers step in",
-          "url": "https://stocktwits.com/joeybidensucks/message/658908142",
-          "published": "2026-07-13T15:56:03Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "At their lows last week all these had Bears coming at them. \nI always appreciate those who dont understand when to Buy &amp; when to Sell, they will never do well in this game \n \n$SPY $META $MSFT $AAPL $QQQ",
-          "url": "https://stocktwits.com/GoodNewsBull/message/658908064",
-          "published": "2026-07-13T15:55:25Z"
-        }
-      ],
-      "description": "Invesco QQQ is an index exchange-traded fund created by Invesco PowerShares which tracks the performance of the Nasdaq-100.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Invesco_QQQ"
-    },
-    {
-      "ticker": "AN",
-      "name": "AutoNation",
-      "mentions": 35,
-      "momentum": 35,
-      "sentiment": 0.02571428571428571,
-      "priceMove": -0.010214548969028204,
-      "lastPrice": 195.1,
-      "quoteAsOf": "2026-07-13T15:55:41.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.98026171875,
-      "optionsActivity": 0,
-      "signalScore": 41.377604195912134,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 23,
-        "GDELT News": 2,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom",
-          "url": "https://apewisdom.io/stocks/AN/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
-          "url": "https://boards.4chan.org/biz/thread/60278989",
-          "published": "2026-07-13T15:54:59.249Z"
-        },
-        {
-          "source": "4chan",
-          "title": "\"Bitcoin is a CIA asset\" Is the best narrative for BTC now when you have this guy tirelessly exposing it to public as nothing more than an expensive shitty payment service.",
-          "url": "https://boards.4chan.org/biz/thread/62475993",
-          "published": "2026-07-13T15:54:59.304Z"
-        },
-        {
-          "source": "4chan",
-          "title": "memes aside, is LINK in an accumulation zone below $8?",
-          "url": "https://boards.4chan.org/biz/thread/62475875",
-          "published": "2026-07-13T15:54:59.309Z"
-        },
-        {
-          "source": "4chan",
-          "title": ">holding onto an idea for an app worth probably billions of dollars, its that good and solid, something you&#039;d go like \"oh yeah i shoulda thought of that\" >too lazy to get the server and code >some liability issues make it unfeasible wh",
-          "url": "https://boards.4chan.org/biz/thread/62470115",
-          "published": "2026-07-13T15:54:59.326Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Every pullback is an opportunity",
-          "url": "https://boards.4chan.org/biz/thread/62475379",
-          "published": "2026-07-13T15:54:59.326Z"
-        }
-      ],
-      "marketCap": 6528337675,
-      "capTier": "large",
-      "description": "AutoNation, Inc.  is an American automotive retailer based in Fort Lauderdale, Florida, which provides new and pre-owned vehicles and associated services in the United States.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/AutoNation"
-    },
-    {
-      "ticker": "ONDS",
-      "name": "Ondas Inc.",
-      "mentions": 21,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": -0.013118494774451653,
-      "lastPrice": 7.25,
-      "quoteAsOf": "2026-07-13T15:55:54.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2456086130482849,
-      "optionsActivity": 0,
-      "signalScore": 41.29050825928188,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 3,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "ONDS FINRA short volume 51% of reported volume (24,893,029.716 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#14)",
-          "url": "https://stocktwits.com/symbol/ONDS",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "14 social mentions on ApeWisdom (up from 4 a day ago)",
-          "url": "https://apewisdom.io/stocks/ONDS/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "ONDS $7.25, price -0.1%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/ONDS",
-          "published": "2026-07-13T15:55:57.612Z"
-        }
-      ],
-      "marketCap": 3594279213,
-      "capTier": "large",
-      "sector": "Electronic Technology",
-      "industry": "Telecommunications Equipment"
-    },
-    {
-      "ticker": "RKLB",
-      "name": "Rocket Lab Corp",
-      "mentions": 34,
-      "momentum": 35,
-      "sentiment": -0.07588235294117647,
-      "priceMove": -0.7665062008073926,
-      "lastPrice": 77.52,
-      "quoteAsOf": "2026-07-13T15:55:57.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1019661558424039,
-      "optionsActivity": 0,
-      "signalScore": 41.25879576335665,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 9,
-        "ApeWisdom": 5,
-        "Hacker News": 2,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
         "Price/Volume": 6
       },
       "latest": [
         {
-          "source": "FINRA Short Volume",
-          "title": "RKLB FINRA short volume 58% of reported volume (3,422,037.737 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "Trending on StockTwits (#29)",
-          "url": "https://stocktwits.com/symbol/RKLB",
-          "published": "2026-07-13T15:54:58.694Z"
-        },
-        {
           "source": "ApeWisdom",
-          "title": "57 social mentions on ApeWisdom (up from 12 a day ago)",
-          "url": "https://apewisdom.io/stocks/RKLB/",
-          "published": "2026-07-13T15:54:58.984Z"
+          "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
+          "url": "https://apewisdom.io/stocks/XOM/",
+          "published": "2026-07-13T18:06:22.735Z"
         },
         {
           "source": "Price/Volume",
-          "title": "RKLB $77.52, price -4.3%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/RKLB",
-          "published": "2026-07-13T15:55:58.776Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$RKLB you wouldve made more last few months holding money in a savings account",
-          "url": "https://stocktwits.com/ghostdemon/message/658908155",
-          "published": "2026-07-13T15:56:10Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$RKLB LOL, yep just keep waiting for that 200 DMA to save you. it will blow right past and never look back.",
-          "url": "https://stocktwits.com/ItsCarRamRod/message/658907803",
-          "published": "2026-07-13T15:53:31Z"
+          "title": "XOM $144.80, price +4.3%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/XOM",
+          "published": "2026-07-13T18:08:15.094Z"
         }
-      ],
-      "marketCap": 44864776745,
-      "capTier": "large",
-      "sector": "Electronic Technology",
-      "industry": "Aerospace And Defense",
-      "description": "Rocket Lab Corporation is a publicly traded aerospace manufacturer and launch service provider.  Its Electron orbital rocket launches small satellites and has successfully completed over 75 missions as of January 2026, making it the most prolific small-lift launch vehicle in ope…",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Rocket_Lab"
+      ]
     },
     {
-      "ticker": "DVLT",
-      "name": "Datavault AI Inc.",
+      "ticker": "DFAL",
+      "name": "DFAL",
       "mentions": 17,
       "momentum": 35,
-      "sentiment": -0.017647058823529415,
-      "priceMove": 0.607842178126605,
-      "lastPrice": 0.3693,
-      "quoteAsOf": "2026-07-13T15:55:51.000Z",
+      "sentiment": -0.09411764705882353,
+      "priceMove": -0.04975241256274811,
+      "lastPrice": 50.41,
+      "quoteAsOf": "2026-07-13T17:24:24.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3386996498939878,
+      "relativeVolume": 1.8830813317829012,
       "optionsActivity": 0,
-      "signalScore": 41.25382921934031,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 4
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "DVLT FINRA short volume 61% of reported volume (3,440,761.044 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "DVLT $0.37, price +2.6%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/DVLT",
-          "published": "2026-07-13T15:56:12.118Z"
-        }
-      ],
-      "marketCap": 315959045,
-      "capTier": "small",
-      "description": "The DataVault was Thinking Machines' mass storage system, storing 5 GB of data, expandable to 10 GB with transfer rates of 40 MB/s.  Eight DataVaults could be operated in parallel for a combined data transfer rate of 320 MB/s for up to 80 GB of data.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/DataVault"
-    },
-    {
-      "ticker": "AM",
-      "name": "Antero Midstream",
-      "mentions": 36,
-      "momentum": 35,
-      "sentiment": 0.008333333333333333,
-      "priceMove": 0.009973981509200999,
-      "lastPrice": 22.36,
-      "quoteAsOf": "2026-07-13T15:55:22.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 0.979775302600125,
-      "optionsActivity": 0,
-      "signalScore": 41.17799665780078,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 21,
-        "GDELT News": 2,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 0,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "ApeWisdom",
-          "title": "14 social mentions on ApeWisdom (up from 11 a day ago)",
-          "url": "https://apewisdom.io/stocks/AM/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "4chan",
-          "title": "I am defaulting because of a GPU i bought 1 year ago at 32% APR for 5 years among others.",
-          "url": "https://boards.4chan.org/biz/thread/62474866",
-          "published": "2026-07-13T15:54:59.271Z"
-        },
-        {
-          "source": "4chan",
-          "title": "help my friend plz I am currently going through a difficult personal period following a major change in my life. This situation has brought unexpected financial challenges, including a debt that has become difficult for me to manage on my o",
-          "url": "https://boards.4chan.org/biz/thread/62476094",
-          "published": "2026-07-13T15:54:59.291Z"
-        },
-        {
-          "source": "4chan",
-          "title": "I&#039;ve been a NEET for a long time and I&#039;m finally trying to get a job. I&#039;m not young, 40 next year, and don&#039;t have a job history or references. High school graduate. How fucked am I?",
-          "url": "https://boards.4chan.org/biz/thread/62449961",
-          "published": "2026-07-13T15:54:59.299Z"
-        },
-        {
-          "source": "4chan",
-          "title": "/henry/ general Any other HENRYs on /biz/? HENRY = High Earners, Not Rich Yet. HENRY is a spectrum of earner, on average, above 250K yearly income with a net worth under 5M. I suspect I am not the only one.",
-          "url": "https://boards.4chan.org/biz/thread/62475692",
-          "published": "2026-07-13T15:54:59.316Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Living in a car Serious replies only. >I have a wife and 2 kids. >I live in Las Vegas, currently. >I have 2 wfh jobs and doordash on the side I have chosen not to renew my lease and will be moving out at the end of August, my wife and the k",
-          "url": "https://boards.4chan.org/biz/thread/62471812",
-          "published": "2026-07-13T15:54:59.338Z"
-        }
-      ],
-      "marketCap": 10620552800,
-      "capTier": "large"
-    },
-    {
-      "ticker": "EFV",
-      "name": "EFV",
-      "mentions": 20,
-      "momentum": 35,
-      "sentiment": -0.08,
-      "priceMove": -0.033167340390513916,
-      "lastPrice": 78.26,
-      "quoteAsOf": "2026-07-13T15:55:48.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.7742052795109706,
-      "optionsActivity": 0,
-      "signalScore": 41.153161255175334,
+      "signalScore": 41.24065388700195,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -2584,114 +1003,43 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 16,
-        "Price/Volume": 4
+        "Price/Volume": 1
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "EFV FINRA short volume 93% of reported volume (6,240,760.163 shares)",
+          "title": "DFAL FINRA short volume 100% of reported volume (1,657,759 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "EFV $78.26, price -0.2%, volume 1.1x",
-          "url": "https://finance.yahoo.com/quote/EFV",
-          "published": "2026-07-13T15:56:00.609Z"
+          "title": "DFAL $50.41, price -0.8%, volume 0.0x",
+          "url": "https://finance.yahoo.com/quote/DFAL",
+          "published": "2026-07-13T18:07:51.038Z"
         }
       ]
     },
     {
-      "ticker": "SES",
-      "name": "SES AI Corp",
-      "mentions": 30,
-      "momentum": 35,
-      "sentiment": -0.04466666666666667,
-      "priceMove": -2.012971052965361,
-      "lastPrice": 0.7128,
-      "quoteAsOf": "2026-07-13T15:56:06.000Z",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "mentions": 87,
+      "momentum": 3.571428571428571,
+      "sentiment": -0.00206896551724138,
+      "priceMove": -0.31408196813097283,
+      "lastPrice": 233.47,
+      "quoteAsOf": "2026-07-13T18:07:33.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1408690794625613,
+      "relativeVolume": 0.9633624700890594,
       "optionsActivity": 0,
-      "signalScore": 40.77814490750134,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 8
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SES FINRA short volume 70% of reported volume (8,955,428.013 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SES $0.71, price -7.5%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/SES",
-          "published": "2026-07-13T15:56:09.258Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SES back at 0,4 soon",
-          "url": "https://stocktwits.com/billeroma/message/658908286",
-          "published": "2026-07-13T15:57:05Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SES Gettin absolutely smoked. 7 weeks straight now. All fronts. Apparently hedges just bought a bunch of semi stocks tho ? I mean this shit is oversold AF $ASPI $IREN",
-          "url": "https://stocktwits.com/Independentquest/message/658907145",
-          "published": "2026-07-13T15:48:20Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SES Glad I readjusted my risk here two weeks ago. Feeling better about holding this downturn. \n\nHow a yall doing?",
-          "url": "https://stocktwits.com/Frankquehe1/message/658904873",
-          "published": "2026-07-13T15:30:39Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$SES 😅",
-          "url": "https://stocktwits.com/Canine23/message/658898868",
-          "published": "2026-07-13T14:47:46Z"
-        }
-      ],
-      "description": "SES S. A.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/SES_(company)"
-    },
-    {
-      "ticker": "SOXL",
-      "name": "SOXL",
-      "mentions": 38,
-      "momentum": 35,
-      "sentiment": -0.08789473684210526,
-      "priceMove": -3.885294265701591,
-      "lastPrice": 170.425,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0030407730452615,
-      "optionsActivity": 0,
-      "signalScore": 40.75773575656224,
+      "signalScore": 41.18259727339202,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
         "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 0,
+        "Hacker News": 3,
+        "4chan": 66,
         "GDELT News": 0,
         "Google News": 0,
         "Bing News": 0,
@@ -2699,236 +1047,69 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 13
+        "FINRA Short Volume": 0,
+        "Price/Volume": 6
       },
       "latest": [
         {
-          "source": "FINRA Short Volume",
-          "title": "SOXL FINRA short volume 59% of reported volume (8,393,908.467 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
           "source": "ApeWisdom",
-          "title": "19 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/SOXL/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "title": "17 social mentions on ApeWisdom (up from 9 a day ago)",
+          "url": "https://apewisdom.io/stocks/BE/",
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
-          "source": "Price/Volume",
-          "title": "SOXL $170.43, price -11.4%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/SOXL",
-          "published": "2026-07-13T15:55:59.609Z"
+          "source": "4chan",
+          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
+          "url": "https://boards.4chan.org/biz/thread/60278989",
+          "published": "2026-07-13T18:06:23.021Z"
         },
         {
-          "source": "StockTwits",
-          "title": "$SOXL $SOXS $TQQQ $SQQQ $SPY  \nBREAKING: Trump says the U.S. will take over the Strait of Hormuz and charge a 20% fee on all cargo shipped through the critical oil passageway. \n \nhttps://www.politico.com/news/2026/07/13/donald-trump-strait-",
-          "url": "https://stocktwits.com/chamono1942/message/658908090",
-          "published": "2026-07-13T15:55:36Z"
+          "source": "4chan",
+          "title": "/pmg/ - Precious Metals General >Why Gold & Silver? https://youtu.be/i3S4rl6ehiI https://youtu.be/gksenA5Al_A https://youtu.be/FI7NnOg2rxo >Huge deficits in minerals such as silver by 2050 inevitable https://youtu.be/iibsrDXdEos >Bullion de",
+          "url": "https://boards.4chan.org/biz/thread/62471263",
+          "published": "2026-07-13T18:06:23.036Z"
         },
         {
-          "source": "StockTwits",
-          "title": "$SOXL BOTTOMS IN!!!!!!  BUY AGGRESSIVELY HEAR!!!!",
-          "url": "https://stocktwits.com/Elon_Trump69/message/658907325",
-          "published": "2026-07-13T15:49:46Z"
+          "source": "4chan",
+          "title": "so when DTCC and Swift actually start using chainlink for their every day operations, wouldn&#039;t that mean the chainlink LLC would be making boatloads of cash from the fees? And wouldn&#039;t these fees be used to buy chainlink on the op",
+          "url": "https://boards.4chan.org/biz/thread/62476675",
+          "published": "2026-07-13T18:06:23.039Z"
         },
         {
-          "source": "StockTwits",
-          "title": "$SOXL $SOXS $TQQQ $SQQQ $SPY  \n \n👀 The US military has imposed a 20% tariff on Hormuz!",
-          "url": "https://stocktwits.com/chamono1942/message/658907272",
-          "published": "2026-07-13T15:49:17Z"
+          "source": "4chan",
+          "title": "/XSG/ XRP Schizo General #2552 Previous: >>62445417 >Buy XRP on: Coinbase, Binance, Bitrue, Uphold, Robinhood, Kraken, Kucoin, etc >Why hold XRP? https://youtu.be/5urrOWO0KDI >Newfag Tutorial: https://youtu.be/23Yn5GdYpJc >XRPL Guide: https",
+          "url": "https://boards.4chan.org/biz/thread/62474905",
+          "published": "2026-07-13T18:06:23.044Z"
+        },
+        {
+          "source": "4chan",
+          "title": "You can do everything right financially and still be fucked over by your rulers. Never forget that.",
+          "url": "https://boards.4chan.org/biz/thread/62475151",
+          "published": "2026-07-13T18:06:23.052Z"
         }
-      ]
+      ],
+      "marketCap": 66409109862,
+      "capTier": "large",
+      "description": "Bloom Energy is an American public company that designs and manufactures solid oxide fuel cells (SOFCs) which independently produce electricity onsite for power generation in data centers, manufacturing, and other commercial sectors.  It was founded in 2001 and headquartered in…",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Bloom_Energy"
     },
     {
-      "ticker": "SGOV",
-      "name": "SGOV",
+      "ticker": "MFG",
+      "name": "Mizuho Financial Group Inc",
       "mentions": 17,
       "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0.0008779631255487603,
-      "lastPrice": 100.515,
-      "quoteAsOf": "2026-07-13T15:55:58.000Z",
+      "sentiment": -0.09411764705882353,
+      "priceMove": 0.01796164075069828,
+      "lastPrice": 10.512,
+      "quoteAsOf": "2026-07-13T18:07:09.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3383631915993492,
+      "relativeVolume": 1.8263836772163151,
       "optionsActivity": 0,
-      "signalScore": 40.71431979157833,
+      "signalScore": 41.07246561206363,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 0,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SGOV FINRA short volume 53% of reported volume (6,380,623.514 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "19 social mentions on ApeWisdom (up from 3 a day ago)",
-          "url": "https://apewisdom.io/stocks/SGOV/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SGOV $100.52, price +0.0%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/SGOV",
-          "published": "2026-07-13T15:56:01.943Z"
-        }
-      ]
-    },
-    {
-      "ticker": "NU",
-      "name": "Nu Holdings Ltd.",
-      "mentions": 14,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": -0.01816872316219248,
-      "lastPrice": 13.725,
-      "quoteAsOf": "2026-07-13T15:56:14.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3363103678746842,
-      "optionsActivity": 0,
-      "signalScore": 40.68409793088911,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "NU FINRA short volume 44% of reported volume (41,929,988.553 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/NU/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "NU $13.72, price -0.3%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/NU",
-          "published": "2026-07-13T15:56:15.227Z"
-        }
-      ]
-    },
-    {
-      "ticker": "EWY",
-      "name": "EWY",
-      "mentions": 31,
-      "momentum": 35,
-      "sentiment": -0.042580645161290315,
-      "priceMove": -2.1791601436765555,
-      "lastPrice": 169.745,
-      "quoteAsOf": "2026-07-13T15:56:05.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.0569793987456095,
-      "optionsActivity": 0,
-      "signalScore": 40.676252241646495,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
-        "ApeWisdom": 3,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 9
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "EWY FINRA short volume 49% of reported volume (3,598,207.253 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/EWY/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "EWY $169.75, price -7.5%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/EWY",
-          "published": "2026-07-13T15:56:06.748Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$KORU $EWY The Korean market is based on leverage.",
-          "url": "https://stocktwits.com/HedgedLongTermInvestor/message/658898394",
-          "published": "2026-07-13T14:44:28Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$KORU stop tanking US  techmarkets please. K thx by $EWY",
-          "url": "https://stocktwits.com/BDipNRip/message/658896152",
-          "published": "2026-07-13T14:29:38Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$EWY #SouthKorea now at an important new closing low, and still above the May L, but not by a lot...",
-          "url": "https://stocktwits.com/SunAndStorm/message/658888017",
-          "published": "2026-07-13T13:44:10Z"
-        }
-      ]
-    },
-    {
-      "ticker": "FFAI",
-      "name": "Faraday Future Intelligent Electric Inc.",
-      "mentions": 34,
-      "momentum": 35,
-      "sentiment": -0.09823529411764706,
-      "priceMove": -3.3606806769323563,
-      "lastPrice": 0.1733,
-      "quoteAsOf": "2026-07-13T15:56:11.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.364779227336808,
-      "optionsActivity": 0,
-      "signalScore": 40.63853626611466,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 8,
         "ApeWisdom": 0,
         "Hacker News": 0,
         "4chan": 0,
@@ -2939,68 +1120,46 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 13,
-        "Price/Volume": 13
+        "FINRA Short Volume": 16,
+        "Price/Volume": 1
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "FFAI FINRA short volume 59% of reported volume (7,458,047.938 shares)",
+          "title": "MFG FINRA short volume 92% of reported volume (3,724,916.017 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "FFAI $0.17, price -8.8%, volume 1.4x",
-          "url": "https://finance.yahoo.com/quote/FFAI",
-          "published": "2026-07-13T15:56:12.786Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$FFAI",
-          "url": "https://stocktwits.com/i8j0momma666/message/658907612",
-          "published": "2026-07-13T15:52:00Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$FFAI  it is down 94% since they wrote the most hilarious investor update of buzz word soup anyone has ever witnessed",
-          "url": "https://stocktwits.com/PaidBashar/message/658907015",
-          "published": "2026-07-13T15:47:23Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$FFAI the more adjectives in a company name the higher probability of bankruptcy \n \nthis has 3 LOL \n \nGLTA",
-          "url": "https://stocktwits.com/PaidBashar/message/658906801",
-          "published": "2026-07-13T15:45:47Z"
-        },
-        {
-          "source": "StockTwits",
-          "title": "$FFAI Well there is a rule that says if they go below $0.10 for 10 trading days they get delisted.",
-          "url": "https://stocktwits.com/waywardmx5/message/658906581",
-          "published": "2026-07-13T15:43:57Z"
+          "title": "MFG $10.51, price +0.3%, volume 0.3x",
+          "url": "https://finance.yahoo.com/quote/MFG",
+          "published": "2026-07-13T18:07:51.953Z"
         }
       ],
-      "marketCap": 5115211,
-      "capTier": "small"
+      "marketCap": 26173288420,
+      "capTier": "large",
+      "description": "The Mizuho Financial Group, Inc.  , known from 2000 to 2003 as Mizuho Holdings and abbreviated as MHFG or simply Mizuho, is a Japanese banking holding company headquartered in the Ōtemachi district of Chiyoda, Tokyo, Japan.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Mizuho_Financial_Group"
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple Inc.",
-      "mentions": 19,
+      "ticker": "FESM",
+      "name": "FESM",
+      "mentions": 18,
       "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0.05241100567221996,
-      "lastPrice": 316.89,
-      "quoteAsOf": "2026-07-13T15:55:58.000Z",
+      "sentiment": -0.08888888888888889,
+      "priceMove": -0.0897675828503718,
+      "lastPrice": 47.146,
+      "quoteAsOf": "2026-07-13T18:07:13.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2484645408696164,
+      "relativeVolume": 1.772628292955447,
       "optionsActivity": 0,
-      "signalScore": 40.6219710226455,
+      "signalScore": 40.94848087523593,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 0,
-        "ApeWisdom": 5,
+        "ApeWisdom": 0,
         "Hacker News": 0,
         "4chan": 0,
         "GDELT News": 0,
@@ -3010,197 +1169,44 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 12,
+        "FINRA Short Volume": 16,
         "Price/Volume": 2
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "AAPL FINRA short volume 49% of reported volume (5,513,839.57 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "45 social mentions on ApeWisdom (up from 7 a day ago)",
-          "url": "https://apewisdom.io/stocks/AAPL/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "AAPL $316.89, price +0.5%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/AAPL",
-          "published": "2026-07-13T15:55:58.942Z"
-        }
-      ],
-      "marketCap": 4654276242840,
-      "capTier": "large",
-      "description": "Apple Inc.  is an American multinational technology company headquartered in Cupertino, California, in Silicon Valley, and known for consumer electronics, software and online services.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Apple_Inc."
-    },
-    {
-      "ticker": "RIVN",
-      "name": "Rivian Automotive, Inc. / DE",
-      "mentions": 14,
-      "momentum": 35,
-      "sentiment": -0.012857142857142857,
-      "priceMove": -0.07151011229944051,
-      "lastPrice": 17.305,
-      "quoteAsOf": "2026-07-13T15:56:04.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3718238980324315,
-      "optionsActivity": 0,
-      "signalScore": 40.499701741497816,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "RIVN FINRA short volume 50% of reported volume (9,077,358.368 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/RIVN/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "RIVN $17.30, price -1.0%, volume 0.1x",
-          "url": "https://finance.yahoo.com/quote/RIVN",
-          "published": "2026-07-13T15:56:16.728Z"
-        }
-      ],
-      "description": "Rivian Automotive, Inc. , is an American electric vehicle manufacturer and automotive technology company founded in 2009.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Rivian"
-    },
-    {
-      "ticker": "VTIP",
-      "name": "VTIP",
-      "mentions": 16,
-      "momentum": 35,
-      "sentiment": -0.09375,
-      "priceMove": -0.003777119009027164,
-      "lastPrice": 49.61,
-      "quoteAsOf": "2026-07-13T15:55:38.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.7645259568733809,
-      "optionsActivity": 0,
-      "signalScore": 40.4599683562953,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 15,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "VTIP FINRA short volume 86% of reported volume (2,935,468.583 shares)",
+          "title": "FESM FINRA short volume 93% of reported volume (1,835,605.302 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "VTIP $49.61, price -0.1%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/VTIP",
-          "published": "2026-07-13T15:56:05.247Z"
+          "title": "FESM $47.15, price -0.8%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/FESM",
+          "published": "2026-07-13T18:07:51.404Z"
         }
       ]
     },
     {
-      "ticker": "VCIT",
-      "name": "VCIT",
-      "mentions": 16,
+      "ticker": "SLNH",
+      "name": "Soluna Holdings, Inc",
+      "mentions": 32,
       "momentum": 35,
-      "sentiment": -0.09375,
-      "priceMove": -0.012987223724703864,
-      "lastPrice": 81.64,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
+      "sentiment": -0.046875000000000014,
+      "priceMove": -2.728174387297363,
+      "lastPrice": 1.15,
+      "quoteAsOf": "2026-07-13T18:07:45.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.7366469585491553,
+      "relativeVolume": 1.0396622655761503,
       "optionsActivity": 0,
-      "signalScore": 40.35960396232809,
+      "signalScore": 40.90380290311262,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 15,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "VCIT FINRA short volume 83% of reported volume (2,916,436.27 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "VCIT $81.64, price -0.2%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/VCIT",
-          "published": "2026-07-13T15:56:05.080Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom Inc.",
-      "mentions": 19,
-      "momentum": 35,
-      "sentiment": -0.028421052631578948,
-      "priceMove": -0.4093728551636372,
-      "lastPrice": 389.6,
-      "quoteAsOf": "2026-07-13T15:55:59.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2292945621248292,
-      "optionsActivity": 0,
-      "signalScore": 40.35791152391006,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
+        "StockTwits": 8,
         "ApeWisdom": 2,
         "Hacker News": 0,
-        "4chan": 2,
+        "4chan": 0,
         "GDELT News": 0,
         "Google News": 0,
         "Bing News": 0,
@@ -3209,143 +1215,140 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 12,
-        "Price/Volume": 3
+        "Price/Volume": 10
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "AVGO FINRA short volume 55% of reported volume (2,958,708.841 shares)",
+          "title": "SLNH FINRA short volume 56% of reported volume (3,770,287.787 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "ApeWisdom",
           "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/AVGO/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "url": "https://apewisdom.io/stocks/SLNH/",
+          "published": "2026-07-13T18:06:22.882Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SLNH $1.15, price -8.7%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/SLNH",
+          "published": "2026-07-13T18:08:00.394Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SLNH The Market to my whole port.",
+          "url": "https://stocktwits.com/Chizzle97/message/658923830",
+          "published": "2026-07-13T17:47:31Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$SLNH  adding , nothing has changed. the future is still very bright...",
+          "url": "https://stocktwits.com/ChicagoMan/message/658921062",
+          "published": "2026-07-13T17:26:59Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$IXHL $NTLA $SLNH $ABAT \nDamn we are in the Red Sea today. Oh well another day on Wall Street. Noise is just noise. Not our first rodeo. Market will bounce back. When? Honestly with this war, I don’t know when. But I have confidence we will",
+          "url": "https://stocktwits.com/Michaelthoaicaonguyen/message/658920182",
+          "published": "2026-07-13T17:20:05Z"
+        }
+      ],
+      "marketCap": 181409457,
+      "capTier": "small"
+    },
+    {
+      "ticker": "IT",
+      "name": "Gartner",
+      "mentions": 86,
+      "momentum": 0,
+      "sentiment": 0.02441860465116279,
+      "priceMove": 0.3466376935086299,
+      "lastPrice": 139.86,
+      "quoteAsOf": "2026-07-13T18:06:43.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.9619800408154112,
+      "optionsActivity": 0,
+      "signalScore": 40.88989252428711,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 4,
+        "Hacker News": 0,
+        "4chan": 68,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "ApeWisdom",
+          "title": "15 social mentions on ApeWisdom (up from 5 a day ago)",
+          "url": "https://apewisdom.io/stocks/IT/",
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
           "source": "4chan",
-          "title": "Sell your crapto and pivot to AI, we still have plenty of room to grow: 1. Nebius Group (NBIS) — Hyper-growth Cloud Leader Q1 2026 revenue: +684% YoY. 2026 projections: ~544–550% revenue growth; 2027 ~225–234%. 2. Sandisk (SNDK) — Memory/St",
-          "url": "https://boards.4chan.org/biz/thread/62469805",
-          "published": "2026-07-13T15:54:59.319Z"
+          "title": "Welcome to /biz/ - Business & Finance This board is for the discussion of topics related to business, economics, financial markets, securities, currencies (including cryptocurrencies), commodities, etc -- as well as topics relating to start",
+          "url": "https://boards.4chan.org/biz/thread/60278989",
+          "published": "2026-07-13T18:06:23.021Z"
         },
         {
-          "source": "Price/Volume",
-          "title": "AVGO $389.60, price -2.6%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/AVGO",
-          "published": "2026-07-13T15:56:00.109Z"
+          "source": "4chan",
+          "title": "I was divorce-raped from \"made it\" back down to \"never gonna make it\". So this is what happens to every guy who makes it, huh?",
+          "url": "https://boards.4chan.org/biz/thread/62474981",
+          "published": "2026-07-13T18:06:23.041Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Sick of Elon Anyone else sick of Elon Musk? He&#039;s always so fuckin confident and always boasting about some shit that he will never do, taunting other companies and billionaires. It infuriates me that there are still people who can&#039",
+          "url": "https://boards.4chan.org/biz/thread/62472724",
+          "published": "2026-07-13T18:06:23.052Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Living in a car Serious replies only. >I have a wife and 2 kids. >I live in Las Vegas, currently. >I have 2 wfh jobs and doordash on the side I have chosen not to renew my lease and will be moving out at the end of August, my wife and the k",
+          "url": "https://boards.4chan.org/biz/thread/62471812",
+          "published": "2026-07-13T18:06:23.059Z"
+        },
+        {
+          "source": "4chan",
+          "title": "LINK: The Generational Bet Nobody Has Valued Correctly Everyone compares LINK to altcoins. Wrong benchmark. Compare it to financial infrastructure. Retail: MC = Price × Supply Institutions: Value ≈ TVS × TVE × Security × Trust × Adoption Pr",
+          "url": "https://boards.4chan.org/biz/thread/62469855",
+          "published": "2026-07-13T18:06:23.072Z"
         }
       ],
-      "marketCap": 1853553245141,
+      "marketCap": 9363891196,
       "capTier": "large",
-      "description": "Broadcom Inc.  is an American multinational designer, developer, manufacturer, and global supplier of a wide range of semiconductor and infrastructure software products.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Broadcom"
+      "description": "Gartner, Inc.  is an American research and advisory firm focusing on business and technology topics.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Gartner"
     },
     {
-      "ticker": "SOUN",
-      "name": "Soundhound Ai, Inc.",
-      "mentions": 12,
+      "ticker": "BAC",
+      "name": "Bank Of America Corp /De/",
+      "mentions": 15,
       "momentum": 35,
       "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.5233675642306677,
-      "optionsActivity": 0,
-      "signalScore": 40.338934944643704,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SOUN FINRA short volume 52% of reported volume (9,843,785.803 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ],
-      "description": "SoundHound AI, Inc.  is an American music and speech recognition company based in Santa Clara, California.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/SoundHound_AI"
-    },
-    {
-      "ticker": "VUSB",
-      "name": "VUSB",
-      "mentions": 16,
-      "momentum": 35,
-      "sentiment": -0.09375,
-      "priceMove": -0.0012585313088660218,
-      "lastPrice": 49.645,
-      "quoteAsOf": "2026-07-13T15:55:26.000Z",
+      "priceMove": -0.0726212343261991,
+      "lastPrice": 59.345,
+      "quoteAsOf": "2026-07-13T18:08:01.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.7295258381395269,
+      "relativeVolume": 1.3601028671524653,
       "optionsActivity": 0,
-      "signalScore": 40.333967928853426,
+      "signalScore": 40.78517168297418,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 15,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "VUSB FINRA short volume 83% of reported volume (2,198,012.194 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "VUSB $49.65, price -0.0%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/VUSB",
-          "published": "2026-07-13T15:56:05.414Z"
-        }
-      ]
-    },
-    {
-      "ticker": "XLF",
-      "name": "XLF",
-      "mentions": 16,
-      "momentum": 33.33333333333333,
-      "sentiment": 0,
-      "priceMove": 0.02423283910029791,
-      "lastPrice": 55.818,
-      "quoteAsOf": "2026-07-13T15:56:07.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.3402446682840246,
-      "optionsActivity": 0,
-      "signalScore": 40.316140443193255,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 2,
+        "ApeWisdom": 1,
         "Hacker News": 0,
         "4chan": 0,
         "GDELT News": 0,
@@ -3361,42 +1364,46 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "XLF FINRA short volume 54% of reported volume (4,799,329.688 shares)",
+          "title": "BAC FINRA short volume 53% of reported volume (3,484,482.252 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "ApeWisdom",
-          "title": "4 social mentions on ApeWisdom",
-          "url": "https://apewisdom.io/stocks/XLF/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
+          "url": "https://apewisdom.io/stocks/BAC/",
+          "published": "2026-07-13T18:06:22.883Z"
         },
         {
           "source": "Price/Volume",
-          "title": "XLF $55.82, price +0.2%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/XLF",
-          "published": "2026-07-13T15:56:10.285Z"
+          "title": "BAC $59.34, price -0.5%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/BAC",
+          "published": "2026-07-13T18:08:03.641Z"
         }
-      ]
+      ],
+      "marketCap": 421147172184,
+      "capTier": "large",
+      "description": "The Bank of America Corporation is an American multinational bank and financial services holding company headquartered at the Bank of America Corporate Center in Charlotte, North Carolina, with investment banking and auxiliary headquarters in Manhattan.  The bank was formed by t…",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Bank_of_America"
     },
     {
-      "ticker": "APLD",
-      "name": "Applied Digital Corp.",
-      "mentions": 31,
+      "ticker": "LUNR",
+      "name": "Intuitive Machines, Inc.",
+      "mentions": 32,
       "momentum": 35,
-      "sentiment": -0.08258064516129032,
-      "priceMove": -1.2214567880863707,
-      "lastPrice": 29.465,
-      "quoteAsOf": "2026-07-13T15:55:56.000Z",
+      "sentiment": -0.089375,
+      "priceMove": -1.036825420160321,
+      "lastPrice": 15.375,
+      "quoteAsOf": "2026-07-13T18:07:44.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.114386254326786,
+      "relativeVolume": 1.1843339580909065,
       "optionsActivity": 0,
-      "signalScore": 40.29858512450371,
+      "signalScore": 40.579978139022884,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
         "StockTwits": 8,
-        "ApeWisdom": 3,
+        "ApeWisdom": 4,
         "Hacker News": 0,
         "4chan": 0,
         "GDELT News": 0,
@@ -3412,474 +1419,63 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "APLD FINRA short volume 60% of reported volume (3,528,685.281 shares)",
+          "title": "LUNR FINRA short volume 62% of reported volume (2,912,598.779 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "ApeWisdom",
-          "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/APLD/",
-          "published": "2026-07-13T15:54:58.985Z"
+          "title": "15 social mentions on ApeWisdom (up from 2 a day ago)",
+          "url": "https://apewisdom.io/stocks/LUNR/",
+          "published": "2026-07-13T18:06:22.734Z"
         },
         {
           "source": "Price/Volume",
-          "title": "APLD $29.46, price -5.4%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/APLD",
-          "published": "2026-07-13T15:55:59.942Z"
+          "title": "LUNR $15.38, price -4.7%, volume 0.7x",
+          "url": "https://finance.yahoo.com/quote/LUNR",
+          "published": "2026-07-13T18:07:50.111Z"
         },
         {
           "source": "StockTwits",
-          "title": "$APLD Okay, so here&#39;s my secret retirement plan, in a nutshell: $SLS releases results this week, there&#39;s a buyout announcemnt, and the price goes to a $100 or $1,000 or whatever. I quickly and boldly sell my shares and put the proce",
-          "url": "https://stocktwits.com/drumfish/message/658908411",
-          "published": "2026-07-13T15:58:07Z"
+          "title": "$LUNR Here since $45. Nothing has changed. Downward we go.",
+          "url": "https://stocktwits.com/dto3245/message/658926357",
+          "published": "2026-07-13T18:05:06Z"
         },
         {
           "source": "StockTwits",
-          "title": "$APLD fahk",
-          "url": "https://stocktwits.com/JewishJesus99/message/658908391",
-          "published": "2026-07-13T15:57:54Z"
+          "title": "$LUNR so many bears have tangled into this shit that once we get a strong technical bounce up…\n\nHalf of their stop losses will trip and rocket this thing quickly up..\n\nSpace sector as a whole needs to do better though.",
+          "url": "https://stocktwits.com/SpiritOfGoldenLoinBoy/message/658926098",
+          "published": "2026-07-13T18:03:15Z"
         },
         {
           "source": "StockTwits",
-          "title": "$APLD Good morning, survivors. 🥹",
-          "url": "https://stocktwits.com/mimisweb/message/658908374",
-          "published": "2026-07-13T15:57:47Z"
+          "title": "$LUNR i get it, we&#39;re down 66% - and the shorting will likely continue until early August (when some big money will be freed from the SpaceX IPO 2 days after their 1st ER) - but HODL because we&#39;ll see new ATH by EOY. Watch and see..",
+          "url": "https://stocktwits.com/beaker73/message/658925706",
+          "published": "2026-07-13T18:00:24Z"
         }
       ],
-      "marketCap": 8420199467,
+      "marketCap": 1294153064,
       "capTier": "large",
-      "description": "Applied Digital Data Systems, Inc.  (ADDS), was a supplier of video display computer terminals, founded in 1969 by Leeam Lowin and William J.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Applied_Digital_Data_Systems"
+      "description": "Intuitive Machines, Inc.  is an American space exploration company headquartered in Houston, Texas.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Intuitive_Machines"
     },
     {
-      "ticker": "TQQQ",
-      "name": "TQQQ",
-      "mentions": 12,
+      "ticker": "JZXN",
+      "name": "Jiuzi Holdings, Inc.",
+      "mentions": 54,
       "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.5073332845615617,
-      "optionsActivity": 0,
-      "signalScore": 40.28121153783492,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "TQQQ FINRA short volume 51% of reported volume (10,818,831.308 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon Com Inc",
-      "mentions": 16,
-      "momentum": 35,
-      "sentiment": 0.03125,
-      "priceMove": 0.1350169001011411,
-      "lastPrice": 247.99,
-      "quoteAsOf": "2026-07-13T15:56:04.000Z",
+      "sentiment": -0.10074074074074074,
+      "priceMove": -20.27649913153625,
+      "lastPrice": 1.45,
+      "quoteAsOf": "2026-07-13T18:07:00.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1497901476935624,
+      "relativeVolume": 0.5523667461436046,
       "optionsActivity": 0,
-      "signalScore": 40.27766752916452,
+      "signalScore": 40.57090933962526,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 10,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "AMZN FINRA short volume 37% of reported volume (4,321,450.377 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "24 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/AMZN/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "AMZN $247.99, price +1.1%, volume 0.4x",
-          "url": "https://finance.yahoo.com/quote/AMZN",
-          "published": "2026-07-13T15:56:05.747Z"
-        }
-      ],
-      "marketCap": 2667655569034,
-      "capTier": "large",
-      "description": "Amazon. com, Inc.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Amazon_(company)"
-    },
-    {
-      "ticker": "AMDD",
-      "name": "AMDD",
-      "mentions": 12,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.5000973594460587,
-      "optionsActivity": 0,
-      "signalScore": 40.25516220741911,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "AMDD FINRA short volume 50% of reported volume (3,681,001.748 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SQQQ",
-      "name": "SQQQ",
-      "mentions": 12,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.4816399366179496,
-      "optionsActivity": 0,
-      "signalScore": 40.188715485237914,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SQQQ FINRA short volume 48% of reported volume (8,344,626.098 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "YHC",
-      "name": "LQR House Inc.",
-      "mentions": 12,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.4794847679404288,
-      "optionsActivity": 0,
-      "signalScore": 40.180956877998845,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "YHC FINRA short volume 48% of reported volume (19,060,154 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms, Inc.",
-      "mentions": 19,
-      "momentum": 35,
-      "sentiment": -0.01894736842105263,
-      "priceMove": -0.14188012222573979,
-      "lastPrice": 660.19,
-      "quoteAsOf": "2026-07-13T15:55:55.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.1904579963376893,
-      "optionsActivity": 0,
-      "signalScore": 40.13238560136207,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 5,
-        "Hacker News": 0,
-        "4chan": 1,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "META FINRA short volume 45% of reported volume (7,893,430.814 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "58 social mentions on ApeWisdom (up from 8 a day ago)",
-          "url": "https://apewisdom.io/stocks/META/",
-          "published": "2026-07-13T15:54:58.984Z"
-        },
-        {
-          "source": "4chan",
-          "title": "Meta glasses >new york bans smart glasses in courts and soon state wide >uk campaign against them starting How should we punish people taking creep videos with these &#039;glasses&#039;. I think 5 years min is a good start and done through ",
-          "url": "https://boards.4chan.org/biz/thread/62473149",
-          "published": "2026-07-13T15:54:59.410Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "META $660.19, price -1.3%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/META",
-          "published": "2026-07-13T15:55:59.442Z"
-        }
-      ],
-      "description": "Meta Platforms, Inc.  is an American multinational technology company headquartered in Menlo Park, California.",
-      "descriptionUrl": "https://en.wikipedia.org/wiki/Meta_Platforms"
-    },
-    {
-      "ticker": "SCHD",
-      "name": "SCHD",
-      "mentions": 17,
-      "momentum": 35,
-      "sentiment": -0.0823529411764706,
-      "priceMove": 0.05083459242115511,
-      "lastPrice": 32.54,
-      "quoteAsOf": "2026-07-13T15:56:02.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.502689364529876,
-      "optionsActivity": 0,
-      "signalScore": 40.11168962566063,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 1,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 2
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SCHD FINRA short volume 67% of reported volume (6,303,835.113 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "2 social mentions on ApeWisdom (down from 7 a day ago)",
-          "url": "https://apewisdom.io/stocks/SCHD/",
-          "published": "2026-07-13T15:54:59.127Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "SCHD $32.54, price +0.4%, volume 0.6x",
-          "url": "https://finance.yahoo.com/quote/SCHD",
-          "published": "2026-07-13T15:56:03.914Z"
-        }
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc.",
-      "mentions": 16,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": -0.027472015299971377,
-      "lastPrice": 355.61,
-      "quoteAsOf": "2026-07-13T15:56:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.2773605772575065,
-      "optionsActivity": 0,
-      "signalScore": 40.08295870396386,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 4,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "GOOGL FINRA short volume 47% of reported volume (3,222,185.113 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "ApeWisdom",
-          "title": "26 social mentions on ApeWisdom (up from 1 a day ago)",
-          "url": "https://apewisdom.io/stocks/GOOGL/",
-          "published": "2026-07-13T15:54:58.985Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "GOOGL $355.61, price -0.4%, volume 0.2x",
-          "url": "https://finance.yahoo.com/quote/GOOGL",
-          "published": "2026-07-13T15:56:03.369Z"
-        }
-      ]
-    },
-    {
-      "ticker": "SNDQ",
-      "name": "SNDQ",
-      "mentions": 12,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.448469100905153,
-      "optionsActivity": 0,
-      "signalScore": 40.06930047667185,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 12,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "SNDQ FINRA short volume 45% of reported volume (35,513,857.158 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "LYFT",
-      "name": "Lyft, Inc.",
-      "mentions": 15,
-      "momentum": 35,
-      "sentiment": -0.05333333333333334,
-      "priceMove": 0.1665601944151582,
-      "lastPrice": 15.805,
-      "quoteAsOf": "2026-07-13T15:56:01.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.4866114467056621,
-      "optionsActivity": 0,
-      "signalScore": 40.03992106605048,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
+        "StockTwits": 8,
         "ApeWisdom": 0,
         "Hacker News": 0,
         "4chan": 0,
@@ -3891,28 +1487,170 @@ window.SIGNALDESK_DATA = {
         "CNBC": 0,
         "MarketWatch": 0,
         "FINRA Short Volume": 13,
-        "Price/Volume": 2
+        "Price/Volume": 33
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "LYFT FINRA short volume 66% of reported volume (2,546,147.879 shares)",
+          "title": "JZXN FINRA short volume 56% of reported volume (46,859,893.702 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "LYFT $15.80, price +1.2%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/LYFT",
-          "published": "2026-07-13T15:56:15.060Z"
+          "title": "JZXN $1.45, price -33.2%, volume 0.0x",
+          "url": "https://finance.yahoo.com/quote/JZXN",
+          "published": "2026-07-13T18:08:07.900Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$ELPW $JLHL $JZXN $SOBR u should fuck off and stick with $ADTX man. ut a goof and dumber than i am",
+          "url": "https://stocktwits.com/TheStickMan/message/658923328",
+          "published": "2026-07-13T17:43:57Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$ELPW $JLHL $JZXN $SOBR \n\n$SOBR MAKE SURE YOU LIKE SUBSCRIBE AND FOLLOW  \n\nI NEED TO GET BACK 20,000 FOLLOWERS",
+          "url": "https://stocktwits.com/TALENT_ON_LOAN_FROM_GOD/message/658923162",
+          "published": "2026-07-13T17:42:43Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$ELPW $JLHL $JZXN $SOBR \n\n??????????????? ????????????????????\nSOBR 😎🥃😂🫵",
+          "url": "https://stocktwits.com/TALENT_ON_LOAN_FROM_GOD/message/658922963",
+          "published": "2026-07-13T17:41:19Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$JZXN dead market today",
+          "url": "https://stocktwits.com/lolouis/message/658922794",
+          "published": "2026-07-13T17:40:00Z"
         }
       ],
-      "marketCap": 6000882418,
-      "capTier": "large"
+      "marketCap": 1820888,
+      "capTier": "small"
     },
     {
-      "ticker": "AAL",
-      "name": "American Airlines Group Inc.",
+      "ticker": "JMTG",
+      "name": "JMTG",
+      "mentions": 16,
+      "momentum": 35,
+      "sentiment": -0.09375,
+      "priceMove": -0.022348052249986008,
+      "lastPrice": 50.16,
+      "quoteAsOf": "2026-07-13T18:06:49.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.7723588575965128,
+      "optionsActivity": 0,
+      "signalScore": 40.52799531708231,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 15,
+        "Price/Volume": 1
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "JMTG FINRA short volume 88% of reported volume (1,623,327 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "JMTG $50.16, price -0.4%, volume 0.2x",
+          "url": "https://finance.yahoo.com/quote/JMTG",
+          "published": "2026-07-13T18:07:53.784Z"
+        }
+      ]
+    },
+    {
+      "ticker": "RXT",
+      "name": "Rackspace Technology, Inc.",
+      "mentions": 40,
+      "momentum": 35,
+      "sentiment": -0.08050000000000002,
+      "priceMove": -8.13904606854025,
+      "lastPrice": 4.425,
+      "quoteAsOf": "2026-07-13T18:08:04.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.9530005366498224,
+      "optionsActivity": 0,
+      "signalScore": 40.507385529842374,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 19
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "RXT FINRA short volume 58% of reported volume (13,722,350.997 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "RXT $4.42, price -17.1%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/RXT",
+          "published": "2026-07-13T18:08:11.040Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$RXT Please, no more red 🆘🙏🏻🍀🤦🏻🤞🏼",
+          "url": "https://stocktwits.com/Vicccccc/message/658925610",
+          "published": "2026-07-13T17:59:41Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$RXT 🆘🆘🆘🆘🤦🏻🤦🏻🤦🏻🤦🏻",
+          "url": "https://stocktwits.com/Vicccccc/message/658924443",
+          "published": "2026-07-13T17:51:48Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$RXT Falling knife! Best to just sit and watch! GTA!",
+          "url": "https://stocktwits.com/GoldenAge25/message/658924296",
+          "published": "2026-07-13T17:50:51Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$RXT Wow is taking a good beating but creating a good deal of opportunity for awesome bulls like myself who is playing catch under $4.50 .  Bring it on!  looking forward to bounce over the $5 soon!  🤑",
+          "url": "https://stocktwits.com/CometaMan/message/658923978",
+          "published": "2026-07-13T17:48:33Z"
+        }
+      ],
+      "marketCap": 1102809558,
+      "capTier": "large",
+      "description": "Rackspace Technology, Inc.  is an American cloud computing company based in San Antonio, Texas.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Rackspace_Technology"
+    },
+    {
+      "ticker": "HPE",
+      "name": "Hewlett Packard Enterprise Co",
       "mentions": 12,
       "momentum": 35,
       "sentiment": 0,
@@ -3920,9 +1658,9 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "relativeVolume": 1.4345211539381932,
+      "relativeVolume": 1.548988357270641,
       "optionsActivity": 0,
-      "signalScore": 40.01908786759079,
+      "signalScore": 40.46566230812981,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -3943,195 +1681,27 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "AAL FINRA short volume 43% of reported volume (26,912,196.845 shares)",
+          "title": "HPE FINRA short volume 55% of reported volume (4,443,028.639 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "USHY",
-      "name": "USHY",
-      "mentions": 15,
-      "momentum": 35,
-      "sentiment": -0.09333333333333334,
-      "priceMove": -0.00452019394430521,
-      "lastPrice": 36.845,
-      "quoteAsOf": "2026-07-13T15:55:51.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.7093750640740302,
-      "optionsActivity": 0,
-      "signalScore": 39.93732112831773,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "USHY FINRA short volume 81% of reported volume (2,139,093.231 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "USHY $36.84, price -0.1%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/USHY",
-          "published": "2026-07-13T15:56:09.951Z"
-        }
-      ]
-    },
-    {
-      "ticker": "RKT",
-      "name": "Rocket Companies, Inc.",
-      "mentions": 11,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.4829913051494115,
-      "optionsActivity": 0,
-      "signalScore": 39.83454690019795,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "RKT FINRA short volume 48% of reported volume (3,057,839.079 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "KOS",
-      "name": "Kosmos Energy Ltd.",
-      "mentions": 11,
-      "momentum": 35,
-      "sentiment": 0,
-      "priceMove": 0,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "relativeVolume": 1.4770290783456892,
-      "optionsActivity": 0,
-      "signalScore": 39.813082883704546,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 11,
-        "Price/Volume": 0
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "KOS FINRA short volume 48% of reported volume (3,105,066.903 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "ticker": "RF",
-      "name": "Regions Financial Corp",
-      "mentions": 15,
-      "momentum": 35,
-      "sentiment": -0.09333333333333334,
-      "priceMove": 0.007521930307293761,
-      "lastPrice": 31.055,
-      "quoteAsOf": "2026-07-13T15:55:56.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.653072779338152,
-      "optionsActivity": 0,
-      "signalScore": 39.74967676388315,
-      "sources": {
-        "Wallstreetbets": 0,
-        "Reddit Finance": 0,
-        "StockTwits": 0,
-        "ApeWisdom": 0,
-        "Hacker News": 0,
-        "4chan": 0,
-        "GDELT News": 0,
-        "Google News": 0,
-        "Bing News": 0,
-        "SEC Filings": 0,
-        "Yahoo Public News": 0,
-        "CNBC": 0,
-        "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 1
-      },
-      "latest": [
-        {
-          "source": "FINRA Short Volume",
-          "title": "RF FINRA short volume 75% of reported volume (4,255,679.538 shares)",
-          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-          "published": "2026-07-10T22:00:00.000Z"
-        },
-        {
-          "source": "Price/Volume",
-          "title": "RF $31.05, price +0.1%, volume 0.2x",
-          "url": "https://finance.yahoo.com/quote/RF",
-          "published": "2026-07-13T15:56:08.759Z"
         }
       ],
-      "marketCap": 26501701553,
-      "capTier": "large"
+      "description": "The Hewlett Packard Enterprise Company (HPE) is an American multinational information technology company based in Spring, Texas.  It is a business-focused organization which works in servers, storage, networking, AI, containerization software and consulting and support.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Hewlett_Packard_Enterprise"
     },
     {
-      "ticker": "IREN",
-      "name": "IREN Ltd",
-      "mentions": 11,
+      "ticker": "AMZD",
+      "name": "AMZD",
+      "mentions": 12,
       "momentum": 35,
       "sentiment": 0,
       "priceMove": 0,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "relativeVolume": 1.4517624220413186,
+      "relativeVolume": 1.5488268041719244,
       "optionsActivity": 0,
-      "signalScore": 39.72212292100881,
+      "signalScore": 40.46508071697443,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4146,31 +1716,31 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 11,
+        "FINRA Short Volume": 12,
         "Price/Volume": 0
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "IREN FINRA short volume 45% of reported volume (5,806,043.66 shares)",
+          "title": "AMZD FINRA short volume 55% of reported volume (3,566,794 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         }
       ]
     },
     {
-      "ticker": "KRE",
-      "name": "KRE",
-      "mentions": 15,
+      "ticker": "SCNX",
+      "name": "Scienture Holdings, Inc.",
+      "mentions": 12,
       "momentum": 35,
-      "sentiment": -0.09333333333333334,
-      "priceMove": -0.026659260329726507,
-      "lastPrice": 74.72,
-      "quoteAsOf": "2026-07-13T15:55:47.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.6486570240656204,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5460097387360527,
       "optionsActivity": 0,
-      "signalScore": 39.71873618428745,
+      "signalScore": 40.45493928140529,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4185,37 +1755,1243 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 14,
-        "Price/Volume": 1
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
       },
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "KRE FINRA short volume 74% of reported volume (2,597,583.563 shares)",
+          "title": "SCNX FINRA short volume 55% of reported volume (3,711,829.79 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ELAB",
+      "name": "PMGC Holdings Inc.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5448256389137407,
+      "optionsActivity": 0,
+      "signalScore": 40.450676522044965,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "ELAB FINRA short volume 54% of reported volume (9,535,606.932 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CHSN",
+      "name": "Chanson International Holding",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.541485565220998,
+      "optionsActivity": 0,
+      "signalScore": 40.43865225675109,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "CHSN FINRA short volume 54% of reported volume (3,933,130.657 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "RKLZ",
+      "name": "RKLZ",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5394839406429572,
+      "optionsActivity": 0,
+      "signalScore": 40.43144640827014,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "RKLZ FINRA short volume 54% of reported volume (2,610,395.482 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "GOSS",
+      "name": "Gossamer Bio, Inc.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5390123078954703,
+      "optionsActivity": 0,
+      "signalScore": 40.42974853037919,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "GOSS FINRA short volume 54% of reported volume (4,158,588 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ETHA",
+      "name": "iShares Ethereum Trust ETF",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5387169179657285,
+      "optionsActivity": 0,
+      "signalScore": 40.42868512663212,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "ETHA FINRA short volume 54% of reported volume (3,393,925.023 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "LX",
+      "name": "LexinFintech Holdings Ltd.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5374420083836313,
+      "optionsActivity": 0,
+      "signalScore": 40.42409545213657,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "LX FINRA short volume 54% of reported volume (2,619,152.348 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "NVVE",
+      "name": "Nuvve Holding Corp.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5354216934548235,
+      "optionsActivity": 0,
+      "signalScore": 40.41682231839286,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "NVVE FINRA short volume 54% of reported volume (5,793,702.304 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast Corp",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.53324128226724,
+      "optionsActivity": 0,
+      "signalScore": 40.40897283811756,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "CMCSA FINRA short volume 53% of reported volume (4,930,051.717 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Comcast Corporation, formerly known as Comcast Holdings, is an American multinational mass media, telecommunications, and entertainment conglomerate.  Comcast's corporate headquarters is at the Comcast Center in Philadelphia, while NBCUniversal, Comcast's New York operations and…",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Comcast"
+    },
+    {
+      "ticker": "GERN",
+      "name": "Geron Corp",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5295564019187229,
+      "optionsActivity": 0,
+      "signalScore": 40.3957072688629,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "GERN FINRA short volume 53% of reported volume (2,988,324.737 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Geron Corporation is a biotechnology company located in Foster City, California which specializes in developing and commercializing therapeutic products for cancer that inhibit telomerase.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Geron_Corporation"
+    },
+    {
+      "ticker": "HAO",
+      "name": "Haoxi Health Technology Ltd",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5287316386433858,
+      "optionsActivity": 0,
+      "signalScore": 40.39273812107169,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "HAO FINRA short volume 53% of reported volume (8,247,648.523 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "TECS",
+      "name": "TECS",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.527640478675109,
+      "optionsActivity": 0,
+      "signalScore": 40.38880994518589,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "TECS FINRA short volume 53% of reported volume (3,196,789.327 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "TECS, formerly known as the Treasury Enforcement Communications System, is used by the U. S.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/TECS"
+    },
+    {
+      "ticker": "LQD",
+      "name": "LQD",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.527017498668793,
+      "optionsActivity": 0,
+      "signalScore": 40.386567217163154,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "LQD FINRA short volume 53% of reported volume (9,465,965.633 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "IONZ",
+      "name": "IONZ",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5211891779556668,
+      "optionsActivity": 0,
+      "signalScore": 40.3655852625959,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "IONZ FINRA short volume 52% of reported volume (3,769,122.426 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "ABEV",
+      "name": "Ambev S.A.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5186157554156694,
+      "optionsActivity": 0,
+      "signalScore": 40.356320941451905,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "ABEV FINRA short volume 52% of reported volume (8,354,091.152 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CLSK",
+      "name": "Cleanspark, Inc.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5185267060016143,
+      "optionsActivity": 0,
+      "signalScore": 40.356000363561314,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "CLSK FINRA short volume 52% of reported volume (3,271,079.652 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "FRSH",
+      "name": "Freshworks Inc.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5179340190996167,
+      "optionsActivity": 0,
+      "signalScore": 40.35386669071412,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "FRSH FINRA short volume 52% of reported volume (7,807,625.591 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Freshworks Inc.  is a cloud-based software-as-a-service company, founded in 2010 in Chennai, India.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Freshworks"
+    },
+    {
+      "ticker": "HTZ",
+      "name": "Hertz Global Holdings, Inc",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5145738487143892,
+      "optionsActivity": 0,
+      "signalScore": 40.3417700773273,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "HTZ FINRA short volume 51% of reported volume (3,352,403.741 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Hertz Global Holdings, Inc. , is an American car rental company based in Estero, Florida.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Hertz_Global_Holdings"
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IonQ, Inc.",
+      "mentions": 34,
+      "momentum": 35,
+      "sentiment": -0.09294117647058824,
+      "priceMove": -3.129203609209729,
+      "lastPrice": 39.06,
+      "quoteAsOf": "2026-07-13T18:07:57.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.2302310595328954,
+      "optionsActivity": 0,
+      "signalScore": 40.34079383398508,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 9,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 12
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "IONQ FINRA short volume 61% of reported volume (3,261,394.181 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#27)",
+          "url": "https://stocktwits.com/symbol/IONQ",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "IONQ $39.06, price -8.9%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/IONQ",
+          "published": "2026-07-13T18:07:57.870Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$IONQ @ all the shorts here, whats youre goal price, trying to jump in  after and ride the hype back up",
+          "url": "https://stocktwits.com/EddieNugget/message/658924192",
+          "published": "2026-07-13T17:50:05Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$QUBT $RGTI $QBTS $IONQ \nQuantum bottoms before the rest of the market (it was weeks last time?).\n\nIt looks like we are near the bottom. It may take one or two days. I am guessing tomorrow. one more shake out for the stop loss hunt then we ",
+          "url": "https://stocktwits.com/dragon_heart/message/658923913",
+          "published": "2026-07-13T17:48:09Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$IONQ everything quantum getting demolished (outside of $IBM, of which it is  still a very minor part of the business). Some of the small players may  not survive. $IONQ is not a small player, but the momentum is clearly to the downside w/f",
+          "url": "https://stocktwits.com/accretivewealth/message/658922630",
+          "published": "2026-07-13T17:38:39Z"
+        }
+      ],
+      "marketCap": 14579924169,
+      "capTier": "large",
+      "sector": "Electronic Technology",
+      "industry": "Computer Processing Hardware",
+      "description": "IonQ, Inc.  is an American quantum computing hardware and software company headquartered in College Park, Maryland.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/IonQ"
+    },
+    {
+      "ticker": "ELPW",
+      "name": "Elong Power Holding Ltd.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5128629797093154,
+      "optionsActivity": 0,
+      "signalScore": 40.335610948909036,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "ELPW FINRA short volume 51% of reported volume (7,343,952.049 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "PMA",
+      "name": "Ming Shing Group Holdings Ltd",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5117111907532408,
+      "optionsActivity": 0,
+      "signalScore": 40.33146450866717,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "PMA FINRA short volume 51% of reported volume (5,047,673.586 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "OKLL",
+      "name": "OKLL",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.510763132823482,
+      "optionsActivity": 0,
+      "signalScore": 40.32805150012003,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "OKLL FINRA short volume 51% of reported volume (2,787,276.582 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CCUP",
+      "name": "CCUP",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5089585432793315,
+      "optionsActivity": 0,
+      "signalScore": 40.32155497776109,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "CCUP FINRA short volume 51% of reported volume (3,260,611.176 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon Communications Inc",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.5006384083262017,
+      "optionsActivity": 0,
+      "signalScore": 40.29160249192982,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "VZ FINRA short volume 50% of reported volume (5,634,737.764 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Verizon Communications Inc.  is an American telecommunications company headquartered in New York City.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Verizon"
+    },
+    {
+      "ticker": "VALE",
+      "name": "Vale S.A.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4995186079988212,
+      "optionsActivity": 0,
+      "signalScore": 40.28757121075125,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "VALE FINRA short volume 50% of reported volume (3,797,259.812 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Vale, formerly Companhia Vale do Rio Doce, is a Brazilian multinational corporation engaged in metals and mining and one of the largest logistics operators in Brazil.  Vale is the largest producer of iron ore and nickel in the world.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Vale_S.A."
+    },
+    {
+      "ticker": "CPHI",
+      "name": "China Pharma Holdings, Inc.",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4927647805690125,
+      "optionsActivity": 0,
+      "signalScore": 40.26325743200395,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "CPHI FINRA short volume 49% of reported volume (7,551,819.707 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "SPCX",
+      "name": "Space Exploration Technologies Corp",
+      "mentions": 47,
+      "momentum": 17.5,
+      "sentiment": -0.06680851063829786,
+      "priceMove": -0.9336519171618664,
+      "lastPrice": 137.33,
+      "quoteAsOf": "2026-07-13T18:07:44.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.188166511560031,
+      "optionsActivity": 0,
+      "signalScore": 40.24697835852466,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 7,
+        "Hacker News": 4,
+        "4chan": 6,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 14,
+        "Price/Volume": 8
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "SPCX FINRA short volume 71% of reported volume (12,178,705.407 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        },
+        {
+          "source": "ApeWisdom",
+          "title": "223 social mentions on ApeWisdom (up from 34 a day ago)",
+          "url": "https://apewisdom.io/stocks/SPCX/",
+          "published": "2026-07-13T18:06:22.733Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Sell SPCX you fools. Sell until it&#039;s too late.",
+          "url": "https://boards.4chan.org/biz/thread/62466527",
+          "published": "2026-07-13T18:06:23.071Z"
+        },
+        {
+          "source": "4chan",
+          "title": ">BOOMERS WILL BE FORCED TO BUY MY SPCX BAGS",
+          "url": "https://boards.4chan.org/biz/thread/62476365",
+          "published": "2026-07-13T18:06:23.084Z"
+        },
+        {
+          "source": "4chan",
+          "title": "SpaceX buyers right now.",
+          "url": "https://boards.4chan.org/biz/thread/62476189",
+          "published": "2026-07-13T18:06:23.089Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "SPCX $137.33, price -5.5%, volume 0.9x",
+          "url": "https://finance.yahoo.com/quote/SPCX",
+          "published": "2026-07-13T18:07:44.944Z"
+        }
+      ]
+    },
+    {
+      "ticker": "APP",
+      "name": "Applovin Corp",
+      "mentions": 38,
+      "momentum": 35,
+      "sentiment": -0.05526315789473685,
+      "priceMove": -4.026942555520841,
+      "lastPrice": 455.26,
+      "quoteAsOf": "2026-07-13T18:07:48.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.190328168632746,
+      "optionsActivity": 0,
+      "signalScore": 40.23319987353966,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 12,
+        "ApeWisdom": 2,
+        "Hacker News": 0,
+        "4chan": 9,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 15
+      },
+      "latest": [
+        {
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#6)",
+          "url": "https://stocktwits.com/symbol/APP",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "ApeWisdom",
+          "title": "4 social mentions on ApeWisdom",
+          "url": "https://apewisdom.io/stocks/APP/",
+          "published": "2026-07-13T18:06:22.882Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/XMR/ Monero General Welcome to /XMR/ Monero General, dedicated to the discussion of the world&#039;s most widely adopted privacy coin. OFFICIAL WEBSITE: https://getmonero.org INFODUMPS: https://rentry.org/monero-explained https://moneroinf",
+          "url": "https://boards.4chan.org/biz/thread/62427591",
+          "published": "2026-07-13T18:06:23.078Z"
+        },
+        {
+          "source": "4chan",
+          "title": ">holding onto an idea for an app worth probably billions of dollars, its that good and solid, something you&#039;d go like \"oh yeah i shoulda thought of that\" >too lazy to get the server and code >some liability issues make it unfeasible wh",
+          "url": "https://boards.4chan.org/biz/thread/62470115",
+          "published": "2026-07-13T18:06:23.114Z"
+        },
+        {
+          "source": "4chan",
+          "title": "Can someone explain to me why so many people are still using this app especially after it&#039;s been proven they are turbo kikes and will withold your earnings if you make it like after the DOGE and GME scandal?",
+          "url": "https://boards.4chan.org/biz/thread/62471963",
+          "published": "2026-07-13T18:06:23.143Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "APP $455.26, price -10.2%, volume 1.5x",
+          "url": "https://finance.yahoo.com/quote/APP",
+          "published": "2026-07-13T18:07:53.052Z"
+        }
+      ],
+      "sector": "Technology Services",
+      "industry": "Packaged Software",
+      "description": "AppLovin Corporation is an American mobile technology company headquartered in Palo Alto, California.  Founded in 2012, the company helps developers market, monetize, analyze and publish their apps through its mobile advertising, marketing, and analytics platforms, SSP MAX; DSP…",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/AppLovin"
+    },
+    {
+      "ticker": "IQQ",
+      "name": "IQQ",
+      "mentions": 19,
+      "momentum": 35,
+      "sentiment": -0.11263157894736843,
+      "priceMove": -0.28298804849462195,
+      "lastPrice": 24.11,
+      "quoteAsOf": "2026-07-13T18:07:34.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 1.729376809640211,
+      "optionsActivity": 0,
+      "signalScore": 40.21965484920587,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 16,
+        "Price/Volume": 3
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "IQQ FINRA short volume 98% of reported volume (2,289,610.41 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "KRE $74.72, price -0.4%, volume 0.3x",
-          "url": "https://finance.yahoo.com/quote/KRE",
-          "published": "2026-07-13T15:56:07.921Z"
+          "title": "IQQ $24.11, price -1.8%, volume 0.4x",
+          "url": "https://finance.yahoo.com/quote/IQQ",
+          "published": "2026-07-13T18:07:51.770Z"
         }
       ]
     },
     {
-      "ticker": "HPQ",
-      "name": "Hp Inc",
-      "mentions": 16,
+      "ticker": "PLUG",
+      "name": "Plug Power Inc",
+      "mentions": 12,
       "momentum": 35,
-      "sentiment": -0.08750000000000001,
-      "priceMove": 0.07741571578142088,
-      "lastPrice": 24.37,
-      "quoteAsOf": "2026-07-13T15:56:03.000Z",
-      "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.573865308429371,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4795828418923669,
       "optionsActivity": 0,
-      "signalScore": 39.70520716774542,
+      "signalScore": 40.21580245276802,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4230,29 +3006,282 @@ window.SIGNALDESK_DATA = {
         "Yahoo Public News": 0,
         "CNBC": 0,
         "MarketWatch": 0,
-        "FINRA Short Volume": 14,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "PLUG FINRA short volume 48% of reported volume (13,096,295.937 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ],
+      "description": "Plug Power Inc.  is an American company engaged in the development of hydrogen fuel cell and electrolyzer systems that replace conventional batteries in equipment and vehicles powered by electricity.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Plug_Power"
+    },
+    {
+      "ticker": "PLTD",
+      "name": "PLTD",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4783919685817786,
+      "optionsActivity": 0,
+      "signalScore": 40.211515308849904,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "PLTD FINRA short volume 48% of reported volume (9,654,996.099 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "TV",
+      "name": "Grupo Televisa, S.A.B.",
+      "mentions": 35,
+      "momentum": 35,
+      "sentiment": 0.02571428571428571,
+      "priceMove": -0.05157293676876083,
+      "lastPrice": 2.745,
+      "quoteAsOf": "2026-07-13T18:06:24.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.9635678012389884,
+      "optionsActivity": 0,
+      "signalScore": 40.176413265676885,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 25,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
         "Price/Volume": 2
       },
       "latest": [
         {
+          "source": "4chan",
+          "title": "/smg/ - stock market general Greedy navigator edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingv",
+          "url": "https://boards.4chan.org/biz/thread/62476065",
+          "published": "2026-07-13T18:06:23.042Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/smg/ - stock market general Korean DRAM girl riding da wave edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https",
+          "url": "https://boards.4chan.org/biz/thread/62475533",
+          "published": "2026-07-13T18:06:23.096Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/smg/ - stock market general wow edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingview.com https",
+          "url": "https://boards.4chan.org/biz/thread/62474785",
+          "published": "2026-07-13T18:06:23.111Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/smg/ - stock market general sleep is for wagies edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradi",
+          "url": "https://boards.4chan.org/biz/thread/62474036",
+          "published": "2026-07-13T18:06:23.150Z"
+        },
+        {
+          "source": "4chan",
+          "title": "/smg/ - Stock Market General Weather futures edition >Educational sites: https://www.investopedia.com >Financial TV Streams: https://www.newslive.com/american/c nbc.html https://www.livestreamy.net/bloombe rg/ >Charts: https://www.tradingvi",
+          "url": "https://boards.4chan.org/biz/thread/62472496",
+          "published": "2026-07-13T18:06:23.177Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "TV $2.75, price -0.9%, volume 0.4x",
+          "url": "https://finance.yahoo.com/quote/TV",
+          "published": "2026-07-13T18:07:42.822Z"
+        }
+      ],
+      "description": "Grupo Televisa, S. A.",
+      "descriptionUrl": "https://en.wikipedia.org/wiki/Televisa"
+    },
+    {
+      "ticker": "DFNS",
+      "name": "T3 Defense Inc.",
+      "mentions": 41,
+      "momentum": 35,
+      "sentiment": -0.08292682926829269,
+      "priceMove": -9.34959261458577,
+      "lastPrice": 0.097,
+      "quoteAsOf": "2026-07-13T18:07:43.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.8242478866455986,
+      "optionsActivity": 0,
+      "signalScore": 40.12943671116372,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 8,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 13,
+        "Price/Volume": 20
+      },
+      "latest": [
+        {
           "source": "FINRA Short Volume",
-          "title": "HPQ FINRA short volume 73% of reported volume (2,543,329.347 shares)",
+          "title": "DFNS FINRA short volume 56% of reported volume (71,417,080.755 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "HPQ $24.37, price +0.6%, volume 0.5x",
-          "url": "https://finance.yahoo.com/quote/HPQ",
-          "published": "2026-07-13T15:56:07.254Z"
+          "title": "DFNS $0.10, price -19.2%, volume 0.3x",
+          "url": "https://finance.yahoo.com/quote/DFNS",
+          "published": "2026-07-13T18:08:05.072Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$DFNS HEY SHORTS YOU TALK SO MUCH SHIT TO SCARE AND ROB RETAIL OF CHEAP SHARES.. WE AREN&#39;T GOING ANYWHERE AND LET&#39;S HAVE THAT SAME ENERGY WHEN WE SQUEEZE YOU AND. CHOCK YOUR SHORT POSITION WITH A THICK FAT HARD LONG GREEN CANDLE..😂",
+          "url": "https://stocktwits.com/KryptonianTrader/message/658924649",
+          "published": "2026-07-13T17:53:04Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$DFNS https://share.google/OkGFdEQBGOtrkxgHB",
+          "url": "https://stocktwits.com/KryptonianTrader/message/658922542",
+          "published": "2026-07-13T17:38:00Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$DFNS HEY SHORTS.. SOMETHING IS COMING YOUR WAY... Hope you enjoyed your work today...😂😂😂😂😂💰💰💰💰💰💰💰💰💰💰💰🫡🫡☠️☠️☠️☠️☠️",
+          "url": "https://stocktwits.com/KryptonianTrader/message/658921427",
+          "published": "2026-07-13T17:29:47Z"
+        },
+        {
+          "source": "StockTwits",
+          "title": "$DFNS",
+          "url": "https://stocktwits.com/nord/message/658919759",
+          "published": "2026-07-13T17:16:28Z"
         }
       ],
-      "marketCap": 22286917955,
-      "capTier": "large"
+      "marketCap": 5846241,
+      "capTier": "small"
     },
     {
-      "ticker": "TSLG",
-      "name": "TSLG",
+      "ticker": "TZA",
+      "name": "TZA",
+      "mentions": 12,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4379408599595198,
+      "optionsActivity": 0,
+      "signalScore": 40.06589131780977,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 12,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "TZA FINRA short volume 44% of reported volume (64,576,004.315 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "SHOP",
+      "name": "Shopify Inc.",
+      "mentions": 5,
+      "momentum": 35,
+      "sentiment": 0.25,
+      "priceMove": 2.978618456995746,
+      "lastPrice": 126.19,
+      "quoteAsOf": "2026-07-13T18:08:04.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.5688440008165809,
+      "optionsActivity": 0,
+      "signalScore": 39.963922688496005,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "SHOP $126.19, price +3.0%, volume 0.6x",
+          "url": "https://finance.yahoo.com/quote/SHOP",
+          "published": "2026-07-13T18:08:19.101Z"
+        }
+      ]
+    },
+    {
+      "ticker": "INFY",
+      "name": "Infosys Ltd",
       "mentions": 11,
       "momentum": 35,
       "sentiment": 0,
@@ -4260,9 +3289,9 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "relativeVolume": 1.4343158265799179,
+      "relativeVolume": 1.4942882491201142,
       "optionsActivity": 0,
-      "signalScore": 39.65931517734777,
+      "signalScore": 39.9082399611853,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4283,15 +3312,15 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "TSLG FINRA short volume 43% of reported volume (5,341,596.323 shares)",
+          "title": "INFY FINRA short volume 49% of reported volume (3,059,887.898 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         }
       ]
     },
     {
-      "ticker": "NIO",
-      "name": "NIO Inc.",
+      "ticker": "NVDL",
+      "name": "NVDL",
       "mentions": 11,
       "momentum": 35,
       "sentiment": 0,
@@ -4299,9 +3328,9 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "relativeVolume": 1.4183356311252493,
+      "relativeVolume": 1.4915883516641555,
       "optionsActivity": 0,
-      "signalScore": 39.601786473710966,
+      "signalScore": 39.89852033034385,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4322,25 +3351,25 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "NIO FINRA short volume 42% of reported volume (3,621,389.017 shares)",
+          "title": "NVDL FINRA short volume 49% of reported volume (3,643,922.485 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         }
       ]
     },
     {
-      "ticker": "LCID",
-      "name": "Lucid Group, Inc.",
+      "ticker": "SLB",
+      "name": "Slb Limited/Nv",
       "mentions": 15,
       "momentum": 35,
       "sentiment": -0.09333333333333334,
-      "priceMove": -0.048048275507737305,
-      "lastPrice": 5.51,
-      "quoteAsOf": "2026-07-13T15:56:03.000Z",
+      "priceMove": 0.0013961025709515317,
+      "lastPrice": 47.77,
+      "quoteAsOf": "2026-07-13T18:07:56.000Z",
       "quoteSource": "Yahoo public chart",
-      "relativeVolume": 1.613575823139007,
+      "relativeVolume": 1.6846061553426743,
       "optionsActivity": 0,
-      "signalScore": 39.59244386095164,
+      "signalScore": 39.88950905893417,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4361,23 +3390,23 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "LCID FINRA short volume 71% of reported volume (3,167,712.187 shares)",
+          "title": "SLB FINRA short volume 78% of reported volume (1,911,011.854 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         },
         {
           "source": "Price/Volume",
-          "title": "LCID $5.51, price -0.7%, volume 0.2x",
-          "url": "https://finance.yahoo.com/quote/LCID",
-          "published": "2026-07-13T15:56:08.087Z"
+          "title": "SLB $47.77, price +0.0%, volume 0.4x",
+          "url": "https://finance.yahoo.com/quote/SLB",
+          "published": "2026-07-13T18:08:00.210Z"
         }
       ],
-      "marketCap": 2150315012,
+      "marketCap": 71418904466,
       "capTier": "large"
     },
     {
-      "ticker": "UWMC",
-      "name": "UWM Holdings Corp",
+      "ticker": "CCC",
+      "name": "CCC Intelligent Solutions Holdings Inc.",
       "mentions": 11,
       "momentum": 35,
       "sentiment": 0,
@@ -4385,9 +3414,9 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "relativeVolume": 1.414407404572744,
+      "relativeVolume": 1.4851681562432477,
       "optionsActivity": 0,
-      "signalScore": 39.58764485812194,
+      "signalScore": 39.87540762682858,
       "sources": {
         "Wallstreetbets": 0,
         "Reddit Finance": 0,
@@ -4408,39 +3437,383 @@ window.SIGNALDESK_DATA = {
       "latest": [
         {
           "source": "FINRA Short Volume",
-          "title": "UWMC FINRA short volume 41% of reported volume (3,629,168.162 shares)",
+          "title": "CCC FINRA short volume 49% of reported volume (3,780,534.593 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal Holdings Inc",
+      "mentions": 13,
+      "momentum": 35,
+      "sentiment": 0.11538461538461539,
+      "priceMove": 1.5245120717976013,
+      "lastPrice": 47.85,
+      "quoteAsOf": "2026-07-13T18:08:16.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.9951589845249799,
+      "optionsActivity": 0,
+      "signalScore": 39.86886727621604,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 5,
+        "ApeWisdom": 2,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 6
+      },
+      "latest": [
+        {
+          "source": "StockTwits",
+          "title": "Trending on StockTwits (#2)",
+          "url": "https://stocktwits.com/symbol/PYPL",
+          "published": "2026-07-13T18:06:22.457Z"
+        },
+        {
+          "source": "ApeWisdom",
+          "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
+          "url": "https://apewisdom.io/stocks/PYPL/",
+          "published": "2026-07-13T18:06:22.735Z"
+        },
+        {
+          "source": "Price/Volume",
+          "title": "PYPL $47.85, price +3.3%, volume 1.0x",
+          "url": "https://finance.yahoo.com/quote/PYPL",
+          "published": "2026-07-13T18:08:18.918Z"
+        }
+      ],
+      "marketCap": 42208747840,
+      "capTier": "large",
+      "sector": "Commercial Services",
+      "industry": "Miscellaneous Commercial Services"
+    },
+    {
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust ETF",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.467626902027002,
+      "optionsActivity": 0,
+      "signalScore": 39.8122591116501,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "IBIT FINRA short volume 47% of reported volume (3,554,504.099 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron Corp.",
+      "mentions": 5,
+      "momentum": 35,
+      "sentiment": 0.25,
+      "priceMove": 3.0045387113934825,
+      "lastPrice": 181.7,
+      "quoteAsOf": "2026-07-13T18:08:14.000Z",
+      "quoteSource": "Yahoo public chart",
+      "relativeVolume": 0.5017246875678357,
+      "optionsActivity": 0,
+      "signalScore": 39.774133669596,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 0,
+        "Price/Volume": 5
+      },
+      "latest": [
+        {
+          "source": "Price/Volume",
+          "title": "CVX $181.70, price +3.0%, volume 0.5x",
+          "url": "https://finance.yahoo.com/quote/CVX",
+          "published": "2026-07-13T18:08:15.316Z"
+        }
+      ],
+      "marketCap": 361873307904,
+      "capTier": "large"
+    },
+    {
+      "ticker": "JLHL",
+      "name": "Julong Holding Ltd",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4487823232077535,
+      "optionsActivity": 0,
+      "signalScore": 39.74441862790081,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "JLHL FINRA short volume 45% of reported volume (3,266,139.01 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "BBAI",
+      "name": "BigBear.ai Holdings, Inc.",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4420054414767631,
+      "optionsActivity": 0,
+      "signalScore": 39.72002185366924,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "BBAI FINRA short volume 44% of reported volume (5,870,617.905 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "DRIP",
+      "name": "DRIP",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.441241675638881,
+      "optionsActivity": 0,
+      "signalScore": 39.71727229665286,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "DRIP FINRA short volume 44% of reported volume (5,973,948.887 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "NOWL",
+      "name": "NOWL",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.436379810664898,
+      "optionsActivity": 0,
+      "signalScore": 39.69976958274652,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "NOWL FINRA short volume 44% of reported volume (3,223,077.91 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "HYG",
+      "name": "HYG",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4348426866575712,
+      "optionsActivity": 0,
+      "signalScore": 39.69423593632015,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "HYG FINRA short volume 43% of reported volume (4,784,893.289 shares)",
+          "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
+          "published": "2026-07-10T22:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "ticker": "DNN",
+      "name": "Denison Mines Corp.",
+      "mentions": 11,
+      "momentum": 35,
+      "sentiment": 0,
+      "priceMove": 0,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "relativeVolume": 1.4305744583458,
+      "optionsActivity": 0,
+      "signalScore": 39.67887031439777,
+      "sources": {
+        "Wallstreetbets": 0,
+        "Reddit Finance": 0,
+        "StockTwits": 0,
+        "ApeWisdom": 0,
+        "Hacker News": 0,
+        "4chan": 0,
+        "GDELT News": 0,
+        "Google News": 0,
+        "Bing News": 0,
+        "SEC Filings": 0,
+        "Yahoo Public News": 0,
+        "CNBC": 0,
+        "MarketWatch": 0,
+        "FINRA Short Volume": 11,
+        "Price/Volume": 0
+      },
+      "latest": [
+        {
+          "source": "FINRA Short Volume",
+          "title": "DNN FINRA short volume 43% of reported volume (4,711,631.168 shares)",
           "url": "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
           "published": "2026-07-10T22:00:00.000Z"
         }
       ]
     }
   ],
-  "marketNews": [
-    {
-      "ticker": "AS",
-      "name": "Amer Sports",
-      "priceMove": -1.6954001436650072,
-      "lastPrice": 34.21,
-      "relativeVolume": 0.15989677746489075,
-      "source": "GDELT News",
-      "title": "Oil prices rise following the latest fighting in the Middle East , as AI stocks sink postregister.com",
-      "url": "http://www.postregister.com/businessreport/technology/oil-prices-rise-following-the-latest-fighting-in-the-middle-east-as-ai-stocks-sink/article_2cbe4ae0-da15-58c7-a396-d100f8f55143.html",
-      "published": "2026-07-13T15:30:00.000Z",
-      "coverage": 3
-    },
-    {
-      "ticker": "NFLX",
-      "name": "Netflix",
-      "priceMove": 1.7377636713763935,
-      "lastPrice": 74.645,
-      "relativeVolume": 0.41464193469526583,
-      "source": "GDELT News",
-      "title": "Netflix - Aktie an der NASDAQ : Was Analysten vor den Zahlen am Donnerstag im Blick behalten finanzen.net",
-      "url": "https://www.finanzen.net/nachricht/aktien/aktie-im-fokus-netflix-zahlen-werfen-ihre-schatten-voraus-so-blicken-experten-auf-die-bilanzvorlage-am-donnerstag-00-15793825",
-      "published": "2026-07-13T15:30:00.000Z",
-      "coverage": 1
-    }
-  ],
+  "marketNews": [],
   "events": [
     {
       "source": "FINRA Short Volume",
@@ -7455,419 +6828,329 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "QTTB",
-      "name": "Q32 Bio Inc.",
-      "title": "Trending on StockTwits (#2)",
-      "url": "https://stocktwits.com/symbol/QTTB",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "FUBO",
-      "name": "fuboTV Inc",
-      "title": "Trending on StockTwits (#3)",
-      "url": "https://stocktwits.com/symbol/FUBO",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "APP",
-      "name": "Applovin Corp",
-      "title": "Trending on StockTwits (#4)",
-      "url": "https://stocktwits.com/symbol/APP",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "GME",
-      "name": "GameStop Corp",
-      "title": "Trending on StockTwits (#5)",
-      "url": "https://stocktwits.com/symbol/GME",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "PSNL",
-      "name": "Personalis Inc",
-      "title": "Trending on StockTwits (#6)",
-      "url": "https://stocktwits.com/symbol/PSNL",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "PHAT",
-      "name": "Phathom Pharmaceuticals Inc",
-      "title": "Trending on StockTwits (#7)",
-      "url": "https://stocktwits.com/symbol/PHAT",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "NOW",
-      "name": "ServiceNow Inc",
-      "title": "Trending on StockTwits (#8)",
-      "url": "https://stocktwits.com/symbol/NOW",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "RCL",
-      "name": "Royal Caribbean Group",
-      "title": "Trending on StockTwits (#9)",
-      "url": "https://stocktwits.com/symbol/RCL",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "SNOW",
-      "name": "Snowflake Inc",
-      "title": "Trending on StockTwits (#10)",
-      "url": "https://stocktwits.com/symbol/SNOW",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "PATH",
-      "name": "UiPath Inc",
-      "title": "Trending on StockTwits (#11)",
-      "url": "https://stocktwits.com/symbol/PATH",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "ALOY",
-      "name": "REalloys Inc.",
-      "title": "Trending on StockTwits (#12)",
-      "url": "https://stocktwits.com/symbol/ALOY",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "NOG",
-      "name": "Northern Oil and Gas Inc.",
-      "title": "Trending on StockTwits (#13)",
-      "url": "https://stocktwits.com/symbol/NOG",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "ONDS",
-      "name": "Ondas Inc",
-      "title": "Trending on StockTwits (#14)",
-      "url": "https://stocktwits.com/symbol/ONDS",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "S",
-      "name": "SentinelOne Inc",
-      "title": "Trending on StockTwits (#15)",
-      "url": "https://stocktwits.com/symbol/S",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "SPY",
-      "name": "SPDR S&P 500 ETF Trust",
-      "title": "Trending on StockTwits (#16)",
-      "url": "https://stocktwits.com/symbol/SPY",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "INOD",
-      "name": "Innodata Inc",
-      "title": "Trending on StockTwits (#17)",
-      "url": "https://stocktwits.com/symbol/INOD",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
-    },
-    {
-      "source": "StockTwits",
-      "ticker": "BTDR",
-      "name": "Bitdeer Technologies Holding Co",
-      "title": "Trending on StockTwits (#18)",
-      "url": "https://stocktwits.com/symbol/BTDR",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
       "ticker": "PYPL",
       "name": "PayPal Holdings Inc",
-      "title": "Trending on StockTwits (#19)",
+      "title": "Trending on StockTwits (#2)",
       "url": "https://stocktwits.com/symbol/PYPL",
-      "mentions": 2,
+      "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "OPTX",
-      "name": "Syntec Optics Holdings Inc",
-      "title": "Trending on StockTwits (#20)",
-      "url": "https://stocktwits.com/symbol/OPTX",
-      "mentions": 2,
+      "ticker": "USO",
+      "name": "United States Oil Fund",
+      "title": "Trending on StockTwits (#3)",
+      "url": "https://stocktwits.com/symbol/USO",
+      "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "IGV",
-      "name": "iShares Expanded Tech-Software Sector ETF",
-      "title": "Trending on StockTwits (#21)",
-      "url": "https://stocktwits.com/symbol/IGV",
-      "mentions": 2,
+      "ticker": "KORU",
+      "name": "Direxion Daily South Korea Bull 3X Shares",
+      "title": "Trending on StockTwits (#4)",
+      "url": "https://stocktwits.com/symbol/KORU",
+      "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "KD",
-      "name": "Kyndryl Holdings Inc",
-      "title": "Trending on StockTwits (#22)",
-      "url": "https://stocktwits.com/symbol/KD",
-      "mentions": 2,
+      "ticker": "QTTB",
+      "name": "Q32 Bio Inc.",
+      "title": "Trending on StockTwits (#5)",
+      "url": "https://stocktwits.com/symbol/QTTB",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "DIA",
-      "name": "SPDR Dow Jones Industrial Average ETF",
-      "title": "Trending on StockTwits (#24)",
-      "url": "https://stocktwits.com/symbol/DIA",
-      "mentions": 1,
+      "ticker": "APP",
+      "name": "Applovin Corp",
+      "title": "Trending on StockTwits (#6)",
+      "url": "https://stocktwits.com/symbol/APP",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "CAPR",
-      "name": "Capricor Therapeutics Inc",
-      "title": "Trending on StockTwits (#25)",
-      "url": "https://stocktwits.com/symbol/CAPR",
-      "mentions": 1,
+      "ticker": "ABTC",
+      "name": "American Bitcoin Corp.",
+      "title": "Trending on StockTwits (#7)",
+      "url": "https://stocktwits.com/symbol/ABTC",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "RCAT",
-      "name": "Red Cat Holdings Inc",
-      "title": "Trending on StockTwits (#26)",
-      "url": "https://stocktwits.com/symbol/RCAT",
-      "mentions": 1,
+      "ticker": "FLY",
+      "name": "Firefly Aerospace Inc.",
+      "title": "Trending on StockTwits (#8)",
+      "url": "https://stocktwits.com/symbol/FLY",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "MRK",
-      "name": "Merck & Co Inc",
-      "title": "Trending on StockTwits (#27)",
-      "url": "https://stocktwits.com/symbol/MRK",
-      "mentions": 1,
+      "ticker": "NVDA",
+      "name": "NVIDIA Corp",
+      "title": "Trending on StockTwits (#9)",
+      "url": "https://stocktwits.com/symbol/NVDA",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "PTON",
-      "name": "Peloton Interactive Inc",
-      "title": "Trending on StockTwits (#28)",
-      "url": "https://stocktwits.com/symbol/PTON",
-      "mentions": 1,
+      "ticker": "APLD",
+      "name": "Applied Digital Corporation",
+      "title": "Trending on StockTwits (#10)",
+      "url": "https://stocktwits.com/symbol/APLD",
+      "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "ARDX",
+      "name": "Ardelyx Inc",
+      "title": "Trending on StockTwits (#11)",
+      "url": "https://stocktwits.com/symbol/ARDX",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
       "ticker": "RKLB",
       "name": "Rocket Lab USA Inc",
-      "title": "Trending on StockTwits (#29)",
+      "title": "Trending on StockTwits (#12)",
       "url": "https://stocktwits.com/symbol/RKLB",
-      "mentions": 1,
+      "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "StockTwits",
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin ETF",
-      "title": "Trending on StockTwits (#30)",
-      "url": "https://stocktwits.com/symbol/IBIT",
+      "ticker": "BRAI",
+      "name": "Braiin Ltd",
+      "title": "Trending on StockTwits (#13)",
+      "url": "https://stocktwits.com/symbol/BRAI",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "RCAT",
+      "name": "Red Cat Holdings Inc",
+      "title": "Trending on StockTwits (#14)",
+      "url": "https://stocktwits.com/symbol/RCAT",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor Manufacturing - ADR",
+      "title": "Trending on StockTwits (#15)",
+      "url": "https://stocktwits.com/symbol/TSM",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "TRLV",
+      "name": "Trulieve Cannabis Corp ",
+      "title": "Trending on StockTwits (#16)",
+      "url": "https://stocktwits.com/symbol/TRLV",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "OKLO",
+      "name": "Oklo Inc.",
+      "title": "Trending on StockTwits (#17)",
+      "url": "https://stocktwits.com/symbol/OKLO",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "CCJ",
+      "name": "Cameco Corp.",
+      "title": "Trending on StockTwits (#18)",
+      "url": "https://stocktwits.com/symbol/CCJ",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "INFQ",
+      "name": "Infleqtion Inc.",
+      "title": "Trending on StockTwits (#19)",
+      "url": "https://stocktwits.com/symbol/INFQ",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "ALAB",
+      "name": "Astera Labs Inc",
+      "title": "Trending on StockTwits (#20)",
+      "url": "https://stocktwits.com/symbol/ALAB",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "IREN",
+      "name": "IREN Limited",
+      "title": "Trending on StockTwits (#21)",
+      "url": "https://stocktwits.com/symbol/IREN",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "RIOT",
+      "name": "Riot Platforms Inc",
+      "title": "Trending on StockTwits (#22)",
+      "url": "https://stocktwits.com/symbol/RIOT",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares ETF",
+      "title": "Trending on StockTwits (#23)",
+      "url": "https://stocktwits.com/symbol/GLD",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -7875,13 +7158,118 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.694Z"
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "VG",
+      "name": "Venture Global Inc",
+      "title": "Trending on StockTwits (#24)",
+      "url": "https://stocktwits.com/symbol/VG",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "S",
+      "name": "SentinelOne Inc",
+      "title": "Trending on StockTwits (#25)",
+      "url": "https://stocktwits.com/symbol/S",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "IONS",
+      "name": "Ionis Pharmaceuticals Inc",
+      "title": "Trending on StockTwits (#26)",
+      "url": "https://stocktwits.com/symbol/IONS",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "IONQ",
+      "name": "IonQ Inc",
+      "title": "Trending on StockTwits (#27)",
+      "url": "https://stocktwits.com/symbol/IONQ",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "DNA",
+      "name": "Ginkgo Bioworks Holdings Inc - Ordinary Shares - Class A",
+      "title": "Trending on StockTwits (#28)",
+      "url": "https://stocktwits.com/symbol/DNA",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "GS",
+      "name": "Goldman Sachs Group, Inc.",
+      "title": "Trending on StockTwits (#29)",
+      "url": "https://stocktwits.com/symbol/GS",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
+    },
+    {
+      "source": "StockTwits",
+      "ticker": "NNE",
+      "name": "Nano Nuclear Energy Inc.",
+      "title": "Trending on StockTwits (#30)",
+      "url": "https://stocktwits.com/symbol/NNE",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.457Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "MU",
       "name": "Micron Technology",
-      "title": "353 social mentions on ApeWisdom (up from 30 a day ago)",
+      "title": "400 social mentions on ApeWisdom (up from 27 a day ago)",
       "url": "https://apewisdom.io/stocks/MU/",
       "mentions": 8,
       "sentiment": 0,
@@ -7890,28 +7278,28 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.733Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "SPY",
       "name": "SPDR S&amp;P 500 ETF Trust",
-      "title": "259 social mentions on ApeWisdom (up from 54 a day ago)",
+      "title": "332 social mentions on ApeWisdom (up from 59 a day ago)",
       "url": "https://apewisdom.io/stocks/SPY/",
-      "mentions": 7,
+      "mentions": 8,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.733Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "MSFT",
       "name": "Microsoft",
-      "title": "217 social mentions on ApeWisdom (up from 31 a day ago)",
+      "title": "245 social mentions on ApeWisdom (up from 43 a day ago)",
       "url": "https://apewisdom.io/stocks/MSFT/",
       "mentions": 7,
       "sentiment": 0,
@@ -7920,13 +7308,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.733Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "SPCX",
       "name": "SpaceX",
-      "title": "194 social mentions on ApeWisdom (up from 26 a day ago)",
+      "title": "223 social mentions on ApeWisdom (up from 34 a day ago)",
       "url": "https://apewisdom.io/stocks/SPCX/",
       "mentions": 7,
       "sentiment": 0,
@@ -7935,13 +7323,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.733Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "SNDK",
       "name": "Sandisk",
-      "title": "79 social mentions on ApeWisdom (up from 4 a day ago)",
+      "title": "99 social mentions on ApeWisdom (up from 4 a day ago)",
       "url": "https://apewisdom.io/stocks/SNDK/",
       "mentions": 6,
       "sentiment": 0,
@@ -7950,13 +7338,28 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.733Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RKLB",
+      "name": "Rocket Lab USA",
+      "title": "95 social mentions on ApeWisdom (up from 14 a day ago)",
+      "url": "https://apewisdom.io/stocks/RKLB/",
+      "mentions": 6,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.733Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "QQQ",
       "name": "Invesco QQQ ETF",
-      "title": "71 social mentions on ApeWisdom (up from 16 a day ago)",
+      "title": "90 social mentions on ApeWisdom (up from 17 a day ago)",
       "url": "https://apewisdom.io/stocks/QQQ/",
       "mentions": 6,
       "sentiment": 0,
@@ -7965,13 +7368,43 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "title": "82 social mentions on ApeWisdom (up from 24 a day ago)",
+      "url": "https://apewisdom.io/stocks/NVDA/",
+      "mentions": 6,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "ASTS",
+      "name": "AST SpaceMobile",
+      "title": "80 social mentions on ApeWisdom (up from 10 a day ago)",
+      "url": "https://apewisdom.io/stocks/ASTS/",
+      "mentions": 6,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "META",
       "name": "Meta Platforms (Facebook)",
-      "title": "58 social mentions on ApeWisdom (up from 8 a day ago)",
+      "title": "63 social mentions on ApeWisdom (up from 12 a day ago)",
       "url": "https://apewisdom.io/stocks/META/",
       "mentions": 5,
       "sentiment": 0,
@@ -7980,14 +7413,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "RKLB",
-      "name": "Rocket Lab USA",
-      "title": "57 social mentions on ApeWisdom (up from 12 a day ago)",
-      "url": "https://apewisdom.io/stocks/RKLB/",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "title": "59 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/ORCL/",
       "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
@@ -7995,43 +7428,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "title": "55 social mentions on ApeWisdom (up from 20 a day ago)",
-      "url": "https://apewisdom.io/stocks/NVDA/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ASTS",
-      "name": "AST SpaceMobile",
-      "title": "51 social mentions on ApeWisdom (up from 8 a day ago)",
-      "url": "https://apewisdom.io/stocks/ASTS/",
-      "mentions": 5,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "AAPL",
       "name": "Apple",
-      "title": "45 social mentions on ApeWisdom (up from 7 a day ago)",
+      "title": "53 social mentions on ApeWisdom (up from 12 a day ago)",
       "url": "https://apewisdom.io/stocks/AAPL/",
       "mentions": 5,
       "sentiment": 0,
@@ -8040,13 +7443,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "DTE",
       "name": "DTE Energy",
-      "title": "43 social mentions on ApeWisdom (up from 19 a day ago)",
+      "title": "50 social mentions on ApeWisdom (up from 18 a day ago)",
       "url": "https://apewisdom.io/stocks/DTE/",
       "mentions": 5,
       "sentiment": 0,
@@ -8055,13 +7458,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "NFLX",
       "name": "Netflix",
-      "title": "33 social mentions on ApeWisdom (up from 10 a day ago)",
+      "title": "42 social mentions on ApeWisdom (up from 5 a day ago)",
       "url": "https://apewisdom.io/stocks/NFLX/",
       "mentions": 5,
       "sentiment": 0,
@@ -8070,14 +7473,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "HBM",
-      "name": "Hudbay Minerals",
-      "title": "33 social mentions on ApeWisdom (up from 20 a day ago)",
-      "url": "https://apewisdom.io/stocks/HBM/",
+      "ticker": "GOOGL",
+      "name": "Alphabet (Google)",
+      "title": "38 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/GOOGL/",
       "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
@@ -8085,13 +7488,28 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "USO",
+      "name": "United States Commodity Funds LLC - United States Oil Fund",
+      "title": "37 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/USO/",
+      "mentions": 5,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "TSM",
       "name": "TSMC",
-      "title": "31 social mentions on ApeWisdom (up from 4 a day ago)",
+      "title": "34 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/TSM/",
       "mentions": 5,
       "sentiment": 0,
@@ -8100,73 +7518,43 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "title": "30 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/ORCL/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "TSLA",
       "name": "Tesla",
-      "title": "27 social mentions on ApeWisdom (up from 5 a day ago)",
+      "title": "33 social mentions on ApeWisdom (up from 5 a day ago)",
       "url": "https://apewisdom.io/stocks/TSLA/",
-      "mentions": 4,
+      "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.984Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "GOOGL",
-      "name": "Alphabet (Google)",
-      "title": "26 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/GOOGL/",
-      "mentions": 4,
+      "ticker": "MRVL",
+      "name": "Marvell Technology Group",
+      "title": "32 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/MRVL/",
+      "mentions": 5,
       "sentiment": 0,
       "priceMove": 0,
       "relativeVolume": 1,
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ES",
-      "name": "Eversource Energy",
-      "title": "25 social mentions on ApeWisdom (up from 10 a day ago)",
-      "url": "https://apewisdom.io/stocks/ES/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "VOO",
       "name": "Vanguard S&amp;P 500 ETF",
-      "title": "25 social mentions on ApeWisdom (up from 12 a day ago)",
+      "title": "30 social mentions on ApeWisdom (up from 14 a day ago)",
       "url": "https://apewisdom.io/stocks/VOO/",
       "mentions": 4,
       "sentiment": 0,
@@ -8175,14 +7563,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "title": "24 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AMZN/",
+      "ticker": "HBM",
+      "name": "Hudbay Minerals",
+      "title": "29 social mentions on ApeWisdom (up from 15 a day ago)",
+      "url": "https://apewisdom.io/stocks/HBM/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8190,88 +7578,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AMD",
-      "name": "AMD",
-      "title": "24 social mentions on ApeWisdom (up from 8 a day ago)",
-      "url": "https://apewisdom.io/stocks/AMD/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "MRVL",
-      "name": "Marvell Technology Group",
-      "title": "22 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/MRVL/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "USO",
-      "name": "United States Commodity Funds LLC - United States Oil Fund",
-      "title": "22 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/USO/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "RDDT",
-      "name": "Reddit",
-      "title": "21 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/RDDT/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "GOOG",
-      "name": "Alphabet (Google)",
-      "title": "20 social mentions on ApeWisdom (up from 7 a day ago)",
-      "url": "https://apewisdom.io/stocks/GOOG/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "ASML",
       "name": "ASML",
-      "title": "20 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "27 social mentions on ApeWisdom (up from 2 a day ago)",
       "url": "https://apewisdom.io/stocks/ASML/",
       "mentions": 4,
       "sentiment": 0,
@@ -8280,13 +7593,73 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RDDT",
+      "name": "Reddit",
+      "title": "27 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/RDDT/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "title": "26 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/AMZN/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "GOOG",
+      "name": "Alphabet (Google)",
+      "title": "26 social mentions on ApeWisdom (up from 6 a day ago)",
+      "url": "https://apewisdom.io/stocks/GOOG/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AMD",
+      "name": "AMD",
+      "title": "26 social mentions on ApeWisdom (up from 11 a day ago)",
+      "url": "https://apewisdom.io/stocks/AMD/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "SOXL",
       "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bull 3X Share",
-      "title": "19 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "25 social mentions on ApeWisdom (up from 2 a day ago)",
       "url": "https://apewisdom.io/stocks/SOXL/",
       "mentions": 4,
       "sentiment": 0,
@@ -8295,14 +7668,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "SGOV",
-      "name": "iShares Trust - iShares 0-3 Month Treasury Bond ETF",
-      "title": "19 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/SGOV/",
+      "ticker": "ES",
+      "name": "Eversource Energy",
+      "title": "24 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/ES/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8310,28 +7683,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "NBIS",
-      "name": "Nebius Group",
-      "title": "19 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/NBIS/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "WEN",
       "name": "Wendy’s Company",
-      "title": "18 social mentions on ApeWisdom (up from 7 a day ago)",
+      "title": "23 social mentions on ApeWisdom (up from 7 a day ago)",
       "url": "https://apewisdom.io/stocks/WEN/",
       "mentions": 4,
       "sentiment": 0,
@@ -8340,14 +7698,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "KORU",
-      "name": "Direxion Shares ETF Trust - Direxion Daily South Korea Bull 3X Shares",
-      "title": "18 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/KORU/",
+      "ticker": "SGOV",
+      "name": "iShares Trust - iShares 0-3 Month Treasury Bond ETF",
+      "title": "20 social mentions on ApeWisdom (up from 4 a day ago)",
+      "url": "https://apewisdom.io/stocks/SGOV/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8355,14 +7713,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "YOU",
-      "name": "CLEAR Secure",
-      "title": "18 social mentions on ApeWisdom (up from 4 a day ago)",
-      "url": "https://apewisdom.io/stocks/YOU/",
+      "ticker": "NBIS",
+      "name": "Nebius Group",
+      "title": "20 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/NBIS/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8370,13 +7728,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "NOW",
       "name": "ServiceNow",
-      "title": "16 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "19 social mentions on ApeWisdom (up from 3 a day ago)",
       "url": "https://apewisdom.io/stocks/NOW/",
       "mentions": 4,
       "sentiment": 0,
@@ -8385,14 +7743,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "BE",
-      "name": "Bloom Energy",
-      "title": "15 social mentions on ApeWisdom (up from 7 a day ago)",
-      "url": "https://apewisdom.io/stocks/BE/",
+      "ticker": "KORU",
+      "name": "Direxion Shares ETF Trust - Direxion Daily South Korea Bull 3X Shares",
+      "title": "19 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/KORU/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8400,14 +7758,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "VTI",
-      "name": "Vanguard Total Stock Market ETF",
-      "title": "15 social mentions on ApeWisdom (up from 8 a day ago)",
-      "url": "https://apewisdom.io/stocks/VTI/",
+      "ticker": "INTC",
+      "name": "Intel",
+      "title": "18 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/INTC/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8415,14 +7773,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "title": "15 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/HOOD/",
+      "ticker": "YOU",
+      "name": "CLEAR Secure",
+      "title": "18 social mentions on ApeWisdom (up from 7 a day ago)",
+      "url": "https://apewisdom.io/stocks/YOU/",
       "mentions": 4,
       "sentiment": 0,
       "priceMove": 0,
@@ -8430,43 +7788,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "IT",
-      "name": "Gartner",
-      "title": "14 social mentions on ApeWisdom (up from 5 a day ago)",
-      "url": "https://apewisdom.io/stocks/IT/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AM",
-      "name": "Antero Midstream",
-      "title": "14 social mentions on ApeWisdom (up from 11 a day ago)",
-      "url": "https://apewisdom.io/stocks/AM/",
-      "mentions": 4,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "ONDS",
       "name": "Ondas Holdings",
-      "title": "14 social mentions on ApeWisdom (up from 4 a day ago)",
+      "title": "18 social mentions on ApeWisdom (up from 5 a day ago)",
       "url": "https://apewisdom.io/stocks/ONDS/",
       "mentions": 4,
       "sentiment": 0,
@@ -8475,7 +7803,157 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "title": "17 social mentions on ApeWisdom (up from 9 a day ago)",
+      "url": "https://apewisdom.io/stocks/BE/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "OKLO",
+      "name": "Oklo",
+      "title": "17 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/OKLO/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AM",
+      "name": "Antero Midstream",
+      "title": "16 social mentions on ApeWisdom (up from 8 a day ago)",
+      "url": "https://apewisdom.io/stocks/AM/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "title": "16 social mentions on ApeWisdom (up from 10 a day ago)",
+      "url": "https://apewisdom.io/stocks/VTI/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "title": "16 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/HOOD/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "title": "15 social mentions on ApeWisdom (up from 4 a day ago)",
+      "url": "https://apewisdom.io/stocks/JPM/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "IT",
+      "name": "Gartner",
+      "title": "15 social mentions on ApeWisdom (up from 5 a day ago)",
+      "url": "https://apewisdom.io/stocks/IT/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BATL",
+      "name": "Battalion Oil",
+      "title": "15 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/BATL/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "LUNR",
+      "name": "Intuitive Machines",
+      "title": "15 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/LUNR/",
+      "mentions": 4,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "OPEN",
+      "name": "Opendoor",
+      "title": "13 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/OPEN/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
@@ -8490,58 +7968,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "INTC",
-      "name": "Intel",
-      "title": "12 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/INTC/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "IP",
-      "name": "International Paper",
-      "title": "12 social mentions on ApeWisdom (up from 8 a day ago)",
-      "url": "https://apewisdom.io/stocks/IP/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "title": "12 social mentions on ApeWisdom (up from 5 a day ago)",
-      "url": "https://apewisdom.io/stocks/JPM/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "ET",
       "name": "Energy Transfer Partners",
-      "title": "12 social mentions on ApeWisdom (up from 1 a day ago)",
+      "title": "12 social mentions on ApeWisdom (up from 4 a day ago)",
       "url": "https://apewisdom.io/stocks/ET/",
       "mentions": 3,
       "sentiment": 0,
@@ -8550,88 +7983,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "OPEN",
-      "name": "Opendoor",
-      "title": "12 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/OPEN/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "BATL",
-      "name": "Battalion Oil",
-      "title": "12 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/BATL/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "LUNR",
-      "name": "Intuitive Machines",
-      "title": "12 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/LUNR/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "IBKR",
-      "name": "Interactive Brokers",
-      "title": "10 social mentions on ApeWisdom (up from 9 a day ago)",
-      "url": "https://apewisdom.io/stocks/IBKR/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "EU",
-      "name": "enCore Energy",
-      "title": "10 social mentions on ApeWisdom (up from 9 a day ago)",
-      "url": "https://apewisdom.io/stocks/EU/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "COST",
       "name": "Costco",
-      "title": "9 social mentions on ApeWisdom (up from 1 a day ago)",
+      "title": "11 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/COST/",
       "mentions": 3,
       "sentiment": 0,
@@ -8640,73 +7998,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ALL",
-      "name": "Allstate",
-      "title": "9 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/ALL/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SNAP",
-      "name": "Snap",
-      "title": "9 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/SNAP/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "MSTR",
-      "name": "MicroStrategy",
-      "title": "9 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/MSTR/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "IBM",
-      "name": "IBM",
-      "title": "8 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/IBM/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "CRM",
       "name": "Salesforce",
-      "title": "8 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "11 social mentions on ApeWisdom (up from 3 a day ago)",
       "url": "https://apewisdom.io/stocks/CRM/",
       "mentions": 3,
       "sentiment": 0,
@@ -8715,7 +8013,172 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "title": "11 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/PLTR/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "title": "10 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/AVGO/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "ALL",
+      "name": "Allstate",
+      "title": "10 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/ALL/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "IP",
+      "name": "International Paper",
+      "title": "10 social mentions on ApeWisdom (down from 10 a day ago)",
+      "url": "https://apewisdom.io/stocks/IP/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SOXS",
+      "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bear 3X Share",
+      "title": "10 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/SOXS/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "UP",
+      "name": "Wheels Up",
+      "title": "10 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/UP/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "EU",
+      "name": "enCore Energy",
+      "title": "10 social mentions on ApeWisdom (up from 7 a day ago)",
+      "url": "https://apewisdom.io/stocks/EU/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "IBM",
+      "name": "IBM",
+      "title": "9 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/IBM/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "IBKR",
+      "name": "Interactive Brokers",
+      "title": "9 social mentions on ApeWisdom (down from 11 a day ago)",
+      "url": "https://apewisdom.io/stocks/IBKR/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "EWY",
+      "name": "BlackRock Institutional Trust Company N.A. - iShares MSCI South Korea",
+      "title": "9 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/EWY/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "VXUS",
+      "name": "Vanguard Group, Inc. - Vanguard Total International Stock ETF",
+      "title": "9 social mentions on ApeWisdom (up from 4 a day ago)",
+      "url": "https://apewisdom.io/stocks/VXUS/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
@@ -8730,13 +8193,58 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "title": "8 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/MSTR/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "CC",
+      "name": "Chemours",
+      "title": "7 social mentions on ApeWisdom (up from 6 a day ago)",
+      "url": "https://apewisdom.io/stocks/CC/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "WTI",
+      "name": "W&amp;T Offshore",
+      "title": "7 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/WTI/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "BB",
       "name": "BlackBerry",
-      "title": "8 social mentions on ApeWisdom (up from 6 a day ago)",
+      "title": "7 social mentions on ApeWisdom (down from 7 a day ago)",
       "url": "https://apewisdom.io/stocks/BB/",
       "mentions": 3,
       "sentiment": 0,
@@ -8745,14 +8253,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "VXUS",
-      "name": "Vanguard Group, Inc. - Vanguard Total International Stock ETF",
-      "title": "8 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/VXUS/",
+      "ticker": "SOXX",
+      "name": "BlackRock Institutional Trust Company N.A. - BTC iShares PHLX Semicond",
+      "title": "7 social mentions on ApeWisdom (up from 4 a day ago)",
+      "url": "https://apewisdom.io/stocks/SOXX/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8760,14 +8268,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "SOXS",
-      "name": "Direxion Shares ETF Trust - Direxion Daily Semiconductor Bear 3X Share",
-      "title": "8 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/SOXS/",
+      "ticker": "APLD",
+      "name": "Applied Blockchain",
+      "title": "7 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/APLD/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8775,14 +8283,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "UP",
-      "name": "Wheels Up",
-      "title": "8 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/UP/",
+      "ticker": "DC",
+      "name": "Dakota Gold",
+      "title": "7 social mentions on ApeWisdom (down from 7 a day ago)",
+      "url": "https://apewisdom.io/stocks/DC/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8790,22 +8298,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "title": "7 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/PLTR/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
@@ -8820,13 +8313,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "CME",
       "name": "CME Group",
-      "title": "6 social mentions on ApeWisdom (up from 2 a day ago)",
+      "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/CME/",
       "mentions": 3,
       "sentiment": 0,
@@ -8835,13 +8328,73 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "GL",
+      "name": "Globe Life",
+      "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/GL/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/GS/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "title": "6 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/UNH/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SNAP",
+      "name": "Snap",
+      "title": "6 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/SNAP/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "OR",
       "name": "Osisko Gold Royalties",
-      "title": "6 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "6 social mentions on ApeWisdom (up from 4 a day ago)",
       "url": "https://apewisdom.io/stocks/OR/",
       "mentions": 3,
       "sentiment": 0,
@@ -8850,14 +8403,29 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "EWY",
-      "name": "BlackRock Institutional Trust Company N.A. - iShares MSCI South Korea",
+      "ticker": "XLF",
+      "name": "SSgA Active Trust - SSgA Financial Select Sector SPDR",
+      "title": "6 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/XLF/",
+      "mentions": 3,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "QQQM",
+      "name": "Invesco Exchange-Traded Fund Trust II - Invesco NASDAQ 100 ETF",
       "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/EWY/",
+      "url": "https://apewisdom.io/stocks/QQQM/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8865,14 +8433,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "APLD",
-      "name": "Applied Blockchain",
-      "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/APLD/",
+      "ticker": "AGEN",
+      "name": "Agenus",
+      "title": "6 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/AGEN/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8880,22 +8448,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "DC",
-      "name": "Dakota Gold",
-      "title": "6 social mentions on ApeWisdom (down from 7 a day ago)",
-      "url": "https://apewisdom.io/stocks/DC/",
-      "mentions": 3,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
@@ -8910,14 +8463,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "OKLO",
-      "name": "Oklo",
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
       "title": "6 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/OKLO/",
+      "url": "https://apewisdom.io/stocks/AAOI/",
       "mentions": 3,
       "sentiment": 0,
       "priceMove": 0,
@@ -8925,14 +8478,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "GL",
-      "name": "Globe Life",
+      "ticker": "WMT",
+      "name": "Walmart",
       "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/GL/",
+      "url": "https://apewisdom.io/stocks/WMT/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8940,7 +8493,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.734Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BA",
+      "name": "Boeing",
+      "title": "5 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/BA/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.735Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/PYPL/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
@@ -8955,14 +8538,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "UNH",
-      "name": "UnitedHealth",
-      "title": "5 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/UNH/",
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/XOM/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -8970,7 +8553,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "title": "5 social mentions on ApeWisdom (up from 2 a day ago)",
+      "url": "https://apewisdom.io/stocks/MS/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.735Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AVAV",
+      "name": "AeroVironment",
+      "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/AVAV/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
@@ -8985,13 +8598,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "SMH",
       "name": "VanEck Vectors ETF Trust - VanEck Vectors Semiconductor ETF",
-      "title": "5 social mentions on ApeWisdom (up from 3 a day ago)",
+      "title": "5 social mentions on ApeWisdom (up from 2 a day ago)",
       "url": "https://apewisdom.io/stocks/SMH/",
       "mentions": 2,
       "sentiment": 0,
@@ -9000,22 +8613,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SOXX",
-      "name": "BlackRock Institutional Trust Company N.A. - BTC iShares PHLX Semicond",
-      "title": "5 social mentions on ApeWisdom (up from 4 a day ago)",
-      "url": "https://apewisdom.io/stocks/SOXX/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
@@ -9030,7 +8628,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
@@ -9045,14 +8643,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "QQQM",
-      "name": "Invesco Exchange-Traded Fund Trust II - Invesco NASDAQ 100 ETF",
+      "ticker": "SLS",
+      "name": "Sellas Life Sciences",
       "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/QQQM/",
+      "url": "https://apewisdom.io/stocks/SLS/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9060,14 +8658,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "AAOI",
-      "name": "Applied Optoelectronics",
-      "title": "5 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AAOI/",
+      "ticker": "FCF",
+      "name": "First Commonwealth Financial Corp",
+      "title": "5 social mentions on ApeWisdom (down from 10 a day ago)",
+      "url": "https://apewisdom.io/stocks/FCF/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9075,14 +8673,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "WMT",
-      "name": "Walmart",
-      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/WMT/",
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "title": "4 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/ADBE/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9090,14 +8688,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AVGO/",
+      "ticker": "AFL",
+      "name": "Aflac",
+      "title": "4 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/AFL/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9105,13 +8703,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "ICE",
       "name": "Intercontinental Exchange",
-      "title": "4 social mentions on ApeWisdom (up from 2 a day ago)",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/ICE/",
       "mentions": 2,
       "sentiment": 0,
@@ -9120,14 +8718,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
+      "ticker": "SO",
+      "name": "Southern Company",
       "title": "4 social mentions on ApeWisdom (up from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/XOM/",
+      "url": "https://apewisdom.io/stocks/SO/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9135,14 +8733,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "MS",
-      "name": "Morgan Stanley",
+      "ticker": "BABA",
+      "name": "Alibaba",
       "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/MS/",
+      "url": "https://apewisdom.io/stocks/BABA/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9150,14 +8748,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.735Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "FSLR",
-      "name": "First Solar",
+      "ticker": "KTOS",
+      "name": "Kratos Defense &amp; Security Solutions",
       "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/FSLR/",
+      "url": "https://apewisdom.io/stocks/KTOS/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9165,14 +8763,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "WTI",
-      "name": "W&amp;T Offshore",
-      "title": "4 social mentions on ApeWisdom (up from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/WTI/",
+      "ticker": "GRPN",
+      "name": "Groupon",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/GRPN/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9180,7 +8778,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9195,14 +8793,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "XLF",
-      "name": "SSgA Active Trust - SSgA Financial Select Sector SPDR",
-      "title": "4 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/XLF/",
+      "ticker": "XLE",
+      "name": "SSgA Active Trust - SSgA Energy Select Sector SPDR",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/XLE/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9210,7 +8808,22 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "TLT",
+      "name": "BlackRock Institutional Trust Company N.A. - BTC iShares 20+ Year Trea",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/TLT/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9225,7 +8838,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9240,59 +8853,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "VGT",
-      "name": "Vanguard Group, Inc. - Vanguard Information Technology ETF",
-      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/VGT/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SLS",
-      "name": "Sellas Life Sciences",
-      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/SLS/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AMC",
-      "name": "AMC Entertainment",
-      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AMC/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AGEN",
-      "name": "Agenus",
+      "ticker": "APP",
+      "name": "AppLovin",
       "title": "4 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/AGEN/",
+      "url": "https://apewisdom.io/stocks/APP/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9300,7 +8868,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PL",
+      "name": "Planet Labs",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/PL/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RCAT",
+      "name": "Red Cat Holdings",
+      "title": "4 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/RCAT/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9315,7 +8913,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RR",
+      "name": "Richtech Robotics",
+      "title": "4 social mentions on ApeWisdom (up from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/RR/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SAP",
+      "name": "SAP",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/SAP/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9330,14 +8958,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "GS",
-      "name": "Goldman Sachs",
-      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/GS/",
+      "ticker": "RE",
+      "name": "Everest Re",
+      "title": "3 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/RE/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9345,37 +8973,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SO",
-      "name": "Southern Company",
-      "title": "3 social mentions on ApeWisdom (down from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/SO/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:58.985Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "BABA",
-      "name": "Alibaba",
-      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/BABA/",
-      "mentions": 2,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9390,7 +8988,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9405,14 +9003,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "KTOS",
-      "name": "Kratos Defense &amp; Security Solutions",
+      "ticker": "FSLR",
+      "name": "First Solar",
       "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/KTOS/",
+      "url": "https://apewisdom.io/stocks/FSLR/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9420,14 +9018,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "CC",
-      "name": "Chemours",
-      "title": "3 social mentions on ApeWisdom (down from 6 a day ago)",
-      "url": "https://apewisdom.io/stocks/CC/",
+      "ticker": "HUBB",
+      "name": "Hubbell",
+      "title": "3 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/HUBB/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9435,7 +9033,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9450,7 +9048,22 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "ROBO",
+      "name": "Exchange Traded Concepts Trust - ETCT ROBO Global Robotics and Automat",
+      "title": "3 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/ROBO/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9465,14 +9078,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "FCF",
-      "name": "First Commonwealth Financial Corp",
-      "title": "3 social mentions on ApeWisdom (down from 11 a day ago)",
-      "url": "https://apewisdom.io/stocks/FCF/",
+      "ticker": "VGT",
+      "name": "Vanguard Group, Inc. - Vanguard Information Technology ETF",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/VGT/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9480,14 +9093,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "LINK",
-      "name": "Interlink Electronics",
-      "title": "3 social mentions on ApeWisdom (down from 4 a day ago)",
-      "url": "https://apewisdom.io/stocks/LINK/",
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/AMC/",
       "mentions": 2,
       "sentiment": 0,
       "priceMove": 0,
@@ -9495,7 +9108,112 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AXTI",
+      "name": "AXT Inc",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/AXTI/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PATH",
+      "name": "UiPath",
+      "title": "3 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/PATH/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "CAN",
+      "name": "Canaan",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/CAN/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "LEU",
+      "name": "Centrus Energy",
+      "title": "3 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/LEU/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "AS",
+      "name": "Amer Sports",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/AS/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "DAY",
+      "name": "Dayforce",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/DAY/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "WAY",
+      "name": "Waystar",
+      "title": "3 social mentions on ApeWisdom (down from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/WAY/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9510,13 +9228,28 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SMA",
+      "name": "SmartStop Self Storage REIT",
+      "title": "3 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/SMA/",
+      "mentions": 2,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "KO",
       "name": "Coca-Cola",
-      "title": "2 social mentions on ApeWisdom (down from 2 a day ago)",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/KO/",
       "mentions": 1,
       "sentiment": 0,
@@ -9525,22 +9258,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "DIS",
-      "name": "Walt Disney",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/DIS/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9555,14 +9273,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "RUN",
-      "name": "Sunrun",
-      "title": "2 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/RUN/",
+      "ticker": "DOW",
+      "name": "Dow",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/DOW/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9570,7 +9288,52 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "INTU",
+      "name": "Intuit",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/INTU/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "WFC",
+      "name": "Wells Fargo",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/WFC/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PS",
+      "name": "Pluralsight",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/PS/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9585,14 +9348,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "AVAV",
-      "name": "AeroVironment",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AVAV/",
+      "ticker": "SPCE",
+      "name": "Virgin Galactic",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/SPCE/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9600,7 +9363,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BC",
+      "name": "Brunswick Corporation",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/BC/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BWXT",
+      "name": "BWX Technologies",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/BWXT/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9615,14 +9408,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "GRPN",
-      "name": "Groupon",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/GRPN/",
+      "ticker": "DEA",
+      "name": "Easterly Government Properties",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/DEA/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9630,7 +9423,22 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "TX",
+      "name": "Ternium",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/TX/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9645,7 +9453,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9660,7 +9468,22 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "TDS",
+      "name": "Telephone and Data Systems",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/TDS/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9675,7 +9498,67 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SA",
+      "name": "Seabridge Gold",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/SA/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "SE",
+      "name": "Sea (Garena)",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/SE/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RTX",
+      "name": "Raytheon Technologies",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/RTX/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "BYD",
+      "name": "Boyd Gaming",
+      "title": "2 social mentions on ApeWisdom (down from 7 a day ago)",
+      "url": "https://apewisdom.io/stocks/BYD/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9690,13 +9573,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "JD",
       "name": "Jingdong Mall",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "title": "2 social mentions on ApeWisdom (down from 2 a day ago)",
       "url": "https://apewisdom.io/stocks/JD/",
       "mentions": 1,
       "sentiment": 0,
@@ -9705,14 +9588,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "XLE",
-      "name": "SSgA Active Trust - SSgA Energy Select Sector SPDR",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/XLE/",
+      "ticker": "UAE",
+      "name": "BlackRock Institutional Trust Company N.A. - iShares MSCI UAE ETF",
+      "title": "2 social mentions on ApeWisdom (down from 3 a day ago)",
+      "url": "https://apewisdom.io/stocks/UAE/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9720,22 +9603,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SCHD",
-      "name": "Schwab Strategic Trust - CSIM Schwab US Dividend Equity ETF",
-      "title": "2 social mentions on ApeWisdom (down from 7 a day ago)",
-      "url": "https://apewisdom.io/stocks/SCHD/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9750,7 +9618,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9765,7 +9633,22 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "TQQQ",
+      "name": "ProShares Trust - ProShares UltraPro QQQ",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/TQQQ/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9780,14 +9663,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "VIG",
-      "name": "Vanguard Group, Inc. - Vanguard Dividend Appreciation FTF",
-      "title": "2 social mentions on ApeWisdom (down from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/VIG/",
+      "ticker": "BOTZ",
+      "name": "Global X Funds - Global X Funds Global X Robotics & Artificial Intelli",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/BOTZ/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9795,7 +9678,37 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "PST",
+      "name": "Invesco Capital Management LLC - PowerShares UltraShort Lehman 7-10 +",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/PST/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
+    },
+    {
+      "source": "ApeWisdom",
+      "ticker": "RSP",
+      "name": "Invesco Capital Management LLC - Invesco S&P 500 Equal Weight ETF",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
+      "url": "https://apewisdom.io/stocks/RSP/",
+      "mentions": 1,
+      "sentiment": 0,
+      "priceMove": 0,
+      "relativeVolume": 1,
+      "lastPrice": null,
+      "quoteAsOf": null,
+      "quoteSource": null,
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9810,7 +9723,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9825,37 +9738,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "VNQ",
-      "name": "Vanguard Group, Inc. - Vanguard Real Estate Index Fund ETF",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/VNQ/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PUMP",
-      "name": "ProPetro",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PUMP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9870,29 +9753,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "AEHR",
-      "name": "Aehr Test Systems",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AEHR/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PATH",
-      "name": "UiPath",
+      "ticker": "RDW",
+      "name": "Redwire",
       "title": "2 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/PATH/",
+      "url": "https://apewisdom.io/stocks/RDW/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -9900,82 +9768,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "CAN",
-      "name": "Canaan",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/CAN/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "LEU",
-      "name": "Centrus Energy",
-      "title": "2 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/LEU/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "BROS",
-      "name": "Dutch Bros",
-      "title": "2 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/BROS/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "APP",
-      "name": "AppLovin",
-      "title": "2 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/APP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "RIVN",
-      "name": "Rivian",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/RIVN/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
@@ -9990,28 +9783,13 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "NU",
-      "name": "Nu Holdings",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/NU/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
       "ticker": "TIL",
       "name": "Instil Bio",
-      "title": "2 social mentions on ApeWisdom (down from 3 a day ago)",
+      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
       "url": "https://apewisdom.io/stocks/TIL/",
       "mentions": 1,
       "sentiment": 0,
@@ -10020,14 +9798,14 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     },
     {
       "source": "ApeWisdom",
-      "ticker": "PL",
-      "name": "Planet Labs",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PL/",
+      "ticker": "PCT",
+      "name": "PureCycle Technologies",
+      "title": "2 social mentions on ApeWisdom",
+      "url": "https://apewisdom.io/stocks/PCT/",
       "mentions": 1,
       "sentiment": 0,
       "priceMove": 0,
@@ -10035,412 +9813,7 @@ window.SIGNALDESK_DATA = {
       "lastPrice": null,
       "quoteAsOf": null,
       "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "RCAT",
-      "name": "Red Cat Holdings",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/RCAT/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "title": "2 social mentions on ApeWisdom (down from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/SMR/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AS",
-      "name": "Amer Sports",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AS/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "DAY",
-      "name": "Dayforce",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/DAY/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "LOT",
-      "name": "Lotus Technology",
-      "title": "2 social mentions on ApeWisdom (down from 4 a day ago)",
-      "url": "https://apewisdom.io/stocks/LOT/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "WAY",
-      "name": "Waystar",
-      "title": "2 social mentions on ApeWisdom (down from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/WAY/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "QTTB",
-      "name": "Q32 Bio",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/QTTB/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PSKY",
-      "name": "Paramount Skydance",
-      "title": "2 social mentions on ApeWisdom (up from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PSKY/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "JNJ",
-      "name": "Johnson & Johnson",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/JNJ/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "MA",
-      "name": "Mastercard",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/MA/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PG",
-      "name": "Procter & Gamble",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PG/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "BAC",
-      "name": "Bank of America",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/BAC/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "HD",
-      "name": "Home Depot",
-      "title": "1 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/HD/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PEP",
-      "name": "Pepsico",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PEP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PFE",
-      "name": "Pfizer",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PFE/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ADBE",
-      "name": "Adobe",
-      "title": "1 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/ADBE/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "SAP",
-      "name": "SAP",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/SAP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "MCD",
-      "name": "McDonald",
-      "title": "1 social mentions on ApeWisdom (down from 2 a day ago)",
-      "url": "https://apewisdom.io/stocks/MCD/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "NVO",
-      "name": "Novo Nordisk",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/NVO/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ABT",
-      "name": "Abbott Laboratories",
-      "title": "1 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/ABT/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "PYPL",
-      "name": "PayPal",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/PYPL/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "LLY",
-      "name": "Eli Lilly",
-      "title": "1 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/LLY/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "title": "1 social mentions on ApeWisdom (down from 3 a day ago)",
-      "url": "https://apewisdom.io/stocks/LMT/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "BP",
-      "name": "BP",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/BP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "ALB",
-      "name": "Albemarle",
-      "title": "1 social mentions on ApeWisdom",
-      "url": "https://apewisdom.io/stocks/ALB/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "MO",
-      "name": "Altria Group",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/MO/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
-    },
-    {
-      "source": "ApeWisdom",
-      "ticker": "AXP",
-      "name": "American Express",
-      "title": "1 social mentions on ApeWisdom (down from 1 a day ago)",
-      "url": "https://apewisdom.io/stocks/AXP/",
-      "mentions": 1,
-      "sentiment": 0,
-      "priceMove": 0,
-      "relativeVolume": 1,
-      "lastPrice": null,
-      "quoteAsOf": null,
-      "quoteSource": null,
-      "published": "2026-07-13T15:54:59.127Z"
+      "published": "2026-07-13T18:06:22.882Z"
     }
   ]
 };
