@@ -10,6 +10,7 @@
     "new-coil-hot-theme": { label: "New coil in a hot theme", className: "hot-coil" },
     "dead-coil": { label: "Dead coil demoted", className: "dead-coil" },
     "theme-stage-transition": { label: "Theme stage change", className: "stage" },
+    "proof-quarter": { label: "Proof quarter", className: "proof-quarter" },
     "weekly-digest": { label: "Weekly digest", className: "digest" },
   };
 
@@ -152,6 +153,7 @@
       .wc-badge.wc-hot-coil { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-dim); }
       .wc-badge.wc-dead-coil { color: var(--down); }
       .wc-badge.wc-stage { color: var(--ink); }
+      .wc-badge.wc-proof-quarter { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-dim); }
       .wc-body { min-width: 0; }
       .wc-message {
         margin: 0 0 3px;

@@ -5,13 +5,13 @@
 // unless a topic is configured), and keeps a bounded on-site "What changed"
 // log independent of whether ntfy is configured at all.
 //
-// Two of the six spec'd alert conditions aren't wired up: "proof quarter
-// detected" needs the Layer 0b proof-quarter detector (THEME_ENGINE.md build
-// item 8, not built yet), and "dead-coil demotion of a watchlist name" can't
-// be scoped to a specific user's watchlist -- the existing watchlist is
-// client-side localStorage (script.js), invisible to this Node pipeline with
-// no server/accounts. Dead-coil demotions are alerted for every ticker
-// instead, which is the closest honest approximation.
+// "Proof quarter detected" events are passed in from scripts/lib/proof-quarter.mjs
+// (update-data.mjs wires the two together) rather than detected in here.
+// One spec'd condition still isn't wired up: "dead-coil demotion of a
+// *watchlist* name" can't be scoped to a specific user's watchlist -- the
+// existing watchlist is client-side localStorage (script.js), invisible to
+// this Node pipeline with no server/accounts. Dead-coil demotions are
+// alerted for every ticker instead, the closest honest approximation.
 import { readFile, writeFile } from "node:fs/promises";
 
 const ROOT = new URL("../../", import.meta.url);
@@ -180,6 +180,8 @@ function titleFor(event) {
       return `SignalDesk: ${event.ticker} coil demoted`;
     case "theme-stage-transition":
       return `SignalDesk: theme ${event.theme} -> ${event.message.split(" -> ")[1]?.split(" ")[0] || "changed"}`;
+    case "proof-quarter":
+      return `SignalDesk: ${event.ticker} proof quarter`;
     case "weekly-digest":
       return "SignalDesk: weekly digest";
     default:
@@ -197,6 +199,8 @@ function tagsFor(event) {
       return "skull";
     case "theme-stage-transition":
       return "chart_with_upwards_trend";
+    case "proof-quarter":
+      return "loudspeaker";
     case "weekly-digest":
       return "calendar";
     default:

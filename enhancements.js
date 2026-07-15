@@ -673,6 +673,7 @@
         .movers-panel,
         .whatchanged-panel,
         .themes-panel,
+        .clusters-panel,
         .springs-panel,
         .dashboard-grid {
           width: 100%;
