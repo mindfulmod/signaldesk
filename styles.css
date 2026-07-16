@@ -616,6 +616,12 @@ h1 {
 .metrics-grid article,
 .buy-panel,
 .movers-panel,
+.whatchanged-panel,
+.themes-panel,
+.phraseradar-panel,
+.clusters-panel,
+.springs-panel,
+.calibration-panel,
 .table-panel,
 .side-panel {
   background: var(--panel);
@@ -672,7 +678,13 @@ h1 {
 
 /* ===== Shared panels ===== */
 .buy-panel,
-.movers-panel {
+.movers-panel,
+.whatchanged-panel,
+.themes-panel,
+.phraseradar-panel,
+.clusters-panel,
+.springs-panel,
+.calibration-panel {
   width: min(1320px, 100%);
   margin: 0 auto 16px;
   padding: 18px 20px;
@@ -1295,6 +1307,20 @@ tbody tr.selected td:first-child {
 
 .sent-chip.flat { color: var(--muted); }
 
+.catalyst-badge {
+  flex: 0 0 auto;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-dim);
+  cursor: default;
+}
+
 /* ===== Sparklines ===== */
 .ticker-spark {
   margin-left: auto;
@@ -1492,6 +1518,49 @@ tbody tr.selected td:first-child {
 .company-blurb a {
   color: var(--accent);
   white-space: nowrap;
+}
+
+.catalyst-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+}
+
+.catalyst-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.catalyst-callout a,
+.catalyst-callout > span:not(.catalyst-label):not(.catalyst-meta) {
+  font-weight: 600;
+  font-size: 0.94rem;
+  line-height: 1.4;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.catalyst-callout a:hover { color: var(--accent); }
+
+.catalyst-callout-social {
+  border-color: var(--line-2);
+  border-left-color: var(--muted);
+}
+
+.catalyst-callout-social .catalyst-label { color: var(--muted); }
+
+.catalyst-meta {
+  font-size: 0.76rem;
+  color: var(--muted);
 }
 
 .setup-assessment {
@@ -1968,6 +2037,12 @@ tbody tr.selected td:first-child {
 
   .movers-panel,
   .buy-panel,
+  .whatchanged-panel,
+  .themes-panel,
+  .phraseradar-panel,
+  .clusters-panel,
+  .springs-panel,
+  .calibration-panel,
   .table-panel,
   .side-panel {
     padding: 14px;

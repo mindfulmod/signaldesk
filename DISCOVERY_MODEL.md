@@ -64,6 +64,17 @@ Penalties are applied after the weighted score. The score is a research-ranking 
 6. Publish calibration: how often each score band advanced, reversed, or failed, including delisted names to avoid survivorship bias.
 7. Replace the single score with horizon-specific models only after there is enough history to validate them out of sample.
 
+## Theme lifecycle (Springs, themes, alerts)
+
+The discovery score above answers "is this one ticker worth a look right now?" It does not
+model that most large moves outside megacap tech arrive in **theme waves** diffusing through a
+supply chain over months, or that sustained attention with price compression ("coiled spring")
+is a separately measurable, backtested precursor. That lifecycle — Spark → Naming → Diffusion →
+Wave → Saturation → Decay, plus the frozen coil detector and theme-heat scoring built on top of
+it — is specified in [THEME_ENGINE.md](THEME_ENGINE.md). It keeps the same honest-labeling rule
+as this document: every coil and theme card shows its base rates and risk flags, and stage never
+implies a guaranteed outcome.
+
 ## Research references
 
 - Barber and Odean, [All That Glitters: The Effect of Attention and News on the Buying Behavior of Individual and Institutional Investors](https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/allthatglitters_rfs_2008.pdf)

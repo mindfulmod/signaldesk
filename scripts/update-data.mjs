@@ -1,4 +1,50 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
+import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
+import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
+import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
+import { computeThemeHeat, saveThemes, loadThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
+import { computeDiffusionMap, saveDiffusionMap, loadDiffusionState, saveDiffusionState } from "./lib/diffusion-map.mjs";
+import {
+  loadAlertState,
+  saveAlertState,
+  loadAlertLog,
+  saveAlertLog,
+  detectSpringEvents,
+  detectThemeEvents,
+  nextSpringStateMap,
+  nextThemeStageMap,
+  isoWeekKey,
+  buildWeeklyDigest,
+  postNtfy,
+  ALERTS_LOG_MAX,
+} from "./lib/alerts.mjs";
+import {
+  loadCoMentionHistory,
+  saveCoMentionHistory,
+  loadClusters,
+  saveClusters,
+  computeCoMention,
+} from "./lib/co-mention.mjs";
+import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
+import {
+  loadPhraseHistory,
+  savePhraseHistory,
+  loadPhraseRadar,
+  savePhraseRadar,
+  parseGdeltTimeline,
+  shortlistCandidates,
+  confirmCandidates,
+  matchPhrasesToThemes,
+} from "./lib/phrase-velocity.mjs";
+import {
+  loadCalibrationLog,
+  saveCalibrationLog,
+  saveCalibration,
+  buildLogEntries,
+  updateCalibrationLog,
+  pendingSubjects,
+  aggregateCalibration,
+} from "./lib/calibration.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -29,6 +75,23 @@ const MARKET_NEWS_SOURCES = new Set([
 // Headline words that signal an article is explaining a market move (used to pick
 // the most relevant story when a ticker has several).
 const IMPACT_WORDS = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|earnings|upgrade|downgrade|spook|spooks|spooked|%)\b/i;
+// Major-catalyst vocabulary (M&A, corporate actions, regulatory/legal) --
+// distinct from IMPACT_WORDS because a real acquisition rumor is highly
+// newsworthy even before it has produced a big same-day price move (which
+// is what IMPACT_WORDS mostly tracks). Used to prioritize which headline
+// surfaces as a ticker's "top headline," not to gate anything.
+const CATALYST_WORDS =
+  /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
+// Sources whose "title" is a synthetic, templated string (a mention-count or
+// price-string) rather than real prose a human/outlet wrote -- deprioritized
+// when picking which headlines represent a ticker (see headlineQualityScore).
+const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
+// Sources that publish edited articles/filings, as opposed to raw social
+// commentary (Reddit/HN/4chan/StockTwits) -- a "top headline" callout should
+// say so only when it actually is one. A forum comment that happens to
+// contain "acquisition" is real signal worth surfacing, but presenting it
+// as a headline would misattribute a stranger's guess as reporting.
+const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
 // StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
 // may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
 const STOCKTWITS_LIMIT = 45;
@@ -74,6 +137,9 @@ const SOURCES = [
 // so when one of them actually moves we can explain why. They do NOT get a ranking
 // head-start — they only earn a spot in the table if their real signal warrants it.
 const MAJORS = [
+  // SPY first: the Theme Engine's Layer 1 beta guard needs a live SPY price
+  // series in the ledger to compute relative returns.
+  ["SPY", "SPDR S&P 500 ETF Trust"],
   ["AAPL", "Apple Inc."], ["MSFT", "Microsoft Corp."], ["NVDA", "NVIDIA Corp."],
   ["AMZN", "Amazon.com Inc."], ["GOOGL", "Alphabet Inc."], ["META", "Meta Platforms Inc."],
   ["TSLA", "Tesla Inc."], ["AVGO", "Broadcom Inc."], ["AMD", "Advanced Micro Devices Inc."],
@@ -97,6 +163,9 @@ const MAJORS = [
 //   3. SEC / GDELT / RSS feeds  → additional discovery signals
 // This means the dashboard reflects whatever is actually being traded and discussed today.
 const stockRegistry = new Map();
+// Set once per run in main() from data/hot-monitor.json (Layer 0b); read by
+// hotMonitorEntries() so those tickers get full price/news coverage below.
+let activeHotMonitorTickers = new Set();
 
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
@@ -206,6 +275,20 @@ async function main() {
   // they never earn a spot in the dynamic ranking table.
   for (const [ticker, name] of MAJORS) registerStock(ticker, name, [ticker, name]);
 
+  // Hot-monitor list (THEME_ENGINE.md Layer 0b): GICS siblings and co-mention
+  // neighbors of a recently-detected proof-quarter leader, elevated to full
+  // coverage for 2 quarters even with zero social chatter. Computed from the
+  // *previous* run's proof-quarter detection (this run's own detection
+  // happens later, after price/news data exists, and takes effect next run).
+  const hotMonitor = await loadHotMonitor();
+  const today = new Date().toISOString().slice(0, 10);
+  for (const [ticker, info] of Object.entries(hotMonitor.tickers || {})) {
+    if (info.expiresDate && info.expiresDate >= today) {
+      registerStock(ticker, ticker, [ticker]);
+      activeHotMonitorTickers.add(ticker);
+    }
+  }
+
   // Give the freshly-registered universe real company names + brand aliases now,
   // so the market-wide news steps below can match "Apple"/"Nvidia" style headlines.
   await enrichRegistryNamesFromSec(failures);
@@ -249,7 +332,7 @@ async function main() {
   const discoveredEvents = await validateDiscoveredTickers(discovery, failures);
   events.push(...discoveredEvents);
 
-  for (const { ticker } of dedupeEntries([...rankedStockEntries(events, PRICE_UNIVERSE_LIMIT), ...majorEntries()])) {
+  for (const { ticker } of dedupeEntries([...rankedStockEntries(events, PRICE_UNIVERSE_LIMIT), ...majorEntries(), ...hotMonitorEntries()])) {
     try {
       let market = await fetchMarket(ticker);
       if (!market?.lastPrice) {
@@ -271,6 +354,7 @@ async function main() {
           priceMove: market.priceMove,
           relativeVolume: market.relativeVolume,
           lastPrice: market.lastPrice,
+          volume: Number.isFinite(market.volume) ? market.volume : null,
           quoteAsOf: market.quoteAsOf,
           quoteSource: market.quoteSource,
           published: new Date().toISOString(),
@@ -283,7 +367,7 @@ async function main() {
     await sleep(70);
   }
 
-  const newsTargets = dedupeEntries([...newsTargetEntries(events, NEWS_UNIVERSE_LIMIT), ...majorEntries()]);
+  const newsTargets = dedupeEntries([...newsTargetEntries(events, NEWS_UNIVERSE_LIMIT), ...majorEntries(), ...hotMonitorEntries()]);
   for (const { ticker } of newsTargets) {
     try {
       const items = await yahooTickerNews(ticker);
@@ -315,10 +399,21 @@ async function main() {
   const signals = aggregate(events, previous);
   await enrichMarketCaps(signals, failures);
   await enrichProfiles(signals, failures);
+  await enrichHotMonitorProfiles(signals, failures);
 
   // Standalone market-moving-news feed for "Driving the tape" (not tied to ranking).
   const marketNews = buildMarketNews(events);
   console.log(`Market news feed: ${marketNews.length} move-driving headlines`);
+
+  await updateLedgerFromRun({ events, signals, failures });
+  await refreshThemeRegistryStep(failures);
+  const phraseVelocity = await computePhraseVelocityStep(events, failures);
+  const hotTickers = await computeThemeHeatStep(failures, phraseVelocity);
+  await computeSpringsStep(failures, hotTickers);
+  await computeDiffusionMapStep(failures);
+  const coMentionEdges = await computeCoMentionStep(events, failures);
+  const newLeaders = await computeProofQuartersStep(events, coMentionEdges, failures);
+  await runAlertsStep(failures, hotTickers, newLeaders);
 
   const hasFreshData = events.length > 0 && signals.length > 0;
   const previousHasSignals = previous?.signals?.length > 0;
@@ -802,6 +897,12 @@ function majorEntries() {
   return MAJORS.map(([ticker]) => stockRegistry.get(ticker.toUpperCase())).filter(Boolean);
 }
 
+// Registry entries for the active hot-monitor list (Layer 0b) -- covered in
+// full even with zero mentions, same as majors.
+function hotMonitorEntries() {
+  return [...activeHotMonitorTickers].map((ticker) => stockRegistry.get(ticker)).filter(Boolean);
+}
+
 // De-duplicate a list of registry entries by ticker, preserving first-seen order.
 function dedupeEntries(entries) {
   const seen = new Set();
@@ -944,6 +1045,7 @@ async function fetchYahooMarket(ticker) {
     lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    volume: volumes.at(-1),
     quoteAsOf,
     quoteSource: "Yahoo public chart",
     name: result?.meta?.longName || result?.meta?.shortName || result?.meta?.symbol || ticker,
@@ -972,6 +1074,7 @@ async function fetchStooqMarket(ticker) {
     lastPrice: last,
     priceMove: ((last - prev) / prev) * 100,
     relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
+    volume: volumes.at(-1),
     quoteAsOf: `${lastRow[0]}T20:00:00.000Z`,
     quoteSource: "Stooq public daily quote",
     name: ticker,
@@ -1214,6 +1317,44 @@ async function collectFourChanBiz(events, failures, discovery) {
   }
 }
 
+// Ranks a ticker's collected source items by how well they explain "why is
+// this stock in the news," not by when they were collected. Without this,
+// a real catalyst headline (e.g. an acquisition rumor, found via the
+// per-ticker news search that runs late in the pipeline) can get silently
+// dropped from a ticker's "latest" list behind synthetic activity-count
+// strings (ApeWisdom mention counts, StockTwits trending rank, the
+// Price/Volume quote string) that get collected earlier for every ticker.
+function headlineQualityScore(event) {
+  const title = event.title || "";
+  if (!title) return -1;
+  if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+  let score = 1;
+  if (CATALYST_WORDS.test(title)) score += 3;
+  else if (IMPACT_WORDS.test(title)) score += 2;
+  return score;
+}
+
+// Picks the single best item to call out as a ticker's "top headline."
+// Prefers a real published article/filing (any real content clears the
+// bar -- it's already been edited by an outlet); falls back to social
+// commentary only when it clearly matches catalyst/impact vocabulary
+// (score >= 2), tagged isNewsArticle: false so the UI can label it as
+// chatter rather than reporting.
+function pickTopHeadline(rankedItems) {
+  const newsItem = rankedItems.find((entry) => NEWS_ARTICLE_SOURCES.has(entry.source) && headlineQualityScore(entry) >= 1);
+  if (newsItem) return { ...newsItem, isNewsArticle: true };
+  const socialItem = rankedItems.find((entry) => headlineQualityScore(entry) >= 2);
+  return socialItem ? { ...socialItem, isNewsArticle: false } : null;
+}
+
+function rankHeadlines(items) {
+  return [...items].sort((a, b) => {
+    const scoreDiff = headlineQualityScore(b) - headlineQualityScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
+    return new Date(b.published || 0) - new Date(a.published || 0);
+  });
+}
+
 function aggregate(events, previous) {
   const previousByTicker = new Map((previous?.signals || []).map((item) => [item.ticker, item]));
   const map = new Map();
@@ -1268,6 +1409,7 @@ function aggregate(events, previous) {
           9 * sourceBreadth +
           6 * shortPressure
       );
+      const rankedHeadlines = rankHeadlines(item.latest);
       return {
         ticker: item.ticker,
         name: item.name,
@@ -1282,7 +1424,8 @@ function aggregate(events, previous) {
         optionsActivity: 0,
         signalScore,
         sources: item.sources,
-        latest: item.latest.slice(0, 6),
+        topHeadline: pickTopHeadline(rankedHeadlines),
+        latest: rankedHeadlines.slice(0, 6),
       };
     })
     .sort((a, b) => b.signalScore - a.signalScore)
@@ -1316,6 +1459,12 @@ function cleanXml(value) {
     .replace(/&#39;/g, "'")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
+    // Numeric character references (decimal and hex) -- some sources (Hacker
+    // News/Algolia comment bodies in particular) return these instead of the
+    // named entities above, e.g. "&#x27;" for an apostrophe. Left undecoded,
+    // the frontend's own HTML-escaping doubles the "&" into "&amp;#x27;".
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -1425,6 +1574,27 @@ async function enrichProfiles(signals, failures) {
       }
     } catch (error) {
       failures.push(`Profile ${signal.ticker}: ${error.message}`);
+    }
+    await sleep(120);
+  }
+}
+
+// Hot-monitor tickers (Layer 0b) may have zero mentions and so never rank
+// into `signals`, which is what enrichProfiles() walks -- meaning their
+// Wikipedia article (needed for ledger pageviews) would never get resolved.
+// Covers just the ones enrichProfiles missed, writing the result onto the
+// registry entry directly (updateLedgerFromRun falls back to this).
+async function enrichHotMonitorProfiles(signals, failures) {
+  const alreadyEnriched = new Set(signals.filter((s) => s.descriptionUrl).map((s) => s.ticker));
+  for (const ticker of activeHotMonitorTickers) {
+    if (alreadyEnriched.has(ticker)) continue;
+    const entry = stockRegistry.get(ticker);
+    if (!entry || entry.article) continue;
+    try {
+      const profile = await fetchCompanyBlurb(entry.name, ticker);
+      if (profile?.url) entry.article = articleFromWikipediaUrl(profile.url);
+    } catch (error) {
+      failures.push(`Hot-monitor profile ${ticker}: ${error.message}`);
     }
     await sleep(120);
   }
@@ -1606,6 +1776,371 @@ function clamp(min, max, value) {
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Builds this run's per-ticker mention/price maps and folds them into
+// data/ledger.json (today's row upserted, new tickers backfilled, pageviews
+// refreshed once/day, dormant tickers pruned). Skipped when the run produced
+// no fresh events, so a throttled run never writes a zeroed-out ledger day.
+async function updateLedgerFromRun({ events, signals, failures }) {
+  if (!events.length) return;
+  const dateStr = new Date().toISOString().slice(0, 10);
+  const mentionsByTicker = new Map();
+  const priceByTicker = new Map();
+  for (const event of events) {
+    if (!event.ticker) continue;
+    mentionsByTicker.set(event.ticker, (mentionsByTicker.get(event.ticker) || 0) + (Number(event.mentions) || 0));
+    if (event.source === "Price/Volume" && Number.isFinite(event.lastPrice)) {
+      priceByTicker.set(event.ticker, { close: event.lastPrice, volume: Number.isFinite(event.volume) ? event.volume : null });
+    }
+  }
+  const totalMentions = [...mentionsByTicker.values()].reduce((sum, value) => sum + value, 0);
+
+  const signalByTicker = new Map(signals.map((item) => [item.ticker, item]));
+  const registryMeta = new Map();
+  for (const entry of stockRegistry.values()) {
+    const signal = signalByTicker.get(entry.ticker);
+    registryMeta.set(entry.ticker, {
+      name: signal?.name || entry.name,
+      sector: signal?.sector || entry.sector || null,
+      sub: signal?.industry || entry.industry || null,
+      article: articleFromWikipediaUrl(signal?.descriptionUrl) || entry.article || undefined,
+    });
+  }
+
+  const ledger = await loadLedger();
+  try {
+    const protectedTickers = await loadProtectedTickers();
+    const stats = await updateLedger({ ledger, dateStr, mentionsByTicker, totalMentions, priceByTicker, registryMeta, failures, protectedTickers });
+    await saveLedger(ledger);
+    console.log(
+      `Ledger: upserted ${stats.upserted}, backfilled ${stats.backfilled}, pageviews ${stats.pageviewsFetched}, pruned ${stats.pruned}, tracking ${Object.keys(ledger.tickers).length} tickers`
+    );
+  } catch (error) {
+    failures.push(`Ledger update: ${error.message}`);
+  }
+}
+
+// Tickers that should survive the ledger's 90-day-dormant prune even with no
+// recent mentions: current theme-registry members and any active/dead-but-
+// recent spring. Reads the *previous* run's committed files (this run's
+// theme-registry refresh happens after the ledger update; springs.json does
+// not exist until THEME_ENGINE.md build item 3 lands, and the read is
+// tolerant of that).
+async function loadProtectedTickers() {
+  const protectedTickers = new Set();
+  try {
+    const registry = JSON.parse(await readFile(new URL("data/theme-registry.json", ROOT), "utf8"));
+    for (const theme of registry.themes || []) {
+      for (const member of theme.members || []) protectedTickers.add(member.t);
+    }
+  } catch {
+    // No registry yet.
+  }
+  const springs = await loadSprings();
+  for (const spring of springs.springs || []) {
+    if (spring.state === "coiled" || spring.state === "released") protectedTickers.add(spring.ticker);
+  }
+  const leaders = await loadLeaders();
+  for (const leader of leaders.leaders || []) {
+    protectedTickers.add(leader.ticker);
+    for (const t of [...(leader.siblings || []), ...(leader.coMentionNeighbors || [])]) protectedTickers.add(t);
+  }
+  const calibrationLog = await loadCalibrationLog();
+  const { tickers: pendingTickers } = pendingSubjects(calibrationLog);
+  for (const ticker of pendingTickers) protectedTickers.add(ticker);
+  return protectedTickers;
+}
+
+// Runs the frozen coil detector (THEME_ENGINE.md Layer 3) over the ledger and
+// writes data/springs.json. Uses this run's freshly-refreshed GICS baseline
+// for sector classification, and this run's theme-heat output (Layer 1) to
+// rank hot-theme coils first / waive the defensive-sector discount for them
+// (the CEG/VST exception THEME_ENGINE.md calls out).
+async function computeSpringsStep(failures, hotTickers = new Set()) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const springs = computeSprings(ledger, registry.gics || {}, { hotThemeTickers: hotTickers });
+    await saveSprings(springs);
+    const counts = springs.springs.reduce((acc, s) => ({ ...acc, [s.state]: (acc[s.state] || 0) + 1 }), {});
+    console.log(`Springs: ${springs.springs.length} classified — ${JSON.stringify(counts)}`);
+  } catch (error) {
+    failures.push(`Springs: ${error.message}`);
+  }
+}
+
+// Runs the Layer 2 diffusion map over the ledger + theme registry + this
+// run's springs.json: within each theme, who's ran, running, coiled, or
+// lagging. Writes data/diffusion-map.json and updates data/diffusion-state.json
+// (per-ticker "since" dates for the price-only states, which -- unlike
+// springs' own regime tracking -- have no other persisted start date).
+async function computeDiffusionMapStep(failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const springs = await loadSprings();
+    const springsByTicker = new Map((springs.springs || []).map((s) => [s.ticker, s.state]));
+    const prevStateHistory = await loadDiffusionState();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const { payload, nextStateHistory } = computeDiffusionMap(ledger, registry, springsByTicker, prevStateHistory, dateStr);
+    await saveDiffusionMap(payload);
+    await saveDiffusionState(nextStateHistory);
+    console.log(`Diffusion map: ${payload.themes.length} themes with classifiable members`);
+  } catch (error) {
+    failures.push(`Diffusion map: ${error.message}`);
+  }
+}
+
+// Layer 0c: folds this run's headline co-mentions into the trailing-90d
+// weekly accumulator, detects communities via greedy modularity, and writes
+// data/clusters.json. Returns the aggregated edge map for computeProofQuartersStep
+// (Layer 0b's "co-mention neighbors" elevation).
+async function computeCoMentionStep(events, failures) {
+  try {
+    const history = await loadCoMentionHistory();
+    const prevClusters = await loadClusters();
+    const dateStr = new Date().toISOString().slice(0, 10);
+    const leaders = await loadLeaders();
+    const leaderTickers = (leaders.leaders || []).map((l) => l.ticker);
+
+    const { nextHistory, payload } = computeCoMention(history, events, dateStr, leaderTickers, prevClusters.leaderNeighbors || {});
+    await saveCoMentionHistory(nextHistory);
+    await saveClusters(payload);
+    console.log(`Co-mention: ${payload.graphNodes} nodes, ${payload.graphEdges} edges, ${payload.communities.length} communities (Q=${payload.overallModularity.toFixed(3)})`);
+
+    const edges = new Map();
+    for (const week of Object.values(nextHistory.weeks)) {
+      for (const [pair, count] of Object.entries(week)) edges.set(pair, (edges.get(pair) || 0) + count);
+    }
+    return edges;
+  } catch (error) {
+    failures.push(`Co-mention: ${error.message}`);
+    return new Map();
+  }
+}
+
+// Layer 0b: proof-quarter trigger per ticker (>=8% gap on >=3x 60d avg
+// volume + earnings/guidance headline vocabulary). Elevates GICS siblings +
+// co-mention neighbors to data/hot-monitor.json for 2 quarters. Returns this
+// run's newly-detected leaders for runAlertsStep.
+async function computeProofQuartersStep(events, coMentionEdges, failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const prevLeaders = await loadLeaders();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const { leadersPayload, hotMonitorPayload, newLeaders } = computeProofQuarters({
+      events,
+      ledger,
+      gicsByTicker: registry.gics || {},
+      coMentionEdges,
+      prevLeaders,
+      dateStr,
+    });
+    await saveLeaders(leadersPayload);
+    await saveHotMonitor(hotMonitorPayload);
+    console.log(`Proof quarters: ${newLeaders.length} new, ${leadersPayload.leaders.length} active leaders, ${Object.keys(hotMonitorPayload.tickers).length} hot-monitor tickers`);
+    return newLeaders;
+  } catch (error) {
+    failures.push(`Proof quarters: ${error.message}`);
+    return [];
+  }
+}
+
+// GDELT DOC 2.0 timelinevol -- 15-month window covers the trailing year
+// plus the ~90d "prior" buffer assessGdeltVolume needs. Reuses the existing
+// retry/backoff helper (GDELT rate-limits hard on shared CI IPs).
+async function fetchGdeltTimeline(phrase) {
+  const query = encodeURIComponent(`"${phrase}"`);
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=timelinevol&format=json&timespan=15months`;
+  const json = await fetchJsonRetry(url);
+  return parseGdeltTimeline(json);
+}
+
+function quarterDateRange(year, quarter) {
+  const startMonth = (quarter - 1) * 3;
+  const start = new Date(Date.UTC(year, startMonth, 1));
+  const end = new Date(Date.UTC(year, startMonth + 3, 0));
+  return { start: start.toISOString().slice(0, 10), end: end.toISOString().slice(0, 10) };
+}
+
+function trailingQuarters(count = 8, from = new Date()) {
+  let year = from.getUTCFullYear();
+  let quarter = Math.floor(from.getUTCMonth() / 3) + 1;
+  const quarters = [];
+  for (let i = 0; i < count; i += 1) {
+    quarters.unshift({ year, quarter });
+    quarter -= 1;
+    if (quarter < 1) {
+      quarter = 4;
+      year -= 1;
+    }
+  }
+  return quarters;
+}
+
+// EDGAR full-text search, one request per trailing quarter (<=8, paced at
+// 150ms -- SEC's <10 req/s limit).
+async function fetchEdgarQuarterCounts(phrase) {
+  const counts = [];
+  for (const { year, quarter } of trailingQuarters(8)) {
+    const { start, end } = quarterDateRange(year, quarter);
+    const query = encodeURIComponent(`"${phrase}"`);
+    const url = `https://efts.sec.gov/LATEST/search-index?q=${query}&forms=10-K,10-Q,8-K&dateRange=custom&startdt=${start}&enddt=${end}`;
+    const json = await fetchJsonWithUA(url, SEC_USER_AGENT);
+    counts.push({ year, quarter, count: json?.hits?.total?.value || 0 });
+    await sleep(150);
+  }
+  return counts;
+}
+
+// Layer 0a: extracts bigram/trigram candidates from today's headline
+// stream, applies the novelty + WoW-acceleration filters, confirms the
+// shortlist against GDELT (daily, up to MAX_GDELT_CHECKS_PER_DAY) and EDGAR
+// (weekly, up to MAX_EDGAR_CHECKS_PER_WEEK), writes data/phrase-radar.json,
+// and returns the phraseVelocity Map theme-heat.mjs's `language` score has
+// been waiting for since Layer 1 shipped.
+async function computePhraseVelocityStep(events, failures) {
+  try {
+    const history = await loadPhraseHistory();
+    const registry = await loadThemeRegistry();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const { nextHistory: historyAfterShortlist, shortlist, weekKey } = shortlistCandidates(history, events, dateStr);
+    const { results, nextHistory } = await confirmCandidates({
+      history: historyAfterShortlist,
+      shortlist,
+      weekKey,
+      dateStr,
+      fetchGdeltTimeline,
+      fetchEdgarQuarterCounts,
+      failures,
+    });
+    await savePhraseHistory(nextHistory);
+
+    const confirmedPhrases = results.filter((r) => r.confirmed);
+    await savePhraseRadar({ generatedAt: new Date().toISOString(), phrases: results });
+    console.log(`Phrase radar: ${shortlist.length} candidates, ${confirmedPhrases.length} confirmed (both corpora)`);
+
+    return matchPhrasesToThemes(confirmedPhrases, registry.themes || []);
+  } catch (error) {
+    failures.push(`Phrase velocity: ${error.message}`);
+    return new Map();
+  }
+}
+
+// Runs Layer 1 (theme heat) over the ledger + theme registry and writes
+// data/themes.json. Returns the set of tickers inside a "hot" theme
+// (stage diffusion/wave) for computeSpringsStep to rank against.
+async function computeThemeHeatStep(failures, phraseVelocity = new Map()) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const themes = computeThemeHeat(ledger, registry, { phraseVelocity });
+    await saveThemes(themes);
+    const staged = themes.themes.reduce((acc, t) => ({ ...acc, [t.stage]: (acc[t.stage] || 0) + 1 }), {});
+    console.log(`Theme heat: ${themes.themes.length} themes — ${JSON.stringify(staged)}`);
+    return hotThemeTickers(themes);
+  } catch (error) {
+    failures.push(`Theme heat: ${error.message}`);
+    return new Set();
+  }
+}
+
+// Layer 4 alerts. Diffs this run's springs/themes output against the last
+// recorded state (data/alerts-state.json) so each condition fires at most
+// once per ticker/theme per state-change, posts every event to ntfy.sh if
+// SIGNALDESK_NTFY_TOPIC is set (silently a no-op otherwise -- alerts still
+// land in the on-site "What changed" log, data/alerts-log.json, either way),
+// and appends a weekly digest once per ISO week.
+async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) {
+  try {
+    const state = await loadAlertState();
+    const springsPayload = await loadSprings();
+    const themesPayload = await loadThemes();
+
+    const springEvents = detectSpringEvents(state.springs || {}, springsPayload.springs || [], hotTickers);
+    const themeEvents = detectThemeEvents(state.themes || {}, themesPayload.themes || []);
+    const leaderEvents = newLeaders.map((leader) => ({
+      type: "proof-quarter",
+      priority: "high",
+      ticker: leader.ticker,
+      message: `${leader.ticker} proof quarter: ${leader.priceMove >= 0 ? "+" : ""}${leader.priceMove.toFixed(1)}% on ${leader.volumeRatio.toFixed(1)}x volume ("${leader.headline}"). Elevated ${leader.siblings.length + leader.coMentionNeighbors.length} siblings/co-mention neighbors to full coverage for 2 quarters.`,
+    }));
+    const events = [...springEvents, ...themeEvents, ...leaderEvents];
+
+    const now = new Date();
+    const weekKey = isoWeekKey(now);
+    const isNewWeek = state.lastDigestDate !== weekKey;
+    if (isNewWeek) events.push(buildWeeklyDigest(themesPayload.themes || [], springsPayload.springs || []));
+
+    const topic = process.env.SIGNALDESK_NTFY_TOPIC || "";
+    let sent = 0;
+    for (const event of events) {
+      const result = await postNtfy(topic, event);
+      if (result.sent) sent += 1;
+      else if (topic) failures.push(`ntfy ${event.type}: ${result.reason}`);
+    }
+
+    const log = await loadAlertLog();
+    const dateStr = now.toISOString();
+    log.entries = [...events.map((e) => ({ date: dateStr, ...e })), ...log.entries].slice(0, ALERTS_LOG_MAX);
+    log.generatedAt = dateStr;
+    await saveAlertLog(log);
+
+    await updateCalibrationStep(springEvents, themeEvents, failures);
+
+    await saveAlertState({
+      springs: nextSpringStateMap(springsPayload.springs || []),
+      themes: nextThemeStageMap(themesPayload.themes || []),
+      lastDigestDate: isNewWeek ? weekKey : state.lastDigestDate,
+    });
+
+    console.log(`Alerts: ${events.length} events${topic ? ` (${sent} sent to ntfy)` : " (no SIGNALDESK_NTFY_TOPIC set -- on-site log only)"}`);
+  } catch (error) {
+    failures.push(`Alerts: ${error.message}`);
+  }
+}
+
+// Calibration (THEME_ENGINE.md validation plan): logs this run's newly-
+// detected release/dead-coil/theme-stage events with a price snapshot, then
+// grades every log entry whose horizon has been reached using the ledger's
+// price history. Runs from inside runAlertsStep so it sees the same
+// springEvents/themeEvents diff before alert state is overwritten for the
+// next run's comparison.
+async function updateCalibrationStep(springEvents, themeEvents, failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const newEntries = buildLogEntries({ springEvents, themeEvents, ledger, dateStr });
+    const prevLog = await loadCalibrationLog();
+    const log = updateCalibrationLog(prevLog, newEntries, ledger, registry, dateStr);
+    await saveCalibrationLog(log);
+
+    const calibration = aggregateCalibration(log);
+    await saveCalibration(calibration);
+    console.log(`Calibration: ${newEntries.length} new events logged, ${log.entries.length} total, ${calibration.pending} pending grades`);
+  } catch (error) {
+    failures.push(`Calibration: ${error.message}`);
+  }
+}
+
+// Refreshes data/theme-registry.json: GICS baseline (re-fetched monthly) +
+// manual overrides (re-merged every run so a same-day edit takes effect).
+// Independent of the social/news pipeline, so it runs even on a degraded run.
+async function refreshThemeRegistryStep(failures) {
+  try {
+    const registry = await refreshThemeRegistry({ failures });
+    await saveThemeRegistry(registry);
+    console.log(`Theme registry: ${registry.themes.length} themes, ${Object.keys(registry.gics).length} GICS tickers`);
+  } catch (error) {
+    failures.push(`Theme registry: ${error.message}`);
+  }
 }
 
 main().catch((error) => {

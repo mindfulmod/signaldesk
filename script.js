@@ -40,6 +40,41 @@ const DISCOVERY_NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo
 const DISCOVERY_CATALYST_SOURCES = [...DISCOVERY_NEWS_SOURCES, "SEC Filings"];
 const DISCOVERY_MARKET_SOURCES = ["FINRA Short Volume", "Price/Volume"];
 
+// Mirrors scripts/update-data.mjs's headlineQualityScore/rankHeadlines. Range
+// aggregation here concatenates each day's already-ranked `latest` list, so
+// re-ranking after the merge keeps a real headline from an older day from
+// getting pushed out of the top 6 by a newer day's synthetic activity string.
+const IMPACT_WORDS_RE = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|earnings|upgrade|downgrade|spook|spooks|spooked|%)\b/i;
+const CATALYST_WORDS_RE =
+  /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
+const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
+const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
+function headlineQualityScore(entry) {
+  const title = entry?.title || "";
+  if (!title) return -1;
+  if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+  let score = 1;
+  if (CATALYST_WORDS_RE.test(title)) score += 3;
+  else if (IMPACT_WORDS_RE.test(title)) score += 2;
+  return score;
+}
+function rankHeadlines(entries) {
+  return [...entries].sort((a, b) => {
+    const scoreDiff = headlineQualityScore(b) - headlineQualityScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
+    return new Date(b.published || 0) - new Date(a.published || 0);
+  });
+}
+// Prefer a real published article/filing; fall back to social commentary
+// only when it clearly matches catalyst/impact vocabulary, tagged
+// isNewsArticle: false so the UI can label it as chatter, not reporting.
+function pickTopHeadline(rankedItems) {
+  const newsItem = rankedItems.find((entry) => NEWS_ARTICLE_SOURCES.has(entry.source) && headlineQualityScore(entry) >= 1);
+  if (newsItem) return { ...newsItem, isNewsArticle: true };
+  const socialItem = rankedItems.find((entry) => headlineQualityScore(entry) >= 2);
+  return socialItem ? { ...socialItem, isNewsArticle: false } : null;
+}
+
 
 let snapshot = null;
 let history = null;
@@ -329,6 +364,7 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     industry: item.industry || null,
     optionsActivity: Number(item.optionsActivity) || 0,
     sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
+    topHeadline: item.topHeadline || null,
     latest: item.latest || [],
   }));
 
@@ -445,7 +481,8 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         optionsActivity: 0,
         signalScore,
         sources: item.sources,
-        latest: item.latest.slice(0, 6),
+        topHeadline: pickTopHeadline(rankHeadlines(item.latest)),
+        latest: rankHeadlines(item.latest).slice(0, 6),
       };
     })
     .sort((a, b) => b.signalScore - a.signalScore)
@@ -777,6 +814,10 @@ function renderTable(items) {
       const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
+      const catalystBadge =
+        item.topHeadline && CATALYST_WORDS_RE.test(item.topHeadline.title)
+          ? `<span class="catalyst-badge" title="${escapeHtml(item.topHeadline.title)}">${item.topHeadline.isNewsArticle ? "News" : "Buzz"}</span>`
+          : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
           <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
@@ -785,6 +826,7 @@ function renderTable(items) {
               ${starButton(item.ticker)}
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
               <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
+              ${catalystBadge}
               ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
             </div>
             ${chips}
@@ -912,6 +954,8 @@ function detailMarkup(item, rank) {
       ${profileMetaMarkup(item)}
       ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
     </div>
+
+    ${topHeadlineMarkup(item)}
 
     <div class="setup-assessment" data-stage="${profile.tone}">
       <div class="assessment-head">
@@ -1061,8 +1105,30 @@ function attentionMarkup(item) {
     </div>`;
 }
 
+// The single best explanation for "why is this ticker in the news" --
+// prioritizes M&A/major-catalyst vocabulary and real impact words over
+// synthetic activity-count strings (see headlineQualityScore). Shown above
+// the setup assessment so a real catalyst (an acquisition rumor, a lawsuit,
+// an FDA decision) isn't buried under mention-count bars.
+function topHeadlineMarkup(item) {
+  const headline = item.topHeadline;
+  if (!headline || !headline.title) return "";
+  const when = headline.published ? formatShortDateTime(headline.published) : "";
+  // Only a genuine published article/filing gets called a "headline" --
+  // social commentary that happens to mention a catalyst is real signal,
+  // but labeling a stranger's forum comment as reporting would be dishonest.
+  const label = headline.isNewsArticle ? "Top headline" : "Notable chatter (not a news article)";
+  return `
+    <div class="catalyst-callout${headline.isNewsArticle ? "" : " catalyst-callout-social"}">
+      <span class="catalyst-label">${label}</span>
+      ${headline.url ? `<a href="${headline.url}" target="_blank" rel="noopener">${escapeHtml(headline.title)}</a>` : `<span>${escapeHtml(headline.title)}</span>`}
+      <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "#555"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
+    </div>`;
+}
+
 function headlinesMarkup(item) {
-  const latest = (item.latest || []).filter((entry) => entry.title).slice(0, 5);
+  const topTitle = item.topHeadline?.title;
+  const latest = (item.latest || []).filter((entry) => entry.title && entry.title !== topTitle).slice(0, 5);
   if (!latest.length) return "";
   return `
     <div class="detail-section">

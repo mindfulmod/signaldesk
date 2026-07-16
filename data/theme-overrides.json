@@ -1,0 +1,47 @@
+{
+  "note": "Human-curated theme seed (THEME_ENGINE.md P2, manual-overrides source). gicsSubs auto-pulls every ticker in that GICS sub-industry (src: gics); manual lists specific tickers regardless of their GICS classification, e.g. CEG/VST are GICS Utilities but are an AI-power trade (src: manual). Not exhaustive — Layer 0a (phrase radar) and Layer 0c (co-mention clusters) are follow-up items that will grow this list. Edit by hand.",
+  "themes": [
+    {
+      "id": "ai-semis",
+      "name": "AI semiconductors",
+      "phrases": ["AI accelerator", "AI chip", "GPU compute", "picks and shovels"],
+      "gicsSubs": ["Semiconductors", "Semiconductor Materials & Equipment"],
+      "manual": ["NVDA", "AMD", "AVGO", "MU", "ARM", "MRVL", "SMCI"]
+    },
+    {
+      "id": "ai-power",
+      "name": "AI power & electrification",
+      "phrases": ["grid capacity", "data center power", "SMR", "power purchase agreement"],
+      "gicsSubs": [],
+      "manual": ["CEG", "VST", "VRT", "GEV", "NRG", "ETN", "PWR"]
+    },
+    {
+      "id": "photonics",
+      "name": "Photonics & optics",
+      "phrases": ["co-packaged optics", "optical interconnect", "silicon photonics"],
+      "gicsSubs": ["Communications Equipment"],
+      "manual": ["COHR", "LITE", "AAOI", "GLW", "APH"]
+    },
+    {
+      "id": "glp-1",
+      "name": "GLP-1 & metabolic health",
+      "phrases": ["GLP-1", "weight-loss drug", "obesity drug", "incretin"],
+      "gicsSubs": ["Pharmaceuticals", "Biotechnology"],
+      "manual": ["LLY", "NVO", "VKTX", "AMGN", "ZBH"]
+    },
+    {
+      "id": "energy-supercycle",
+      "name": "Energy supercycle",
+      "phrases": ["upstream capex", "oilfield services", "LNG export"],
+      "gicsSubs": ["Oil & Gas Exploration & Production", "Oil & Gas Equipment & Services", "Oil & Gas Refining & Marketing"],
+      "manual": ["XOM", "CVX", "OXY", "SLB", "HAL"]
+    },
+    {
+      "id": "housing",
+      "name": "Housing & homebuilders",
+      "phrases": ["housing starts", "homebuilder", "existing home sales"],
+      "gicsSubs": ["Homebuilding", "Building Products"],
+      "manual": ["DHI", "LEN", "NVR", "CARR", "PHM"]
+    }
+  ]
+}

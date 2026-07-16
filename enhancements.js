@@ -34,6 +34,41 @@
   const sourceSum = (item, sources) => sources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0);
   const signed = (value) => `${Number(value) >= 0 ? "+" : ""}${Number(value || 0).toFixed(1)}`;
 
+  // Mirrors scripts/update-data.mjs's headlineQualityScore/rankHeadlines --
+  // client-side range aggregation (multi-day "Full saved history" view)
+  // concatenates each day's already-ranked `latest` list, so without
+  // re-ranking after the merge, an older day's real headline can still get
+  // pushed out of the top 6 by a newer day's synthetic activity-count entry.
+  const IMPACT_WORDS_RE = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|earnings|upgrade|downgrade|spook|spooks|spooked|%)\b/i;
+  const CATALYST_WORDS_RE =
+    /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
+  const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
+  const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
+  const headlineQualityScore = (entry) => {
+    const title = entry?.title || "";
+    if (!title) return -1;
+    if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+    let score = 1;
+    if (CATALYST_WORDS_RE.test(title)) score += 3;
+    else if (IMPACT_WORDS_RE.test(title)) score += 2;
+    return score;
+  };
+  const rankHeadlines = (entries) =>
+    [...entries].sort((a, b) => {
+      const scoreDiff = headlineQualityScore(b) - headlineQualityScore(a);
+      if (scoreDiff !== 0) return scoreDiff;
+      return new Date(b.published || 0) - new Date(a.published || 0);
+    });
+  // Prefer a real published article/filing; fall back to social commentary
+  // only when it clearly matches catalyst/impact vocabulary, tagged
+  // isNewsArticle: false so the UI can label it as chatter, not reporting.
+  const pickTopHeadline = (rankedItems) => {
+    const newsItem = rankedItems.find((entry) => NEWS_ARTICLE_SOURCES.has(entry.source) && headlineQualityScore(entry) >= 1);
+    if (newsItem) return { ...newsItem, isNewsArticle: true };
+    const socialItem = rankedItems.find((entry) => headlineQualityScore(entry) >= 2);
+    return socialItem ? { ...socialItem, isNewsArticle: false } : null;
+  };
+
   function install() {
     injectStyles();
     installWindowControl();
@@ -91,6 +126,7 @@
           industry: item.industry || null,
           optionsActivity: Number(item.optionsActivity) || 0,
           sources: Object.fromEntries(LIVE_SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
+          topHeadline: item.topHeadline || null,
           latest: item.latest || [],
         }));
 
@@ -264,7 +300,8 @@
         optionsActivity: 0,
         signalScore: 0,
         sources: item.sources,
-        latest: item.latest.slice(0, 6),
+        topHeadline: pickTopHeadline(rankHeadlines(item.latest)),
+        latest: rankHeadlines(item.latest).slice(0, 6),
       };
     });
 
@@ -671,6 +708,12 @@
         .market-pulse,
         .buy-panel,
         .movers-panel,
+        .whatchanged-panel,
+        .themes-panel,
+        .phraseradar-panel,
+        .clusters-panel,
+        .springs-panel,
+        .calibration-panel,
         .dashboard-grid {
           width: 100%;
           max-width: 100%;
