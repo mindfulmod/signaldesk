@@ -75,6 +75,23 @@ const MARKET_NEWS_SOURCES = new Set([
 // Headline words that signal an article is explaining a market move (used to pick
 // the most relevant story when a ticker has several).
 const IMPACT_WORDS = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|earnings|upgrade|downgrade|spook|spooks|spooked|%)\b/i;
+// Major-catalyst vocabulary (M&A, corporate actions, regulatory/legal) --
+// distinct from IMPACT_WORDS because a real acquisition rumor is highly
+// newsworthy even before it has produced a big same-day price move (which
+// is what IMPACT_WORDS mostly tracks). Used to prioritize which headline
+// surfaces as a ticker's "top headline," not to gate anything.
+const CATALYST_WORDS =
+  /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
+// Sources whose "title" is a synthetic, templated string (a mention-count or
+// price-string) rather than real prose a human/outlet wrote -- deprioritized
+// when picking which headlines represent a ticker (see headlineQualityScore).
+const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
+// Sources that publish edited articles/filings, as opposed to raw social
+// commentary (Reddit/HN/4chan/StockTwits) -- a "top headline" callout should
+// say so only when it actually is one. A forum comment that happens to
+// contain "acquisition" is real signal worth surfacing, but presenting it
+// as a headline would misattribute a stranger's guess as reporting.
+const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
 // StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
 // may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
 const STOCKTWITS_LIMIT = 45;
@@ -1300,6 +1317,44 @@ async function collectFourChanBiz(events, failures, discovery) {
   }
 }
 
+// Ranks a ticker's collected source items by how well they explain "why is
+// this stock in the news," not by when they were collected. Without this,
+// a real catalyst headline (e.g. an acquisition rumor, found via the
+// per-ticker news search that runs late in the pipeline) can get silently
+// dropped from a ticker's "latest" list behind synthetic activity-count
+// strings (ApeWisdom mention counts, StockTwits trending rank, the
+// Price/Volume quote string) that get collected earlier for every ticker.
+function headlineQualityScore(event) {
+  const title = event.title || "";
+  if (!title) return -1;
+  if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+  let score = 1;
+  if (CATALYST_WORDS.test(title)) score += 3;
+  else if (IMPACT_WORDS.test(title)) score += 2;
+  return score;
+}
+
+// Picks the single best item to call out as a ticker's "top headline."
+// Prefers a real published article/filing (any real content clears the
+// bar -- it's already been edited by an outlet); falls back to social
+// commentary only when it clearly matches catalyst/impact vocabulary
+// (score >= 2), tagged isNewsArticle: false so the UI can label it as
+// chatter rather than reporting.
+function pickTopHeadline(rankedItems) {
+  const newsItem = rankedItems.find((entry) => NEWS_ARTICLE_SOURCES.has(entry.source) && headlineQualityScore(entry) >= 1);
+  if (newsItem) return { ...newsItem, isNewsArticle: true };
+  const socialItem = rankedItems.find((entry) => headlineQualityScore(entry) >= 2);
+  return socialItem ? { ...socialItem, isNewsArticle: false } : null;
+}
+
+function rankHeadlines(items) {
+  return [...items].sort((a, b) => {
+    const scoreDiff = headlineQualityScore(b) - headlineQualityScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
+    return new Date(b.published || 0) - new Date(a.published || 0);
+  });
+}
+
 function aggregate(events, previous) {
   const previousByTicker = new Map((previous?.signals || []).map((item) => [item.ticker, item]));
   const map = new Map();
@@ -1354,6 +1409,7 @@ function aggregate(events, previous) {
           9 * sourceBreadth +
           6 * shortPressure
       );
+      const rankedHeadlines = rankHeadlines(item.latest);
       return {
         ticker: item.ticker,
         name: item.name,
@@ -1368,7 +1424,8 @@ function aggregate(events, previous) {
         optionsActivity: 0,
         signalScore,
         sources: item.sources,
-        latest: item.latest.slice(0, 6),
+        topHeadline: pickTopHeadline(rankedHeadlines),
+        latest: rankedHeadlines.slice(0, 6),
       };
     })
     .sort((a, b) => b.signalScore - a.signalScore)
@@ -1402,6 +1459,12 @@ function cleanXml(value) {
     .replace(/&#39;/g, "'")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
+    // Numeric character references (decimal and hex) -- some sources (Hacker
+    // News/Algolia comment bodies in particular) return these instead of the
+    // named entities above, e.g. "&#x27;" for an apostrophe. Left undecoded,
+    // the frontend's own HTML-escaping doubles the "&" into "&amp;#x27;".
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
     .replace(/\s+/g, " ")
     .trim();
 }
