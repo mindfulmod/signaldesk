@@ -673,6 +673,7 @@
         .movers-panel,
         .whatchanged-panel,
         .themes-panel,
+        .phraseradar-panel,
         .clusters-panel,
         .springs-panel,
         .dashboard-grid {

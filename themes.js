@@ -29,7 +29,7 @@
     naming: {
       label: "Naming",
       className: "naming",
-      note: "Early attention breadth above the market. The language/phrase-velocity signal isn't built yet, so this reads conservatively.",
+      note: "Early attention breadth above the market, with a confirmed phrase from the news/filings radar backing it up.",
     },
     diffusion: {
       label: "Diffusion",
@@ -123,6 +123,14 @@
   function renderThemesRail() {
     const container = document.getElementById("themesRail");
     if (!container) return;
+
+    const subhead = document.getElementById("themesSubhead");
+    if (subhead) {
+      subhead.textContent = themesData?.languageAvailable
+        ? "How hot each tracked theme is right now, scored on breadth in excess of the whole market (a crash rebound that lifts everything equally won't light this up), plus confirmed phrase velocity from the news/filings radar."
+        : "How hot each tracked theme is right now, scored on breadth in excess of the whole market (a crash rebound that lifts everything equally won't light this up). Heat currently excludes the language/phrase-velocity component (no phrase has cleared both the GDELT and EDGAR confirmation bar yet), so scores read conservatively.";
+    }
+
     const themes = themesData?.themes || [];
     if (!themes.length) {
       container.innerHTML = `<p class="themes-empty">No themes registered yet.</p>`;
@@ -154,6 +162,10 @@
     const extra = members.length - shown.length;
     const hasDiffusion = (diffusionData?.themes || []).some((t) => t.id === theme.id);
     const selected = selectedThemeId === theme.id;
+    const phrase = theme.evidence?.phrase;
+    const note = theme.stage === "naming" && !phrase
+      ? "Early attention breadth above the market. No phrase has cleared both the GDELT and EDGAR confirmation bar for this theme yet, so this reads conservatively."
+      : copy.note;
 
     return `
       <article class="theme-card${selected ? " selected" : ""}" data-stage="${escapeHtml(theme.stage)}" data-theme-id="${escapeHtml(theme.id)}" role="button" tabindex="0" aria-expanded="${selected}">
@@ -167,12 +179,13 @@
           <span>Rel. strength breadth <strong>${formatPct(theme.evidence?.relBreadth)}</strong></span>
           <span>New-high breadth <strong>${formatPct(theme.evidence?.newHighBreadth)}</strong></span>
           <span>Attention breadth <strong>${formatPct(theme.evidence?.attnBreadth)}</strong></span>
+          ${phrase ? `<span>Confirmed phrase <strong>"${escapeHtml(phrase)}"</strong></span>` : ""}
         </div>
         <div class="theme-members">
           ${shown.map((t) => `<span>${escapeHtml(t)}</span>`).join("")}
           ${extra > 0 ? `<span class="theme-member-more">+${extra}</span>` : ""}
         </div>
-        <p class="theme-note">${escapeHtml(copy.note)}</p>
+        <p class="theme-note">${escapeHtml(note)}</p>
         ${hasDiffusion ? `<p class="theme-expand-hint">${selected ? "Hide" : "View"} supply-chain map ${selected ? "▲" : "▼"}</p>` : ""}
       </article>`;
   }

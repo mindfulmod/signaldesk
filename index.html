@@ -185,11 +185,22 @@
             <div>
               <p class="section-kicker">Breadth of participation, above the market</p>
               <h2 id="themes-heading">Themes rail</h2>
-              <p>How hot each tracked theme is right now, scored on breadth in excess of the whole market (a crash rebound that lifts everything equally won't light this up). Heat currently excludes the language/phrase-velocity component (not built yet), so scores read conservatively.</p>
+              <p id="themesSubhead">How hot each tracked theme is right now, scored on breadth in excess of the whole market (a crash rebound that lifts everything equally won't light this up).</p>
             </div>
           </div>
           <div id="themesRail" class="themes-rail"></div>
           <div id="diffusionDetail" class="diffusion-detail" hidden></div>
+        </section>
+
+        <section class="phraseradar-panel" aria-labelledby="phraseradar-heading">
+          <div class="section-head compact">
+            <div>
+              <p class="section-kicker">Novel &amp; accelerating language</p>
+              <h2 id="phraseradar-heading">Phrase radar</h2>
+              <p>New or rare phrases from the headline stream that are accelerating week-over-week, checked against two independent corpora — GDELT news volume and SEC EDGAR filings. Only phrases confirmed by <strong>both</strong> count as real; the rest are shown as unconfirmed candidates.</p>
+            </div>
+          </div>
+          <div id="phraseRadarFeed" class="phraseradar-feed"></div>
         </section>
 
         <section class="clusters-panel" aria-labelledby="clusters-heading">
@@ -284,12 +295,14 @@
     <script src="data/springs.js"></script>
     <script src="data/themes.js"></script>
     <script src="data/diffusion-map.js"></script>
+    <script src="data/phrase-radar.js"></script>
     <script src="data/clusters.js"></script>
     <script src="data/alerts-log.js"></script>
     <script src="script.js"></script>
     <script src="enhancements.js?v=20260626-mobile-fix"></script>
     <script src="springs.js"></script>
     <script src="themes.js"></script>
+    <script src="phrase-radar.js"></script>
     <script src="clusters.js"></script>
     <script src="alerts.js"></script>
     <script src="layout-fix.js?v=20260626-layout-pass-4"></script>

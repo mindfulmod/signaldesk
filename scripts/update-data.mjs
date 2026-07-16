@@ -26,6 +26,16 @@ import {
   computeCoMention,
 } from "./lib/co-mention.mjs";
 import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
+import {
+  loadPhraseHistory,
+  savePhraseHistory,
+  loadPhraseRadar,
+  savePhraseRadar,
+  parseGdeltTimeline,
+  shortlistCandidates,
+  confirmCandidates,
+  matchPhrasesToThemes,
+} from "./lib/phrase-velocity.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -371,7 +381,8 @@ async function main() {
 
   await updateLedgerFromRun({ events, signals, failures });
   await refreshThemeRegistryStep(failures);
-  const hotTickers = await computeThemeHeatStep(failures);
+  const phraseVelocity = await computePhraseVelocityStep(events, failures);
+  const hotTickers = await computeThemeHeatStep(failures, phraseVelocity);
   await computeSpringsStep(failures, hotTickers);
   await computeDiffusionMapStep(failures);
   const coMentionEdges = await computeCoMentionStep(events, failures);
@@ -1864,14 +1875,96 @@ async function computeProofQuartersStep(events, coMentionEdges, failures) {
   }
 }
 
+// GDELT DOC 2.0 timelinevol -- 15-month window covers the trailing year
+// plus the ~90d "prior" buffer assessGdeltVolume needs. Reuses the existing
+// retry/backoff helper (GDELT rate-limits hard on shared CI IPs).
+async function fetchGdeltTimeline(phrase) {
+  const query = encodeURIComponent(`"${phrase}"`);
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=timelinevol&format=json&timespan=15months`;
+  const json = await fetchJsonRetry(url);
+  return parseGdeltTimeline(json);
+}
+
+function quarterDateRange(year, quarter) {
+  const startMonth = (quarter - 1) * 3;
+  const start = new Date(Date.UTC(year, startMonth, 1));
+  const end = new Date(Date.UTC(year, startMonth + 3, 0));
+  return { start: start.toISOString().slice(0, 10), end: end.toISOString().slice(0, 10) };
+}
+
+function trailingQuarters(count = 8, from = new Date()) {
+  let year = from.getUTCFullYear();
+  let quarter = Math.floor(from.getUTCMonth() / 3) + 1;
+  const quarters = [];
+  for (let i = 0; i < count; i += 1) {
+    quarters.unshift({ year, quarter });
+    quarter -= 1;
+    if (quarter < 1) {
+      quarter = 4;
+      year -= 1;
+    }
+  }
+  return quarters;
+}
+
+// EDGAR full-text search, one request per trailing quarter (<=8, paced at
+// 150ms -- SEC's <10 req/s limit).
+async function fetchEdgarQuarterCounts(phrase) {
+  const counts = [];
+  for (const { year, quarter } of trailingQuarters(8)) {
+    const { start, end } = quarterDateRange(year, quarter);
+    const query = encodeURIComponent(`"${phrase}"`);
+    const url = `https://efts.sec.gov/LATEST/search-index?q=${query}&forms=10-K,10-Q,8-K&dateRange=custom&startdt=${start}&enddt=${end}`;
+    const json = await fetchJsonWithUA(url, SEC_USER_AGENT);
+    counts.push({ year, quarter, count: json?.hits?.total?.value || 0 });
+    await sleep(150);
+  }
+  return counts;
+}
+
+// Layer 0a: extracts bigram/trigram candidates from today's headline
+// stream, applies the novelty + WoW-acceleration filters, confirms the
+// shortlist against GDELT (daily, up to MAX_GDELT_CHECKS_PER_DAY) and EDGAR
+// (weekly, up to MAX_EDGAR_CHECKS_PER_WEEK), writes data/phrase-radar.json,
+// and returns the phraseVelocity Map theme-heat.mjs's `language` score has
+// been waiting for since Layer 1 shipped.
+async function computePhraseVelocityStep(events, failures) {
+  try {
+    const history = await loadPhraseHistory();
+    const registry = await loadThemeRegistry();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const { nextHistory: historyAfterShortlist, shortlist, weekKey } = shortlistCandidates(history, events, dateStr);
+    const { results, nextHistory } = await confirmCandidates({
+      history: historyAfterShortlist,
+      shortlist,
+      weekKey,
+      dateStr,
+      fetchGdeltTimeline,
+      fetchEdgarQuarterCounts,
+      failures,
+    });
+    await savePhraseHistory(nextHistory);
+
+    const confirmedPhrases = results.filter((r) => r.confirmed);
+    await savePhraseRadar({ generatedAt: new Date().toISOString(), phrases: results });
+    console.log(`Phrase radar: ${shortlist.length} candidates, ${confirmedPhrases.length} confirmed (both corpora)`);
+
+    return matchPhrasesToThemes(confirmedPhrases, registry.themes || []);
+  } catch (error) {
+    failures.push(`Phrase velocity: ${error.message}`);
+    return new Map();
+  }
+}
+
 // Runs Layer 1 (theme heat) over the ledger + theme registry and writes
 // data/themes.json. Returns the set of tickers inside a "hot" theme
 // (stage diffusion/wave) for computeSpringsStep to rank against.
-async function computeThemeHeatStep(failures) {
+async function computeThemeHeatStep(failures, phraseVelocity = new Map()) {
   try {
     const ledger = await loadLedger();
     const registry = await loadThemeRegistry();
-    const themes = computeThemeHeat(ledger, registry);
+    const themes = computeThemeHeat(ledger, registry, { phraseVelocity });
     await saveThemes(themes);
     const staged = themes.themes.reduce((acc, t) => ({ ...acc, [t.stage]: (acc[t.stage] || 0) + 1 }), {});
     console.log(`Theme heat: ${themes.themes.length} themes — ${JSON.stringify(staged)}`);

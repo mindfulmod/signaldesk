@@ -19,6 +19,7 @@ on:
       - "enhancements.js"
       - "springs.js"
       - "themes.js"
+      - "phrase-radar.js"
       - "clusters.js"
       - "alerts.js"
       - "index.html"
@@ -50,6 +51,7 @@ jobs:
           node --check enhancements.js
           node --check springs.js
           node --check themes.js
+          node --check phrase-radar.js
           node --check clusters.js
           node --check alerts.js
           node --check scripts/update-data.mjs
@@ -69,7 +71,7 @@ jobs:
 
       - name: Commit refreshed data
         run: |
-          FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js data/themes.json data/themes.js data/diffusion-map.json data/diffusion-map.js data/diffusion-state.json data/co-mention-history.json data/clusters.json data/clusters.js data/leaders.json data/leaders.js data/hot-monitor.json data/hot-monitor.js data/alerts-log.json data/alerts-log.js data/alerts-state.json"
+          FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js data/themes.json data/themes.js data/diffusion-map.json data/diffusion-map.js data/diffusion-state.json data/co-mention-history.json data/clusters.json data/clusters.js data/leaders.json data/leaders.js data/hot-monitor.json data/hot-monitor.js data/phrase-history.json data/phrase-radar.json data/phrase-radar.js data/alerts-log.json data/alerts-log.js data/alerts-state.json"
           if git diff --quiet -- $FILES; then
             echo "No data changes to commit."
             exit 0

@@ -618,6 +618,7 @@ h1 {
 .movers-panel,
 .whatchanged-panel,
 .themes-panel,
+.phraseradar-panel,
 .clusters-panel,
 .springs-panel,
 .table-panel,
@@ -679,6 +680,7 @@ h1 {
 .movers-panel,
 .whatchanged-panel,
 .themes-panel,
+.phraseradar-panel,
 .clusters-panel,
 .springs-panel {
   width: min(1320px, 100%);
@@ -1978,6 +1980,7 @@ tbody tr.selected td:first-child {
   .buy-panel,
   .whatchanged-panel,
   .themes-panel,
+  .phraseradar-panel,
   .clusters-panel,
   .springs-panel,
   .table-panel,
