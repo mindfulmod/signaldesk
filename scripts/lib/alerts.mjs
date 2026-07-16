@@ -103,6 +103,8 @@ export function detectThemeEvents(prevThemeStages, currentThemes) {
       type: "theme-stage-transition",
       priority: highPriority ? "high" : "normal",
       theme: theme.id,
+      fromStage: prevStage,
+      toStage: theme.stage,
       message: `${theme.name}: ${prevStage} -> ${theme.stage}${theme.stage === "diffusion" ? " -- historically the early-entry window" : ""}${theme.stage === "decay" ? " -- rotation out may be starting" : ""}.`,
     });
   }
@@ -179,7 +181,7 @@ function titleFor(event) {
     case "dead-coil":
       return `SignalDesk: ${event.ticker} coil demoted`;
     case "theme-stage-transition":
-      return `SignalDesk: theme ${event.theme} -> ${event.message.split(" -> ")[1]?.split(" ")[0] || "changed"}`;
+      return `SignalDesk: theme ${event.theme} -> ${event.toStage || "changed"}`;
     case "proof-quarter":
       return `SignalDesk: ${event.ticker} proof quarter`;
     case "weekly-digest":

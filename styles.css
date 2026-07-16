@@ -621,6 +621,7 @@ h1 {
 .phraseradar-panel,
 .clusters-panel,
 .springs-panel,
+.calibration-panel,
 .table-panel,
 .side-panel {
   background: var(--panel);
@@ -682,7 +683,8 @@ h1 {
 .themes-panel,
 .phraseradar-panel,
 .clusters-panel,
-.springs-panel {
+.springs-panel,
+.calibration-panel {
   width: min(1320px, 100%);
   margin: 0 auto 16px;
   padding: 18px 20px;
@@ -1983,6 +1985,7 @@ tbody tr.selected td:first-child {
   .phraseradar-panel,
   .clusters-panel,
   .springs-panel,
+  .calibration-panel,
   .table-panel,
   .side-panel {
     padding: 14px;

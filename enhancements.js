@@ -676,6 +676,7 @@
         .phraseradar-panel,
         .clusters-panel,
         .springs-panel,
+        .calibration-panel,
         .dashboard-grid {
           width: 100%;
           max-width: 100%;

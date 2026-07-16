@@ -36,6 +36,15 @@ import {
   confirmCandidates,
   matchPhrasesToThemes,
 } from "./lib/phrase-velocity.mjs";
+import {
+  loadCalibrationLog,
+  saveCalibrationLog,
+  saveCalibration,
+  buildLogEntries,
+  updateCalibrationLog,
+  pendingSubjects,
+  aggregateCalibration,
+} from "./lib/calibration.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const OUT = new URL("data/signals.json", ROOT);
@@ -1774,6 +1783,9 @@ async function loadProtectedTickers() {
     protectedTickers.add(leader.ticker);
     for (const t of [...(leader.siblings || []), ...(leader.coMentionNeighbors || [])]) protectedTickers.add(t);
   }
+  const calibrationLog = await loadCalibrationLog();
+  const { tickers: pendingTickers } = pendingSubjects(calibrationLog);
+  for (const ticker of pendingTickers) protectedTickers.add(ticker);
   return protectedTickers;
 }
 
@@ -2016,6 +2028,8 @@ async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) 
     log.generatedAt = dateStr;
     await saveAlertLog(log);
 
+    await updateCalibrationStep(springEvents, themeEvents, failures);
+
     await saveAlertState({
       springs: nextSpringStateMap(springsPayload.springs || []),
       themes: nextThemeStageMap(themesPayload.themes || []),
@@ -2025,6 +2039,31 @@ async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) 
     console.log(`Alerts: ${events.length} events${topic ? ` (${sent} sent to ntfy)` : " (no SIGNALDESK_NTFY_TOPIC set -- on-site log only)"}`);
   } catch (error) {
     failures.push(`Alerts: ${error.message}`);
+  }
+}
+
+// Calibration (THEME_ENGINE.md validation plan): logs this run's newly-
+// detected release/dead-coil/theme-stage events with a price snapshot, then
+// grades every log entry whose horizon has been reached using the ledger's
+// price history. Runs from inside runAlertsStep so it sees the same
+// springEvents/themeEvents diff before alert state is overwritten for the
+// next run's comparison.
+async function updateCalibrationStep(springEvents, themeEvents, failures) {
+  try {
+    const ledger = await loadLedger();
+    const registry = await loadThemeRegistry();
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    const newEntries = buildLogEntries({ springEvents, themeEvents, ledger, dateStr });
+    const prevLog = await loadCalibrationLog();
+    const log = updateCalibrationLog(prevLog, newEntries, ledger, registry, dateStr);
+    await saveCalibrationLog(log);
+
+    const calibration = aggregateCalibration(log);
+    await saveCalibration(calibration);
+    console.log(`Calibration: ${newEntries.length} new events logged, ${log.entries.length} total, ${calibration.pending} pending grades`);
+  } catch (error) {
+    failures.push(`Calibration: ${error.message}`);
   }
 }
 
