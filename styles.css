@@ -2070,3 +2070,198 @@ tbody tr.selected td:first-child {
     transform: none !important;
   }
 }
+
+/* ============================================================
+   Declutter pass (2026-07-17): collapsible sections, ticker
+   bottom sheet on narrow viewports, mobile scroll trims.
+   ============================================================ */
+
+/* --- Collapsible sections --- */
+.collapsible-panel .section-head {
+  position: relative;
+  cursor: pointer;
+  padding-right: 44px;
+}
+
+.collapse-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  color: var(--faint);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.collapse-chevron {
+  display: inline-block;
+  transition: transform 0.18s ease;
+}
+
+.panel-collapsed .collapse-chevron {
+  transform: rotate(-90deg);
+}
+
+.panel-collapsed > *:not(.section-head) {
+  display: none !important;
+}
+
+/* Collapsed headers shrink to one tight line: keep kicker + title, drop the
+   explanatory paragraph until expanded. */
+.panel-collapsed .section-head {
+  margin-bottom: 0;
+}
+
+.panel-collapsed .section-head h2 {
+  margin-bottom: 0;
+}
+
+.panel-collapsed .section-head div > p:not(.section-kicker) {
+  display: none;
+}
+
+/* --- Ticker detail bottom sheet (narrow viewports) --- */
+.detail-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+}
+
+.detail-sheet[hidden] {
+  display: none;
+}
+
+.detail-sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 7, 11, 0.64);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.detail-sheet-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 88dvh;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -18px 48px rgba(0, 0, 0, 0.55);
+  animation: detail-sheet-up 0.22s ease-out;
+}
+
+@keyframes detail-sheet-up {
+  from {
+    transform: translateY(28px);
+    opacity: 0.5;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.detail-sheet-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px 2px;
+  flex: 0 0 auto;
+}
+
+.detail-sheet-grip {
+  width: 42px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.detail-sheet-close {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  color: var(--faint);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.detail-sheet-close:active {
+  background: var(--panel-2);
+}
+
+.detail-sheet-content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 16px calc(24px + env(safe-area-inset-bottom, 0px));
+  overscroll-behavior: contain;
+}
+
+body.sheet-open {
+  overflow: hidden;
+}
+
+/* Desktop keeps the sticky side panel; the sheet never applies there. */
+@media (min-width: 1181px) {
+  .detail-sheet {
+    display: none !important;
+  }
+}
+
+/* Narrow viewports: the inline detail panel at the bottom of the page is what
+   made ticker taps drag the user to the footer — the sheet replaces it. */
+@media (max-width: 1180px) {
+  .side-panel {
+    display: none !important;
+  }
+
+  #togglePanel {
+    display: none;
+  }
+}
+
+/* --- Mobile scroll trims --- */
+@media (max-width: 680px) {
+  .hero-method {
+    display: none;
+  }
+
+  .page-hero {
+    padding: 18px 16px;
+  }
+
+  .hero-copy h1 {
+    font-size: 1.45rem;
+  }
+
+  /* Cap Driving the tape at 4 headlines on phones (8 on larger screens). */
+  .pulse-headlines .pulse-headline:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-sheet-panel {
+    animation: none;
+  }
+}

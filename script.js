@@ -747,7 +747,11 @@ function renderBuyCandidates(items) {
       selectedTicker = button.dataset.buyTicker;
       byId("tickerSearch").value = "";
       render();
-      document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+      if (isNarrowViewport()) {
+        openDetailSheet();
+      } else {
+        document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 }
@@ -845,10 +849,8 @@ function renderTable(items) {
     row.addEventListener("click", () => {
       selectedTicker = row.dataset.ticker;
       render();
-      // On narrow screens the detail panel sits below the table; bring it into view.
-      if (window.matchMedia("(max-width: 980px)").matches) {
-        document.querySelector(".side-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      // On narrow screens the inline panel is hidden; show details in the sheet.
+      if (isNarrowViewport()) openDetailSheet();
     });
   });
   bindStars(byId("rankingBody"));
@@ -892,9 +894,7 @@ function renderMovers(items) {
       selectedTicker = button.dataset.moverTicker;
       byId("tickerSearch").value = "";
       render();
-      if (window.matchMedia("(max-width: 980px)").matches) {
-        document.querySelector(".side-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      if (isNarrowViewport()) openDetailSheet();
     });
   });
 }
@@ -937,8 +937,52 @@ function renderDetail(items, top50) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
   if (!selected) return;
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
-  byId("detailPanel").innerHTML = detailMarkup(selected, rank);
+  lastDetailHtml = detailMarkup(selected, rank);
+  byId("detailPanel").innerHTML = lastDetailHtml;
   bindStars(byId("detailPanel"));
+  renderDetailSheetContent();
+}
+
+// On narrow viewports the inline side panel is hidden and ticker detail opens in
+// a bottom sheet instead — clicking a row used to scroll the page to the very
+// bottom, which was disorienting on mobile.
+let lastDetailHtml = "";
+
+function isNarrowViewport() {
+  return window.matchMedia("(max-width: 1180px)").matches;
+}
+
+function openDetailSheet() {
+  const sheet = byId("detailSheet");
+  if (!sheet) return;
+  sheet.hidden = false;
+  document.body.classList.add("sheet-open");
+  renderDetailSheetContent();
+  const content = byId("detailSheetContent");
+  if (content) content.scrollTop = 0;
+}
+
+function closeDetailSheet() {
+  const sheet = byId("detailSheet");
+  if (!sheet || sheet.hidden) return;
+  sheet.hidden = true;
+  document.body.classList.remove("sheet-open");
+}
+
+function renderDetailSheetContent() {
+  const sheet = byId("detailSheet");
+  if (!sheet || sheet.hidden) return;
+  const content = byId("detailSheetContent");
+  if (!content) return;
+  // Mobile browsers fire resize (and therefore render) when the URL bar
+  // shows/hides; skip identical re-renders so the sheet doesn't jump to the top
+  // mid-scroll.
+  if (content.__renderedHtml === lastDetailHtml) return;
+  const prevScroll = content.scrollTop;
+  content.innerHTML = lastDetailHtml;
+  content.__renderedHtml = lastDetailHtml;
+  content.scrollTop = prevScroll;
+  bindStars(content);
 }
 
 function detailMarkup(item, rank) {
@@ -1321,7 +1365,15 @@ function bindEvents() {
   byId("exportCsv").addEventListener("click", exportCsv);
   byId("togglePanel").addEventListener("click", toggleDetailPanel);
   byId("toggleSidebar").addEventListener("click", toggleSidebar);
-  window.addEventListener("resize", render);
+  byId("detailSheetClose")?.addEventListener("click", closeDetailSheet);
+  document.querySelector(".detail-sheet-backdrop")?.addEventListener("click", closeDetailSheet);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeDetailSheet();
+  });
+  window.addEventListener("resize", () => {
+    if (!isNarrowViewport()) closeDetailSheet();
+    render();
+  });
 }
 
 function setRankMode(mode) {

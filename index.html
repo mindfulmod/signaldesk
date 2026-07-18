@@ -301,6 +301,17 @@
       </footer>
     </div>
 
+    <div id="detailSheet" class="detail-sheet" hidden>
+      <div class="detail-sheet-backdrop"></div>
+      <div class="detail-sheet-panel" role="dialog" aria-modal="true" aria-label="Selected stock detail">
+        <div class="detail-sheet-bar">
+          <span class="detail-sheet-grip" aria-hidden="true"></span>
+          <button id="detailSheetClose" class="detail-sheet-close" type="button" aria-label="Close details">✕</button>
+        </div>
+        <div id="detailSheetContent" class="detail-sheet-content"></div>
+      </div>
+    </div>
+
     <script src="data/signals.js"></script>
     <script src="data/history.js"></script>
     <script src="data/springs.js"></script>
@@ -319,5 +330,6 @@
     <script src="calibration.js"></script>
     <script src="alerts.js"></script>
     <script src="layout-fix.js?v=20260626-layout-pass-4"></script>
+    <script src="declutter.js?v=20260717-1"></script>
   </body>
 </html>
