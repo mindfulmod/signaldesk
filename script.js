@@ -12,6 +12,9 @@ const SOURCES = [
   "Yahoo Public News",
   "CNBC",
   "MarketWatch",
+  "Press Releases",
+  "Financial Media",
+  "Nasdaq",
   "FINRA Short Volume",
   "Price/Volume",
 ];
@@ -31,12 +34,15 @@ const SOURCE_COLORS = {
   "Yahoo Public News": "#e0b94a",
   CNBC: "#5fb0d6",
   MarketWatch: "#6fcf97",
+  "Press Releases": "#c98ad6",
+  "Financial Media": "#8fd6b0",
+  Nasdaq: "#4fb3ff",
   "FINRA Short Volume": "#d98a5b",
   "Price/Volume": "#7c9aff",
 };
 
 const DISCOVERY_SOCIAL_SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
-const DISCOVERY_NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+const DISCOVERY_NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq"];
 const DISCOVERY_CATALYST_SOURCES = [...DISCOVERY_NEWS_SOURCES, "SEC Filings"];
 const DISCOVERY_MARKET_SOURCES = ["FINRA Short Volume", "Price/Volume"];
 
@@ -48,11 +54,25 @@ const IMPACT_WORDS_RE = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunge
 const CATALYST_WORDS_RE =
   /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
 const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
-const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
+const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq", "SEC Filings"]);
+// Mirrors update-data.mjs's isClassActionSpam: mass-templated law-firm
+// class-action solicitation PR is not news; score it like a synthetic title
+// so it can never surface as a top headline (also cleans snapshots written
+// before the pipeline learned to drop these at collection time).
+const LAW_FIRM_NAMES_RE =
+  /\b(rosen law|the rosen law firm|pomerantz|glancy prongay|bronstein,? gewirtz|levi & korsinsky|kessler topaz|robbins geller|hagens berman|bragar eagel|kirby mcinerney|faruqi & faruqi|schall law|kahn swick|portnoy law|gross law firm|howard g\.? smith|johnson fistel|block & leviton|berger montague|wolf haldenstein|saxena white|scott\+scott|grabar law)\b/i;
+const CLASS_ACTION_TOPIC_RE = /\b(class action|lead plaintiff|securities (?:fraud|litigation)|shareholder rights|investor rights)\b/i;
+const SOLICITATION_CUES_RE = /\b(law firm|counsel|encourages?|reminds?|urges?|notifies|alert|deadline|losses|recover|investigat\w+|on behalf of)\b/i;
+function isClassActionSpam(text) {
+  const value = String(text || "");
+  if (!value) return false;
+  return LAW_FIRM_NAMES_RE.test(value) || (CLASS_ACTION_TOPIC_RE.test(value) && SOLICITATION_CUES_RE.test(value));
+}
 function headlineQualityScore(entry) {
   const title = entry?.title || "";
   if (!title) return -1;
   if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+  if (isClassActionSpam(title)) return 0;
   let score = 1;
   if (CATALYST_WORDS_RE.test(title)) score += 3;
   else if (IMPACT_WORDS_RE.test(title)) score += 2;
@@ -349,7 +369,9 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     ticker: item.ticker,
     name: item.name,
     mentions: Number(item.mentions) || 0,
-    momentum: Number(item.momentum) || 0,
+    // null momentum = first appearance, no prior snapshot; keep it null so
+    // the UI can say "new" instead of faking a percentage.
+    momentum: item.momentum == null ? null : Number(item.momentum) || 0,
     sentiment: Number(item.sentiment) || 0,
     lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
     quoteAsOf: item.quoteAsOf || null,
@@ -373,7 +395,7 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
   const maxMentions = Math.max(1, ...items.map((item) => item.mentions));
   const rawScores = items.map((item) =>
     30 * Math.sqrt(item.mentions / maxMentions) +
-    22 * clamp(0, 1, item.momentum / 80 + 0.25) +
+    22 * clamp(0, 1, (item.momentum ?? 0) / 80 + 0.25) +
     18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
     12 * clamp(0, 1, item.priceMove / 6) +
     10 * clamp(0, 1, item.relativeVolume / 2.5) +
@@ -446,7 +468,12 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
   return [...map.values()]
     .map((item) => {
       const prev = previousMentions.get(item.ticker) || 0;
-      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : snapshots.length > 1 ? 0 : item.mentions > 2 ? 35 : 0;
+      const momentum = prev
+        ? ((item.mentions - prev) / prev) * 100
+        : previousSnapshots.length
+          ? null // a prior window exists; this ticker is simply new to the board
+          : 0; // no prior window at all -- nothing to compare against
+
       const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
       const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
       const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
@@ -455,7 +482,7 @@ function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
         0,
         100,
         30 * Math.sqrt(item.mentions / maxMentions) +
-          22 * clamp(0, 1, momentum / 80 + 0.25) +
+          22 * clamp(0, 1, (momentum ?? 0) / 80 + 0.25) +
           18 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
           12 * clamp(0, 1, priceMove / 6) +
           10 * clamp(0, 1, relativeVolume / 2.5) +
@@ -516,7 +543,7 @@ function filteredSignals() {
     const activeBreadth = state.sources.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
     return (
       30 * Math.sqrt(item.mentions / maxMentions) +
-      22 * clamp(0, 1, item.momentum / 80 + 0.25) +
+      22 * clamp(0, 1, (item.momentum ?? 0) / 80 + 0.25) +
       18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
       12 * clamp(0, 1, item.priceMove / 6) +
       10 * clamp(0, 1, item.relativeVolume / 2.5) +
@@ -633,7 +660,7 @@ function discoveryProfile(item) {
     : 1;
 
   const attention = clamp(0, 1, (Number(item.signalScore) || 0) / 85);
-  const acceleration = item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
+  const acceleration = item.momentum == null || item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
   const breadth = 0.65 * (activeGroups / 3) + 0.35 * clamp(0, 1, activeSources.length / 6);
   const priceConfirmation = clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5);
   const volumeConfirmation = clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5);
@@ -750,6 +777,10 @@ function renderBuyCandidates(items) {
       if (isNarrowViewport()) {
         openDetailSheet();
       } else {
+        // The discovery board lives on the "Deep dive" tab (tabs.js), so it has
+        // to be revealed before scrolling — otherwise this scrolls to a hidden
+        // element and looks like nothing happened.
+        window.SIGNALDESK_SELECT_TAB?.("deepdive");
         document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
@@ -814,7 +845,7 @@ function renderTable(items) {
       const sourceBars = SOURCES.map(
         (source) => `<span style="width:${((item.sources[source] || 0) / total) * 100}%; background:${SOURCE_COLORS[source]}"></span>`
       ).join("");
-      const momentumClass = item.momentum >= 0 ? "up" : "down";
+      const momentumClass = item.momentum == null ? "flat" : item.momentum >= 0 ? "up" : "down";
       const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
@@ -838,7 +869,7 @@ function renderTable(items) {
           <td><div class="setup-cell"><span class="signal-pill tone-${profile.tone}">${profile.score}</span><small>${escapeHtml(profile.stage)}</small></div></td>
           <td>${formatQuoteCell(item)}</td>
           <td class="col-secondary">${fmt.format(item.mentions)}</td>
-          <td><span class="momentum ${momentumClass}">${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%</span></td>
+          <td><span class="momentum ${momentumClass}">${item.momentum == null ? "new" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
           <td class="col-tertiary">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x</td>
           <td class="col-secondary"><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
         </tr>`;
@@ -1018,7 +1049,7 @@ function detailMarkup(item, rank) {
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
       ${statBlock("Price", formatPrice(item.lastPrice), priceMoveText(item), priceTone(item.priceMove))}
       ${statBlock("Rel. volume", item.relativeVolume ? `${item.relativeVolume.toFixed(1)}×` : "-", item.relativeVolume >= VOL_HOT ? "elevated" : "normal", item.relativeVolume >= VOL_HOT ? "up" : "")}
-      ${statBlock("Acceleration", `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, "attention vs prior", momentumTone(item.momentum))}
+      ${statBlock("Acceleration", item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no prior snapshot yet" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
     </div>
@@ -1202,7 +1233,7 @@ const ATTENTION_HIGH = 5; // social + news that counts as "big attention"
 function attentionStats(item) {
   const socialSources = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
   const social = socialSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
-  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch"];
+  const newsSources = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq"];
   const news = newsSources.reduce((sum, source) => sum + (item.sources[source] || 0), 0);
   return {
     social,
@@ -1326,7 +1357,7 @@ function exportCsv() {
         `"${profile.evidence}"`,
         `"${profile.risks.join(" | ")}"`,
         item.mentions,
-        item.momentum.toFixed(2),
+        item.momentum == null ? "" : item.momentum.toFixed(2),
         item.sentiment.toFixed(3),
         item.priceMove.toFixed(2),
         item.relativeVolume.toFixed(2),
@@ -1343,7 +1374,12 @@ function exportCsv() {
 }
 
 function bindEvents() {
-  byId("tickerSearch").addEventListener("input", render);
+  byId("tickerSearch").addEventListener("input", (event) => {
+    render();
+    // Search narrows the discovery board, which lives on the "Deep dive" tab —
+    // typing from any other tab would otherwise produce no visible result.
+    if (event.target.value.trim()) window.SIGNALDESK_SELECT_TAB?.("deepdive");
+  });
   document.querySelectorAll('input[name="source"]').forEach((input) => input.addEventListener("change", render));
   byId("clearFocus").addEventListener("click", () => {
     byId("tickerSearch").value = "";

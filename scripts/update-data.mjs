@@ -1,5 +1,7 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
+import { textBetween, attrBetween, countWord, escapeRegExp } from "./lib/xml.mjs";
+import { createHostGuard, hostOf, summariseFailures } from "./lib/host-guard.mjs";
 import { refreshThemeRegistry, saveThemeRegistry, loadThemeRegistry } from "./lib/theme-registry.mjs";
 import { computeSprings, loadSprings, saveSprings } from "./lib/coil-detector.mjs";
 import { computeThemeHeat, saveThemes, loadThemes, hotThemeTickers } from "./lib/theme-heat.mjs";
@@ -25,6 +27,7 @@ import {
   saveClusters,
   computeCoMention,
 } from "./lib/co-mention.mjs";
+import { COMMON_WORD_TICKERS } from "./lib/ticker-noise.mjs";
 import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
 import {
   loadPhraseHistory,
@@ -67,10 +70,14 @@ const MOVER_MIN_MOVE = 2.0; // percent; |move| at/above this qualifies as a move
 // ranking table. An entry needs a real news headline AND a price move of at least
 // this magnitude, so we only show stories that actually moved a stock.
 const MARKET_NEWS_LIMIT = 14;
+// Hard cap on per-ticker news requests after the broad wire sweep. Keeps the
+// throttling-prone path small; the wires are expected to cover most names.
+const TARGETED_NEWS_LIMIT = 25;
 const MARKET_NEWS_MIN_MOVE = 1.5; // percent
 // News sources that count as "real" press coverage for the market-news feed.
 const MARKET_NEWS_SOURCES = new Set([
   "GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings",
+  "Press Releases", "Financial Media", "Nasdaq",
 ]);
 // Headline words that signal an article is explaining a market move (used to pick
 // the most relevant story when a ticker has several).
@@ -82,6 +89,22 @@ const IMPACT_WORDS = /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|t
 // surfaces as a ticker's "top headline," not to gate anything.
 const CATALYST_WORDS =
   /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
+// Securities-class-action solicitation PR ("ROSEN, RECOGNIZED INVESTOR
+// COUNSEL, Encourages X Investors to Secure Counsel Before Important
+// Deadline...") is mass-templated law-firm marketing republished across the
+// wires for hundreds of tickers. It floods GDELT/RSS without being
+// market-moving news, so it is dropped at collection time. A genuine news
+// article ABOUT a lawsuit ("X faces class action over Y") carries neither a
+// plaintiff-firm name nor solicitation vocabulary and still gets through.
+const LAW_FIRM_NAMES =
+  /\b(rosen law|the rosen law firm|pomerantz|glancy prongay|bronstein,? gewirtz|levi & korsinsky|kessler topaz|robbins geller|hagens berman|bragar eagel|kirby mcinerney|faruqi & faruqi|schall law|kahn swick|portnoy law|gross law firm|howard g\.? smith|johnson fistel|block & leviton|berger montague|wolf haldenstein|saxena white|scott\+scott|grabar law)\b/i;
+const CLASS_ACTION_TOPIC = /\b(class action|lead plaintiff|securities (?:fraud|litigation)|shareholder rights|investor rights)\b/i;
+const SOLICITATION_CUES = /\b(law firm|counsel|encourages?|reminds?|urges?|notifies|alert|deadline|losses|recover|investigat\w+|on behalf of)\b/i;
+function isClassActionSpam(text) {
+  const value = String(text || "");
+  if (!value) return false;
+  return LAW_FIRM_NAMES.test(value) || (CLASS_ACTION_TOPIC.test(value) && SOLICITATION_CUES.test(value));
+}
 // Sources whose "title" is a synthetic, templated string (a mention-count or
 // price-string) rather than real prose a human/outlet wrote -- deprioritized
 // when picking which headlines represent a ticker (see headlineQualityScore).
@@ -236,9 +259,68 @@ const feeds = [
   { source: "Reddit Finance", type: "rss-reddit", url: "https://www.reddit.com/r/investing/.rss?limit=100" },
   { source: "Reddit Finance", type: "rss-reddit", url: "https://www.reddit.com/r/options/.rss?limit=100" },
   { source: "SEC Filings", type: "atom", url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=&company=&dateb=&owner=include&start=0&count=100&output=atom" },
-  { source: "CNBC", type: "rss", url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" },
-  { source: "MarketWatch", type: "rss", url: "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
+  // CNBC and MarketWatch used to be listed here too. They now live in NEWSWIRES
+  // (which also carries their second desks); keeping them in both lists fetched
+  // each feed twice and counted every headline's ticker mentions twice.
 ];
+
+// Broad market newswires. Each is ONE request per run and returns tens of
+// headlines covering the whole market, which we then match against the ticker
+// registry locally. This is deliberately the *primary* news path: the old
+// design fan-ned out per-ticker RSS queries (~200 requests/run) against hosts
+// that rate-limit hard, so most runs came back throttled and "Driving the tape"
+// went empty. Broad wires + local matching gets more headlines from ~10
+// requests. Measured 2026-07-28: every wire below returned 200 with items,
+// while the per-ticker Yahoo feed returned 429.
+const NEWSWIRES = [
+  { source: "Yahoo Public News", url: "https://finance.yahoo.com/news/rssindex" },
+  { source: "CNBC", url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" },
+  { source: "CNBC", url: "https://www.cnbc.com/id/10000664/device/rss/rss.html" },
+  { source: "MarketWatch", url: "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
+  { source: "MarketWatch", url: "https://feeds.content.dowjones.io/public/rss/mw_marketpulse" },
+  { source: "Nasdaq", url: "https://www.nasdaq.com/feed/rssoutbound?category=Markets" },
+  // Company press releases — issuer-published, so they carry the actual
+  // catalyst text (guidance, M&A, trial results) before the press rewrites it.
+  // Business Wire's public home feed is deactivated by its administrator
+  // (returns an empty channel, not an error) — do not re-add it without
+  // re-checking that it yields items.
+  { source: "Press Releases", url: "https://www.prnewswire.com/rss/news-releases-list.rss" },
+  { source: "Press Releases", url: "https://www.globenewswire.com/RssFeed/orgclass/1/feedTitle/GlobeNewswire%20-%20News%20about%20Public%20Companies" },
+  { source: "Financial Media", url: "https://seekingalpha.com/market_currents.xml" },
+  // Investing.com's news_25 feed is general world news; 1065 and stock_picks
+  // are the company/equity desks and are what we actually want.
+  { source: "Financial Media", url: "https://www.investing.com/rss/news_1065.rss" },
+  { source: "Financial Media", url: "https://www.investing.com/rss/stock_stock_picks.rss" },
+];
+
+// Per-host spacing + circuit breaker for the news path. The decision logic and
+// its tests live in lib/host-guard.mjs; this module just wires fetch to it.
+const hostGuard = createHostGuard();
+
+// Politeness + circuit breaker around fetchText. Throws a distinguishable
+// "throttled" error for hosts already known to be limiting us, so callers can
+// record the real reason without issuing the request.
+async function fetchTextPolite(url) {
+  const host = hostOf(url);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
+  const wait = hostGuard.waitFor(host);
+  if (wait > 0) await sleep(wait);
+  hostGuard.markRequest(host);
+  try {
+    // Bounded: one slow wire must not stall the whole refresh.
+    const response = await fetch(url, {
+      headers: { "User-Agent": USER_AGENT, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+    const text = await response.text();
+    hostGuard.noteSuccess(host);
+    return text;
+  } catch (error) {
+    hostGuard.noteFailure(host, error);
+    throw error;
+  }
+}
 
 const DISCOVERY_QUERIES = [
   "\"stock\" \"ticker\" \"shares\"",
@@ -367,20 +449,22 @@ async function main() {
     await sleep(70);
   }
 
-  const newsTargets = dedupeEntries([...newsTargetEntries(events, NEWS_UNIVERSE_LIMIT), ...majorEntries(), ...hotMonitorEntries()]);
-  for (const { ticker } of newsTargets) {
-    try {
-      const items = await yahooTickerNews(ticker);
-      for (const item of items) {
-        collectMentions(events, "Yahoo Public News", item.title, item.url, 2, item.published, ticker);
-      }
-    } catch (error) {
-      failures.push(`Yahoo Public News ${ticker}: ${error.message}`);
-    }
-  }
+  // News, step 1 (primary): sweep the broad market wires. ~10 requests total,
+  // matched against the whole registry locally.
+  await collectNewswires(events, failures, discovery);
 
-  for (const { ticker, name } of newsTargets) {
+  // News, step 2 (targeted top-up): only the biggest movers that the wire sweep
+  // did NOT already produce a headline for. Capped hard — this is the path that
+  // used to fan out over ~140 tickers and get the whole run throttled.
+  const newsTargets = dedupeEntries([...newsTargetEntries(events, NEWS_UNIVERSE_LIMIT), ...majorEntries(), ...hotMonitorEntries()]);
+  const covered = new Set(
+    events.filter((event) => MARKET_NEWS_SOURCES.has(event.source)).map((event) => event.ticker)
+  );
+  const uncovered = newsTargets.filter((entry) => !covered.has(entry.ticker)).slice(0, TARGETED_NEWS_LIMIT);
+  console.log(`Targeted news top-up: ${uncovered.length} of ${newsTargets.length} tracked tickers lacked wire coverage`);
+  for (const { ticker, name } of uncovered) {
     await collectTickerNews(events, failures, ticker, name);
+    await sleep(250);
   }
 
   // StockTwits per-symbol sentiment for the most-mentioned tickers. Bullish/Bearish
@@ -445,7 +529,7 @@ async function main() {
     discoveryNote:
       "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
     sources: SOURCES,
-    failures: failures.slice(0, 20),
+    failures: summariseFailures(failures, 20),
     signals,
     marketNews,
     events: events.slice(0, 400),
@@ -528,16 +612,82 @@ async function xmlItems(feed) {
   }));
 }
 
-async function yahooTickerNews(ticker) {
-  const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(ticker)}&region=US&lang=en-US`;
-  const xml = await fetchText(url);
-  return xmlItems({ source: "Yahoo Public News", type: "rss", url }).then((items) => items.slice(0, 8));
+// Paced variant of xmlItems for the news path (see fetchTextPolite).
+async function xmlItemsPolite(url, fallbackUrl = url) {
+  const xml = await fetchTextPolite(url);
+  const blocks = [...xml.matchAll(/<(item|entry)\b[\s\S]*?<\/\1>/gi)].map((match) => match[0]);
+  return blocks.map((block) => ({
+    title: cleanXml(textBetween(block, "title") || textBetween(block, "summary") || ""),
+    url: cleanXml(textBetween(block, "link") || attrBetween(block, "link", "href") || fallbackUrl),
+    score: 2,
+    published: cleanXml(textBetween(block, "published") || textBetween(block, "updated") || textBetween(block, "pubDate") || ""),
+  }));
+}
+
+// PRIMARY news path: sweep the broad market wires once each and match every
+// headline against the ticker registry locally. One request per wire regardless
+// of how many tickers we cover, so this cannot be rate-limited by universe size
+// the way per-ticker fan-out was.
+async function collectNewswires(events, failures, discovery) {
+  let matched = 0;
+  let headlines = 0;
+  // Wires overlap (a MarketWatch story appears on both its topstories and
+  // marketpulse desks, syndicated PR shows up in several places). Counting the
+  // same headline twice would inflate a ticker's mention count, which feeds the
+  // ranking — so dedupe on normalised title text across the whole sweep.
+  const seenTitles = new Set();
+  for (const wire of NEWSWIRES) {
+    try {
+      const items = await xmlItemsPolite(wire.url);
+      for (const item of items) {
+        if (!item.title || item.title.length < 12) continue;
+        const key = item.title.toLowerCase().replace(/\s+/g, " ").trim().slice(0, 120);
+        if (seenTitles.has(key)) continue;
+        seenTitles.add(key);
+        headlines += 1;
+        const before = events.length;
+        // No forceTicker: the registry matcher decides which tickers a headline
+        // is about, and unknown-ticker discovery runs off the same text.
+        collectMentions(events, wire.source, item.title, item.url, item.score || 2, item.published, "", discovery);
+        if (events.length > before) matched += 1;
+      }
+    } catch (error) {
+      failures.push(`${wire.source} wire: ${error.message}`);
+    }
+  }
+  console.log(`Newswires: ${headlines} headlines fetched, ${matched} matched to a covered ticker`);
+}
+
+// Targeted per-ticker news, used ONLY for the handful of biggest movers where a
+// broad wire may not have covered the name. Nasdaq's public article-by-symbol
+// endpoint is JSON, keyless, and (measured 2026-07-28) not throttling us, so it
+// replaces the Yahoo per-ticker RSS feed that now returns 429.
+async function nasdaqTickerNews(ticker) {
+  const url = `https://api.nasdaq.com/api/news/topic/articlebysymbol?q=${encodeURIComponent(ticker.toLowerCase())}|stocks&offset=0&limit=8`;
+  const host = hostOf(url);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
+  let json;
+  try {
+    json = await fetchJson(url);
+    hostGuard.noteSuccess(host);
+  } catch (error) {
+    hostGuard.noteFailure(host, error);
+    throw error;
+  }
+  return (json?.data?.rows || [])
+    .filter((row) => row && row.title)
+    .map((row) => ({
+      title: String(row.title),
+      url: row.url ? `https://www.nasdaq.com${row.url}` : url,
+      score: 2,
+      published: row.created || "",
+    }));
 }
 
 async function collectTickerNews(events, failures, ticker, name) {
   const jobs = [
+    ["Nasdaq", () => nasdaqTickerNews(ticker)],
     ["Google News", () => newsRssItems("Google News", ticker, name)],
-    ["Bing News", () => newsRssItems("Bing News", ticker, name)],
   ];
   for (const [source, load] of jobs) {
     try {
@@ -545,6 +695,8 @@ async function collectTickerNews(events, failures, ticker, name) {
       for (const item of items) {
         collectMentions(events, source, item.title, item.url, item.score || 2, item.published, ticker);
       }
+      // One good source per ticker is enough; skip the rest of the budget.
+      return;
     } catch (error) {
       failures.push(`${source} ${ticker}: ${error.message}`);
     }
@@ -576,7 +728,7 @@ async function discoveryNewsItems() {
 
   for (const [source, url] of jobs) {
     try {
-      const items = await xmlItems({ source, type: "rss", url });
+      const items = await xmlItemsPolite(url);
       for (const item of items.slice(0, 12)) {
         const key = `${item.title}|${item.url}`;
         if (seen.has(key) || !hasMarketContext(item.title)) continue;
@@ -597,7 +749,7 @@ async function newsRssItems(source, ticker, name) {
     source === "Google News"
       ? googleNewsSearchUrl(query)
       : bingNewsSearchUrl(query);
-  const items = await xmlItems({ source, type: "rss", url });
+  const items = await xmlItemsPolite(url);
   return items.slice(0, 8).map((item) => ({ ...item, score: 2 }));
 }
 
@@ -755,7 +907,7 @@ function extractTickerCandidates(text) {
   for (const match of raw.matchAll(/\bticker[:\s]+([A-Z][A-Z0-9]{0,4})\b/g)) add(match[1], 2.6);
   for (const match of raw.matchAll(/\b[A-Z][A-Z0-9]{1,4}\b/g)) {
     const token = match[0];
-    if (AMBIGUOUS_TICKERS.has(token)) continue;
+    if (AMBIGUOUS_TICKERS.has(token) || COMMON_WORD_TICKERS.has(token)) continue;
     add(token, 1);
   }
 
@@ -836,7 +988,7 @@ function brandAliasesFor(name) {
   const words = cleaned.split(" ").filter(Boolean);
   if (words.length > 1 && cleaned.length >= 6) aliases.add(cleaned);
   const lead = words[0];
-  if (lead && lead.length >= 4 && !BRAND_STOPWORDS.has(lead)) aliases.add(lead);
+  if (lead && lead.length >= 4 && !BRAND_STOPWORDS.has(lead) && !COMMON_WORD_TICKERS.has(lead.toUpperCase())) aliases.add(lead);
   return [...aliases];
 }
 
@@ -1082,14 +1234,24 @@ async function fetchStooqMarket(ticker) {
 }
 
 function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
+  if (isClassActionSpam(text)) return;
   const normalized = ` ${text.toLowerCase().replace(/[^a-z0-9.$&+ -]/g, " ")} `;
   if (!forceTicker) discoverTickerMentions(discovery, source, text, url, weight, published);
   for (const { ticker, name, aliases } of stockRegistry.values()) {
     if (forceTicker && forceTicker !== ticker) continue;
     const cashtag = normalized.includes(`$${ticker.toLowerCase()}`);
     const tickerWord = new RegExp(`(^|[^a-z])${escapeRegExp(ticker.toLowerCase())}([^a-z]|$)`).test(normalized);
-    const aliasHit = aliases.some((alias) => normalized.includes(` ${alias.toLowerCase()} `));
-    const hit = AMBIGUOUS_TICKERS.has(ticker) ? cashtag || aliasHit : cashtag || tickerWord || aliasHit;
+    // Symbols that are also common English words ("YOU", "BE", "ALL") or a
+    // single letter ("V" matches the "V" in "N.V.") hit ordinary prose on a
+    // bare word boundary, so they only count with a cashtag or an alias that
+    // is itself distinctive (not the bare symbol, not a common word).
+    const gated = AMBIGUOUS_TICKERS.has(ticker) || COMMON_WORD_TICKERS.has(ticker) || ticker.length === 1;
+    const aliasHit = aliases.some((alias) => {
+      const lower = alias.toLowerCase();
+      if (gated && (lower === ticker.toLowerCase() || COMMON_WORD_TICKERS.has(lower.toUpperCase()))) return false;
+      return normalized.includes(` ${lower} `);
+    });
+    const hit = gated ? cashtag || aliasHit : cashtag || tickerWord || aliasHit;
     if (hit) {
       events.push({
         source,
@@ -1255,7 +1417,9 @@ async function collectHackerNews(events, failures, ticker, name) {
   const cleanName = cleanCompanyForSearch(name);
   const hasName = cleanName && cleanName.toUpperCase() !== ticker;
   const query = hasName ? cleanName : ticker;
-  const nameToken = hasName ? cleanName.split(" ").find((word) => word.length >= 4)?.toLowerCase() : "";
+  const nameToken = hasName
+    ? cleanName.split(" ").find((word) => word.length >= 4 && !COMMON_WORD_TICKERS.has(word.toUpperCase()))?.toLowerCase()
+    : "";
   const cutoff = Math.floor(Date.now() / 1000) - HN_LOOKBACK_DAYS * 86400;
   const url = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(query)}&tags=comment&numericFilters=created_at_i>${cutoff}&hitsPerPage=20`;
   try {
@@ -1271,7 +1435,7 @@ async function collectHackerNews(events, failures, ticker, name) {
       const matches =
         cashtag.test(text) ||
         (nameToken && lower.includes(nameToken)) ||
-        (ticker.length >= 4 && wordTag.test(text));
+        (ticker.length >= 4 && !COMMON_WORD_TICKERS.has(ticker) && wordTag.test(text));
       if (!matches) continue;
       events.push({
         source: "Hacker News",
@@ -1328,6 +1492,7 @@ function headlineQualityScore(event) {
   const title = event.title || "";
   if (!title) return -1;
   if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+  if (isClassActionSpam(title)) return 0;
   let score = 1;
   if (CATALYST_WORDS.test(title)) score += 3;
   else if (IMPACT_WORDS.test(title)) score += 2;
@@ -1392,7 +1557,11 @@ function aggregate(events, previous) {
   return [...map.values()]
     .map((item) => {
       const prev = previousByTicker.get(item.ticker)?.mentions || 0;
-      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : item.mentions > 2 ? 35 : 0;
+      // No prior snapshot to compare against = unknown acceleration, not a
+      // made-up default. null renders as "new" and scores as neutral; the old
+      // +35 placeholder was displayed as if measured and boosted every
+      // first-appearance ticker's rank.
+      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : null;
       const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
       const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
       const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
@@ -1402,7 +1571,7 @@ function aggregate(events, previous) {
         0,
         100,
         27 * Math.sqrt(item.mentions / maxMentions) +
-          20 * clamp(0, 1, momentum / 80 + 0.25) +
+          20 * clamp(0, 1, (momentum ?? 0) / 80 + 0.25) +
           17 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
           12 * clamp(0, 1, priceMove / 6) +
           9 * clamp(0, 1, relativeVolume / 2.5) +
@@ -1438,17 +1607,7 @@ function scoreSentiment(text) {
   return clamp(-1, 1, (positives - negatives) / Math.max(3, positives + negatives + 1));
 }
 
-function countWord(text, word) {
-  return (text.match(new RegExp(`\b${escapeRegExp(word)}\b`, "g")) || []).length;
-}
 
-function textBetween(xml, tag) {
-  return xml.match(new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`, "i"))?.[1] || "";
-}
-
-function attrBetween(xml, tag, attr) {
-  return xml.match(new RegExp(`<${tag}[^>]*${attr}=["']([^"']+)["'][^>]*>`, "i"))?.[1] || "";
-}
 
 function cleanXml(value) {
   return value
@@ -1774,9 +1933,6 @@ function clamp(min, max, value) {
   return Math.min(max, Math.max(min, value));
 }
 
-function escapeRegExp(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
 
 // Builds this run's per-ticker mention/price maps and folds them into
 // data/ledger.json (today's row upserted, new tickers backfilled, pageviews

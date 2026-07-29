@@ -56,6 +56,9 @@ jobs:
           node --check clusters.js
           node --check calibration.js
           node --check alerts.js
+          node --check declutter.js
+          node --check layout-fix.js
+          node --check tabs.js
           node --check scripts/update-data.mjs
           for f in scripts/lib/*.mjs; do node --check "$f"; done
 

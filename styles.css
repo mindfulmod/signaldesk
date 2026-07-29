@@ -461,6 +461,9 @@ td {
 .sec { background: #9bb6a8; color: #9bb6a8; }
 .cnbc { background: #5fb0d6; color: #5fb0d6; }
 .marketwatch { background: #6fcf97; color: #6fcf97; }
+.pressreleases { background: #c98ad6; color: #c98ad6; }
+.financialmedia { background: #8fd6b0; color: #8fd6b0; }
+.nasdaq { background: #4fb3ff; color: #4fb3ff; }
 .finra { background: #d98a5b; color: #d98a5b; }
 .price-volume { background: #7c9aff; color: #7c9aff; }
 
@@ -1210,6 +1213,12 @@ tbody tr.selected td:first-child {
 
 .momentum.down {
   color: var(--down);
+}
+
+/* First appearance on the board -- no prior snapshot to compute acceleration from. */
+.momentum.flat {
+  color: var(--faint);
+  font-weight: 600;
 }
 
 .signal-pill {

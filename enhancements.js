@@ -13,12 +13,15 @@
     "Yahoo Public News",
     "CNBC",
     "MarketWatch",
+    "Press Releases",
+    "Financial Media",
+    "Nasdaq",
     "FINRA Short Volume",
     "Price/Volume",
   ];
 
   const SOCIAL_SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
-  const NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"];
+  const NEWS_SOURCES = ["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq", "SEC Filings"];
   const MARKET_SOURCES = ["FINRA Short Volume", "Price/Volume"];
   const WINDOW_KEY = "signaldesk-data-window";
 
@@ -43,11 +46,25 @@
   const CATALYST_WORDS_RE =
     /\b(acquire|acquires|acquired|acquiring|acquisition|merger|merges|merged|buyout|takeover|divest|divestiture|spinoff|spin-off|bankruptcy|delisting|activist|antitrust|lawsuit|settlement|investigation|recall|breach)\b/i;
   const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on StockTwits/i, /FINRA short volume/i, /,\s*price\s+[+-]?\d/i];
-  const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
+  const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq", "SEC Filings"]);
+  // Mirrors update-data.mjs's isClassActionSpam: templated law-firm
+  // class-action solicitation PR is scored like a synthetic title and kept
+  // out of the "Driving the tape" feed (also cleans snapshots written before
+  // the pipeline learned to drop these at collection time).
+  const LAW_FIRM_NAMES_RE =
+    /\b(rosen law|the rosen law firm|pomerantz|glancy prongay|bronstein,? gewirtz|levi & korsinsky|kessler topaz|robbins geller|hagens berman|bragar eagel|kirby mcinerney|faruqi & faruqi|schall law|kahn swick|portnoy law|gross law firm|howard g\.? smith|johnson fistel|block & leviton|berger montague|wolf haldenstein|saxena white|scott\+scott|grabar law)\b/i;
+  const CLASS_ACTION_TOPIC_RE = /\b(class action|lead plaintiff|securities (?:fraud|litigation)|shareholder rights|investor rights)\b/i;
+  const SOLICITATION_CUES_RE = /\b(law firm|counsel|encourages?|reminds?|urges?|notifies|alert|deadline|losses|recover|investigat\w+|on behalf of)\b/i;
+  const isClassActionSpam = (text) => {
+    const value = String(text || "");
+    if (!value) return false;
+    return LAW_FIRM_NAMES_RE.test(value) || (CLASS_ACTION_TOPIC_RE.test(value) && SOLICITATION_CUES_RE.test(value));
+  };
   const headlineQualityScore = (entry) => {
     const title = entry?.title || "";
     if (!title) return -1;
     if (SYNTHETIC_TITLE_PATTERNS.some((pattern) => pattern.test(title))) return 0;
+    if (isClassActionSpam(title)) return 0;
     let score = 1;
     if (CATALYST_WORDS_RE.test(title)) score += 3;
     else if (IMPACT_WORDS_RE.test(title)) score += 2;
@@ -111,7 +128,9 @@
           ticker: item.ticker,
           name: item.name,
           mentions: Number(item.mentions) || 0,
-          momentum: Number(item.momentum) || 0,
+          // null momentum = first appearance, no prior snapshot; keep it null
+          // so the UI can say "new" instead of faking a percentage.
+          momentum: item.momentum == null ? null : Number(item.momentum) || 0,
           sentiment: Number(item.sentiment) || 0,
           lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
           quoteAsOf: item.quoteAsOf || null,
@@ -198,7 +217,7 @@
               `"${profile?.evidence || ""}"`,
               `"${(profile?.risks || []).join(" | ")}"`,
               item.mentions,
-              item.momentum.toFixed(2),
+              item.momentum == null ? "" : item.momentum.toFixed(2),
               item.sentiment.toFixed(3),
               item.priceMove.toFixed(2),
               item.relativeVolume.toFixed(2),
@@ -276,7 +295,12 @@
 
     const items = [...map.values()].map((item) => {
       const prev = previousMentions.get(item.ticker) || 0;
-      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : snapshots.length > 1 ? 0 : item.mentions > 2 ? 35 : 0;
+      const momentum = prev
+        ? ((item.mentions - prev) / prev) * 100
+        : previousSnapshots.length
+          ? null // a prior window exists; this ticker is simply new to the board
+          : 0; // no prior window at all -- nothing to compare against
+
       const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
       const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
       const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
@@ -437,7 +461,7 @@
     const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
     const feed = Array.isArray(data?.marketNews) ? data.marketNews : [];
     const published = feed
-      .filter((entry) => entry && entry.title && Number.isFinite(Number(entry.priceMove)))
+      .filter((entry) => entry && entry.title && !isClassActionSpam(entry.title) && Number.isFinite(Number(entry.priceMove)))
       .slice(0, limit)
       .map((entry) => ({
         ticker: entry.ticker,
@@ -461,7 +485,7 @@
       .filter((item) => Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
       .map((item) => {
         const stories = (item.latest || [])
-          .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title)
+          .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title && !isClassActionSpam(entry.title))
           .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
         return { item, stories };
       })
@@ -521,9 +545,16 @@
   function emptyStateMarkup() {
     const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
     const failures = Array.isArray(data?.failures) ? data.failures : [];
-    const newsThrottled = failures.some((f) => NEWS_SOURCES.some((src) => String(f).includes(src)));
+    // Only claim throttling when a news-source failure actually carries a
+    // throttle status. Any news-source failure used to trigger this copy, so
+    // the panel blamed rate limits for windows where the real reason was that
+    // no covered name moved enough to qualify.
+    const newsThrottled = failures.some((f) => {
+      const text = String(f);
+      return NEWS_SOURCES.some((src) => text.includes(src)) && /\b(429|403|throttl)/i.test(text);
+    });
     const reason = newsThrottled
-      ? "The latest refresh was rate-limited on several news feeds, so no market-moving articles came through. Headlines will populate on the next clean refresh."
+      ? "The latest refresh was throttled on several news feeds, so no market-moving articles came through. Headlines will populate on the next clean refresh."
       : "No market-moving news matched a notable price move in this window. Headlines appear when a covered name moves on a real catalyst.";
     return `<p class="pulse-empty">${reason}</p>`;
   }

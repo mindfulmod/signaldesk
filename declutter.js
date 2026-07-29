@@ -2,18 +2,24 @@
 // lifecycle feed) default to collapsed so the page leads with actionable content
 // instead of a wall of mostly-empty diagnostics. State persists per device.
 (() => {
-  const STORE_KEY = "signaldesk-panels-v1";
+  const STORE_KEY = "signaldesk-panels-v2";
   const isPhone = window.matchMedia("(max-width: 760px)").matches;
 
+  // Tabs (tabs.js) are now the primary decluttering mechanism, so panels no
+  // longer need to default closed to keep the page readable -- a tab only ever
+  // shows two to four related sections. Collapsing stays available per panel.
+  // The key namespace is bumped to v2 so devices carrying the old
+  // everything-collapsed state get the new defaults once.
   const PANELS = [
     { selector: ".market-pulse", key: "pulse", defaultOpen: true },
+    { selector: ".buy-panel", key: "buy", defaultOpen: true },
     { selector: ".movers-panel", key: "movers", defaultOpen: !isPhone },
-    { selector: ".whatchanged-panel", key: "whatchanged", defaultOpen: false },
-    { selector: ".themes-panel", key: "themes", defaultOpen: false },
-    { selector: ".phraseradar-panel", key: "phraseradar", defaultOpen: false },
-    { selector: ".clusters-panel", key: "clusters", defaultOpen: false },
-    { selector: ".springs-panel", key: "springs", defaultOpen: false },
-    { selector: ".calibration-panel", key: "calibration", defaultOpen: false },
+    { selector: ".whatchanged-panel", key: "whatchanged", defaultOpen: true },
+    { selector: ".themes-panel", key: "themes", defaultOpen: true },
+    { selector: ".phraseradar-panel", key: "phraseradar", defaultOpen: true },
+    { selector: ".clusters-panel", key: "clusters", defaultOpen: !isPhone },
+    { selector: ".springs-panel", key: "springs", defaultOpen: true },
+    { selector: ".calibration-panel", key: "calibration", defaultOpen: true },
   ];
 
   function loadState() {

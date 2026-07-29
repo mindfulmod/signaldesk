@@ -5,6 +5,7 @@
 // neighbor set changing = diffusion direction.
 import { readFile, writeFile } from "node:fs/promises";
 import { isoWeekKey } from "./alerts.mjs";
+import { COMMON_WORD_TICKERS } from "./ticker-noise.mjs";
 
 const ROOT = new URL("../../", import.meta.url);
 export const CO_MENTION_HISTORY_URL = new URL("data/co-mention-history.json", ROOT);
@@ -22,45 +23,13 @@ const EXCLUDED_SOURCES = new Set(["Price/Volume", "FINRA Short Volume", "StockTw
 // Tickers that are also common short English words pollute co-mention
 // pairing with noise rather than real cross-ticker signal --
 // collectMentions' word-boundary matching in update-data.mjs can't fully
-// disambiguate these from ordinary prose. A live run's co-mention graph
-// lumped a first, narrower hand-picked list (ALL/BE/GO/IT/...) in with
-// unrelated real tickers, and after excluding those, a *second* wave of
-// noise surfaced (AS/BY/HE/HOUR/IQ/JUST/RE/S/TH/WAY/...) -- confirming this
-// isn't a short fixed list of offenders but the general shape of the
-// problem: any function word, pronoun, preposition, or common short word
-// that happens to also be a valid 1-5 letter ticker string. A stopword-
-// style filter (rather than an ever-growing ad hoc list) is the right
-// shape of fix. This trades away a handful of real short tickers that are
-// also common words (e.g. HP, IQ, MA) for co-mention purposes specifically
-// -- they still fully participate everywhere else in the dashboard (this
-// filter is local to extractCoMentionPairs, not the ranking pipeline).
-const NOISE_TICKERS = new Set([
-  "A", "ABOUT", "AFTER", "AGAIN", "AGO", "ALL", "ALSO", "AM", "AN", "ANY", "ARE", "AS", "AT",
-  "BACK", "BE", "BEEN", "BEST", "BIG", "BUT", "BY",
-  "CAN", "COULD",
-  "DAY", "DID", "DO", "DOES", "DOWN",
-  "EACH", "EU", "EVEN", "EVERY",
-  "FEW", "FOR", "FROM",
-  "GET", "GO", "GOT",
-  "HAD", "HAS", "HAVE", "HE", "HER", "HERE", "HIM", "HIS", "HOUR", "HOW",
-  "IF", "IN", "INTO", "IS", "IT", "ITS",
-  "JUST",
-  "KEEP", "KNOW",
-  "LAST", "LESS", "LET", "LIKE", "LONG", "LOT",
-  "MADE", "MANY", "MAY", "ME", "MORE", "MOST", "MUCH", "MUST", "MY",
-  "NEED", "NET", "NEW", "NEXT", "NO", "NONE", "NOR", "NOT", "NOW",
-  "OF", "OFF", "OG", "ON", "ONE", "ONLY", "OR", "OTHER", "OUR", "OUT", "OVER", "OWN",
-  "PART", "PAST", "PER",
-  "RE", "REAL",
-  "S", "SAID", "SAME", "SAW", "SAY", "SEE", "SET", "SHE", "SO", "SOME", "STILL",
-  "T", "THAN", "THAT", "THE", "THEM", "THEN", "THERE", "THEY", "THIS", "TH",
-  "TO", "TOO", "TOP", "TWO",
-  "UP", "US", "USE",
-  "VERY",
-  "WANT", "WAS", "WAY", "WE", "WELL", "WENT", "WERE", "WHAT", "WHEN", "WHERE",
-  "WHICH", "WHILE", "WHO", "WHY", "WILL", "WITH", "WOULD",
-  "YET", "YOU", "YOUR",
-]);
+// disambiguate these from ordinary prose. The stopword list lives in
+// ticker-noise.mjs (shared with the main mention scanner); see the history
+// there for why it's a stopword-style filter rather than an ad hoc list.
+// Co-mention excludes these tickers from pairing entirely -- a stricter
+// stance than the scanner's cashtag gate, because a single stray pair here
+// pollutes a whole community.
+const NOISE_TICKERS = COMMON_WORD_TICKERS;
 
 export { isoWeekKey };
 
