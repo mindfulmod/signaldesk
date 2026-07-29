@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-07-29T20:22:39.836Z","phrases":[]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-07-29T22:16:58.855Z","phrases":[{"phrase":"in revenue","weekCount":2,"tickers":["MSFT"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false},{"phrase":"nasdaq nvda","weekCount":2,"tickers":["NVDA"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
