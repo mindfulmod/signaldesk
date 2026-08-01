@@ -1,4 +1,5 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
 import { textBetween, attrBetween, countWord, escapeRegExp } from "./lib/xml.mjs";
 import { createHostGuard, hostOf, summariseFailures } from "./lib/host-guard.mjs";
@@ -293,29 +294,34 @@ const NEWSWIRES = [
   { source: "Financial Media", url: "https://www.investing.com/rss/stock_stock_picks.rss" },
 ];
 
-// Per-host spacing + circuit breaker for the news path. The decision logic and
-// its tests live in lib/host-guard.mjs; this module just wires fetch to it.
+// Per-host spacing + circuit breaker, applied to every network call in this
+// file. The decision logic and its tests live in lib/host-guard.mjs; this
+// module just wires fetch to it.
+//
+// Every raw call to the global fetch in this file goes through this one
+// function. That is a hard rule, not a style preference: on 2026-07-31,
+// GDELT's phrase-confirmation calls (fetchJsonRetry) and EDGAR's per-quarter
+// calls (fetchJsonWithUA) each called fetch directly with no host guard. A
+// single degraded host hit
+// repeatedly across a candidate loop -- once per phrase, once per ticker, once
+// per quarter -- multiplies one slow host into many minutes of latency even
+// though each individual call is capped at 20s. That is exactly the shape of
+// bug that had already taken the scheduled refresh down for two days (the
+// Nasdaq case, fixed earlier the same day) recurring in a different call site
+// the guard hadn't reached yet. Route any new fetch through here.
 const hostGuard = createHostGuard();
 
-// Politeness + circuit breaker around fetchText. Throws a distinguishable
-// "throttled" error for hosts already known to be limiting us, so callers can
-// record the real reason without issuing the request.
-async function fetchTextPolite(url) {
+async function guardedRequest(url, headers) {
   const host = hostOf(url);
   if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
   const wait = hostGuard.waitFor(host);
   if (wait > 0) await sleep(wait);
   hostGuard.markRequest(host);
   try {
-    // Bounded: one slow wire must not stall the whole refresh.
-    const response = await fetch(url, {
-      headers: { "User-Agent": USER_AGENT, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" },
-      signal: AbortSignal.timeout(20000),
-    });
+    const response = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-    const text = await response.text();
     hostGuard.noteSuccess(host);
-    return text;
+    return response;
   } catch (error) {
     hostGuard.noteFailure(host, error);
     throw error;
@@ -612,9 +618,9 @@ async function xmlItems(feed) {
   }));
 }
 
-// Paced variant of xmlItems for the news path (see fetchTextPolite).
+// Paced variant of xmlItems for the news path (see fetchText/guardedRequest).
 async function xmlItemsPolite(url, fallbackUrl = url) {
-  const xml = await fetchTextPolite(url);
+  const xml = await fetchText(url);
   const blocks = [...xml.matchAll(/<(item|entry)\b[\s\S]*?<\/\1>/gi)].map((match) => match[0]);
   return blocks.map((block) => ({
     title: cleanXml(textBetween(block, "title") || textBetween(block, "summary") || ""),
@@ -1629,26 +1635,37 @@ function cleanXml(value) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await guardedRequest(url, { "User-Agent": USER_AGENT, Accept: "application/json" });
   return response.json();
 }
 
 // Retry wrapper for rate-limited JSON endpoints (GDELT routinely 429s on shared
 // CI IPs). Backs off exponentially with jitter; also retries when the body isn't
-// valid JSON, which GDELT returns as an HTML throttle page.
+// valid JSON, which GDELT returns as an HTML throttle page. Its own retry/backoff
+// is deliberately untouched (GDELT needs the multi-attempt patience), but it
+// still consults the shared breaker: if a PRIOR call already learned this host
+// is throttled, later calls (this pipeline confirms up to 5 phrase candidates
+// against GDELT per run) skip straight to failure instead of each independently
+// paying the full ~1+2+4+8s backoff dance against a host that has already said no.
 async function fetchJsonRetry(url, { retries = 4, baseDelay = 1000 } = {}) {
+  const host = hostOf(url);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
   let lastError;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
-      const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
+      const response = await fetch(url, {
+        headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
+        signal: AbortSignal.timeout(20000),
+      });
       if (response.status === 429 || response.status >= 500) {
         throw new Error(`${response.status} ${response.statusText}`);
       }
       if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
       const text = await response.text();
       try {
-        return JSON.parse(text);
+        const json = JSON.parse(text);
+        hostGuard.noteSuccess(host);
+        return json;
       } catch {
         throw new Error("non-JSON response (likely a throttle page)");
       }
@@ -1657,18 +1674,20 @@ async function fetchJsonRetry(url, { retries = 4, baseDelay = 1000 } = {}) {
       if (attempt < retries) await sleep(baseDelay * 2 ** attempt + Math.random() * 400);
     }
   }
+  hostGuard.noteFailure(host, lastError);
   throw lastError;
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await guardedRequest(url, {
+    "User-Agent": USER_AGENT,
+    Accept: "application/rss+xml, application/atom+xml, text/xml, */*",
+  });
   return response.text();
 }
 
 async function fetchTextWithUA(url, ua) {
-  const response = await fetch(url, { headers: { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await guardedRequest(url, { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, text/xml, */*" });
   return response.text();
 }
 
@@ -1912,8 +1931,7 @@ async function fetchSharesOutstanding(cik) {
 }
 
 async function fetchJsonWithUA(url, ua) {
-  const response = await fetch(url, { headers: { "User-Agent": ua, Accept: "application/json" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await guardedRequest(url, { "User-Agent": ua, Accept: "application/json" });
   return response.json();
 }
 
@@ -2299,7 +2317,22 @@ async function refreshThemeRegistryStep(failures) {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+// Exported so scripts/test/fetch-wiring.test.mjs can call the real fetch
+// helpers against a mocked global.fetch. This is what would have caught the
+// 2026-07-31 bug where `hostGuard` was referenced everywhere in this file but
+// its declaration got deleted in an edit: node --check only validates syntax,
+// so an undefined-identifier ReferenceError went unnoticed until a live run
+// silently swallowed it inside every helper's try/catch and returned zero
+// data everywhere, with no error message pointing at the cause.
+export { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, hostGuard };
+
+// Only run the pipeline when this file is executed directly (`node
+// scripts/update-data.mjs`), not when it's imported -- main() hits real
+// network hosts and writes to data/, neither of which a test may trigger.
+const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
+if (isMain) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

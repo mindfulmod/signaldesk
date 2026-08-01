@@ -66,6 +66,13 @@ jobs:
         run: node --test scripts/test/*.test.mjs
 
       - name: Refresh public no-key data
+        # Historical successful runs take 5-7.5 minutes; every fetch inside the
+        # script is now capped at 20s. A dedicated step timeout well under the
+        # job's 35-minute limit means a future stall fails loudly and fast
+        # instead of silently eating the whole job budget and getting reported
+        # as "cancelled" with no indication of which step or host was stuck --
+        # which is exactly what happened for two days straight before this.
+        timeout-minutes: 15
         env:
           # Optional: set the SIGNALDESK_NTFY_TOPIC repo/environment variable to a
           # private ntfy.sh topic name to enable push alerts (Theme Engine Layer 4).
