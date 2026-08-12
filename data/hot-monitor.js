@@ -1,1 +1,1 @@
-window.SIGNALDESK_HOT_MONITOR = {"generatedAt":"2026-08-12T20:10:29.721Z","tickers":{"NBIS":{"reason":"sibling/neighbor of proof-quarter leader GLE","expiresDate":"2027-02-10"}}};
+window.SIGNALDESK_HOT_MONITOR = {"generatedAt":"2026-08-12T22:08:08.186Z","tickers":{"NBIS":{"reason":"sibling/neighbor of proof-quarter leader GLE","expiresDate":"2027-02-10"},"OFAL":{"reason":"sibling/neighbor of proof-quarter leader RMCF","expiresDate":"2027-02-10"}}};
