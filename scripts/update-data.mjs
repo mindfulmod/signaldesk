@@ -311,7 +311,16 @@ const NEWSWIRES = [
 // the guard hadn't reached yet. Route any new fetch through here.
 const hostGuard = createHostGuard();
 
-async function guardedRequest(url, headers) {
+// `missingIsAnswer` is for callers that probe for a file which may legitimately
+// not exist yet, and whose recovery is to ask the same host for a different
+// URL. A 403/404 there is the host answering correctly, not refusing service, so
+// it must not trip the breaker -- doing so blocks the very fallback that handles
+// it. FINRA is the case in point: it publishes CNMSshvol<date>.txt after the
+// close, fetchRecentFinraShortFile walks back up to 9 market dates to find the
+// newest one, and treating the first 403 as a host failure skipped all 8
+// remaining dates. That silently cost the run its entire short-volume seed on
+// every refresh before publication -- 3 of the 4 daily scheduled runs.
+async function guardedRequest(url, headers, { missingIsAnswer = false } = {}) {
   const host = hostOf(url);
   if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   const wait = hostGuard.waitFor(host);
@@ -319,10 +328,19 @@ async function guardedRequest(url, headers) {
   hostGuard.markRequest(host);
   try {
     const response = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
-    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+    if (!response.ok) {
+      // Note the success before throwing: the host is demonstrably alive and
+      // responsive, which is exactly what the breaker wants to know.
+      if (missingIsAnswer && (response.status === 403 || response.status === 404)) {
+        hostGuard.noteSuccess(host);
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
     hostGuard.noteSuccess(host);
     return response;
   } catch (error) {
+    if (missingIsAnswer && /\b(403|404)\b/.test(error.message)) throw error;
     hostGuard.noteFailure(host, error);
     throw error;
   }
@@ -847,7 +865,10 @@ async function fetchRecentFinraShortFile() {
   for (const date of dates) {
     const url = `https://cdn.finra.org/equity/regsho/daily/CNMSshvol${date}.txt`;
     try {
-      return await fetchText(url);
+      // Today's file does not exist until after the close, so the first date or
+      // two are expected to 403. That is this walk's normal operation, not a
+      // reason to give up on the host and skip the remaining dates.
+      return await fetchText(url, { missingIsAnswer: true });
     } catch (error) {
       failures.push(`${date}: ${error.message}`);
     }
@@ -1717,11 +1738,15 @@ async function fetchJsonRetry(url, { retries = 1, baseDelay = 1000 } = {}) {
   throw lastError;
 }
 
-async function fetchText(url) {
-  const response = await guardedRequest(url, {
-    "User-Agent": USER_AGENT,
-    Accept: "application/rss+xml, application/atom+xml, text/xml, */*",
-  });
+async function fetchText(url, options = {}) {
+  const response = await guardedRequest(
+    url,
+    {
+      "User-Agent": USER_AGENT,
+      Accept: "application/rss+xml, application/atom+xml, text/xml, */*",
+    },
+    options
+  );
   return response.text();
 }
 

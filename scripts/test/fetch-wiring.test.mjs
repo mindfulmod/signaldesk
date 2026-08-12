@@ -38,7 +38,7 @@ function assertNotReferenceError(error, helperName) {
   );
 }
 
-const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket } =
+const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, hostGuard } =
   await import("../update-data.mjs");
 
 // A 5-day daily chart, the shape fetchYahooMarket parses.
@@ -143,6 +143,49 @@ test("fetchJsonRetry: exhausting retries against a mocked 500 is not mistaken fo
   mockFetchOnce(async () => new Response("", { status: 500, statusText: "Internal Server Error" }));
   try {
     await assert.rejects(() => fetchJsonRetry("https://wiring-test-8.example/x", { retries: 1, baseDelay: 1 }), /500/);
+  } finally {
+    restoreFetch();
+  }
+});
+
+// FINRA publishes CNMSshvol<date>.txt only after the close, so the date walk in
+// fetchRecentFinraShortFile expects the first date or two to 403 and falls back
+// through up to 9 market dates. Tripping the breaker on that 403 blocked every
+// remaining date, costing the run its whole short-volume seed on the 3 of 4
+// daily refreshes that run before publication.
+test("missingIsAnswer: a 403 on a probed file does not block the fallback dates", async () => {
+  const host = "finra-walk-test.example";
+  let attempts = 0;
+  mockFetchOnce(async (url) => {
+    attempts += 1;
+    // Only the third date exists, exactly like a pre-publication FINRA walk.
+    if (String(url).endsWith("3.txt")) return new Response("short volume rows", { status: 200 });
+    return new Response("", { status: 403, statusText: "Forbidden" });
+  });
+  try {
+    let body = null;
+    for (const n of [1, 2, 3]) {
+      try {
+        body = await fetchText(`https://${host}/CNMSshvol${n}.txt`, { missingIsAnswer: true });
+        break;
+      } catch {
+        // keep walking back, which is the whole point
+      }
+    }
+    assert.equal(body, "short volume rows", "the walk reached the date that exists");
+    assert.equal(attempts, 3, "all three dates were actually requested, none skipped");
+    assert.equal(hostGuard.isBlocked(host), false, "an expected miss must not trip the breaker");
+  } finally {
+    restoreFetch();
+  }
+});
+
+test("missingIsAnswer: a real throttle still trips the breaker", async () => {
+  const host = "finra-throttle-test.example";
+  mockFetchOnce(async () => new Response("", { status: 429, statusText: "Too Many Requests" }));
+  try {
+    await assert.rejects(() => fetchText(`https://${host}/x.txt`, { missingIsAnswer: true }), /429/);
+    assert.equal(hostGuard.isBlocked(host), true, "429 is a refusal, not a missing file");
   } finally {
     restoreFetch();
   }
