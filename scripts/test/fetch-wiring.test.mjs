@@ -38,9 +38,22 @@ function assertNotReferenceError(error, helperName) {
   );
 }
 
-const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA } = await import(
-  "../update-data.mjs"
-);
+const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket } =
+  await import("../update-data.mjs");
+
+// A 5-day daily chart, the shape fetchYahooMarket parses.
+function yahooChart({ symbol = "TEST", closes = [10, 12], volumes = [1000, 3000] } = {}) {
+  return JSON.stringify({
+    chart: {
+      result: [
+        {
+          meta: { symbol, regularMarketPrice: closes.at(-1), regularMarketTime: 1_700_000_000, shortName: "Test Corp" },
+          indicators: { quote: [{ close: closes, volume: volumes }] },
+        },
+      ],
+    },
+  });
+}
 
 test("guardedRequest: succeeds against a mocked 200 response", async () => {
   mockFetchOnce(async () => new Response("ok body", { status: 200 }));
@@ -130,6 +143,45 @@ test("fetchJsonRetry: exhausting retries against a mocked 500 is not mistaken fo
   mockFetchOnce(async () => new Response("", { status: 500, statusText: "Internal Server Error" }));
   try {
     await assert.rejects(() => fetchJsonRetry("https://wiring-test-8.example/x", { retries: 1, baseDelay: 1 }), /500/);
+  } finally {
+    restoreFetch();
+  }
+});
+
+// fetchMarket is the only fetch path in the pipeline that cannot throw: both
+// quote legs go through Promise.allSettled, so a failure returns null and the
+// caller's try/catch never fires. That is how a 100% price outage ran for twelve
+// days (2026-07-31 to 2026-08-11) with an empty failure list and a clean exit 0.
+test("fetchMarket: a working quote source returns a price and reports nothing", async () => {
+  mockFetchOnce(async (url) => {
+    if (String(url).includes("finance.yahoo.com")) return new Response(yahooChart({ symbol: "TEST" }), { status: 200 });
+    return new Response("", { status: 500, statusText: "Internal Server Error" });
+  });
+  const failures = [];
+  try {
+    const market = await fetchMarket("TEST", failures);
+    assert.equal(market?.lastPrice, 12);
+    assert.deepEqual(failures, [], "a ticker that got a quote must not leave a failure line");
+  } finally {
+    restoreFetch();
+  }
+});
+
+test("fetchMarket: losing every quote source reports why instead of failing silently", async () => {
+  // 500 rather than 429 on purpose: a throttle status would trip the shared
+  // module-level breaker for these hosts and leak into later tests.
+  mockFetchOnce(async () => new Response("", { status: 500, statusText: "Internal Server Error" }));
+  const failures = [];
+  try {
+    const market = await fetchMarket("TEST", failures);
+    assert.equal(market, null);
+    assert.equal(failures.length, 1, "a ticker with no quote at all must leave exactly one failure line");
+    // summariseFailures collapses on the "<SOURCE> <TICKER>:" shape, so the
+    // ticker has to sit right before the colon for a run-wide outage to read as
+    // one counted line rather than 140 near-identical ones.
+    assert.match(failures[0], /^Price\/Volume TEST: /);
+    assert.match(failures[0], /Yahoo .*500/, "names the Yahoo failure");
+    assert.match(failures[0], /Stooq .*500/, "names the Stooq failure");
   } finally {
     restoreFetch();
   }

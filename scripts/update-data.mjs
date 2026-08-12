@@ -313,7 +313,7 @@ const hostGuard = createHostGuard();
 
 async function guardedRequest(url, headers) {
   const host = hostOf(url);
-  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   const wait = hostGuard.waitFor(host);
   if (wait > 0) await sleep(wait);
   hostGuard.markRequest(host);
@@ -425,8 +425,10 @@ async function main() {
       let market = await fetchMarket(ticker);
       if (!market?.lastPrice) {
         // Yahoo throttles long bursts; pause and retry once before giving up.
+        // Only the final attempt reports, so a ticker that recovers on the
+        // retry does not leave a failure line behind.
         await sleep(400);
-        market = await fetchMarket(ticker);
+        market = await fetchMarket(ticker, failures);
       }
       if (market) {
         // Fill in a real name + brand aliases for any ticker the SEC map missed.
@@ -671,7 +673,7 @@ async function collectNewswires(events, failures, discovery) {
 async function nasdaqTickerNews(ticker) {
   const url = `https://api.nasdaq.com/api/news/topic/articlebysymbol?q=${encodeURIComponent(ticker.toLowerCase())}|stocks&offset=0&limit=8`;
   const host = hostOf(url);
-  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   let json;
   try {
     json = await fetchJson(url);
@@ -933,7 +935,9 @@ async function validateDiscoveredTickers(discovery, failures) {
 
   for (const candidate of candidates) {
     try {
-      const market = await fetchMarket(candidate.ticker);
+      // Discovery validation is gated entirely on getting a quote back, so a
+      // dead price path silently shuts dynamic ticker discovery off too.
+      const market = await fetchMarket(candidate.ticker, failures);
       if (!market?.lastPrice) continue;
       const name = market.name || candidate.ticker;
       registerStock(candidate.ticker, name, [candidate.ticker, name]);
@@ -1165,10 +1169,27 @@ function newsTargetEntries(events, mentionLimit) {
   return [...base, ...movers];
 }
 
-async function fetchMarket(ticker) {
+// `failures` is not optional bookkeeping: allSettled means neither leg can ever
+// throw out of here, so before this was wired up a total price outage produced
+// no failure line anywhere. Both quote sources died on 2026-07-31 and the only
+// visible symptom was blank prices on the dashboard -- the run kept exiting 0
+// and the failure list kept looking healthy for twelve days. Every path that
+// can silently return no price has to say why.
+async function fetchMarket(ticker, failures = null) {
   const [yahoo, stooq] = await Promise.allSettled([fetchYahooMarket(ticker), fetchStooqMarket(ticker)]);
   const yahooMarket = yahoo.status === "fulfilled" ? yahoo.value : null;
   const stooqMarket = stooq.status === "fulfilled" ? stooq.value : null;
+
+  if (failures && !yahooMarket && !stooqMarket) {
+    // summariseFailures collapses the per-ticker repeats, so a run-wide outage
+    // reads as one counted line ("140x Price/Volume <ticker>: ...") instead of
+    // flooding the log.
+    const why = [
+      `Yahoo ${yahoo.status === "rejected" ? yahoo.reason?.message ?? yahoo.reason : "no usable quote"}`,
+      `Stooq ${stooq.status === "rejected" ? stooq.reason?.message ?? stooq.reason : "no usable quote"}`,
+    ].join("; ");
+    failures.push(`Price/Volume ${ticker}: ${why}`);
+  }
 
   if (yahooMarket && stooqMarket) {
     const gap = Math.abs(yahooMarket.lastPrice - stooqMarket.lastPrice) / Math.max(0.01, stooqMarket.lastPrice);
@@ -1646,13 +1667,31 @@ async function fetchJson(url) {
 // still consults the shared breaker: if a PRIOR call already learned this host
 // is throttled, later calls (this pipeline confirms up to 5 phrase candidates
 // against GDELT per run) skip straight to failure instead of each independently
-// paying the full ~1+2+4+8s backoff dance against a host that has already said no.
-async function fetchJsonRetry(url, { retries = 4, baseDelay = 1000 } = {}) {
+// paying its own spacing-plus-backoff wait against a host that has already said no.
+//
+// Spacing is observed on every attempt, not just the first. This path used to
+// call fetch with no pacing at all, so the run's ~6 GDELT calls went out
+// back to back against a host that asks for one request every 5 seconds, and
+// the retry ladder's first three rungs (1s, 2s, 4s) were all still inside that
+// window -- the backoff was too impatient to clear the very limit it existed to
+// wait out.
+//
+// One retry, not four. The old ladder existed because this path had no spacing
+// at all, so re-attempting *was* the pacing. Now that the guard enforces the
+// real limit, a request that still 429s means the IP is in GDELT's penalty box,
+// and further attempts demonstrably deepen it rather than clear it. Measured
+// 2026-08-11: four retries at correct spacing spent 268s to get 2 of 6 queries
+// through, against a whole-run budget of 5-7.5 minutes. Failing fast and letting
+// the breaker skip the rest costs ~20s for the same information.
+async function fetchJsonRetry(url, { retries = 1, baseDelay = 1000 } = {}) {
   const host = hostOf(url);
-  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} unavailable earlier this run`);
+  if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   let lastError;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
+      const wait = hostGuard.waitFor(host);
+      if (wait > 0) await sleep(wait);
+      hostGuard.markRequest(host);
       const response = await fetch(url, {
         headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
         signal: AbortSignal.timeout(20000),
@@ -2324,7 +2363,10 @@ async function refreshThemeRegistryStep(failures) {
 // so an undefined-identifier ReferenceError went unnoticed until a live run
 // silently swallowed it inside every helper's try/catch and returned zero
 // data everywhere, with no error message pointing at the cause.
-export { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, hostGuard };
+// fetchMarket is exported for the same reason: it is the one helper that cannot
+// throw (both quote legs go through allSettled), so a total price outage is
+// invisible unless its failure reporting is held in place by a test.
+export { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, hostGuard };
 
 // Only run the pipeline when this file is executed directly (`node
 // scripts/update-data.mjs`), not when it's imported -- main() hits real
