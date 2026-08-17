@@ -1,1 +1,1 @@
-window.SIGNALDESK_CALIBRATION = {"generatedAt":"2026-08-17T14:00:21.131Z","totalEvents":0,"pending":0,"summary":{}};
+window.SIGNALDESK_CALIBRATION = {"generatedAt":"2026-08-17T16:50:36.581Z","totalEvents":0,"pending":0,"summary":{}};
