@@ -11,6 +11,7 @@
 // backfill would otherwise use a 20d window). Storing raw volume lets the
 // detector compute one consistent ratio itself.
 import { readFile, writeFile } from "node:fs/promises";
+import { articleQueries, verifyArticle } from "./wiki-article.mjs";
 
 const ROOT = new URL("../../", import.meta.url);
 export const LEDGER_URL = new URL("data/ledger.json", ROOT);
@@ -18,6 +19,8 @@ export const LEDGER_JS_URL = new URL("data/ledger.js", ROOT);
 
 export const LEDGER_MAX_ROWS = 400;
 export const LEDGER_DORMANT_DAYS = 90;
+// How long before a ticker with no article is looked up again.
+export const ARTICLE_RETRY_DAYS = 30;
 
 export const ROW_DATE = 0;
 export const ROW_MENTIONS = 1;
@@ -138,7 +141,13 @@ export async function fetchWikipediaPageviews(article, startDate, endDate) {
   const start = startDate.replaceAll("-", "");
   const end = endDate.replaceAll("-", "");
   const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/${title}/daily/${start}/${end}`;
-  const response = await fetch(url, { headers: { "User-Agent": WIKI_UA, Accept: "application/json" } });
+  // Bounded: an unbounded await here is the same class of bug that took the
+  // scheduled refresh down for two days in July -- it never settles, so nothing
+  // downstream ever gets to record a failure.
+  const response = await fetch(url, {
+    headers: { "User-Agent": WIKI_UA, Accept: "application/json" },
+    signal: AbortSignal.timeout(20000),
+  });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const json = await response.json();
   const map = new Map();
@@ -148,6 +157,54 @@ export async function fetchWikipediaPageviews(article, startDate, endDate) {
     if (Number.isFinite(item.views)) map.set(iso, item.views);
   }
   return map;
+}
+
+async function wikiJson(url) {
+  const response = await fetch(url, {
+    headers: { "User-Agent": WIKI_UA, Accept: "application/json" },
+    signal: AbortSignal.timeout(20000),
+  });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.json();
+}
+
+// opensearch is a PREFIX search over titles; see wiki-article.mjs for why the
+// query has to be normalised and why the full-text endpoint is not used as a
+// fallback.
+async function searchWikipediaTitle(query) {
+  const url = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(query)}&limit=1&namespace=0&format=json`;
+  const json = await wikiJson(url);
+  return json?.[1]?.[0] || null;
+}
+
+async function fetchWikipediaSummary(title) {
+  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(String(title).replace(/ /g, "_"))}`;
+  return wikiJson(url);
+}
+
+// Returns the canonical article title for a company, or null when nothing
+// verifies. Null is a perfectly good answer: measured on a 26-ticker sample,
+// half the ledger's unresolved names genuinely have no article, and storing a
+// plausible-but-wrong one would feed the coil detector a clean 400-day series
+// about a village, a plant, or an ancient region.
+export async function resolveWikipediaArticle(name, { pauseMs = 250 } = {}) {
+  for (const query of articleQueries(name)) {
+    let summary = null;
+    try {
+      const title = await searchWikipediaTitle(query);
+      await sleep(pauseMs);
+      if (!title) continue;
+      summary = await fetchWikipediaSummary(title);
+      await sleep(pauseMs);
+    } catch {
+      // A throttled or failed lookup is not evidence of absence -- move to the
+      // next query rather than recording a miss for this one.
+      continue;
+    }
+    const verdict = verifyArticle(name, summary);
+    if (verdict.ok) return verdict.article;
+  }
+  return null;
 }
 
 // Derive the pageviews-API article title from a Wikipedia page URL captured
@@ -162,6 +219,34 @@ export function articleFromWikipediaUrl(url) {
   } catch {
     return null;
   }
+}
+
+// Which tickers get their pageviews refreshed this run, oldest-fetched first.
+//
+// This was `.slice(0, limit)` over Object.entries -- a fixed head, not a cursor.
+// It re-fetched the same first `limit` tickers every single day and never
+// advanced: measured 2026-08-29, those 150 had 100% pageview coverage while the
+// 265 other article-bearing tickers had 23% and would never have been reached.
+// Ordering by last-fetched date makes it rotate, self-correct as tickers are
+// added and pruned, and prefer never-fetched entries (empty string sorts first).
+export function selectPageviewBatch(tickers, limit) {
+  return Object.entries(tickers)
+    .filter(([, entry]) => entry.meta?.article)
+    .sort((a, b) => String(a[1].meta.pageviewsAt || "").localeCompare(String(b[1].meta.pageviewsAt || "")))
+    .slice(0, limit);
+}
+
+// Which tickers get an article lookup this run. Deepest row history first --
+// those are closest to clearing the coil detector's 200-session attention gate,
+// so resolving them pays off soonest. A ticker tried recently is skipped so the
+// batch does not fill up with names that are known to have no article, but the
+// stamp expires so an article created later is still eventually found.
+export function selectArticleBatch(tickers, limit, retryBefore) {
+  return Object.entries(tickers)
+    .filter(([, entry]) => !entry.meta?.article && entry.meta?.name)
+    .filter(([, entry]) => !entry.meta.articleTriedAt || entry.meta.articleTriedAt < retryBefore)
+    .sort((a, b) => (b[1].rows?.length || 0) - (a[1].rows?.length || 0))
+    .slice(0, limit);
 }
 
 function isoDaysAgo(days, from = new Date()) {
@@ -185,9 +270,10 @@ export async function updateLedger({
   failures,
   maxBackfills = 20,
   maxPageviewBatch = 150,
+  maxArticleBatch = 25,
   protectedTickers = new Set(),
 }) {
-  const stats = { upserted: 0, backfilled: 0, pageviewsFetched: 0, pruned: 0 };
+  const stats = { upserted: 0, backfilled: 0, pageviewsFetched: 0, articlesResolved: 0, articlesMissed: 0, pruned: 0 };
   const activeTickers = new Set(mentionsByTicker.keys());
   const allTickers = new Set([...activeTickers, ...Object.keys(ledger.tickers)]);
   const newlySeen = [];
@@ -224,18 +310,51 @@ export async function updateLedger({
     await sleep(150);
   }
 
+  // Resolve a Wikipedia article for tickers that have none. Without one a ticker
+  // can never receive pageviews, and pageviews are the coil detector's attention
+  // series -- so an unresolved ticker is invisible to the entire Theme Engine.
+  // 77% of the ledger was in that state (1,407 of 1,822 on 2026-08-29) because
+  // meta.article was only ever set as a side effect of a ticker reaching the
+  // daily top-75 and getting a profile lookup. Every candidate is verified before
+  // it is stored; see lib/wiki-article.mjs for why that is not optional.
+  const articleTargets = selectArticleBatch(ledger.tickers, maxArticleBatch, isoDaysAgo(ARTICLE_RETRY_DAYS));
+
+  for (const [ticker, entry] of articleTargets) {
+    try {
+      const resolved = await resolveWikipediaArticle(entry.meta.name);
+      entry.meta.articleTriedAt = dateStr;
+      if (resolved) {
+        entry.meta.article = resolved;
+        stats.articlesResolved += 1;
+      } else {
+        stats.articlesMissed += 1;
+      }
+    } catch (error) {
+      failures.push(`Ledger article ${ticker}: ${error.message}`);
+    }
+  }
+
   // Pageviews: once per calendar day across the known universe.
   if (ledger.__meta?.lastPageviewsRunDate !== dateStr) {
-    const candidates = Object.entries(ledger.tickers)
-      .filter(([, entry]) => entry.meta?.article)
-      .slice(0, maxPageviewBatch);
+    // Ordered by staleness, NOT by position. This was `.slice(0, 150)` over
+    // Object.entries, which re-fetched the same first 150 tickers every single
+    // day and never advanced: measured 2026-08-29, those 150 had 100% pageview
+    // coverage while the 265 other article-bearing tickers had 23% and would
+    // never have been reached. Sorting by last-fetched date makes the batch a
+    // rotating cursor that self-corrects as the universe changes, with
+    // never-fetched entries first.
+    const candidates = selectPageviewBatch(ledger.tickers, maxPageviewBatch);
     const start = isoDaysAgo(LEDGER_MAX_ROWS);
     for (const [ticker, entry] of candidates) {
       try {
         const views = await fetchWikipediaPageviews(entry.meta.article, start, dateStr);
         if (views.size) mergePageviews(ledger, ticker, views);
+        entry.meta.pageviewsAt = dateStr;
         stats.pageviewsFetched += 1;
       } catch (error) {
+        // Stamp the attempt even on failure, so one permanently-404 article
+        // cannot pin the cursor and starve everything behind it.
+        entry.meta.pageviewsAt = dateStr;
         failures.push(`Ledger pageviews ${ticker}: ${error.message}`);
       }
       await sleep(150);

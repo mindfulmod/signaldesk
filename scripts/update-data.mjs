@@ -2089,7 +2089,7 @@ async function updateLedgerFromRun({ events, signals, failures }) {
     const stats = await updateLedger({ ledger, dateStr, mentionsByTicker, totalMentions, priceByTicker, registryMeta, failures, protectedTickers });
     await saveLedger(ledger);
     console.log(
-      `Ledger: upserted ${stats.upserted}, backfilled ${stats.backfilled}, pageviews ${stats.pageviewsFetched}, pruned ${stats.pruned}, tracking ${Object.keys(ledger.tickers).length} tickers`
+      `Ledger: upserted ${stats.upserted}, backfilled ${stats.backfilled}, pageviews ${stats.pageviewsFetched}, articles +${stats.articlesResolved}/-${stats.articlesMissed}, pruned ${stats.pruned}, tracking ${Object.keys(ledger.tickers).length} tickers`
     );
   } catch (error) {
     failures.push(`Ledger update: ${error.message}`);
