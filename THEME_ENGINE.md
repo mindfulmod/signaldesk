@@ -1,5 +1,35 @@
 # SignalDesk Theme Engine — Specification
 
+> **Status (2026-08-29): mostly shipped, but not yet proven.**
+> Build-order items 1–9 are all built and running in the pipeline. What has *not*
+> happened is the thing the spec calls "the real test": forward grading. Zero coil
+> releases, zero dead-coil demotions and zero theme stage transitions have fired
+> since launch, so `data/calibration.json` holds 0 events and the Calibration
+> panel is empty. Theme heat has never left Quiet, and no phrase has cleared the
+> GDELT+EDGAR confirmation bar. Read the thresholds below as *unvalidated in
+> production* — they are frozen from the study, and the study has not yet been
+> confirmed live.
+>
+> **Why nothing has fired (diagnosed 2026-08-29).** Not a threshold problem and
+> not a patience problem: the engine's attention input is missing for almost its
+> whole universe. The coil detector needs 200 sessions of real attention data
+> (`MIN_ATTENTION_HISTORY`), taken from Wikipedia pageviews until SignalDesk's own
+> share-of-voice matures. Of 953 ledger tickers with ≥200 rows, **29 clear that
+> gate**; 924 are skipped without being examined. Two independent causes:
+>
+> 1. **1,407 of 1,822 ledger tickers (77%) have no `meta.article`.** It is only
+>    set when a ticker reaches the daily top-75 *and* gets a Wikipedia profile
+>    lookup, so the long tail of the ledger can never receive pageviews at all.
+> 2. **The daily pageview batch is a fixed head slice**, not a rotating cursor —
+>    `Object.entries(ledger.tickers).filter(has article).slice(0, 150)` re-fetches
+>    the same 150 every run. Measured: those 150 have 100% pageview coverage while
+>    the 265 remaining article-bearing tickers have 23%, and it will never reach
+>    them.
+>
+> So springs, theme heat, the diffusion map and calibration are all running on
+> ~1.6% of the universe. Fix the attention input before building any further layer
+> on top of this engine; nothing downstream can be evaluated until then.
+
 Status: spec v1 (2026-07-10). Grounded in the three-phase coiled-spring study
 (https://claude.ai/code/artifact/b1f553b3-935a-4e70-b814-28a91978e693) and two live data probes
 (EDGAR full-text search phrase counts; GDELT news-volume timelines).

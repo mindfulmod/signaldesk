@@ -54,6 +54,15 @@ Public sentiment is descriptive, not predictive. Positive language can follow pr
 
 Penalties are applied after the weighted score. The score is a research-ranking heuristic and should be backtested before its weights are treated as stable.
 
+## Validation status (2026-08-29)
+
+None of the seven milestones below has been completed. The score's weights are
+still the hand-set values in the table above, and the calibration panel that was
+meant to grade them holds zero events. Treat the weights as a reasonable
+starting heuristic, not a measured result — the document has said "should be
+backtested before its weights are treated as stable" since it was written, and
+that remains true.
+
 ## Next validation milestones
 
 1. Store intraday mention counts so acceleration is based on comparable windows rather than daily totals.
@@ -81,4 +90,3 @@ implies a guaranteed outcome.
 - FINRA, [Short Interest — What It Is, What It Is Not](https://www.finra.org/investors/insights/short-interest)
 - SEC, [Pump&Dump.con: Tips for Avoiding Stock Scams on the Internet](https://www.sec.gov/investor/pubs/pump.htm)
 - SEC, [Social Media and Investing — Avoiding Fraud](https://www.sec.gov/investor/alerts/socialmediaandfraud.pdf)
-- Kowalski, [Skills for Design Engineers](https://github.com/emilkowalski/skills)

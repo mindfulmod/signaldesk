@@ -12,13 +12,14 @@ Script load order in `index.html` matters:
 
 | File | Role |
 |---|---|
-| `data/*.js` | Generated data (`window.SIGNALDESK_*` globals). **Never hand-edit** — the pipeline (`scripts/update-data.mjs`, 4x/day weekdays) regenerates them. |
+| `data/*.json` | Generated data, fetched at runtime by each module. **Never hand-edit** — the pipeline (`scripts/update-data.mjs`, 4x/day weekdays) regenerates them. |
+| `data/*.js` | The same payload as `window.SIGNALDESK_*` globals, **for `file://` only**. Injected by an inline script in index.html when the protocol is `file:`; never requested over http(s). Do not restore these as static `<script>` tags — that shipped 17.4 MB to every visitor which the JSON fetch then discarded. |
 | `script.js` | Core render: ranking table, research radar, attention map, detail panel/sheet, filters, URL state. Also holds *fallback* copies of headline-ranking helpers. |
 | `enhancements.js` | **Monkey-patches `render`, `realSignals`, `filteredSignals` and is the LIVE code path** for signal aggregation, multi-day windows, and the "Driving the tape" panel (which it injects — it is not in index.html). |
 | `springs.js`, `themes.js`, `phrase-radar.js`, `clusters.js`, `calibration.js`, `alerts.js` | One file per Theme Engine panel; each reads its own `window.SIGNALDESK_*` global and renders into its container. Independent — safe to edit in isolation. |
 | `layout-fix.js` | Injected `<style>` overrides (lots of `!important`). If a CSS change in styles.css mysteriously doesn't apply, look here. |
 | `declutter.js` | Collapsible-panel mechanism + mobile bottom-sheet support file. |
-| `tabs.js` / `tabs.css` | **The tabbed shell.** Moves each panel section into one of four tab panels (Today / Themes / Deep dive / Track record) at runtime. Owns tab state, the URL hash, the tab count badges, and hiding the Filters control off the Deep dive tab. |
+| `tabs.js` / `tabs.css` | **The two-surface shell.** Moves each panel section into one of two tab panels (**Desk** / **Research**) at runtime. Owns tab state, the URL hash, the tab count badges, and hiding the Filters control off the Research tab. Was four tabs until 2026-08-29; splitting ten panels four ways only hid how few had content. |
 | `styles.css` | Single stylesheet. New feature styles get appended as commented blocks at the end. |
 
 ## The traps (each one cost real debugging time)
@@ -43,7 +44,9 @@ Script load order in `index.html` matters:
      bottom sheet (`#detailSheet`). The sheet must never appear ≥1181px.
    - `≤980px`: sidebar stacks below main; auto-hidden on load.
    - `≤760px`: ranking table becomes stacked cards (layout-fix.js owns this).
-   - `≤680px`: tightest paddings; hero method cards hidden; tape capped at 4.
+   - `≤680px`: tightest paddings; tape capped at 4. (The hero is a single line
+     plus a collapsed `<details>` at every width since 2026-08-29, so there are
+     no method cards to hide.)
 5. **Bottom sheet re-render guard:** `renderDetailSheetContent()` skips
    identical HTML because mobile URL-bar show/hide fires `resize` → full
    `render()` — without the guard the sheet jumps to the top mid-scroll.
@@ -58,7 +61,9 @@ Script load order in `index.html` matters:
    panel and silently does nothing. Two callers in script.js already do this
    (the research-radar card's scroll to the ranking table, and the search box).
    A new panel needs a `selectors` entry in `TABS` in tabs.js or it will not be
-   displayed at all.
+   displayed at all. Tab ids are `desk` and `research`; the old
+   `today`/`themes`/`deepdive`/`record` ids are gone, and passing a dead id
+   silently falls back to the first tab rather than erroring.
 8. **Never let optional browser APIs break the shell.** `history.replaceState`
    is unavailable in some embedded webviews; an unguarded call in `select()`
    threw and aborted everything after it, leaving the tab badges permanently
@@ -66,8 +71,10 @@ Script load order in `index.html` matters:
 9. **Generated data files in git conflicts:** `data/history.json` is
    *cumulative* — on merge conflict, union both sides' snapshot arrays by
    date (never `--ours`/`--theirs`; a scheduled run on main may hold real
-   days the branch lacks). `data/signals.json` is *latest-wins* — newest
-   `generatedAt` is correct.
+   days the branch lacks). It is now written as a single compact line, so a
+   conflict is whole-file: reconcile by parsing both sides and merging the
+   `snapshots` arrays, not by hand. `data/signals.json` is *latest-wins* —
+   newest `generatedAt` is correct.
 
 ## Adding a new panel (checklist)
 
@@ -81,17 +88,50 @@ Script load order in `index.html` matters:
    width/padding block, and the ≤680px `padding:14px` block) — grep for
    `.springs-panel` to find all three.
 4. declutter.js `PANELS` entry, and a `selectors` entry in tabs.js `TABS`
-   choosing which tab the section belongs to (a section in no tab is invisible).
+   choosing which surface the section belongs to (a section in no tab is
+   invisible). **New panels go to Research, not the Desk** — see the rule below.
+   If it renders an empty state, give the container a `*-empty` class on that
+   node so the Research badge does not count it as content.
 5. If the pipeline feeds it: `scripts/update-data.mjs` step + add the data
    files to BOTH the `node --check` list and the `FILES=` list in
    `.github/workflows/refresh-data.yml` (a missed FILES entry means the
    workflow silently never commits that file).
 
+## The Desk is earned, not assigned
+
+The four-tab shell existed because ten panels would not fit on one page. The
+real problem was that they had been given permanent screen space before they had
+anything to show: on 2026-08-29 the board carried 75 names while Themes read
+5-of-6 quiet, Phrase radar had 0 confirmed phrases, and Calibration had 0 events
+and a whole tab. Partitioning that four ways did not reduce the emptiness, it
+just meant three of four doors opened onto empty rooms — and a blank tab is
+indistinguishable from a broken one.
+
+So the rule, which is about build order rather than layout:
+
+- **A new panel ships to Research.** No exceptions for how promising it looks.
+- **It moves to the Desk only after it has produced non-empty output on ten
+  consecutive scheduled runs** (roughly two and a half trading days at 4x/day).
+  That is a fact you can check in the committed data, not a judgment call.
+- **A Desk panel that goes empty for ten consecutive runs moves back.** The
+  Desk is for things that reliably say something.
+- **Empty states are honest and specific.** "Needs N more days of ledger
+  history" or "0 confirmed — needs GDELT, which is currently rate-limited" beats
+  a blank, and beats a fake-looking zero. Use a `*-empty` class so the Research
+  badge can tell the difference between a panel with content and a panel with an
+  apology.
+
+The corollary is about specs, not code: a layer that cannot produce output until
+some upstream detector fires is not "waiting for data", it is untested. Check
+that the detector has ever fired before building a panel on top of it.
+
 ## Verification (non-negotiable, every UI change)
 
 1. `node --check` every touched JS file.
-2. Serve locally: preview server `signaldesk-static` (config in
-   `.claude/launch.json`, port 8793) — file:// won't exercise URL state.
+2. Serve locally: preview server `signaldesk` (config in `.claude/launch.json`,
+   port 8793, backed by `.claude/static-server.mjs`) — file:// works but won't
+   exercise URL state, and it takes the `data/*.js` fallback path rather than
+   the JSON path the live site uses.
 3. Test at 375px (sheet, collapsed panels, card table) AND ≥1400px (sticky
    panel, no sheet). Check the console for errors both times.
 4. Click a ticker in each surface that selects one (table row, radar card,
@@ -145,13 +185,35 @@ The current design, in `scripts/update-data.mjs`:
 2. `collectTickerNews()` — a capped top-up (`TARGETED_NEWS_LIMIT`) for the few
    big movers no wire covered. Uses Nasdaq's keyless `articlebysymbol` JSON
    first, Google News second, and stops at the first source that works.
-3. `fetchTextPolite()` — per-host minimum spacing, a 20s timeout, and a
-   **circuit breaker** (`scripts/lib/host-guard.mjs`, unit-tested): a 429/403
-   blocks the host for the rest of the run immediately; generic failures
-   (`fetch failed`, timeouts — an unreachable host, not a refusing one) block it
-   after three in a row. Observed live: `api.nasdaq.com` was unreachable and
-   produced 25 identical failures because the first version of the breaker only
-   tripped on 429/403.
+3. `guardedRequest()` — the single choke point every fetch in the pipeline goes
+   through. Per-host minimum spacing, a 20s timeout, and a **circuit breaker**
+   (`scripts/lib/host-guard.mjs`, unit-tested). A tripped breaker is a
+   **cooldown, not a run-long block**, and the two failure modes back off
+   differently because they cost different amounts to retry: a 429/403 rejects
+   in milliseconds so it recovers from 2s, while a timeout can burn the full 20s
+   per probe so it backs off from 30s. Both double per repeat block, and a host
+   that has already tripped re-blocks on a *single* failed probe rather than
+   earning a fresh streak.
+
+   **This is the bug that took prices down for twelve days.** The breaker
+   originally blocked a host permanently on the first 429. That is right for the
+   news wires — ten hosts, a handful of requests each — and fatal for the price
+   loop, which hits `query1.finance.yahoo.com` ~220 times per run and draws
+   routine 429s. One throttle zeroed every remaining quote, and because
+   `fetchMarket()` runs both quote legs through `Promise.allSettled` it could
+   never throw, so the run exited 0 with an empty failure list. Any new
+   high-fan-out host must assume it will be throttled mid-run and must survive it.
+
+   `missingIsAnswer: true` is the escape hatch for a caller that probes for a
+   file which may legitimately not exist yet and recovers by asking the same host
+   for a different URL — FINRA's date walk. A 403/404 there is the host answering
+   correctly, so it notes a success instead of tripping the breaker. Without it
+   the first miss blocked the walk that exists to handle the miss, and short
+   volume was silently empty on 3 of 4 daily runs.
+
+   Per-host spacing overrides live in `HOST_SPACING_OVERRIDES`: GDELT asks for
+   one request every 5s and needs 8s in practice. When a host publishes a limit,
+   honour it there rather than rediscovering it as a 429.
 4. `summariseFailures()` — only 20 failures are published, so identical
    per-ticker lines are collapsed to `3x Nasdaq <ticker>: fetch failed`. Keep
    throttle markers intact in any change here: the tape's empty state reads

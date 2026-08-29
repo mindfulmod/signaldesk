@@ -1,5 +1,10 @@
 # SignalDesk — Insider Evidence Layer (Form 4)
 
+> **Status (2026-08-29): specced, not built.** No code exists for this layer.
+> The backtest gate described below has not been run, so the go/no-go call has
+> not been made. Decisions here are locked and should not be relitigated without
+> new evidence, but nothing here has shipped.
+
 Decision set locked 2026-07-17 via discovery interview. This spec is the source of
 truth for the insider/big-money evidence layer. Nothing here ships to the Springs
 badge until the backtest gate below passes.

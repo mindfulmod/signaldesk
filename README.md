@@ -14,25 +14,58 @@ https://mindfulmod.github.io/signaldesk/
 
 Open that link from your phone to view the dashboard.
 
-## Live Baseline
+## What's on the site
 
-The current live app is a dark, mobile-first market scanner with:
+Two surfaces. The **Desk** is everything that works today; **Research** is the
+slower theme machinery, which is still accumulating the data it needs to say
+anything. The split is deliberate — these panels were previously spread across
+four tabs, which hid how few of them had content.
 
-- dynamic ticker discovery instead of a fixed watchlist,
-- FINRA short-volume seeded market universe,
-- StockTwits, ApeWisdom, Hacker News, 4chan, Reddit, news, SEC, FINRA, and public price/volume sources,
-- market-cap filters,
-- big-attention and quiet-mover filters,
-- an explainable discovery score that separates attention, confirmation, catalyst evidence, and crowding risk,
-- research radar, market-psychology stages, ticker detail panels, sparklines, watchlists, and CSV export,
-- a **top headline** callout per ticker — the single best explanation for "why is this in the news," ranked so a real catalyst (an acquisition rumor, a lawsuit, an FDA decision) can't get buried under mention-count bars from ApeWisdom/StockTwits-trending/the raw price string. Honestly labeled: a genuine published article/filing is called a "Top headline," but social commentary that merely mentions a catalyst (a Hacker News comment guessing about a deal, say) is labeled "Notable chatter (not a news article)" instead — never presented as reporting it isn't. A small "News"/"Buzz" badge on the ranking table row makes this visible without opening the ticker,
-- an additive enhancement layer in `enhancements.js` for source-list normalization, latest-vs-history window mode, and Market Pulse,
-- a **Springs board** (`springs.js`) — sustained-attention/price-compression setups from the [Theme Engine](THEME_ENGINE.md)'s coil detector, shown as three honest states (Coiled, Released, Dead coil) with their backtested base rates, never as a buy signal,
-- a **Themes rail** (`themes.js`) — theme heat scored on breadth *in excess of the whole market* (so a market-wide rebound doesn't fake a hot theme), staged Quiet/Naming/Diffusion/Wave/Decay; hot themes (Diffusion/Wave) also waive the Springs board's defensive-sector discount for their members. Click a theme card to open its **diffusion map** (Layer 2) — a supply-chain table of that theme's members ordered ran → running → coiled → lagging, so you can see who's next,
-- a **Phrase radar** (`phrase-radar.js`) — novel, week-over-week-accelerating bigrams/trigrams from the news headline stream, confirmed only when *both* GDELT news-volume and SEC EDGAR filing-acceleration corroborate the same phrase; confirmed phrases feed the Themes rail's language score directly,
-- an **Emerging clusters** feed (`clusters.js`) — ticker groups the co-mention graph (who keeps appearing together in the same headline or post, trailing ~90 days) finds via greedy-modularity community detection, surfaced for human review rather than auto-promoted into the theme registry,
-- a **What changed** feed (`alerts.js`) — every coil release, new coil inside a hot theme, theme stage transition, dead-coil demotion, and proof-quarter detection, logged on-site the moment it happens (each fires at most once per ticker/theme per state change), plus a weekly theme/springs digest; optional push notifications via [ntfy.sh](https://ntfy.sh) are off by default (see below),
-- a **Calibration** panel (`calibration.js`) — every coil release, dead-coil demotion, and theme stage transition gets logged with its date and graded forward at 30/90/180/365 days using real price history, reporting win rate and median return per state/stage; the engine grading itself the way [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md) promises for ticker scores. This is forward-graded, not backtested — it only fills in as real time actually passes.
+Panel status below is as of **2026-08-29** and is meant to be kept honest. A
+panel with nothing in it says what it is waiting for rather than rendering a
+blank; the Research tab badge counts only the panels that actually have content.
+
+### The Desk
+
+| Panel | What it answers | State |
+|---|---|---|
+| Driving the tape | Which headlines actually moved a stock today | Live |
+| Research radar | The best-evidence setups right now | Live |
+| Discovery board | The full ranked universe, with price, volume, source mix and a top headline per name | Live — 75 names |
+| Attention map | Early ignition vs confirmed participation vs crowded | Live |
+| What changed | Coil releases, theme stage changes, proof quarters, weekly digest | Live, but see the caveat below |
+
+The board is the product: dynamic ticker discovery rather than a fixed
+watchlist, a FINRA short-volume seeded universe, market-cap and attention
+filters, ticker detail panels, sparklines, watchlists, and CSV export. Its
+discovery score separates attention, confirmation, catalyst evidence, and
+crowding risk, and is explained in [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md).
+
+Every headline is honestly labelled: a genuine published article or filing is a
+"Top headline", while social commentary that merely mentions a catalyst is
+"Notable chatter (not a news article)" — never presented as reporting it isn't.
+A "News"/"Buzz" badge on the row makes this visible without opening the ticker.
+
+### Research
+
+| Panel | What it answers | State |
+|---|---|---|
+| Themes rail | Which themes have breadth *in excess of the market* | Live, but all themes currently read Quiet |
+| Springs board | Sustained attention with compressed price (Coiled / Released / Dead coil) | Live, typically 1–2 rows |
+| Phrase radar | Novel, accelerating language in the headline stream | Candidates only — **0 confirmed**, and confirmation needs GDELT, which rate-limits this pipeline hard |
+| Emerging clusters | Ticker groups that keep co-occurring in the same headline or post | Live |
+| Calibration | Forward-graded outcomes for signals the site has already fired | **Empty — 0 events.** See below |
+
+Clicking a theme card opens its **diffusion map**: a supply-chain table ordering
+that theme's members ran → running → coiled → lagging, so you can see who is
+next. It only opens for hot themes, so it is currently unreachable in practice.
+
+**Calibration is empty for a structural reason, not a temporal one.** It grades
+coil releases, dead-coil demotions, and theme stage transitions forward at
+30/90/180/365 days — but zero of those events have ever fired. It is not waiting
+for time to pass; it is waiting for its upstream detectors to trigger even once.
+Treat that as an open question about the detectors, not a panel that just needs
+patience.
 
 ## Weekday Data Refresh
 
@@ -76,25 +109,32 @@ hard-to-guess topic name; ntfy topics are public by name.
 
 ## Data Sources
 
-The updater uses public no-key sources only:
+The updater uses public no-key sources only. **No API keys are required.** If
+public sources are temporarily unreachable, the updater keeps the last working
+snapshot instead of replacing the dashboard with empty data.
 
-- FINRA short-volume files
-- StockTwits public endpoints
-- ApeWisdom public stock-ranking API
-- Hacker News Algolia public search
-- 4chan `/biz/` public catalog
-- Wallstreetbets and finance Reddit public JSON/RSS, best effort
-- SEC EDGAR public feeds and company data
-- GDELT public news search
-- Google and Bing public news RSS
-- Yahoo ticker news RSS
-- CNBC RSS
-- MarketWatch RSS
-- public Yahoo/Stooq price and volume data
-- Wikipedia public summaries, pageviews, and S&P 500 constituent data for company context and the Theme Engine
-- [ntfy.sh](https://ntfy.sh) for optional push alerts
+Not every source is healthy at any given time, and the list has historically
+read as though they all were. Status below was measured on **2026-08-29** — the
+failure lines in `data/signals.json` are the live version of this table.
 
-No API keys are required. If public sources are temporarily unreachable, the updater keeps the last working snapshot instead of replacing the dashboard with empty data.
+| Source | Role | Status |
+|---|---|---|
+| FINRA short-volume files | Seeds the market universe | Working |
+| Google / Bing news RSS, Yahoo `rssindex`, CNBC, MarketWatch, PR Newswire, GlobeNewswire, Seeking Alpha, Investing.com desks | The primary news path | Working |
+| Yahoo / Stooq price and volume | Quotes, relative volume | Working |
+| SEC EDGAR feeds + company data | Filings, ticker→CIK map | Working |
+| ApeWisdom, Hacker News Algolia, 4chan `/biz/` | Social attention | Working |
+| Wikipedia summaries, pageviews, S&P constituents | Company context, Theme Engine | Working |
+| GDELT news search | Phrase confirmation | **Degraded** — rate-limits this pipeline aggressively; needs ~8s spacing and still often refuses |
+| Nasdaq (`api.nasdaq.com`, markets RSS) | Per-ticker news top-up | **Failing** — connection timeouts |
+| StockTwits public endpoints | Social attention | **Failing** — Cloudflare 403 |
+| Reddit (Wallstreetbets, finance subs) | Social attention | **Failing from CI** — 403; always documented as best-effort |
+| [ntfy.sh](https://ntfy.sh) | Optional push alerts | Off by default |
+
+Degraded sources fail soft: a per-host circuit breaker takes them out of the run
+with an escalating cooldown, and every skip is recorded in the snapshot's
+`failures` list rather than disappearing. That list is the first place to look
+when a panel goes quiet.
 
 ## Discovery model
 
@@ -104,4 +144,38 @@ See [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md) for the scoring logic, market-psych
 
 ## Local Use
 
-Open `index.html` directly in a browser, or run any local static server from this folder.
+Run a static server from this folder — the preview config `signaldesk` in
+`.claude/launch.json` serves it on port 8793:
+
+```bash
+node .claude/static-server.mjs 8793
+```
+
+Opening `index.html` straight off disk with `file://` also works: the page
+detects the protocol and injects the `data/*.js` bundles, which carry the same
+payload as the JSON for exactly this case. Over http(s) those bundles are not
+requested at all — they used to load on every visit and be discarded, which was
+half the weight of the site.
+
+URL state (deep links, the ticker query param) only works over http(s).
+
+## Documentation
+
+Nine docs had accumulated with no way to tell which described the live site,
+which were unbuilt plans, and which described a direction that had been
+abandoned. Status is now stated on each one.
+
+| Doc | Covers | Status |
+|---|---|---|
+| [UI_PLAYBOOK.md](UI_PLAYBOOK.md) | Frontend architecture, the traps, verification checklist, copy rules | **Live** — read before touching frontend code |
+| [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md) | The discovery score, its rationale and caveats | **Live** |
+| [THEME_ENGINE.md](THEME_ENGINE.md) | Theme lifecycle spec: ledger, registry, coils, heat, diffusion, phrases, alerts | **Mostly shipped** — Layers 0–4 built; see its status header |
+| [INSIDER_EVIDENCE.md](INSIDER_EVIDENCE.md) | Form 4 cluster-buy evidence layer | **Specced, not built** — gated on a backtest |
+| [CONTRACT_FLOW.md](CONTRACT_FLOW.md) | Federal award flow as theme evidence | **Specced, not built** |
+| [TRAFFIC_LAYER.md](TRAFFIC_LAYER.md) | Web-traffic demand proxy (Cloudflare Radar) | **Specced, deferred** — would break the no-keys promise |
+
+Removed 2026-08-29: `PRODUCTION.md` (specified a Next.js/Postgres/paid-API
+backend — a direction that was abandoned, and it contradicted the static keyless
+design the rest of the project is built around) and `BASELINE.md` (a June-2026
+note establishing the repo as canonical, which it now plainly is). Both are in
+git history if they are ever wanted back.
