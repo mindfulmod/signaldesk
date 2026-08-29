@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { detectProofQuarter, trailingAvgVolume, computeProofQuarters, PROOF_QUARTER_GAP_THRESHOLD, PROOF_QUARTER_VOLUME_MULT } from "../lib/proof-quarter.mjs";
+import { detectProofQuarter, trailingAvgVolume, computeProofQuarters, orderByEvidence, PROOF_QUARTER_GAP_THRESHOLD, PROOF_QUARTER_VOLUME_MULT } from "../lib/proof-quarter.mjs";
 
 test("detectProofQuarter: fires only when gap, volume, and earnings vocabulary all align", () => {
   const base = { priceMove: 10, volume: 4_000_000, avgVolume60d: 1_000_000, headlineTexts: ["NVDA beats on guidance, raises outlook"] };
@@ -80,4 +80,55 @@ test("computeProofQuarters: an expired leader is pruned and can re-trigger", () 
   const result = computeProofQuarters({ events, ledger, gicsByTicker: {}, coMentionEdges: new Map(), prevLeaders, dateStr: "2026-07-01" });
   assert.equal(result.newLeaders.length, 1);
   assert.equal(result.leadersPayload.leaders.length, 1); // old expired one dropped, new one added
+});
+
+// The What changed feed attributed a +602% proof quarter to a StockTwits post
+// ("$SXTC The offering closure disclosure dropped in after-hours trading...")
+// because every event title was weighted equally and social chatter simply came
+// first in the array. A published article has to win when one exists.
+test("orderByEvidence: published sources outrank social chatter", () => {
+  const news = new Set(["Google News", "SEC Filings"]);
+  const ordered = orderByEvidence(
+    [
+      { title: "chatter about earnings", source: "StockTwits" },
+      { title: "Acme beats on earnings - Reuters", source: "Google News" },
+    ],
+    news
+  );
+  assert.equal(ordered[0].text, "Acme beats on earnings - Reuters");
+  assert.equal(ordered[0].isNews, true);
+  assert.equal(ordered[1].isNews, false);
+});
+
+test("orderByEvidence: keeps chatter when it is all there is, flagged as such", () => {
+  const ordered = orderByEvidence([{ title: "guidance chatter", source: "4chan" }], new Set(["Google News"]));
+  assert.equal(ordered.length, 1);
+  assert.equal(ordered[0].isNews, false);
+});
+
+test("detectProofQuarter: reports whether its evidence was an article", () => {
+  const base = { priceMove: 12, volume: 400, avgVolume60d: 100 };
+  const fromNews = detectProofQuarter({
+    ...base,
+    headlineTexts: [{ text: "Acme raises guidance - Reuters", isNews: true }],
+  });
+  assert.equal(fromNews.matchedHeadlineIsNews, true);
+
+  const fromChatter = detectProofQuarter({
+    ...base,
+    headlineTexts: [{ text: "guidance is gonna rip", isNews: false }],
+  });
+  assert.equal(fromChatter.matchedHeadlineIsNews, false);
+});
+
+// Plain strings are still accepted so existing callers and older tests keep working.
+test("detectProofQuarter: still accepts bare strings", () => {
+  const out = detectProofQuarter({
+    priceMove: 12,
+    volume: 400,
+    avgVolume60d: 100,
+    headlineTexts: ["Acme reaffirmed guidance"],
+  });
+  assert.equal(out.matchedHeadline, "Acme reaffirmed guidance");
+  assert.equal(out.matchedHeadlineIsNews, false);
 });

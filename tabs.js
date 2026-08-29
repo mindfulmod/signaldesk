@@ -1,9 +1,20 @@
-// Tabbed shell. SignalDesk had grown to ten heavy panels stacked on one page,
-// which made the intended use — a five-minute daily review — into a scroll
-// marathon. This groups the existing sections into four tabs by the question
-// each one answers. It deliberately does NOT rewrite any panel: sections are
-// moved in the DOM, so every panel keeps its own renderer, its ids, and its
-// collapse behaviour.
+// Two-surface shell: the Desk (everything that works today) and Research
+// (everything still accumulating the data it needs to say anything).
+//
+// This started as four tabs, which was the wrong fix for the right problem. Ten
+// panels genuinely did not fit on one page — but partitioning them four ways
+// only hid how few of them had anything in them. Measured 2026-08-28: the board
+// carried 75 names, while Themes was 5-of-6 "quiet", Phrase radar had 0
+// confirmed phrases, Clusters had 0, and Calibration had 0 events and its own
+// whole tab. Three of four doors opened onto empty rooms, and a blank tab is
+// indistinguishable from a broken one — you cannot tell what sits where.
+//
+// So: one Desk you scroll, with nothing hidden behind a door, and one Research
+// surface whose tab badge reports how many of its panels actually have content,
+// so it is honest about being mostly empty rather than silently so.
+//
+// It deliberately does NOT rewrite any panel: sections are moved in the DOM, so
+// every panel keeps its own renderer, its ids, and its collapse behaviour.
 //
 // Traps this file has to respect (see UI_PLAYBOOK.md):
 //   * `.market-pulse` is injected by enhancements.js AFTER load, so placement
@@ -12,39 +23,35 @@
 //     not detach those renderers because they look sections up by id each time.
 //   * `render()` runs on resize; nothing here may depend on render order.
 (() => {
-  const STORE_KEY = "signaldesk-active-tab-v1";
+  // v2: the v1 ids (today/themes/deepdive/record) no longer exist. An unknown
+  // stored value already falls back to the first tab, but bumping the key means
+  // a returning visitor lands on the Desk instead of carrying a dead preference.
+  const STORE_KEY = "signaldesk-active-tab-v2";
 
   const TABS = [
     {
-      id: "today",
-      label: "Today",
-      shortLabel: "Today",
-      hint: "The five-minute review: what changed, what to look at, and why the market moved.",
-      // Order matters — it is the daily reading order.
-      selectors: [".whatchanged-panel", ".buy-panel", ".market-pulse", ".movers-panel"],
+      id: "desk",
+      label: "The Desk",
+      shortLabel: "Desk",
+      hint: "Everything that works today: what the market is doing, the best-evidence setups, and the full discovery board.",
+      // Order matters — it is the daily reading order. Market context first,
+      // then the short list, then the full board, then the slower context.
+      selectors: [".market-pulse", ".buy-panel", ".dashboard-grid", ".movers-panel", ".whatchanged-panel"],
     },
     {
-      id: "themes",
-      label: "Themes",
-      shortLabel: "Themes",
-      hint: "Where breadth is building: theme heat, novel language, and co-mention clusters.",
-      selectors: [".themes-panel", ".phraseradar-panel", ".clusters-panel"],
-    },
-    {
-      id: "deepdive",
-      label: "Deep dive",
-      shortLabel: "Board",
-      hint: "The full board: every discovered name, plus the springs lifecycle.",
-      selectors: [".springs-panel", ".dashboard-grid"],
-    },
-    {
-      id: "record",
-      label: "Track record",
-      shortLabel: "Record",
-      hint: "Forward-graded outcomes for signals this site has already fired.",
-      selectors: [".calibration-panel"],
+      id: "research",
+      label: "Research",
+      shortLabel: "Research",
+      hint: "Slower signals still filling up. Panels with no data say what they are waiting for rather than showing you a blank.",
+      selectors: [".themes-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
     },
   ];
+
+  // Which container each Research panel fills, so the tab badge can report how
+  // many actually have something in them. A count of populated panels is the
+  // one number that answers "is it worth opening this?" — a themes count would
+  // read as 6 while every theme sat quiet.
+  const RESEARCH_CONTENT = ["#themesRail", "#springsBoard", "#phraseRadarFeed", "#clustersFeed", "#calibrationSummary"];
 
   const bySelector = new Map();
   for (const tab of TABS) {
@@ -170,10 +177,19 @@
   // nothing to show gets no badge rather than a zero.
   function refreshCounts() {
     const counts = {
-      today: document.querySelectorAll(".whatchanged-feed > *").length,
-      themes: document.querySelectorAll(".themes-rail > *").length,
-      deepdive: document.querySelectorAll("#rankingBody > tr").length,
-      record: 0,
+      desk: document.querySelectorAll("#rankingBody > tr").length,
+      // Populated panels, not rows: Research is mostly empty by design right
+      // now, and this is the number that says so at a glance.
+      //
+      // An empty panel is not an empty container — every renderer here fills its
+      // container with an explanatory "*-empty" note instead ("No graded events
+      // yet..."), which is good for the reader and would otherwise make a panel
+      // with nothing in it count as populated. Count only real content nodes.
+      research: RESEARCH_CONTENT.filter((selector) => {
+        const node = document.querySelector(selector);
+        if (!node) return false;
+        return [...node.children].some((child) => !/-empty$/.test(child.className || ""));
+      }).length,
     };
     for (const tab of TABS) {
       const badge = document.querySelector(`#tab-${tab.id} .tab-count`);
@@ -214,10 +230,12 @@
     refreshCounts();
 
     // Filters only act on the discovery board, so the control is meaningless
-    // anywhere else.
+    // anywhere else. The board lives on the Desk now, so that is where the
+    // control belongs — leaving this pointing at the old "deepdive" id would
+    // have silently hidden filtering from the only tab that can use it.
     const filterBtn = document.getElementById("toggleSidebar");
     const shell = document.querySelector(".app-shell");
-    const filtersRelevant = tab.id === "deepdive";
+    const filtersRelevant = tab.id === "desk";
     if (filterBtn) filterBtn.hidden = !filtersRelevant;
     // NB: script.js's toggleSidebar puts `sidebar-hidden` on `.app-shell`, not
     // on the sidebar itself — mirror that or the rail stays on screen.

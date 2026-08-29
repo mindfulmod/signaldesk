@@ -2274,3 +2274,57 @@ body.sheet-open {
     animation: none;
   }
 }
+
+/* ---- Compact hero -------------------------------------------------------
+   The hero is identity, not content. Its full pitch and method block now live
+   inside a collapsed <details>, so the first screen belongs to the board.
+   These rules override the roomy .page-hero padding above rather than editing
+   it, so the expanded state keeps the original spacing. */
+.page-hero.compact {
+  margin: 8px 0 14px;
+  padding: 14px clamp(16px, 2.2vw, 22px);
+}
+
+.page-hero.compact h1 {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.hero-about {
+  margin-top: 8px;
+}
+
+.hero-about > summary {
+  color: var(--muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  list-style: none;
+  width: max-content;
+}
+
+.hero-about > summary::-webkit-details-marker {
+  display: none;
+}
+
+.hero-about > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.hero-about[open] > summary::before {
+  content: "▾ ";
+}
+
+.hero-about > summary:hover {
+  color: var(--text);
+}
+
+.hero-about .hero-sub {
+  margin: 10px 0 0;
+}
+
+.hero-about .hero-method {
+  margin-top: 14px;
+}

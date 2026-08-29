@@ -777,10 +777,10 @@ function renderBuyCandidates(items) {
       if (isNarrowViewport()) {
         openDetailSheet();
       } else {
-        // The discovery board lives on the "Deep dive" tab (tabs.js), so it has
-        // to be revealed before scrolling — otherwise this scrolls to a hidden
+        // The discovery board lives on the Desk (tabs.js), so it has to be
+        // revealed before scrolling — otherwise this scrolls to a hidden
         // element and looks like nothing happened.
-        window.SIGNALDESK_SELECT_TAB?.("deepdive");
+        window.SIGNALDESK_SELECT_TAB?.("desk");
         document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
@@ -1376,9 +1376,9 @@ function exportCsv() {
 function bindEvents() {
   byId("tickerSearch").addEventListener("input", (event) => {
     render();
-    // Search narrows the discovery board, which lives on the "Deep dive" tab —
-    // typing from any other tab would otherwise produce no visible result.
-    if (event.target.value.trim()) window.SIGNALDESK_SELECT_TAB?.("deepdive");
+    // Search narrows the discovery board, which lives on the Desk — typing from
+    // Research would otherwise produce no visible result.
+    if (event.target.value.trim()) window.SIGNALDESK_SELECT_TAB?.("desk");
   });
   document.querySelectorAll('input[name="source"]').forEach((input) => input.addEventListener("change", render));
   byId("clearFocus").addEventListener("click", () => {

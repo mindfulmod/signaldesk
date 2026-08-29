@@ -65,15 +65,46 @@
     renderWhatChanged();
   }
 
+  const FEED_LIMIT = 20;
+  // Proof quarters fire far more often than anything else on the board: 111 of
+  // the log's 119 entries on 2026-08-28. Taking the newest 20 outright meant all
+  // 20 slots were proof quarters and every coil release, theme stage change and
+  // weekly digest — the events this panel is named for — was pushed off the end
+  // and never seen.
+  //
+  // So rarer events are seated first, and proof quarters fill whatever is left.
+  // This value is the floor reserved for proof quarters, not a cap on them: it
+  // guarantees they keep at least this many slots when rare events are plentiful,
+  // and equivalently caps rare events at FEED_LIMIT minus this. With only 8 rare
+  // events in the log today, proof quarters still take the other 12 rather than
+  // leaving the feed short.
+  const PROOF_QUARTER_FLOOR = 6;
+
+  function feedEntries(all) {
+    const byDateDesc = (a, b) => String(b.date).localeCompare(String(a.date));
+    const proofQuarters = all.filter((entry) => entry.type === "proof-quarter").sort(byDateDesc);
+    const others = all.filter((entry) => entry.type !== "proof-quarter").sort(byDateDesc);
+    // Rarer events claim their slots first; proof quarters fill what is left.
+    const keptOthers = others.slice(0, Math.max(0, FEED_LIMIT - PROOF_QUARTER_FLOOR));
+    const keptProof = proofQuarters.slice(0, Math.max(0, FEED_LIMIT - keptOthers.length));
+    return {
+      entries: [...keptOthers, ...keptProof].sort(byDateDesc),
+      hiddenProofQuarters: proofQuarters.length - keptProof.length,
+    };
+  }
+
   function renderWhatChanged() {
     const container = document.getElementById("whatChangedFeed");
     if (!container) return;
-    const entries = (alertsData?.entries || []).slice(0, 20);
+    const { entries, hiddenProofQuarters } = feedEntries(alertsData?.entries || []);
     if (!entries.length) {
       container.innerHTML = `<p class="whatchanged-empty">No lifecycle changes recorded yet — this fills in as coils release, themes shift stage, or coils age out without releasing.</p>`;
       return;
     }
-    container.innerHTML = entries.map(entryRow).join("");
+    const more = hiddenProofQuarters > 0
+      ? `<p class="whatchanged-more">+${hiddenProofQuarters} older proof quarter${hiddenProofQuarters === 1 ? "" : "s"} not shown.</p>`
+      : "";
+    container.innerHTML = entries.map(entryRow).join("") + more;
   }
 
   function entryRow(entry) {
@@ -118,6 +149,12 @@
         gap: 8px;
         max-height: 420px;
         overflow-y: auto;
+      }
+      .whatchanged-more {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-align: center;
       }
       .whatchanged-empty {
         margin: 0;

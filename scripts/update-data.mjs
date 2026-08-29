@@ -533,7 +533,7 @@ async function main() {
     );
     await mkdir(new URL("data/", ROOT), { recursive: true });
     const history = await updateHistory(previous);
-    const historyJson = JSON.stringify(history, null, 2);
+    const historyJson = serialiseHistory(history);
     await writeFile(HISTORY, `${historyJson}\n`);
     await writeFile(HISTORY_JS, `window.SIGNALDESK_HISTORY = ${historyJson};\n`);
     console.log(`History now contains ${history.snapshots.length} daily snapshots.`);
@@ -564,7 +564,7 @@ async function main() {
   await mkdir(new URL("data/", ROOT), { recursive: true });
   const history = await updateHistory(payload);
   const json = JSON.stringify(payload, null, 2);
-  const historyJson = JSON.stringify(history, null, 2);
+  const historyJson = serialiseHistory(history);
   await writeFile(OUT, `${json}\n`);
   await writeFile(OUT_JS, `window.SIGNALDESK_DATA = ${json};\n`);
   await writeFile(HISTORY, `${historyJson}\n`);
@@ -591,18 +591,55 @@ async function readHistory() {
   }
 }
 
+// History exists for one job: range aggregation. It is shipped to every visitor
+// on every page load, so it may carry only what the range view actually reads --
+// the fields aggregateSnapshotSignals() merges, and nothing else.
+//
+// It had been storing each run's full `events` and `failures` alongside the
+// signals. Nothing in the front end has ever read either off a history snapshot,
+// and `events` alone was 6.5 MB of an 11.5 MB file: 57% of the largest asset on
+// the site, downloaded by every phone that opened it, for data no code path
+// touches. `latest` (the per-ticker article list) is read, but the range view
+// merges article lists across every snapshot in the window, so keeping more than
+// the top few per ticker per day just duplicates what the current snapshot
+// already carries in full.
+const HISTORY_ARTICLES_PER_SIGNAL = 3;
+
+function slimHistorySignal(signal) {
+  const slim = { ...signal };
+  if (Array.isArray(slim.latest)) slim.latest = slim.latest.slice(0, HISTORY_ARTICLES_PER_SIGNAL);
+  return slim;
+}
+
+// Applied to previously-written snapshots too, not just the new one, so the file
+// sheds the accumulated weight on the next run instead of only growing slower.
+function slimHistorySnapshot(snapshot) {
+  return {
+    date: snapshot.date,
+    generatedAt: snapshot.generatedAt,
+    signals: (snapshot.signals || []).map(slimHistorySignal),
+  };
+}
+
+// History is written compact while every other data file stays pretty-printed.
+// It is the largest asset the site serves and the only one nobody reads as a
+// diff -- it is 46 machine-generated snapshots, reviewed through the UI, never
+// by eye. Indentation was ~30% of its bytes, paid for by every visitor.
+function serialiseHistory(history) {
+  return JSON.stringify(history);
+}
+
 async function updateHistory(payload) {
   const existing = await readHistory();
   const date = payload.generatedAt.slice(0, 10);
-  const dailySnapshot = {
+  const dailySnapshot = slimHistorySnapshot({
     date,
     generatedAt: payload.generatedAt,
     signals: payload.signals,
-    events: payload.events,
-    failures: payload.failures,
-  };
+  });
   const snapshots = existing
     .filter((item) => item?.date && item.date !== date)
+    .map(slimHistorySnapshot)
     .concat(dailySnapshot)
     .sort((a, b) => a.date.localeCompare(b.date))
     .slice(-HISTORY_DAYS);
@@ -2177,6 +2214,7 @@ async function computeProofQuartersStep(events, coMentionEdges, failures) {
       coMentionEdges,
       prevLeaders,
       dateStr,
+          newsSources: MARKET_NEWS_SOURCES,
     });
     await saveLeaders(leadersPayload);
     await saveHotMonitor(hotMonitorPayload);
@@ -2294,6 +2332,29 @@ async function computeThemeHeatStep(failures, phraseVelocity = new Map()) {
 // SIGNALDESK_NTFY_TOPIC is set (silently a no-op otherwise -- alerts still
 // land in the on-site "What changed" log, data/alerts-log.json, either way),
 // and appends a weekly digest once per ISO week.
+// The proof-quarter line is the most common entry in the What changed feed, so
+// its wording carries most of the feed's credibility. Two things it used to get
+// wrong: it quoted whatever text matched the earnings vocabulary as though it
+// were reporting -- often a StockTwits post -- and it appended "Elevated 0
+// siblings/co-mention neighbors" on the majority of entries where nothing was
+// actually elevated. Say only what is true, and label chatter as chatter.
+function proofQuarterMessage(leader) {
+  const move = `${leader.priceMove >= 0 ? "+" : ""}${leader.priceMove.toFixed(1)}% on ${leader.volumeRatio.toFixed(1)}x volume`;
+  const elevated = leader.siblings.length + leader.coMentionNeighbors.length;
+  const parts = [`${leader.ticker} proof quarter: ${move}`];
+  if (leader.headline) {
+    parts.push(
+      leader.headlineIsNews
+        ? `Headline: "${leader.headline}"`
+        : `No article yet — matched on social chatter: "${leader.headline}"`
+    );
+  }
+  if (elevated > 0) {
+    parts.push(`Elevated ${elevated} sibling${elevated === 1 ? "" : "s"}/co-mention neighbor${elevated === 1 ? "" : "s"} to full coverage for 2 quarters.`);
+  }
+  return parts.join(". ").replace(/\.\./g, ".");
+}
+
 async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) {
   try {
     const state = await loadAlertState();
@@ -2306,7 +2367,7 @@ async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) 
       type: "proof-quarter",
       priority: "high",
       ticker: leader.ticker,
-      message: `${leader.ticker} proof quarter: ${leader.priceMove >= 0 ? "+" : ""}${leader.priceMove.toFixed(1)}% on ${leader.volumeRatio.toFixed(1)}x volume ("${leader.headline}"). Elevated ${leader.siblings.length + leader.coMentionNeighbors.length} siblings/co-mention neighbors to full coverage for 2 quarters.`,
+      message: proofQuarterMessage(leader),
     }));
     const events = [...springEvents, ...themeEvents, ...leaderEvents];
 

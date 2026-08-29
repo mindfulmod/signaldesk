@@ -146,19 +146,26 @@
         </aside>
 
         <main class="main-content">
-        <section class="page-hero" id="top">
-          <div class="hero-layout">
-            <div class="hero-copy">
-              <p class="eyebrow">Evidence-weighted stock discovery</p>
-              <h1>Find the signal before the crowd gets loud.</h1>
-              <p class="hero-sub">SignalDesk tracks where attention is forming, then checks whether price, volume, independent sources, and real catalysts agree. Every setup shows its evidence and its risk — because attention alone is not conviction.</p>
-            </div>
+        <!--
+          Compact by design. This was a full marketing hero — eyebrow, headline,
+          a three-sentence pitch and a three-step method block — sitting above
+          every view, on every visit, of a tool whose owner opens it daily and
+          already knows what it does. On a phone it consumed most of the first
+          screen before a single ticker appeared. The pitch and the method are
+          still here for a first-time reader, one tap away, rather than taxing
+          every subsequent one.
+        -->
+        <section class="page-hero compact" id="top">
+          <h1>Find the signal before the crowd gets loud.</h1>
+          <details class="hero-about">
+            <summary>What this is</summary>
+            <p class="hero-sub">SignalDesk tracks where attention is forming, then checks whether price, volume, independent sources, and real catalysts agree. Every setup shows its evidence and its risk — because attention alone is not conviction.</p>
             <div class="hero-method" aria-label="How SignalDesk evaluates a setup">
               <div><span>01</span><strong>Attention</strong><p>Is interest accelerating across more than one channel?</p></div>
               <div><span>02</span><strong>Confirmation</strong><p>Do price, volume, filings, or credible news support the move?</p></div>
               <div><span>03</span><strong>Risk</strong><p>Is the move already extended, concentrated, or thinly evidenced?</p></div>
             </div>
-          </div>
+          </details>
         </section>
         <p id="freshnessNotice" class="freshness-notice" role="status" hidden></p>
 
@@ -328,15 +335,30 @@
       </div>
     </div>
 
-    <script src="data/signals.js"></script>
-    <script src="data/history.js"></script>
-    <script src="data/springs.js"></script>
-    <script src="data/themes.js"></script>
-    <script src="data/diffusion-map.js"></script>
-    <script src="data/phrase-radar.js"></script>
-    <script src="data/clusters.js"></script>
-    <script src="data/calibration.js"></script>
-    <script src="data/alerts-log.js"></script>
+    <!--
+      Data is fetched as JSON at runtime by each module. The data/*.js twins
+      exist only so the page still works when opened straight off disk with
+      file://, where fetch() is blocked -- each one assigns the same payload to
+      the window global its module falls back to.
+
+      They must NOT be static <script> tags. Over http(s) every visitor
+      downloaded and parsed all of them (17.4 MB, most of it history) and then
+      threw the result away, because the JSON refetch that follows always wins.
+      That was half the weight of the site, spent on nothing, on a page whose
+      stated use is opening it from a phone. Injected here only for file://,
+      where the fetch path genuinely cannot work. document.write is deliberate:
+      it is synchronous during parse, so the globals exist before the modules
+      below run, which is exactly the ordering the fallback needs.
+    -->
+    <script>
+      if (location.protocol === "file:") {
+        const bundles = [
+          "signals", "history", "springs", "themes", "diffusion-map",
+          "phrase-radar", "clusters", "calibration", "alerts-log",
+        ];
+        for (const name of bundles) document.write(`<script src="data/${name}.js"><\/script>`);
+      }
+    </script>
     <script src="script.js"></script>
     <script src="enhancements.js?v=20260728-1"></script>
     <script src="springs.js"></script>
