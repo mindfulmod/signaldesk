@@ -1,6 +1,12 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { detectSpringEvents, detectThemeEvents, nextSpringStateMap, nextThemeStageMap, isoWeekKey } from "../lib/alerts.mjs";
+import { detectSpringEvents, detectThemeEvents, nextSpringStateMap, nextThemeStageMap, isoWeekKey, buildWeeklyDigest } from "../lib/alerts.mjs";
+
+test("weekly digest reports phrase confirmation without an obsolete build placeholder", () => {
+  assert.match(buildWeeklyDigest([], [], [{ confirmed: true }, { confirmed: false }]).message, /1 confirmed of 2 candidates/);
+  assert.match(buildWeeklyDigest([], [], []).message, /0 confirmed of 0 candidates/);
+  assert.match(buildWeeklyDigest([], []).message, /coverage unavailable/);
+});
 
 test("detectSpringEvents: fires a release event when state transitions to released", () => {
   const prev = { SOFI: "coiled" };

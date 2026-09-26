@@ -10,7 +10,7 @@
     "new-coil-hot-theme": { label: "New coil in a hot theme", className: "hot-coil" },
     "dead-coil": { label: "Dead coil demoted", className: "dead-coil" },
     "theme-stage-transition": { label: "Theme stage change", className: "stage" },
-    "proof-quarter": { label: "Proof quarter", className: "proof-quarter" },
+    "proof-quarter": { label: "Earnings candidate", className: "proof-quarter" },
     "weekly-digest": { label: "Weekly digest", className: "digest" },
   };
 
@@ -96,26 +96,27 @@
   function renderWhatChanged() {
     const container = document.getElementById("whatChangedFeed");
     if (!container) return;
-    const { entries, hiddenProofQuarters } = feedEntries(alertsData?.entries || []);
-    if (!entries.length) {
-      container.innerHTML = `<p class="whatchanged-empty">No lifecycle changes recorded yet — this fills in as coils release, themes shift stage, or coils age out without releasing.</p>`;
-      return;
-    }
+    const all = alertsData?.entries || [];
+    const isRecentVerified = entry => window.SIGNALDESK_QUALITY.recent(entry.date, Date.now(), 7 * 24) && (entry.type !== "proof-quarter" || entry.evidenceVersion === 2);
+    const { entries, hiddenProofQuarters } = feedEntries(all.filter(isRecentVerified));
+    const archive = all.filter(entry => !isRecentVerified(entry));
     const more = hiddenProofQuarters > 0
       ? `<p class="whatchanged-more">+${hiddenProofQuarters} older proof quarter${hiddenProofQuarters === 1 ? "" : "s"} not shown.</p>`
       : "";
-    container.innerHTML = entries.map(entryRow).join("") + more;
+    container.innerHTML = (entries.length ? entries.map(entryRow).join("") : '<p class="whatchanged-empty">No verified lifecycle changes in the past 7 days.</p>') + more +
+      (archive.length ? `<details class="whatchanged-archive"><summary>Older / legacy records (${archive.length})</summary><p class="adoption-note">Legacy earnings matches were not checked for publication freshness. Retained for audit, not verified catalysts. Newest 20 shown; <a href="data/alerts-log.json">full archive</a>.</p>${archive.slice(0, 20).map(entryRow).join("")}</details>` : "");
   }
 
   function entryRow(entry) {
-    const copy = TYPE_COPY[entry.type] || { label: entry.type, className: "other" };
+    const legacy = entry.type === "proof-quarter" && entry.evidenceVersion !== 2;
+    const copy = legacy ? { label: "Legacy match · unverified", className: "other" } : TYPE_COPY[entry.type] || { label: entry.type, className: "other" };
     const when = relativeTime(entry.date);
     const subject = entry.ticker || entry.theme || "";
     return `
       <div class="whatchanged-row" data-type="${escapeHtml(copy.className)}">
         <span class="wc-badge wc-${escapeHtml(copy.className)}">${escapeHtml(copy.label)}</span>
         <div class="wc-body">
-          <p class="wc-message">${subject ? `<strong>${escapeHtml(subject)}</strong> — ` : ""}${escapeHtml(entry.message)}</p>
+          <p class="wc-message">${subject ? `<strong>${escapeHtml(subject)}</strong> — ` : ""}${escapeHtml(legacy ? entry.message.replace(/proof quarter:/g, "legacy headline match:") : entry.message)}</p>
           <p class="wc-meta">${when}</p>
         </div>
       </div>`;

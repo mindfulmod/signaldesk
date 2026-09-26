@@ -29,6 +29,7 @@ import {
   computeCoMention,
 } from "./lib/co-mention.mjs";
 import { COMMON_WORD_TICKERS } from "./lib/ticker-noise.mjs";
+import quality from "../data-quality.js";
 import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
 import {
   loadPhraseHistory,
@@ -115,7 +116,7 @@ const SYNTHETIC_TITLE_PATTERNS = [/social mentions on ApeWisdom/i, /^Trending on
 // say so only when it actually is one. A forum comment that happens to
 // contain "acquisition" is real signal worth surfacing, but presenting it
 // as a headline would misattribute a stranger's guess as reporting.
-const NEWS_ARTICLE_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings"]);
+const NEWS_ARTICLE_SOURCES = MARKET_NEWS_SOURCES;
 // StockTwits ("fintwit") — free, no-key public API. Best-effort: shared cloud IPs
 // may be rate-limited (~200 req/hr) or 403'd, so failures degrade gracefully.
 const STOCKTWITS_LIMIT = 45;
@@ -149,6 +150,9 @@ const SOURCES = [
   "Yahoo Public News",
   "CNBC",
   "MarketWatch",
+  "Press Releases",
+  "Financial Media",
+  "Nasdaq",
   "FINRA Short Volume",
   "Price/Volume",
 ];
@@ -388,7 +392,7 @@ async function main() {
   // happens later, after price/news data exists, and takes effect next run).
   const hotMonitor = await loadHotMonitor();
   const today = new Date().toISOString().slice(0, 10);
-  for (const [ticker, info] of Object.entries(hotMonitor.tickers || {})) {
+  for (const [ticker, info] of Object.entries(hotMonitor.evidenceVersion === 2 ? hotMonitor.tickers || {} : {})) {
     if (info.expiresDate && info.expiresDate >= today) {
       registerStock(ticker, ticker, [ticker]);
       activeHotMonitorTickers.add(ticker);
@@ -400,6 +404,7 @@ async function main() {
   await enrichRegistryNamesFromSec(failures);
 
   for (const feed of feeds) {
+    if (quality.PAUSED_SOURCES[feed.source]) continue;
     try {
       let items;
       if (feed.type === "reddit") {
@@ -551,11 +556,12 @@ async function main() {
     generatedAt: new Date().toISOString(),
     dataMode: "real-public-no-key",
     sourceNote:
-      "Real snapshot from public no-key sources with dynamic ticker discovery. Coverage is best-effort. Reddit may be unavailable in scheduled runs, so SignalDesk also uses GDELT, public news RSS, SEC EDGAR, FINRA short-volume files, and public price/volume data.",
+      "Best-effort public data. Direct Reddit and Nasdaq adapters are paused after repeated failures; historical records remain available. Source coverage reports matched tickers, not completeness.",
     discoveryNote:
       "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
     sources: SOURCES,
     failures: summariseFailures(failures, 20),
+    sourceHealth: quality.sourceHealth({ signals, failures, generatedAt: new Date().toISOString() }, [], previous?.sourceHealth || []),
     signals,
     marketNews,
     events: events.slice(0, 400),
@@ -700,6 +706,7 @@ async function collectNewswires(events, failures, discovery) {
   // ranking — so dedupe on normalised title text across the whole sweep.
   const seenTitles = new Set();
   for (const wire of NEWSWIRES) {
+    if (quality.PAUSED_SOURCES[wire.source]) continue;
     try {
       const items = await xmlItemsPolite(wire.url);
       for (const item of items) {
@@ -753,8 +760,10 @@ async function collectTickerNews(events, failures, ticker, name) {
     ["Google News", () => newsRssItems("Google News", ticker, name)],
   ];
   for (const [source, load] of jobs) {
+    if (quality.PAUSED_SOURCES[source]) continue;
     try {
-      const items = await load();
+      const items = (await load()).filter(item => quality.usableNews(item));
+      if (!items.length) continue;
       for (const item of items) {
         collectMentions(events, source, item.title, item.url, item.score || 2, item.published, ticker);
       }
@@ -1142,18 +1151,19 @@ function dedupeEntries(entries) {
 function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
   const market = new Map(); // ticker -> latest Price/Volume snapshot
   for (const event of events) {
-    if (event.source === "Price/Volume") {
+    if (event.source === "Price/Volume" && quality.quoteState(event) === "current") {
       market.set(event.ticker, {
         priceMove: Number(event.priceMove),
         lastPrice: Number(event.lastPrice),
         relativeVolume: Number(event.relativeVolume) || 1,
+        quoteAsOf: event.quoteAsOf,
       });
     }
   }
 
   const stories = new Map(); // ticker -> [{source,title,url,published}]
   for (const event of events) {
-    if (!MARKET_NEWS_SOURCES.has(event.source) || !event.title) continue;
+    if (!MARKET_NEWS_SOURCES.has(event.source) || !quality.usableNews(event)) continue;
     const title = String(event.title).trim();
     if (title.length < 12) continue;
     if (!stories.has(event.ticker)) stories.set(event.ticker, []);
@@ -1190,6 +1200,7 @@ function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
       priceMove: quote.priceMove,
       lastPrice: Number.isFinite(quote.lastPrice) ? quote.lastPrice : null,
       relativeVolume: quote.relativeVolume,
+      quoteAsOf: quote.quoteAsOf,
       source: best.source,
       title: best.title.slice(0, 200),
       url: best.url,
@@ -1320,6 +1331,7 @@ async function fetchStooqMarket(ticker) {
 
 function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
   if (isClassActionSpam(text)) return;
+  if (MARKET_NEWS_SOURCES.has(source) && !quality.usableNews({ title: text, published })) return;
   const normalized = ` ${text.toLowerCase().replace(/[^a-z0-9.$&+ -]/g, " ")} `;
   if (!forceTicker) discoverTickerMentions(discovery, source, text, url, weight, published);
   for (const { ticker, name, aliases } of stockRegistry.values()) {
@@ -2341,7 +2353,7 @@ async function computeThemeHeatStep(failures, phraseVelocity = new Map()) {
 function proofQuarterMessage(leader) {
   const move = `${leader.priceMove >= 0 ? "+" : ""}${leader.priceMove.toFixed(1)}% on ${leader.volumeRatio.toFixed(1)}x volume`;
   const elevated = leader.siblings.length + leader.coMentionNeighbors.length;
-  const parts = [`${leader.ticker} proof quarter: ${move}`];
+  const parts = [`${leader.ticker} earnings-linked move: ${move}`];
   if (leader.headline) {
     parts.push(
       leader.headlineIsNews
@@ -2367,6 +2379,8 @@ async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) 
       type: "proof-quarter",
       priority: "high",
       ticker: leader.ticker,
+      evidenceVersion: leader.evidenceVersion,
+      evidenceUrl: leader.headlineUrl,
       message: proofQuarterMessage(leader),
     }));
     const events = [...springEvents, ...themeEvents, ...leaderEvents];
@@ -2374,7 +2388,10 @@ async function runAlertsStep(failures, hotTickers = new Set(), newLeaders = []) 
     const now = new Date();
     const weekKey = isoWeekKey(now);
     const isNewWeek = state.lastDigestDate !== weekKey;
-    if (isNewWeek) events.push(buildWeeklyDigest(themesPayload.themes || [], springsPayload.springs || []));
+    if (isNewWeek) {
+      const phrasePayload = await loadPhraseRadar();
+      events.push(buildWeeklyDigest(themesPayload.themes || [], springsPayload.springs || [], phrasePayload.phrases || []));
+    }
 
     const topic = process.env.SIGNALDESK_NTFY_TOPIC || "";
     let sent = 0;
@@ -2452,7 +2469,7 @@ async function refreshThemeRegistryStep(failures) {
 // fetchMarket is exported for the same reason: it is the one helper that cannot
 // throw (both quote legs go through allSettled), so a total price outage is
 // invisible unless its failure reporting is held in place by a test.
-export { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, hostGuard };
+export { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, hostGuard, buildMarketNews };
 
 // Only run the pipeline when this file is executed directly (`node
 // scripts/update-data.mjs`), not when it's imported -- main() hits real

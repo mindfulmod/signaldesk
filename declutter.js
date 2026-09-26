@@ -13,13 +13,13 @@
   const PANELS = [
     { selector: ".market-pulse", key: "pulse", defaultOpen: true },
     { selector: ".buy-panel", key: "buy", defaultOpen: true },
-    { selector: ".movers-panel", key: "movers", defaultOpen: !isPhone },
-    { selector: ".whatchanged-panel", key: "whatchanged", defaultOpen: true },
+    { selector: ".movers-panel", key: "movers", defaultOpen: false },
+    { selector: ".whatchanged-panel", key: "whatchanged", defaultOpen: false },
     { selector: ".themes-panel", key: "themes", defaultOpen: true },
-    { selector: ".phraseradar-panel", key: "phraseradar", defaultOpen: true },
-    { selector: ".clusters-panel", key: "clusters", defaultOpen: !isPhone },
+    { selector: ".phraseradar-panel", key: "phraseradar", defaultOpen: false },
+    { selector: ".clusters-panel", key: "clusters", defaultOpen: false },
     { selector: ".springs-panel", key: "springs", defaultOpen: true },
-    { selector: ".calibration-panel", key: "calibration", defaultOpen: true },
+    { selector: ".calibration-panel", key: "calibration", defaultOpen: false },
   ];
 
   function loadState() {

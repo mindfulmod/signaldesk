@@ -7,7 +7,7 @@
     html,
     body {
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     .app-shell,
@@ -136,22 +136,20 @@
       .side-panel {
         display: block;
         position: sticky !important;
-        top: 76px !important;
-        max-height: calc(100vh - 92px);
+        top: 130px !important;
+        max-height: calc(100vh - 146px);
         overflow-y: auto;
       }
 
       th {
-        top: 60px;
+        top: 112px;
       }
 
       th:nth-child(1), td:nth-child(1) { width: 56px; }
-      th:nth-child(3), td:nth-child(3) { width: 80px; }
+      th:nth-child(3), td:nth-child(3) { width: 98px; }
       th:nth-child(4), td:nth-child(4) { width: 145px; }
-      th:nth-child(5), td:nth-child(5) { width: 84px; }
-      th:nth-child(6), td:nth-child(6) { width: 96px; }
-      th:nth-child(7), td:nth-child(7) { width: 108px; }
-      th:nth-child(8), td:nth-child(8) { width: 112px; }
+      th:nth-child(5), td:nth-child(5) { width: 110px; }
+      th:nth-child(6), td:nth-child(6) { width: 108px; }
     }
 
     @media (min-width: 1181px) and (max-width: 1500px) {
@@ -182,10 +180,10 @@
 
       th:nth-child(1), td:nth-child(1) { width: 54px; }
       th:nth-child(2), td:nth-child(2) { width: auto; }
-      th:nth-child(3), td:nth-child(3) { width: 74px; }
+      th:nth-child(3), td:nth-child(3) { width: 98px; }
       th:nth-child(4), td:nth-child(4) { width: 126px; }
-      th:nth-child(6), td:nth-child(6) { width: 88px; }
-      th:nth-child(7), td:nth-child(7) { width: 96px; }
+      th:nth-child(5), td:nth-child(5) { width: 110px; }
+      th:nth-child(6), td:nth-child(6) { width: 96px; }
     }
 
     @media (max-width: 1180px) {
@@ -292,10 +290,8 @@
       .table-scroll td:nth-child(2)::before { content: "Ticker"; }
       .table-scroll td:nth-child(3)::before { content: "Setup"; }
       .table-scroll td:nth-child(4)::before { content: "Quote"; }
-      .table-scroll td:nth-child(5)::before { content: "Attention"; }
-      .table-scroll td:nth-child(6)::before { content: "Acceleration"; }
-      .table-scroll td:nth-child(7)::before { content: "Price/Vol"; }
-      .table-scroll td:nth-child(8)::before { content: "Evidence mix"; }
+      .table-scroll td:nth-child(5)::before { content: "Attention change"; }
+      .table-scroll td:nth-child(6)::before { content: "Market"; }
 
       .table-scroll td:nth-child(2) {
         grid-template-columns: 1fr;
@@ -307,7 +303,7 @@
 
       .ticker-cell {
         display: grid;
-        grid-template-columns: 44px 34px minmax(0, 1fr);
+        grid-template-columns: 44px minmax(0, 1fr);
         gap: 8px;
         width: 100%;
       }

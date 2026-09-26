@@ -305,7 +305,7 @@ function sparkline(values, { w = 66, h = 22, pad = 2, fluid = false } = {}) {
 function rankBadge(ticker, currentRank, prevRanks) {
   if (!prevRanks) return "";
   const prev = prevRanks.get(ticker);
-  if (prev == null) return `<span class="rank-delta new">NEW</span>`;
+  if (prev == null) return ""; // The attention-change column already says "New".
   const diff = prev - currentRank; // positive = moved up the board
   if (diff === 0) return `<span class="rank-delta flat" title="Unchanged vs prior snapshot">●</span>`;
   const up = diff > 0;
@@ -373,7 +373,7 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     // the UI can say "new" instead of faking a percentage.
     momentum: item.momentum == null ? null : Number(item.momentum) || 0,
     sentiment: Number(item.sentiment) || 0,
-    lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
+    lastPrice: item.lastPrice != null && Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
     quoteAsOf: item.quoteAsOf || null,
     quoteSource: item.quoteSource || null,
     priceMove: Number(item.priceMove) || 0,
@@ -605,7 +605,7 @@ function render() {
   // Keep the current selection if it exists anywhere in the filtered set (so a
   // deep-linked or starred ticker ranked beyond #50 still drives the detail
   // panel); otherwise fall back to the top visible row.
-  if (!selectedTicker || !items.some((item) => item.ticker === selectedTicker)) {
+  if (!selectedTicker || !ranked.some((item) => item.ticker === selectedTicker)) {
     selectedTicker = top50[0]?.ticker || "";
   }
 
@@ -647,12 +647,15 @@ function sourceTotal(item, sources) {
 // subtracts visible crowding and data-quality risks. This keeps a parabolic one-
 // source move from automatically becoming the site's top "opportunity."
 function discoveryProfile(item) {
+  const usableMarket = marketEvidenceCurrent(item);
+  const recentNewsSources = new Set([...(item.latest || []), item.topHeadline].filter(entry => entry && window.SIGNALDESK_QUALITY.usableNews(entry)).map(entry => entry.source));
+  const currentCatalystSources = DISCOVERY_CATALYST_SOURCES.filter(source => recentNewsSources.has(source));
   const social = sourceTotal(item, DISCOVERY_SOCIAL_SOURCES);
-  const catalyst = sourceTotal(item, DISCOVERY_CATALYST_SOURCES);
-  const market = sourceTotal(item, DISCOVERY_MARKET_SOURCES);
-  const allSources = [...new Set([...DISCOVERY_SOCIAL_SOURCES, ...DISCOVERY_CATALYST_SOURCES, ...DISCOVERY_MARKET_SOURCES])];
+  const catalyst = sourceTotal(item, currentCatalystSources);
+  const market = usableMarket ? sourceTotal(item, DISCOVERY_MARKET_SOURCES) : 0;
+  const allSources = [...new Set([...DISCOVERY_SOCIAL_SOURCES, ...currentCatalystSources, ...(usableMarket ? DISCOVERY_MARKET_SOURCES : [])])];
   const activeSources = allSources.filter((source) => (item.sources?.[source] || 0) > 0);
-  const catalystSources = DISCOVERY_CATALYST_SOURCES.filter((source) => (item.sources?.[source] || 0) > 0);
+  const catalystSources = currentCatalystSources.filter((source) => (item.sources?.[source] || 0) > 0);
   const activeGroups = [social > 0, catalyst > 0, market > 0].filter(Boolean).length;
   const total = Math.max(1, activeSources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0));
   const concentration = activeSources.length
@@ -662,18 +665,19 @@ function discoveryProfile(item) {
   const attention = clamp(0, 1, (Number(item.signalScore) || 0) / 85);
   const acceleration = item.momentum == null || item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
   const breadth = 0.65 * (activeGroups / 3) + 0.35 * clamp(0, 1, activeSources.length / 6);
-  const priceConfirmation = clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5);
-  const volumeConfirmation = clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5);
+  const priceConfirmation = usableMarket ? clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5) : 0;
+  const volumeConfirmation = usableMarket ? clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5) : 0;
   const confirmation = 0.55 * priceConfirmation + 0.45 * volumeConfirmation;
-  const catalystEvidence = clamp(0, 1, catalystSources.length / 3 + ((item.sources?.["SEC Filings"] || 0) > 0 ? 0.2 : 0));
+  const catalystEvidence = clamp(0, 1, catalystSources.length / 3 + (catalystSources.includes("SEC Filings") ? 0.2 : 0));
 
   let penalty = 0;
   const risks = [];
-  if (item.priceMove >= 12) {
+  if (!usableMarket) risks.push(item.lastPrice > 0 ? "No current price / volume" : "Quote unavailable");
+  if (usableMarket && item.priceMove >= 12) {
     penalty += Math.min(25, (item.priceMove - 12) * 1.1 + 5);
     risks.push("Extended move");
   }
-  if (item.relativeVolume >= 8) {
+  if (usableMarket && item.relativeVolume >= 8) {
     penalty += Math.min(8, (item.relativeVolume - 8) * 0.8 + 2);
     risks.push("Extreme volume");
   }
@@ -686,14 +690,14 @@ function discoveryProfile(item) {
     risks.push("Micro-cap volatility");
   }
   if (social > 0 && catalyst === 0) {
-    if (item.priceMove >= 5) penalty += 6;
+    if (usableMarket && item.priceMove >= 5) penalty += 6;
     risks.push("No verified catalyst");
   }
   if (activeGroups <= 1) {
     penalty += 10;
     risks.push("Thin evidence");
   }
-  if (item.priceMove <= -3) {
+  if (usableMarket && item.priceMove <= -3) {
     penalty += 6;
     risks.push("Price not confirming");
   }
@@ -704,16 +708,16 @@ function discoveryProfile(item) {
 
   let stage = "Watching";
   let tone = "watch";
-  if (item.priceMove >= 12 || (item.relativeVolume >= 8 && crowdAttention >= 3)) {
+  if (usableMarket && (item.priceMove >= 12 || (item.relativeVolume >= 8 && crowdAttention >= 3))) {
     stage = "Crowded";
     tone = "crowded";
-  } else if (item.momentum <= -15 || item.priceMove <= -3) {
+  } else if (item.momentum <= -15 || (usableMarket && item.priceMove <= -3)) {
     stage = "Cooling";
     tone = "cooling";
-  } else if (catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
+  } else if (usableMarket && catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
     stage = "Confirmed";
     tone = "confirmed";
-  } else if (item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
+  } else if (usableMarket && item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
     stage = "Early ignition";
     tone = "early";
   } else if (item.momentum >= 15 || crowdAttention >= 5) {
@@ -727,11 +731,11 @@ function discoveryProfile(item) {
   else if (activeGroups >= 2) evidence = "Developing";
 
   const reasons = [];
-  if (catalystSources.length) reasons.push(`${catalystSources.length} catalyst source${catalystSources.length === 1 ? "" : "s"}`);
+  if (catalystSources.length) reasons.push(`${catalystSources.length} news / filing source${catalystSources.length === 1 ? "" : "s"}`);
   if (activeGroups >= 2) reasons.push(`${activeGroups}/3 evidence groups active`);
   if (item.momentum >= 15) reasons.push(`Attention +${item.momentum.toFixed(0)}% vs prior`);
-  if (item.relativeVolume >= 1.2) reasons.push(`${item.relativeVolume.toFixed(1)}× relative volume`);
-  if (item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
+  if (usableMarket && item.relativeVolume >= 1.2) reasons.push(`${item.relativeVolume.toFixed(1)}× relative volume`);
+  if (usableMarket && item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
   if (!reasons.length) reasons.push("Monitoring for a second confirming signal");
 
   const move = `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%`;
@@ -741,6 +745,7 @@ function discoveryProfile(item) {
   if (tone === "building") summary = `Attention is building across the tracked channels. Evidence is improving, but the move is not fully confirmed yet.`;
   if (tone === "crowded") summary = `The ${move} move is already attention-grabbing. Treat this as crowding risk, not an invitation to chase.`;
   if (tone === "cooling") summary = `Attention remains visible, but price or mention momentum is cooling. Wait for the signal to repair before prioritizing it.`;
+  if (!usableMarket) summary = "Attention is visible, but current price / volume evidence is missing. This is not a market-confirmed setup.";
 
   return {
     score,
@@ -771,20 +776,30 @@ function renderBuyCandidates(items) {
 
   document.querySelectorAll("[data-buy-ticker]").forEach((button) => {
     button.addEventListener("click", () => {
-      selectedTicker = button.dataset.buyTicker;
-      byId("tickerSearch").value = "";
-      render();
+      selectResearchTicker(button.dataset.buyTicker);
       if (isNarrowViewport()) {
-        openDetailSheet();
+        openDetailSheet(`[data-buy-ticker="${CSS.escape(selectedTicker)}"]`);
       } else {
         // The discovery board lives on the Desk (tabs.js), so it has to be
         // revealed before scrolling — otherwise this scrolls to a hidden
         // element and looks like nothing happened.
         window.SIGNALDESK_SELECT_TAB?.("desk");
-        document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("ranking-heading").scrollIntoView({ block: "start" });
       }
     });
   });
+}
+
+function selectResearchTicker(ticker) {
+  // Research can surface a stock outside the Desk's current size/watch filter.
+  // Opening it should reveal that stock, not silently substitute another one.
+  selectedTicker = ticker;
+  byId("tickerSearch").value = "";
+  capFilter = "all";
+  attentionFilter = "all";
+  watchlistFilter = false;
+  syncControls();
+  render();
 }
 
 function buyCard(item, index) {
@@ -823,9 +838,24 @@ function updateStatus() {
       ? `Data freshness warning: this snapshot is from ${formatDateTime(snapshot.generatedAt)}. Use it to study prior market attention, not as a current trading signal.`
       : "";
   }
+  markBlockedSources();
+  const coverage = byId("coverageStatus");
+  if (coverage) {
+    const signals = snapshot.signals || [];
+    const priced = signals.filter(marketEvidenceCurrent).length;
+    const sources = window.SIGNALDESK_QUALITY.sourceHealth(snapshot);
+    coverage.textContent = `${formatShortDateTime(snapshot.generatedAt)} snapshot · ${priced}/${signals.length} tickers with recent market data · ${sources.filter(row => row.tickers > 0).length}/${sources.length} sources with matches`;
+  }
 }
 
+function marketEvidenceCurrent(item) {
+  return window.SIGNALDESK_QUALITY.quoteState(item) === "current" && Number(item.sources?.["Price/Volume"]) > 0;
+}
+
+let boardExpanded = false;
 function renderTable(items) {
+  byId("clearFocus").hidden = !byId("tickerSearch").value;
+  byId("boardEmpty").hidden = items.length > 0;
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
   const watchLabel = watchlistFilter ? " watchlist" : "";
@@ -834,57 +864,52 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `Showing ${items.length}${filterLabel} real-data ticker${items.length === 1 ? "" : "s"}`
-      : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
+      ? `${items.length}${filterLabel} tickers${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
+      : "No matches — adjust your search or filters";
   }
   const prevRanks = previousRankMap();
-  byId("rankingBody").innerHTML = items
+  byId("rankingBody").innerHTML = (boardExpanded ? items : items.slice(0, 15))
     .map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
-      const total = Math.max(1, item.mentions);
-      const sourceBars = SOURCES.map(
-        (source) => `<span style="width:${((item.sources[source] || 0) / total) * 100}%; background:${SOURCE_COLORS[source]}"></span>`
-      ).join("");
       const momentumClass = item.momentum == null ? "flat" : item.momentum >= 0 ? "up" : "down";
       const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
-      const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
-      const catalystBadge =
-        item.topHeadline && CATALYST_WORDS_RE.test(item.topHeadline.title)
-          ? `<span class="catalyst-badge" title="${escapeHtml(item.topHeadline.title)}">${item.topHeadline.isNewsArticle ? "News" : "Buzz"}</span>`
-          : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
           <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
           <td>
             <div class="ticker-cell">
               ${starButton(item.ticker)}
-              <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
-              <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
-              ${catalystBadge}
-              ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
+              <span class="ticker-name"><button type="button" class="ticker-open" aria-label="Open ${item.ticker} details">${item.ticker}</button>${nameLine}</span>
             </div>
             ${chips}
           </td>
           <td><div class="setup-cell"><span class="signal-pill tone-${profile.tone}">${profile.score}</span><small>${escapeHtml(profile.stage)}</small></div></td>
           <td>${formatQuoteCell(item)}</td>
-          <td class="col-secondary">${fmt.format(item.mentions)}</td>
-          <td><span class="momentum ${momentumClass}">${item.momentum == null ? "new" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
-          <td class="col-tertiary">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x</td>
-          <td class="col-secondary"><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
+          <td><span class="momentum ${momentumClass}"${item.momentum == null ? ' title="First appearance — no prior snapshot for comparison"' : ''}>${item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
+          <td class="col-tertiary">${marketEvidenceCurrent(item) ? `<span class="market-change ${priceTone(item.priceMove)}">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%</span><small class="market-volume">${item.relativeVolume.toFixed(1)}× volume</small>` : '<span class="quote-warning">Unavailable</span>'}</td>
         </tr>`;
     })
     .join("");
 
   document.querySelectorAll("#rankingBody tr").forEach((row) => {
-    row.addEventListener("click", () => {
+    row.addEventListener("click", (event) => {
+      const keyboard = event.detail === 0 && event.target.closest(".ticker-open");
       selectedTicker = row.dataset.ticker;
       render();
       // On narrow screens the inline panel is hidden; show details in the sheet.
       if (isNarrowViewport()) openDetailSheet();
+      else if (keyboard) byId("rankingBody").querySelector(`[data-ticker="${CSS.escape(selectedTicker)}"] .ticker-open`)?.focus({ preventScroll: true });
     });
   });
   bindStars(byId("rankingBody"));
+  const more = byId("moreTickers");
+  if (more) {
+    more.hidden = items.length <= 15;
+    more.textContent = boardExpanded ? "Show top 15" : `Show all ${items.length} tickers`;
+    more.setAttribute("aria-expanded", String(boardExpanded));
+    more.onclick = () => { boardExpanded = !boardExpanded; render(); };
+  }
 }
 
 // Three market-psychology states are more useful than three versions of "hot."
@@ -900,7 +925,7 @@ function renderMovers(items) {
 
   const staged = items.map((item) => ({ ...item, discovery: item.discovery || discoveryProfile(item) }));
   const early = staged
-    .filter((item) => ["early", "building"].includes(item.discovery.tone))
+    .filter((item) => marketEvidenceCurrent(item) && ["early", "building"].includes(item.discovery.tone))
     .sort((a, b) => b.discovery.score - a.discovery.score)
     .slice(0, 5);
   const confirmed = staged
@@ -922,10 +947,12 @@ function renderMovers(items) {
 
   board.querySelectorAll("[data-mover-ticker]").forEach((button) => {
     button.addEventListener("click", () => {
-      selectedTicker = button.dataset.moverTicker;
-      byId("tickerSearch").value = "";
-      render();
-      if (isNarrowViewport()) openDetailSheet();
+      selectResearchTicker(button.dataset.moverTicker);
+      if (isNarrowViewport()) openDetailSheet(`[data-mover-ticker="${CSS.escape(selectedTicker)}"]`);
+      else {
+        window.SIGNALDESK_SELECT_TAB?.("desk");
+        document.getElementById("ranking-heading").scrollIntoView({ block: "start" });
+      }
     });
   });
 }
@@ -966,10 +993,19 @@ function updateRangeNote() {
 
 function renderDetail(items, top50) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
-  if (!selected) return;
+  if (!selected) {
+    detailTicker = "";
+    lastDetailHtml = '<div class="detail-empty"><h2>No stock selected</h2><p>Clear the search or filters, then choose a stock to read its evidence.</p></div>';
+    byId("detailPanel").innerHTML = lastDetailHtml;
+    renderDetailSheetContent();
+    return;
+  }
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
+  const selectionChanged = detailTicker !== selected.ticker;
+  detailTicker = selected.ticker;
   lastDetailHtml = detailMarkup(selected, rank);
   byId("detailPanel").innerHTML = lastDetailHtml;
+  if (selectionChanged) byId("detailPanel").scrollTop = 0;
   bindStars(byId("detailPanel"));
   renderDetailSheetContent();
 }
@@ -978,19 +1014,24 @@ function renderDetail(items, top50) {
 // a bottom sheet instead — clicking a row used to scroll the page to the very
 // bottom, which was disorienting on mobile.
 let lastDetailHtml = "";
+let detailTicker = "";
+let detailReturnSelector = "";
 
 function isNarrowViewport() {
   return window.matchMedia("(max-width: 1180px)").matches;
 }
 
-function openDetailSheet() {
+function openDetailSheet(returnSelector = `#rankingBody [data-ticker="${CSS.escape(selectedTicker)}"] .ticker-open`) {
   const sheet = byId("detailSheet");
   if (!sheet) return;
+  detailReturnSelector = returnSelector;
   sheet.hidden = false;
   document.body.classList.add("sheet-open");
+  document.querySelector(".app-shell").inert = true;
   renderDetailSheetContent();
   const content = byId("detailSheetContent");
   if (content) content.scrollTop = 0;
+  byId("detailSheetClose")?.focus({ preventScroll: true });
 }
 
 function closeDetailSheet() {
@@ -998,6 +1039,8 @@ function closeDetailSheet() {
   if (!sheet || sheet.hidden) return;
   sheet.hidden = true;
   document.body.classList.remove("sheet-open");
+  document.querySelector(".app-shell").inert = false;
+  if (detailReturnSelector) document.querySelector(detailReturnSelector)?.focus({ preventScroll: true });
 }
 
 function renderDetailSheetContent() {
@@ -1026,6 +1069,7 @@ function detailMarkup(item, rank) {
         ${starButton(item.ticker)}
       </div>
       <p id="selectedName">${escapeHtml(item.name || item.ticker)}</p>
+      <p class="detail-quote-time">${escapeHtml([item.quoteSource, item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf)) ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" · "))}</p>
       ${profileMetaMarkup(item)}
       ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
     </div>
@@ -1047,8 +1091,8 @@ function detailMarkup(item, rank) {
 
     <div class="stat-grid">
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
-      ${statBlock("Price", formatPrice(item.lastPrice), priceMoveText(item), priceTone(item.priceMove))}
-      ${statBlock("Rel. volume", item.relativeVolume ? `${item.relativeVolume.toFixed(1)}×` : "-", item.relativeVolume >= VOL_HOT ? "elevated" : "normal", item.relativeVolume >= VOL_HOT ? "up" : "")}
+      ${statBlock("Price", formatPrice(item.lastPrice), marketEvidenceCurrent(item) ? priceMoveText(item) : "No recent market data", marketEvidenceCurrent(item) ? priceTone(item.priceMove) : "")}
+      ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
       ${statBlock("Acceleration", item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no prior snapshot yet" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
@@ -1188,11 +1232,11 @@ function attentionMarkup(item) {
 function topHeadlineMarkup(item) {
   const headline = item.topHeadline;
   if (!headline || !headline.title) return "";
-  const when = headline.published ? formatShortDateTime(headline.published) : "";
+  const when = Number.isFinite(Date.parse(headline.published)) ? formatShortDateTime(headline.published) : "Publication date unavailable";
   // Only a genuine published article/filing gets called a "headline" --
   // social commentary that happens to mention a catalyst is real signal,
   // but labeling a stranger's forum comment as reporting would be dishonest.
-  const label = headline.isNewsArticle ? "Top headline" : "Notable chatter (not a news article)";
+  const label = !window.SIGNALDESK_QUALITY.usableNews(headline) ? "Archived / undated evidence · not a current catalyst" : headline.isNewsArticle ? "Top headline" : "Notable chatter (not a news article)";
   return `
     <div class="catalyst-callout${headline.isNewsArticle ? "" : " catalyst-callout-social"}">
       <span class="catalyst-label">${label}</span>
@@ -1207,7 +1251,7 @@ function headlinesMarkup(item) {
   if (!latest.length) return "";
   return `
     <div class="detail-section">
-      <h3>Recent source evidence</h3>
+      <h3>Saved source evidence</h3>
       <ul class="headline-list">
         ${latest
           .map(
@@ -1239,8 +1283,8 @@ function attentionStats(item) {
     social,
     news,
     attention: social + news,
-    volHot: item.relativeVolume >= VOL_HOT,
-    priceHot: item.priceMove >= 3,
+    volHot: marketEvidenceCurrent(item) && item.relativeVolume >= VOL_HOT,
+    priceHot: marketEvidenceCurrent(item) && item.priceMove >= 3,
     momentumHot: item.momentum >= 20,
   };
 }
@@ -1269,6 +1313,7 @@ function attentionGroupFor(item) {
 }
 
 function trendInterpretation(item) {
+  if (!marketEvidenceCurrent(item)) return "Saved attention is visible, but recent market evidence is missing. Check the quote timestamp and original sources before interpreting this as a setup.";
   const { social, news, volHot, priceHot } = attentionStats(item);
   const activeSources = SOURCES.filter((s) => (item.sources[s] || 0) > 0).length;
 
@@ -1319,10 +1364,13 @@ function formatPrice(value) {
 
 function formatQuoteCell(item) {
   const price = formatPrice(item.lastPrice);
-  if (price === "-") return "-";
-  const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
-  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
-  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
+  if (price === "-") return '<span class="quote-warning">No quote</span>';
+  const hasDate = item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf));
+  const meta = [item.quoteSource, hasDate ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" • ");
+  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap" title="${escapeHtml(capLabelFor(item))}">$${shortFmt.format(item.marketCap)} cap</small>` : "";
+  const warning = window.SIGNALDESK_QUALITY.quoteState(item) === "stale" ? '<small class="quote-warning">Stale quote · not current</small>' : "";
+  const date = hasDate ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(new Date(item.quoteAsOf)) : "Undated";
+  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${warning}${cap}<small class="quote-meta" title="${escapeHtml(meta)}">${escapeHtml(date)}</small>`;
 }
 
 function capLabelFor(item) {
@@ -1386,8 +1434,16 @@ function bindEvents() {
     selectedTicker = "";
     render();
   });
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
-    th.addEventListener("click", () => setRankMode(th.dataset.sort));
+  byId("rankMode").addEventListener("change", event => setRankMode(event.target.value));
+  byId("resetView").addEventListener("click", () => {
+    byId("tickerSearch").value = "";
+    document.querySelectorAll('input[name="source"]').forEach(input => { input.checked = true; });
+    capFilter = "all";
+    attentionFilter = "all";
+    watchlistFilter = false;
+    syncControls();
+    render();
+    byId("tickerSearch").focus();
   });
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
@@ -1405,6 +1461,12 @@ function bindEvents() {
   document.querySelector(".detail-sheet-backdrop")?.addEventListener("click", closeDetailSheet);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeDetailSheet();
+    const sheet = byId("detailSheet");
+    if (event.key !== "Tab" || !sheet || sheet.hidden) return;
+    const targets = [...sheet.querySelectorAll('button:not([disabled]), a[href], summary, input, select, [tabindex="0"]')].filter(el => el.getClientRects().length);
+    const first = targets[0], last = targets.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
   });
   window.addEventListener("resize", () => {
     if (!isNarrowViewport()) closeDetailSheet();
@@ -1414,7 +1476,8 @@ function bindEvents() {
 
 function setRankMode(mode) {
   rankMode = mode;
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+  byId("rankMode").value = mode;
+  document.querySelectorAll("th[data-sort]").forEach((th) => {
     const active = th.dataset.sort === mode;
     th.classList.toggle("sort-active", active);
     th.setAttribute("aria-sort", active ? "descending" : "none");
@@ -1451,7 +1514,8 @@ function setWatchlistFilter(on) {
 // hydrating state from the URL so deep-linked views show the right active
 // toggles without firing a render per control.
 function syncControls() {
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+  byId("rankMode").value = rankMode;
+  document.querySelectorAll("th[data-sort]").forEach((th) => {
     const active = th.dataset.sort === rankMode;
     th.classList.toggle("sort-active", active);
     th.setAttribute("aria-sort", active ? "descending" : "none");
@@ -1521,6 +1585,9 @@ function toggleSidebar() {
   button.setAttribute("title", hidden ? "Show filters" : "Hide filters");
   button.setAttribute("aria-label", hidden ? "Show filters" : "Hide filters");
   button.setAttribute("aria-pressed", String(!hidden));
+  if (!hidden && window.matchMedia("(max-width: 980px)").matches) {
+    byId("sidebar").scrollIntoView({ block: "start" });
+  }
 }
 
 function setDataStatus(message) {
@@ -1536,30 +1603,35 @@ function escapeHtml(value) {
 }
 
 function markBlockedSources() {
-  // Parse failures like "Wallstreetbets: 403 Blocked" and badge each affected source.
-  const failures = snapshot?.failures || [];
-  const blockedSources = new Set(
-    failures
-      .map((f) => {
-        const match = f.match(/^([^:]+):/);
-        return match ? match[1].trim() : null;
-      })
-      .filter(Boolean)
-  );
-
+  const group = byId("platform-heading")?.closest(".control-group");
+  if (!group) return;
+  let inactive = byId("inactiveSources");
+  if (!inactive) {
+    inactive = document.createElement("details");
+    inactive.id = "inactiveSources";
+    inactive.innerHTML = '<summary>Unavailable / no matches</summary><p class="range-note">Historical records are retained. No matches does not necessarily mean a failed feed.</p><div class="inactive-source-list"></div>';
+    group.appendChild(inactive);
+  }
+  const historical = byId("windowMode")?.value === "history";
+  const history = historySnapshots();
+  const rows = window.SIGNALDESK_QUALITY.sourceHealth(snapshot, history);
   document.querySelectorAll('input[name="source"]').forEach((input) => {
     const row = input.closest(".check-row");
     if (!row) return;
-    // Remove any prior badge
+    const status = rows.find(entry => entry.source === input.value);
+    if (!status) return;
+    const hasCoverage = historical ? history.some(day => day.signals?.some(item => item.sources?.[input.value] > 0)) : status.tickers > 0;
+    input.disabled = !hasCoverage;
+    row.title = status.reason;
     row.querySelector(".source-status")?.remove();
-    if (blockedSources.has(input.value)) {
-      const badge = document.createElement("span");
-      badge.className = "source-status source-blocked";
-      badge.textContent = "blocked";
-      badge.title = failures.find((f) => f.startsWith(input.value)) || "Source unavailable";
-      row.appendChild(badge);
-    }
+    const badge = document.createElement("span");
+    badge.className = `source-status source-${status.state}`;
+    badge.textContent = historical && hasCoverage ? "history" : status.state === "covered" ? String(status.tickers) : status.state.replace("-", " ");
+    row.appendChild(badge);
+    if (hasCoverage && row.parentElement !== group) group.insertBefore(row, inactive);
+    if (!hasCoverage && row.parentElement === group) inactive.querySelector(".inactive-source-list").appendChild(row);
   });
+  inactive.querySelector("summary").textContent = `Unavailable / no matches (${inactive.querySelectorAll("input").length})`;
 }
 
 async function init() {
@@ -1574,9 +1646,8 @@ async function init() {
   applyUrlParams();
   bindEvents();
   syncControls();
-  // On narrow viewports default the sidebar to hidden so main content isn't
-  // pushed below a long filter panel. The Filters button reveals it on demand.
-  if (window.innerWidth <= 980 && !location.search.includes("watch=1")) {
+  // The stock board is the starting point at every width. Filters are on demand.
+  if (!location.search.includes("watch=1")) {
     const shell = document.querySelector(".app-shell");
     if (shell && !shell.classList.contains("sidebar-hidden")) {
       shell.classList.add("sidebar-hidden");

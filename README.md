@@ -1,5 +1,12 @@
 # SignalDesk Stock Mentions
 
+September 2026 cleanup: see [the production review](PRODUCTION_REVIEW_2026-09-25.md)
+and [adoption tracking plan](ADOPTION_TRACKER.md). The Desk leads with the stock
+board; Research includes a human-reviewed adoption watchlist. Direct Reddit and
+Nasdaq adapters are paused after repeated failures. Historical data is retained,
+stale quotes are marked, and current news requires a publication date within 72
+hours. Older status snapshots below describe the previous release.
+
 SignalDesk is a static, evidence-weighted stock-attention dashboard hosted on GitHub Pages and refreshed during market sessions with GitHub Actions.
 
 The GitHub repository is the baseline going forward. Local drafts should be treated as prototypes unless they have been merged into `main`.

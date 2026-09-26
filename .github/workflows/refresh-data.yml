@@ -17,6 +17,10 @@ on:
       - "data/theme-overrides.json"
       - "script.js"
       - "enhancements.js"
+      - "data-quality.js"
+      - "adoption-watchlist.js"
+      - "adoption.js"
+      - "desk-cleanup.css"
       - "springs.js"
       - "themes.js"
       - "phrase-radar.js"
@@ -50,6 +54,9 @@ jobs:
         run: |
           node --check script.js
           node --check enhancements.js
+          node --check data-quality.js
+          node --check adoption-watchlist.js
+          node --check adoption.js
           node --check springs.js
           node --check themes.js
           node --check phrase-radar.js
