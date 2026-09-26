@@ -132,7 +132,7 @@ export function isoWeekKey(date) {
   return `${d.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`;
 }
 
-export function buildWeeklyDigest(themes, springs) {
+export function buildWeeklyDigest(themes, springs, phrases = null) {
   const leaderboard = [...themes]
     .filter((t) => Number.isFinite(t.heat))
     .sort((a, b) => b.heat - a.heat)
@@ -142,7 +142,7 @@ export function buildWeeklyDigest(themes, springs) {
   const lines = [
     leaderboard.length ? `Theme leaderboard: ${leaderboard.join(" | ")}` : "Theme leaderboard: no themes have enough data to score yet.",
     `Springs board: ${counts.coiled || 0} coiled, ${counts.released || 0} released, ${counts.dead || 0} dead this week.`,
-    "Phrase-radar newcomers: not available yet (Layer 0a is a later build item).",
+    phrases === null ? "Phrase radar: coverage unavailable." : `Phrase radar: ${phrases.filter(p => p.confirmed).length} confirmed of ${phrases.length} candidates. Unconfirmed is not evidence of adoption.`,
   ];
   return { type: "weekly-digest", priority: "normal", message: lines.join(" ") };
 }

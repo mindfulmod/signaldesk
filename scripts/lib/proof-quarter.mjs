@@ -1,11 +1,12 @@
 // Proof-quarter detector — THEME_ENGINE.md Layer 0b. Trigger per ticker:
-// close gaps >=+8% on >=3x 60d avg volume AND same-day headlines contain
-// earnings/guidance vocabulary. Effect: mark the ticker a candidate theme
+// close gaps >=+8% on >=3x 60d avg volume AND published news within 48 hours
+// reports earnings/results or a guidance update. Effect: mark a candidate theme
 // leader; elevate its co-mention neighbors and GICS siblings to a
 // hot-monitor list for 2 quarters (covered by news/pageviews/ledger even
 // with zero social chatter).
 import { readFile, writeFile } from "node:fs/promises";
 import { topNeighbors } from "./co-mention.mjs";
+import quality from "../../data-quality.js";
 
 const ROOT = new URL("../../", import.meta.url);
 export const LEADERS_URL = new URL("data/leaders.json", ROOT);
@@ -20,10 +21,8 @@ export const LEADER_ELEVATION_DAYS = 182; // "2 quarters"
 export const MAX_SIBLINGS = 15;
 export const MAX_CO_MENTION_NEIGHBORS = 8;
 
-// IMPACT_WORDS (update-data.mjs) plus the earnings/guidance-specific terms
-// the spec calls out by name.
-const EARNINGS_VOCAB =
-  /\b(surge|surges|surged|soar|soars|plunge|plunges|plunged|tumble|tumbles|sink|sinks|slump|jump|jumps|jumped|rally|rallies|crash|crashes|spike|spikes|drop|drops|dropped|fall|falls|fell|slide|slides|rise|rises|rose|gain|gains|gained|beat|beats|miss|misses|cut|cuts|raise|raises|raised|hike|hikes|warn|warns|warned|guidance|outlook|earnings|quarterly|quarter|eps|revenue|forecast)\b/i;
+// Price-action vocabulary is not evidence of an earnings event. See the
+// shared earningsHeadline rule and the Sep 2026 stale-headline regressions.
 
 export async function loadLeaders() {
   try {
@@ -60,19 +59,18 @@ export async function loadHotMonitor() {
 }
 
 // Pure trigger check for one ticker on one day.
-export function detectProofQuarter({ priceMove, volume, avgVolume60d, headlineTexts = [] }) {
+export function detectProofQuarter({ priceMove, volume, avgVolume60d, headlineTexts = [], now = Date.now() }) {
   if (!Number.isFinite(priceMove) || priceMove < PROOF_QUARTER_GAP_THRESHOLD) return null;
   if (!Number.isFinite(volume) || !Number.isFinite(avgVolume60d) || avgVolume60d <= 0) return null;
   const volumeRatio = volume / avgVolume60d;
   if (volumeRatio < PROOF_QUARTER_VOLUME_MULT) return null;
-  // Accepts either plain strings (older callers, tests) or {text, isNews}
-  // records from orderByEvidence.
+  // Unattributed legacy strings are accepted as input but cannot qualify.
   const candidates = headlineTexts.map((entry) => (typeof entry === "string" ? { text: entry, isNews: false } : entry));
-  const matched = candidates.find((entry) => EARNINGS_VOCAB.test(entry.text));
+  const matched = candidates.find(entry => entry.isNews && quality.recent(entry.published, now, 48) && quality.earningsHeadline(entry.text));
   const matchedHeadline = matched?.text;
   const matchedHeadlineIsNews = Boolean(matched?.isNews);
   if (!matchedHeadline) return null;
-  return { priceMove, volumeRatio, matchedHeadline: matchedHeadline.slice(0, 200), matchedHeadlineIsNews };
+  return { priceMove, volumeRatio, matchedHeadline: matchedHeadline.slice(0, 200), matchedHeadlineIsNews, headlineUrl: matched.url, headlinePublished: matched.published };
 }
 
 // Trailing 60d average volume from the ledger, excluding today's own row.
@@ -103,29 +101,31 @@ function addDays(dateStr, days) {
 // treated equally, which is how the feed ended up attributing a +602% proof
 // quarter to "$SXTC The offering closure disclosure dropped in after-hours
 // trading..." — a StockTwits post. Published articles and filings sort first;
-// social chatter is a last resort and is labelled as such by the caller.
+// the detector also requires dated news and rejects social-only matches.
 export function orderByEvidence(entries, newsSources = new Set()) {
   const rank = (entry) => (newsSources.has(entry.source) ? 0 : 1);
   return [...entries]
     .sort((a, b) => rank(a) - rank(b))
-    .map((entry) => ({ text: entry.title, isNews: newsSources.has(entry.source) }));
+    .map((entry) => ({ text: entry.title, isNews: newsSources.has(entry.source), published: entry.published, url: entry.url }));
 }
 
-export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEdges, prevLeaders, dateStr, newsSources = new Set() }) {
+export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEdges, prevLeaders, dateStr, newsSources = new Set(), now = Date.now() }) {
   const priceByTicker = new Map();
   const headlinesByTicker = new Map();
   for (const event of events) {
     if (!event.ticker) continue;
-    if (event.source === "Price/Volume") {
+    if (event.source === "Price/Volume" && quality.quoteState(event, now) === "current") {
       priceByTicker.set(event.ticker, { priceMove: event.priceMove, volume: event.volume });
     } else if (event.title) {
       if (!headlinesByTicker.has(event.ticker)) headlinesByTicker.set(event.ticker, []);
       // Keep the source so a published article can outrank a forum post below.
-      headlinesByTicker.get(event.ticker).push({ title: event.title, source: event.source });
+      headlinesByTicker.get(event.ticker).push({ title: event.title, source: event.source, published: event.published, url: event.url });
     }
   }
 
-  const activeLeaders = (prevLeaders.leaders || []).filter((l) => !isExpired(l, dateStr));
+  // Legacy matches lacked a publication-date check and used generic move
+  // words. Keep the historical alerts, but do not use them to expand coverage.
+  const activeLeaders = (prevLeaders.leaders || []).filter((l) => l.evidenceVersion === 2 && !isExpired(l, dateStr));
   const activeTickers = new Set(activeLeaders.map((l) => l.ticker));
   const newLeaders = [];
 
@@ -139,6 +139,7 @@ export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEd
       volume: price.volume,
       avgVolume60d,
       headlineTexts: orderByEvidence(headlinesByTicker.get(ticker) || [], newsSources),
+      now,
     });
     if (!trigger) continue;
 
@@ -159,6 +160,9 @@ export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEd
       volumeRatio: trigger.volumeRatio,
       headline: trigger.matchedHeadline,
       headlineIsNews: trigger.matchedHeadlineIsNews,
+      headlineUrl: trigger.headlineUrl,
+      headlinePublished: trigger.headlinePublished,
+      evidenceVersion: 2,
       siblings,
       coMentionNeighbors,
     });
@@ -178,7 +182,7 @@ export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEd
 
   return {
     leadersPayload: { generatedAt: new Date().toISOString(), leaders },
-    hotMonitorPayload: { generatedAt: new Date().toISOString(), tickers: hotMonitorTickers },
+    hotMonitorPayload: { generatedAt: new Date().toISOString(), evidenceVersion: 2, tickers: hotMonitorTickers },
     newLeaders,
   };
 }

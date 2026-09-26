@@ -33,17 +33,16 @@
       id: "desk",
       label: "The Desk",
       shortLabel: "Desk",
-      hint: "Everything that works today: what the market is doing, the best-evidence setups, and the full discovery board.",
-      // Order matters — it is the daily reading order. Market context first,
-      // then the short list, then the full board, then the slower context.
-      selectors: [".market-pulse", ".buy-panel", ".dashboard-grid", ".movers-panel", ".whatchanged-panel"],
+      hint: "Find a name, open the evidence, then check the risks. Public snapshots are not live quotes.",
+      // Order matters: start with research navigation, then market context.
+      selectors: [".dashboard-grid", ".market-pulse"],
     },
     {
       id: "research",
       label: "Research",
       shortLabel: "Research",
-      hint: "Slower signals still filling up. Panels with no data say what they are waiting for rather than showing you a blank.",
-      selectors: [".themes-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
+      hint: "Track adoption evidence separately from market attention. Experimental detectors remain available below.",
+      selectors: [".adoption-panel", ".buy-panel", ".themes-panel", ".movers-panel", ".whatchanged-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
     },
   ];
 
@@ -51,7 +50,7 @@
   // many actually have something in them. A count of populated panels is the
   // one number that answers "is it worth opening this?" — a themes count would
   // read as 6 while every theme sat quiet.
-  const RESEARCH_CONTENT = ["#themesRail", "#springsBoard", "#phraseRadarFeed", "#clustersFeed", "#calibrationSummary"];
+  const RESEARCH_CONTENT = ["#adoptionFeed", "#themesRail", "#springsBoard", "#phraseRadarFeed", "#clustersFeed", "#calibrationSummary"];
 
   const bySelector = new Map();
   for (const tab of TABS) {

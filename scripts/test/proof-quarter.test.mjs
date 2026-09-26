@@ -1,134 +1,67 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { detectProofQuarter, trailingAvgVolume, computeProofQuarters, orderByEvidence, PROOF_QUARTER_GAP_THRESHOLD, PROOF_QUARTER_VOLUME_MULT } from "../lib/proof-quarter.mjs";
+import { detectProofQuarter, trailingAvgVolume, computeProofQuarters, orderByEvidence, PROOF_QUARTER_GAP_THRESHOLD } from "../lib/proof-quarter.mjs";
+const now = "2026-09-25T23:59:59Z";
+const news = { text: "NVDA beats earnings and raises guidance", isNews: true, published: "2026-09-25T13:00:00Z", url: "https://example.com/earnings" };
+const base = { priceMove: 10, volume: 4_000_000, avgVolume60d: 1_000_000, headlineTexts: [news], now };
 
-test("detectProofQuarter: fires only when gap, volume, and earnings vocabulary all align", () => {
-  const base = { priceMove: 10, volume: 4_000_000, avgVolume60d: 1_000_000, headlineTexts: ["NVDA beats on guidance, raises outlook"] };
-  const result = detectProofQuarter(base);
-  assert.ok(result);
-  assert.ok(result.volumeRatio >= PROOF_QUARTER_VOLUME_MULT);
-
-  assert.equal(detectProofQuarter({ ...base, priceMove: PROOF_QUARTER_GAP_THRESHOLD - 1 }), null, "gap too small");
-  assert.equal(detectProofQuarter({ ...base, volume: 2_000_000 }), null, "volume surge too small");
-  assert.equal(detectProofQuarter({ ...base, headlineTexts: ["Stock moved for unrelated reasons"] }), null, "no earnings vocabulary");
-  assert.equal(detectProofQuarter({ ...base, headlineTexts: [] }), null, "no headlines at all");
+test("proof quarter requires unchanged market thresholds and recent reported results", () => {
+  assert.ok(detectProofQuarter(base));
+  assert.equal(detectProofQuarter({ ...base, priceMove: PROOF_QUARTER_GAP_THRESHOLD - 1 }), null);
+  assert.equal(detectProofQuarter({ ...base, volume: 2_000_000 }), null);
+  assert.equal(detectProofQuarter({ ...base, avgVolume60d: 0 }), null);
+  assert.equal(detectProofQuarter({ ...base, headlineTexts: [] }), null);
 });
-
-test("trailingAvgVolume: averages the trailing window excluding today's own row", () => {
+test("stale, undated, social and generic forecast matches never create leaders", () => {
+  for (const headline of [
+    { ...news, published: "2026-07-26T12:00:00Z" }, { ...news, published: undefined },
+    { ...news, isNews: false }, { ...news, text: "Price to earnings forward of ZW Data" },
+    { ...news, text: "TDIC.O Forecast — Price Prediction" },
+    { ...news, text: "SCHMID surges after Nvidia considers glass substrates" }, "NVDA beats earnings",
+  ]) assert.equal(detectProofQuarter({ ...base, headlineTexts: [headline] }), null);
+});
+test("trailing average excludes today's volume and requires enough history", () => {
   const rows = Array.from({ length: 65 }, (_, i) => [`d${i}`, 0, 0, 100, i < 64 ? 1_000_000 : 50_000_000]);
-  const avg = trailingAvgVolume(rows, 60);
-  assert.ok(avg < 2_000_000, `expected today's huge volume to be excluded from the average, got ${avg}`);
+  assert.equal(trailingAvgVolume(rows), 1_000_000);
+  assert.equal(trailingAvgVolume(rows.slice(0, 10)), null);
 });
-
-test("trailingAvgVolume: null when there isn't enough history", () => {
-  const rows = Array.from({ length: 10 }, (_, i) => [`d${i}`, 0, 0, 100, 1_000_000]);
-  assert.equal(trailingAvgVolume(rows, 60), null);
+test("evidence ordering retains publication time and URL", () => {
+  const ordered = orderByEvidence([{ title: "chatter", source: "StockTwits" }, { title: news.text, source: "Google News", published: news.published, url: news.url }], new Set(["Google News"]));
+  assert.equal(ordered[0].isNews, true);
+  assert.equal(ordered[0].published, news.published);
+  assert.equal(ordered[0].url, news.url);
+  assert.equal(ordered[1].isNews, false);
 });
-
-test("computeProofQuarters: detects a new leader, elevates GICS siblings and co-mention neighbors, dedupes an already-active leader", () => {
-  const priorRows = Array.from({ length: 60 }, (_, i) => [`d${i}`, 0, 0, 100, 1_000_000]);
-  const ledger = {
-    tickers: {
-      NVDA: { rows: [...priorRows, ["d60", 5, 0.01, 130, 5_000_000, null]] },
-    },
+function fixture() {
+  return {
+    events: [
+      { ticker: "NVDA", source: "Price/Volume", priceMove: 10, volume: 5_000_000, lastPrice: 130, quoteAsOf: "2026-09-25T20:00:00Z" },
+      { ticker: "NVDA", source: "Google News", title: news.text, published: news.published, url: news.url },
+    ],
+    ledger: { tickers: { NVDA: { rows: Array.from({ length: 61 }, (_, i) => [`d${i}`, 0, 0, 100, i === 60 ? 5_000_000 : 1_000_000]) } } },
+    gicsByTicker: { NVDA: { sub: "Semiconductors" }, AMD: { sub: "Semiconductors" } },
+    coMentionEdges: new Map([["AVGO|NVDA", 5]]), prevLeaders: { leaders: [] }, dateStr: "2026-09-25", newsSources: new Set(["Google News"]), now,
   };
-  const events = [
-    { ticker: "NVDA", source: "Price/Volume", priceMove: 10, volume: 5_000_000, url: "https://finance.yahoo.com/quote/NVDA" },
-    { ticker: "NVDA", source: "GDELT News", title: "NVDA beats and raises guidance for next quarter", url: "https://news/1" },
-  ];
-  const gicsByTicker = { NVDA: { sub: "Semiconductors" }, AMD: { sub: "Semiconductors" }, AAPL: { sub: "Technology Hardware" } };
-  const coMentionEdges = new Map([["AVGO|NVDA", 5]]);
-
-  const result = computeProofQuarters({
-    events,
-    ledger,
-    gicsByTicker,
-    coMentionEdges,
-    prevLeaders: { leaders: [] },
-    dateStr: "2026-01-01",
-  });
-
+}
+test("verified leaders retain provenance, elevate siblings, dedupe and expire", () => {
+  const input = fixture();
+  const result = computeProofQuarters(input);
   assert.equal(result.newLeaders.length, 1);
-  assert.equal(result.newLeaders[0].ticker, "NVDA");
+  assert.equal(result.newLeaders[0].evidenceVersion, 2);
+  assert.equal(result.newLeaders[0].headlineUrl, news.url);
   assert.deepEqual(result.newLeaders[0].siblings, ["AMD"]);
   assert.deepEqual(result.newLeaders[0].coMentionNeighbors, ["AVGO"]);
   assert.ok(result.hotMonitorPayload.tickers.AMD);
-  assert.ok(result.hotMonitorPayload.tickers.AVGO);
-  assert.equal(result.leadersPayload.leaders.length, 1);
-
-  // Re-running with NVDA already an active (non-expired) leader should not re-trigger it.
-  const second = computeProofQuarters({
-    events,
-    ledger,
-    gicsByTicker,
-    coMentionEdges,
-    prevLeaders: result.leadersPayload,
-    dateStr: "2026-01-02",
-  });
-  assert.equal(second.newLeaders.length, 0);
-  assert.equal(second.leadersPayload.leaders.length, 1);
+  assert.equal(computeProofQuarters({ ...input, prevLeaders: result.leadersPayload }).newLeaders.length, 0);
+  const expired = { leaders: [{ ...result.newLeaders[0], expiresDate: "2026-09-24" }] };
+  assert.equal(computeProofQuarters({ ...input, prevLeaders: expired }).newLeaders.length, 1);
 });
-
-test("computeProofQuarters: an expired leader is pruned and can re-trigger", () => {
-  const prevLeaders = { leaders: [{ ticker: "NVDA", detectedDate: "2025-01-01", expiresDate: "2025-06-01", siblings: [], coMentionNeighbors: [] }] };
-  const priorRows = Array.from({ length: 60 }, (_, i) => [`d${i}`, 0, 0, 100, 1_000_000]);
-  const ledger = { tickers: { NVDA: { rows: [...priorRows, ["d60", 5, 0.01, 130, 5_000_000, null]] } } };
-  const events = [
-    { ticker: "NVDA", source: "Price/Volume", priceMove: 10, volume: 5_000_000, url: "x" },
-    { ticker: "NVDA", source: "GDELT News", title: "NVDA raises guidance", url: "https://news/1" },
-  ];
-  const result = computeProofQuarters({ events, ledger, gicsByTicker: {}, coMentionEdges: new Map(), prevLeaders, dateStr: "2026-07-01" });
-  assert.equal(result.newLeaders.length, 1);
-  assert.equal(result.leadersPayload.leaders.length, 1); // old expired one dropped, new one added
-});
-
-// The What changed feed attributed a +602% proof quarter to a StockTwits post
-// ("$SXTC The offering closure disclosure dropped in after-hours trading...")
-// because every event title was weighted equally and social chatter simply came
-// first in the array. A published article has to win when one exists.
-test("orderByEvidence: published sources outrank social chatter", () => {
-  const news = new Set(["Google News", "SEC Filings"]);
-  const ordered = orderByEvidence(
-    [
-      { title: "chatter about earnings", source: "StockTwits" },
-      { title: "Acme beats on earnings - Reuters", source: "Google News" },
-    ],
-    news
-  );
-  assert.equal(ordered[0].text, "Acme beats on earnings - Reuters");
-  assert.equal(ordered[0].isNews, true);
-  assert.equal(ordered[1].isNews, false);
-});
-
-test("orderByEvidence: keeps chatter when it is all there is, flagged as such", () => {
-  const ordered = orderByEvidence([{ title: "guidance chatter", source: "4chan" }], new Set(["Google News"]));
-  assert.equal(ordered.length, 1);
-  assert.equal(ordered[0].isNews, false);
-});
-
-test("detectProofQuarter: reports whether its evidence was an article", () => {
-  const base = { priceMove: 12, volume: 400, avgVolume60d: 100 };
-  const fromNews = detectProofQuarter({
-    ...base,
-    headlineTexts: [{ text: "Acme raises guidance - Reuters", isNews: true }],
-  });
-  assert.equal(fromNews.matchedHeadlineIsNews, true);
-
-  const fromChatter = detectProofQuarter({
-    ...base,
-    headlineTexts: [{ text: "guidance is gonna rip", isNews: false }],
-  });
-  assert.equal(fromChatter.matchedHeadlineIsNews, false);
-});
-
-// Plain strings are still accepted so existing callers and older tests keep working.
-test("detectProofQuarter: still accepts bare strings", () => {
-  const out = detectProofQuarter({
-    priceMove: 12,
-    volume: 400,
-    avgVolume60d: 100,
-    headlineTexts: ["Acme reaffirmed guidance"],
-  });
-  assert.equal(out.matchedHeadline, "Acme reaffirmed guidance");
-  assert.equal(out.matchedHeadlineIsNews, false);
+test("stale quotes cannot trigger; legacy leaders no longer expand coverage", () => {
+  const input = fixture();
+  input.events[0].quoteAsOf = "2026-08-14T20:00:00Z";
+  input.prevLeaders.leaders = [{ ticker: "CNET", expiresDate: "2027-01-01", siblings: ["FAKE"], coMentionNeighbors: [] }];
+  const result = computeProofQuarters(input);
+  assert.equal(result.newLeaders.length, 0);
+  assert.equal(result.leadersPayload.leaders.length, 0);
+  assert.deepEqual(result.hotMonitorPayload.tickers, {});
 });

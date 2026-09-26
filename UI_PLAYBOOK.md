@@ -7,6 +7,13 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+September 25, 2026 update: the Desk leads with a 15-row expandable discovery board
+and recent news. Radar, attention map and lifecycle history now live in Research.
+`data-quality.js` owns shared freshness/source-pause rules; `adoption-watchlist.js`
+is a manual evidence registry rendered by `adoption.js`. `desk-cleanup.css`
+contains the scoped layout trial. See `PRODUCTION_REVIEW_2026-09-25.md` and
+`ADOPTION_TRACKER.md`; older state descriptions below are historical context.
+
 Static GitHub Pages site. **No build step, no framework, no dependencies.**
 Script load order in `index.html` matters:
 

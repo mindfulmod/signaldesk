@@ -132,7 +132,7 @@
           // so the UI can say "new" instead of faking a percentage.
           momentum: item.momentum == null ? null : Number(item.momentum) || 0,
           sentiment: Number(item.sentiment) || 0,
-          lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
+          lastPrice: item.lastPrice != null && Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
           quoteAsOf: item.quoteAsOf || null,
           quoteSource: item.quoteSource || null,
           priceMove: Number(item.priceMove) || 0,
@@ -192,8 +192,8 @@
           social,
           news,
           attention: social + news,
-          volHot: item.relativeVolume >= VOL_HOT,
-          priceHot: item.priceMove >= 3,
+          volHot: marketEvidenceCurrent(item) && item.relativeVolume >= VOL_HOT,
+          priceHot: marketEvidenceCurrent(item) && item.priceMove >= 3,
           momentumHot: item.momentum >= 20,
         };
       };
@@ -405,8 +405,8 @@
       `<section class="market-pulse" aria-labelledby="pulse-heading">
         <div class="section-head compact">
           <div>
-            <h2 id="pulse-heading">Driving the tape</h2>
-            <p>The news behind today's biggest market moves — headlines that pushed a stock and rattled the tape</p>
+            <h2 id="pulse-heading">Recent news & moves</h2>
+            <p>Articles from the past 72 hours alongside recent quotes. Related coverage, not proof of what caused a move.</p>
           </div>
         </div>
         <div class="pulse-headlines" id="pulseHeadlines"></div>
@@ -443,7 +443,7 @@
   function refreshMarketPulse() {
     const container = document.getElementById("pulseHeadlines");
     if (!container) return;
-    const headlines = marketNewsFeed(8);
+    const headlines = marketNewsFeed(4);
     if (!headlines.length) {
       container.innerHTML = emptyStateMarkup();
       return;
@@ -462,6 +462,7 @@
     const feed = Array.isArray(data?.marketNews) ? data.marketNews : [];
     const published = feed
       .filter((entry) => entry && entry.title && !isClassActionSpam(entry.title) && Number.isFinite(Number(entry.priceMove)))
+      .filter(entry => window.SIGNALDESK_QUALITY.usableNews(entry) && window.SIGNALDESK_QUALITY.quoteState(entry.quoteAsOf ? entry : (data.signals || []).find(item => item.ticker === entry.ticker)) === "current")
       .slice(0, limit)
       .map((entry) => ({
         ticker: entry.ticker,
@@ -482,10 +483,10 @@
     // scheduled updater run publishes the new field.
     const items = typeof filteredSignals === "function" ? filteredSignals() : [];
     return items
-      .filter((item) => Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
+      .filter((item) => marketEvidenceCurrent(item) && Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
       .map((item) => {
         const stories = (item.latest || [])
-          .filter((entry) => NEWS_SOURCES.includes(entry.source) && entry.title && !isClassActionSpam(entry.title))
+          .filter((entry) => NEWS_SOURCES.includes(entry.source) && window.SIGNALDESK_QUALITY.usableNews(entry) && !isClassActionSpam(entry.title))
           .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
         return { item, stories };
       })
@@ -555,7 +556,7 @@
     });
     const reason = newsThrottled
       ? "The latest refresh was throttled on several news feeds, so no market-moving articles came through. Headlines will populate on the next clean refresh."
-      : "No market-moving news matched a notable price move in this window. Headlines appear when a covered name moves on a real catalyst.";
+      : "No recent article matched a notable move with a recent quote. Missing coverage is not evidence that no catalyst exists.";
     return `<p class="pulse-empty">${reason}</p>`;
   }
 

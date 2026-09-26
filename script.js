@@ -373,7 +373,7 @@ function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = p
     // the UI can say "new" instead of faking a percentage.
     momentum: item.momentum == null ? null : Number(item.momentum) || 0,
     sentiment: Number(item.sentiment) || 0,
-    lastPrice: Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
+    lastPrice: item.lastPrice != null && Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
     quoteAsOf: item.quoteAsOf || null,
     quoteSource: item.quoteSource || null,
     priceMove: Number(item.priceMove) || 0,
@@ -647,12 +647,15 @@ function sourceTotal(item, sources) {
 // subtracts visible crowding and data-quality risks. This keeps a parabolic one-
 // source move from automatically becoming the site's top "opportunity."
 function discoveryProfile(item) {
+  const usableMarket = marketEvidenceCurrent(item);
+  const recentNewsSources = new Set([...(item.latest || []), item.topHeadline].filter(entry => entry && window.SIGNALDESK_QUALITY.usableNews(entry)).map(entry => entry.source));
+  const currentCatalystSources = DISCOVERY_CATALYST_SOURCES.filter(source => recentNewsSources.has(source));
   const social = sourceTotal(item, DISCOVERY_SOCIAL_SOURCES);
-  const catalyst = sourceTotal(item, DISCOVERY_CATALYST_SOURCES);
-  const market = sourceTotal(item, DISCOVERY_MARKET_SOURCES);
-  const allSources = [...new Set([...DISCOVERY_SOCIAL_SOURCES, ...DISCOVERY_CATALYST_SOURCES, ...DISCOVERY_MARKET_SOURCES])];
+  const catalyst = sourceTotal(item, currentCatalystSources);
+  const market = usableMarket ? sourceTotal(item, DISCOVERY_MARKET_SOURCES) : 0;
+  const allSources = [...new Set([...DISCOVERY_SOCIAL_SOURCES, ...currentCatalystSources, ...(usableMarket ? DISCOVERY_MARKET_SOURCES : [])])];
   const activeSources = allSources.filter((source) => (item.sources?.[source] || 0) > 0);
-  const catalystSources = DISCOVERY_CATALYST_SOURCES.filter((source) => (item.sources?.[source] || 0) > 0);
+  const catalystSources = currentCatalystSources.filter((source) => (item.sources?.[source] || 0) > 0);
   const activeGroups = [social > 0, catalyst > 0, market > 0].filter(Boolean).length;
   const total = Math.max(1, activeSources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0));
   const concentration = activeSources.length
@@ -662,18 +665,19 @@ function discoveryProfile(item) {
   const attention = clamp(0, 1, (Number(item.signalScore) || 0) / 85);
   const acceleration = item.momentum == null || item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
   const breadth = 0.65 * (activeGroups / 3) + 0.35 * clamp(0, 1, activeSources.length / 6);
-  const priceConfirmation = clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5);
-  const volumeConfirmation = clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5);
+  const priceConfirmation = usableMarket ? clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5) : 0;
+  const volumeConfirmation = usableMarket ? clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5) : 0;
   const confirmation = 0.55 * priceConfirmation + 0.45 * volumeConfirmation;
-  const catalystEvidence = clamp(0, 1, catalystSources.length / 3 + ((item.sources?.["SEC Filings"] || 0) > 0 ? 0.2 : 0));
+  const catalystEvidence = clamp(0, 1, catalystSources.length / 3 + (catalystSources.includes("SEC Filings") ? 0.2 : 0));
 
   let penalty = 0;
   const risks = [];
-  if (item.priceMove >= 12) {
+  if (!usableMarket) risks.push(item.lastPrice > 0 ? "No current price / volume" : "Quote unavailable");
+  if (usableMarket && item.priceMove >= 12) {
     penalty += Math.min(25, (item.priceMove - 12) * 1.1 + 5);
     risks.push("Extended move");
   }
-  if (item.relativeVolume >= 8) {
+  if (usableMarket && item.relativeVolume >= 8) {
     penalty += Math.min(8, (item.relativeVolume - 8) * 0.8 + 2);
     risks.push("Extreme volume");
   }
@@ -686,14 +690,14 @@ function discoveryProfile(item) {
     risks.push("Micro-cap volatility");
   }
   if (social > 0 && catalyst === 0) {
-    if (item.priceMove >= 5) penalty += 6;
+    if (usableMarket && item.priceMove >= 5) penalty += 6;
     risks.push("No verified catalyst");
   }
   if (activeGroups <= 1) {
     penalty += 10;
     risks.push("Thin evidence");
   }
-  if (item.priceMove <= -3) {
+  if (usableMarket && item.priceMove <= -3) {
     penalty += 6;
     risks.push("Price not confirming");
   }
@@ -704,16 +708,16 @@ function discoveryProfile(item) {
 
   let stage = "Watching";
   let tone = "watch";
-  if (item.priceMove >= 12 || (item.relativeVolume >= 8 && crowdAttention >= 3)) {
+  if (usableMarket && (item.priceMove >= 12 || (item.relativeVolume >= 8 && crowdAttention >= 3))) {
     stage = "Crowded";
     tone = "crowded";
-  } else if (item.momentum <= -15 || item.priceMove <= -3) {
+  } else if (item.momentum <= -15 || (usableMarket && item.priceMove <= -3)) {
     stage = "Cooling";
     tone = "cooling";
-  } else if (catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
+  } else if (usableMarket && catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
     stage = "Confirmed";
     tone = "confirmed";
-  } else if (item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
+  } else if (usableMarket && item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
     stage = "Early ignition";
     tone = "early";
   } else if (item.momentum >= 15 || crowdAttention >= 5) {
@@ -727,11 +731,11 @@ function discoveryProfile(item) {
   else if (activeGroups >= 2) evidence = "Developing";
 
   const reasons = [];
-  if (catalystSources.length) reasons.push(`${catalystSources.length} catalyst source${catalystSources.length === 1 ? "" : "s"}`);
+  if (catalystSources.length) reasons.push(`${catalystSources.length} news / filing source${catalystSources.length === 1 ? "" : "s"}`);
   if (activeGroups >= 2) reasons.push(`${activeGroups}/3 evidence groups active`);
   if (item.momentum >= 15) reasons.push(`Attention +${item.momentum.toFixed(0)}% vs prior`);
-  if (item.relativeVolume >= 1.2) reasons.push(`${item.relativeVolume.toFixed(1)}× relative volume`);
-  if (item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
+  if (usableMarket && item.relativeVolume >= 1.2) reasons.push(`${item.relativeVolume.toFixed(1)}× relative volume`);
+  if (usableMarket && item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
   if (!reasons.length) reasons.push("Monitoring for a second confirming signal");
 
   const move = `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%`;
@@ -741,6 +745,7 @@ function discoveryProfile(item) {
   if (tone === "building") summary = `Attention is building across the tracked channels. Evidence is improving, but the move is not fully confirmed yet.`;
   if (tone === "crowded") summary = `The ${move} move is already attention-grabbing. Treat this as crowding risk, not an invitation to chase.`;
   if (tone === "cooling") summary = `Attention remains visible, but price or mention momentum is cooling. Wait for the signal to repair before prioritizing it.`;
+  if (!usableMarket) summary = "Attention is visible, but current price / volume evidence is missing. This is not a market-confirmed setup.";
 
   return {
     score,
@@ -823,8 +828,21 @@ function updateStatus() {
       ? `Data freshness warning: this snapshot is from ${formatDateTime(snapshot.generatedAt)}. Use it to study prior market attention, not as a current trading signal.`
       : "";
   }
+  markBlockedSources();
+  const coverage = byId("coverageStatus");
+  if (coverage) {
+    const signals = snapshot.signals || [];
+    const priced = signals.filter(marketEvidenceCurrent).length;
+    const sources = window.SIGNALDESK_QUALITY.sourceHealth(snapshot);
+    coverage.textContent = `${formatShortDateTime(snapshot.generatedAt)} snapshot · ${priced}/${signals.length} tickers with recent market data · ${sources.filter(row => row.tickers > 0).length}/${sources.length} sources with matches`;
+  }
 }
 
+function marketEvidenceCurrent(item) {
+  return window.SIGNALDESK_QUALITY.quoteState(item) === "current" && Number(item.sources?.["Price/Volume"]) > 0;
+}
+
+let boardExpanded = false;
 function renderTable(items) {
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
@@ -834,11 +852,11 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `Showing ${items.length}${filterLabel} real-data ticker${items.length === 1 ? "" : "s"}`
+      ? `${items.length}${filterLabel} tickers · ranked for research, not predicted returns`
       : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
   }
   const prevRanks = previousRankMap();
-  byId("rankingBody").innerHTML = items
+  byId("rankingBody").innerHTML = (boardExpanded ? items : items.slice(0, 15))
     .map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
       const total = Math.max(1, item.mentions);
@@ -850,7 +868,7 @@ function renderTable(items) {
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
       const catalystBadge =
-        item.topHeadline && CATALYST_WORDS_RE.test(item.topHeadline.title)
+        item.topHeadline && window.SIGNALDESK_QUALITY.usableNews(item.topHeadline) && CATALYST_WORDS_RE.test(item.topHeadline.title)
           ? `<span class="catalyst-badge" title="${escapeHtml(item.topHeadline.title)}">${item.topHeadline.isNewsArticle ? "News" : "Buzz"}</span>`
           : "";
       return `
@@ -860,7 +878,7 @@ function renderTable(items) {
             <div class="ticker-cell">
               ${starButton(item.ticker)}
               <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
-              <span class="ticker-name"><strong>${item.ticker}</strong>${nameLine}</span>
+              <span class="ticker-name"><button type="button" class="ticker-open" aria-label="Open ${item.ticker} details">${item.ticker}</button>${nameLine}</span>
               ${catalystBadge}
               ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
             </div>
@@ -870,7 +888,7 @@ function renderTable(items) {
           <td>${formatQuoteCell(item)}</td>
           <td class="col-secondary">${fmt.format(item.mentions)}</td>
           <td><span class="momentum ${momentumClass}">${item.momentum == null ? "new" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
-          <td class="col-tertiary">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x</td>
+          <td class="col-tertiary">${marketEvidenceCurrent(item) ? `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x` : '<span class="quote-warning">Unavailable</span>'}</td>
           <td class="col-secondary"><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
         </tr>`;
     })
@@ -885,6 +903,13 @@ function renderTable(items) {
     });
   });
   bindStars(byId("rankingBody"));
+  const more = byId("moreTickers");
+  if (more) {
+    more.hidden = items.length <= 15;
+    more.textContent = boardExpanded ? "Show top 15" : `Show all ${items.length} tickers`;
+    more.setAttribute("aria-expanded", String(boardExpanded));
+    more.onclick = () => { boardExpanded = !boardExpanded; render(); };
+  }
 }
 
 // Three market-psychology states are more useful than three versions of "hot."
@@ -900,7 +925,7 @@ function renderMovers(items) {
 
   const staged = items.map((item) => ({ ...item, discovery: item.discovery || discoveryProfile(item) }));
   const early = staged
-    .filter((item) => ["early", "building"].includes(item.discovery.tone))
+    .filter((item) => marketEvidenceCurrent(item) && ["early", "building"].includes(item.discovery.tone))
     .sort((a, b) => b.discovery.score - a.discovery.score)
     .slice(0, 5);
   const confirmed = staged
@@ -926,6 +951,10 @@ function renderMovers(items) {
       byId("tickerSearch").value = "";
       render();
       if (isNarrowViewport()) openDetailSheet();
+      else {
+        window.SIGNALDESK_SELECT_TAB?.("desk");
+        document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 }
@@ -1047,8 +1076,8 @@ function detailMarkup(item, rank) {
 
     <div class="stat-grid">
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
-      ${statBlock("Price", formatPrice(item.lastPrice), priceMoveText(item), priceTone(item.priceMove))}
-      ${statBlock("Rel. volume", item.relativeVolume ? `${item.relativeVolume.toFixed(1)}×` : "-", item.relativeVolume >= VOL_HOT ? "elevated" : "normal", item.relativeVolume >= VOL_HOT ? "up" : "")}
+      ${statBlock("Price", formatPrice(item.lastPrice), marketEvidenceCurrent(item) ? priceMoveText(item) : "No recent market data", marketEvidenceCurrent(item) ? priceTone(item.priceMove) : "")}
+      ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
       ${statBlock("Acceleration", item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no prior snapshot yet" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
@@ -1188,11 +1217,11 @@ function attentionMarkup(item) {
 function topHeadlineMarkup(item) {
   const headline = item.topHeadline;
   if (!headline || !headline.title) return "";
-  const when = headline.published ? formatShortDateTime(headline.published) : "";
+  const when = Number.isFinite(Date.parse(headline.published)) ? formatShortDateTime(headline.published) : "Publication date unavailable";
   // Only a genuine published article/filing gets called a "headline" --
   // social commentary that happens to mention a catalyst is real signal,
   // but labeling a stranger's forum comment as reporting would be dishonest.
-  const label = headline.isNewsArticle ? "Top headline" : "Notable chatter (not a news article)";
+  const label = !window.SIGNALDESK_QUALITY.usableNews(headline) ? "Archived / undated evidence · not a current catalyst" : headline.isNewsArticle ? "Top headline" : "Notable chatter (not a news article)";
   return `
     <div class="catalyst-callout${headline.isNewsArticle ? "" : " catalyst-callout-social"}">
       <span class="catalyst-label">${label}</span>
@@ -1207,7 +1236,7 @@ function headlinesMarkup(item) {
   if (!latest.length) return "";
   return `
     <div class="detail-section">
-      <h3>Recent source evidence</h3>
+      <h3>Saved source evidence</h3>
       <ul class="headline-list">
         ${latest
           .map(
@@ -1239,8 +1268,8 @@ function attentionStats(item) {
     social,
     news,
     attention: social + news,
-    volHot: item.relativeVolume >= VOL_HOT,
-    priceHot: item.priceMove >= 3,
+    volHot: marketEvidenceCurrent(item) && item.relativeVolume >= VOL_HOT,
+    priceHot: marketEvidenceCurrent(item) && item.priceMove >= 3,
     momentumHot: item.momentum >= 20,
   };
 }
@@ -1269,6 +1298,7 @@ function attentionGroupFor(item) {
 }
 
 function trendInterpretation(item) {
+  if (!marketEvidenceCurrent(item)) return "Saved attention is visible, but recent market evidence is missing. Check the quote timestamp and original sources before interpreting this as a setup.";
   const { social, news, volHot, priceHot } = attentionStats(item);
   const activeSources = SOURCES.filter((s) => (item.sources[s] || 0) > 0).length;
 
@@ -1319,10 +1349,11 @@ function formatPrice(value) {
 
 function formatQuoteCell(item) {
   const price = formatPrice(item.lastPrice);
-  if (price === "-") return "-";
+  if (price === "-") return '<span class="quote-warning">No quote</span>';
   const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
   const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
-  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
+  const warning = window.SIGNALDESK_QUALITY.quoteState(item) === "stale" ? '<small class="quote-warning">Stale quote · not current</small>' : "";
+  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${warning}${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
 }
 
 function capLabelFor(item) {
@@ -1536,30 +1567,35 @@ function escapeHtml(value) {
 }
 
 function markBlockedSources() {
-  // Parse failures like "Wallstreetbets: 403 Blocked" and badge each affected source.
-  const failures = snapshot?.failures || [];
-  const blockedSources = new Set(
-    failures
-      .map((f) => {
-        const match = f.match(/^([^:]+):/);
-        return match ? match[1].trim() : null;
-      })
-      .filter(Boolean)
-  );
-
+  const group = byId("platform-heading")?.closest(".control-group");
+  if (!group) return;
+  let inactive = byId("inactiveSources");
+  if (!inactive) {
+    inactive = document.createElement("details");
+    inactive.id = "inactiveSources";
+    inactive.innerHTML = '<summary>Unavailable / no matches</summary><p class="range-note">Historical records are retained. No matches does not necessarily mean a failed feed.</p><div class="inactive-source-list"></div>';
+    group.appendChild(inactive);
+  }
+  const historical = byId("windowMode")?.value === "history";
+  const history = historySnapshots();
+  const rows = window.SIGNALDESK_QUALITY.sourceHealth(snapshot, history);
   document.querySelectorAll('input[name="source"]').forEach((input) => {
     const row = input.closest(".check-row");
     if (!row) return;
-    // Remove any prior badge
+    const status = rows.find(entry => entry.source === input.value);
+    if (!status) return;
+    const hasCoverage = historical ? history.some(day => day.signals?.some(item => item.sources?.[input.value] > 0)) : status.tickers > 0;
+    input.disabled = !hasCoverage;
+    row.title = status.reason;
     row.querySelector(".source-status")?.remove();
-    if (blockedSources.has(input.value)) {
-      const badge = document.createElement("span");
-      badge.className = "source-status source-blocked";
-      badge.textContent = "blocked";
-      badge.title = failures.find((f) => f.startsWith(input.value)) || "Source unavailable";
-      row.appendChild(badge);
-    }
+    const badge = document.createElement("span");
+    badge.className = `source-status source-${status.state}`;
+    badge.textContent = historical && hasCoverage ? "history" : status.state === "covered" ? String(status.tickers) : status.state.replace("-", " ");
+    row.appendChild(badge);
+    if (hasCoverage && row.parentElement !== group) group.insertBefore(row, inactive);
+    if (!hasCoverage && row.parentElement === group) inactive.querySelector(".inactive-source-list").appendChild(row);
   });
+  inactive.querySelector("summary").textContent = `Unavailable / no matches (${inactive.querySelectorAll("input").length})`;
 }
 
 async function init() {
@@ -1574,9 +1610,8 @@ async function init() {
   applyUrlParams();
   bindEvents();
   syncControls();
-  // On narrow viewports default the sidebar to hidden so main content isn't
-  // pushed below a long filter panel. The Filters button reveals it on demand.
-  if (window.innerWidth <= 980 && !location.search.includes("watch=1")) {
+  // The stock board is the starting point at every width. Filters are on demand.
+  if (!location.search.includes("watch=1")) {
     const shell = document.querySelector(".app-shell");
     if (shell && !shell.classList.contains("sidebar-hidden")) {
       shell.classList.add("sidebar-hidden");
