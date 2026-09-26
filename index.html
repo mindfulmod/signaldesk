@@ -6,20 +6,17 @@
     <meta name="description" content="SignalDesk finds stocks gaining attention, separates early evidence from crowded moves, and explains every discovery signal." />
     <meta name="theme-color" content="#0b0f14" />
     <title>SignalDesk — Stock Attention Intelligence</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="tabs.css?v=20260728-1" />
-    <link rel="stylesheet" href="desk-cleanup.css?v=20260925-1" />
+    <link rel="icon" href="favicon.svg?v=20260925-2" type="image/svg+xml" sizes="any" />
+    <link rel="stylesheet" href="styles.css?v=20260925-2" />
+    <link rel="stylesheet" href="tabs.css?v=20260925-2" />
+    <link rel="stylesheet" href="desk-cleanup.css?v=20260925-2" />
   </head>
   <body>
-    <div class="app-shell">
+    <div class="app-shell" id="top">
       <header class="appbar">
         <div class="appbar-inner">
           <a class="brand" href="#top" aria-label="SignalDesk — back to top">
-            <span class="brand-mark" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+            <img class="brand-mark" src="favicon.svg?v=20260925-2" width="34" height="34" alt="" />
             <span class="brand-text">
               <span class="brand-name">SignalDesk</span>
               <span class="brand-tag">Attention Intelligence</span>
@@ -31,14 +28,14 @@
               <path d="M8.5 3a5.5 5.5 0 0 1 4.383 8.86l3.629 3.63a1 1 0 0 1-1.414 1.414l-3.63-3.63A5.5 5.5 0 1 1 8.5 3Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
             </svg>
             <input id="tickerSearch" type="search" placeholder="Search a ticker or company…" aria-label="Search ticker or company" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" />
-            <button id="clearFocus" class="search-clear" type="button" aria-label="Clear search">Clear</button>
+            <button id="clearFocus" class="search-clear" type="button" aria-label="Clear search" hidden>Clear</button>
           </div>
 
           <div class="appbar-actions">
             <span id="dataStatus" class="status-chip">Loading public data…</span>
             <button id="exportCsv" class="appbar-btn" type="button" title="Export CSV" aria-label="Export CSV">CSV</button>
             <button id="refreshData" class="appbar-btn icon-only" type="button" title="Reload real data" aria-label="Reload real data">↻</button>
-            <button id="toggleSidebar" class="appbar-btn" type="button" title="Hide filters" aria-label="Hide filters" aria-pressed="true" aria-controls="sidebar"><span>☰ Filters</span></button>
+            <button id="toggleSidebar" class="appbar-btn" type="button" title="Hide filters" aria-label="Hide filters" aria-pressed="true" aria-controls="sidebar"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><path d="M7 3v4m6 1v4m-6 1v4" stroke-width="3"/></svg><span>Filters</span></button>
           </div>
         </div>
       </header>
@@ -48,6 +45,15 @@
           <section class="control-group" aria-labelledby="range-heading">
           <h2 id="range-heading">Snapshot</h2>
           <p id="rangeNote" class="range-note">Showing the latest daily snapshot.</p>
+        </section>
+
+        <section class="control-group" aria-labelledby="size-heading">
+          <h2 id="size-heading">Market cap</h2>
+          <div class="cap-toggle" role="group" aria-label="Market cap filter">
+            <button id="capLarge" type="button" aria-pressed="false">Large cap</button>
+            <button id="capSmall" type="button" aria-pressed="false">Small cap</button>
+          </div>
+          <p class="range-note">No selection includes all company sizes.</p>
         </section>
 
         <section class="control-group" aria-labelledby="platform-heading">
@@ -157,12 +163,12 @@
           still here for a first-time reader, one tap away, rather than taxing
           every subsequent one.
         -->
-        <section class="page-hero compact" id="top">
+        <section class="page-hero compact">
           <h1>What’s getting attention — and why?</h1>
           <p id="coverageStatus" class="coverage-status" role="status">Checking snapshot coverage…</p>
           <details class="hero-about">
-            <summary>What this is</summary>
-            <p class="hero-sub">SignalDesk tracks where attention is forming, then checks whether price, volume, independent sources, and real catalysts agree. Every setup shows its evidence and its risk — because attention alone is not conviction.</p>
+            <summary>How to read the signals</summary>
+            <p class="hero-sub">SignalDesk compares public attention with news, price, and volume. Open a stock to inspect its sources, dates, and risk flags. Scores help prioritize research; they do not predict returns.</p>
             <div class="hero-method" aria-label="How SignalDesk evaluates a setup">
               <div><span>01</span><strong>Attention</strong><p>Is interest accelerating across more than one channel?</p></div>
               <div><span>02</span><strong>Confirmation</strong><p>Do price, volume, filings, or credible news support the move?</p></div>
@@ -277,22 +283,20 @@
           <div class="table-panel">
             <div class="section-head compact">
               <div>
-                <p class="section-kicker">All discovered names</p>
                 <h2 id="ranking-heading">Discovery board</h2>
-                <p id="rankSubhead">Showing the top 30 tickers</p>
+                <p id="rankSubhead">Loading the latest snapshot…</p>
               </div>
-              <div class="toggle-stack">
-                <button id="togglePanel" class="panel-toggle" type="button" aria-pressed="false" aria-controls="detailPanel">Hide details</button>
+              <button id="togglePanel" class="panel-toggle" type="button" aria-pressed="false" aria-controls="detailPanel">Hide details</button>
+            </div>
+            <div class="board-toolbar">
+              <div class="board-filters">
                 <div class="cap-toggle" role="group" aria-label="Attention filter">
                   <button id="attnAttention" type="button" aria-pressed="false">Big attention</button>
                   <button id="attnQuiet" type="button" aria-pressed="false">Quiet movers</button>
                   <button id="watchFilter" type="button" aria-pressed="false">Watchlist</button>
                 </div>
-                <div class="cap-toggle" role="group" aria-label="Market cap filter">
-                  <button id="capLarge" type="button" aria-pressed="false">Large cap</button>
-                  <button id="capSmall" type="button" aria-pressed="false">Small cap</button>
-                </div>
               </div>
+              <label class="board-sort" for="rankMode"><span>Sort by</span><select id="rankMode"><option value="signal">Setup score</option><option value="mentions">Attention activity</option><option value="momentum">Attention change</option></select></label>
             </div>
             <div class="table-scroll">
               <table>
@@ -300,17 +304,16 @@
                   <tr>
                     <th>Rank</th>
                     <th>Ticker</th>
-                    <th class="sortable sort-active" data-sort="signal" aria-sort="descending">Setup</th>
+                    <th class="sort-active" data-sort="signal" aria-sort="descending">Setup</th>
                     <th>Public quote</th>
-                    <th class="col-secondary sortable" data-sort="mentions">Attention</th>
-                    <th class="sortable" data-sort="momentum">Acceleration</th>
-                    <th class="col-tertiary">Price/Vol</th>
-                    <th class="col-secondary">Evidence mix</th>
+                    <th data-sort="momentum">Attention Δ</th>
+                    <th class="col-tertiary">Market</th>
                   </tr>
                 </thead>
                 <tbody id="rankingBody"></tbody>
               </table>
             </div>
+            <div id="boardEmpty" class="board-empty" hidden><h3>No matching stocks</h3><p>Try another search or clear your filters to see the full snapshot.</p><button id="resetView" class="panel-toggle" type="button">Clear search & filters</button></div>
             <button id="moreTickers" class="board-more" type="button" aria-controls="rankingBody" aria-expanded="false" hidden>Show all tickers</button>
           </div>
 
@@ -376,7 +379,7 @@
     </script>
     <script src="data-quality.js?v=20260925-1"></script>
     <script src="adoption-watchlist.js?v=20260925-1"></script>
-    <script src="script.js?v=20260925-1"></script>
+    <script src="script.js?v=20260925-2"></script>
     <script src="enhancements.js?v=20260925-1"></script>
     <script src="adoption.js?v=20260925-1"></script>
     <script src="springs.js"></script>
@@ -385,8 +388,8 @@
     <script src="clusters.js"></script>
     <script src="calibration.js"></script>
     <script src="alerts.js?v=20260925-1"></script>
-    <script src="layout-fix.js?v=20260626-layout-pass-4"></script>
+    <script src="layout-fix.js?v=20260925-2"></script>
     <script src="declutter.js?v=20260925-1"></script>
-    <script src="tabs.js?v=20260925-1"></script>
+    <script src="tabs.js?v=20260925-2"></script>
   </body>
 </html>

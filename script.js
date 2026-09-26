@@ -305,7 +305,7 @@ function sparkline(values, { w = 66, h = 22, pad = 2, fluid = false } = {}) {
 function rankBadge(ticker, currentRank, prevRanks) {
   if (!prevRanks) return "";
   const prev = prevRanks.get(ticker);
-  if (prev == null) return `<span class="rank-delta new">NEW</span>`;
+  if (prev == null) return ""; // The attention-change column already says "New".
   const diff = prev - currentRank; // positive = moved up the board
   if (diff === 0) return `<span class="rank-delta flat" title="Unchanged vs prior snapshot">●</span>`;
   const up = diff > 0;
@@ -605,7 +605,7 @@ function render() {
   // Keep the current selection if it exists anywhere in the filtered set (so a
   // deep-linked or starred ticker ranked beyond #50 still drives the detail
   // panel); otherwise fall back to the top visible row.
-  if (!selectedTicker || !items.some((item) => item.ticker === selectedTicker)) {
+  if (!selectedTicker || !ranked.some((item) => item.ticker === selectedTicker)) {
     selectedTicker = top50[0]?.ticker || "";
   }
 
@@ -776,20 +776,30 @@ function renderBuyCandidates(items) {
 
   document.querySelectorAll("[data-buy-ticker]").forEach((button) => {
     button.addEventListener("click", () => {
-      selectedTicker = button.dataset.buyTicker;
-      byId("tickerSearch").value = "";
-      render();
+      selectResearchTicker(button.dataset.buyTicker);
       if (isNarrowViewport()) {
-        openDetailSheet();
+        openDetailSheet(`[data-buy-ticker="${CSS.escape(selectedTicker)}"]`);
       } else {
         // The discovery board lives on the Desk (tabs.js), so it has to be
         // revealed before scrolling — otherwise this scrolls to a hidden
         // element and looks like nothing happened.
         window.SIGNALDESK_SELECT_TAB?.("desk");
-        document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("ranking-heading").scrollIntoView({ block: "start" });
       }
     });
   });
+}
+
+function selectResearchTicker(ticker) {
+  // Research can surface a stock outside the Desk's current size/watch filter.
+  // Opening it should reveal that stock, not silently substitute another one.
+  selectedTicker = ticker;
+  byId("tickerSearch").value = "";
+  capFilter = "all";
+  attentionFilter = "all";
+  watchlistFilter = false;
+  syncControls();
+  render();
 }
 
 function buyCard(item, index) {
@@ -844,6 +854,8 @@ function marketEvidenceCurrent(item) {
 
 let boardExpanded = false;
 function renderTable(items) {
+  byId("clearFocus").hidden = !byId("tickerSearch").value;
+  byId("boardEmpty").hidden = items.length > 0;
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
   const watchLabel = watchlistFilter ? " watchlist" : "";
@@ -852,54 +864,42 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `${items.length}${filterLabel} tickers · ranked for research, not predicted returns`
-      : `No${filterLabel} tickers in this snapshot — try clearing a filter`;
+      ? `${items.length}${filterLabel} tickers${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
+      : "No matches — adjust your search or filters";
   }
   const prevRanks = previousRankMap();
   byId("rankingBody").innerHTML = (boardExpanded ? items : items.slice(0, 15))
     .map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
-      const total = Math.max(1, item.mentions);
-      const sourceBars = SOURCES.map(
-        (source) => `<span style="width:${((item.sources[source] || 0) / total) * 100}%; background:${SOURCE_COLORS[source]}"></span>`
-      ).join("");
       const momentumClass = item.momentum == null ? "flat" : item.momentum >= 0 ? "up" : "down";
       const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
-      const spark = sparkline(tickerHistory(item.ticker).map((h) => h.mentions));
-      const catalystBadge =
-        item.topHeadline && window.SIGNALDESK_QUALITY.usableNews(item.topHeadline) && CATALYST_WORDS_RE.test(item.topHeadline.title)
-          ? `<span class="catalyst-badge" title="${escapeHtml(item.topHeadline.title)}">${item.topHeadline.isNewsArticle ? "News" : "Buzz"}</span>`
-          : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
           <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
           <td>
             <div class="ticker-cell">
               ${starButton(item.ticker)}
-              <span class="ticker-icon">${item.ticker.slice(0, 2)}</span>
               <span class="ticker-name"><button type="button" class="ticker-open" aria-label="Open ${item.ticker} details">${item.ticker}</button>${nameLine}</span>
-              ${catalystBadge}
-              ${spark ? `<span class="ticker-spark" title="Mention trend">${spark}</span>` : ""}
             </div>
             ${chips}
           </td>
           <td><div class="setup-cell"><span class="signal-pill tone-${profile.tone}">${profile.score}</span><small>${escapeHtml(profile.stage)}</small></div></td>
           <td>${formatQuoteCell(item)}</td>
-          <td class="col-secondary">${fmt.format(item.mentions)}</td>
-          <td><span class="momentum ${momentumClass}">${item.momentum == null ? "new" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
-          <td class="col-tertiary">${marketEvidenceCurrent(item) ? `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% / ${item.relativeVolume.toFixed(1)}x` : '<span class="quote-warning">Unavailable</span>'}</td>
-          <td class="col-secondary"><div class="mix-bar" aria-label="Source mix for ${item.ticker}">${sourceBars}</div></td>
+          <td><span class="momentum ${momentumClass}"${item.momentum == null ? ' title="First appearance — no prior snapshot for comparison"' : ''}>${item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
+          <td class="col-tertiary">${marketEvidenceCurrent(item) ? `<span class="market-change ${priceTone(item.priceMove)}">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%</span><small class="market-volume">${item.relativeVolume.toFixed(1)}× volume</small>` : '<span class="quote-warning">Unavailable</span>'}</td>
         </tr>`;
     })
     .join("");
 
   document.querySelectorAll("#rankingBody tr").forEach((row) => {
-    row.addEventListener("click", () => {
+    row.addEventListener("click", (event) => {
+      const keyboard = event.detail === 0 && event.target.closest(".ticker-open");
       selectedTicker = row.dataset.ticker;
       render();
       // On narrow screens the inline panel is hidden; show details in the sheet.
       if (isNarrowViewport()) openDetailSheet();
+      else if (keyboard) byId("rankingBody").querySelector(`[data-ticker="${CSS.escape(selectedTicker)}"] .ticker-open`)?.focus({ preventScroll: true });
     });
   });
   bindStars(byId("rankingBody"));
@@ -947,13 +947,11 @@ function renderMovers(items) {
 
   board.querySelectorAll("[data-mover-ticker]").forEach((button) => {
     button.addEventListener("click", () => {
-      selectedTicker = button.dataset.moverTicker;
-      byId("tickerSearch").value = "";
-      render();
-      if (isNarrowViewport()) openDetailSheet();
+      selectResearchTicker(button.dataset.moverTicker);
+      if (isNarrowViewport()) openDetailSheet(`[data-mover-ticker="${CSS.escape(selectedTicker)}"]`);
       else {
         window.SIGNALDESK_SELECT_TAB?.("desk");
-        document.getElementById("ranking-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("ranking-heading").scrollIntoView({ block: "start" });
       }
     });
   });
@@ -995,10 +993,19 @@ function updateRangeNote() {
 
 function renderDetail(items, top50) {
   const selected = items.find((item) => item.ticker === selectedTicker) || top50[0];
-  if (!selected) return;
+  if (!selected) {
+    detailTicker = "";
+    lastDetailHtml = '<div class="detail-empty"><h2>No stock selected</h2><p>Clear the search or filters, then choose a stock to read its evidence.</p></div>';
+    byId("detailPanel").innerHTML = lastDetailHtml;
+    renderDetailSheetContent();
+    return;
+  }
   const rank = items.findIndex((item) => item.ticker === selected.ticker) + 1;
+  const selectionChanged = detailTicker !== selected.ticker;
+  detailTicker = selected.ticker;
   lastDetailHtml = detailMarkup(selected, rank);
   byId("detailPanel").innerHTML = lastDetailHtml;
+  if (selectionChanged) byId("detailPanel").scrollTop = 0;
   bindStars(byId("detailPanel"));
   renderDetailSheetContent();
 }
@@ -1007,19 +1014,24 @@ function renderDetail(items, top50) {
 // a bottom sheet instead — clicking a row used to scroll the page to the very
 // bottom, which was disorienting on mobile.
 let lastDetailHtml = "";
+let detailTicker = "";
+let detailReturnSelector = "";
 
 function isNarrowViewport() {
   return window.matchMedia("(max-width: 1180px)").matches;
 }
 
-function openDetailSheet() {
+function openDetailSheet(returnSelector = `#rankingBody [data-ticker="${CSS.escape(selectedTicker)}"] .ticker-open`) {
   const sheet = byId("detailSheet");
   if (!sheet) return;
+  detailReturnSelector = returnSelector;
   sheet.hidden = false;
   document.body.classList.add("sheet-open");
+  document.querySelector(".app-shell").inert = true;
   renderDetailSheetContent();
   const content = byId("detailSheetContent");
   if (content) content.scrollTop = 0;
+  byId("detailSheetClose")?.focus({ preventScroll: true });
 }
 
 function closeDetailSheet() {
@@ -1027,6 +1039,8 @@ function closeDetailSheet() {
   if (!sheet || sheet.hidden) return;
   sheet.hidden = true;
   document.body.classList.remove("sheet-open");
+  document.querySelector(".app-shell").inert = false;
+  if (detailReturnSelector) document.querySelector(detailReturnSelector)?.focus({ preventScroll: true });
 }
 
 function renderDetailSheetContent() {
@@ -1055,6 +1069,7 @@ function detailMarkup(item, rank) {
         ${starButton(item.ticker)}
       </div>
       <p id="selectedName">${escapeHtml(item.name || item.ticker)}</p>
+      <p class="detail-quote-time">${escapeHtml([item.quoteSource, item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf)) ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" · "))}</p>
       ${profileMetaMarkup(item)}
       ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
     </div>
@@ -1350,10 +1365,12 @@ function formatPrice(value) {
 function formatQuoteCell(item) {
   const price = formatPrice(item.lastPrice);
   if (price === "-") return '<span class="quote-warning">No quote</span>';
-  const meta = [item.quoteSource, item.quoteAsOf ? formatShortDateTime(item.quoteAsOf) : ""].filter(Boolean).join(" • ");
-  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap">${capLabelFor(item)}</small>` : "";
+  const hasDate = item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf));
+  const meta = [item.quoteSource, hasDate ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" • ");
+  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap" title="${escapeHtml(capLabelFor(item))}">$${shortFmt.format(item.marketCap)} cap</small>` : "";
   const warning = window.SIGNALDESK_QUALITY.quoteState(item) === "stale" ? '<small class="quote-warning">Stale quote · not current</small>' : "";
-  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${warning}${cap}<small class="quote-meta">${escapeHtml(meta)}</small>`;
+  const date = hasDate ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(new Date(item.quoteAsOf)) : "Undated";
+  return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${warning}${cap}<small class="quote-meta" title="${escapeHtml(meta)}">${escapeHtml(date)}</small>`;
 }
 
 function capLabelFor(item) {
@@ -1417,8 +1434,16 @@ function bindEvents() {
     selectedTicker = "";
     render();
   });
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
-    th.addEventListener("click", () => setRankMode(th.dataset.sort));
+  byId("rankMode").addEventListener("change", event => setRankMode(event.target.value));
+  byId("resetView").addEventListener("click", () => {
+    byId("tickerSearch").value = "";
+    document.querySelectorAll('input[name="source"]').forEach(input => { input.checked = true; });
+    capFilter = "all";
+    attentionFilter = "all";
+    watchlistFilter = false;
+    syncControls();
+    render();
+    byId("tickerSearch").focus();
   });
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
@@ -1436,6 +1461,12 @@ function bindEvents() {
   document.querySelector(".detail-sheet-backdrop")?.addEventListener("click", closeDetailSheet);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeDetailSheet();
+    const sheet = byId("detailSheet");
+    if (event.key !== "Tab" || !sheet || sheet.hidden) return;
+    const targets = [...sheet.querySelectorAll('button:not([disabled]), a[href], summary, input, select, [tabindex="0"]')].filter(el => el.getClientRects().length);
+    const first = targets[0], last = targets.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
   });
   window.addEventListener("resize", () => {
     if (!isNarrowViewport()) closeDetailSheet();
@@ -1445,7 +1476,8 @@ function bindEvents() {
 
 function setRankMode(mode) {
   rankMode = mode;
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+  byId("rankMode").value = mode;
+  document.querySelectorAll("th[data-sort]").forEach((th) => {
     const active = th.dataset.sort === mode;
     th.classList.toggle("sort-active", active);
     th.setAttribute("aria-sort", active ? "descending" : "none");
@@ -1482,7 +1514,8 @@ function setWatchlistFilter(on) {
 // hydrating state from the URL so deep-linked views show the right active
 // toggles without firing a render per control.
 function syncControls() {
-  document.querySelectorAll("th.sortable[data-sort]").forEach((th) => {
+  byId("rankMode").value = rankMode;
+  document.querySelectorAll("th[data-sort]").forEach((th) => {
     const active = th.dataset.sort === rankMode;
     th.classList.toggle("sort-active", active);
     th.setAttribute("aria-sort", active ? "descending" : "none");
@@ -1552,6 +1585,9 @@ function toggleSidebar() {
   button.setAttribute("title", hidden ? "Show filters" : "Hide filters");
   button.setAttribute("aria-label", hidden ? "Show filters" : "Hide filters");
   button.setAttribute("aria-pressed", String(!hidden));
+  if (!hidden && window.matchMedia("(max-width: 980px)").matches) {
+    byId("sidebar").scrollIntoView({ block: "start" });
+  }
 }
 
 function setDataStatus(message) {

@@ -14,6 +14,17 @@ is a manual evidence registry rendered by `adoption.js`. `desk-cleanup.css`
 contains the scoped layout trial. See `PRODUCTION_REVIEW_2026-09-25.md` and
 `ADOPTION_TRACKER.md`; older state descriptions below are historical context.
 
+September 25 follow-up: `favicon.svg` is the original signal-trace S mark, reused
+in the header. Tabs are now compact and count-free; counts live with their data.
+The board has six columns, a native `#rankMode` sort selector at every width,
+and a resettable empty state. Market-cap controls live in Filters. On phones,
+Filters opens above the board instead of below the entire page. Detail sheets
+isolate background focus and restore focus to their originating stock control.
+`layout-fix.js` uses horizontal **clip**, not hidden: hidden made the body a
+scroll container and broke the sticky app bar. Keep the 60px app bar + 52px tab
+offsets aligned with table headers and the sticky detail pane. Desktop selection
+resets detail scroll only when the selected ticker changes.
+
 Static GitHub Pages site. **No build step, no framework, no dependencies.**
 Script load order in `index.html` matters:
 
@@ -26,7 +37,7 @@ Script load order in `index.html` matters:
 | `springs.js`, `themes.js`, `phrase-radar.js`, `clusters.js`, `calibration.js`, `alerts.js` | One file per Theme Engine panel; each reads its own `window.SIGNALDESK_*` global and renders into its container. Independent — safe to edit in isolation. |
 | `layout-fix.js` | Injected `<style>` overrides (lots of `!important`). If a CSS change in styles.css mysteriously doesn't apply, look here. |
 | `declutter.js` | Collapsible-panel mechanism + mobile bottom-sheet support file. |
-| `tabs.js` / `tabs.css` | **The two-surface shell.** Moves each panel section into one of two tab panels (**Desk** / **Research**) at runtime. Owns tab state, the URL hash, the tab count badges, and hiding the Filters control off the Research tab. Was four tabs until 2026-08-29; splitting ten panels four ways only hid how few had content. |
+| `tabs.js` / `tabs.css` | **The two-surface shell.** Moves sections into **Desk** / **Research** at runtime. Owns tab state, keyboard navigation, the URL hash, and hiding Filters off Research. Tabs no longer show mixed-unit counts. |
 | `styles.css` | Single stylesheet. New feature styles get appended as commented blocks at the end. |
 
 ## The traps (each one cost real debugging time)
@@ -36,9 +47,8 @@ Script load order in `index.html` matters:
    enhancements.js AND mirrored in script.js (script.js is the fallback when
    enhancements.js fails to load). Editing only script.js will look correct in
    code review and do nothing in the browser.
-2. **Cache busting:** `enhancements.js`, `layout-fix.js`, and `declutter.js`
-   are referenced with `?v=` params — bump the param when editing them.
-   `script.js`/`styles.css` have no param and ride the 10-minute CDN cache.
+2. **Cache busting:** CSS and the core, enhancement, layout, tab and declutter
+   scripts have `?v=` params — bump the relevant param when editing them.
 3. **Deploys can fail silently.** After every push to main, verify the
    `pages-build-deployment` workflow run for that commit reports `success`
    (GitHub API: `actions/workflows` on the repo). A failed build serves the
@@ -49,7 +59,8 @@ Script load order in `index.html` matters:
    - `≥1181px`: desktop — sticky detail side panel next to the table.
    - `≤1180px`: detail side panel is `display:none`; ticker clicks open the
      bottom sheet (`#detailSheet`). The sheet must never appear ≥1181px.
-   - `≤980px`: sidebar stacks below main; auto-hidden on load.
+   - `≤980px`: Filters opens in a bounded, scrollable section above main;
+     auto-hidden on load.
    - `≤760px`: ranking table becomes stacked cards (layout-fix.js owns this).
    - `≤680px`: tightest paddings; tape capped at 4. (The hero is a single line
      plus a collapsed `<details>` at every width since 2026-08-29, so there are

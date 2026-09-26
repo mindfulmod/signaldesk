@@ -9,9 +9,8 @@
 // whole tab. Three of four doors opened onto empty rooms, and a blank tab is
 // indistinguishable from a broken one — you cannot tell what sits where.
 //
-// So: one Desk you scroll, with nothing hidden behind a door, and one Research
-// surface whose tab badge reports how many of its panels actually have content,
-// so it is honest about being mostly empty rather than silently so.
+// The Desk is the daily board; Research holds the longer-form evidence.
+// Counts belong next to their data, not on tabs with inconsistent units.
 //
 // It deliberately does NOT rewrite any panel: sections are moved in the DOM, so
 // every panel keeps its own renderer, its ids, and its collapse behaviour.
@@ -45,12 +44,6 @@
       selectors: [".adoption-panel", ".buy-panel", ".themes-panel", ".movers-panel", ".whatchanged-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
     },
   ];
-
-  // Which container each Research panel fills, so the tab badge can report how
-  // many actually have something in them. A count of populated panels is the
-  // one number that answers "is it worth opening this?" — a themes count would
-  // read as 6 while every theme sat quiet.
-  const RESEARCH_CONTENT = ["#adoptionFeed", "#themesRail", "#springsBoard", "#phraseRadarFeed", "#clustersFeed", "#calibrationSummary"];
 
   const bySelector = new Map();
   for (const tab of TABS) {
@@ -91,12 +84,10 @@
       button.dataset.tab = tab.id;
       button.setAttribute("role", "tab");
       button.setAttribute("aria-controls", `tabpanel-${tab.id}`);
-      // Two labels, one shown per breakpoint by CSS — four full-length labels
-      // do not fit across a 375px phone without horizontal scrolling.
+      // Short label keeps navigation compact on narrow screens.
       button.innerHTML =
         `<span class="tab-label">${tab.label}</span>` +
-        `<span class="tab-label-short">${tab.shortLabel || tab.label}</span>` +
-        `<span class="tab-count" hidden></span>`;
+        `<span class="tab-label-short">${tab.shortLabel || tab.label}</span>`;
       list.appendChild(button);
     }
     nav.appendChild(list);
@@ -172,41 +163,12 @@
     return missing;
   }
 
-  // Live counts on the tab chips. Only real, countable things — a tab with
-  // nothing to show gets no badge rather than a zero.
-  function refreshCounts() {
-    const counts = {
-      desk: document.querySelectorAll("#rankingBody > tr").length,
-      // Populated panels, not rows: Research is mostly empty by design right
-      // now, and this is the number that says so at a glance.
-      //
-      // An empty panel is not an empty container — every renderer here fills its
-      // container with an explanatory "*-empty" note instead ("No graded events
-      // yet..."), which is good for the reader and would otherwise make a panel
-      // with nothing in it count as populated. Count only real content nodes.
-      research: RESEARCH_CONTENT.filter((selector) => {
-        const node = document.querySelector(selector);
-        if (!node) return false;
-        return [...node.children].some((child) => !/-empty$/.test(child.className || ""));
-      }).length,
-    };
-    for (const tab of TABS) {
-      const badge = document.querySelector(`#tab-${tab.id} .tab-count`);
-      if (!badge) continue;
-      const value = counts[tab.id];
-      const show = Number.isFinite(value) && value > 0;
-      badge.hidden = !show;
-      badge.textContent = show ? String(value) : "";
-    }
-  }
-
   function select(id, { focus = false } = {}) {
     const tab = TABS.find((entry) => entry.id === id) || TABS[0];
-    // Re-selecting the active tab is a no-op beyond the counts. This matters:
+    // Re-selecting the active tab is a no-op. This matters:
     // select() dispatches a resize (which runs a full render()), and callers
     // like the search box invoke it on every keystroke.
     if (tab.id === activeId) {
-      refreshCounts();
       if (focus) document.getElementById(`tab-${tab.id}`)?.focus();
       return;
     }
@@ -226,7 +188,6 @@
 
     const hint = document.getElementById("tabbarHint");
     if (hint) hint.textContent = tab.hint;
-    refreshCounts();
 
     // Filters only act on the discovery board, so the control is meaningless
     // anywhere else. The board lives on the Desk now, so that is where the
@@ -241,6 +202,8 @@
     if (shell && !filtersRelevant) {
       shell.classList.add("sidebar-hidden");
       filterBtn?.setAttribute("aria-pressed", "false");
+      filterBtn?.setAttribute("aria-label", "Show filters");
+      filterBtn?.setAttribute("title", "Show filters");
     }
 
     try {
@@ -262,7 +225,6 @@
 
     // Panels that lay out from measured widths were hidden until now.
     window.dispatchEvent(new Event("resize"));
-    refreshCounts();
   }
 
   function start() {
@@ -270,7 +232,6 @@
     let attempts = 0;
     const tick = () => {
       const missing = placeSections();
-      refreshCounts();
       if (missing && attempts++ < 40) setTimeout(tick, 200);
     };
     tick();
@@ -287,13 +248,6 @@
       if (id && id !== activeId && TABS.some((tab) => tab.id === id)) select(id);
     });
 
-    // Panels render asynchronously from their own data globals; keep the counts
-    // honest without polling forever.
-    let refreshes = 0;
-    const countTimer = setInterval(() => {
-      refreshCounts();
-      if (refreshes++ > 30) clearInterval(countTimer);
-    }, 1000);
   }
 
   // Anything that wants to jump the user to a section can use this.
