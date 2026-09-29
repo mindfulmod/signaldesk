@@ -1,1 +1,1 @@
-window.SIGNALDESK_LEADERS = {"generatedAt":"2026-09-28T20:14:23.034Z","leaders":[]};
+window.SIGNALDESK_LEADERS = {"generatedAt":"2026-09-29T01:06:24.511Z","leaders":[]};
