@@ -184,6 +184,13 @@ function getState() {
   };
 }
 
+function matchesStockQuery(item, query) {
+  const text = String(query || "").trim().toUpperCase();
+  if (!text) return true;
+  if (text.startsWith("$")) return item.ticker.toUpperCase() === text.slice(1);
+  return `${item.ticker} ${item.name || ""}`.toUpperCase().includes(text);
+}
+
 async function loadSnapshot(force = false) {
   const canFetchJson = location.protocol === "http:" || location.protocol === "https:";
   if (canFetchJson || force) {
@@ -534,7 +541,7 @@ function filteredSignals() {
       mentions: state.sources.reduce((sum, source) => sum + (item.sources[source] || 0), 0),
     }))
     .filter((item) => item.mentions > 0)
-    .filter((item) => (!state.query ? true : `${item.ticker} ${item.name}`.toUpperCase().includes(state.query)));
+    .filter((item) => matchesStockQuery(item, state.query));
 
   // Recompute signalScore peer-relatively based on the active source selection,
   // so rankings reflect only what the user has checked.
@@ -856,6 +863,9 @@ let boardExpanded = false;
 function renderTable(items) {
   byId("clearFocus").hidden = !byId("tickerSearch").value;
   byId("boardEmpty").hidden = items.length > 0;
+  const exactQuery = byId("tickerSearch").value.trim().startsWith("$");
+  byId("boardEmpty").querySelector("h3").textContent = exactQuery ? "No snapshot coverage for this ticker" : "No matching stocks";
+  byId("boardEmpty").querySelector("p").textContent = exactQuery ? "This ticker is not in the current filtered snapshot. Missing coverage is not an investment conclusion. Clear the search or try another data window." : "Try another search or clear your filters to see the full snapshot.";
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
   const watchLabel = watchlistFilter ? " watchlist" : "";
@@ -864,7 +874,7 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `${items.length}${filterLabel} tickers${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
+      ? `${items.length}${filterLabel} ticker${items.length === 1 ? "" : "s"}${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
       : "No matches — adjust your search or filters";
   }
   const prevRanks = previousRankMap();
@@ -1544,6 +1554,7 @@ function applyUrlParams() {
   }
   const ticker = params.get("ticker");
   if (ticker) selectedTicker = ticker.toUpperCase();
+  if (params.has("q")) byId("tickerSearch").value = params.get("q");
   const sort = params.get("sort");
   if (["signal", "mentions", "momentum"].includes(sort)) rankMode = sort;
   const cap = params.get("cap");
@@ -1557,18 +1568,33 @@ function applyUrlParams() {
 // replaceState keeps it out of history; wrapped because file:// can reject it.
 function updateUrl() {
   try {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(location.search);
+    for (const key of ["ticker", "sort", "cap", "attn", "watch", "q"]) params.delete(key);
+    if (byId("tickerSearch").value.trim()) params.set("q", byId("tickerSearch").value.trim());
     if (selectedTicker) params.set("ticker", selectedTicker);
     if (rankMode !== "signal") params.set("sort", rankMode);
     if (capFilter !== "all") params.set("cap", capFilter);
     if (attentionFilter !== "all") params.set("attn", attentionFilter);
     if (watchlistFilter) params.set("watch", "1");
     const qs = params.toString();
-    window.history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
+    window.history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}${location.hash}`);
   } catch {
     /* file:// or sandboxed — sharing via URL just won't reflect, no functional impact */
   }
 }
+
+// Technology company links search the real stock universe; absent coverage
+// must show the normal empty state, never a different company's detail panel.
+window.SIGNALDESK_FIND_STOCK = ticker => {
+  try { const url = new URL(location.href); url.searchParams.delete("tech"); window.history.replaceState(null, "", url); } catch { /* optional URL state */ }
+  window.SIGNALDESK_SELECT_TAB?.("desk");
+  capFilter = "all"; attentionFilter = "all"; watchlistFilter = false;
+  document.querySelectorAll('input[name="source"]').forEach(input => { input.checked = true; });
+  byId("tickerSearch").value = `$${ticker}`;
+  selectedTicker = ticker;
+  syncControls(); render();
+  byId("tickerSearch").focus();
+};
 
 function toggleDetailPanel() {
   const grid = document.querySelector(".dashboard-grid");

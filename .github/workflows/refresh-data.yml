@@ -20,6 +20,10 @@ on:
       - "data-quality.js"
       - "adoption-watchlist.js"
       - "adoption.js"
+      - "technology-registry.js"
+      - "technology-model.js"
+      - "technology.css"
+      - "scripts/update-technology.mjs"
       - "desk-cleanup.css"
       - "springs.js"
       - "themes.js"
@@ -51,12 +55,16 @@ jobs:
           node-version: "20"
 
       - name: Validate scripts
+        id: validate
         run: |
           node --check script.js
           node --check enhancements.js
           node --check data-quality.js
           node --check adoption-watchlist.js
           node --check adoption.js
+          node --check technology-registry.js
+          node --check technology-model.js
+          node --check scripts/update-technology.mjs
           node --check springs.js
           node --check themes.js
           node --check phrase-radar.js
@@ -70,9 +78,19 @@ jobs:
           for f in scripts/lib/*.mjs; do node --check "$f"; done
 
       - name: Run unit tests
+        id: tests
         run: node --test scripts/test/*.test.mjs
 
+      - name: Check technology sources
+        id: technology
+        # Independent of stock collection. Each source is attempted at most
+        # once per 24h. Failures are saved as unavailable, never as no change.
+        timeout-minutes: 3
+        run: node scripts/update-technology.mjs
+
       - name: Refresh public no-key data
+        id: stocks
+        if: ${{ !cancelled() && steps.validate.outcome == 'success' && steps.tests.outcome == 'success' }}
         # Historical successful runs take 5-7.5 minutes; every fetch inside the
         # script is now capped at 20s. A dedicated step timeout well under the
         # job's 35-minute limit means a future stall fails loudly and fast
@@ -89,9 +107,14 @@ jobs:
         run: node scripts/update-data.mjs
 
       - name: Commit refreshed data
+        if: ${{ !cancelled() && (steps.technology.outcome == 'success' || steps.stocks.outcome == 'success') }}
         run: |
           FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js data/themes.json data/themes.js data/diffusion-map.json data/diffusion-map.js data/diffusion-state.json data/co-mention-history.json data/clusters.json data/clusters.js data/leaders.json data/leaders.js data/hot-monitor.json data/hot-monitor.js data/phrase-history.json data/phrase-radar.json data/phrase-radar.js data/calibration-log.json data/calibration.json data/calibration.js data/alerts-log.json data/alerts-log.js data/alerts-state.json"
-          if git diff --quiet -- $FILES; then
+          if [ "${{ steps.stocks.outcome }}" != "success" ]; then FILES=""; fi
+          if [ "${{ steps.technology.outcome }}" = "success" ]; then
+            FILES="$FILES data/technology-monitor-state.json data/technology-monitor.json data/technology-monitor.js"
+          fi
+          if git diff --quiet -- $FILES && [ -z "$(git ls-files --others --exclude-standard -- $FILES)" ]; then
             echo "No data changes to commit."
             exit 0
           fi

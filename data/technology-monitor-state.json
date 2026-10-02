@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-02T18:10:31.232Z",
+  "sources": {
+    "qs-resources": {
+      "id": "qs-resources",
+      "sourceUrl": "https://www.quantumscape.com/resources/",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "421722a69d091bc095b37099f6c73b613e742fae652bddae877576ddf2eb5143",
+      "items": [
+        {
+          "url": "https://www.quantumscape.com/battery-technology/",
+          "title": "Solid-State Batteries"
+        },
+        {
+          "url": "https://www.quantumscape.com/technology/",
+          "title": "SOLID-STATE FAQS"
+        }
+      ],
+      "seenLinks": [
+        "https://www.quantumscape.com/battery-technology/",
+        "https://www.quantumscape.com/technology/"
+      ],
+      "matchedItems": 2,
+      "title": "Resources | QuantumScape",
+      "etag": null,
+      "lastModified": null
+    },
+    "toyota-target": {
+      "id": "toyota-target",
+      "sourceUrl": "https://global.toyota/en/newsroom/corporate/39865919.html",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "3b585a0fdcfa265a2315a6b87668bcf3a1abc0d5d4a65af361a12c2bdef2bc70",
+      "items": [],
+      "seenLinks": [],
+      "matchedItems": 0,
+      "title": "Idemitsu and Toyota Announce Beginning of Cooperation toward Mass Production of All-Solid-State Batteries for BEVs | Corporate | Global Newsroom | Toyota Motor Corporation Official",
+      "etag": null,
+      "lastModified": null
+    },
+    "tmobile-network": {
+      "id": "tmobile-network",
+      "sourceUrl": "https://www.t-mobile.com/news/category/network",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "9088a1dbf4a7111b4fee69d51a9a70e1eab5c5bbc14ff3c7843138f51eeb1646",
+      "items": [
+        {
+          "url": "https://www.t-mobile.com/news/network/t-mobile-activates-t-satellite-and-mobilizes-network-teams-tropical-storm-lala-hawaii",
+          "title": "Network Press Release T‑Mobile Activates T-Satellite and Mobilizes Network Teams as Tropical Storm Lala Approaches Hawaiʻi (Updated 8/16/26 AM) August 14, 2026 | 7 min read"
+        },
+        {
+          "url": "https://www.t-mobile.com/news/network/t-mobile-expands-network-recovery-and-customer-support-across-hawaii-following-hurricane-lala",
+          "title": "Network Press Release T‑Mobile Supports Hawaiʻi Through Hurricane Lala with Network Recovery, Satellite Connectivity and Community Support (Updated 8/22/26) August 16, 2026 | 9 min"
+        }
+      ],
+      "seenLinks": [
+        "https://www.t-mobile.com/news/network/t-mobile-activates-t-satellite-and-mobilizes-network-teams-tropical-storm-lala-hawaii",
+        "https://www.t-mobile.com/news/network/t-mobile-expands-network-recovery-and-customer-support-across-hawaii-following-hurricane-lala"
+      ],
+      "matchedItems": 2,
+      "title": "Latest 5G Network News & Updates | T‑Mobile Newsroom",
+      "etag": null,
+      "lastModified": null
+    },
+    "tmobile-service": {
+      "id": "tmobile-service",
+      "sourceUrl": "https://www.t-mobile.com/coverage/satellite-phone-service",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "dd352f30eaa1af1eb6e7c8ad72778acc06134a99f51880400569316616718767",
+      "items": [
+        {
+          "url": "https://www.t-mobile.com/coverage/coverage-map",
+          "title": "Check out the T-Satellite coverage map."
+        }
+      ],
+      "seenLinks": [
+        "https://www.t-mobile.com/coverage/coverage-map"
+      ],
+      "matchedItems": 1,
+      "title": "T-Satellite: Direct to Cell Satellite Phone Service",
+      "etag": null,
+      "lastModified": null
+    },
+    "ast-investor": {
+      "id": "ast-investor",
+      "sourceUrl": "https://investors.ast-science.com/",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "ab939085915fb96a89df6a0325ed0c6af61af4c08447cb6369100419b86fcd1d",
+      "items": [
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=5493087444506662&symbol=ASTS",
+          "title": "AST Q2 2025 Earnings Release"
+        },
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=6180696906167632&symbol=ASTS",
+          "title": "AST Q1 2025 Earnings Release"
+        },
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=6492911629290981&symbol=ASTS",
+          "title": "AST Q3 2025 Earnings Release"
+        },
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=6958873302542032&symbol=ASTS",
+          "title": "AST Q2 2026 Earnings Release"
+        },
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=7605011367480241&symbol=ASTS",
+          "title": "AST Q1 2026 Earnings Release"
+        },
+        {
+          "url": "https://feeds.issuerdirect.com/news-release.html?newsid=8745562190863320&symbol=ASTS",
+          "title": "AST Q4 2025 Earnings Release"
+        },
+        {
+          "url": "https://investors.ast-science.com/chris-ivory",
+          "title": "Chris Ivory Chief Commercial Officer"
+        },
+        {
+          "url": "https://investors.ast-science.com/quarterly-results",
+          "title": "See Previous Results"
+        },
+        {
+          "url": "https://investors.ast-science.com/sriram-jayasimha",
+          "title": "Sriram Jayasimha Chief Scientist, Commercial Applications"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST_SpaceMobile_Q1_2025_Quarterly_Business_Update_vF.pdf",
+          "title": "AST Q1 2025 Earnings Presentation"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST-SpaceMobile-Q2-2025-Quarterly-Business-Update_vF-74415833.pdf",
+          "title": "AST Q2 2025 Earnings Presentation"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST-SpaceMobile-Q3-2025-Quarterly-Business-Update_vF-b3e99857.pdf",
+          "title": "AST Q3 2025 Earnings Presentation"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q1+2026+Quarterly+Business+Update_vFF.pdf",
+          "title": "AST Q1 2026 Earnings Presentation"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q2+2026+Business+Update_vF.pdf",
+          "title": "AST Q2 2026 Earnings Presentation"
+        },
+        {
+          "url": "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q4+2025+Quarterly+Business+Update_vF_.pdf",
+          "title": "AST Q4 2025 Earnings Presentation"
+        }
+      ],
+      "seenLinks": [
+        "https://feeds.issuerdirect.com/news-release.html?newsid=5493087444506662&symbol=ASTS",
+        "https://feeds.issuerdirect.com/news-release.html?newsid=6180696906167632&symbol=ASTS",
+        "https://feeds.issuerdirect.com/news-release.html?newsid=6492911629290981&symbol=ASTS",
+        "https://feeds.issuerdirect.com/news-release.html?newsid=6958873302542032&symbol=ASTS",
+        "https://feeds.issuerdirect.com/news-release.html?newsid=7605011367480241&symbol=ASTS",
+        "https://feeds.issuerdirect.com/news-release.html?newsid=8745562190863320&symbol=ASTS",
+        "https://investors.ast-science.com/chris-ivory",
+        "https://investors.ast-science.com/quarterly-results",
+        "https://investors.ast-science.com/sriram-jayasimha",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST_SpaceMobile_Q1_2025_Quarterly_Business_Update_vF.pdf",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST-SpaceMobile-Q2-2025-Quarterly-Business-Update_vF-74415833.pdf",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST-SpaceMobile-Q3-2025-Quarterly-Business-Update_vF-b3e99857.pdf",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q1+2026+Quarterly+Business+Update_vFF.pdf",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q2+2026+Business+Update_vF.pdf",
+        "https://irp.cdn-website.com/bbb776b9/files/uploaded/AST+SpaceMobile+Q4+2025+Quarterly+Business+Update_vF_.pdf"
+      ],
+      "matchedItems": 15,
+      "title": "Investors - AST SpaceMobile",
+      "etag": "\"1823460158\"",
+      "lastModified": null
+    },
+    "ai-glasses-disclosure": {
+      "id": "ai-glasses-disclosure",
+      "sourceUrl": "https://about.fb.com/news/2026/06/meta-essilorluxottica-partner-launch-meta-glasses/",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "2d6ca3245c2d7ba92af9a01a09c0e97027a4e3823fe1a45419eff69747454c9c",
+      "items": [
+        {
+          "url": "https://about.fb.com/news/tag/meta-glasses/",
+          "title": "Meta Glasses"
+        },
+        {
+          "url": "https://about.fb.com/wp-content/uploads/2026/06/Meta-Partnering-with-EssilorLucottica-to-Launch-Meta-Glasses_Header.mp4",
+          "title": "https://about.fb.com/wp-content/uploads/2026/06/Meta-Partnering-with-EssilorLucottica-to-Launch-Meta-Glasses_Header.mp4"
+        }
+      ],
+      "seenLinks": [
+        "https://about.fb.com/news/tag/meta-glasses/",
+        "https://about.fb.com/wp-content/uploads/2026/06/Meta-Partnering-with-EssilorLucottica-to-Launch-Meta-Glasses_Header.mp4"
+      ],
+      "matchedItems": 2,
+      "title": "We’re Partnering With EssilorLuxottica to Launch Meta Glasses",
+      "etag": null,
+      "lastModified": null
+    },
+    "ai-work-disclosure": {
+      "id": "ai-work-disclosure",
+      "sourceUrl": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "df242c3a2da72f31e73a8d953ef132c1ecfb8ad3f8d3097d79f8bea31675b6e3",
+      "items": [],
+      "seenLinks": [],
+      "matchedItems": 0,
+      "title": "FY26 Q4 - Press Releases - Investor Relations - Microsoft",
+      "etag": null,
+      "lastModified": null
+    },
+    "robotaxis-disclosure": {
+      "id": "robotaxis-disclosure",
+      "sourceUrl": "https://waymo-prod.appspot.com/blog/2026/09/opening-tokyo-in-2027-with-nihon-kotsu-go/",
+      "extractorVersion": 2,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-02T18:10:31.232Z",
+      "lastSuccessAt": "2026-10-02T18:10:31.232Z",
+      "baselineAt": "2026-10-02T18:10:31.232Z",
+      "lastChangedAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "a23b56484b693b5aa16ce95e5bfaced43f4e9446d75758496367c3a7a0afaf9c",
+      "items": [],
+      "seenLinks": [],
+      "matchedItems": 0,
+      "title": "Opening our doors to Tokyo riders in 2027 with Nihon Kotsu and GO",
+      "etag": null,
+      "lastModified": null
+    }
+  },
+  "events": []
+}

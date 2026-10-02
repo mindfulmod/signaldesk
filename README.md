@@ -1,8 +1,15 @@
-# SignalDesk Stock Mentions
+# SignalDesk — Technology & Market Discovery
+
+October 2026: the new **Technology** workspace adds a searchable radar, evidence
+profiles, milestones, a primary-source change inbox and sourced company exposure.
+Solid-state batteries and satellite-to-phone connectivity lead the registry.
+See [TECHNOLOGY_RADAR.md](TECHNOLOGY_RADAR.md) for architecture, coverage limits
+and upkeep. The stock **Desk** remains separate; adoption is not a stock-return
+prediction. Feature-branch changes become public only after merge and deployment.
 
 September 2026 cleanup: see [the production review](PRODUCTION_REVIEW_2026-09-25.md)
 and [adoption tracking plan](ADOPTION_TRACKER.md). The Desk leads with the stock
-board; Research includes a human-reviewed adoption watchlist. Direct Reddit and
+board; Research introduced a human-reviewed adoption watchlist. Direct Reddit and
 Nasdaq adapters are paused after repeated failures. Historical data is retained,
 stale quotes are marked, and current news requires a publication date within 72
 hours. Older status snapshots below describe the previous release.
@@ -23,14 +30,18 @@ Open that link from your phone to view the dashboard.
 
 ## What's on the site
 
-Two surfaces. The **Desk** is everything that works today; **Research** is the
-slower theme machinery, which is still accumulating the data it needs to say
-anything. The split is deliberate — these panels were previously spread across
-four tabs, which hid how few of them had content.
+Two surfaces: **Technology** for tracking adoption evidence and **Desk** for
+stock attention. Technology keeps the `#research` URL for compatibility, with
+older theme machinery inside a collapsed **Market research tools** section.
+New visitors start on Technology; explicit stock links still open the Desk.
+
+Technology includes five curated categories and eight monitored primary-source
+pages. Source changes are unverified review candidates, not automatically
+confirmed facts. Following and dismissing are browser-local, not push alerts.
 
 Panel status below is as of **2026-08-29** and is meant to be kept honest. A
 panel with nothing in it says what it is waiting for rather than rendering a
-blank; the Research tab badge counts only the panels that actually have content.
+blank. These historical panel placements predate the current layout.
 
 ### The Desk
 
@@ -81,6 +92,10 @@ The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM
 It:
 
 - validates the JavaScript files,
+- runs deterministic tests and checks the technology source registry at most
+  once per source per 24 hours (on the existing weekday schedule),
+- saves technology source health and unverified changes separately from stock
+  data; the initial check creates a baseline, not new-event alerts,
 - runs `scripts/update-data.mjs`,
 - refreshes `data/signals.json` and `data/signals.js`,
 - updates `data/history.json` and `data/history.js` so longer-range views improve over time,
@@ -175,6 +190,8 @@ abandoned. Status is now stated on each one.
 | Doc | Covers | Status |
 |---|---|---|
 | [UI_PLAYBOOK.md](UI_PLAYBOOK.md) | Frontend architecture, the traps, verification checklist, copy rules | **Live** — read before touching frontend code |
+| [TECHNOLOGY_RADAR.md](TECHNOLOGY_RADAR.md) | Technology profiles, source monitor, milestones and company exposure | **Implemented** — deploy after merge |
+| [ADOPTION_TRACKER.md](ADOPTION_TRACKER.md) | Original category hypotheses and evidence guardrails | **Historical thesis + ongoing methodology** |
 | [DISCOVERY_MODEL.md](DISCOVERY_MODEL.md) | The discovery score, its rationale and caveats | **Live** |
 | [THEME_ENGINE.md](THEME_ENGINE.md) | Theme lifecycle spec: ledger, registry, coils, heat, diffusion, phrases, alerts | **Mostly shipped** — Layers 0–4 built; see its status header |
 | [INSIDER_EVIDENCE.md](INSIDER_EVIDENCE.md) | Form 4 cluster-buy evidence layer | **Specced, not built** — gated on a backtest |

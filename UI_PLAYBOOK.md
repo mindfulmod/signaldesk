@@ -7,6 +7,20 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 2, 2026 update: the visible Research tab is now **Technology** (internal
+ID/hash still `research`). It leads with the technology workspace; older market
+panels remain in `#marketResearchTools`, a native disclosure. Stock links still
+open Desk. `technology-registry.js` imports the old adoption observations,
+`technology-model.js` holds tested pure logic, and `adoption.js` renders the five
+technology features. `technology.css` is scoped to this workspace. See
+`TECHNOLOGY_RADAR.md` for source collection and editorial rules.
+
+Use **`window.history`**, not bare `history`: script.js has a top-level `history`
+dataset that shadows the browser API. Technology company links use
+`window.SIGNALDESK_FIND_STOCK` and the shared exact `$TICKER` matcher; both the
+core and enhancements filter paths must use it. A missing ticker must not fall
+back to a similarly prefixed symbol.
+
 September 25, 2026 update: the Desk leads with a 15-row expandable discovery board
 and recent news. Radar, attention map and lifecycle history now live in Research.
 `data-quality.js` owns shared freshness/source-pause rules; `adoption-watchlist.js`

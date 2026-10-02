@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="SignalDesk finds stocks gaining attention, separates early evidence from crowded moves, and explains every discovery signal." />
+    <meta name="description" content="Track emerging technology from pilots to real adoption, inspect primary-source evidence and company exposure, then explore stock attention on SignalDesk." />
     <meta name="theme-color" content="#0b0f14" />
-    <title>SignalDesk — Stock Attention Intelligence</title>
+    <title>SignalDesk — Technology & Market Discovery</title>
     <link rel="icon" href="favicon.svg?v=20260925-2" type="image/svg+xml" sizes="any" />
     <link rel="stylesheet" href="styles.css?v=20260925-2" />
     <link rel="stylesheet" href="tabs.css?v=20260925-2" />
     <link rel="stylesheet" href="desk-cleanup.css?v=20260925-2" />
+    <link rel="stylesheet" href="technology.css?v=20261002-1" />
   </head>
   <body>
     <div class="app-shell" id="top">
@@ -19,7 +20,7 @@
             <img class="brand-mark" src="favicon.svg?v=20260925-2" width="34" height="34" alt="" />
             <span class="brand-text">
               <span class="brand-name">SignalDesk</span>
-              <span class="brand-tag">Attention Intelligence</span>
+              <span class="brand-tag">Technology & Market Discovery</span>
             </span>
           </a>
 
@@ -27,7 +28,7 @@
             <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
               <path d="M8.5 3a5.5 5.5 0 0 1 4.383 8.86l3.629 3.63a1 1 0 0 1-1.414 1.414l-3.63-3.63A5.5 5.5 0 1 1 8.5 3Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
             </svg>
-            <input id="tickerSearch" type="search" placeholder="Search a ticker or company…" aria-label="Search ticker or company" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" />
+            <input id="tickerSearch" type="search" placeholder="Search a ticker or company…" aria-label="Search ticker or company" title="Prefix a ticker with $ for an exact match" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" />
             <button id="clearFocus" class="search-clear" type="button" aria-label="Clear search" hidden>Clear</button>
           </div>
 
@@ -164,7 +165,7 @@
           every subsequent one.
         -->
         <section class="page-hero compact">
-          <h1>What’s getting attention — and why?</h1>
+          <h1 id="pageTitle">What’s getting attention — and why?</h1>
           <p id="coverageStatus" class="coverage-status" role="status">Checking snapshot coverage…</p>
           <details class="hero-about">
             <summary>How to read the signals</summary>
@@ -178,15 +179,30 @@
         </section>
         <p id="freshnessNotice" class="freshness-notice" role="status" hidden></p>
 
-        <section class="adoption-panel" aria-labelledby="adoption-heading">
+        <section class="adoption-panel technology-panel" aria-labelledby="adoption-heading">
           <div class="section-head compact"><div>
-            <p class="section-kicker">Beyond the ticker tape</p>
-            <h2 id="adoption-heading">Adoption watchlist</h2>
-            <p>Which technologies are becoming useful to more people? Follow evidence, not just attention.</p>
-          </div></div>
-          <div id="adoptionFeed" class="adoption-grid"></div>
-          <p id="adoptionReview" class="adoption-note"></p>
-          <p id="adoptionFollowStatus" class="adoption-note" role="status">Following saves a theme on this browser; it does not enable notifications.</p>
+            <p class="section-kicker">From possibility to adoption</p>
+            <h2 id="adoption-heading">Technology radar</h2>
+            <p>What is real, what is still a target, and what would change the story?</p>
+          </div><p id="techRegistryStatus" class="tech-meta"></p></div>
+          <div class="tech-controls">
+            <label class="tech-search"><span>Find a technology</span><input id="techSearch" type="search" placeholder="Battery, satellite, company…" autocomplete="off" /></label>
+            <details id="techFilterDisclosure" class="tech-filter-disclosure" open><summary id="techFilterLabel">Filters & following</summary><div class="tech-filter-fields">
+            <label><span>Sector</span><select id="techSector"><option value="all">All sectors</option></select></label>
+            <label><span>Evidence stage</span><select id="techStage"><option value="all">All stages</option><option value="research">Research</option><option value="pilot">Pilot validation</option><option value="early-use">Early commercial</option><option value="scaling">Reported scale</option></select></label>
+            <button id="techFollowedOnly" type="button" class="tech-button" aria-pressed="false">Following only</button>
+            </div></details>
+          </div>
+          <nav class="tech-views" aria-label="Technology views">
+            <button type="button" data-tech-view="radar" aria-pressed="true">Radar</button>
+            <button type="button" data-tech-view="milestones" aria-pressed="false">Milestones</button>
+            <button type="button" data-tech-view="inbox" aria-pressed="false">Source inbox</button>
+            <button type="button" data-tech-view="companies" aria-pressed="false">Company map</button>
+          </nav>
+          <p id="techResultStatus" class="tech-meta" role="status"></p>
+          <div id="techContent"></div>
+          <p id="adoptionFollowStatus" class="adoption-note" role="status">Following and inbox dismissals are saved on this browser, not a notification subscription.</p>
+          <details class="tech-method"><summary>How to read this radar</summary><p>Stages are editorial assessments of the cited programs, not probabilities or a ranking of future stock returns. A pilot is not a shipped product; a shipped product is not proof of mass adoption. Multiple pages from one company count as one reporting owner, not independent confirmation.</p><p>Source checks detect page changes, not verified facts. A human must review a disclosure before it becomes an observation. Older disclosures keep their original dates. An overdue review does not erase historical evidence.</p></details>
         </section>
 
         <section class="buy-panel" aria-labelledby="buy-heading">
@@ -332,11 +348,11 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <span class="brand-name">SignalDesk</span>
-            <p>Cross-platform market attention separated from confirmation and crowding risk. Built on free public data from social channels, news, SEC EDGAR, FINRA daily short-sale volume, and public price/volume feeds.</p>
+            <p>Technology adoption evidence, source changes and company exposure—separate from stock attention. Built on cited company disclosures and free public market, news and filing data.</p>
           </div>
           <div class="footer-meta">
             <p class="footer-note">For discovery and research only — <strong>not financial advice</strong>. No score predicts returns or removes the risk of loss.</p>
-            <p class="footer-sub">Refreshes market weekdays at 9:17, 12:17, 15:17, and 17:17 ET</p>
+            <p class="footer-sub">Market refreshes: weekdays at 9:17, 12:17, 15:17, and 17:17 ET. Technology sources: at most daily on that schedule; claims reviewed editorially.</p>
           </div>
         </div>
       </footer>
@@ -372,16 +388,18 @@
       if (location.protocol === "file:") {
         const bundles = [
           "signals", "history", "springs", "themes", "diffusion-map",
-          "phrase-radar", "clusters", "calibration", "alerts-log",
+          "phrase-radar", "clusters", "calibration", "alerts-log", "technology-monitor",
         ];
         for (const name of bundles) document.write(`<script src="data/${name}.js"><\/script>`);
       }
     </script>
     <script src="data-quality.js?v=20260925-1"></script>
     <script src="adoption-watchlist.js?v=20260925-1"></script>
-    <script src="script.js?v=20260925-2"></script>
-    <script src="enhancements.js?v=20260925-1"></script>
-    <script src="adoption.js?v=20260925-1"></script>
+    <script src="technology-registry.js?v=20261002-1"></script>
+    <script src="technology-model.js?v=20261002-1"></script>
+    <script src="script.js?v=20261002-1"></script>
+    <script src="enhancements.js?v=20261002-1"></script>
+    <script src="adoption.js?v=20261002-1"></script>
     <script src="springs.js"></script>
     <script src="themes.js"></script>
     <script src="phrase-radar.js"></script>
@@ -390,6 +408,6 @@
     <script src="alerts.js?v=20260925-1"></script>
     <script src="layout-fix.js?v=20260925-2"></script>
     <script src="declutter.js?v=20260925-1"></script>
-    <script src="tabs.js?v=20260925-2"></script>
+    <script src="tabs.js?v=20261002-1"></script>
   </body>
 </html>
