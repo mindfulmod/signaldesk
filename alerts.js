@@ -187,7 +187,7 @@
         border: 1px solid var(--line-2);
         white-space: nowrap;
       }
-      .wc-badge.wc-release { color: var(--up); border-color: rgba(96, 211, 141, 0.35); background: rgba(96, 211, 141, 0.12); }
+      .wc-badge.wc-release { color: var(--up); border-color: var(--accent-line); background: var(--accent-dim); }
       .wc-badge.wc-hot-coil { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-dim); }
       .wc-badge.wc-dead-coil { color: var(--down); }
       .wc-badge.wc-stage { color: var(--ink); }

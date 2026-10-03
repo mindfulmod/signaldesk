@@ -259,7 +259,7 @@
         background: var(--panel-2);
         padding: 14px;
       }
-      .spring-card[data-state="released"] { border-color: rgba(96, 211, 141, 0.4); }
+      .spring-card[data-state="released"] { border-color: var(--accent-line); }
       .spring-card[data-state="dead"] { opacity: 0.85; }
       .spring-card-top {
         display: flex;
@@ -285,7 +285,7 @@
         border: 1px solid var(--line-2);
       }
       .state-badge.state-coiled { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-dim); }
-      .state-badge.state-released { color: var(--up); border-color: rgba(96, 211, 141, 0.35); background: rgba(96, 211, 141, 0.12); }
+      .state-badge.state-released { color: var(--up); border-color: var(--accent-line); background: var(--accent-dim); }
       .state-badge.state-dead { color: var(--muted); }
       .spring-name {
         margin: 0 0 8px;

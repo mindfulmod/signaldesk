@@ -1,5 +1,14 @@
 # Adoption evidence, not a hype leaderboard
 
+October 2 implementation update: the original three hypotheses below are
+preserved with their September review date. Solid-state batteries and
+satellite-to-phone connectivity now have evidence profiles in the new
+[Technology workspace](TECHNOLOGY_RADAR.md). Search/follow, milestones,
+primary-source change monitoring, a review inbox and company relationships are
+built. Numeric claims still require editorial review; saved disclosure checks
+do not automatically discover new reporting periods. The original plan below
+is historical context, not a claim that these features remain unbuilt.
+
 Reviewed September 25, 2026. Horizon: 12–24 months. These are category hypotheses,
 not stock recommendations or calibrated probabilities.
 

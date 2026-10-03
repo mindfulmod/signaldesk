@@ -1,0 +1,21 @@
+name: SignalDesk checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore: ["data/**"]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check JavaScript syntax
+        run: |
+          for f in *.js scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
+      - name: Run deterministic tests
+        run: node --test scripts/test/*.test.mjs

@@ -29,19 +29,19 @@
 
   const TABS = [
     {
+      id: "research",
+      label: "Technology",
+      shortLabel: "Technology",
+      hint: "Follow adoption evidence, then investigate company exposure. Attention is not adoption.",
+      selectors: [".adoption-panel", ".buy-panel", ".themes-panel", ".movers-panel", ".whatchanged-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
+    },
+    {
       id: "desk",
       label: "The Desk",
       shortLabel: "Desk",
       hint: "Find a name, open the evidence, then check the risks. Public snapshots are not live quotes.",
       // Order matters: start with research navigation, then market context.
       selectors: [".dashboard-grid", ".market-pulse"],
-    },
-    {
-      id: "research",
-      label: "Research",
-      shortLabel: "Research",
-      hint: "Track adoption evidence separately from market attention. Experimental detectors remain available below.",
-      selectors: [".adoption-panel", ".buy-panel", ".themes-panel", ".movers-panel", ".whatchanged-panel", ".springs-panel", ".phraseradar-panel", ".clusters-panel", ".calibration-panel"],
     },
   ];
 
@@ -53,8 +53,11 @@
   let activeId = null;
 
   function readInitialTab() {
+    const params = new URLSearchParams(location.search);
+    if (params.has("tech")) return "research";
     const fromHash = (location.hash || "").replace(/^#/, "").split("=").pop();
     if (TABS.some((tab) => tab.id === fromHash)) return fromHash;
+    if (params.has("ticker") || params.has("q")) return "desk";
     try {
       const stored = localStorage.getItem(STORE_KEY);
       if (TABS.some((tab) => tab.id === stored)) return stored;
@@ -111,6 +114,13 @@
       panel.setAttribute("role", "tabpanel");
       panel.setAttribute("aria-labelledby", `tab-${tab.id}`);
       panel.hidden = true;
+      if (tab.id === "research") {
+        const tools = document.createElement("details");
+        tools.className = "market-research-tools";
+        tools.dataset.tabIndex = "99";
+        tools.innerHTML = '<summary>Market research tools <span>Stock setups, theme breadth & experimental detectors</span></summary><div id="marketResearchTools"></div>';
+        panel.appendChild(tools);
+      }
       main.appendChild(panel);
     }
 
@@ -149,9 +159,10 @@
           missing = true;
           continue;
         }
-        if (section.parentElement === panel) continue;
+        const destination = tab.id === "research" && selector !== ".adoption-panel" ? panel.querySelector("#marketResearchTools") : panel;
+        if (section.parentElement === destination) continue;
         section.dataset.tabIndex = String(bySelector.get(selector).index);
-        panel.appendChild(section);
+        destination.appendChild(section);
       }
       // Re-sort by configured index so a late arrival (the injected tape panel)
       // lands in its intended slot rather than at the bottom.
@@ -159,6 +170,8 @@
         (a, b) => Number(a.dataset.tabIndex || 0) - Number(b.dataset.tabIndex || 0)
       );
       for (const node of placed) panel.appendChild(node);
+      const tools = panel.querySelector("#marketResearchTools");
+      if (tools) for (const node of [...tools.children].sort((a, b) => Number(a.dataset.tabIndex) - Number(b.dataset.tabIndex))) tools.appendChild(node);
     }
     return missing;
   }
@@ -196,6 +209,9 @@
     const filterBtn = document.getElementById("toggleSidebar");
     const shell = document.querySelector(".app-shell");
     const filtersRelevant = tab.id === "desk";
+    if (shell) shell.dataset.activeTab = tab.id;
+    const title = document.getElementById("pageTitle");
+    if (title) title.textContent = filtersRelevant ? "What’s getting attention — and why?" : "Find the next adoption curve.";
     if (filterBtn) filterBtn.hidden = !filtersRelevant;
     // NB: script.js's toggleSidebar puts `sidebar-hidden` on `.app-shell`, not
     // on the sidebar itself — mirror that or the rail stays on screen.

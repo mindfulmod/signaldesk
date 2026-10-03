@@ -11,7 +11,7 @@ const source = await readFile(new URL("../../script.js", import.meta.url), "utf8
 // the network-backed browser app or introducing a DOM runtime dependency.
 function presentationHelpers() {
   const context = vm.createContext({ Intl, Date, window: { SIGNALDESK_QUALITY: quality }, shortFmt: new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }) });
-  for (const name of ["formatPrice", "capTierFor", "capLabelFor", "formatShortDateTime", "escapeHtml", "formatQuoteCell", "rankBadge"]) {
+  for (const name of ["formatPrice", "capTierFor", "capLabelFor", "formatShortDateTime", "escapeHtml", "formatQuoteCell", "rankBadge", "matchesStockQuery"]) {
     const start = source.indexOf(`function ${name}(`);
     assert.ok(start >= 0, `${name} must exist`);
     const end = source.indexOf("\nfunction ", start + 1);
@@ -29,6 +29,27 @@ test("compact quotes retain stale and undated warnings without throwing", () => 
   assert.match(fresh, /\$4\.1M cap/);
   assert.match(fresh, /title="Public chart/);
   assert.doesNotMatch(fresh, /Stale quote/);
+});
+
+test("exact company tickers never substitute prefix matches", () => {
+  const { matchesStockQuery } = presentationHelpers();
+  assert.equal(matchesStockQuery({ ticker: "QSI", name: "Quantum-Si" }, "$QS"), false);
+  assert.equal(matchesStockQuery({ ticker: "QS", name: "QuantumScape" }, "$qs"), true);
+  assert.equal(matchesStockQuery({ ticker: "QSI", name: "Quantum-Si" }, "QS"), true);
+  assert.equal(matchesStockQuery({ ticker: "QS", name: "QuantumScape" }, "quantum"), true);
+});
+
+test("stock URL updates preserve technology deep links and hash while retaining search", () => {
+  let saved;
+  const context = vm.createContext({ URLSearchParams, location: { search: "?tech=solid-state-batteries&techView=milestones", pathname: "/signaldesk/", hash: "#research" }, window: { history: { replaceState: (_, __, url) => { saved = url; } } }, history: { snapshots: [] }, byId: () => ({ value: "$QS" }), selectedTicker: "", rankMode: "signal", capFilter: "all", attentionFilter: "all", watchlistFilter: false });
+  const start = source.indexOf("function updateUrl()");
+  vm.runInContext(source.slice(start, source.indexOf("\n}\n", start) + 3), context);
+  context.updateUrl();
+  const url = new URL(saved, "https://example.org");
+  assert.equal(url.searchParams.get("tech"), "solid-state-batteries");
+  assert.equal(url.searchParams.get("techView"), "milestones");
+  assert.equal(url.searchParams.get("q"), "$QS");
+  assert.equal(url.hash, "#research");
 });
 
 test("rank changes remain visible without repeating the New label", () => {

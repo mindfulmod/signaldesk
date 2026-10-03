@@ -1,35 +1,9 @@
 :root {
-  --bg: #0b0f14;
-  --bg-grad-1: rgba(96, 211, 141, 0.045);
-  --bg-grad-2: rgba(103, 161, 255, 0.035);
-  --panel: #11171e;
-  --panel-2: #161e27;
-  --panel-3: #0e1319;
-  --line: #222c37;
-  --line-2: #33404e;
-
-  --ink: #edf2f7;
-  --muted: #9aa8b7;
-  --faint: #687789;
-
-  /* Semantics */
-  --accent: #60d38d;
-  --accent-dim: rgba(96, 211, 141, 0.12);
-  --up: #60d38d;
-  --down: #ff7373;
-  --blue: #58a6ff;
-  --teal: #2bd4d6;
-  --amber: #e0b94a;
-  --red: #ff6b74;
-  --purple: #a98be0;
-  --green: #4ade80;
-
-  --shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  /* Color tokens live in appearance.css for both themes. */
   --radius: 12px;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace;
-  color-scheme: dark;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -107,7 +81,7 @@ td {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a4658;
+  background: var(--faint);
   background-clip: content-box;
 }
 
@@ -139,7 +113,7 @@ td {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(12, 16, 22, 0.86);
+  background: var(--appbar-bg);
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   border-bottom: 1px solid var(--line);
@@ -279,13 +253,13 @@ td {
 }
 
 .status-chip.stale {
-  border-color: rgba(224, 185, 74, 0.34);
+  border-color: var(--warning-line);
   color: var(--amber);
 }
 
 .status-chip.stale::before {
   background: var(--amber);
-  box-shadow: 0 0 0 3px rgba(224, 185, 74, 0.12);
+  box-shadow: 0 0 0 3px var(--warning-bg);
 }
 
 .appbar-btn {
@@ -327,7 +301,7 @@ td {
   align-self: start;
   height: calc(100vh - 60px);
   padding: 6px 20px 22px;
-  background: linear-gradient(180deg, #0d1219, #0a0e14);
+  background: var(--panel-3);
   border-right: 1px solid var(--line);
   overflow-y: auto;
 }
@@ -416,9 +390,9 @@ td {
 }
 
 .source-blocked {
-  background: rgba(255, 93, 93, 0.16);
+  background: var(--danger-bg);
   color: var(--down);
-  border: 1px solid rgba(255, 93, 93, 0.35);
+  border: 1px solid var(--danger-line);
 }
 
 .check-row input {
@@ -436,26 +410,26 @@ td {
 }
 
 .wsb { background: var(--red); color: var(--red); }
-.google { background: #6ba8ff; color: #6ba8ff; }
+.google { background: var(--blue); color: var(--blue); }
 .gdelt { background: var(--teal); color: var(--teal); }
 .bing { background: var(--purple); color: var(--purple); }
-.reddit { background: #d98a5b; color: #d98a5b; }
-.x { background: #e7eef5; color: #e7eef5; }
-.stocktwits { background: #3cc6e8; color: #3cc6e8; }
-.apewisdom { background: #e0a84a; color: #e0a84a; }
-.hackernews { background: #ff8a3d; color: #ff8a3d; }
-.fourchan { background: #86b06a; color: #86b06a; }
+.reddit { background: var(--orange); color: var(--orange); }
+.x { background: var(--ink); color: var(--ink); }
+.stocktwits { background: var(--cyan); color: var(--cyan); }
+.apewisdom { background: var(--amber); color: var(--amber); }
+.hackernews { background: var(--orange); color: var(--orange); }
+.fourchan { background: var(--olive); color: var(--olive); }
 .news { background: var(--amber); color: var(--amber); }
-.youtube { background: #ff5d5d; color: #ff5d5d; }
+.youtube { background: var(--red); color: var(--red); }
 .options { background: var(--purple); color: var(--purple); }
-.sec { background: #9bb6a8; color: #9bb6a8; }
-.cnbc { background: #5fb0d6; color: #5fb0d6; }
-.marketwatch { background: #6fcf97; color: #6fcf97; }
-.pressreleases { background: #c98ad6; color: #c98ad6; }
-.financialmedia { background: #8fd6b0; color: #8fd6b0; }
-.nasdaq { background: #4fb3ff; color: #4fb3ff; }
-.finra { background: #d98a5b; color: #d98a5b; }
-.price-volume { background: #7c9aff; color: #7c9aff; }
+.sec { background: var(--muted); color: var(--muted); }
+.cnbc { background: var(--cyan); color: var(--cyan); }
+.marketwatch { background: var(--green); color: var(--green); }
+.pressreleases { background: var(--rose); color: var(--rose); }
+.financialmedia { background: var(--teal); color: var(--teal); }
+.nasdaq { background: var(--blue); color: var(--blue); }
+.finra { background: var(--orange); color: var(--orange); }
+.price-volume { background: var(--indigo); color: var(--indigo); }
 
 .secondary-button {
   width: 100%;
@@ -496,7 +470,7 @@ td {
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 2px);
   background:
-    linear-gradient(120deg, rgba(96, 211, 141, 0.075), transparent 42%),
+    linear-gradient(120deg, var(--accent-dim), transparent 42%),
     var(--panel);
 }
 
@@ -533,7 +507,7 @@ td {
   gap: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(11, 15, 20, 0.52);
+  background: var(--panel-3);
 }
 
 .hero-method > div {
@@ -589,10 +563,10 @@ h1 {
   width: min(1320px, 100%);
   margin: -4px auto 16px;
   padding: 11px 14px;
-  border: 1px solid rgba(224, 185, 74, 0.34);
+  border: 1px solid var(--warning-line);
   border-radius: 9px;
-  background: rgba(224, 185, 74, 0.07);
-  color: #d9bd67;
+  background: var(--warning-bg);
+  color: var(--amber);
   font-size: 0.8rem;
   font-weight: 650;
   line-height: 1.45;
@@ -779,7 +753,7 @@ h1 {
 
 .buy-card:hover {
   border-color: var(--line-2);
-  background: #18212b;
+  background: var(--panel-hover);
 }
 
 .buy-card-top,
@@ -867,11 +841,11 @@ h1 {
   white-space: nowrap;
 }
 
-.stage-early { color: var(--teal); border-color: rgba(43, 212, 214, 0.35); }
-.stage-building { color: var(--blue); border-color: rgba(88, 166, 255, 0.36); }
-.stage-confirmed { color: var(--up); border-color: rgba(96, 211, 141, 0.38); }
-.stage-crowded { color: var(--amber); border-color: rgba(224, 185, 74, 0.42); }
-.stage-cooling { color: var(--down); border-color: rgba(255, 115, 115, 0.38); }
+.stage-early { color: var(--teal); border-color: var(--teal); }
+.stage-building { color: var(--blue); border-color: var(--blue); }
+.stage-confirmed { color: var(--up); border-color: var(--accent-line); }
+.stage-crowded { color: var(--amber); border-color: var(--warning-line); }
+.stage-cooling { color: var(--down); border-color: var(--danger-line); }
 
 .radar-evidence {
   display: flex;
@@ -895,10 +869,10 @@ h1 {
 
 .risk-row span {
   padding: 3px 7px;
-  border: 1px solid rgba(224, 185, 74, 0.28);
+  border: 1px solid var(--warning-line);
   border-radius: 6px;
-  background: rgba(224, 185, 74, 0.07);
-  color: #d9bd67;
+  background: var(--warning-bg);
+  color: var(--amber);
   font-size: 0.68rem;
   font-weight: 700;
 }
@@ -1036,7 +1010,7 @@ h1 {
 .cap-toggle button.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: #06210f;
+  color: var(--on-accent);
 }
 
 .table-scroll {
@@ -1159,7 +1133,7 @@ tbody tr.selected td:first-child {
   height: 34px;
   border-radius: 8px;
   background: var(--accent-dim);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  border: 1px solid var(--accent-line);
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 800;
@@ -1293,12 +1267,12 @@ tbody tr.selected td:first-child {
 /* ===== Sentiment chip (always-on bull/bear pill) ===== */
 .sent-chip.up {
   color: var(--up);
-  border-color: rgba(63, 220, 127, 0.4);
+  border-color: var(--accent-line);
 }
 
 .sent-chip.down {
   color: var(--down);
-  border-color: rgba(255, 93, 93, 0.4);
+  border-color: var(--danger-line);
 }
 
 .sent-chip.flat { color: var(--muted); }
@@ -1816,7 +1790,7 @@ tbody tr.selected td:first-child {
   margin: 13px 0 0;
   padding: 9px 10px;
   border-left: 2px solid var(--amber);
-  background: rgba(224, 185, 74, 0.06);
+  background: var(--warning-bg);
   color: var(--muted);
   font-size: 0.72rem;
   line-height: 1.5;
@@ -2126,7 +2100,7 @@ tbody tr.selected td:first-child {
 .detail-sheet-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(3, 7, 11, 0.64);
+  background: var(--backdrop);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
@@ -2143,7 +2117,7 @@ tbody tr.selected td:first-child {
   border: 1px solid var(--line);
   border-bottom: 0;
   border-radius: 18px 18px 0 0;
-  box-shadow: 0 -18px 48px rgba(0, 0, 0, 0.55);
+  box-shadow: var(--sheet-shadow);
   animation: detail-sheet-up 0.22s ease-out;
 }
 
@@ -2294,7 +2268,7 @@ body.sheet-open {
 }
 
 .hero-about > summary:hover {
-  color: var(--text);
+  color: var(--ink);
 }
 
 .hero-about .hero-sub {

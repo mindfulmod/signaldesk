@@ -19,26 +19,26 @@ const SOURCES = [
   "Price/Volume",
 ];
 
-// Source hues tuned for legibility on the dark terminal theme.
+// Semantic CSS tokens update inline source labels and bars with the palette.
 const SOURCE_COLORS = {
-  Wallstreetbets: "#ff6b74",
-  "Reddit Finance": "#d98a5b",
-  StockTwits: "#3cc6e8",
-  ApeWisdom: "#e0a84a",
-  "Hacker News": "#ff8a3d",
-  "4chan": "#86b06a",
-  "GDELT News": "#2bd4d6",
-  "Google News": "#6ba8ff",
-  "Bing News": "#a98be0",
-  "SEC Filings": "#9bb6a8",
-  "Yahoo Public News": "#e0b94a",
-  CNBC: "#5fb0d6",
-  MarketWatch: "#6fcf97",
-  "Press Releases": "#c98ad6",
-  "Financial Media": "#8fd6b0",
-  Nasdaq: "#4fb3ff",
-  "FINRA Short Volume": "#d98a5b",
-  "Price/Volume": "#7c9aff",
+  Wallstreetbets: "var(--red)",
+  "Reddit Finance": "var(--orange)",
+  StockTwits: "var(--cyan)",
+  ApeWisdom: "var(--amber)",
+  "Hacker News": "var(--orange)",
+  "4chan": "var(--olive)",
+  "GDELT News": "var(--teal)",
+  "Google News": "var(--blue)",
+  "Bing News": "var(--purple)",
+  "SEC Filings": "var(--muted)",
+  "Yahoo Public News": "var(--amber)",
+  CNBC: "var(--cyan)",
+  MarketWatch: "var(--green)",
+  "Press Releases": "var(--rose)",
+  "Financial Media": "var(--teal)",
+  Nasdaq: "var(--blue)",
+  "FINRA Short Volume": "var(--orange)",
+  "Price/Volume": "var(--indigo)",
 };
 
 const DISCOVERY_SOCIAL_SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
@@ -182,6 +182,13 @@ function getState() {
     sources: [...document.querySelectorAll('input[name="source"]:checked')].map((input) => input.value),
     query: byId("tickerSearch").value.trim().toUpperCase(),
   };
+}
+
+function matchesStockQuery(item, query) {
+  const text = String(query || "").trim().toUpperCase();
+  if (!text) return true;
+  if (text.startsWith("$")) return item.ticker.toUpperCase() === text.slice(1);
+  return `${item.ticker} ${item.name || ""}`.toUpperCase().includes(text);
 }
 
 async function loadSnapshot(force = false) {
@@ -534,7 +541,7 @@ function filteredSignals() {
       mentions: state.sources.reduce((sum, source) => sum + (item.sources[source] || 0), 0),
     }))
     .filter((item) => item.mentions > 0)
-    .filter((item) => (!state.query ? true : `${item.ticker} ${item.name}`.toUpperCase().includes(state.query)));
+    .filter((item) => matchesStockQuery(item, state.query));
 
   // Recompute signalScore peer-relatively based on the active source selection,
   // so rankings reflect only what the user has checked.
@@ -856,6 +863,9 @@ let boardExpanded = false;
 function renderTable(items) {
   byId("clearFocus").hidden = !byId("tickerSearch").value;
   byId("boardEmpty").hidden = items.length > 0;
+  const exactQuery = byId("tickerSearch").value.trim().startsWith("$");
+  byId("boardEmpty").querySelector("h3").textContent = exactQuery ? "No snapshot coverage for this ticker" : "No matching stocks";
+  byId("boardEmpty").querySelector("p").textContent = exactQuery ? "This ticker is not in the current filtered snapshot. Missing coverage is not an investment conclusion. Clear the search or try another data window." : "Try another search or clear your filters to see the full snapshot.";
   const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
   const watchLabel = watchlistFilter ? " watchlist" : "";
@@ -864,7 +874,7 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `${items.length}${filterLabel} tickers${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
+      ? `${items.length}${filterLabel} ticker${items.length === 1 ? "" : "s"}${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
       : "No matches — adjust your search or filters";
   }
   const prevRanks = previousRankMap();
@@ -1169,9 +1179,9 @@ function capTierName(item) {
 // the signal.
 function attentionMarkup(item) {
   const groups = [
-    { label: "Social", sources: DISCOVERY_SOCIAL_SOURCES, color: "#2bd4d6" },
-    { label: "News", sources: DISCOVERY_CATALYST_SOURCES, color: "#e0b94a" },
-    { label: "Market", sources: DISCOVERY_MARKET_SOURCES, color: "#7c9aff" },
+    { label: "Social", sources: DISCOVERY_SOCIAL_SOURCES, color: "var(--teal)" },
+    { label: "News", sources: DISCOVERY_CATALYST_SOURCES, color: "var(--amber)" },
+    { label: "Market", sources: DISCOVERY_MARKET_SOURCES, color: "var(--indigo)" },
   ];
   const totals = groups.map((group) => ({
     ...group,
@@ -1208,8 +1218,8 @@ function attentionMarkup(item) {
     .map(
       (row) => `
         <div class="source-row">
-          <span><span class="src-dot" style="background:${SOURCE_COLORS[row.source] || "#888"}"></span>${escapeHtml(row.source)}</span>
-          <div class="source-track"><div class="source-fill" style="width:${(row.value / activeMax) * 100}%; background:${SOURCE_COLORS[row.source] || "#888"}"></div></div>
+          <span><span class="src-dot" style="background:${SOURCE_COLORS[row.source] || "var(--muted)"}"></span>${escapeHtml(row.source)}</span>
+          <div class="source-track"><div class="source-fill" style="width:${(row.value / activeMax) * 100}%; background:${SOURCE_COLORS[row.source] || "var(--muted)"}"></div></div>
           <strong>${shortFmt.format(row.value)}</strong>
         </div>`
     )
@@ -1241,7 +1251,7 @@ function topHeadlineMarkup(item) {
     <div class="catalyst-callout${headline.isNewsArticle ? "" : " catalyst-callout-social"}">
       <span class="catalyst-label">${label}</span>
       ${headline.url ? `<a href="${headline.url}" target="_blank" rel="noopener">${escapeHtml(headline.title)}</a>` : `<span>${escapeHtml(headline.title)}</span>`}
-      <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "#555"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
+      <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "var(--muted)"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
     </div>`;
 }
 
@@ -1257,7 +1267,7 @@ function headlinesMarkup(item) {
           .map(
             (entry) => `
             <li>
-              <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "#555"}">${escapeHtml(entry.source)}</span>
+              <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "var(--muted)"}">${escapeHtml(entry.source)}</span>
               ${entry.url ? `<a href="${entry.url}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a>` : escapeHtml(entry.title)}
             </li>`
           )
@@ -1544,6 +1554,7 @@ function applyUrlParams() {
   }
   const ticker = params.get("ticker");
   if (ticker) selectedTicker = ticker.toUpperCase();
+  if (params.has("q")) byId("tickerSearch").value = params.get("q");
   const sort = params.get("sort");
   if (["signal", "mentions", "momentum"].includes(sort)) rankMode = sort;
   const cap = params.get("cap");
@@ -1557,18 +1568,33 @@ function applyUrlParams() {
 // replaceState keeps it out of history; wrapped because file:// can reject it.
 function updateUrl() {
   try {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(location.search);
+    for (const key of ["ticker", "sort", "cap", "attn", "watch", "q"]) params.delete(key);
+    if (byId("tickerSearch").value.trim()) params.set("q", byId("tickerSearch").value.trim());
     if (selectedTicker) params.set("ticker", selectedTicker);
     if (rankMode !== "signal") params.set("sort", rankMode);
     if (capFilter !== "all") params.set("cap", capFilter);
     if (attentionFilter !== "all") params.set("attn", attentionFilter);
     if (watchlistFilter) params.set("watch", "1");
     const qs = params.toString();
-    window.history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
+    window.history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}${location.hash}`);
   } catch {
     /* file:// or sandboxed — sharing via URL just won't reflect, no functional impact */
   }
 }
+
+// Technology company links search the real stock universe; absent coverage
+// must show the normal empty state, never a different company's detail panel.
+window.SIGNALDESK_FIND_STOCK = ticker => {
+  try { const url = new URL(location.href); url.searchParams.delete("tech"); window.history.replaceState(null, "", url); } catch { /* optional URL state */ }
+  window.SIGNALDESK_SELECT_TAB?.("desk");
+  capFilter = "all"; attentionFilter = "all"; watchlistFilter = false;
+  document.querySelectorAll('input[name="source"]').forEach(input => { input.checked = true; });
+  byId("tickerSearch").value = `$${ticker}`;
+  selectedTicker = ticker;
+  syncControls(); render();
+  byId("tickerSearch").focus();
+};
 
 function toggleDetailPanel() {
   const grid = document.querySelector(".dashboard-grid");

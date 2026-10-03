@@ -163,7 +163,7 @@
             mentions: sourceSum(item, selectedSources),
           }))
           .filter((item) => item.mentions > 0)
-          .filter((item) => (!state.query ? true : `${item.ticker} ${item.name}`.toUpperCase().includes(state.query)));
+          .filter((item) => matchesStockQuery(item, state.query));
 
         return scoreSignals(base, selectedSources)
           .map((item) => ({ ...item, discovery: typeof discoveryProfile === "function" ? discoveryProfile(item) : null }))
