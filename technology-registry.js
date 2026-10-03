@@ -1,9 +1,9 @@
 // Editorial research, not generated market data. Preserve observation IDs and
 // append new periods/corrections; never promote a scraped page into verified evidence.
 (function (root, factory) {
-  if (typeof module === "object" && module.exports) module.exports = factory(require("./adoption-watchlist.js"));
-  else root.SIGNALDESK_TECHNOLOGY = factory(root.SIGNALDESK_ADOPTION);
-})(typeof globalThis !== "undefined" ? globalThis : this, function (legacy) {
+  if (typeof module === "object" && module.exports) module.exports = factory(require("./adoption-watchlist.js"), require("./research-config.js"));
+  else root.SIGNALDESK_TECHNOLOGY = factory(root.SIGNALDESK_ADOPTION, root.SIGNALDESK_RESEARCH_CONFIG);
+})(typeof globalThis !== "undefined" ? globalThis : this, function (legacy, research) {
   const checkedAt = "2026-10-02";
   const urls = {
     qs: "https://www.quantumscape.com/quantumscape-inaugurates-eagle-line-for-solid-state-battery-pilot-production/",
@@ -81,14 +81,6 @@
       milestones: [{ id: `${item.id}-next-proof`, label: "Next comparable adoption disclosure", kind: "research-check", state: "watch", due: null, window: "Reporting cadence · date not verified", evidenceNeeded: item.nextCheck }],
     });
   }
-  // Monitoring pages, not scraping claims. Page changes enter an unverified inbox.
-  const sources = [
-    { id: "qs-resources", name: "QuantumScape resources", owner: "QuantumScape", url: "https://www.quantumscape.com/resources/", themes: ["solid-state-batteries"], mode: "links", terms: ["eagle", "solid-state", "solid state", "battery", "qse"], expectedCadence: "Company updates; irregular" },
-    { id: "toyota-target", name: "Toyota commercialization disclosure", owner: "Toyota", url: urls.toyota, themes: ["solid-state-batteries"], mode: "page", terms: ["solid-state"], expectedCadence: "Historical target page; check corrections" },
-    { id: "tmobile-network", name: "T-Mobile network newsroom", owner: "T-Mobile", url: "https://www.t-mobile.com/news/category/network", themes: ["satellite-phones"], mode: "links", terms: ["satellite", "starlink", "direct-to-cell"], expectedCadence: "Product announcements; irregular" },
-    { id: "tmobile-service", name: "T-Satellite service limits", owner: "T-Mobile", url: urls.service, themes: ["satellite-phones"], mode: "page", terms: ["satellite"], expectedCadence: "Product-page changes; irregular" },
-    { id: "ast-investor", name: "AST SpaceMobile investor updates", owner: "AST SpaceMobile", url: urls.ast, themes: ["satellite-phones"], mode: "links", allowedHosts: ["investors.ast-science.com", "feeds.issuerdirect.com", "irp.cdn-website.com"], terms: ["earnings", "results", "bluebird", "launch", "commercial"], expectedCadence: "Quarterly results and launches" },
-    ...themes.slice(2).map(t => ({ id: `${t.id}-disclosure`, name: `${t.evidence.at(-1).publisher} evidence page`, owner: t.evidence.at(-1).publisher, url: t.evidence.at(-1).url, themes: [t.id], mode: "page", terms: [t.id === "ai-work" ? "copilot" : t.id === "robotaxis" ? "waymo" : "glasses"], expectedCadence: "Saved disclosure; check corrections, add new periods editorially" })),
-  ].map(s => ({ ...s, intervalHours: 24, allowedHosts: s.allowedHosts || [new URL(s.url).hostname] }));
-  return { schemaVersion: 1, updatedAt: checkedAt, themes, sources };
+  // Historical disclosures remain evidence, not the discovery feed.
+  return { schemaVersion: 1, updatedAt: checkedAt, themes, sources: research.sources };
 });

@@ -1,0 +1,64 @@
+name: Refresh SignalDesk Research
+on:
+  schedule:
+    # Every day, including weekends. Successful sources are checked once per
+    # Toronto calendar day; later runs retry failures and refresh company prices.
+    - cron: "43 0,6,12,18 * * *"
+      timezone: "America/Toronto"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-research.yml"
+      - "research-config.js"
+      - "research-model.js"
+      - "research-reviews.json"
+      - "technology-registry.js"
+      - "technology-model.js"
+      - "scripts/update-technology.mjs"
+      - "scripts/lib/technology-monitor.mjs"
+      - "scripts/lib/research-*.mjs"
+      - "scripts/lib/company-intelligence.mjs"
+permissions:
+  contents: write
+concurrency:
+  group: signaldesk-data-writer
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate and test
+        run: |
+          for f in *.js scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
+          node --test scripts/test/*.test.mjs
+      - name: Collect source changes and company evidence
+        timeout-minutes: 12
+        env:
+          # Optional server-side Alpha Vantage key. Use only with appropriate
+          # display/redistribution rights; never put a key in browser code.
+          SIGNALDESK_QUOTE_API_KEY: ${{ secrets.SIGNALDESK_QUOTE_API_KEY }}
+        run: node scripts/update-technology.mjs
+      - name: Publish saved research
+        run: |
+          FILES="data/technology-monitor-state.json data/technology-monitor.json data/technology-monitor.js data/company-intelligence.json data/research.json data/research.js"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $FILES
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh technology research and permanent company coverage"
+          git pull --rebase origin main
+          git push
+      - name: Verify the public deployment
+        timeout-minutes: 5
+        run: node scripts/verify-publication.mjs research
+      - name: Enforce source and price freshness targets
+        if: ${{ !cancelled() }}
+        run: node scripts/check-research-health.mjs

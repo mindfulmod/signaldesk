@@ -1,0 +1,19 @@
+name: Research freshness watchdog
+on:
+  schedule:
+    - cron: "11 10,22 * * *"
+      timezone: "America/Toronto"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check actual published data, independently of collection success
+        run: node scripts/check-research-health.mjs --live

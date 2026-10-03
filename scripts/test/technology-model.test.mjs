@@ -83,7 +83,7 @@ test("unsafe provenance links are rejected", () => {
 });
 test("technology UI, monitor fallback and refresh workflow are all wired", () => {
   const html = readFileSync(new URL("../../index.html", import.meta.url), "utf8");
-  const workflow = readFileSync(new URL("../../.github/workflows/refresh-data.yml", import.meta.url), "utf8");
+  const workflow = readFileSync(new URL("../../.github/workflows/refresh-research.yml", import.meta.url), "utf8");
   for (const id of ["techSearch", "techSector", "techStage", "techContent", "techFollowedOnly"]) assert.equal((html.match(new RegExp(`id="${id}"`, "g")) || []).length, 1);
   for (const file of ["technology-registry.js", "technology-model.js", "adoption.js"]) assert.ok(html.includes(`src="${file}`));
   assert.ok(html.includes('"technology-monitor"'));

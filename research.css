@@ -1,0 +1,106 @@
+/* Research surfaces share the existing semantic palettes. */
+.technology-panel [hidden] { display: none !important; }
+.intel-brief-lead { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .65fr); gap: 36px; padding: 18px 0 30px; border-bottom: 1px solid var(--line); }
+.intel-brief-lead h3 { font-size: clamp(1.9rem, 3.2vw, 2.85rem); letter-spacing: -.055em; line-height: 1.08; margin: 12px 0 16px; font-weight: 560; }
+.intel-brief-lead > div > p:not(.tech-sector) { max-width: 53ch; font-size: .9rem; line-height: 1.7; color: var(--muted); }
+.intel-brief-status { align-self: end; padding: 18px 20px; border-left: 2px solid var(--accent-line); background: var(--panel-3); border-radius: 0 8px 8px 0; }
+.intel-brief-status p { font-size: .76rem !important; margin: 8px 0; }
+.intel-brief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 30px 0; }
+.intel-block-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.intel-block-head h4 { margin: 0; font-size: .92rem; letter-spacing: -.01em; }
+.intel-block-head > span:last-child { font-size: .7rem; color: var(--muted); }
+.intel-brief-item { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.intel-brief-item h5 { margin: 5px 0; }
+.intel-brief-item p, .intel-quiet { color: var(--muted); font-size: .82rem; line-height: 1.7; margin: 7px 0; }
+.intel-quiet { padding: 24px 0 18px; }
+.intel-focus-heading { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin: 36px 0 15px; }
+.intel-focus-heading h4 { font-size: .95rem; margin: 0; }
+.intel-focus-heading p { font-size: .76rem; color: var(--muted); }
+.intel-focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.intel-focus-card { display: grid; gap: 14px; text-align: left; background: var(--panel-3); border: 1px solid var(--line-2); color: var(--ink); padding: 22px; border-radius: 10px; transition: background 120ms ease-out, border-color 120ms ease-out; }
+.intel-focus-card:hover { background: var(--selected); border-color: var(--accent); }
+.intel-focus-card strong { display: flex; justify-content: space-between; gap: 12px; font-size: 1.2rem; font-weight: 560; letter-spacing: -.02em; }
+.intel-focus-card > span:last-child { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+.intel-disclosure { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 24px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.intel-disclosure summary { cursor: pointer; min-height: 44px; padding: 10px 0; color: var(--ink); }
+.intel-disclosure p { max-width: 100ch; }
+.intel-segment { display: flex; gap: 8px; margin: 12px 0 20px; }
+.intel-inline-filters { display: flex; align-items: end; gap: 18px; flex-wrap: wrap; margin: 20px 0; }
+.intel-inline-filters label, .intel-review-form label { display: grid; gap: 8px; font-size: .77rem; color: var(--muted); min-width: 0; }
+.intel-inline-filters select, .intel-review-form input, .intel-review-form select, .intel-review-form textarea { color: var(--ink); background: var(--panel-3); border: 1px solid var(--control-line); border-radius: 6px; font: inherit; padding: 10px 12px; min-height: 44px; max-width: 100%; min-width: 0; }
+.intel-program-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.intel-program { border: 1px solid var(--line); border-radius: 9px; padding: 20px; min-width: 0; }
+.intel-program h4 { font-size: 1.02rem; line-height: 1.5; margin: 16px 0 10px; }
+.intel-program p { color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.intel-compare { display: flex; gap: 6px; align-items: center; font-size: .65rem; color: var(--muted); line-height: 1.5; }
+.intel-compare input { width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--accent); }
+.intel-next { display: grid; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
+.intel-next strong { color: var(--ink); font-weight: 550; }
+.intel-comparison { margin-top: 32px; }
+.intel-comparison h4 { font-size: 1rem; }
+.intel-table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+.intel-table { width: 100%; border-collapse: collapse; font-size: .78rem; text-align: left; min-width: 550px; }
+.intel-table th, .intel-table td { padding: 15px 16px; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.6; white-space: normal; }
+.intel-table thead th { background: var(--panel-3); font-size: .7rem; font-weight: 600; position: static; }
+.intel-table tbody th { max-width: 260px; font-weight: 500; }
+.intel-table small { display: block; color: var(--muted); font-size: .68rem; margin-top: 5px; font-weight: 400; }
+.intel-unknown { color: var(--muted); font-size: .8rem; }
+.intel-rollouts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.intel-rollout { border: 1px solid var(--line); border-radius: 9px; padding: 22px; min-width: 0; }
+.intel-rollout h4 { font-size: 1.2rem; margin: 18px 0 8px; }
+.intel-rollout-capability { font-size: .86rem; color: var(--accent); }
+.intel-specs { margin: 22px 0; }
+.intel-specs > div { display: grid; grid-template-columns: minmax(90px, .4fr) 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .77rem; line-height: 1.7; }
+.intel-specs dt { color: var(--muted); }
+.intel-specs dd { margin: 0; }
+.intel-rollout .tech-caveat { color: var(--amber); font-size: .77rem; line-height: 1.7; }
+.intel-metric-row { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.intel-metric-row small { display: block; }
+.intel-company-quote { display: grid; gap: 7px; margin: 18px 0; }
+.intel-price { color: var(--ink); font-size: 1.45rem; font-family: var(--mono); letter-spacing: -.04em; font-weight: 500; }
+.intel-economics { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, .8fr); gap: 32px; margin-top: 30px; }
+.intel-financial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); border-radius: 8px; overflow: hidden; }
+.intel-financial-grid article { padding: 18px; display: grid; gap: 10px; background: var(--panel); min-width: 0; }
+.intel-financial-grid span { font-size: .74rem; color: var(--muted); }
+.intel-financial-grid strong { font-size: 1.07rem; line-height: 1.5; font-weight: 550; }
+.intel-financial-grid small, .intel-economic-notes p, .intel-economic-notes li { color: var(--muted); font-size: .75rem; line-height: 1.7; }
+.intel-economic-notes h4:not(:first-child) { margin-top: 24px; }
+.intel-economic-notes ul { padding-left: 18px; }
+.intel-discovery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.intel-discovery { border: 1px solid var(--line); border-radius: 8px; padding: 20px; min-width: 0; }
+.intel-discovery h4 { text-transform: capitalize; font-size: 1.15rem; margin: 18px 0; }
+.intel-discovery p { color: var(--muted); font-size: .78rem; line-height: 1.7; }
+.intel-queue-actions { display: grid; gap: 5px; flex-shrink: 0; }
+.intel-source-excerpt { font-size: .78rem; color: var(--muted); line-height: 1.7; max-width: 90ch; padding-left: 12px; margin-left: 0; border-left: 2px solid var(--line-2); }
+.intel-review-form { display: grid; gap: 20px; max-width: 850px; margin-top: 26px; }
+.intel-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.intel-form-actions { display: flex; gap: 20px; align-items: center; }
+.intel-reviewed article { border-top: 1px solid var(--line); padding-top: 18px; }
+.intel-review-form textarea { resize: vertical; }
+.intel-export textarea { width: 100%; min-height: 180px; resize: vertical; background: var(--panel-3); color: var(--ink); border: 1px solid var(--control-line); border-radius: 6px; padding: 12px; font: .75rem/1.6 var(--mono); }
+.tech-views { column-gap: 22px; }
+@media (max-width: 980px) {
+  .intel-brief-lead { gap: 20px; }
+  .intel-program-grid { grid-template-columns: 1fr; }
+  .intel-program .intel-block-head { justify-content: start; }
+  .intel-economics { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .intel-brief-lead, .intel-brief-grid, .intel-focus-grid, .intel-rollouts, .intel-discovery-grid, .intel-form-grid { grid-template-columns: 1fr; }
+  .intel-brief-lead { padding-top: 10px; gap: 12px; }
+  .intel-brief-lead h3 { font-size: 2rem; }
+  .intel-brief-status { padding: 12px 16px; }
+  .intel-brief-grid { gap: 24px; margin-top: 24px; }
+  .intel-focus-heading { display: block; }
+  .intel-focus-card, .intel-rollout { padding: 18px; }
+  .intel-focus-card strong { font-size: 1.1rem; }
+  .intel-specs > div { grid-template-columns: 90px 1fr; gap: 12px; }
+  .intel-inline-filters { gap: 12px; }
+  .intel-inline-filters label { flex: 1 1 130px; }
+  .intel-financial-grid article { padding: 14px; }
+  .intel-financial-grid strong { font-size: .95rem; }
+  .intel-form-actions { align-items: stretch; flex-direction: column; }
+  .intel-queue-actions { display: flex; align-items: center; gap: 18px; }
+  .tech-views { gap: 0 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .intel-focus-card { transition: none; } }

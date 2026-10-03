@@ -283,6 +283,13 @@ Rules for future changes:
 
 ## Copy & tone rules (these are product identity — do not drift)
 
+The technology brief/trackers use `research-views.js` for escaped HTML,
+`research-model.js` for evidence rules, `adoption.js` for local state/navigation,
+and `research.css` for token-only layout. `research-config.js` loads before the
+registry. `data/research.js` is a file-mode fallback, never an extra HTTP payload.
+Keep the stock-attention board separate from permanent company coverage.
+See `RESEARCH_UPGRADES.md` for source/review operations.
+
 - Never imply a buy/sell recommendation. Scores are "research priorities".
 - Never present social chatter as news: real articles get "Top headline";
   social commentary gets "Notable chatter (not a news article)" in muted style.
