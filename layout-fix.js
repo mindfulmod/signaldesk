@@ -255,7 +255,7 @@
 
       .table-scroll tbody tr.selected {
         background: var(--accent-dim);
-        border-color: rgba(74, 222, 128, 0.34);
+        border-color: var(--accent-line);
       }
 
       .table-scroll tbody tr.selected td:first-child {

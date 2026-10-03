@@ -7,6 +7,10 @@ See [TECHNOLOGY_RADAR.md](TECHNOLOGY_RADAR.md) for architecture, coverage limits
 and upkeep. The stock **Desk** remains separate; adoption is not a stock-return
 prediction. Feature-branch changes become public only after merge and deployment.
 
+The header's appearance selector offers **Light**, **Dark** and **System**.
+System follows the device by default; an explicit choice is saved on that browser.
+Both palettes cover research, stock details, source labels and charts.
+
 September 2026 cleanup: see [the production review](PRODUCTION_REVIEW_2026-09-25.md)
 and [adoption tracking plan](ADOPTION_TRACKER.md). The Desk leads with the stock
 board; Research introduced a human-reviewed adoption watchlist. Direct Reddit and

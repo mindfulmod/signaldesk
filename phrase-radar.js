@@ -128,7 +128,7 @@
         color: var(--muted);
         background: var(--panel-3);
       }
-      .pr-badge.pr-confirmed { color: var(--up); border-color: rgba(96, 211, 141, 0.35); background: rgba(96, 211, 141, 0.12); }
+      .pr-badge.pr-confirmed { color: var(--up); border-color: var(--accent-line); background: var(--accent-dim); }
       .pr-badge.pr-pending { color: var(--muted); }
       .pr-badge.pr-partial { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-dim); }
       .pr-meta { margin: 0; font-size: 0.78rem; color: var(--muted); }

@@ -1,0 +1,114 @@
+/* One semantic palette for the shell, research panels, inline charts and sheets.
+   Dark is slate rather than black; light uses warm paper and forest-green ink. */
+:root {
+  --bg: #1b242c;
+  --bg-grad-1: rgba(139, 219, 172, .025);
+  --bg-grad-2: rgba(148, 189, 255, .025);
+  --panel: #242f39;
+  --panel-2: #2c3945;
+  --panel-3: #202b34;
+  --panel-hover: #33434f;
+  --line: #3b4a56;
+  --line-2: #566977;
+  --control-line: #758795;
+  --ink: #eef3f6;
+  --muted: #b4c2cc;
+  --faint: #9aaebc;
+  --accent: #8bdbac;
+  --accent-dim: rgba(139, 219, 172, .12);
+  --accent-line: #659b7e;
+  --selected: #2b413a;
+  --up: #8bdbac;
+  --down: #ff999b;
+  --blue: #94bdff;
+  --teal: #7cd3d0;
+  --amber: #e9c677;
+  --red: #ffa0a7;
+  --purple: #c5afea;
+  --green: #8bdbac;
+  --orange: #edb08c;
+  --olive: #b0ce91;
+  --cyan: #86cde7;
+  --indigo: #aab9ff;
+  --rose: #dcb0e5;
+  --warning-bg: rgba(233, 198, 119, .08);
+  --warning-line: #9b844d;
+  --danger-bg: rgba(255, 153, 155, .1);
+  --danger-line: #b8777b;
+  --appbar-bg: rgba(27, 36, 44, .95);
+  --backdrop: rgba(12, 20, 27, .54);
+  --on-accent: #163524;
+  --shadow: 0 12px 32px rgba(8, 16, 22, .18);
+  --sheet-shadow: 0 -12px 40px rgba(8, 16, 22, .28);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f6f3;
+  --bg-grad-1: rgba(22, 107, 69, .025);
+  --bg-grad-2: rgba(36, 93, 176, .02);
+  --panel: #ffffff;
+  --panel-2: #edf2ee;
+  --panel-3: #f8faf8;
+  --panel-hover: #e5ede7;
+  --line: #d7e1da;
+  --line-2: #afc0b4;
+  --control-line: #758b7d;
+  --ink: #203329;
+  --muted: #52665a;
+  --faint: #5d7065;
+  --accent: #166b45;
+  --accent-dim: #e3f1e8;
+  --accent-line: #5c9472;
+  --selected: #e7f2eb;
+  --up: #176c41;
+  --down: #b13e48;
+  --blue: #245db0;
+  --teal: #086f73;
+  --amber: #80600d;
+  --red: #b13e48;
+  --purple: #7450a3;
+  --green: #176c41;
+  --orange: #9d5025;
+  --olive: #536c30;
+  --cyan: #216b89;
+  --indigo: #4d59ac;
+  --rose: #91488d;
+  --warning-bg: #f8f0db;
+  --warning-line: #a78c42;
+  --danger-bg: #f9e8ea;
+  --danger-line: #bd747c;
+  --appbar-bg: rgba(255, 255, 255, .95);
+  --backdrop: rgba(30, 49, 39, .3);
+  --on-accent: #ffffff;
+  --shadow: 0 12px 32px rgba(32, 51, 41, .065);
+  --sheet-shadow: 0 -12px 40px rgba(32, 51, 41, .14);
+  color-scheme: light;
+}
+
+/* Use real contrast for control edges, not a washed-out decorative divider. */
+.appbar-search, .appbar-btn, .theme-picker select,
+.tech-controls input, .tech-controls select, .tech-button,
+.board-sort select, .board-more, .field select {
+  border-color: var(--control-line);
+}
+input { accent-color: var(--accent); }
+.theme-picker { position: relative; display: flex; flex: 0 0 auto; align-items: center; }
+.theme-picker svg { position: absolute; left: 10px; width: 16px; height: 16px; pointer-events: none; color: var(--muted); }
+.theme-picker select { min-height: 36px; width: 113px; padding: 7px 6px 7px 32px; border: 1px solid var(--control-line); border-radius: 8px; background: var(--panel); color: var(--ink); font-size: .78rem; cursor: pointer; }
+.theme-picker select:hover { border-color: var(--accent); }
+.theme-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.source-dot { box-shadow: none; }
+:root[data-theme-changing] *, :root[data-theme-changing] *::before, :root[data-theme-changing] *::after { transition: none !important; }
+
+@media (max-width: 760px) {
+  .appbar-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; height: auto; }
+  .brand { grid-area: 1 / 1; }
+  .theme-picker { grid-area: 1 / 2; justify-self: end; }
+  .theme-picker select { min-height: 44px; }
+  .appbar-search { grid-area: 2 / 1; width: 100%; height: 44px; margin: 0; padding-inline: 9px; }
+  .appbar-search input { font-size: .82rem; }
+  .appbar-actions { grid-area: 2 / 2; gap: 5px; }
+  #toggleSidebar span { display: none; }
+  .app-shell[data-active-tab="research"] .appbar-actions { display: none; }
+}

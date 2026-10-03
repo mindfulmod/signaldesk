@@ -62,6 +62,7 @@ jobs:
           node --check data-quality.js
           node --check adoption-watchlist.js
           node --check adoption.js
+          node --check appearance.js
           node --check technology-registry.js
           node --check technology-model.js
           node --check scripts/update-technology.mjs

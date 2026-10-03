@@ -7,6 +7,17 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+Appearance update: `appearance.css` is the only color-token registry. It defines
+soft slate dark mode and warm light mode, including readable source/chart colors,
+control edges and sheet backdrops. Do not add hardcoded component colors.
+`appearance.js` runs synchronously in the head **before styles and content** to
+resolve the saved Light/Dark/System preference without a wrong-theme flash.
+The native `#themeSelect` works in both tabs and persists locally; System tracks
+device changes. Two paint frames suppress hover-color transitions during a
+palette swap so text and backgrounds update together. Keep that bounded and do
+not disable ordinary interaction feedback. `scripts/test/appearance.test.mjs`
+checks persistence, blocked storage, system/cross-tab changes and color contrast.
+
 October 2, 2026 update: the visible Research tab is now **Technology** (internal
 ID/hash still `research`). It leads with the technology workspace; older market
 panels remain in `#marketResearchTools`, a native disclosure. Stock links still

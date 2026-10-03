@@ -41,7 +41,7 @@
   border-bottom: 2px solid transparent;
   border-radius: 0;
   background: transparent;
-  color: var(--muted, #8a97a8);
+  color: var(--muted);
   font: inherit;
   font-size: 0.94rem;
   font-weight: 600;
@@ -52,12 +52,12 @@
 }
 
 .tab-btn:hover {
-  color: var(--text, #e6edf5);
+  color: var(--ink);
   background: transparent;
 }
 
 .tab-btn.is-active {
-  color: var(--text, #e6edf5);
+  color: var(--ink);
   border-bottom-color: var(--accent);
 }
 
@@ -72,7 +72,7 @@
 
 .tabbar-hint {
   margin: 0 0 0 auto;
-  color: var(--muted, #8a97a8);
+  color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.45;
   text-align: right;

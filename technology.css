@@ -28,7 +28,7 @@
 .tech-controls input::placeholder { color: var(--muted); }
 .tech-button { border: 1px solid var(--line-2); border-radius: 7px; min-height: 42px; padding: 8px 12px; color: var(--ink); background: transparent; font-size: .78rem; font-weight: 550; }
 .tech-button:hover { background: var(--panel-2); }
-.tech-button[aria-pressed="true"] { border-color: #60d38d66; color: var(--accent); background: var(--accent-dim); }
+.tech-button[aria-pressed="true"] { border-color: var(--accent-line); color: var(--accent); background: var(--accent-dim); }
 .tech-button:disabled { opacity: .55; cursor: wait; }
 .tech-views { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 22px 0 0; border-bottom: 1px solid var(--line); }
 .tech-views button { background: transparent; border: 0; border-bottom: 2px solid transparent; border-radius: 0; padding: 12px 0; min-height: 44px; color: var(--muted); font-size: .83rem; }

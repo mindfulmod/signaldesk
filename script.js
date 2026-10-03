@@ -19,26 +19,26 @@ const SOURCES = [
   "Price/Volume",
 ];
 
-// Source hues tuned for legibility on the dark terminal theme.
+// Semantic CSS tokens update inline source labels and bars with the palette.
 const SOURCE_COLORS = {
-  Wallstreetbets: "#ff6b74",
-  "Reddit Finance": "#d98a5b",
-  StockTwits: "#3cc6e8",
-  ApeWisdom: "#e0a84a",
-  "Hacker News": "#ff8a3d",
-  "4chan": "#86b06a",
-  "GDELT News": "#2bd4d6",
-  "Google News": "#6ba8ff",
-  "Bing News": "#a98be0",
-  "SEC Filings": "#9bb6a8",
-  "Yahoo Public News": "#e0b94a",
-  CNBC: "#5fb0d6",
-  MarketWatch: "#6fcf97",
-  "Press Releases": "#c98ad6",
-  "Financial Media": "#8fd6b0",
-  Nasdaq: "#4fb3ff",
-  "FINRA Short Volume": "#d98a5b",
-  "Price/Volume": "#7c9aff",
+  Wallstreetbets: "var(--red)",
+  "Reddit Finance": "var(--orange)",
+  StockTwits: "var(--cyan)",
+  ApeWisdom: "var(--amber)",
+  "Hacker News": "var(--orange)",
+  "4chan": "var(--olive)",
+  "GDELT News": "var(--teal)",
+  "Google News": "var(--blue)",
+  "Bing News": "var(--purple)",
+  "SEC Filings": "var(--muted)",
+  "Yahoo Public News": "var(--amber)",
+  CNBC: "var(--cyan)",
+  MarketWatch: "var(--green)",
+  "Press Releases": "var(--rose)",
+  "Financial Media": "var(--teal)",
+  Nasdaq: "var(--blue)",
+  "FINRA Short Volume": "var(--orange)",
+  "Price/Volume": "var(--indigo)",
 };
 
 const DISCOVERY_SOCIAL_SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan"];
@@ -1179,9 +1179,9 @@ function capTierName(item) {
 // the signal.
 function attentionMarkup(item) {
   const groups = [
-    { label: "Social", sources: DISCOVERY_SOCIAL_SOURCES, color: "#2bd4d6" },
-    { label: "News", sources: DISCOVERY_CATALYST_SOURCES, color: "#e0b94a" },
-    { label: "Market", sources: DISCOVERY_MARKET_SOURCES, color: "#7c9aff" },
+    { label: "Social", sources: DISCOVERY_SOCIAL_SOURCES, color: "var(--teal)" },
+    { label: "News", sources: DISCOVERY_CATALYST_SOURCES, color: "var(--amber)" },
+    { label: "Market", sources: DISCOVERY_MARKET_SOURCES, color: "var(--indigo)" },
   ];
   const totals = groups.map((group) => ({
     ...group,
@@ -1218,8 +1218,8 @@ function attentionMarkup(item) {
     .map(
       (row) => `
         <div class="source-row">
-          <span><span class="src-dot" style="background:${SOURCE_COLORS[row.source] || "#888"}"></span>${escapeHtml(row.source)}</span>
-          <div class="source-track"><div class="source-fill" style="width:${(row.value / activeMax) * 100}%; background:${SOURCE_COLORS[row.source] || "#888"}"></div></div>
+          <span><span class="src-dot" style="background:${SOURCE_COLORS[row.source] || "var(--muted)"}"></span>${escapeHtml(row.source)}</span>
+          <div class="source-track"><div class="source-fill" style="width:${(row.value / activeMax) * 100}%; background:${SOURCE_COLORS[row.source] || "var(--muted)"}"></div></div>
           <strong>${shortFmt.format(row.value)}</strong>
         </div>`
     )
@@ -1251,7 +1251,7 @@ function topHeadlineMarkup(item) {
     <div class="catalyst-callout${headline.isNewsArticle ? "" : " catalyst-callout-social"}">
       <span class="catalyst-label">${label}</span>
       ${headline.url ? `<a href="${headline.url}" target="_blank" rel="noopener">${escapeHtml(headline.title)}</a>` : `<span>${escapeHtml(headline.title)}</span>`}
-      <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "#555"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
+      <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "var(--muted)"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
     </div>`;
 }
 
@@ -1267,7 +1267,7 @@ function headlinesMarkup(item) {
           .map(
             (entry) => `
             <li>
-              <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "#555"}">${escapeHtml(entry.source)}</span>
+              <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "var(--muted)"}">${escapeHtml(entry.source)}</span>
               ${entry.url ? `<a href="${entry.url}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a>` : escapeHtml(entry.title)}
             </li>`
           )
