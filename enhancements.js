@@ -584,7 +584,7 @@
 
   function refreshFooterCadence() {
     const footer = document.querySelector(".footer-sub");
-    if (footer) footer.textContent = "Refreshes market weekdays at 9:17, 12:17, 15:17, and 17:17 ET";
+    if (footer) footer.textContent = "Technology checks: daily, including weekends, with six-hour retry opportunities. Market runs: weekdays at 9:17, 12:17, 15:17, and 17:17 Toronto time. Schedules are best-effort; inspect each source timestamp. Claims require editorial review.";
   }
 
   function formatShort(value) {

@@ -1,10 +1,12 @@
 # SignalDesk — Technology & Market Discovery
 
-October 2026: the new **Technology** workspace adds a searchable radar, evidence
-profiles, milestones, a primary-source change inbox and sourced company exposure.
+October 2026: **Technology** now includes a daily brief, detailed battery and
+satellite trackers, permanent company financial pages, a review workflow,
+discovery leads, a searchable radar and milestones.
 Solid-state batteries and satellite-to-phone connectivity lead the registry.
 See [TECHNOLOGY_RADAR.md](TECHNOLOGY_RADAR.md) for architecture, coverage limits
-and upkeep. The stock **Desk** remains separate; adoption is not a stock-return
+and [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md) for the nine upgrades, daily
+collection, review publication and limits. The stock **Desk** remains separate; adoption is not a stock-return
 prediction. Feature-branch changes become public only after merge and deployment.
 
 The header's appearance selector offers **Light**, **Dark** and **System**.
@@ -39,9 +41,10 @@ stock attention. Technology keeps the `#research` URL for compatibility, with
 older theme machinery inside a collapsed **Market research tools** section.
 New visitors start on Technology; explicit stock links still open the Desk.
 
-Technology includes five curated categories and eight monitored primary-source
-pages. Source changes are unverified review candidates, not automatically
-confirmed facts. Following and dismissing are browser-local, not push alerts.
+Technology includes five curated categories, 22 source contracts and eight
+permanently covered companies. Source changes are unverified review candidates,
+not automatically confirmed facts. Follows, dismissals and review drafts are
+browser-local, not push alerts.
 
 Panel status below is as of **2026-08-29** and is meant to be kept honest. A
 panel with nothing in it says what it is waiting for rather than rendering a
@@ -89,17 +92,20 @@ for time to pass; it is waiting for its upstream detectors to trigger even once.
 Treat that as an open question about the detectors, not a panel that just needs
 patience.
 
-## Weekday Data Refresh
+## Daily research and weekday market refresh
+
+Research has its own seven-day workflow, `.github/workflows/refresh-research.yml`,
+with daily source checks and six-hour retry opportunities. Prices are attempted
+twice daily; SEC financial facts refresh weekly or on a new filing. Claims still
+require human review. A separate public-site watchdog checks freshness twice
+a day. GitHub scheduling is best-effort, not guaranteed delivery.
 
 The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 
 It:
 
 - validates the JavaScript files,
-- runs deterministic tests and checks the technology source registry at most
-  once per source per 24 hours (on the existing weekday schedule),
-- saves technology source health and unverified changes separately from stock
-  data; the initial check creates a baseline, not new-event alerts,
+- runs deterministic tests (technology collection is now a separate job),
 - runs `scripts/update-data.mjs`,
 - refreshes `data/signals.json` and `data/signals.js`,
 - updates `data/history.json` and `data/history.js` so longer-range views improve over time,

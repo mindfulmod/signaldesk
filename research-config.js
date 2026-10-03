@@ -1,0 +1,69 @@
+// Reviewed scope and collection contracts. Generated observations live in data/.
+(function (root, factory) {
+  const value = factory();
+  if (typeof module === "object" && module.exports) module.exports = value;
+  else root.SIGNALDESK_RESEARCH_CONFIG = value;
+})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+  const reviewedAt = "2026-10-02";
+  const companies = [
+    { ticker: "QS", name: "QuantumScape", cik: "0001811414", themes: ["solid-state-batteries"], role: "Cell technology / licensing", economics: "Customer qualification and licensing economics; pilot milestones are not volume revenue.", risks: ["Manufacturing yield", "Customer concentration", "Cash consumption"] },
+    { ticker: "SLDP", name: "Solid Power", cik: "0001844862", themes: ["solid-state-batteries"], role: "Electrolyte / licensing", economics: "Electrolyte sales and technology licensing depend on partners reaching production.", risks: ["Partner execution", "Qualification cycles", "Financing needs"] },
+    { ticker: "TM", name: "Toyota", cik: "0001094517", themes: ["solid-state-batteries"], role: "Vehicle integrator", economics: "A diversified automaker: a battery breakthrough need not materially change group earnings.", risks: ["Old commercialization targets", "Capital intensity", "Competing battery chemistries"], currencyCaution: "US ADR price and JPY company accounts cannot be combined without currency and ADR adjustments." },
+    { ticker: "TMUS", name: "T-Mobile US", cik: "0001283699", themes: ["satellite-phones"], role: "Carrier / distribution", economics: "Bundled satellite access may support retention rather than separately disclosed revenue.", risks: ["Limited satellite capacity", "Partner dependence", "Undisclosed product profitability"] },
+    { ticker: "ASTS", name: "AST SpaceMobile", cik: "0001780312", themes: ["satellite-phones"], role: "Satellite network", economics: "Commercial carrier service depends on satellites, approvals, capacity and paying usage.", risks: ["Deployment delays", "Capital requirements", "Dilution and execution"] },
+    { ticker: "META", name: "Meta Platforms", cik: "0001326801", themes: ["ai-glasses"], role: "Product / AI platform", economics: "Glasses adoption must be separated from the advertising-led group's total revenue.", risks: ["Retention", "Privacy constraints", "Undisclosed product margins"] },
+    { ticker: "MSFT", name: "Microsoft", cik: "0000789019", themes: ["ai-work"], role: "Software distribution", economics: "Paid seats, active use and incremental profitable revenue are distinct measures.", risks: ["Inference costs", "Renewals", "Unmeasured productivity"] },
+    { ticker: "GOOGL", name: "Alphabet", cik: "0001652044", themes: ["robotaxis"], role: "Waymo parent", economics: "Waymo's service economics are not equivalent to Alphabet-wide earnings or valuation.", risks: ["City-level economics", "Regulatory expansion", "Capital intensity"] },
+  ];
+  const source = (id, name, owner, url, themes, options = {}) => ({ id, name, owner, url, themes, mode: "links", format: "html", tier: "company", terms: [], intervalHours: 24, cadence: "daily", expectedCadence: "Announcements and reporting periods; irregular", ...options,
+    allowedHosts: options.allowedHosts || [new URL(url).hostname] });
+  const sources = [
+    source("qs-news", "QuantumScape news releases", "QuantumScape", "https://ir.quantumscape.com/news-events/news-releases", ["solid-state-batteries"], { linkPattern: "/news-releases/news-release-details/", terms: ["quantumscape"] }),
+    source("toyota-news", "Toyota global newsroom", "Toyota", "https://global.toyota/en/newsroom/", ["solid-state-batteries"], { linkPattern: "/en/newsroom/.*\\.html", terms: ["battery", "batteries", "solid-state", "idemitsu"] }),
+    source("bmw-news", "BMW customer validation newsroom", "BMW", "https://www.press.bmwgroup.com/global", ["solid-state-batteries"], { linkPattern: "/article/detail/", terms: ["battery", "batteries", "solid power", "solid-state"], tier: "customer" }),
+    source("tmobile-network", "T-Mobile network newsroom", "T-Mobile", "https://www.t-mobile.com/news/category/network", ["satellite-phones"], { linkPattern: "/news/network/[^/]+", terms: ["satellite", "starlink", "direct-to-cell"] }),
+    source("tmobile-service", "T-Satellite capabilities", "T-Mobile", "https://www.t-mobile.com/coverage/satellite-phone-service", ["satellite-phones"], { mode: "page", terms: ["satellite"], tier: "product", expectedCadence: "Product availability and limits; irregular" }),
+    source("rogers-service", "Rogers Satellite capabilities", "Rogers", "https://www.rogers.com/mobility/satellite", ["satellite-phones"], { mode: "page", terms: ["satellite"], tier: "product" }),
+    source("ast-investor", "AST SpaceMobile reporting", "AST SpaceMobile", "https://investors.ast-science.com/", ["satellite-phones"], { terms: ["earnings", "results", "bluebird", "launch", "business update"], linkPattern: "news-release\\.html|/files/uploaded/", allowedHosts: ["investors.ast-science.com", "feeds.issuerdirect.com", "irp.cdn-website.com"] }),
+    source("meta-news", "Meta newsroom", "Meta", "https://about.fb.com/news/feed/", ["ai-glasses"], { format: "rss", terms: ["glasses", "wearable"] }),
+    source("microsoft-news", "Microsoft company blog", "Microsoft", "https://blogs.microsoft.com/feed/", ["ai-work"], { format: "rss", terms: ["copilot", "agent", "work"], discovery: true }),
+    source("waymo-news", "Waymo newsroom", "Waymo", "https://waymo.com/blog/", ["robotaxis"], { linkPattern: "/blog/20[0-9]{2}/", terms: [] }),
+    source("fcc-releases", "FCC releases", "FCC", "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss", ["satellite-phones"], { format: "rss", tier: "regulator", terms: ["satellite", "supplemental coverage", "spacemobile", "spacex"], allowedHosts: ["api2.fcc.gov", "www.fcc.gov", "docs.fcc.gov"] }),
+    source("nsf-research", "NSF research news", "NSF", "https://www.nsf.gov/rss/rss_www_news.xml", [], { format: "rss", tier: "research", discovery: true, allowedHosts: ["www.nsf.gov", "nsf.gov"] }),
+    source("mit-energy", "MIT energy research", "MIT", "https://news.mit.edu/rss/topic/energy", [], { format: "rss", tier: "research", discovery: true }),
+    source("nature-research", "Nature research and news", "Nature", "https://www.nature.com/nature.rss", [], { format: "rss", tier: "research", discovery: true, allowedHosts: ["www.nature.com", "nature.com"] }),
+    ...companies.map(c => source(`sec-${c.ticker.toLowerCase()}`, `${c.name} SEC filings`, c.name, `https://data.sec.gov/submissions/CIK${c.cik}.json`, c.themes, { format: "sec", tier: "filing", cik: c.cik, ticker: c.ticker, allowedHosts: ["data.sec.gov", "www.sec.gov"] })),
+  ];
+  const refs = {
+    qs: "https://www.quantumscape.com/quantumscape-inaugurates-eagle-line-for-solid-state-battery-pilot-production/",
+    bmw: "https://www.press.bmwgroup.com/usa/article/detail/T0450262EN_US/bmw-group-and-solid-power-are-testing-all-solid-state-battery-cells-in-a-bmw-i7?language=en_US",
+    toyota: "https://global.toyota/en/newsroom/corporate/39865919.html",
+    tmobile: "https://www.t-mobile.com/coverage/satellite-phone-service",
+    rogers: "https://www.rogers.com/mobility/satellite",
+    ast: "https://investors.ast-science.com/",
+  };
+  const batteryMetrics = [
+    { id: "yield", label: "Production yield", unit: "%", definition: "Saleable cells / total cells at stated line, period and specification" },
+    { id: "output", label: "Delivered output", unit: "GWh", definition: "Cells actually delivered during a stated period; not nameplate capacity" },
+    { id: "cost", label: "Pack cost", unit: "USD/kWh", definition: "Pack-level cost at stated production volume; not a cell-only projection" },
+    { id: "life", label: "Cycle life", unit: "cycles", definition: "Cycles to stated retained capacity, with temperature, pressure and charge-rate conditions" },
+    { id: "density", label: "Cell energy density", unit: "Wh/kg", definition: "Cell-level gravimetric density; distinguish measured and projected results" },
+  ];
+  const satelliteMetrics = [
+    { id: "users", label: "Active paying users", unit: "users", definition: "Paying, active users in a named country and reporting period; not eligible handsets" },
+    { id: "throughput", label: "Delivered throughput", unit: "Mbps", definition: "Measured per-user rate with location, device, test conditions and sample size" },
+    { id: "reliability", label: "Connection success", unit: "%", definition: "Successful attempts / total attempts under stated sky visibility and load" },
+    { id: "capacity", label: "Busy-hour capacity", unit: "Mbps", definition: "Aggregate delivered capacity in a defined beam / area, not per-user speed" },
+  ];
+  const programs = [
+    { id: "qs-eagle", company: "QuantumScape", ticker: "QS", program: "Eagle Line / QSE-5", chemistry: "Solid-state lithium-metal", stage: "pilot", stageLabel: "Pilot infrastructure", observed: "Eagle Line inaugurated", publishedAt: "2026-02-04", checkedAt: reviewedAt, url: refs.qs, owner: "QuantumScape", scope: "Pilot line for samples, testing and integration; inauguration is not proof of sustained output.", qualification: "Customer sampling is the stated purpose; repeatable qualification not established here.", nextGate: "Dated customer acceptance plus repeatable yield and delivered output.", metrics: [] },
+    { id: "sldp-bmw", company: "Solid Power / BMW", ticker: "SLDP", program: "BMW i7 test program", chemistry: "Sulfide all-solid-state cells", stage: "vehicle-test", stageLabel: "Vehicle testing", observed: "Cells integrated into a BMW i7 test vehicle", publishedAt: "2025-05-20", checkedAt: reviewedAt, url: refs.bmw, owner: "BMW", scope: "A customer-reported test vehicle; not a retail launch or high-volume supply agreement.", qualification: "Vehicle validation reported; production qualification not established here.", nextGate: "Customer-reported validation results with conditions and a production supply decision.", metrics: [] },
+    { id: "toyota-idemitsu", company: "Toyota / Idemitsu", ticker: "TM", program: "Solid-electrolyte commercialization", chemistry: "Sulfide all-solid-state", stage: "development", stageLabel: "Development target", observed: "Cooperation and commercialization target announced", publishedAt: "2023-10-12", checkedAt: reviewedAt, url: refs.toyota, owner: "Toyota", scope: "The original target was 2027–2028. This record is not a reaffirmation or proof of commercial output.", qualification: "Customer deliveries not established in this reviewed evidence.", nextGate: "Updated program disclosure, production validation and actual customer deliveries.", target: { start: "2027-01-01", end: "2028-12-31", label: "2027–2028 · original 2023 target" }, metrics: [] },
+  ];
+  const rollouts = [
+    { id: "tmobile-us", operator: "Starlink / T-Mobile", carrier: "T-Mobile", country: "United States", status: "available", capability: "Selected app data", devices: "Compatible phones; model and OS restrictions apply", messaging: "Listed as available", apps: "Selected satellite-ready apps", voice: "Do not assume ordinary voice calling", broadband: "Not unrestricted terrestrial-speed internet", coverage: "Outdoor sky visibility required; availability and capacity vary", pricing: "Plan-dependent; check current service terms", url: refs.tmobile, owner: "T-Mobile", publishedAt: null, checkedAt: reviewedAt, limitations: "Product-page claim, not an independent field test or a paying-user count.", metrics: [] },
+    { id: "rogers-ca", operator: "Starlink / Rogers", carrier: "Rogers", country: "Canada", status: "available", capability: "Selected app data", devices: "Selected Apple, Google Pixel and Samsung models / OS versions; use the carrier checker", messaging: "Text and text-to-911 listed", apps: "Selected satellite-ready apps", voice: "Compatible app calls; not proof of conventional voice service", broadband: "Low-data-rate apps, not unrestricted broadband", coverage: "South of the 58th parallel, with regional exclusions and sky-visibility limits", pricing: "Bundled or add-on; promotional and eligibility conditions apply", url: refs.rogers, owner: "Rogers", publishedAt: null, checkedAt: reviewedAt, limitations: "Marketing and support pages can differ. Verify device eligibility and current terms before relying on service.", metrics: [] },
+    { id: "ast-watch", operator: "AST SpaceMobile", carrier: "Partner carriers", country: "Not established in this record", status: "watch", capability: "Commercial rollout to verify", devices: "Compatibility requires a market-specific commercial disclosure", messaging: "Not verified here", apps: "Not verified here", voice: "Not verified here", broadband: "Development objective, not a verified universal service", coverage: "Do not substitute launch counts or announced partnerships for live coverage", pricing: "Not established", url: refs.ast, owner: "AST SpaceMobile", publishedAt: null, checkedAt: reviewedAt, limitations: "Research gap, not a claim that no commercial service exists. Review the latest carrier and regulatory disclosures.", metrics: [] },
+  ];
+  return { schemaVersion: 1, reviewedAt, companies: companies.map(c => ({ ...c, reportingCurrency: c.ticker === "TM" ? "JPY" : "USD" })), sources, batteryMetrics, satelliteMetrics, programs, rollouts };
+});

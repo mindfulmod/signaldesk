@@ -6,6 +6,11 @@ that a technology or its associated stocks must succeed.
 
 ## The five upgrades
 
+This section describes the first radar release. The subsequent nine upgrades,
+including 22 source contracts, detailed trackers, permanent company coverage and
+review publication, are in [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md).
+The default view is now the brief.
+
 1. **Technology radar:** searchable by category, company, ticker and aliases;
    sector/stage filters; browser-local follows. Solid-state batteries and
    satellite-to-phone connectivity lead the initial five-category registry.
@@ -67,9 +72,9 @@ node scripts/update-technology.mjs --output /tmp/signaldesk-tech-check
 node --test scripts/test/*.test.mjs
 ```
 
-`--force` bypasses the per-source 24-hour cadence for a deliberate diagnostic.
-Normal weekday refreshes call the collector before stock collection. Each
-source is fetched once per cadence, not per ticker. Sources have 15-second
+`--force` bypasses the cadence for a deliberate diagnostic. The separate
+seven-day research workflow checks successful sources once per Toronto calendar
+day and retries failures on later six-hour runs. Sources have 15-second
 timeouts, a 1.5 MB body cap, HTTPS/host-restricted redirects and conditional
 requests. Partial source failure preserves the last successful baseline. The
 workflow publishes only outputs from successful collector steps; a stock-step
@@ -77,21 +82,21 @@ failure cannot publish partially written stock artifacts.
 
 Never hand-edit generated monitor files. Changing a source URL or extractor
 version establishes a new baseline rather than creating false news. Link
-sources track previously seen canonical URLs; publication dates remain unknown
-until reviewed. Page fingerprints can reflect boilerplate changes, so they are
+sources track previously seen canonical URLs; RSS/SEC dates are retained, while
+HTML dates remain unknown until reviewed. Page fingerprints can reflect boilerplate changes, so they are
 always unverified candidates.
 
-Eight pages are configured initially: QuantumScape resources, Toyota's historical
-target, T-Mobile's network newsroom and product page, AST investor updates, and
-the saved Meta, Microsoft and Waymo disclosures. The latter three check saved
-pages for corrections; they do **not** discover every new reporting period.
-This is intentionally limited coverage, not a whole-web trend engine. The first
-live baseline reached all eight pages and produced zero change candidates.
+The original eight-page monitor has been replaced with 22 contracts from
+`research-config.js`: rolling company/customer newsrooms, product pages,
+research feeds, FCC and company SEC submissions. Historical evidence stays in
+the ledger, but old single announcements no longer stand in for ongoing news
+coverage. This remains a limited sample, not a whole-web trend engine.
 
 Health states distinguish not checked, unavailable, overdue, no matching links,
 and readable. “Readable” says nothing about whether a business claim is true.
-Saved checks older than twice their cadence become overdue; weekend gaps may
-therefore show that warning. “Reload saved checks” does not run a live scrape.
+Saved checks older than twice their cadence become overdue; a separate 36-hour
+operational health target is stricter. Weekend collection is enabled.
+“Reload saved research” does not run a live scrape.
 
 ## Editorial upkeep
 
@@ -106,6 +111,8 @@ source-backed company role. Add rolling newsroom or investor-result indexes
 where available; do not treat an old single-disclosure page as ongoing news
 coverage. No automatic verification, numeric-claim extraction, notifications,
 cross-device account or backtested mainstream-probability score is included.
+The Review view now provides local drafts and validated repository-backed
+publication; see the upgrade guide before changing published evidence.
 
 ## Verification
 
