@@ -2268,7 +2268,7 @@ body.sheet-open {
 }
 
 .hero-about > summary:hover {
-  color: var(--text);
+  color: var(--ink);
 }
 
 .hero-about .hero-sub {

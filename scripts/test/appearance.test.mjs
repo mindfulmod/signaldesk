@@ -107,8 +107,14 @@ for (const [mode, selector] of [["dark", ":root {"], ["light", ':root[data-theme
 
 test("both palettes define the same tokens and component colors do not bypass them", async () => {
   assert.deepEqual(Object.keys(palette(":root {")).sort(), Object.keys(palette(':root[data-theme="light"]')).sort());
-  for (const file of ["styles.css", "tabs.css", "desk-cleanup.css", "technology.css", "script.js", "layout-fix.js", "themes.js", "springs.js", "phrase-radar.js", "alerts.js"]) {
+  const components = [];
+  for (const file of ["styles.css", "tabs.css", "desk-cleanup.css", "technology.css", "script.js", "layout-fix.js", "enhancements.js", "themes.js", "springs.js", "phrase-radar.js", "alerts.js", "calibration.js", "clusters.js"]) {
     const text = await readFile(new URL(`../../${file}`, import.meta.url), "utf8");
+    components.push(text);
     assert.doesNotMatch(text, /#[\da-f]{3,8}\b|rgba?\(/i, `${file} must use semantic colors`);
   }
+  const combined = [css, ...components].join("\n");
+  const defined = new Set([...combined.matchAll(/(--[\w-]+)\s*:/g)].map(m => m[1]));
+  const referenced = new Set([...combined.matchAll(/var\((--[\w-]+)/g)].map(m => m[1]));
+  assert.deepEqual([...referenced].filter(name => !defined.has(name)), [], "every referenced token must exist");
 });
