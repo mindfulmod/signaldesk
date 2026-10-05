@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T01:14:54.406Z",
+  "generatedAt": "2026-10-05T11:49:09.276Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -2839,16 +2839,16 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526380869/d126654d6k.htm",
+        "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm",
         "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-        "publishedAt": "2026-09-03",
+        "publishedAt": "2026-10-05",
         "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
         "form": "6-K",
-        "accession": "0001193125-26-380869"
+        "accession": "0001193125-26-413029"
       },
-      "factsAttemptAt": "2026-10-03T01:41:33.808Z",
-      "factsCheckedAt": "2026-10-03T01:41:33.808Z",
-      "factsAccession": "0001193125-26-380869",
+      "factsAttemptAt": "2026-10-05T11:49:09.276Z",
+      "factsCheckedAt": "2026-10-05T11:49:09.276Z",
+      "factsAccession": "0001193125-26-413029",
       "factsError": null,
       "quoteAttemptAt": "2026-10-05T01:14:54.406Z",
       "quote": {

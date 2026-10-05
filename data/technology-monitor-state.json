@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T10:44:21.321Z",
+  "generatedAt": "2026-10-05T11:49:09.276Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
       "sourceUrl": "https://www.t-mobile.com/news/category/network",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -42,8 +42,8 @@
       "sourceUrl": "https://www.t-mobile.com/coverage/satellite-phone-service",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -72,8 +72,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -157,8 +157,8 @@
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -232,8 +232,8 @@
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -255,8 +255,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -285,8 +285,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -312,7 +312,7 @@
       "newestPublicationAt": null,
       "excerpt": "Rogers Satellite Connect where towers don’t reach. Our satellite-to-mobile service keeps you connected where it wasn’t possible before. Get Rogers Satellite on us with new 5G+ mobile plans 1 For all Canadians, on any provider. Get Rogers Sa",
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b79-/ZPOmCYXvqzZBCTm7yXaw7EYcLo\"",
+      "etag": "W/\"29c7a-UXhHZrP41HG8uymj6NaNCKNDwt0\"",
       "lastModified": null
     },
     "meta-news": {
@@ -320,8 +320,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -372,8 +372,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -424,8 +424,8 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -464,8 +464,8 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -503,8 +503,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -625,16 +625,16 @@
       "newestPublicationAt": "2026-09-30T16:11:09.000Z",
       "excerpt": null,
       "title": "NSF research news",
-      "etag": "\"1791097610-gzip\"",
-      "lastModified": "Sun, 04 Oct 2026 07:06:50 GMT"
+      "etag": "\"1791184019-gzip\"",
+      "lastModified": "Mon, 05 Oct 2026 07:06:59 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -1000,472 +1000,472 @@
       "newestPublicationAt": "2026-09-29T20:35:00.000Z",
       "excerpt": null,
       "title": "MIT energy research",
-      "etag": "\"1791110285\"",
-      "lastModified": "Sun, 04 Oct 2026 10:38:05 GMT"
+      "etag": "\"1791199464\"",
+      "lastModified": "Mon, 05 Oct 2026 11:24:24 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-05T11:49:09.276Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "f145c5d05d6c8d8490d35ecd2e577ded062d8b56fd92f05a447db5a2be69933d",
+      "fingerprint": "1b336973d7202c566dd98e02e814c6776cf703f9c84534305988f7d403a42519",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03091-2",
+          "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light: live updates",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03135-7",
+          "title": "AI biohazard hype must not divert attention from the real risks we face now",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03037-8",
           "title": "Location, location, location: how to edit genes only in the cells you want",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03057-4",
           "title": "‘Learning about physics changed my life’: author Hernan Diaz on his new novel Ply",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03058-3",
           "title": "How to respond to hate speech without fuelling it further",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03126-8",
           "title": "Stunning fossil shows dinosaurs’ distinctive path to flight",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03145-5",
           "title": "Nature has rights — it is time the world recognized them",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03133-9",
           "title": "Can you name the women who have won a science Nobel prize?",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02976-6",
           "title": "Von Neumann’s party",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02769-x",
           "title": "Prozac use for childhood depression skewed by single flawed medical trial",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02564-8",
           "title": "Can we have class outside? Seven tips to breeze through outdoor lectures",
           "excerpt": "",
-          "publishedAt": "2026-10-02T00:00:00.000Z"
+          "publishedAt": "2026-10-02"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11149-4",
           "title": "Retraction Note: Ribosomal frameshifting in the CCR5 mRNA is regulated by miRNAs and the NMD pathway",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03036-9",
           "title": "A black hole’s jets have a halo effect",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03119-7",
           "title": "Can pancreatic cancer be stopped in its tracks? Radical tactic raises hopes",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03044-9",
           "title": "‘Vibe coding’ makes the dictionary: AI terms recognized by Merriam-Webster",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03042-x",
           "title": "The ‘missed disease’ that affects 190 million: endometriosis drug shows early promise",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03101-3",
           "title": "Gaze into the cosmos and through the eyes of a bee — September’s best science images",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03118-8",
           "title": "Battle of the Anthropocene: allegations re-ignite row over proposed geological epoch",
           "excerpt": "",
-          "publishedAt": "2026-10-01T00:00:00.000Z"
+          "publishedAt": "2026-10-01"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03124-w",
           "title": "These optical illusions are why butterflies are so hard to catch",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03038-7",
           "title": "Who’s the loudest of them all? The bare-throated bellbird vies for the prize",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02958-8",
           "title": "Is exposomics the key to making personalized medicine a reality?",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03138-4",
           "title": "Daily briefing: How to save corals from the El Niño",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02965-9",
           "title": "The super El Niño is cooking coral reefs — can lullabies and probiotics save them?",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03086-z",
           "title": "This award-winning microscopy image used AI — igniting controversy in a prestigious competition",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02777-x",
           "title": "2D semiconductor aims to turbocharge development of high-performance electronics",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02991-7",
           "title": "Elena, Aris, Marcus: AI-generated ‘ghosts’ are polluting the scientific literature",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02963-x",
           "title": "Tuberculosis treatment has advanced — now we need to stop drug resistance dragging us backwards",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02782-0",
           "title": "Sugar amplifies antibiotic disruption of gut microbes",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02978-4",
           "title": "How did Earth get its water? Inside the extreme machine seeking answers",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02778-w",
           "title": "Harmful tau spreads like self-propagating prion proteins",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03047-6",
           "title": "Beware sham scientific societies: the research community must be more vigilant",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03106-y",
           "title": "AI ‘speech clock’ assesses how fast you’re ageing from your voice",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02863-0",
           "title": "The buck stops with me",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03033-y",
           "title": "Secret watermark labels proteins as ‘made by AI’",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02783-z",
           "title": "Pipework problems when cancer spreads to an area bordering the brain",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03015-0",
           "title": "How to spend $25 billion on science: OpenAI’s staggeringly rich research charity gets under way",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02201-4",
           "title": "I turn up late to meetings to dodge small talk. Am I wrong?",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02894-7",
           "title": "Restoring hearing in people with a rare form of deafness",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11077-3",
           "title": "Sugar-rich foods exacerbate antibiotic-induced microbiome disruption",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11060-y",
           "title": "Type 2 immune history trains lung macrophages for viral disease tolerance",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11089-z",
           "title": "Global mangrove distribution on the open coast is controlled by waves",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11068-4",
           "title": "X-ray liquidography decodes complex motions in azobenzene isomerization",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11087-1",
           "title": "Histone readers MLLT1 and MLLT3 concentrate AID to confer locus specificity",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11108-z",
           "title": "Carbene transfer from thianthrenium ylides for cyclopropanation",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11075-5",
           "title": "An amygdala to anterior hypothalamic circuit gates stress sensitivity",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11063-9",
           "title": "Dynamic protrusions mediate crawling motility in Asgard archaea",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11082-6",
           "title": "Osteoclasts intercept meningeal lymphatic paths for dural metastasis",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11078-2",
           "title": "Population-scale immune multiome atlas reveals regulatory disease mechanisms",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11113-2",
           "title": "Human genetics implicates a BACH2–NRF2 axis in fetal haemoglobin activation",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11061-x",
           "title": "Prion-like transmission of human tau strains in the mouse brain",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11047-9",
           "title": "Wafer-scale epitaxy growth of high-mobility p-type boron carbon nitride",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-10955-0",
           "title": "Written in development and lost in ageing: the grammar of cellular identity",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11092-4",
           "title": "Transcription pause and elongation regulators mediate somatic hypermutation",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11088-0",
           "title": "GPCR antagonism via rewiring of receptor trafficking and degradation",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11076-4",
           "title": "γδ T cell receptor dependencies define a unique immunosurveillance modality",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11064-8",
           "title": "Spatiotemporal clonal architecture of the newborn mouse forebrain",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11036-y",
           "title": "Scalable decision-making for games of imperfect information",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11090-6",
           "title": "Evolution of terrestrial anatomy revealed by a derived stem tetrapod",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11062-w",
           "title": "Butterfly wing patterns in flight create powerful illusory motion cues",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11086-2",
           "title": "Self-aligned optical microcomb emerging between octave-separated lasers",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-10965-y",
           "title": "Function-preserving watermarking of AI-generated proteins",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11093-3",
           "title": "A TBK1/ULK1 signalling axis couples lysosomal stress to TFEB activation",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11098-y",
           "title": "A two-hit mechanism triggers autoimmune hair loss",
           "excerpt": "",
-          "publishedAt": "2026-09-30T00:00:00.000Z"
+          "publishedAt": "2026-09-30"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02972-w",
           "title": "Strange and beautiful creatures spotted on the Challenger expedition",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03053-8",
           "title": "PhD training should encourage ethical dissent",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03056-5",
           "title": "Biodiversity protection must include language preservation",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03035-w",
           "title": "Emissions after the Paris accord made Europe’s heatwaves more severe",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03054-7",
           "title": "Patents alone won’t unlock critical-mineral supply chains",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02971-x",
           "title": "The cost of lost labour on a warming planet",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03055-6",
           "title": "Why AI-authorship debates miss a deeper shift in how scholarly knowledge is produced",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03046-7",
           "title": "AI-powered medical devices must be tested in real-world settings",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02961-z",
           "title": "AI can widen science — but only if institutions stop rewarding the already measurable",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03122-y",
           "title": "Daily briefing: Vaping has ‘alarming’ risks for children",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02759-z",
           "title": "Chinese-owned science journal created to rival the best",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         },
         {
           "url": "https://www.nature.com/articles/s41586-026-11083-5",
           "title": "Author Correction: Proteasome-guided haem signalling axis contributes to T cell exhaustion",
           "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02776-y",
-          "title": "A new chapter in targeting kinase enzymes in cancer",
-          "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03048-5",
-          "title": "Lab-grown brain organoids: time for international oversight",
-          "excerpt": "",
-          "publishedAt": "2026-09-29T00:00:00.000Z"
+          "publishedAt": "2026-09-29"
         }
       ],
       "seenLinks": [
@@ -1543,13 +1543,16 @@
         "https://www.nature.com/articles/d41586-026-02759-z",
         "https://www.nature.com/articles/s41586-026-11083-5",
         "https://www.nature.com/articles/d41586-026-02776-y",
-        "https://www.nature.com/articles/d41586-026-03048-5"
+        "https://www.nature.com/articles/d41586-026-03048-5",
+        "https://www.nature.com/articles/d41586-026-03091-2",
+        "https://www.nature.com/articles/d41586-026-03135-7"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
+      "newestPublicationAt": "2026-10-05",
       "excerpt": null,
       "title": "Nature research and news",
-      "etag": "\"95c58a91fed2035153969a164a67c0bf\"",
+      "etag": "\"e7edc8b6f9fc9676de8c237d6791dcb0\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1557,8 +1560,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -1942,8 +1945,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -2327,15 +2330,23 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-03T02:05:33.241Z",
+      "lastChangedAt": "2026-10-05T11:49:09.276Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "85f04b77785a78fb88469063837f0eb56561495305be680ad281f4c578f97d50",
+      "fingerprint": "bfe68a638be72fd019d70e402b48b337c672ef024ce720ed35529d969f1a3e79",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm",
+          "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
+          "publishedAt": "2026-10-05",
+          "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
+          "form": "6-K",
+          "accession": "0001193125-26-413029"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526380869/d126654d6k.htm",
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
@@ -2647,14 +2658,6 @@
           "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
           "form": "6-K",
           "accession": "0001193125-25-131083"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525128631/d915796d6k.htm",
-          "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-          "publishedAt": "2025-05-28",
-          "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-          "form": "6-K",
-          "accession": "0001193125-25-128631"
         }
       ],
       "seenLinks": [
@@ -2697,11 +2700,12 @@
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525138136/d59059d6k.htm",
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525133718/d62410d6k.htm",
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525131083/d948032d6k.htm",
-        "https://www.sec.gov/Archives/edgar/data/1094517/000119312525128631/d915796d6k.htm"
+        "https://www.sec.gov/Archives/edgar/data/1094517/000119312525128631/d915796d6k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 1000,
-      "newestPublicationAt": "2026-09-03",
+      "extractedEntries": 1001,
+      "newestPublicationAt": "2026-10-05",
       "excerpt": null,
       "title": "Toyota SEC filings",
       "etag": null,
@@ -2712,8 +2716,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3097,8 +3101,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3482,8 +3486,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3786,8 +3790,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4171,8 +4175,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-04T10:44:21.321Z",
-      "lastSuccessAt": "2026-10-04T10:44:21.321Z",
+      "lastAttemptAt": "2026-10-05T11:49:09.276Z",
+      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4552,5 +4556,44 @@
       "lastModified": null
     }
   },
-  "events": []
+  "events": [
+    {
+      "id": "d5a0b107c2af070311efcaeb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light: live updates",
+      "url": "https://www.nature.com/articles/d41586-026-03091-2",
+      "detectedAt": "2026-10-05T11:49:09.276Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "309addcd6120a24a4cc5343a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "AI biohazard hype must not divert attention from the real risks we face now",
+      "url": "https://www.nature.com/articles/d41586-026-03135-7",
+      "detectedAt": "2026-10-05T11:49:09.276Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "718af5bee4b5b215c5201724",
+      "sourceId": "sec-tm",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "Toyota",
+      "kind": "new-link",
+      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
+      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm",
+      "detectedAt": "2026-10-05T11:49:09.276Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    }
+  ]
 }
