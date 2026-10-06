@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T11:29:26.953Z",
+  "generatedAt": "2026-10-06T21:12:49.339Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -995,19 +995,157 @@
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 3,
-      "status": "error",
-      "lastAttemptAt": "2026-10-06T11:29:26.953Z",
-      "lastSuccessAt": "2026-10-05T11:49:09.276Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-06T21:12:49.339Z",
+      "lastSuccessAt": "2026-10-06T21:12:49.339Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-05T11:49:09.276Z",
-      "nextAttemptAt": "2026-10-06T12:29:26.953Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "1b336973d7202c566dd98e02e814c6776cf703f9c84534305988f7d403a42519",
+      "lastChangedAt": "2026-10-06T21:12:49.339Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "933405d30a70f0dbe13ad59b982729a9013077c3bcd2cbbd878e45baa1cf7f05",
       "items": [
         {
+          "url": "https://www.nature.com/articles/s41586-026-11244-6",
+          "title": "Author Correction: Anodic Pd membrane H 2 extraction enhances thermochemical dehydrogenation",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03176-y",
+          "title": "Maintaining global science collaboration during conflict requires fairer rules",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03155-3",
+          "title": "The Solar System could die one billion times earlier than thought",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03174-0",
+          "title": "The Great Barrier Reef requires special attention in the developing super El Niño",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02973-9",
+          "title": "Scientists take a radiometer for a spin in a hot-air balloon",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03177-x",
+          "title": "Preprints must not leak sensitive research information",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03160-6",
+          "title": "Unprecedented hole opened up in Antarctic winter sea ice",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03175-z",
+          "title": "AI could undermine scientific independence in subtle ways",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03095-y",
+          "title": "Astronomy’s ‘adrenaline junkies’: Nobel prize captures the thrill of neutrino physics",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02798-6",
+          "title": "Rising numbers of Asian and African PhD students choose to study in China",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03105-z",
+          "title": "How digital breakdowns affect supply chains — and endanger the global economy",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03129-5",
+          "title": "Strong evidence that ‘baryon junctions’ give proton its identity",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03131-x",
+          "title": "Why smart glasses are about to create a major privacy crisis",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03136-6",
+          "title": "Cells, who needs them? Biochemists turn to proteins in a tube",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02966-8",
+          "title": "Circular DNA exposes a weakness in cancer cells",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03150-8",
+          "title": "Flu season could kick off ‘incredibly’ early — what scientists are watching",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03092-1",
+          "title": "Nobel physics prize awarded for detection of cosmic neutrinos",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02967-7",
+          "title": "Brain organoids grafted into cortex-free mice will advance human brain research",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03130-y",
+          "title": "How to mobilize the agile science needed in a crisis",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03094-z",
+          "title": "‘What took them so long?’ This year’s medicine Nobel winner is overdue",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03157-1",
+          "title": "The top cancer success stories of the past 50 years, by the numbers",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03185-x",
+          "title": "Daily briefing: Medicine Nobel prize goes to optogenetics",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03091-2",
-          "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light: live updates",
+          "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light",
+          "excerpt": "",
+          "publishedAt": "2026-10-05"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03134-8",
+          "title": "How big tech is building a military–industrial complex in the age of AI",
           "excerpt": "",
           "publishedAt": "2026-10-05"
         },
@@ -1044,6 +1182,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03145-5",
           "title": "Nature has rights — it is time the world recognized them",
+          "excerpt": "",
+          "publishedAt": "2026-10-02"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03164-2",
+          "title": "Daily briefing: Can you name every female Nobel laureate?",
           "excerpt": "",
           "publishedAt": "2026-10-02"
         },
@@ -1104,6 +1248,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03101-3",
           "title": "Gaze into the cosmos and through the eyes of a bee — September’s best science images",
+          "excerpt": "",
+          "publishedAt": "2026-10-01"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03141-9",
+          "title": "Daily briefing: The sky as you’ve never seen it — the month’s best science images",
           "excerpt": "",
           "publishedAt": "2026-10-01"
         },
@@ -1304,156 +1454,6 @@
           "title": "Prion-like transmission of human tau strains in the mouse brain",
           "excerpt": "",
           "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11047-9",
-          "title": "Wafer-scale epitaxy growth of high-mobility p-type boron carbon nitride",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-10955-0",
-          "title": "Written in development and lost in ageing: the grammar of cellular identity",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11092-4",
-          "title": "Transcription pause and elongation regulators mediate somatic hypermutation",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11088-0",
-          "title": "GPCR antagonism via rewiring of receptor trafficking and degradation",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11076-4",
-          "title": "γδ T cell receptor dependencies define a unique immunosurveillance modality",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11064-8",
-          "title": "Spatiotemporal clonal architecture of the newborn mouse forebrain",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11036-y",
-          "title": "Scalable decision-making for games of imperfect information",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11090-6",
-          "title": "Evolution of terrestrial anatomy revealed by a derived stem tetrapod",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11062-w",
-          "title": "Butterfly wing patterns in flight create powerful illusory motion cues",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11086-2",
-          "title": "Self-aligned optical microcomb emerging between octave-separated lasers",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-10965-y",
-          "title": "Function-preserving watermarking of AI-generated proteins",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11093-3",
-          "title": "A TBK1/ULK1 signalling axis couples lysosomal stress to TFEB activation",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11098-y",
-          "title": "A two-hit mechanism triggers autoimmune hair loss",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02972-w",
-          "title": "Strange and beautiful creatures spotted on the Challenger expedition",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03053-8",
-          "title": "PhD training should encourage ethical dissent",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03056-5",
-          "title": "Biodiversity protection must include language preservation",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03035-w",
-          "title": "Emissions after the Paris accord made Europe’s heatwaves more severe",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03054-7",
-          "title": "Patents alone won’t unlock critical-mineral supply chains",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02971-x",
-          "title": "The cost of lost labour on a warming planet",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03055-6",
-          "title": "Why AI-authorship debates miss a deeper shift in how scholarly knowledge is produced",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03046-7",
-          "title": "AI-powered medical devices must be tested in real-world settings",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02961-z",
-          "title": "AI can widen science — but only if institutions stop rewarding the already measurable",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03122-y",
-          "title": "Daily briefing: Vaping has ‘alarming’ risks for children",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02759-z",
-          "title": "Chinese-owned science journal created to rival the best",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11083-5",
-          "title": "Author Correction: Proteasome-guided haem signalling axis contributes to T cell exhaustion",
-          "excerpt": "",
-          "publishedAt": "2026-09-29"
         }
       ],
       "seenLinks": [
@@ -1533,14 +1533,39 @@
         "https://www.nature.com/articles/d41586-026-02776-y",
         "https://www.nature.com/articles/d41586-026-03048-5",
         "https://www.nature.com/articles/d41586-026-03091-2",
-        "https://www.nature.com/articles/d41586-026-03135-7"
+        "https://www.nature.com/articles/d41586-026-03135-7",
+        "https://www.nature.com/articles/s41586-026-11244-6",
+        "https://www.nature.com/articles/d41586-026-03176-y",
+        "https://www.nature.com/articles/d41586-026-03155-3",
+        "https://www.nature.com/articles/d41586-026-03174-0",
+        "https://www.nature.com/articles/d41586-026-02973-9",
+        "https://www.nature.com/articles/d41586-026-03177-x",
+        "https://www.nature.com/articles/d41586-026-03160-6",
+        "https://www.nature.com/articles/d41586-026-03175-z",
+        "https://www.nature.com/articles/d41586-026-03095-y",
+        "https://www.nature.com/articles/d41586-026-02798-6",
+        "https://www.nature.com/articles/d41586-026-03105-z",
+        "https://www.nature.com/articles/d41586-026-03129-5",
+        "https://www.nature.com/articles/d41586-026-03131-x",
+        "https://www.nature.com/articles/d41586-026-03136-6",
+        "https://www.nature.com/articles/d41586-026-02966-8",
+        "https://www.nature.com/articles/d41586-026-03150-8",
+        "https://www.nature.com/articles/d41586-026-03092-1",
+        "https://www.nature.com/articles/d41586-026-02967-7",
+        "https://www.nature.com/articles/d41586-026-03130-y",
+        "https://www.nature.com/articles/d41586-026-03094-z",
+        "https://www.nature.com/articles/d41586-026-03157-1",
+        "https://www.nature.com/articles/d41586-026-03185-x",
+        "https://www.nature.com/articles/d41586-026-03134-8",
+        "https://www.nature.com/articles/d41586-026-03164-2",
+        "https://www.nature.com/articles/d41586-026-03141-9"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-05",
+      "newestPublicationAt": "2026-10-06",
       "excerpt": null,
       "title": "Nature research and news",
-      "etag": "\"e7edc8b6f9fc9676de8c237d6791dcb0\"",
+      "etag": "\"fc54a5b73095e6089495fd5e1f8d3303\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -4545,6 +4570,306 @@
     }
   },
   "events": [
+    {
+      "id": "436ed1d914c6be8a5a8498c1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: Anodic Pd membrane H 2 extraction enhances thermochemical dehydrogenation",
+      "url": "https://www.nature.com/articles/s41586-026-11244-6",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "57edf9d8b72d918511e47a27",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Maintaining global science collaboration during conflict requires fairer rules",
+      "url": "https://www.nature.com/articles/d41586-026-03176-y",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b46e692e467a3b370e15bf20",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The Solar System could die one billion times earlier than thought",
+      "url": "https://www.nature.com/articles/d41586-026-03155-3",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a0334be914998a233f64d5ea",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The Great Barrier Reef requires special attention in the developing super El Niño",
+      "url": "https://www.nature.com/articles/d41586-026-03174-0",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "90bdc199394807b8e7df1fa0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Scientists take a radiometer for a spin in a hot-air balloon",
+      "url": "https://www.nature.com/articles/d41586-026-02973-9",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "48669e5e97dc868b61a92636",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Preprints must not leak sensitive research information",
+      "url": "https://www.nature.com/articles/d41586-026-03177-x",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1becfb548180f4995e31eae2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Unprecedented hole opened up in Antarctic winter sea ice",
+      "url": "https://www.nature.com/articles/d41586-026-03160-6",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b42d631d69cc1762b9a17181",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "AI could undermine scientific independence in subtle ways",
+      "url": "https://www.nature.com/articles/d41586-026-03175-z",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "199d4c60e144f1e426bb47fa",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Astronomy’s ‘adrenaline junkies’: Nobel prize captures the thrill of neutrino physics",
+      "url": "https://www.nature.com/articles/d41586-026-03095-y",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "16e97b55d09ca8fb565cb859",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Rising numbers of Asian and African PhD students choose to study in China",
+      "url": "https://www.nature.com/articles/d41586-026-02798-6",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "117a48a39f0d260e2522f387",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How digital breakdowns affect supply chains — and endanger the global economy",
+      "url": "https://www.nature.com/articles/d41586-026-03105-z",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7a313ab34c871a119d8a1e89",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Strong evidence that ‘baryon junctions’ give proton its identity",
+      "url": "https://www.nature.com/articles/d41586-026-03129-5",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3c031ee6200049b67056a258",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why smart glasses are about to create a major privacy crisis",
+      "url": "https://www.nature.com/articles/d41586-026-03131-x",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3746d81f8961da37931068c1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Cells, who needs them? Biochemists turn to proteins in a tube",
+      "url": "https://www.nature.com/articles/d41586-026-03136-6",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2d22f1b54a3509085cc15a32",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Circular DNA exposes a weakness in cancer cells",
+      "url": "https://www.nature.com/articles/d41586-026-02966-8",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5c50ef257a545c728baa00c3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Flu season could kick off ‘incredibly’ early — what scientists are watching",
+      "url": "https://www.nature.com/articles/d41586-026-03150-8",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1dcbe1cb0e6a42dc7f9e4ce2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nobel physics prize awarded for detection of cosmic neutrinos",
+      "url": "https://www.nature.com/articles/d41586-026-03092-1",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "87eb8880634d8cac0b772417",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Brain organoids grafted into cortex-free mice will advance human brain research",
+      "url": "https://www.nature.com/articles/d41586-026-02967-7",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0f5c9ec41a405262ddd5c5c9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How to mobilize the agile science needed in a crisis",
+      "url": "https://www.nature.com/articles/d41586-026-03130-y",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f6f38b14f8a757debe56fa55",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "‘What took them so long?’ This year’s medicine Nobel winner is overdue",
+      "url": "https://www.nature.com/articles/d41586-026-03094-z",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "29e26dbaadef50e6c5db86b7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The top cancer success stories of the past 50 years, by the numbers",
+      "url": "https://www.nature.com/articles/d41586-026-03157-1",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "627abe5a4392bac1d8416e9c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Medicine Nobel prize goes to optogenetics",
+      "url": "https://www.nature.com/articles/d41586-026-03185-x",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1f2ca50af23a2d8406dc0ca7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How big tech is building a military–industrial complex in the age of AI",
+      "url": "https://www.nature.com/articles/d41586-026-03134-8",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-05",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3204c46c8295757bdfbc169c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Can you name every female Nobel laureate?",
+      "url": "https://www.nature.com/articles/d41586-026-03164-2",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-02",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "94845414c04cdf4c37fda7fd",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: The sky as you’ve never seen it — the month’s best science images",
+      "url": "https://www.nature.com/articles/d41586-026-03141-9",
+      "detectedAt": "2026-10-06T21:12:49.339Z",
+      "publishedAt": "2026-10-01",
+      "verification": "unreviewed"
+    },
     {
       "id": "d5a0b107c2af070311efcaeb",
       "sourceId": "nature-research",
