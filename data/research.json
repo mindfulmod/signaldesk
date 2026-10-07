@@ -1,10 +1,88 @@
 {
   "schemaVersion": 1,
-  "collectionId": "cb94d607-eb7b-450f-b33f-97ca1761df65",
-  "generatedAt": "2026-10-07T01:47:23.199Z",
-  "sourceCheckedAt": "2026-10-06T21:12:49.339Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/37558802617",
+  "collectionId": "0b6b51ff-34b7-4322-affd-1ea5bd8560c2",
+  "generatedAt": "2026-10-07T11:19:04.056Z",
+  "sourceCheckedAt": "2026-10-07T11:19:04.056Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/37613219674",
   "documents": [
+    {
+      "id": "3d398cbb12d5a69e3a525da1",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03132-w",
+      "title": "Can your brain grow new neurons? How researchers are solving a century-old puzzle",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-07",
+      "detectedAt": "2026-10-07T11:19:04.056Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "47cccd1accf39fa79f5e71cb",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real",
+      "title": "Podcast: Could holographic 3D printing be real?",
+      "excerpt": "U.S. National Science Foundation-supported researcher Rajesh Menon discusses his work combining optical systems with cutting-edge nanofabrication...",
+      "owner": "NSF",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-06T21:02:14.000Z",
+      "detectedAt": "2026-10-07T11:19:04.056Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "554802b0ff24aeb007056ee7",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/425636",
+      "title": "Space Bureau and Wireless Telecommunications Bureau grant Space Exploration Holdings, LCC authority to launch and operate the SpaceX NGSO MSS System",
+      "excerpt": "Space Bureau and Wireless Telecommunications Bureau grant Space Exploration Holdings, LCC authority to launch and operate the SpaceX NGSO MSS System",
+      "owner": "FCC",
+      "tier": "regulator",
+      "themes": [
+        "satellite-phones"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-07T11:19:04.056Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Deployment language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "907bc100e035596d5f04aed7",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03093-0",
+      "title": "Chemistry Nobel for solving mystery of how ‘handed’ organic molecules can emerge",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-07",
+      "detectedAt": "2026-10-07T11:19:04.056Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "0398b6634f30802b40cbe687",
       "sourceId": "nature-research",
@@ -19659,7 +19737,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-07T01:47:23.199Z",
+    "generatedAt": "2026-10-07T11:19:04.056Z",
     "coverageKey": "81a0ea07b00c3e76dba30561",
     "history": [
       {
@@ -19710,7 +19788,7 @@
           "adb8682d9498bc8bcbb4e1f3",
           "0712deadb475d5556818729d"
         ],
-        "documentCount": 118
+        "documentCount": 121
       }
     ],
     "candidates": [
@@ -19877,8 +19955,8 @@
         "lastSeenAt": "2026-10-07"
       }
     ],
-    "datedDocuments": 118,
-    "comparableDays": 4,
+    "datedDocuments": 121,
+    "comparableDays": 5,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
