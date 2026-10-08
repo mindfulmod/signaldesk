@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T11:19:04.056Z",
+  "generatedAt": "2026-10-08T11:35:34.352Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
       "sourceUrl": "https://www.t-mobile.com/news/category/network",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -32,7 +32,7 @@
       "matchedItems": 2,
       "extractedEntries": 16,
       "newestPublicationAt": null,
-      "excerpt": "Network Press Release T‑Mobile Teams Respond as Nor’easter Impacts East Coast Our thoughts are with everyone affected by the nor’easter, as strong winds, flooding and power outages have impacted communities across the East Coast this weeken",
+      "excerpt": "Network Press Release T‑Mobile Helps Gulf Coast Communities Prepare as Tropical Storm Isaias Strengthens When a hurricane is possible, preparing before conditions worsen can help families stay safer, more informed and connected. According t",
       "title": "Latest 5G Network News & Updates | T‑Mobile Newsroom",
       "etag": null,
       "lastModified": null
@@ -42,8 +42,8 @@
       "sourceUrl": "https://www.t-mobile.com/coverage/satellite-phone-service",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -72,8 +72,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -157,8 +157,8 @@
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -224,16 +224,16 @@
       "newestPublicationAt": null,
       "excerpt": "News Releases QuantumScape Reports Second Quarter 2026 Business and Financial Results SAN JOSE, Calif., July 22, 2026 (GLOBE NEWSWIRE) -- QuantumScape Corporation (NASDAQ: QS), a global leader in next-generation solid-state lithium-metal ba",
       "title": "News Releases | QuantumScape",
-      "etag": "\"1791089883\"",
-      "lastModified": "Sun, 04 Oct 2026 04:58:03 GMT"
+      "etag": "\"1791393702\"",
+      "lastModified": "Wed, 07 Oct 2026 17:21:42 GMT"
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -255,18 +255,18 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "ed761720e0692ccf4c5e2cdeb11eb52dbacd3fc3ce6f9f3de33d7dc89f0cc678",
+      "fingerprint": "536b519e415e24ee46365e7a0ffe44669b31a24b748c4a9a600da72caa71def2",
       "items": [
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china",
-          "title": "BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
+          "title": "24.09.2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
         }
       ],
       "seenLinks": [
@@ -285,8 +285,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -312,7 +312,7 @@
       "newestPublicationAt": null,
       "excerpt": "Rogers Satellite Connect where towers don’t reach. Our satellite-to-mobile service keeps you connected where it wasn’t possible before. Get Rogers Satellite on us with new 5G+ mobile plans 1 For all Canadians, on any provider. Get Rogers Sa",
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b79-93A5MPP1WCxLHjUhnuXdrNPcf1I\"",
+      "etag": "W/\"29b9f-3+ji0qLRPK9RSZHE8p5OdhOk1Vo\"",
       "lastModified": null
     },
     "meta-news": {
@@ -320,61 +320,50 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "2ef8ef3bf1cfa0848eda01664769faaf7741eedb32a1a9d59b5d47a5d04c627f",
+      "fingerprint": "e6b8e3e49317febe57950544bfd3e002436879641675e243f66655de6ad23023",
       "items": [
+        {
+          "url": "https://about.fb.com/news/2026/10/meta-donates-1000-ai-glasses-to-singapores-disability-community/",
+          "title": "Meta Donates 1,000 AI Glasses to Singapore’s Disability Community",
+          "excerpt": "Meta donates 1,000 Ray-Ban Meta AI glasses to four Singapore community organisations to help persons with disabilities. The post Meta Donates 1,000 AI Glasses to Singapore’s Disability Community appeared first on Meta Newsroom .",
+          "publishedAt": "2026-10-08T05:49:36.000Z"
+        },
         {
           "url": "https://about.fb.com/news/2026/10/announcing-ranveer-singh-as-brand-ambassador-for-ray-ban-and-ray-ban-meta-in-india-along-with-exciting-new-updates-to-our-ai-glasses/",
           "title": "Announcing Ranveer Singh as Brand Ambassador for Ray-Ban and Ray-Ban Meta in India along with Exciting New Updates to our AI Glasses",
           "excerpt": "Ranveer Singh becomes the first Brand Ambassador for Ray-Ban and Ray-Ban Meta in India. The post Announcing Ranveer Singh as Brand Ambassador for Ray-Ban and Ray-Ban Meta in India along with Exciting New Updates to our AI Glasses appeared f",
           "publishedAt": "2026-10-01T14:16:04.000Z"
-        },
-        {
-          "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
-          "title": "The Biggest News From Connect 2026",
-          "excerpt": "Yesterday at Connect, we announced that we're bringing Muse to our AI glasses, launched Meta VR Glasses, and more. The post The Biggest News From Connect 2026 appeared first on Meta Newsroom .",
-          "publishedAt": "2026-09-24T21:15:55.000Z"
-        },
-        {
-          "url": "https://about.fb.com/news/2026/09/new-features-for-meta-ray-ban-display-navigation-hologram/",
-          "title": "New Features for Meta Ray-Ban Display",
-          "excerpt": "Today, we announced updates to Meta Ray-Ban Display that make the glasses even more useful in your everyday life. The post New Features for Meta Ray-Ban Display appeared first on Meta Newsroom .",
-          "publishedAt": "2026-09-23T11:53:47.000Z"
-        },
-        {
-          "url": "https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/",
-          "title": "Introducing Meta VR Glasses: A Cinema, Courtside Seat, and Workspace in Just 100 Grams",
-          "excerpt": "We’re introducing Meta VR Glasses: a new era for virtual reality in a pair of glasses you can comfortably wear for hours. The post Introducing Meta VR Glasses: A Cinema, Courtside Seat, and Workspace in Just 100 Grams appeared first on Meta",
-          "publishedAt": "2026-09-23T11:42:46.000Z"
         }
       ],
       "seenLinks": [
         "https://about.fb.com/news/2026/10/announcing-ranveer-singh-as-brand-ambassador-for-ray-ban-and-ray-ban-meta-in-india-along-with-exciting-new-updates-to-our-ai-glasses/",
         "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
         "https://about.fb.com/news/2026/09/new-features-for-meta-ray-ban-display-navigation-hologram/",
-        "https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/"
+        "https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/",
+        "https://about.fb.com/news/2026/10/meta-donates-1000-ai-glasses-to-singapores-disability-community/"
       ],
-      "matchedItems": 4,
+      "matchedItems": 2,
       "extractedEntries": 10,
-      "newestPublicationAt": "2026-10-01T14:16:04.000Z",
+      "newestPublicationAt": "2026-10-08T05:49:36.000Z",
       "excerpt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"d0b02ad914776bc1ea0f905c350203bc\"",
-      "lastModified": "Mon, 05 Oct 2026 16:01:54 GMT"
+      "etag": "W/\"9110ccd2a3fa5b95e2f674122b186445\"",
+      "lastModified": "Thu, 08 Oct 2026 07:23:48 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -425,19 +414,15 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "c8bd9672ea2fc74bbb98e517a2df0abf8892035ebc8cf061e8f306fbe41bdb92",
+      "fingerprint": "634017ff80b57316c23b77a0015e0a1e1445fc609a737badc7141e513eda7a5e",
       "items": [
-        {
-          "url": "https://waymo.com/blog/2026/09/allianzpartnership",
-          "title": "Read more: Building Waymo’s Risk and Insurance Foundation in Europe with Allianz Partners"
-        },
         {
           "url": "https://waymo.com/blog/2026/09/transit-rewards",
           "title": "Read more: Introducing transit rewards"
@@ -445,17 +430,22 @@
         {
           "url": "https://waymo.com/blog/2026/09/waymo-in-singapore",
           "title": "Read more: Singapore, Next Stop: Bringing Scalable, Safe Autonomous Mobility to the Lion City"
+        },
+        {
+          "url": "https://waymo.com/blog/2026/10/incident-management-exercises",
+          "title": "Read more: Preparing for the Unexpected: A New Framework for AV Incident Management Exercises"
         }
       ],
       "seenLinks": [
         "https://waymo.com/blog/2026/09/allianzpartnership",
         "https://waymo.com/blog/2026/09/transit-rewards",
-        "https://waymo.com/blog/2026/09/waymo-in-singapore"
+        "https://waymo.com/blog/2026/09/waymo-in-singapore",
+        "https://waymo.com/blog/2026/10/incident-management-exercises"
       ],
       "matchedItems": 3,
       "extractedEntries": 3,
       "newestPublicationAt": null,
-      "excerpt": "Introducing transit rewards Today, Waymo is excited to announce our transit rewards program, which we will initially offer in the San Francisco Bay Area, with future cities to follow. This first-of-its-kind initiative rewards riders with Wa",
+      "excerpt": "Preparing for the Unexpected: A New Framework for AV Incident Management Exercises Every driver — human or autonomous — can encounter the unexpected. The best time to work out how to respond to an emergency is before it happens. The Waymo T",
       "title": "Waypoint - The official Waymo blog",
       "etag": null,
       "lastModified": null
@@ -465,29 +455,44 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-07T11:19:04.056Z",
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "faa2620eb1ddc8b469fd750af1bee789ceeef1d8407419c015762b170f377030",
+      "fingerprint": "053e47a6c1229fc106a4480f9cb8fd14fe68e0760ff53f555617816c68f1c441",
       "items": [
         {
-          "url": "https://www.fcc.gov/edoc/425636",
-          "title": "Space Bureau and Wireless Telecommunications Bureau grant Space Exploration Holdings, LCC authority to launch and operate the SpaceX NGSO MSS System",
-          "excerpt": "Space Bureau and Wireless Telecommunications Bureau grant Space Exploration Holdings, LCC authority to launch and operate the SpaceX NGSO MSS System",
+          "url": "https://www.fcc.gov/edoc/425692",
+          "title": "Chairman Carr Proposes Transformation in Connectivity",
+          "excerpt": "Meeting proposals to unleash wireless services for terrestrial, satellite, and drones.",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/425674",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/425675",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
           "publishedAt": null
         }
       ],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425555",
         "https://www.fcc.gov/edoc/425556",
-        "https://www.fcc.gov/edoc/425636"
+        "https://www.fcc.gov/edoc/425636",
+        "https://www.fcc.gov/edoc/425692",
+        "https://www.fcc.gov/edoc/425674",
+        "https://www.fcc.gov/edoc/425675"
       ],
-      "matchedItems": 1,
-      "extractedEntries": 6,
+      "matchedItems": 3,
+      "extractedEntries": 32,
       "newestPublicationAt": null,
       "excerpt": null,
       "title": "FCC releases",
@@ -499,8 +504,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-07T11:19:04.056Z",
       "nextAttemptAt": null,
@@ -622,23 +627,29 @@
       "newestPublicationAt": "2026-10-06T21:02:14.000Z",
       "excerpt": null,
       "title": "NSF research news",
-      "etag": "\"1791368565-gzip\"",
-      "lastModified": "Wed, 07 Oct 2026 10:22:45 GMT"
+      "etag": "\"1791454985-gzip\"",
+      "lastModified": "Thu, 08 Oct 2026 10:23:05 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "8049038c3354f5dd65fc3fda62b22652abe8e2bd9d0d7d177aca4710217a24cd",
+      "fingerprint": "133ea0599f6f45811cfcbb9a3257b6aaba64d672cdcda19687a1080e99022057",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/mitigating-environmental-threat-of-data-centers-christina-delimitrou-1008",
+          "title": "Using AI to mitigate the growing environmental threat of data centers",
+          "excerpt": "By rethinking how large cloud computing systems operate, Associate Professor Christina Delimitrou seeks to make data centers more energy efficient.",
+          "publishedAt": "2026-10-08T04:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/climate-action-learning-lab-bridges-research-policy-for-effective-climate-solutions-0929",
           "title": "Climate Action Learning Lab bridges research and policy for effective climate solutions",
@@ -928,12 +939,6 @@
           "publishedAt": "2026-01-21T05:00:00.000Z"
         },
         {
-          "url": "https://news.mit.edu/2026/feeding-innovation-solve-complex-urban-problems-0114",
-          "title": "Feeding innovation to solve complex urban problems",
-          "excerpt": "Cross-border collaborations are seen as a key to success for the MIT Leventhal Center’s Mexico City Initiative.",
-          "publishedAt": "2026-01-14T20:40:00.000Z"
-        },
-        {
           "url": "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
           "title": "3 Questions: How AI could optimize the power grid",
           "excerpt": "While the growing energy demands of AI are worrying, some techniques can also help make power grids cleaner and more efficient.",
@@ -990,30 +995,163 @@
         "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
         "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
         "https://news.mit.edu/2026/feeding-innovation-solve-complex-urban-problems-0114",
-        "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109"
+        "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
+        "https://news.mit.edu/2026/mitigating-environmental-threat-of-data-centers-christina-delimitrou-1008"
       ],
       "matchedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-09-29T20:35:00.000Z",
+      "newestPublicationAt": "2026-10-08T04:00:00.000Z",
       "excerpt": null,
       "title": "MIT energy research",
-      "etag": "\"1791371327\"",
-      "lastModified": "Wed, 07 Oct 2026 11:08:47 GMT"
+      "etag": "\"1791458598\"",
+      "lastModified": "Thu, 08 Oct 2026 11:23:18 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-07T11:19:04.056Z",
+      "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "03a1e03e0cd62bce9c7454d9936f320cecb2202c676aa21c9034b99c94f5daa0",
+      "fingerprint": "0a8c6a19c4abfc7647764b82a6312aa81a83e67628790c5c3edc4d14bc37dc6d",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03045-8",
+          "title": "Woody ‘blankets’ are being deployed on Arctic permafrost to reduce carbon emissions",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03154-4",
+          "title": "UAE completes Arab world's first solo space probe – and sets course for an asteroid",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02999-z",
+          "title": "A guide to Nature Index tables",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03208-7",
+          "title": "Nobel prizes 2026: ‘ghost’ particles, mirror molecules and light switches in the brain",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03197-7",
+          "title": "NASA releases trove of Moon data from historic Artemis II flight",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02836-3",
+          "title": "How we ditched presentations and embraced silence in our lab meetings",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02864-z",
+          "title": "Blend",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02968-6",
+          "title": "Semiconductors pushed into insulator territory",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03072-5",
+          "title": "Genome accessibility reveals disease risk that gene expression misses",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03060-9",
+          "title": "Nuclear clocks tick for the first time",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03059-2",
+          "title": "Retrofitted LLM can count the letter ‘i’s in ‘artificial intelligence’",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02985-5",
+          "title": "Why sound, strong science alone isn’t enough in pandemic preparedness",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03127-7",
+          "title": "‘When prevention disappears, infections rise’: can the world still end AIDS?",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03198-6",
+          "title": "The science of superintelligence and why AI is still a useful word",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02969-5",
+          "title": "Gut microbes that trace ancient human journeys",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03069-0",
+          "title": "An early predecessor to mammals could swim, suckle and swallow",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03132-w",
+          "title": "Can your brain grow new neurons? How researchers are solving a century-old puzzle",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03184-y",
+          "title": "Australia’s bush fires got worse after British colonization — this is why",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02983-7",
+          "title": "Why we must advocate for proper care on the frontlines of the Ebola outbreak",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03189-7",
+          "title": "Revealed: how this common gut microbe protects against heart disease",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03196-8",
+          "title": "OpenAI posts 700 maths preprints online: mathematicians are up in arms",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02934-2",
+          "title": "How to control where semiconductor crystals start growing",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03093-0",
           "title": "Chemistry Nobel for solving mystery of how ‘handed’ organic molecules can emerge",
@@ -1021,8 +1159,158 @@
           "publishedAt": "2026-10-07"
         },
         {
-          "url": "https://www.nature.com/articles/d41586-026-03132-w",
-          "title": "Can your brain grow new neurons? How researchers are solving a century-old puzzle",
+          "url": "https://www.nature.com/articles/s41586-026-11105-2",
+          "title": "Observation of relativistic bond weakening in seaborgium hexacarbonyl",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11140-z",
+          "title": "RNA catalysis emerges from dynamic structural ensembles",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11084-4",
+          "title": "A thorium-229 optical nuclear clock with feedback loop",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11129-8",
+          "title": "Structural basis for regulating lipopolysaccharide transmembrane transport",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11122-1",
+          "title": "A nuclear clock synchronized to 229 Th",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-10858-0",
+          "title": "Hydrogen bonding in water under extreme confinement",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11127-w",
+          "title": "Alveolar stem cells transdifferentiate to drive bronchiolar regeneration",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11099-x",
+          "title": "Experimental observation of critical topology",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11106-1",
+          "title": "Prehistoric global migration of vanishing gut microbes with humans",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11066-6",
+          "title": "A preinvasive regulatory T cell axis for lung cancer interception",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11101-6",
+          "title": "Mechanism of spliceosome termination",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11085-3",
+          "title": "A 7-eV bandgap semiconductor based on silicon-doped α-(Al x Ga 1− x ) 2 O 3",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11038-w",
+          "title": "Overcoming key challenges in the evolutionary transition to multicellularity",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11153-8",
+          "title": "tRNA dosage regulates lineage dependency and resistance in prostate cancer",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11073-7",
+          "title": "A chiral superlattice route to spin-split topological antiferromagnetism",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11125-y",
+          "title": "Dynamics of human cardiogenesis and its disruption in trisomy 21",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11097-z",
+          "title": "Australia’s current wildfire crisis linked to colonial land-use change",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11111-4",
+          "title": "Retrofitting language models to operate over bytes",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11095-1",
+          "title": "Spatially deterministic nucleation of 2D semiconductors by etching flux",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11144-9",
+          "title": "A split attractor design for rapidly writing a navigational goal",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11116-z",
+          "title": "Cryo-EM structure of a methanogen nitrogenase–PII protein supercomplex",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11107-0",
+          "title": "A Jurassic mammaliaform swimmer and transformation of the mammalian pharynx",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11114-1",
+          "title": "Human lung organoid modelling of tissue-resident antiviral T cell responses",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11142-x",
+          "title": "A gut microbial odd-chain fatty acid alleviates atherosclerosis in mice",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11067-5",
+          "title": "Observation of critical topological phase transition",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11121-2",
+          "title": "5-oxoETE links redox control of epithelial damage detection and resilience",
           "excerpt": "",
           "publishedAt": "2026-10-07"
         },
@@ -1089,6 +1377,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03105-z",
           "title": "How digital breakdowns affect supply chains — and endanger the global economy",
+          "excerpt": "",
+          "publishedAt": "2026-10-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03190-0",
+          "title": "Daily briefing: Physics Nobel for founder of neutrino-hunting observatory",
           "excerpt": "",
           "publishedAt": "2026-10-06"
         },
@@ -1175,294 +1469,6 @@
           "title": "AI biohazard hype must not divert attention from the real risks we face now",
           "excerpt": "",
           "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03037-8",
-          "title": "Location, location, location: how to edit genes only in the cells you want",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03057-4",
-          "title": "‘Learning about physics changed my life’: author Hernan Diaz on his new novel Ply",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03058-3",
-          "title": "How to respond to hate speech without fuelling it further",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03126-8",
-          "title": "Stunning fossil shows dinosaurs’ distinctive path to flight",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03145-5",
-          "title": "Nature has rights — it is time the world recognized them",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03164-2",
-          "title": "Daily briefing: Can you name every female Nobel laureate?",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03133-9",
-          "title": "Can you name the women who have won a science Nobel prize?",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02976-6",
-          "title": "Von Neumann’s party",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02769-x",
-          "title": "Prozac use for childhood depression skewed by single flawed medical trial",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02564-8",
-          "title": "Can we have class outside? Seven tips to breeze through outdoor lectures",
-          "excerpt": "",
-          "publishedAt": "2026-10-02"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11149-4",
-          "title": "Retraction Note: Ribosomal frameshifting in the CCR5 mRNA is regulated by miRNAs and the NMD pathway",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03036-9",
-          "title": "A black hole’s jets have a halo effect",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03119-7",
-          "title": "Can pancreatic cancer be stopped in its tracks? Radical tactic raises hopes",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03044-9",
-          "title": "‘Vibe coding’ makes the dictionary: AI terms recognized by Merriam-Webster",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03042-x",
-          "title": "The ‘missed disease’ that affects 190 million: endometriosis drug shows early promise",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03101-3",
-          "title": "Gaze into the cosmos and through the eyes of a bee — September’s best science images",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03141-9",
-          "title": "Daily briefing: The sky as you’ve never seen it — the month’s best science images",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03118-8",
-          "title": "Battle of the Anthropocene: allegations re-ignite row over proposed geological epoch",
-          "excerpt": "",
-          "publishedAt": "2026-10-01"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03124-w",
-          "title": "These optical illusions are why butterflies are so hard to catch",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03038-7",
-          "title": "Who’s the loudest of them all? The bare-throated bellbird vies for the prize",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02958-8",
-          "title": "Is exposomics the key to making personalized medicine a reality?",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03138-4",
-          "title": "Daily briefing: How to save corals from the El Niño",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02965-9",
-          "title": "The super El Niño is cooking coral reefs — can lullabies and probiotics save them?",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03086-z",
-          "title": "This award-winning microscopy image used AI — igniting controversy in a prestigious competition",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02777-x",
-          "title": "2D semiconductor aims to turbocharge development of high-performance electronics",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02991-7",
-          "title": "Elena, Aris, Marcus: AI-generated ‘ghosts’ are polluting the scientific literature",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02963-x",
-          "title": "Tuberculosis treatment has advanced — now we need to stop drug resistance dragging us backwards",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02782-0",
-          "title": "Sugar amplifies antibiotic disruption of gut microbes",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02978-4",
-          "title": "How did Earth get its water? Inside the extreme machine seeking answers",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02778-w",
-          "title": "Harmful tau spreads like self-propagating prion proteins",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03047-6",
-          "title": "Beware sham scientific societies: the research community must be more vigilant",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03106-y",
-          "title": "AI ‘speech clock’ assesses how fast you’re ageing from your voice",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02863-0",
-          "title": "The buck stops with me",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03033-y",
-          "title": "Secret watermark labels proteins as ‘made by AI’",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02783-z",
-          "title": "Pipework problems when cancer spreads to an area bordering the brain",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03015-0",
-          "title": "How to spend $25 billion on science: OpenAI’s staggeringly rich research charity gets under way",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02201-4",
-          "title": "I turn up late to meetings to dodge small talk. Am I wrong?",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02894-7",
-          "title": "Restoring hearing in people with a rare form of deafness",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11077-3",
-          "title": "Sugar-rich foods exacerbate antibiotic-induced microbiome disruption",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11060-y",
-          "title": "Type 2 immune history trains lung macrophages for viral disease tolerance",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11089-z",
-          "title": "Global mangrove distribution on the open coast is controlled by waves",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11068-4",
-          "title": "X-ray liquidography decodes complex motions in azobenzene isomerization",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11087-1",
-          "title": "Histone readers MLLT1 and MLLT3 concentrate AID to confer locus specificity",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11108-z",
-          "title": "Carbene transfer from thianthrenium ylides for cyclopropanation",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11075-5",
-          "title": "An amygdala to anterior hypothalamic circuit gates stress sensitivity",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11063-9",
-          "title": "Dynamic protrusions mediate crawling motility in Asgard archaea",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11082-6",
-          "title": "Osteoclasts intercept meningeal lymphatic paths for dural metastasis",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11078-2",
-          "title": "Population-scale immune multiome atlas reveals regulatory disease mechanisms",
-          "excerpt": "",
-          "publishedAt": "2026-09-30"
         }
       ],
       "seenLinks": [
@@ -1569,14 +1575,62 @@
         "https://www.nature.com/articles/d41586-026-03164-2",
         "https://www.nature.com/articles/d41586-026-03141-9",
         "https://www.nature.com/articles/d41586-026-03093-0",
-        "https://www.nature.com/articles/d41586-026-03132-w"
+        "https://www.nature.com/articles/d41586-026-03132-w",
+        "https://www.nature.com/articles/d41586-026-03045-8",
+        "https://www.nature.com/articles/d41586-026-03154-4",
+        "https://www.nature.com/articles/d41586-026-02999-z",
+        "https://www.nature.com/articles/d41586-026-03208-7",
+        "https://www.nature.com/articles/d41586-026-03197-7",
+        "https://www.nature.com/articles/d41586-026-02836-3",
+        "https://www.nature.com/articles/d41586-026-02864-z",
+        "https://www.nature.com/articles/d41586-026-02968-6",
+        "https://www.nature.com/articles/d41586-026-03072-5",
+        "https://www.nature.com/articles/d41586-026-03060-9",
+        "https://www.nature.com/articles/d41586-026-03059-2",
+        "https://www.nature.com/articles/d41586-026-02985-5",
+        "https://www.nature.com/articles/d41586-026-03127-7",
+        "https://www.nature.com/articles/d41586-026-03198-6",
+        "https://www.nature.com/articles/d41586-026-02969-5",
+        "https://www.nature.com/articles/d41586-026-03069-0",
+        "https://www.nature.com/articles/d41586-026-03184-y",
+        "https://www.nature.com/articles/d41586-026-02983-7",
+        "https://www.nature.com/articles/d41586-026-03189-7",
+        "https://www.nature.com/articles/d41586-026-03196-8",
+        "https://www.nature.com/articles/d41586-026-02934-2",
+        "https://www.nature.com/articles/s41586-026-11105-2",
+        "https://www.nature.com/articles/s41586-026-11140-z",
+        "https://www.nature.com/articles/s41586-026-11084-4",
+        "https://www.nature.com/articles/s41586-026-11129-8",
+        "https://www.nature.com/articles/s41586-026-11122-1",
+        "https://www.nature.com/articles/s41586-026-10858-0",
+        "https://www.nature.com/articles/s41586-026-11127-w",
+        "https://www.nature.com/articles/s41586-026-11099-x",
+        "https://www.nature.com/articles/s41586-026-11106-1",
+        "https://www.nature.com/articles/s41586-026-11066-6",
+        "https://www.nature.com/articles/s41586-026-11101-6",
+        "https://www.nature.com/articles/s41586-026-11085-3",
+        "https://www.nature.com/articles/s41586-026-11038-w",
+        "https://www.nature.com/articles/s41586-026-11153-8",
+        "https://www.nature.com/articles/s41586-026-11073-7",
+        "https://www.nature.com/articles/s41586-026-11125-y",
+        "https://www.nature.com/articles/s41586-026-11097-z",
+        "https://www.nature.com/articles/s41586-026-11111-4",
+        "https://www.nature.com/articles/s41586-026-11095-1",
+        "https://www.nature.com/articles/s41586-026-11144-9",
+        "https://www.nature.com/articles/s41586-026-11116-z",
+        "https://www.nature.com/articles/s41586-026-11107-0",
+        "https://www.nature.com/articles/s41586-026-11114-1",
+        "https://www.nature.com/articles/s41586-026-11142-x",
+        "https://www.nature.com/articles/s41586-026-11067-5",
+        "https://www.nature.com/articles/s41586-026-11121-2",
+        "https://www.nature.com/articles/d41586-026-03190-0"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-07",
+      "newestPublicationAt": "2026-10-08",
       "excerpt": null,
       "title": "Nature research and news",
-      "etag": "\"d23d5e4a3ed3d7f3729e5bb513e2066a\"",
+      "etag": "\"b045e682550f8de1f626bede1cc1c08d\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1584,8 +1638,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -1957,7 +2011,7 @@
         "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/qs-20230803.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 991,
+      "extractedEntries": 992,
       "newestPublicationAt": "2026-07-24",
       "excerpt": null,
       "title": "QuantumScape SEC filings",
@@ -1969,8 +2023,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -2354,8 +2408,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-05T11:49:09.276Z",
       "nextAttemptAt": null,
@@ -2740,8 +2794,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3125,8 +3179,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3510,8 +3564,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3802,7 +3856,7 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000065/meta-20240731.htm"
       ],
       "matchedItems": 31,
-      "extractedEntries": 1003,
+      "extractedEntries": 1000,
       "newestPublicationAt": "2026-07-30",
       "excerpt": null,
       "title": "Meta Platforms SEC filings",
@@ -3814,8 +3868,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4199,8 +4253,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-07T11:19:04.056Z",
-      "lastSuccessAt": "2026-10-07T11:19:04.056Z",
+      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
+      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4581,6 +4635,664 @@
     }
   },
   "events": [
+    {
+      "id": "a19e823a8ada01f963ecb7fd",
+      "sourceId": "meta-news",
+      "themes": [
+        "ai-glasses"
+      ],
+      "owner": "Meta",
+      "kind": "new-link",
+      "title": "Meta Donates 1,000 AI Glasses to Singapore’s Disability Community",
+      "url": "https://about.fb.com/news/2026/10/meta-donates-1000-ai-glasses-to-singapores-disability-community/",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-08T05:49:36.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f40e28d82dac13d600ff4fe7",
+      "sourceId": "waymo-news",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Waymo",
+      "kind": "new-link",
+      "title": "Read more: Preparing for the Unexpected: A New Framework for AV Incident Management Exercises",
+      "url": "https://waymo.com/blog/2026/10/incident-management-exercises",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "05f11f2d6904ae270390563f",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Chairman Carr Proposes Transformation in Connectivity",
+      "url": "https://www.fcc.gov/edoc/425692",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ece5be8b9e4eb39a590228d4",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/425674",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4e940eda74993ade6354f0a3",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/425675",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "91ec50f904e50a80f5202c89",
+      "sourceId": "mit-energy",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "Using AI to mitigate the growing environmental threat of data centers",
+      "url": "https://news.mit.edu/2026/mitigating-environmental-threat-of-data-centers-christina-delimitrou-1008",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-08T04:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f9a1726b77a565e817c246e1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Woody ‘blankets’ are being deployed on Arctic permafrost to reduce carbon emissions",
+      "url": "https://www.nature.com/articles/d41586-026-03045-8",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1197cabc8b83c7e86b4a6efb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "UAE completes Arab world's first solo space probe – and sets course for an asteroid",
+      "url": "https://www.nature.com/articles/d41586-026-03154-4",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c6f800b0f45c57ab47b95989",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A guide to Nature Index tables",
+      "url": "https://www.nature.com/articles/d41586-026-02999-z",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d1c91d113946b9d1913a886b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nobel prizes 2026: ‘ghost’ particles, mirror molecules and light switches in the brain",
+      "url": "https://www.nature.com/articles/d41586-026-03208-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a03ef53d7614e9f7b136f25b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "NASA releases trove of Moon data from historic Artemis II flight",
+      "url": "https://www.nature.com/articles/d41586-026-03197-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cafc64870bdde4ff40da3eb2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How we ditched presentations and embraced silence in our lab meetings",
+      "url": "https://www.nature.com/articles/d41586-026-02836-3",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6516e9328aa3b978b6f8b610",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Blend",
+      "url": "https://www.nature.com/articles/d41586-026-02864-z",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "513091b340bdd36c0eddf5d5",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Semiconductors pushed into insulator territory",
+      "url": "https://www.nature.com/articles/d41586-026-02968-6",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fb1f166faa9136191ed0efe5",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Genome accessibility reveals disease risk that gene expression misses",
+      "url": "https://www.nature.com/articles/d41586-026-03072-5",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "85fb8fe963a753f02f60d615",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nuclear clocks tick for the first time",
+      "url": "https://www.nature.com/articles/d41586-026-03060-9",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "61b4c09892d9b9d80b0986ee",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Retrofitted LLM can count the letter ‘i’s in ‘artificial intelligence’",
+      "url": "https://www.nature.com/articles/d41586-026-03059-2",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1f5dd7a8815546f7b3239dd7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why sound, strong science alone isn’t enough in pandemic preparedness",
+      "url": "https://www.nature.com/articles/d41586-026-02985-5",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e75661df6627a2fa19af5734",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "‘When prevention disappears, infections rise’: can the world still end AIDS?",
+      "url": "https://www.nature.com/articles/d41586-026-03127-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ef81a8ec7fc7cad66e52d0c0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The science of superintelligence and why AI is still a useful word",
+      "url": "https://www.nature.com/articles/d41586-026-03198-6",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "32d923d17bcf60669d1c1ea3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Gut microbes that trace ancient human journeys",
+      "url": "https://www.nature.com/articles/d41586-026-02969-5",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "947c4ead7be1fc7e3e2aeba2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "An early predecessor to mammals could swim, suckle and swallow",
+      "url": "https://www.nature.com/articles/d41586-026-03069-0",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1c570d1d2952d92dba5b9fc2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Australia’s bush fires got worse after British colonization — this is why",
+      "url": "https://www.nature.com/articles/d41586-026-03184-y",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a30a3384fd2686205e5ba40c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why we must advocate for proper care on the frontlines of the Ebola outbreak",
+      "url": "https://www.nature.com/articles/d41586-026-02983-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cbeee6a62a78850d806aec6a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Revealed: how this common gut microbe protects against heart disease",
+      "url": "https://www.nature.com/articles/d41586-026-03189-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3f1af676ebdd1369239e6413",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "OpenAI posts 700 maths preprints online: mathematicians are up in arms",
+      "url": "https://www.nature.com/articles/d41586-026-03196-8",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9fc3fecbf7bc985465e306d1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How to control where semiconductor crystals start growing",
+      "url": "https://www.nature.com/articles/d41586-026-02934-2",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "eb77d6b8fc7a27cd193d74da",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Observation of relativistic bond weakening in seaborgium hexacarbonyl",
+      "url": "https://www.nature.com/articles/s41586-026-11105-2",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bf0195778eaf9324f6b8e7e3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "RNA catalysis emerges from dynamic structural ensembles",
+      "url": "https://www.nature.com/articles/s41586-026-11140-z",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cba5c6bcbde092d12ebf5156",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A thorium-229 optical nuclear clock with feedback loop",
+      "url": "https://www.nature.com/articles/s41586-026-11084-4",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a1c31dc95c8d4497fc9e989e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Structural basis for regulating lipopolysaccharide transmembrane transport",
+      "url": "https://www.nature.com/articles/s41586-026-11129-8",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7e1e2ac7aabfb7ac033ce701",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A nuclear clock synchronized to 229 Th",
+      "url": "https://www.nature.com/articles/s41586-026-11122-1",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c9506f624ddf1e863de81b75",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Hydrogen bonding in water under extreme confinement",
+      "url": "https://www.nature.com/articles/s41586-026-10858-0",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "26ee9916b7ebfb0ad14c0f15",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Alveolar stem cells transdifferentiate to drive bronchiolar regeneration",
+      "url": "https://www.nature.com/articles/s41586-026-11127-w",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dc4580c20230956a8239caf4",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Experimental observation of critical topology",
+      "url": "https://www.nature.com/articles/s41586-026-11099-x",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4409f12fdeb5c0ff202285ad",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Prehistoric global migration of vanishing gut microbes with humans",
+      "url": "https://www.nature.com/articles/s41586-026-11106-1",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f78f84e5bbe84021120fa904",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A preinvasive regulatory T cell axis for lung cancer interception",
+      "url": "https://www.nature.com/articles/s41586-026-11066-6",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "18ac4d5b232dbf1b3d945abc",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Mechanism of spliceosome termination",
+      "url": "https://www.nature.com/articles/s41586-026-11101-6",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "92be252f926a77b69ffbcab2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A 7-eV bandgap semiconductor based on silicon-doped α-(Al x Ga 1− x ) 2 O 3",
+      "url": "https://www.nature.com/articles/s41586-026-11085-3",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c60adaddec9b38d20fca4b0d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Overcoming key challenges in the evolutionary transition to multicellularity",
+      "url": "https://www.nature.com/articles/s41586-026-11038-w",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8f9f45264b5abb676355638a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "tRNA dosage regulates lineage dependency and resistance in prostate cancer",
+      "url": "https://www.nature.com/articles/s41586-026-11153-8",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9e881a1432f09c79301fe19d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A chiral superlattice route to spin-split topological antiferromagnetism",
+      "url": "https://www.nature.com/articles/s41586-026-11073-7",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a721ca3003ad8364ebef2a0a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Dynamics of human cardiogenesis and its disruption in trisomy 21",
+      "url": "https://www.nature.com/articles/s41586-026-11125-y",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a0e261667e1dd1f90155820b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Australia’s current wildfire crisis linked to colonial land-use change",
+      "url": "https://www.nature.com/articles/s41586-026-11097-z",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a0006a850facd030439d7019",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Retrofitting language models to operate over bytes",
+      "url": "https://www.nature.com/articles/s41586-026-11111-4",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "29946cd0487c9dd9070aacbf",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Spatially deterministic nucleation of 2D semiconductors by etching flux",
+      "url": "https://www.nature.com/articles/s41586-026-11095-1",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fd197cbe6e2086cac5dfdd26",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A split attractor design for rapidly writing a navigational goal",
+      "url": "https://www.nature.com/articles/s41586-026-11144-9",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a52c9f004c189fad04c5b390",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Cryo-EM structure of a methanogen nitrogenase–PII protein supercomplex",
+      "url": "https://www.nature.com/articles/s41586-026-11116-z",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "58b03afecb95d1a904be1540",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A Jurassic mammaliaform swimmer and transformation of the mammalian pharynx",
+      "url": "https://www.nature.com/articles/s41586-026-11107-0",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c1081d62e4bca056f4da4afa",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Human lung organoid modelling of tissue-resident antiviral T cell responses",
+      "url": "https://www.nature.com/articles/s41586-026-11114-1",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "152b1b0d2ed05fe51a5a120e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A gut microbial odd-chain fatty acid alleviates atherosclerosis in mice",
+      "url": "https://www.nature.com/articles/s41586-026-11142-x",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e0228b1416bdb58fbaa1a56b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Observation of critical topological phase transition",
+      "url": "https://www.nature.com/articles/s41586-026-11067-5",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0fce0df6184dedddcac61d0c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "5-oxoETE links redox control of epithelial damage detection and resilience",
+      "url": "https://www.nature.com/articles/s41586-026-11121-2",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cea555e5ac6e0541ebddbc27",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Physics Nobel for founder of neutrino-hunting observatory",
+      "url": "https://www.nature.com/articles/d41586-026-03190-0",
+      "detectedAt": "2026-10-08T11:35:34.352Z",
+      "publishedAt": "2026-10-06",
+      "verification": "unreviewed"
+    },
     {
       "id": "3be5f4eb8694b62772ab476f",
       "sourceId": "fcc-releases",
