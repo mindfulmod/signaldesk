@@ -47,14 +47,14 @@ test("permanent company coverage survives provider failures without erasing old 
   assert.equal(collected.companies.QS.quoteCheckedAt, undefined);
 });
 test("cached prices respect a 12-hour cadence while companies remain present", async () => {
-  const quote = yahooQuote(quoteData, "QS", now), previous = { companies: { QS: { factsVersion: 2, factsCheckedAt: now, quoteAttemptAt: now, quote, quoteCheckedAt: now } } };
+  const quote = yahooQuote(quoteData, "QS", now), previous = { companies: { QS: { factsVersion: 3, factsCheckedAt: now, quoteAttemptAt: now, quote, quoteCheckedAt: now } } };
   let calls = 0;
   const result = await collectCompanies({ companies: [company] }, {}, previous, { now, sleep: async () => {}, fetchImpl: async () => { calls++; throw new Error("must not fetch"); } });
   assert.equal(calls, 0); assert.equal(result.companies.QS.quote, quote);
 });
 test("a new filing refreshes company facts before the weekly cache expires", async () => {
   let calls = 0;
-  const previous = { companies: { QS: { factsVersion: 2, factsCheckedAt: now, factsAccession: "old", quoteAttemptAt: now, quote: yahooQuote(quoteData, "QS", now) } } };
+  const previous = { companies: { QS: { factsVersion: 3, factsCheckedAt: now, factsAccession: "old", quoteAttemptAt: now, quote: yahooQuote(quoteData, "QS", now) } } };
   const result = await collectCompanies({ companies: [company] }, { sources: { "sec-qs": { items: [{ accession: "new" }] } } }, previous, { now, sleep: async () => {}, fetchImpl: async () => { calls++; return json({ facts: { "us-gaap": { CashAndCashEquivalentsAtCarryingValue: fact([point("2026-06-30", 300)]) } } }); } });
   assert.equal(calls, 1); assert.equal(result.companies.QS.factsAccession, "new");
 });

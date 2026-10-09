@@ -36,7 +36,7 @@
   }
   const dateTime = value => value && Number.isFinite(Date.parse(value)) ? new Intl.DateTimeFormat("en", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(new Date(value)) : "Not checked yet";
   function reviewedThemes() { return researchModel.reviewedThemes(data.themes, research?.reviews); }
-  function themeList() { return model.filterThemes(reviewedThemes(), { query: byId("techSearch").value, sector: byId("techSector").value, stage: byId("techStage").value, followedOnly, followed: [...followed] }); }
+  function themeList() { return model.filterThemes(reviewedThemes(), { query: view === "inbox" ? "" : byId("techSearch").value, sector: byId("techSector").value, stage: byId("techStage").value, followedOnly, followed: [...followed] }); }
   function followButton(t) { return `<button type="button" class="tech-button tech-follow" data-follow="${esc(t.id)}" aria-label="${followed.has(t.id) ? "Unfollow" : "Follow"} ${esc(t.name)}" aria-pressed="${followed.has(t.id)}">${followed.has(t.id) ? "Following" : "+ Follow"}</button>`; }
   const stage = t => `<span class="tech-stage stage-${esc(t.stage)}">${esc(model.stages[t.stage])}</span>`;
   function empty(message) { return `<div class="tech-empty"><h3>No matching technologies</h3><p>${esc(message)}</p><button type="button" class="tech-button" data-clear-tech>Clear technology filters</button></div>`; }
@@ -77,11 +77,11 @@
   function renderInbox(themes) {
     const ids = new Set(themes.map(t => t.id));
     const sources = data.sources.filter(s => !s.themes.length || s.themes.some(id => ids.has(id)));
-    const healthLabels = { "not-checked": "Not checked", "unavailable": "Unavailable", "stale": "Check overdue", "no-matches": "No matching links", "current": "Readable" };
+    const healthLabels = { "paused": "Permission review", "not-checked": "Not checked", "unavailable": "Unavailable", "stale": "Check overdue", "no-matches": "No matching links", "current": "Readable" };
     const intro = monitorStatus === "loading" ? "Loading saved source checks…" : monitorStatus === "error" ? "Saved source checks could not be loaded. This is not proof that sources are unchanged." : `Source collection ${dateTime(monitor?.generatedAt)}. Seven-day scheduling, calendar-day checks and retry opportunities every six hours. Reloading does not trigger collection.`;
-    return views.reviewQueue(themes, research, { drafts, reviewFilter, queueLimit, showDismissed, query: byId("techSearch").value, dismissed: [...dismissed] }) + `
+    return views.reviewQueue(themes, research, { drafts, reviewFilter, queueLimit, showDismissed, restrictThemes: followedOnly || byId("techSector").value !== "all" || byId("techStage").value !== "all", query: byId("techSearch").value, dismissed: [...dismissed] }) + `
       <label class="tech-check"><input type="checkbox" id="techShowDismissed" ${showDismissed ? "checked" : ""} /> Include locally dismissed changes</label>
-      <details class="intel-disclosure" id="researchSourceHealth"><summary>Source health · ${sources.length} configured sources</summary><p>${esc(intro)}</p><button type="button" class="tech-button" data-refresh-monitor ${monitorStatus === "loading" || researchStatus === "loading" ? "disabled" : ""}>Reload saved research</button><div class="tech-source-list">${sources.map(s => { const state = monitor?.sources?.[s.id], health = model.monitorState(s, state); return `<article class="tech-source"><div><h5>${link(s.url, s.name)}</h5><p class="tech-meta">${esc(s.tier)} · ${esc(s.expectedCadence)} · ${state?.matchedItems ?? "—"} matching documents</p><p class="tech-meta">Last success: ${dateTime(state?.lastSuccessAt)} · last attempt: ${dateTime(state?.lastAttemptAt)}</p>${state?.error ? `<p class="tech-warning">${esc(state.error)} · ${state.failureStreak} failed check${state.failureStreak === 1 ? "" : "s"}. Retry eligible ${dateTime(state.nextAttemptAt)}.</p>` : ""}</div><span class="tech-health health-${health}">${healthLabels[health]}</span></article>`; }).join("")}</div></details>`;
+      <details class="intel-disclosure" id="researchSourceHealth"><summary>Source health · ${sources.length} configured sources</summary><p>${esc(intro)}</p><button type="button" class="tech-button" data-refresh-monitor ${monitorStatus === "loading" || researchStatus === "loading" ? "disabled" : ""}>Reload saved research</button><div class="tech-source-list">${sources.map(s => { const state = monitor?.sources?.[s.id], health = model.monitorState(s, state); return `<article class="tech-source"><div><h5>${link(s.url, s.name)}</h5><p class="tech-meta">${esc(s.tier)} · ${esc(s.expectedCadence)} · ${state?.matchedItems ?? "—"} matching documents</p><p class="tech-meta">Last success: ${dateTime(state?.lastSuccessAt)} · last attempt: ${dateTime(state?.lastAttemptAt)}</p>${s.accessNote || state?.accessNote ? `<p class="tech-warning">${esc(s.accessNote || state.accessNote)}</p>` : ""}${state?.error ? `<p class="tech-warning">${esc(state.error)} · ${state.failureStreak} failed check${state.failureStreak === 1 ? "" : "s"}. Retry eligible ${dateTime(state.nextAttemptAt)}.</p>` : ""}</div><span class="tech-health health-${health}">${healthLabels[health]}</span></article>`; }).join("")}</div></details>`;
   }
   function render() {
     const themes = themeList(), selected = reviewedThemes().find(t => t.id === selectedId);
@@ -91,7 +91,7 @@
     byId("techFilterDisclosure").hidden = Boolean(specialized);
     byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || view === "trackers");
     byId("techScope").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
-    byId("techSearch").closest("label").querySelector("span").textContent = view === "discovery" ? "Find a discovery lead" : "Find a technology";
+    byId("techSearch").closest("label").querySelector("span").textContent = view === "inbox" ? "Search documents, owners & titles" : view === "discovery" ? "Find a discovery lead" : "Find a technology";
     root.querySelectorAll("[data-tech-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.techView === view)));
     byId("techFollowedOnly").setAttribute("aria-pressed", String(followedOnly));
     const activeFilters = Number(byId("techSector").value !== "all") + Number(byId("techStage").value !== "all") + Number(followedOnly);
@@ -101,7 +101,7 @@
     byId("techRegistryStatus").textContent = `${data.themes.length} themes · ${config.sources.length} sources · ${config.companies.length} permanent companies`;
     byId("adoptionFollowStatus").textContent = storageWorking ? `${followed.size} technologies followed · ${drafts.length} local review drafts. Browser-local saves; no push subscription.` : "Browser storage is unavailable. Changes work for this session only; export drafts before leaving.";
     const candidate = research?.documents?.find(d => d.id === reviewingId);
-    if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, drafts.find(d => d.candidateId === reviewingId));
+    if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId) || research.reviews.filter(r => r.candidateId === reviewingId).at(-1), research.reviews));
     else if (selectedCompany) content.innerHTML = views.companies(themes, research, selectedCompany);
     else if (selected) content.innerHTML = dossier(selected);
     else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly);
@@ -143,6 +143,7 @@
       }
       if (candidate?.schemaVersion !== 1 || !Array.isArray(candidate.documents) || !Array.isArray(candidate.reviews) || !candidate.companies) throw new Error("Invalid research payload");
       research = candidate; researchStatus = "ready";
+      drafts = researchModel.reconcileDrafts(drafts, research.reviews); save(draftKey, drafts);
     } catch { researchStatus = "error"; }
     if (!reviewingId) render();
   }
@@ -189,7 +190,7 @@
     event.preventDefault();
     const document = research?.documents.find(d => d.id === reviewingId); if (!document) return;
     const fields = Object.fromEntries(new FormData(event.target));
-    const old = drafts.find(d => d.candidateId === reviewingId);
+    const old = researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId), research.reviews);
     const review = { ...fields, id: old?.id || `review-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, candidateId: document.id, sourceId: document.sourceId, owner: document.owner, url: document.url,
       reviewedAt: new Date().toISOString(), value: fields.value === "" ? null : Number(fields.value), publishedAt: fields.publishedAt || null, supersedes: fields.supersedes || null };
     const errors = researchModel.validateReview(review, { themeIds: data.themes.map(t => t.id), knownIds: [...data.themes.flatMap(t => t.evidence.map(e => e.id)), ...research.reviews.map(r => r.id)], documents: research.documents, config, evidence: [...data.themes.flatMap(t => t.evidence.map(e => ({ ...e, themeId: t.id }))), ...research.reviews] });

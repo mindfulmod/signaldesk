@@ -69,7 +69,7 @@
   function renderSpringsBoard() {
     const container = document.getElementById("springsBoard");
     if (!container) return;
-    const springs = springsData?.springs || [];
+    const springs = springsData?.integrityVersion === 2 ? springsData.springs || [] : [];
     if (!springs.length) {
       container.innerHTML = emptyStateMarkup();
       return;
@@ -80,7 +80,7 @@
     const dead = springs.filter((s) => s.state === "dead").sort((a, b) => String(b.regimeEnd || "").localeCompare(String(a.regimeEnd || ""))).slice(0, 6);
 
     container.innerHTML = [
-      springsColumn("Coiled", coiled, "Sustained attention, compressed price. A watch state, not a signal — most coils never release."),
+      springsColumn("Coiled", coiled, "Sustained attention, compressed price. A watch state, not a signal — release is not assured."),
       springsColumn("Released", released, "Closed above its own 60-day high on a volume surge. This is what a coil is for."),
       springsColumn("Dead coils", dead, "Compressed for months, then aged out with no breakout. Shown as the honest counterweight to the released column."),
     ].join("");
@@ -131,7 +131,7 @@
 
   function stateNote(item) {
     if (item.state === "coiled") {
-      return `Attention has held above its own trailing-year baseline while price stayed unusually tight for ${item.regimeSessions} sessions (since ${item.regimeStart}). This is a watch state — most coils never release.`;
+      return `Attention has held above its own trailing-year baseline while price stayed unusually tight for ${item.regimeSessions} sessions (since ${item.regimeStart}). This is a watch state — release is not assured.`;
     }
     if (item.state === "released") {
       return `Coiled from ${item.regimeStart} to ${item.regimeEnd}, then closed above its 60-day high on a volume surge on ${item.releaseDate}.`;
@@ -139,20 +139,8 @@
     return `Coiled from ${item.regimeStart} to ${item.regimeEnd} (${item.regimeSessions} sessions) with no release within ~6 months. Demoted — treat as a closed case, not a pending one.`;
   }
 
-  function baseRateLine(state) {
-    const rates = springsData?.baseRates || {};
-    if (state === "released") {
-      const r = rates.released || {};
-      return `<span>Released coils historically: ${pct(r.winRate)} win · ${signedPct(r.medianReturn)} median · ${pct(r.doubleRate)} reach +50% (${r.horizon || "12mo"})</span>`;
-    }
-    if (state === "dead") {
-      const r = rates.unreleased || {};
-      return `<span class="risk">Unreleased coils historically: ${signedPct(r.relMedianReturn)} vs SPY · ${pct(r.winRate)} win · zero doubles (${r.horizon || "12mo vs SPY"})</span>`;
-    }
-    const released = rates.released || {};
-    const unreleased = rates.unreleased || {};
-    return `<span>If it releases: ${pct(released.winRate)} win · ${signedPct(released.medianReturn)} median.</span>
-      <span class="risk">If it dies unreleased instead: ${signedPct(unreleased.relMedianReturn)} vs SPY, zero doubles.</span>`;
+  function baseRateLine() {
+    return "Historical study figures withheld pending reproducible methodology. This classification is not a return forecast.";
   }
 
   function sparkline(values) {
@@ -178,7 +166,7 @@
   }
 
   function emptyStateMarkup() {
-    return `<p class="springs-empty">No springs classified yet. The coil detector needs roughly a year of trailing attention and price history per ticker (Wikipedia pageviews or share-of-voice) — this fills in as the daily ledger accumulates.</p>`;
+    return `<p class="springs-empty">No sufficiently verified spring classifications available. Missing observations and legacy results are withheld until a current integrity-checked collection has adequate attention, price and volume history.</p>`;
   }
 
   function formatPct(value, invert = false) {

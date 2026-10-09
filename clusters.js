@@ -61,6 +61,10 @@
   function renderClusters() {
     const container = document.getElementById("clustersFeed");
     if (!container) return;
+    if (clustersData?.integrityVersion !== 2) {
+      container.innerHTML = '<p class="clusters-empty">Earlier graph weights lacked per-document attribution. Clusters are withheld until the next integrity-checked collection.</p>';
+      return;
+    }
     const communities = clustersData?.communities || [];
     if (!communities.length) {
       const nodes = clustersData?.graphNodes || 0;

@@ -4,7 +4,7 @@ const day = value => String(value || "").slice(0, 10);
 const finite = value => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
 const METRICS = {
   cash: ["CashAndCashEquivalentsAtCarryingValue", "CashAndCashEquivalents"],
-  revenue: ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "Revenue", "SalesRevenueNet"],
+  revenue: ["RevenueFromContractWithCustomerIncludingAssessedTax", "RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "Revenue", "SalesRevenueNet"],
   operatingCashFlow: ["NetCashProvidedByUsedInOperatingActivities", "CashFlowsFromUsedInOperatingActivities"],
   capex: ["PaymentsToAcquirePropertyPlantAndEquipment", "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities"],
   netIncome: ["NetIncomeLoss", "ProfitLoss"],
@@ -12,6 +12,19 @@ const METRICS = {
   debtCurrent: ["LongTermDebtCurrent"],
   debtNoncurrent: ["LongTermDebtNoncurrent"],
 };
+// Narrow, filing-backed context adjudications. Never extrapolate to other
+// accessions, periods, tags or values. All other conflicts remain unknown.
+export function verifiedFactContext(company, point) {
+  if (Number(company.cik) === 1780312 && point.accn === "0000950170-25-030909" && point.start === "2024-01-01" && point.end === "2024-12-31" && point.tag === "RevenueFromContractWithCustomerIncludingAssessedTax" && point.val === 4418000) return {
+    context: "Consolidated revenue", verified: true,
+    contextUrl: "https://www.sec.gov/Archives/edgar/data/1780312/000095017025030909/asts-20241231.htm", contextReviewedAt: "2026-10-09",
+  };
+  if (Number(company.cik) === 1811414 && point.accn === "0000950170-22-002330" && point.end === "2022-02-18" && point.tag === "EntityCommonStockSharesOutstanding" && point.val === 95449946) return {
+    context: "Class B only; not total company shares", shareClass: "Class B", verified: true,
+    contextUrl: "https://www.sec.gov/Archives/edgar/data/1811414/000095017022002330/qs-20211231.htm", contextReviewedAt: "2026-10-09",
+  };
+  return { context: point.unit === "shares" ? "Share class not established; not a company total" : "Company-facts taxonomy; inspect filing context", shareClass: null, verified: false };
+}
 export function financialFacts(data, company, now = new Date().toISOString()) {
   if (!data?.facts || (data.cik && Number(data.cik) !== Number(company.cik))) throw new Error("Company facts identity/schema mismatch");
   const financials = {}, histories = {};
@@ -24,11 +37,19 @@ export function financialFacts(data, company, now = new Date().toISOString()) {
       chosen.push(...valid.filter(p => metric === "shares" || !company.reportingCurrency || p.unit === company.reportingCurrency));
     }
     chosen.sort((a, b) => b.end.localeCompare(a.end) || b.filed.localeCompare(a.filed) || (b.start || "").localeCompare(a.start || "") || tags.indexOf(a.tag) - tags.indexOf(b.tag));
-    const seen = new Set();
-    const rows = chosen.filter(p => { const key = `${p.end}|${p.start || ""}|${p.unit}`; if (seen.has(key)) return false; seen.add(key); return true; }).slice(0, 12).map(p => ({
-      value: p.val, unit: p.unit, start: p.start || null, end: p.end, filed: p.filed, form: p.form, tag: p.tag, accession: p.accn, stale: Date.parse(now) - Date.parse(p.end) > 450 * 86400000,
-      url: `https://www.sec.gov/Archives/edgar/data/${Number(company.cik)}/${p.accn.replaceAll("-", "")}/${p.accn}-index.html`,
-    }));
+    const groups = new Map();
+    for (const p of chosen) { const key = `${p.end}|${p.start || ""}|${p.unit}`; const group = groups.get(key) || []; group.push(p); groups.set(key, group); }
+    const rows = [...groups.values()].slice(0, 12).map(group => {
+      const latest = group.filter(p => p.filed === group[0].filed && p.accn === group[0].accn);
+      const verified = latest.find(p => verifiedFactContext(company, p).verified);
+      const p = verified || latest[0], context = verifiedFactContext(company, p);
+      const conflict = !verified && new Set(latest.map(p => p.val)).size > 1;
+      return { value: conflict ? null : p.val, unit: p.unit, start: p.start || null, end: p.end, filed: p.filed, form: p.form, tag: p.tag, accession: p.accn,
+        stale: Date.parse(now) - Date.parse(p.end) > 450 * 86400000, ...context,
+        selectionBasis: conflict ? "Conflicting same-period facts withheld pending filing-context review" : verified ? "Filing context explicitly reviewed" : "Latest reported period/accession; no conflicting supported facts",
+        alternatives: conflict ? latest.map(v => ({ value: v.val, tag: v.tag, accession: v.accn })) : [],
+        url: context.contextUrl || `https://www.sec.gov/Archives/edgar/data/${Number(company.cik)}/${p.accn.replaceAll("-", "")}/${p.accn}-index.html` };
+    });
     if (rows.length) { financials[metric] = rows[0]; histories[metric] = rows; }
   }
   return { financials, histories };
@@ -58,13 +79,13 @@ export async function collectCompanies(config, monitor, previous = {}, { now = n
     const row = { ...prior, ticker: c.ticker, name: c.name, cik: c.cik, themes: c.themes, financials: prior.financials || {}, histories: prior.histories || {} };
     const filing = monitor.sources?.[`sec-${c.ticker.toLowerCase()}`]?.items?.[0];
     row.latestFiling = filing || prior.latestFiling || null;
-    if (prior.factsVersion !== 2 || age(prior.factsCheckedAt) >= (prior.factsError ? 6 : 168) || (filing && filing.accession !== prior.factsAccession)) {
+    if (prior.factsVersion !== 3 || age(prior.factsCheckedAt) >= (prior.factsError ? 6 : 168) || (filing && filing.accession !== prior.factsAccession)) {
       row.factsAttemptAt = now;
       try {
         const facts = await boundedJson(`https://data.sec.gov/api/xbrl/companyfacts/CIK${c.cik}.json`, { fetchImpl, headers: SEC_HEADERS });
         const parsed = financialFacts(facts, c, now);
         if (!Object.keys(parsed.financials).length) throw new Error("No supported financial facts in filing taxonomy");
-        Object.assign(row, parsed, { factsVersion: 2, factsCheckedAt: now, factsAccession: filing?.accession || null, factsError: null });
+        Object.assign(row, parsed, { factsVersion: 3, factsCheckedAt: now, factsAccession: filing?.accession || null, factsError: null });
       } catch (e) { row.factsError = `Financial facts: ${e.message}`; errors.push(`${c.ticker}: ${row.factsError}`); }
     }
     // Two quote opportunities a day. Never replace a valid quote with null on failure.

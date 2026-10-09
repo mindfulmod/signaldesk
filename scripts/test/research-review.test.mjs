@@ -9,6 +9,7 @@ import { appendReviews } from "../review-evidence.mjs";
 
 const document = { id: "candidate-1", sourceId: "qs-news", owner: "QuantumScape", url: "https://example.org/article", title: "Source result", themes: ["solid-state-batteries"], changeType: "baseline", detectedAt: "2026-10-02T12:00:00Z" };
 const review = { id: "review-test-1", candidateId: document.id, sourceId: document.sourceId, owner: document.owner, url: document.url, reviewer: "Test reviewer", reviewedAt: "2026-10-02T12:00:00Z", decision: "accepted", reason: "The primary source supports this bounded claim.", themeId: "solid-state-batteries", claim: "A pilot was demonstrated.", metric: "Pilot test", period: "2026 sample", caveat: "Not commercial output.", kind: "pilot", qualifier: "reported", value: null, unit: "statement", definition: "Laboratory test only.", publishedAt: null, supersedes: null };
+review.relevance = "This is a solid-state battery pilot, not general issuer news.";
 const options = { config, themeIds: registry.themes.map(t => t.id), documents: [document], knownIds: [] };
 
 test("review validation requires provenance, named reviewer and bounded evidence", () => {

@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 
 const hash = value => createHash("sha256").update(value).digest("hex");
-const EXTRACTOR_VERSION = 3;
+const EXTRACTOR_VERSION = 4;
 const decode = text => text.replace(/&#(x[\da-f]+|\d+);/gi, (_, n) => { const v = n[0].toLowerCase() === "x" ? parseInt(n.slice(1), 16) : Number(n); return v > 0 && v <= 0x10ffff ? String.fromCodePoint(v) : " "; })
   .replace(/&(?:amp|quot|apos|lt|gt|nbsp|ndash|mdash|rsquo);/g, v => ({ "&amp;": "&", "&quot;": '"', "&apos;": "'", "&lt;": "<", "&gt;": ">", "&nbsp;": " ", "&ndash;": "–", "&mdash;": "—", "&rsquo;": "’" }[v]));
 export function textOnly(html) {
@@ -42,7 +42,11 @@ export function extractFilings(json, source) {
     if (!/^(10-K|10-Q|8-K|20-F|6-K|S-3|S-1)(\/A)?$/.test(form) || !document || !/^[\w.-]+$/.test(document) || !/^\d{10}-\d{2}-\d{6}$/.test(accession)) continue;
     const url = `https://www.sec.gov/Archives/edgar/data/${Number(source.cik)}/${accession.replaceAll("-", "")}/${document}`;
     if (!canonicalUrl(url, source.url, source.allowedHosts)) continue;
-    items.push({ url, title: `${source.owner} · ${form} · ${recent.primaryDocDescription?.[i] || "Company filing"}`, publishedAt: timestamp(recent.filingDate[i]), excerpt: "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.", form, accession });
+    const filingItems = String(recent.items?.[i] || "").split(",").map(v => v.trim()).filter(Boolean);
+    items.push({ url, title: `${source.owner} · ${form} · ${recent.primaryDocDescription?.[i] || "Company filing"}`, publishedAt: timestamp(recent.filingDate[i]),
+      reportDate: timestamp(recent.reportDate?.[i]), acceptedAt: timestamp(recent.acceptanceDateTime?.[i]), filingItems,
+      exhibitsIndexUrl: `https://www.sec.gov/Archives/edgar/data/${Number(source.cik)}/${accession.replaceAll("-", "")}/${accession}-index.html`,
+      excerpt: `Company-filed disclosure${filingItems.length ? `; reported items ${filingItems.join(", ")}` : ""}. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.`, form, accession });
   }
   return inventory(items, `${source.owner} SEC filings`, { extractedEntries: recent.accessionNumber.length });
 }
@@ -54,6 +58,24 @@ export function canonicalUrl(value, base, allowedHosts) {
     for (const key of [...u.searchParams.keys()]) if (/^(utm_|fbclid|gclid|msockid)/i.test(key)) u.searchParams.delete(key);
     return u.href;
   } catch { return null; }
+}
+export function articleMetadata(html, source) {
+  const fields = {};
+  for (const [tag] of html.matchAll(/<meta\b[^>]*>/gi)) {
+    const key = tag.match(/(?:name|property)=["']([^"']+)["']/i)?.[1];
+    const value = tag.match(/content=["']([^"']*)["']/i)?.[1];
+    if (key && value) fields[key.toLowerCase()] = decode(value);
+  }
+  let publishedAt = timestamp(fields["article:published_time"] || fields.datepublished || fields.citation_publication_date || fields.citation_date);
+  for (const [, body] of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const parsed = JSON.parse(body), rows = Array.isArray(parsed) ? parsed : parsed["@graph"] || [parsed];
+      for (const row of rows) if (/Article|BlogPosting|NewsArticle/.test(String(row["@type"]))) publishedAt ||= timestamp(row.datePublished);
+    } catch { /* Broken structured metadata stays unknown. */ }
+  }
+  const paper = [...html.matchAll(/href=["'](https:\/\/arxiv\.org\/abs\/\d{4}\.\d+(?:v\d+)?)["']/gi)][0]?.[1] || null;
+  return { publishedAt, announcementAt: publishedAt, excerpt: textOnly(fields.description || fields["og:description"] || "").slice(0, 400) || null,
+    researchUrl: paper, researchPublishedAt: source.id === "linked-research" ? publishedAt : null };
 }
 export function extractSource(html, source) {
   if (source.format === "rss") return extractFeed(html, source);
@@ -83,7 +105,8 @@ export function extractSource(html, source) {
   // Hash only the matching link inventory in discovery mode, not rotating
   // banners/cookies. Page mode changes remain unverified review candidates.
   if (source.linkPattern && !extractedEntries) throw new Error("No article links match the source contract; layout or endpoint needs review");
-  return { fingerprint: hash(source.mode === "links" ? JSON.stringify(items) : text), items, title: title.slice(0, 180), textLength: text.length, extractedEntries, excerpt: text.slice(0, 240) };
+  const metadata = source.mode === "page" ? articleMetadata(html, source) : {};
+  return { fingerprint: hash(source.mode === "links" ? JSON.stringify(items) : text), items, title: title.slice(0, 180), textLength: text.length, extractedEntries, ...metadata, excerpt: metadata.excerpt || text.slice(0, 240) };
 }
 export function updateSource(source, previous, result, now) {
   const base = previous?.extractorVersion === EXTRACTOR_VERSION && previous.sourceUrl === source.url ? previous : {};
@@ -102,7 +125,9 @@ export function updateSource(source, previous, result, now) {
   items.forEach(item => seen.add(item.url));
   return { state: { id: source.id, sourceUrl: source.url, extractorVersion: EXTRACTOR_VERSION, status: "ok", lastAttemptAt: now, lastSuccessAt: now, baselineAt: base.baselineAt || now,
     lastChangedAt: changed ? now : base.lastChangedAt || null, nextAttemptAt: null, failureStreak: 0, error: null, fingerprint, items,
-    seenLinks: [...seen].slice(-3000), matchedItems: items.length, extractedEntries: result.extractedEntries ?? items.length, newestPublicationAt: items.map(i => i.publishedAt).filter(Boolean).sort().at(-1) || null, excerpt: result.excerpt || null, title, etag: result.etag || null, lastModified: result.lastModified || null }, events };
+    seenLinks: [...seen].slice(-3000), matchedItems: items.length, extractedEntries: result.extractedEntries ?? items.length, newestPublicationAt: items.map(i => i.publishedAt).filter(Boolean).sort().at(-1) || null, excerpt: result.excerpt || null,
+    publishedAt: result.publishedAt || null, announcementAt: result.announcementAt || null, researchUrl: result.researchUrl || null, researchPublishedAt: result.researchPublishedAt || null,
+    title, etag: result.etag || null, lastModified: result.lastModified || null }, events };
 }
 export async function fetchSource(source, previous, { fetchImpl = fetch, timeoutMs = 15000, maxBytes = 1500000 } = {}) {
   const signal = AbortSignal.timeout(timeoutMs);
@@ -147,6 +172,11 @@ export async function collectTechnology(registry, previous = {}, { now = new Dat
   // Sequential and cadence-limited: one page per source, never per ticker.
   for (const source of registry.sources) {
     const prior = sources[source.id];
+    if (source.accessStatus === "permission-required") {
+      sources[source.id] = { ...prior, id: source.id, status: "paused", accessNote: source.accessNote, error: null, nextAttemptAt: null };
+      if (prior?.status !== "paused") checked++;
+      continue;
+    }
     const compatible = prior?.extractorVersion === EXTRACTOR_VERSION && prior.sourceUrl === source.url;
     if (!sourceDue(source, prior, now, force || (retryErrors && prior?.status === "error"))) continue;
     let result;
@@ -158,6 +188,27 @@ export async function collectTechnology(registry, previous = {}, { now = new Dat
         try { result = await fetchSource(source, compatible ? prior : {}, { fetchImpl, timeoutMs }); }
         catch (retry) { result = { error: retry.message || "Source retry failed" }; }
       } else result = { error: error.message || "Source request failed" };
+    }
+    if (source.enrichArticles && result.items) {
+      let enriched = 0;
+      result.items = await Promise.all([...result.items].sort((a, b) => b.url.localeCompare(a.url)).map(async item => {
+        const old = prior?.items?.find(p => p.url === item.url && p.title === item.title);
+        if (old?.metadataCheckedAt) return { ...old, ...item };
+        if (enriched >= 3) return item;
+        enriched++;
+        try {
+          const article = await fetchSource({ ...source, mode: "page", url: item.url, terms: [], linkPattern: null }, {}, { fetchImpl, timeoutMs });
+          const enrichedItem = { ...item, publishedAt: article.publishedAt, announcementAt: article.announcementAt, excerpt: article.excerpt, researchUrl: article.researchUrl, metadataCheckedAt: now };
+          if (article.researchUrl) {
+            try {
+              const paper = await fetchSource({ id: "linked-research", url: article.researchUrl, allowedHosts: ["arxiv.org"], mode: "page", format: "html", terms: [] }, {}, { fetchImpl, timeoutMs });
+              enrichedItem.researchPublishedAt = paper.researchPublishedAt;
+            } catch { enrichedItem.metadataError = "Original research date not retrieved; announcement date is not substituted"; }
+          }
+          return enrichedItem;
+        } catch { return { ...item, metadataError: "Article metadata unavailable; source date remains unknown" }; }
+      }));
+      result.fingerprint = hash(JSON.stringify(result.items));
     }
     const update = updateSource(source, prior, result, now);
     sources[source.id] = update.state;

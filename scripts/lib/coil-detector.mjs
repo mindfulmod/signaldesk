@@ -56,7 +56,7 @@ export function percentileRank(value, series) {
 // One boolean per day: is attention >= 1.25x its own trailing-1yr median?
 export function hotFlags(attention, { ratioThreshold = ATTENTION_RATIO_THRESHOLD, medianWindow = TRAILING_MEDIAN_WINDOW } = {}) {
   return attention.map((value, i) => {
-    if (!Number.isFinite(value)) return false;
+    if (!Number.isFinite(value)) return null;
     const median = trailingMedian(attention, i, medianWindow);
     if (!Number.isFinite(median) || median <= 0) return false;
     return value >= ratioThreshold * median;
@@ -73,7 +73,7 @@ export function persistenceSeries(hot, window = PERSISTENCE_WINDOW) {
     const dropIdx = i - window;
     if (dropIdx >= 0 && hot[dropIdx]) count -= 1;
     const span = Math.min(window, i + 1);
-    out[i] = span ? count / span : 0;
+    out[i] = hot.slice(Math.max(0, i - window + 1), i + 1).some(v => v === null) ? null : span ? count / span : 0;
   }
   return out;
 }
@@ -131,11 +131,11 @@ export function mergeRegimes(qualifies, { gapTolerance = REGIME_GAP_TOLERANCE, m
 export function releaseTriggerAt(closes, volumes, i, { lookback = RELEASE_LOOKBACK, volumeMult = RELEASE_VOLUME_MULT } = {}) {
   if (i < lookback || !Number.isFinite(closes[i])) return false;
   const priorCloses = closes.slice(i - lookback, i).filter(Number.isFinite);
-  if (!priorCloses.length) return false;
+  if (priorCloses.length !== lookback) return false;
   const priorHigh = Math.max(...priorCloses);
   if (closes[i] <= priorHigh) return false;
   const priorVolumes = volumes.slice(i - lookback, i).filter(Number.isFinite);
-  if (!priorVolumes.length || !Number.isFinite(volumes[i])) return false;
+  if (priorVolumes.length !== lookback || !Number.isFinite(volumes[i])) return false;
   const avgVolume = priorVolumes.reduce((sum, v) => sum + v, 0) / priorVolumes.length;
   return avgVolume > 0 && volumes[i] >= volumeMult * avgVolume;
 }
@@ -181,7 +181,7 @@ export function selectAttentionSeries(rows, meta, { minHistory = MIN_ATTENTION_H
   if (wikiCount >= minHistory) return { source: "wikiViews", values: wiki };
 
   const firstSeen = meta?.firstSeen || null;
-  const sov = rows.map((r) => (firstSeen && r[0] >= firstSeen ? r[2] : null));
+  const sov = rows.map((r) => (firstSeen && r[0] >= firstSeen && r[6]?.attention !== "missing" ? r[2] : null));
   const sovCount = sov.filter(Number.isFinite).length;
   if (sovCount >= minHistory) return { source: "shareOfVoice", values: sov };
 
@@ -197,8 +197,10 @@ export function classifyTicker(entry, { now = new Date() } = {}) {
   const attention = selectAttentionSeries(rows, entry.meta);
   if (!attention.values) return null;
 
-  const closes = rows.map((r) => r[3]);
+  const closes = rows.map((r) => Number.isFinite(r[4]) && (!r[6] || r[6].price === "observed") ? r[3] : null);
   const volumes = rows.map((r) => r[4]);
+  if (closes.slice(-COMPRESSION_WINDOW).some(v => !Number.isFinite(v))) return null;
+  if (attention.values.slice(-PERSISTENCE_WINDOW).some(v => !Number.isFinite(v))) return null;
   if (closes.filter(Number.isFinite).length < COMPRESSION_WINDOW) return null;
 
   const hot = hotFlags(attention.values);
@@ -275,7 +277,9 @@ export function computeSprings(ledger, gicsByTicker = {}, { hotThemeTickers = ne
 
   return {
     generatedAt: new Date().toISOString(),
-    baseRates: BASE_RATES,
+    integrityVersion: 2,
+    baseRates: null,
+    studyStatus: "Historical study figures withheld pending reproducible methodology; frozen thresholds unchanged.",
     thresholds: {
       persistenceThreshold: PERSISTENCE_THRESHOLD,
       attentionRatioThreshold: ATTENTION_RATIO_THRESHOLD,

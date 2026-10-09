@@ -5,7 +5,7 @@ import { buildMarketNews } from "../update-data.mjs";
 test("market-news builder pairs only fresh usable stories with recent prices", () => {
   const now = new Date().toISOString();
   const old = new Date(Date.now() - 61 * 86400_000).toISOString();
-  const quote = ticker => ({ ticker, source: "Price/Volume", lastPrice: 5, priceMove: 10, relativeVolume: 3, quoteAsOf: now });
+  const quote = ticker => ({ ticker, source: "Price/Volume", marketMetricsVersion: 2, lastPrice: 5, priceMove: 10, relativeVolume: 3, quoteAsOf: now });
   const story = ticker => ({ ticker, source: "Google News", title: "Company reports earnings above expectations", url: "https://example.com/results", published: now });
   const rows = buildMarketNews([
     quote("FRESH"), story("FRESH"),

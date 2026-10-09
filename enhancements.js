@@ -29,9 +29,7 @@
 
   const safeClamp = (min, max, value) => Math.min(max, Math.max(min, value));
   const safeRelVol = (value) => {
-    const number = Number(value);
-    if (!Number.isFinite(number) || number <= 0 || number > 25) return 1;
-    return number;
+    return window.SIGNALDESK_QUALITY.relativeVolume(value);
   };
   const sourceCount = (item) => LIVE_SOURCES.filter((source) => (item.sources?.[source] || 0) > 0).length;
   const sourceSum = (item, sources) => sources.reduce((sum, source) => sum + (Number(item.sources?.[source]) || 0), 0);
@@ -115,252 +113,8 @@
       };
     }
 
-    if (typeof realSignals === "function") {
-      realSignals = function enhancedRealSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = previousRangeSnapshots()) {
-        if (snapshots.length > 1 || previousSnapshots.length) {
-          return enhancedAggregateSnapshotSignals(snapshots, previousSnapshots);
-        }
-
-        const sourceSnapshot = snapshot?.signals?.length ? snapshot : window.SIGNALDESK_DATA;
-        if (!sourceSnapshot?.signals?.length) return [];
-
-        const items = sourceSnapshot.signals.map((item) => ({
-          ticker: item.ticker,
-          name: item.name,
-          mentions: Number(item.mentions) || 0,
-          // null momentum = first appearance, no prior snapshot; keep it null
-          // so the UI can say "new" instead of faking a percentage.
-          momentum: item.momentum == null ? null : Number(item.momentum) || 0,
-          sentiment: Number(item.sentiment) || 0,
-          lastPrice: item.lastPrice != null && Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
-          quoteAsOf: item.quoteAsOf || null,
-          quoteSource: item.quoteSource || null,
-          priceMove: Number(item.priceMove) || 0,
-          relativeVolume: safeRelVol(item.relativeVolume),
-          marketCap: Number.isFinite(Number(item.marketCap)) ? Number(item.marketCap) : null,
-          capTier: item.capTier || (typeof capTierFor === "function" ? capTierFor(Number(item.marketCap)) : null),
-          description: item.description || null,
-          descriptionUrl: item.descriptionUrl || null,
-          sector: item.sector || null,
-          industry: item.industry || null,
-          optionsActivity: Number(item.optionsActivity) || 0,
-          sources: Object.fromEntries(LIVE_SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
-          topHeadline: item.topHeadline || null,
-          latest: item.latest || [],
-        }));
-
-        return scoreSignals(items);
-      };
-    }
-
-    if (typeof filteredSignals === "function") {
-      filteredSignals = function enhancedFilteredSignals() {
-        const state = getState();
-        const selectedSources = state.sources.length ? state.sources : LIVE_SOURCES;
-        const base = realSignals()
-          .map((item) => ({
-            ...item,
-            mentions: sourceSum(item, selectedSources),
-          }))
-          .filter((item) => item.mentions > 0)
-          .filter((item) => matchesStockQuery(item, state.query));
-
-        return scoreSignals(base, selectedSources)
-          .map((item) => ({ ...item, discovery: typeof discoveryProfile === "function" ? discoveryProfile(item) : null }))
-          .sort(sortForMode);
-      };
-    }
-
-    if (typeof buyScore === "function") {
-      buyScore = function enhancedBuyScore(item) {
-        const signal = safeClamp(0, 1, item.signalScore / 85);
-        const momentum = safeClamp(0, 1, (item.momentum + 10) / 80);
-        const sentiment = safeClamp(0, 1, (item.sentiment + 0.2) / 0.65);
-        const price = safeClamp(0, 1, (item.priceMove + 1) / 7);
-        const volume = safeClamp(0, 1, item.relativeVolume / 2.5);
-        const shortPressure = safeClamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
-        const breadth = sourceCount(item) / LIVE_SOURCES.length;
-        return 100 * (0.31 * signal + 0.17 * momentum + 0.15 * sentiment + 0.13 * price + 0.09 * volume + 0.08 * breadth + 0.07 * shortPressure);
-      };
-    }
-
-    if (typeof attentionStats === "function") {
-      attentionStats = function enhancedAttentionStats(item) {
-        const social = sourceSum(item, SOCIAL_SOURCES);
-        const news = sourceSum(item, NEWS_SOURCES);
-        return {
-          social,
-          news,
-          attention: social + news,
-          volHot: marketEvidenceCurrent(item) && item.relativeVolume >= VOL_HOT,
-          priceHot: marketEvidenceCurrent(item) && item.priceMove >= 3,
-          momentumHot: item.momentum >= 20,
-        };
-      };
-    }
-
-    if (typeof exportCsv === "function") {
-      exportCsv = function enhancedExportCsv() {
-        const data = filteredSignals().slice(0, 50);
-        const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...LIVE_SOURCES];
-        const lines = [header.join(",")].concat(
-          data.map((item, index) => {
-            const profile = typeof discoveryProfile === "function" ? (item.discovery || discoveryProfile(item)) : null;
-            return [
-              index + 1,
-              item.ticker,
-              `"${String(item.name || item.ticker).replaceAll('"', '""')}"`,
-              item.lastPrice ?? "",
-              profile?.score ?? "",
-              item.signalScore.toFixed(1),
-              `"${profile?.stage || ""}"`,
-              `"${profile?.evidence || ""}"`,
-              `"${(profile?.risks || []).join(" | ")}"`,
-              item.mentions,
-              item.momentum == null ? "" : item.momentum.toFixed(2),
-              item.sentiment.toFixed(3),
-              item.priceMove.toFixed(2),
-              item.relativeVolume.toFixed(2),
-              ...LIVE_SOURCES.map((source) => item.sources[source] || 0),
-            ].join(",");
-          })
-        );
-        const blob = new Blob([lines.join("\n")], { type: "text/csv" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = `stock-real-public-signals-${isoDate(new Date((window.SIGNALDESK_DATA || {}).generatedAt || Date.now()))}.csv`;
-        link.click();
-        URL.revokeObjectURL(link.href);
-      };
-    }
-  }
-
-  function enhancedAggregateSnapshotSignals(snapshots, previousSnapshots = []) {
-    const previousMentions = mentionTotals(previousSnapshots);
-    const map = new Map();
-
-    snapshots.forEach((daily) => {
-      (daily.signals || []).forEach((signal) => {
-        const mentions = Number(signal.mentions) || 0;
-        const item =
-          map.get(signal.ticker) ||
-          {
-            ticker: signal.ticker,
-            name: signal.name,
-            mentions: 0,
-            weightedSentiment: 0,
-            weightedPrice: 0,
-            weightedVolume: 0,
-            lastPrice: null,
-            quoteAsOf: null,
-            quoteSource: null,
-            marketCap: null,
-            capTier: null,
-            description: null,
-            descriptionUrl: null,
-            sector: null,
-            industry: null,
-            latestGeneratedAt: "",
-            sources: Object.fromEntries(LIVE_SOURCES.map((source) => [source, 0])),
-            latest: [],
-          };
-
-        item.mentions += mentions;
-        item.weightedSentiment += (Number(signal.sentiment) || 0) * mentions;
-        item.weightedPrice += (Number(signal.priceMove) || 0) * mentions;
-        item.weightedVolume += safeRelVol(signal.relativeVolume) * mentions;
-        LIVE_SOURCES.forEach((source) => {
-          item.sources[source] += Number(signal.sources?.[source]) || 0;
-        });
-
-        if ((daily.generatedAt || "") >= item.latestGeneratedAt && Number.isFinite(Number(signal.lastPrice))) {
-          item.lastPrice = Number(signal.lastPrice);
-          item.quoteAsOf = signal.quoteAsOf || null;
-          item.quoteSource = signal.quoteSource || null;
-          item.marketCap = Number.isFinite(Number(signal.marketCap)) ? Number(signal.marketCap) : item.marketCap;
-          item.capTier = signal.capTier || (typeof capTierFor === "function" ? capTierFor(Number(signal.marketCap)) : item.capTier);
-          item.latestGeneratedAt = daily.generatedAt || "";
-        }
-
-        if (!item.description && signal.description) {
-          item.description = signal.description;
-          item.descriptionUrl = signal.descriptionUrl || null;
-        }
-        if (!item.sector && signal.sector) item.sector = signal.sector;
-        if (!item.industry && signal.industry) item.industry = signal.industry;
-        item.latest.push(...(signal.latest || []).map((entry) => ({ ...entry, date: daily.date })));
-        map.set(signal.ticker, item);
-      });
-    });
-
-    const items = [...map.values()].map((item) => {
-      const prev = previousMentions.get(item.ticker) || 0;
-      const momentum = prev
-        ? ((item.mentions - prev) / prev) * 100
-        : previousSnapshots.length
-          ? null // a prior window exists; this ticker is simply new to the board
-          : 0; // no prior window at all -- nothing to compare against
-
-      const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
-      const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
-      const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
-      return {
-        ticker: item.ticker,
-        name: item.name,
-        mentions: item.mentions,
-        momentum,
-        sentiment,
-        priceMove,
-        lastPrice: item.lastPrice,
-        quoteAsOf: item.quoteAsOf,
-        quoteSource: item.quoteSource,
-        marketCap: item.marketCap,
-        capTier: item.capTier,
-        description: item.description,
-        descriptionUrl: item.descriptionUrl,
-        sector: item.sector,
-        industry: item.industry,
-        relativeVolume,
-        optionsActivity: 0,
-        signalScore: 0,
-        sources: item.sources,
-        topHeadline: pickTopHeadline(rankHeadlines(item.latest)),
-        latest: rankHeadlines(item.latest).slice(0, 6),
-      };
-    });
-
-    return scoreSignals(items).sort((a, b) => b.signalScore - a.signalScore).slice(0, 75);
-  }
-
-  function scoreSignals(items, activeSources = LIVE_SOURCES) {
-    const maxMentions = Math.max(1, ...items.map((item) => Number(item.mentions) || 0));
-    const rawScores = items.map((item) => {
-      const breadth = activeSources.filter((source) => (item.sources?.[source] || 0) > 0).length / LIVE_SOURCES.length;
-      return (
-        30 * Math.sqrt((Number(item.mentions) || 0) / maxMentions) +
-        22 * safeClamp(0, 1, (Number(item.momentum) || 0) / 80 + 0.25) +
-        18 * safeClamp(0, 1, ((Number(item.sentiment) || 0) + 0.25) / 0.7) +
-        12 * safeClamp(0, 1, (Number(item.priceMove) || 0) / 6) +
-        10 * safeClamp(0, 1, safeRelVol(item.relativeVolume) / 2.5) +
-        8 * breadth
-      );
-    });
-    const scale = 85 / Math.max(1, ...rawScores);
-    return items.map((item, index) => ({
-      ...item,
-      relativeVolume: safeRelVol(item.relativeVolume),
-      signalScore: safeClamp(0, 100, rawScores[index] * scale),
-    }));
-  }
-
-  function mentionTotals(snapshots) {
-    const totals = new Map();
-    snapshots.forEach((daily) => {
-      (daily.signals || []).forEach((signal) => {
-        totals.set(signal.ticker, (totals.get(signal.ticker) || 0) + (Number(signal.mentions) || 0));
-      });
-    });
-    return totals;
+    // The board, source scope and export share script.js's integrity pipeline.
+    // Do not replace it with a second aggregation/scoring implementation.
   }
 
   function patchRender() {
@@ -406,7 +160,7 @@
         <div class="section-head compact">
           <div>
             <h2 id="pulse-heading">Recent news & moves</h2>
-            <p>Articles from the past 72 hours alongside recent quotes. Related coverage, not proof of what caused a move.</p>
+            <p>Global feed, independent of board filters. Articles from the past 72 hours alongside recent quotes; not proof of what caused a move.</p>
           </div>
         </div>
         <div class="pulse-headlines" id="pulseHeadlines"></div>
@@ -461,7 +215,7 @@
     const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
     const feed = Array.isArray(data?.marketNews) ? data.marketNews : [];
     const published = feed
-      .filter((entry) => entry && entry.title && !isClassActionSpam(entry.title) && Number.isFinite(Number(entry.priceMove)))
+      .filter((entry) => entry && entry.marketMetricsVersion === 2 && entry.title && !isClassActionSpam(entry.title) && Number.isFinite(entry.priceMove))
       .filter(entry => window.SIGNALDESK_QUALITY.usableNews(entry) && window.SIGNALDESK_QUALITY.quoteState(entry.quoteAsOf ? entry : (data.signals || []).find(item => item.ticker === entry.ticker)) === "current")
       .slice(0, limit)
       .map((entry) => ({

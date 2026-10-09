@@ -194,7 +194,7 @@ UI: theme detail panel = supply-chain table ordered ran → running → coiled �
 with sparkline, attention ratio, coil status, days-in-state. This is the "what's next" view —
 the VRT-after-NVDA, COHR-after-LITE pattern made a first-class screen.
 
-## Layer 3 — Coil hunt (frozen detector, validated thresholds)
+## Layer 3 — Coil hunt (frozen detector; validation not independently reproduced)
 
 Run over: all hot-theme members (priority) + full tracked universe (background).
 
@@ -207,8 +207,10 @@ Run over: all hot-theme members (priority) + full tracked universe (background).
   NetIncomeLoss crossing zero within ±2 quarters — the APP/PLTR monster marker); revenue
   re-acceleration; sector class (defensive-sector coils shown discounted **unless** inside a hot
   theme — the CEG/VST exception).
-- Honest stats shown on every card (from the blind S&P scan): released coils 65% win / +12.6%
-  median / 16% reach +50% at 12mo; unreleased coils −18.6% vs SPY, zero doubles.
+- Historical study figures are withheld from the UI until the source dataset,
+  implementation, cohort construction and evaluation can be reproduced. The
+  old design cited 65% win / +12.6% median for releases; that citation is not
+  validation of the current scanner. Frozen thresholds remain unchanged.
 - Ranking within the springs board: hot-theme coils first, then persistence, then compression.
 
 ## Layer 4 — Alerts & lifecycle notifications

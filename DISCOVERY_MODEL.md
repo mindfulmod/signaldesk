@@ -30,11 +30,18 @@ Attention can create buying pressure, but research also documents overreaction a
 
 - an **attention score**, which describes how visible a stock is;
 - a **setup score**, which describes the current balance of evidence and risk;
-- a **stage**: Early ignition, Building, Confirmed, Crowded, Cooling, or Watching;
+- a **stage**: Early ignition, Building, Market aligned, Crowded, Cooling, or Watching;
 - an **evidence grade**; and
 - explicit **risk flags** beside the positive evidence.
 
 No stage or score implies a guaranteed outcome. “Crowded” is intentionally not presented as a top opportunity even when its raw attention is very high.
+
+October 9 integrity update: “Cross-type activity” means source-category breadth,
+not independent verification of a claim. Activity uses weighted source units,
+not literal post counts; Price/Volume and FINRA no longer inflate that total.
+Unverified legacy market comparisons are withheld. Source-scoped acceleration
+requires comparable prior coverage, and market measurements retain their own
+quote/comparison dates. These are correctness safeguards, not model validation.
 
 ## Important data interpretation
 

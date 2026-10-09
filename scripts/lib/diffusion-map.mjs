@@ -11,7 +11,7 @@
 // Running because "already ran and now extended" is the more specific,
 // higher-crowding-risk read of the same price action.
 import { readFile, writeFile } from "node:fs/promises";
-import { madeNewHighRecently, relativeReturn } from "./theme-heat.mjs";
+import { madeNewHighRecently, relativeReturn, alignedCloses } from "./theme-heat.mjs";
 
 const ROOT = new URL("../../", import.meta.url);
 export const DIFFUSION_MAP_URL = new URL("data/diffusion-map.json", ROOT);
@@ -47,7 +47,7 @@ export async function saveDiffusionMap(map) {
 }
 
 function closesOf(entry) {
-  return (entry?.rows || []).map((r) => r[3]);
+  return (entry?.rows || []).map((r) => Number.isFinite(r[4]) && (!r[6] || r[6].price === "observed") ? r[3] : null);
 }
 
 function attentionRatioLatest(entry) {
@@ -131,7 +131,7 @@ export function computeDiffusionMap(ledger, registry, springsByTicker, prevState
         const springState = springsByTicker.get(member.t);
         let state = classifyMember(closes, springState);
         if (state === "lagging-pending") {
-          const rel = hasSpy ? relativeReturn(closes, spyCloses, LAGGING_WINDOW) : null;
+          const rel = hasSpy ? relativeReturn(alignedCloses(entry, ledger.tickers.SPY.rows), spyCloses, LAGGING_WINDOW) : null;
           state = rel !== null && rel < LAGGING_REL_RETURN_THRESHOLD ? "lagging" : null;
         }
         if (!state) continue;
@@ -154,7 +154,7 @@ export function computeDiffusionMap(ledger, registry, springsByTicker, prevState
     .filter((theme) => theme.members.length > 0);
 
   return {
-    payload: { generatedAt: new Date().toISOString(), themes },
+    payload: { integrityVersion: 2, generatedAt: new Date().toISOString(), themes },
     nextStateHistory,
   };
 }

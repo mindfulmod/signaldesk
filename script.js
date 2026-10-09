@@ -158,9 +158,7 @@ const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 const MAX_PLAUSIBLE_REL_VOL = 25;
 
 function sanitizeRelVol(value) {
-  const num = Number(value);
-  if (!Number.isFinite(num) || num <= 0 || num > MAX_PLAUSIBLE_REL_VOL) return 1;
-  return num;
+  return window.SIGNALDESK_QUALITY.relativeVolume(value);
 }
 
 const byId = (id) => document.getElementById(id);
@@ -243,6 +241,7 @@ function currentSnapshotEntry() {
     date: (snapshot.generatedAt || new Date().toISOString()).slice(0, 10),
     generatedAt: snapshot.generatedAt || new Date().toISOString(),
     signals: snapshot.signals,
+    sourceHealth: snapshot.sourceHealth || [],
     events: snapshot.events || [],
     failures: snapshot.failures || [],
   };
@@ -265,7 +264,7 @@ function tickerHistory(ticker) {
   return historySnapshots()
     .map((snap) => {
       const s = (snap.signals || []).find((x) => x.ticker === ticker);
-      return s ? { date: snap.date, mentions: Number(s.mentions) || 0, signalScore: Number(s.signalScore) || 0 } : null;
+      return s ? { date: snap.date, mentions: window.SIGNALDESK_QUALITY.attentionTotal(s.sources), signalScore: Number(s.signalScore) || 0 } : null;
     })
     .filter(Boolean);
 }
@@ -275,10 +274,15 @@ function tickerHistory(ticker) {
 // row shows always matches the visible ordering. Returns null when there is no
 // prior snapshot to compare against.
 function previousRankMap() {
+  const state = getState(), quality = window.SIGNALDESK_QUALITY;
+  // A filtered rank is not comparable with an unfiltered historical position.
+  if (byId("windowMode")?.value === "history") return null;
+  if (state.query || state.start || state.end || capFilter !== "all" || attentionFilter !== "all" || watchlistFilter || SOURCES.some(s => !quality.PAUSED_SOURCES[s] && !state.sources.includes(s))) return null;
   const snaps = historySnapshots();
   if (snaps.length < 2) return null;
   const prev = snaps[snaps.length - 2];
-  const sorted = [...(prev.signals || [])].sort((a, b) => {
+  if (!(prev.signals || []).every(s => s.marketMetricsVersion === 2)) return null;
+  const sorted = quality.scoreSignals((prev.signals || []).map(s => quality.scopeSignal(quality.normalizeSignal(s), state.sources))).sort((a, b) => {
     if (rankMode === "mentions") return (Number(b.mentions) || 0) - (Number(a.mentions) || 0);
     if (rankMode === "momentum") return (Number(b.momentum) || 0) - (Number(a.momentum) || 0);
     return discoveryProfile(b).score - discoveryProfile(a).score;
@@ -324,7 +328,7 @@ function detailTrendMarkup(item) {
   if (hist.length < 2) {
     return `
     <div class="detail-section trend-section">
-      <h3>Attention trend</h3>
+      <h3>All-source attention history</h3>
       <p class="muted-note">First appearance in the tracked window — a trend line builds as ${escapeHtml(item.ticker)} recurs across daily snapshots.</p>
     </div>`;
   }
@@ -335,9 +339,9 @@ function detailTrendMarkup(item) {
   const dir = last >= first ? "up" : "down";
   return `
     <div class="detail-section trend-section">
-      <h3>Attention trend <span class="trend-span">${hist.length}-day</span></h3>
+      <h3>All-source attention history <span class="trend-span">${hist.length} snapshots</span></h3>
       <div class="trend-spark">${sparkline(mentions, { w: 300, h: 56, pad: 3, fluid: true })}</div>
-      <p class="trend-foot"><span class="momentum ${dir}">${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%</span> mentions, ${shortFmt.format(first)} → ${shortFmt.format(last)} over ${hist.length} snapshots.</p>
+      <p class="trend-foot"><span class="momentum ${dir}">${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%</span> weighted attention, ${shortFmt.format(first)} → ${shortFmt.format(last)}. Global saved context, independent of source filters; coverage can differ between snapshots.</p>
     </div>`;
 }
 
@@ -348,7 +352,7 @@ function selectedRangeSnapshots() {
   const snapshots = historySnapshots().filter((item) => item.date >= start && item.date <= end);
   if (snapshots.length) return snapshots;
   const current = currentSnapshotEntry();
-  return current ? [current] : [];
+  return current && current.date >= start && current.date <= end ? [current] : [];
 }
 
 function previousRangeSnapshots() {
@@ -367,201 +371,25 @@ function previousRangeSnapshots() {
 }
 
 function realSignals(snapshots = selectedRangeSnapshots(), previousSnapshots = previousRangeSnapshots()) {
-  if (snapshots.length > 1 || previousSnapshots.length) {
-    return aggregateSnapshotSignals(snapshots, previousSnapshots);
-  }
-  if (!snapshot?.signals?.length) return [];
-
-  const items = snapshot.signals.map((item) => ({
-    ticker: item.ticker,
-    name: item.name,
-    mentions: Number(item.mentions) || 0,
-    // null momentum = first appearance, no prior snapshot; keep it null so
-    // the UI can say "new" instead of faking a percentage.
-    momentum: item.momentum == null ? null : Number(item.momentum) || 0,
-    sentiment: Number(item.sentiment) || 0,
-    lastPrice: item.lastPrice != null && Number.isFinite(Number(item.lastPrice)) ? Number(item.lastPrice) : null,
-    quoteAsOf: item.quoteAsOf || null,
-    quoteSource: item.quoteSource || null,
-    priceMove: Number(item.priceMove) || 0,
-    relativeVolume: sanitizeRelVol(item.relativeVolume),
-    marketCap: Number.isFinite(Number(item.marketCap)) ? Number(item.marketCap) : null,
-    capTier: item.capTier || capTierFor(Number(item.marketCap)),
-    description: item.description || null,
-    descriptionUrl: item.descriptionUrl || null,
-    sector: item.sector || null,
-    industry: item.industry || null,
-    optionsActivity: Number(item.optionsActivity) || 0,
-    sources: Object.fromEntries(SOURCES.map((source) => [source, Number(item.sources?.[source]) || 0])),
-    topHeadline: item.topHeadline || null,
-    latest: item.latest || [],
-  }));
-
-  // Re-compute signalScore peer-relatively so rankings spread across a useful range
-  // even when some sources (WSB, Reddit) are blocked and momentum has no prior snapshot.
-  const maxMentions = Math.max(1, ...items.map((item) => item.mentions));
-  const rawScores = items.map((item) =>
-    30 * Math.sqrt(item.mentions / maxMentions) +
-    22 * clamp(0, 1, (item.momentum ?? 0) / 80 + 0.25) +
-    18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
-    12 * clamp(0, 1, item.priceMove / 6) +
-    10 * clamp(0, 1, item.relativeVolume / 2.5) +
-    8 * (SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length)
-  );
-  // Scale so the top scorer reaches 85, preserving relative differences.
-  const maxRaw = Math.max(1, ...rawScores);
-  const scale = 85 / maxRaw;
-  return items.map((item, i) => ({ ...item, signalScore: clamp(0, 100, rawScores[i] * scale) }));
+  return aggregateSnapshotSignals(snapshots, previousSnapshots);
 }
 
 function aggregateSnapshotSignals(snapshots, previousSnapshots = []) {
-  const previousMentions = aggregateMentionTotals(previousSnapshots);
-  const map = new Map();
-
-  snapshots.forEach((daily) => {
-    (daily.signals || []).forEach((signal) => {
-      const mentions = Number(signal.mentions) || 0;
-      const item =
-        map.get(signal.ticker) ||
-        {
-          ticker: signal.ticker,
-          name: signal.name,
-          mentions: 0,
-          weightedSentiment: 0,
-          weightedPrice: 0,
-          weightedVolume: 0,
-          lastPrice: null,
-          quoteAsOf: null,
-          quoteSource: null,
-          marketCap: null,
-          capTier: null,
-          description: null,
-          descriptionUrl: null,
-          sector: null,
-          industry: null,
-          latestGeneratedAt: "",
-          sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
-          latest: [],
-        };
-
-      item.mentions += mentions;
-      item.weightedSentiment += (Number(signal.sentiment) || 0) * mentions;
-      item.weightedPrice += (Number(signal.priceMove) || 0) * mentions;
-      item.weightedVolume += sanitizeRelVol(signal.relativeVolume) * mentions;
-      SOURCES.forEach((source) => {
-        item.sources[source] += Number(signal.sources?.[source]) || 0;
-      });
-      if ((daily.generatedAt || "") >= item.latestGeneratedAt && Number.isFinite(Number(signal.lastPrice))) {
-        item.lastPrice = Number(signal.lastPrice);
-        item.quoteAsOf = signal.quoteAsOf || null;
-        item.quoteSource = signal.quoteSource || null;
-        item.marketCap = Number.isFinite(Number(signal.marketCap)) ? Number(signal.marketCap) : item.marketCap;
-        item.capTier = signal.capTier || capTierFor(Number(signal.marketCap)) || item.capTier;
-        item.latestGeneratedAt = daily.generatedAt || "";
-      }
-      // Profile fields are static per ticker; keep the first non-empty value seen.
-      if (!item.description && signal.description) {
-        item.description = signal.description;
-        item.descriptionUrl = signal.descriptionUrl || null;
-      }
-      if (!item.sector && signal.sector) item.sector = signal.sector;
-      if (!item.industry && signal.industry) item.industry = signal.industry;
-      item.latest.push(...(signal.latest || []).map((entry) => ({ ...entry, date: daily.date })));
-      map.set(signal.ticker, item);
-    });
-  });
-
-  const maxMentions = Math.max(1, ...[...map.values()].map((item) => item.mentions));
-  return [...map.values()]
-    .map((item) => {
-      const prev = previousMentions.get(item.ticker) || 0;
-      const momentum = prev
-        ? ((item.mentions - prev) / prev) * 100
-        : previousSnapshots.length
-          ? null // a prior window exists; this ticker is simply new to the board
-          : 0; // no prior window at all -- nothing to compare against
-
-      const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
-      const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
-      const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
-      const sourceBreadth = SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length;
-      const signalScore = clamp(
-        0,
-        100,
-        30 * Math.sqrt(item.mentions / maxMentions) +
-          22 * clamp(0, 1, (momentum ?? 0) / 80 + 0.25) +
-          18 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
-          12 * clamp(0, 1, priceMove / 6) +
-          10 * clamp(0, 1, relativeVolume / 2.5) +
-          8 * sourceBreadth
-      );
-      return {
-        ticker: item.ticker,
-        name: item.name,
-        mentions: item.mentions,
-        momentum,
-        sentiment,
-        priceMove,
-        lastPrice: item.lastPrice,
-        quoteAsOf: item.quoteAsOf,
-        quoteSource: item.quoteSource,
-        marketCap: item.marketCap,
-        capTier: item.capTier,
-        description: item.description,
-        descriptionUrl: item.descriptionUrl,
-        sector: item.sector,
-        industry: item.industry,
-        relativeVolume,
-        optionsActivity: 0,
-        signalScore,
-        sources: item.sources,
-        topHeadline: pickTopHeadline(rankHeadlines(item.latest)),
-        latest: rankHeadlines(item.latest).slice(0, 6),
-      };
-    })
-    .sort((a, b) => b.signalScore - a.signalScore)
-    .slice(0, 55);
-}
-
-function aggregateMentionTotals(snapshots) {
-  const totals = new Map();
-  snapshots.forEach((daily) => {
-    (daily.signals || []).forEach((signal) => {
-      totals.set(signal.ticker, (totals.get(signal.ticker) || 0) + (Number(signal.mentions) || 0));
-    });
-  });
-  return totals;
+  return window.SIGNALDESK_QUALITY.scoreSignals(window.SIGNALDESK_QUALITY.aggregateSignals(snapshots, previousSnapshots))
+    .map(item => ({ ...item, latest: rankHeadlines(item.latest), topHeadline: pickTopHeadline(rankHeadlines(item.latest)) }));
 }
 
 function filteredSignals() {
-  const state = getState();
-  const base = realSignals()
-    .map((item) => ({
-      ...item,
-      mentions: state.sources.reduce((sum, source) => sum + (item.sources[source] || 0), 0),
-    }))
-    .filter((item) => item.mentions > 0)
-    .filter((item) => matchesStockQuery(item, state.query));
+  const state = getState(), quality = window.SIGNALDESK_QUALITY;
+  const base = realSignals().map(item => quality.scopeSignal(item, state.sources))
+    .filter(item => Object.values(item.sources).some(count => count > 0))
+    .filter(item => matchesStockQuery(item, state.query));
+  return quality.scoreSignals(base).map(item => ({ ...item, discovery: discoveryProfile(item) })).sort(sortForMode);
+}
 
-  // Recompute signalScore peer-relatively based on the active source selection,
-  // so rankings reflect only what the user has checked.
-  const maxMentions = Math.max(1, ...base.map((item) => item.mentions));
-  const rawScores = base.map((item) => {
-    const activeBreadth = state.sources.filter((source) => (item.sources[source] || 0) > 0).length / SOURCES.length;
-    return (
-      30 * Math.sqrt(item.mentions / maxMentions) +
-      22 * clamp(0, 1, (item.momentum ?? 0) / 80 + 0.25) +
-      18 * clamp(0, 1, (item.sentiment + 0.25) / 0.7) +
-      12 * clamp(0, 1, item.priceMove / 6) +
-      10 * clamp(0, 1, item.relativeVolume / 2.5) +
-      8 * activeBreadth
-    );
-  });
-  const maxRaw = Math.max(1, ...rawScores);
-  const scale = 85 / maxRaw;
-  const signals = base.map((item, i) => ({ ...item, signalScore: clamp(0, 100, rawScores[i] * scale) }));
-
-  return signals.map((item) => ({ ...item, discovery: discoveryProfile(item) })).sort(sortForMode);
+function visibleSignals(items = filteredSignals()) {
+  attentionHighThreshold = computeAttentionThreshold(items);
+  return applyWatchlistFilter(applyAttentionFilter(applyCapFilter(items)));
 }
 
 function capTierFor(marketCap) {
@@ -607,7 +435,7 @@ function render() {
 
   const items = filteredSignals();
   attentionHighThreshold = computeAttentionThreshold(items);
-  const ranked = applyWatchlistFilter(applyAttentionFilter(applyCapFilter(items)));
+  const ranked = visibleSignals(items);
   const top50 = ranked.slice(0, 50);
   // Keep the current selection if it exists anywhere in the filtered set (so a
   // deep-linked or starred ticker ranked beyond #50 still drives the detail
@@ -670,7 +498,7 @@ function discoveryProfile(item) {
     : 1;
 
   const attention = clamp(0, 1, (Number(item.signalScore) || 0) / 85);
-  const acceleration = item.momentum == null || item.momentum === 0 ? 0.35 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
+  const acceleration = item.momentum == null ? 0 : clamp(0, 1, (Number(item.momentum) + 5) / 65);
   const breadth = 0.65 * (activeGroups / 3) + 0.35 * clamp(0, 1, activeSources.length / 6);
   const priceConfirmation = usableMarket ? clamp(0, 1, (Number(item.priceMove) + 0.5) / 6.5) : 0;
   const volumeConfirmation = usableMarket ? clamp(0, 1, (Number(item.relativeVolume) - 1) / 2.5) : 0;
@@ -722,7 +550,7 @@ function discoveryProfile(item) {
     stage = "Cooling";
     tone = "cooling";
   } else if (usableMarket && catalyst > 0 && item.priceMove > 0 && item.relativeVolume >= 1.2) {
-    stage = "Confirmed";
+    stage = "Market aligned";
     tone = "confirmed";
   } else if (usableMarket && item.relativeVolume >= 1.2 && crowdAttention < 5 && item.priceMove < 6) {
     stage = "Early ignition";
@@ -734,7 +562,7 @@ function discoveryProfile(item) {
 
   let evidence = "Thin evidence";
   if (catalystSources.length >= 2 && activeGroups === 3) evidence = "Strong evidence";
-  else if (catalystSources.length >= 1 && activeGroups >= 2) evidence = "Corroborated";
+  else if (catalystSources.length >= 1 && activeGroups >= 2) evidence = "Cross-type activity";
   else if (activeGroups >= 2) evidence = "Developing";
 
   const reasons = [];
@@ -745,7 +573,7 @@ function discoveryProfile(item) {
   if (usableMarket && item.priceMove > 0 && item.priceMove < 12) reasons.push(`Price confirming +${item.priceMove.toFixed(1)}%`);
   if (!reasons.length) reasons.push("Monitoring for a second confirming signal");
 
-  const move = `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%`;
+  const move = item.priceMove == null ? "unknown" : `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%`;
   let summary = "Attention is present, but the setup still needs stronger independent confirmation.";
   if (tone === "early") summary = `Unusual participation is appearing before broad attention. Watch for a credible catalyst and continued price confirmation.`;
   if (tone === "confirmed") summary = `A public catalyst and market participation align. The next question is whether attention continues without the move becoming extended.`;
@@ -856,7 +684,7 @@ function updateStatus() {
 }
 
 function marketEvidenceCurrent(item) {
-  return window.SIGNALDESK_QUALITY.quoteState(item) === "current" && Number(item.sources?.["Price/Volume"]) > 0;
+  return window.SIGNALDESK_QUALITY.quoteState(item) === "current" && Number(item.sources?.["Price/Volume"]) > 0 && item.marketMetricsVersion === 2 && Number.isFinite(item.priceMove) && Number.isFinite(item.relativeVolume);
 }
 
 let boardExpanded = false;
@@ -896,7 +724,7 @@ function renderTable(items) {
           </td>
           <td><div class="setup-cell"><span class="signal-pill tone-${profile.tone}">${profile.score}</span><small>${escapeHtml(profile.stage)}</small></div></td>
           <td>${formatQuoteCell(item)}</td>
-          <td><span class="momentum ${momentumClass}"${item.momentum == null ? ' title="First appearance — no prior snapshot for comparison"' : ''}>${item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
+          <td><span class="momentum ${momentumClass}"${item.momentum == null ? ' title="No comparable prior source coverage"' : ''}>${item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(1)}%`}</span></td>
           <td class="col-tertiary">${marketEvidenceCurrent(item) ? `<span class="market-change ${priceTone(item.priceMove)}">${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%</span><small class="market-volume">${item.relativeVolume.toFixed(1)}× volume</small>` : '<span class="quote-warning">Unavailable</span>'}</td>
         </tr>`;
     })
@@ -949,7 +777,7 @@ function renderMovers(items) {
 
   const columns = [
     { title: "Early ignition", sub: "Participation before broad crowding", list: early, value: (item) => `${item.discovery.score} setup` },
-    { title: "Confirmed", sub: "Catalyst and market action agree", list: confirmed, value: (item) => `${item.discovery.score} setup` },
+    { title: "Market aligned", sub: "Activity agrees; claims are not independently verified", list: confirmed, value: (item) => `${item.discovery.score} setup` },
     { title: "Crowded risk", sub: "Attention arrived after a large move", list: crowded, value: (item) => `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%` },
   ];
 
@@ -1085,6 +913,8 @@ function detailMarkup(item, rank) {
     </div>
 
     ${topHeadlineMarkup(item)}
+    ${(item.marketQuality || []).length ? `<p class="muted-note">Market data: ${escapeHtml(item.marketQuality.join(" · "))}</p>` : ""}
+    <p class="muted-note">Attention uses weighted source activity, not literal post counts. Cross-type activity does not independently verify a claim.</p>
 
     <div class="setup-assessment" data-stage="${profile.tone}">
       <div class="assessment-head">
@@ -1103,7 +933,7 @@ function detailMarkup(item, rank) {
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
       ${statBlock("Price", formatPrice(item.lastPrice), marketEvidenceCurrent(item) ? priceMoveText(item) : "No recent market data", marketEvidenceCurrent(item) ? priceTone(item.priceMove) : "")}
       ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
-      ${statBlock("Acceleration", item.momentum == null ? "New" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no prior snapshot yet" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
+      ${statBlock("Acceleration", item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no comparable prior coverage" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
     </div>
@@ -1147,7 +977,7 @@ function statBlock(label, value, sub, tone = "") {
 
 function priceMoveText(item) {
   if (!Number.isFinite(item.priceMove)) return "";
-  return `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% today`;
+  return item.priceMove == null ? "Session move unavailable" : `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}% · ${item.marketPeriodLabel || "quoted session"}`;
 }
 
 function priceTone(move) {
@@ -1197,7 +1027,7 @@ function attentionMarkup(item) {
     return `
       <div class="detail-section">
         <h3>Where the attention is</h3>
-        <p class="muted-note">No mentions captured in this snapshot — this stock is here on price/volume signals.</p>
+        <p class="muted-note">No weighted attention captured in this snapshot — this stock is here on price/volume signals.</p>
       </div>`;
   }
 
@@ -1355,6 +1185,7 @@ function trendInterpretation(item) {
 }
 
 function sentimentLabel(value) {
+  if (value == null) return "Unknown in this scope";
   if (value > 0.25) return "Bullish";
   if (value > 0.08) return "Positive";
   if (value < -0.18) return "Bearish";
@@ -1399,8 +1230,8 @@ function formatShortDateTime(value) {
 }
 
 function exportCsv() {
-  const data = filteredSignals().slice(0, 50);
-  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "mentions", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", ...SOURCES];
+  const data = visibleSignals().slice(0, 50);
+  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "attention_weights_not_posts", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", "market_as_of", "comparison_start", "market_quality", ...SOURCES];
   const lines = [header.join(",")].concat(
     data.map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
@@ -1416,9 +1247,12 @@ function exportCsv() {
         `"${profile.risks.join(" | ")}"`,
         item.mentions,
         item.momentum == null ? "" : item.momentum.toFixed(2),
-        item.sentiment.toFixed(3),
-        item.priceMove.toFixed(2),
-        item.relativeVolume.toFixed(2),
+        item.sentiment == null ? "" : item.sentiment.toFixed(3),
+        item.priceMove == null ? "" : item.priceMove.toFixed(2),
+        item.relativeVolume == null ? "" : item.relativeVolume.toFixed(2),
+        item.quoteAsOf || "",
+        item.marketWindow?.previousAsOf || "",
+        `"${(item.marketQuality || []).join(" | ").replaceAll('"', '""')}"`,
         ...SOURCES.map((source) => item.sources[source] || 0),
       ].join(",");
     })

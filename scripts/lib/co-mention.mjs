@@ -4,6 +4,7 @@
 // crystallizing (greedy modularity community detection); (ii) a leader's
 // neighbor set changing = diffusion direction.
 import { readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { isoWeekKey } from "./alerts.mjs";
 import { COMMON_WORD_TICKERS } from "./ticker-noise.mjs";
 
@@ -18,7 +19,7 @@ export const MIN_MODULARITY = 0.05; // conservative placeholder -- not spec'd nu
 
 // Sources that don't represent real text co-occurrence (a synthetic quote
 // fetch or a pre-aggregated count), excluded from co-mention pairing.
-const EXCLUDED_SOURCES = new Set(["Price/Volume", "FINRA Short Volume", "StockTwits"]);
+const EXCLUDED_SOURCES = new Set(["Price/Volume", "FINRA Short Volume", "StockTwits", "ApeWisdom"]);
 
 // Tickers that are also common short English words pollute co-mention
 // pairing with noise rather than real cross-ticker signal --
@@ -235,9 +236,27 @@ export function topNeighbors(edgeMap, ticker, limit = 8) {
 // this scale to also run every refresh -- no separate weekly gate needed
 // beyond the trailing-window accumulation already being date-keyed.
 export function computeCoMention(history, events, dateStr, leaderTickers = [], prevLeaderNeighbors = {}) {
-  const weekKey = isoWeekKey(new Date(dateStr));
-  const pairCounts = extractCoMentionPairs(events);
-  const nextHistory = mergeIntoWeek(history, weekKey, pairCounts);
+  const documents = { ...(history.documents || {}) }, grouped = new Map();
+  for (const event of events) {
+    if (!event.url || EXCLUDED_SOURCES.has(event.source)) continue;
+    const group = grouped.get(event.url) || []; group.push(event); grouped.set(event.url, group);
+  }
+  for (const [url, group] of grouped) {
+    const id = createHash("sha256").update(url).digest("hex").slice(0, 24), prior = documents[id];
+    const published = group.map(e => e.published).filter(d => Number.isFinite(Date.parse(d)) && Date.parse(d) <= Date.parse(dateStr) + 86400000).sort()[0];
+    const firstSeen = prior?.firstSeen || dateStr;
+    documents[id] = { firstSeen, published: prior?.published || published || null,
+      week: prior?.week || isoWeekKey(new Date(published || firstSeen)),
+      revision: createHash("sha256").update(JSON.stringify(group.map(e => [e.ticker, e.title]).sort())).digest("hex").slice(0, 16),
+      pairs: Object.fromEntries(extractCoMentionPairs(group)) };
+  }
+  const weeks = {}, cutoff = isoWeekKey(new Date(Date.parse(dateStr) - 12 * 7 * 86400000));
+  for (const record of Object.values(documents)) {
+    if (record.week < cutoff) continue;
+    const week = weeks[record.week] ||= {};
+    for (const [pair, count] of Object.entries(record.pairs)) week[pair] = (week[pair] || 0) + count;
+  }
+  const nextHistory = { version: 2, weeks, documents, legacyWeeks: history.legacyWeeks || (history.version === 2 ? {} : history.weeks) };
   const graph = aggregateTrailingGraph(nextHistory);
 
   const rawCommunities = greedyModularityCommunities(graph.nodes, graph.edges);
@@ -265,6 +284,8 @@ export function computeCoMention(history, events, dateStr, leaderTickers = [], p
   return {
     nextHistory,
     payload: {
+      integrityVersion: 2,
+      provenanceNote: "One contribution per source document. Legacy counts without document attribution are quarantined, not silently repaired.",
       generatedAt: new Date().toISOString(),
       graphNodes: graph.nodes.length,
       graphEdges: graph.edges.size,

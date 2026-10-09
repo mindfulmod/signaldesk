@@ -22,6 +22,7 @@
     if (candidate && (review.url !== candidate.url || review.owner !== candidate.owner || review.sourceId !== candidate.sourceId)) errors.push("Source provenance must match the saved candidate");
     if (review.decision === "accepted") {
       if (!themeIds.includes(review.themeId)) errors.push("Select a tracked technology");
+      if ((review.relevance || "").trim().length < 10) errors.push("Explain why this source is relevant to the selected technology (at least 10 characters)");
       for (const key of ["claim", "metric", "period", "caveat", "owner", "unit", "definition"]) if (typeof review[key] !== "string" || !review[key].trim()) errors.push(`${key} is required for reviewed evidence`);
       if (!safeUrl(review.url)) errors.push("A safe primary-source URL is required");
       if (!["research", "pilot", "rollout", "adoption", "target"].includes(review.kind)) errors.push("Invalid evidence kind");
@@ -55,6 +56,25 @@
     const superseded = new Set(reviews.filter(r => r.decision === "accepted").map(r => r.supersedes).filter(Boolean));
     return reviews.filter(r => r.decision === "accepted" && !superseded.has(r.id));
   }
+  // Published IDs are immutable, even when the original browser still has a draft.
+  function correctionDraft(draft, reviews = []) {
+    if (!draft) return {};
+    const published = reviews.find(r => r.id === draft.id);
+    if (!published) return { ...draft };
+    let current = published;
+    const visited = new Set();
+    while (!visited.has(current.id)) {
+      visited.add(current.id);
+      const next = reviews.find(r => r.decision === "accepted" && r.supersedes === current.id);
+      if (!next || visited.has(next.id)) break;
+      current = next;
+    }
+    return { ...draft, id: undefined, supersedes: current.decision === "accepted" ? current.id : null };
+  }
+  function reconcileDrafts(drafts, reviews = []) {
+    const same = (a, b) => JSON.stringify(Object.entries(a).sort()) === JSON.stringify(Object.entries(b).sort());
+    return drafts.filter(d => !reviews.some(r => r.id === d.id && same(d, r))).map(d => correctionDraft(d, reviews));
+  }
   function reviewedThemes(themes, reviews = []) {
     const superseded = new Set(reviews.filter(r => r.decision === "accepted").map(r => r.supersedes).filter(Boolean));
     return themes.map(t => ({ ...t, evidence: [...t.evidence.filter(e => !superseded.has(e.id)), ...activeReviews(reviews).filter(r => r.themeId === t.id).map(r => ({
@@ -65,8 +85,14 @@
     const f = company?.financials || {}, cash = f.cash, flow = f.operatingCashFlow;
     let runwayMonths = null;
     const duration = flow?.start && flow?.end ? (date(flow.end) - date(flow.start)) / 86400000 + 1 : 0;
-    if (!cash?.stale && !flow?.stale && cash?.value >= 0 && flow?.value < 0 && cash.unit === flow.unit && cash.end === flow.end && duration >= 80 && duration <= 400) runwayMonths = cash.value / -flow.value * duration / 30.4375;
+    if (!cash?.stale && !flow?.stale && Number.isFinite(cash?.value) && Number.isFinite(flow?.value) && cash.value >= 0 && flow.value < 0 && cash.unit === flow.unit && cash.end === flow.end && duration >= 80 && duration <= 400) runwayMonths = cash.value / -flow.value * duration / 30.4375;
     return { runwayMonths, runwayCaveat: "Cash and equivalents only, divided by historical operating burn. Excludes marketable securities, other liquidity, capital expenditure, financing and future changes. This is not the company's total cash runway or a forecast." };
+  }
+  function financialDisplay(company) {
+    if (company?.factsVersion === 3) return company;
+    const filter = rows => Object.fromEntries(Object.entries(rows || {}).filter(([key]) => !["revenue", "shares"].includes(key)));
+    return { ...company, financials: filter(company?.financials), histories: filter(company?.histories),
+      factsError: [company?.factsError, "Legacy revenue/share selection withheld pending context-aware refresh"].filter(Boolean).join("; ") };
   }
   function buildBrief({ themes = [], research, monitor, followed = [], now = Date.now() }) {
     const followedIds = new Set(followed);
@@ -80,5 +106,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, ageHours, freshness, validateReview, activeReviews, reviewedThemes, financialContext, buildBrief };
+  return { safeUrl, ageHours, freshness, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
 });

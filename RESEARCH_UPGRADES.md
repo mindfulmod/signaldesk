@@ -146,9 +146,79 @@ present in the cited audit snapshot, not independently rechecked on today's site
 Remote `main` resolved to `73d82678ee11ad79252ca11cb314e56f5b0e901c` at plan
 intake; every fix must first be reproduced or dispositioned against latest `main`.
 
-Status for H01–H16: **open / awaiting latest-main reproduction**, unless a
-specific case is explicitly described as historical, latent or closed. This is
-a plan-only handoff. No candidate patch has been applied as part of this update.
+### Implementation update — October 9, 2026
+
+Merged latest `main` (`3ea4881edf184a8a553e5b24923822e58ab81427`) before
+implementation. The underlying code paths remained present. Historical SCNX and
+MNDY/QURE examples, and latent lifecycle cases, were regression fixtures rather
+than claims about today's hosted output. Hank's candidate ZIP was not reused.
+
+Implemented locally, with automated regressions:
+
+- **H01/H04/H05/H08:** one shared normalization, source-scope and selection
+  contract for both the fallback and actual enhanced controller. Market weights
+  no longer inflate attention; return/volume comparisons keep dates and units,
+  and uncertain splits/extreme moves are quarantined. Invalid volume is unknown,
+  not 1×. Full-history shows the latest selected session, not a blended return.
+  Scores are continuous at zero; unknown prior coverage stays unknown. CSV and
+  board share capitalization, attention, watchlist, search, source and sort
+  selection. Global history/news context is explicitly labeled; incomparable
+  rank deltas are hidden. Arbitrary empty-date fallback is also guarded.
+- **H02:** no new carried-forward prices or synthetic zero attention in ledger
+  gaps/backfill. Coil/breadth calculations require observed data, and benchmark
+  comparisons join dates. Legacy coil/theme/diffusion outputs are withheld until
+  a new integrity-checked collection. Frozen thresholds were not tuned.
+- **H03/H06:** ambiguous issuer descriptions are withheld, including the six
+  audited mismatches. SEC facts expose accession, period, taxonomy/context and
+  share-class warnings; the exact ASTS and QS audited filing contexts have narrow
+  filing-backed adjudications. Conflicting same-period facts remain unknown.
+  Legacy revenue/share displays wait for a context-aware refresh. This is not a
+  general dimensional-XBRL parser or assurance that every taxonomy is covered.
+- **H07/H11/H12/H13/H14:** document-attributed co-mentions are replay-safe;
+  original/observed dates stay separate. Compact version identity survives
+  800-record/180-day text eviction; published review references are pinned.
+  Canonical stories count once across wording revisions, and original story
+  dates cannot be renewed by a headline edit. Biological regulation no longer
+  implies policy. Bounded Waymo article/paper metadata enrichment and SEC item,
+  report/acceptance-date and exhibit-index metadata preserve unknowns explicitly.
+- **H09/H10/H15:** Review text search no longer prefilters technologies. New
+  reviews require explicit decision, technology, evidence kind and relevance.
+  Published drafts reconcile after reload; corrections use new immutable IDs and
+  link the latest predecessor. Confidence labels describe activity, not verified
+  outcomes; unreproducible historical study percentages are withheld.
+- **H16:** T-Mobile's two website collectors are permission-paused even on forced
+  runs, with visible health explanations. Existing historical references remain
+  labeled with their original dates. Source health excludes paused collectors.
+- **Latent calibration:** event-time theme membership is frozen. Missing target
+  prices retry later, never become zero returns, and an incomplete frozen basket
+  cannot silently shrink to surviving members.
+
+Verification: full 255-test suite on Node 24 and Node 20; fixtures exercise the
+actual `enhancements.js` controller, not just helpers. Local browser checks cover
+incident/holographic/Nobel search, explicit review defaults, combined small-cap
+and high-attention CSV (FLYE/MRNO only), and an isolated save → export → simulated
+publication → reload → correction → second-correction cycle. Test reviews stayed
+on a separate localhost origin and were never written to repository evidence.
+The refreshed brief and review form also passed desktop/mobile checks in light
+and dark mode (375px mobile viewport, no horizontal page overflow or console
+warnings/errors). Permission-paused sources are explicitly separated in the
+freshness watchdog as well as the UI; they are not disguised as outages.
+
+Retention policy: full document text is bounded to 180 days / 800 versions except
+published-review references; compact hashed identity/version dates persist without
+expiry. Co-mention attribution persists per hashed URL while only the trailing
+13 weeks contributes to the live graph. Earlier unattributed graph totals remain
+quarantined for inspection, not silently repaired or included in new scores.
+
+**Still open release/research gates:** merge/deployment and hosted verification;
+first scheduled collection under the new contracts; any historical repair beyond
+quarantine; reproducible investment/model calibration; source rights and parser
+validation for new candidates. H16 source expansion is not complete. No licensed
+market provider has been selected, and no promise of uninterrupted daily data is
+made. Existing scheduled jobs/retries remain best-effort and timestamped. Do not
+mark all H01–H16 production-closed from green local tests alone.
+
+The audit details below preserve the original evidence and acceptance criteria.
 
 Execution order:
 
@@ -397,7 +467,8 @@ Evidence: [October 5 baseline](https://github.com/mindfulmod/signaldesk/tree/f8f
 #### H16 · Enrich sources only after provenance, comparability and rights gates
 
 - Deepen existing SEC records with filing dates, items and exhibits first.
-  Evaluate Nasdaq RSS, CPUC Waymo monthly reports and USAspending as candidates,
+  Evaluate Nasdaq RSS, CPUC Waymo quarterly reports (with some monthly measures)
+  and USAspending as candidates,
   not committed integrations or verified replacements for existing coverage.
 - CPUC observations need California-only scope, company-reported provenance
   and comparability-change warnings. Federal obligations are not revenue or
@@ -419,6 +490,23 @@ Evidence: [October 5 baseline](https://github.com/mindfulmod/signaldesk/tree/f8f
   in [T-Mobile's terms](https://www.t-mobile.com/responsibility/consumer-info/policies/terms-of-use)
   before expansion and review retention/redistribution rights across new sources.
   This is a permission-review gate, not a conclusion that a legal breach occurred.
+
+October 9 source disposition:
+
+- [CPUC reporting](https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/quarterly-reporting):
+  reports are quarterly, not monthly publications; preserve California scope,
+  revisions/redactions and reporting-definition changes before building a parser.
+- [USAspending](https://www.usaspending.gov/federal-spending-guide): obligations
+  are commitments, not company revenue. Its
+  [source documentation](https://www.usaspending.gov/data/data-sources-download.pdf)
+  describes delayed DoD/USACE contract reporting. No integration activated.
+- [Nasdaq issuer RSS](https://ir.nasdaq.com/tools/rss-feeds) is Nasdaq Inc. investor
+  relations, not a demonstrated broad-market news replacement. Keep the broad
+  Nasdaq adapter paused until an appropriate source contract is verified.
+- T-Mobile automated collection remains paused pending an access/reuse decision.
+  SEC item/exhibit-index enrichment is implemented; exhibits still require review
+  and are not automatically treated as adoption events. Other proposed providers
+  and Essilor/Federal Register adapters remain separately gated.
 
 ### Lower-priority safeguards and closed cases
 
