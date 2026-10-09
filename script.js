@@ -134,13 +134,18 @@ function toggleWatch(ticker) {
   else watchlist.add(ticker);
   saveWatchlist();
   render();
+  if (!selectedTicker) closeDetailSheet();
 }
 
 function bindStars(root) {
   root.querySelectorAll("[data-star]").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       event.stopPropagation();
+      const ticker = btn.dataset.star;
       toggleWatch(btn.dataset.star);
+      // Rendering replaces the button. Keep keyboard users in the same place.
+      const replacement = root.querySelector(`[data-star="${CSS.escape(ticker)}"]`);
+      (replacement || byId("watchFilter"))?.focus({ preventScroll: true });
     });
   });
 }
@@ -449,7 +454,7 @@ function render() {
   renderBuyCandidates(items);
   renderTable(top50);
   renderMovers(ranked);
-  renderDetail(items, top50);
+  renderDetail(ranked, top50);
   updateUrl();
 }
 
@@ -459,18 +464,26 @@ function renderEmptyState() {
   } else {
     setDataStatus("No public snapshot available");
   }
-  byId("rankingBody").innerHTML = "";
+  renderTable([]);
+  byId("rankSubhead").textContent = "No snapshot to display";
+  byId("boardEmpty").querySelector("h3").textContent = snapshot ? "This snapshot has no stock signals" : "Snapshot could not be loaded";
+  byId("boardEmpty").querySelector("p").textContent = "Try loading the public data again. No sample stocks or estimated prices are shown.";
+  byId("resetView").hidden = true;
+  byId("retrySnapshot").hidden = false;
   byId("buyCandidates").innerHTML = "";
   byId("moversBoard").innerHTML = `<p class="muted-note">No signals in this snapshot yet.</p>`;
   const warnings = snapshot?.failures?.length
-    ? `<p class="muted-note">Most recent refresh warnings: ${snapshot.failures.slice(0, 4).join(" | ")}${snapshot.failures.length > 4 ? " | …" : ""}</p>`
+    ? `<p class="muted-note">Most recent refresh warnings: ${escapeHtml(snapshot.failures.slice(0, 4).join(" | "))}${snapshot.failures.length > 4 ? " | …" : ""}</p>`
     : "";
-  byId("detailPanel").innerHTML = `
+  detailTicker = "";
+  lastDetailHtml = `
     <div class="selected-stock">
-      <span id="selectedRank">No data</span>
-      <h2 id="selectedTicker">-</h2>
-      <p id="selectedName">No generated or dummy fallback data is shown — the dashboard stays empty until the next successful refresh.</p>
+      <span>No data</span>
+      <h2>No stock selected</h2>
+      <p>No generated or dummy fallback data is shown — the dashboard stays empty until the next successful refresh.</p>
     </div>${warnings}`;
+  updateDetailContent(byId("detailPanel"), true);
+  renderDetailSheetContent();
 }
 
 function sourceTotal(item, sources) {
@@ -688,7 +701,34 @@ function marketEvidenceCurrent(item) {
 }
 
 let boardExpanded = false;
+
+function boardCoverageState(items) {
+  const missingMarket = items.length > 0 && !items.some(marketEvidenceCurrent);
+  const missingMomentum = items.length > 0 && !items.some(item => Number.isFinite(item.momentum));
+  const missing = [missingMarket && "price / volume", missingMomentum && "attention change"].filter(Boolean);
+  return { missingMarket, missingMomentum, note: missing.length ? `Comparable ${missing.join(" and ")} data unavailable. Saved quotes are not live.` : "" };
+}
+
 function renderTable(items) {
+  byId("resetView").hidden = false;
+  byId("retrySnapshot").hidden = true;
+  const coverage = boardCoverageState(items);
+  const panel = byId("rankingBody").closest(".table-panel");
+  panel.classList.toggle("no-market-comparison", coverage.missingMarket);
+  panel.classList.toggle("no-attention-comparison", coverage.missingMomentum);
+  document.querySelector(".dashboard-grid").classList.toggle("board-is-empty", items.length === 0);
+  byId("boardCoverage").hidden = !coverage.note;
+  byId("boardCoverage").textContent = coverage.note;
+  byId("attnAll").classList.toggle("active", attentionFilter === "all" && !watchlistFilter);
+  byId("attnAll").setAttribute("aria-pressed", String(attentionFilter === "all" && !watchlistFilter));
+  byId("watchFilter").textContent = watchlist.size ? `Watchlist (${watchlist.size})` : "Watchlist";
+  byId("boardGuide").textContent = watchlistFilter
+    ? "Saved on this browser. Open a stock to recheck its evidence; saving does not subscribe you to alerts."
+    : attentionFilter === "quiet"
+      ? "Market activity with less public attention. Open a stock to check the move and its sources."
+      : attentionFilter === "attention"
+        ? "Higher social and news activity in this snapshot—not a prediction of price direction."
+        : "Open a stock for evidence & next research steps.";
   byId("clearFocus").hidden = !byId("tickerSearch").value;
   byId("boardEmpty").hidden = items.length > 0;
   const exactQuery = byId("tickerSearch").value.trim().startsWith("$");
@@ -702,23 +742,27 @@ function renderTable(items) {
     byId("rankSubhead").textContent = "Your watchlist is empty — tap ☆ on any ticker to add it.";
   } else {
     byId("rankSubhead").textContent = items.length
-      ? `${items.length}${filterLabel} ticker${items.length === 1 ? "" : "s"}${!boardExpanded && items.length > 15 ? " · showing top 15" : ""}`
+      ? `${items.length}${filterLabel} ticker${items.length === 1 ? "" : "s"}${!boardExpanded && items.length > 15 ? items.findIndex(item => item.ticker === selectedTicker) >= 15 ? " · top 14 + selected" : " · showing top 15" : ""}`
       : "No matches — adjust your search or filters";
   }
   const prevRanks = previousRankMap();
-  byId("rankingBody").innerHTML = (boardExpanded ? items : items.slice(0, 15))
-    .map((item, index) => {
+  // Keep a linked selection visible even if it falls outside the compact list.
+  const displayItems = boardExpanded ? items : items.slice(0, 15);
+  const selectedIndex = items.findIndex(item => item.ticker === selectedTicker);
+  if (!boardExpanded && selectedIndex >= 15) displayItems[14] = items[selectedIndex];
+  byId("rankingBody").innerHTML = displayItems
+    .map((item) => {
       const profile = item.discovery || discoveryProfile(item);
       const momentumClass = item.momentum == null ? "flat" : item.momentum >= 0 ? "up" : "down";
       const chips = `<div class="setup-context"><span>${escapeHtml(profile.evidence)}</span>${profile.risks[0] ? `<span class="risk">${escapeHtml(profile.risks[0])}</span>` : ""}</div>`;
       const nameLine = item.name && item.name !== item.ticker ? `<small>${escapeHtml(item.name)}</small>` : "";
       return `
         <tr class="${item.ticker === selectedTicker ? "selected" : ""}" data-ticker="${item.ticker}">
-          <td><span class="rank-num">#${index + 1}</span>${rankBadge(item.ticker, index + 1, prevRanks)}</td>
+          <td><span class="rank-num">#${items.indexOf(item) + 1}</span>${rankBadge(item.ticker, items.indexOf(item) + 1, prevRanks)}</td>
           <td>
             <div class="ticker-cell">
               ${starButton(item.ticker)}
-              <span class="ticker-name"><button type="button" class="ticker-open" aria-label="Open ${item.ticker} details">${item.ticker}</button>${nameLine}</span>
+              <span class="ticker-name"><button type="button" class="ticker-open" aria-label="Open ${item.ticker} details"${item.ticker === selectedTicker ? ' aria-current="true"' : ''}>${item.ticker}<span class="ticker-open-arrow" aria-hidden="true">↗</span></button>${nameLine}</span>
             </div>
             ${chips}
           </td>
@@ -734,10 +778,11 @@ function renderTable(items) {
     row.addEventListener("click", (event) => {
       const keyboard = event.detail === 0 && event.target.closest(".ticker-open");
       selectedTicker = row.dataset.ticker;
+      if (!isNarrowViewport() && document.querySelector(".dashboard-grid").classList.contains("details-hidden")) toggleDetailPanel();
       render();
       // On narrow screens the inline panel is hidden; show details in the sheet.
       if (isNarrowViewport()) openDetailSheet();
-      else if (keyboard) byId("rankingBody").querySelector(`[data-ticker="${CSS.escape(selectedTicker)}"] .ticker-open`)?.focus({ preventScroll: true });
+      else if (keyboard) byId("detailPanel").querySelector("[data-detail-heading]")?.focus({ preventScroll: true });
     });
   });
   bindStars(byId("rankingBody"));
@@ -834,7 +879,7 @@ function renderDetail(items, top50) {
   if (!selected) {
     detailTicker = "";
     lastDetailHtml = '<div class="detail-empty"><h2>No stock selected</h2><p>Clear the search or filters, then choose a stock to read its evidence.</p></div>';
-    byId("detailPanel").innerHTML = lastDetailHtml;
+    updateDetailContent(byId("detailPanel"), true);
     renderDetailSheetContent();
     return;
   }
@@ -842,9 +887,7 @@ function renderDetail(items, top50) {
   const selectionChanged = detailTicker !== selected.ticker;
   detailTicker = selected.ticker;
   lastDetailHtml = detailMarkup(selected, rank);
-  byId("detailPanel").innerHTML = lastDetailHtml;
-  if (selectionChanged) byId("detailPanel").scrollTop = 0;
-  bindStars(byId("detailPanel"));
+  updateDetailContent(byId("detailPanel"), selectionChanged);
   renderDetailSheetContent();
 }
 
@@ -889,56 +932,95 @@ function renderDetailSheetContent() {
   // Mobile browsers fire resize (and therefore render) when the URL bar
   // shows/hides; skip identical re-renders so the sheet doesn't jump to the top
   // mid-scroll.
-  if (content.__renderedHtml === lastDetailHtml) return;
-  const prevScroll = content.scrollTop;
-  content.innerHTML = lastDetailHtml;
-  content.__renderedHtml = lastDetailHtml;
-  content.scrollTop = prevScroll;
-  bindStars(content);
+  updateDetailContent(content, content.dataset.ticker !== detailTicker);
+}
+
+function updateDetailContent(root, selectionChanged) {
+  if (root.__renderedHtml === lastDetailHtml) return;
+  const scroll = selectionChanged ? 0 : root.scrollTop;
+  const open = selectionChanged ? [] : [...root.querySelectorAll("details[open][data-detail-section]")].map(el => el.dataset.detailSection);
+  root.innerHTML = lastDetailHtml;
+  root.__renderedHtml = lastDetailHtml;
+  root.dataset.ticker = detailTicker;
+  for (const key of open) root.querySelector(`[data-detail-section="${key}"]`)?.setAttribute("open", "");
+  root.scrollTop = scroll;
+  bindStars(root);
+  root.querySelector(".desk-back-to-list")?.addEventListener("click", () => {
+    if (isNarrowViewport()) closeDetailSheet();
+    else byId("rankingBody").querySelector(`[data-ticker="${CSS.escape(detailTicker)}"] .ticker-open`)?.focus();
+  });
+  root.querySelectorAll("[data-detail-open]").forEach(button => button.addEventListener("click", () => {
+    const disclosure = root.querySelector(`[data-detail-section="${button.dataset.detailOpen}"]`);
+    if (!disclosure) return;
+    disclosure.open = true;
+    const summary = disclosure.querySelector("summary");
+    summary.focus({ preventScroll: true });
+    summary.scrollIntoView({ block: "nearest" });
+  }));
+}
+
+function detailNextSteps(item) {
+  const current = marketEvidenceCurrent(item);
+  const saved = watchlist.has(item.ticker);
+  return `<section class="desk-next-steps" aria-label="Next research steps">
+    <h3>What to check next</h3>
+    <a class="desk-primary-action" href="https://finance.yahoo.com/quote/${encodeURIComponent(item.ticker)}" target="_blank" rel="noopener">
+      <span><strong>${current ? "Recheck the market move" : "Check current price & volume"}</strong><small>${current ? "Compare the quoted session with the latest market data." : "Market confirmation is missing from this snapshot."}</small></span><span aria-hidden="true">↗</span>
+    </a>
+    <div class="desk-secondary-actions">
+      <button type="button" data-detail-open="evidence">Review captured sources <span aria-hidden="true">↓</span></button>
+      <button type="button" class="desk-save" data-star="${escapeHtml(item.ticker)}" aria-pressed="${saved}" aria-label="${saved ? "Remove" : "Save"} ${escapeHtml(item.ticker)} ${saved ? "from" : "to"} watchlist"><span aria-hidden="true">${saved ? "★" : "☆"}</span> ${saved ? "Saved to watchlist" : "Save to watchlist"}</button>
+    </div>
+  </section>`;
 }
 
 function detailMarkup(item, rank) {
   const profile = item.discovery || discoveryProfile(item);
   return `
     <div class="selected-stock">
-      <span id="selectedRank">Discovery rank #${rank}</span>
+      <div class="desk-detail-eyebrow"><span class="selected-rank">Discovery rank #${rank}</span><button type="button" class="desk-back-to-list">Back to list</button></div>
       <div class="selected-head">
-        <h2 id="selectedTicker">${escapeHtml(item.ticker)}</h2>
-        ${starButton(item.ticker)}
+        <div><h2 data-detail-heading tabindex="-1">${escapeHtml(item.ticker)}</h2><p class="selected-name">${escapeHtml(item.name || item.ticker)}</p></div>
+        <div class="desk-saved-quote"><small>Saved quote</small><strong>${formatPrice(item.lastPrice)}</strong><small>${window.SIGNALDESK_QUALITY.quoteState(item) === "current" ? "Not live" : escapeHtml(window.SIGNALDESK_QUALITY.quoteState(item) === "stale" ? "Stale · not current" : "Quote not verified")}</small></div>
       </div>
-      <p id="selectedName">${escapeHtml(item.name || item.ticker)}</p>
       <p class="detail-quote-time">${escapeHtml([item.quoteSource, item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf)) ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" · "))}</p>
-      ${profileMetaMarkup(item)}
-      ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : ""}
     </div>
-
-    ${topHeadlineMarkup(item)}
-    ${(item.marketQuality || []).length ? `<p class="muted-note">Market data: ${escapeHtml(item.marketQuality.join(" · "))}</p>` : ""}
-    <p class="muted-note">Attention uses weighted source activity, not literal post counts. Cross-type activity does not independently verify a claim.</p>
 
     <div class="setup-assessment" data-stage="${profile.tone}">
       <div class="assessment-head">
         <span class="stage-badge stage-${profile.tone}">${escapeHtml(profile.stage)}</span>
-        <strong>${profile.score}<small>/100 setup</small></strong>
+        <strong>${profile.score}<small>/100 research priority</small></strong>
       </div>
       <p>${escapeHtml(profile.summary)}</p>
       <div class="assessment-grid">
         <div><span>Evidence</span><strong>${escapeHtml(profile.evidence)}</strong></div>
-        <div><span>Coverage</span><strong>${profile.activeGroups}/3 groups · ${profile.activeSources} sources</strong></div>
+        <div><span>Coverage</span><strong>${profile.activeSources} source${profile.activeSources === 1 ? "" : "s"} · ${profile.activeGroups} of 3 types</strong></div>
       </div>
       ${profile.risks.length ? `<div class="risk-row" aria-label="Risk flags">${profile.risks.map((risk) => `<span>${escapeHtml(risk)}</span>`).join("")}</div>` : ""}
     </div>
 
-    <div class="stat-grid">
+    ${detailNextSteps(item)}
+    ${topHeadlineMarkup(item) || '<p class="desk-evidence-gap">No qualifying headline captured. Read the source record before inferring a catalyst.</p>'}
+
+    <details class="desk-disclosure" data-detail-section="evidence">
+      <summary>Source evidence <span>Read & verify</span></summary>
+      <p class="data-caveat">Weighted activity is not a count of posts. Multiple source types do not independently verify a claim. Check the original report, date and company disclosure.</p>
+      ${headlinesMarkup(item) || '<p class="muted-note">No additional saved headlines in this scope. Source counts can include activity without a captured article.</p>'}
+      ${attentionMarkup(item)}
+    </details>
+
+    <details class="desk-disclosure" data-detail-section="metrics">
+      <summary>Metrics & attention history <span>6 measures</span></summary>
+      <div class="stat-grid">
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
       ${statBlock("Price", formatPrice(item.lastPrice), marketEvidenceCurrent(item) ? priceMoveText(item) : "No recent market data", marketEvidenceCurrent(item) ? priceTone(item.priceMove) : "")}
       ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
       ${statBlock("Acceleration", item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no comparable prior coverage" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
-    </div>
+      </div>
 
-    ${detailTrendMarkup(item)}
+      ${detailTrendMarkup(item)}
 
     <div class="detail-section">
       <h3>What is supporting the setup</h3>
@@ -946,18 +1028,20 @@ function detailMarkup(item, rank) {
       <div class="why-chips">${profile.reasons.map((chip) => `<span class="why-chip">${escapeHtml(chip)}</span>`).join("")}</div>
     </div>
 
-    ${attentionMarkup(item)}
-
-    ${headlinesMarkup(item)}
-
-    <div class="detail-section research-links">
-      <h3>Dig deeper</h3>
+    </details>
+    <details class="desk-disclosure" data-detail-section="notes">
+      <summary>Company & data notes <span>Limitations</span></summary>
+      ${profileMetaMarkup(item)}
+      ${item.description ? `<p class="company-blurb">${escapeHtml(item.description)}${item.descriptionUrl ? ` <a href="${item.descriptionUrl}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>` : '<p class="muted-note">No verified company description in this snapshot.</p>'}
+      ${(item.marketQuality || []).length ? `<p class="muted-note">Market data: ${escapeHtml(item.marketQuality.join(" · "))}</p>` : ""}
+      <p class="data-caveat">Research scores are not forecasts. Attention, public tone and price activity can disagree; none verifies future returns. Watchlist saves stay on this browser and do not create alerts.</p>
+      <h3>Continue researching</h3>
       <div class="research-row">
         <a href="https://finance.yahoo.com/quote/${encodeURIComponent(item.ticker)}" target="_blank" rel="noopener">Yahoo Finance</a>
         <a href="https://stocktwits.com/symbol/${encodeURIComponent(item.ticker)}" target="_blank" rel="noopener">StockTwits</a>
         <a href="https://apewisdom.io/stocks/${encodeURIComponent(item.ticker)}/" target="_blank" rel="noopener">ApeWisdom</a>
       </div>
-    </div>`;
+    </details>`;
 }
 
 function profileMetaMarkup(item) {
@@ -1098,6 +1182,7 @@ function headlinesMarkup(item) {
             (entry) => `
             <li>
               <span class="headline-src" style="color:${SOURCE_COLORS[entry.source] || "var(--muted)"}">${escapeHtml(entry.source)}</span>
+              <span class="headline-date">${Number.isFinite(Date.parse(entry.published)) ? escapeHtml(formatShortDateTime(entry.published)) : "Publication date unavailable"}</span>
               ${entry.url ? `<a href="${entry.url}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a>` : escapeHtml(entry.title)}
             </li>`
           )
@@ -1291,6 +1376,12 @@ function bindEvents() {
   });
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
+  byId("attnAll").addEventListener("click", () => {
+    attentionFilter = "all";
+    watchlistFilter = false;
+    syncControls();
+    render();
+  });
   byId("attnAttention").addEventListener("click", () => setAttentionFilter(attentionFilter === "attention" ? "all" : "attention"));
   byId("attnQuiet").addEventListener("click", () => setAttentionFilter(attentionFilter === "quiet" ? "all" : "quiet"));
   byId("watchFilter").addEventListener("click", () => setWatchlistFilter(!watchlistFilter));
@@ -1298,6 +1389,7 @@ function bindEvents() {
     await loadSnapshot(true);
     render();
   });
+  byId("retrySnapshot").addEventListener("click", () => byId("refreshData").click());
   byId("exportCsv").addEventListener("click", exportCsv);
   byId("togglePanel").addEventListener("click", toggleDetailPanel);
   byId("toggleSidebar").addEventListener("click", toggleSidebar);

@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.svg?v=20260925-2" type="image/svg+xml" sizes="any" />
     <link rel="stylesheet" href="styles.css?v=20261002-3" />
     <link rel="stylesheet" href="tabs.css?v=20261002-2" />
-    <link rel="stylesheet" href="desk-cleanup.css?v=20261002-2" />
+    <link rel="stylesheet" href="desk-cleanup.css?v=20261009-2" />
     <link rel="stylesheet" href="technology.css?v=20261008-3" />
     <link rel="stylesheet" href="research.css?v=20261008-3" />
     <link rel="stylesheet" href="appearance.css?v=20261002-2" />
@@ -31,7 +31,7 @@
             <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
               <path d="M8.5 3a5.5 5.5 0 0 1 4.383 8.86l3.629 3.63a1 1 0 0 1-1.414 1.414l-3.63-3.63A5.5 5.5 0 1 1 8.5 3Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
             </svg>
-            <input id="tickerSearch" type="search" placeholder="Search a ticker or company…" aria-label="Search ticker or company" title="Prefix a ticker with $ for an exact match" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" />
+            <input id="tickerSearch" type="search" placeholder="Ticker or company…" aria-label="Search ticker or company" title="Prefix a ticker with $ for an exact match" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" />
             <button id="clearFocus" class="search-clear" type="button" aria-label="Clear search" hidden>Clear</button>
           </div>
 
@@ -312,37 +312,41 @@
             <div class="section-head compact">
               <div>
                 <h2 id="ranking-heading">Discovery board</h2>
-                <p id="rankSubhead">Loading the latest snapshot…</p>
+                <p id="rankSubhead" role="status">Loading the latest snapshot…</p>
               </div>
+              <label class="board-sort" for="rankMode"><span>Sort by</span><select id="rankMode"><option value="signal">Research score</option><option value="mentions">Attention activity</option><option value="momentum">Attention change</option></select></label>
               <button id="togglePanel" class="panel-toggle" type="button" aria-pressed="false" aria-controls="detailPanel">Hide details</button>
             </div>
             <div class="board-toolbar">
               <div class="board-filters">
                 <div class="cap-toggle" role="group" aria-label="Attention filter">
-                  <button id="attnAttention" type="button" aria-pressed="false">Big attention</button>
-                  <button id="attnQuiet" type="button" aria-pressed="false">Quiet movers</button>
+                  <button id="attnAll" type="button" aria-pressed="true">All</button>
+                  <button id="attnAttention" type="button" aria-pressed="false" title="Higher social and news activity within this snapshot">Big attention</button>
+                  <button id="attnQuiet" type="button" aria-pressed="false" title="Market activity with less social and news attention">Quiet movers</button>
                   <button id="watchFilter" type="button" aria-pressed="false">Watchlist</button>
                 </div>
               </div>
-              <label class="board-sort" for="rankMode"><span>Sort by</span><select id="rankMode"><option value="signal">Setup score</option><option value="mentions">Attention activity</option><option value="momentum">Attention change</option></select></label>
             </div>
-            <div class="table-scroll">
-              <table>
+            <p id="boardGuide" class="board-guide">Choose a stock to see the evidence and your next research steps.</p>
+            <div id="boardCoverage" class="board-coverage" role="status" hidden></div>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Discovery stock list" aria-describedby="boardGuide">
+              <table aria-label="Stocks ranked for research">
                 <thead>
                   <tr>
-                    <th>Rank</th>
-                    <th>Ticker</th>
-                    <th class="sort-active" data-sort="signal" aria-sort="descending">Setup</th>
-                    <th>Public quote</th>
-                    <th data-sort="momentum">Attention Δ</th>
-                    <th class="col-tertiary">Market</th>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col" class="sort-active" data-sort="signal" aria-sort="descending" title="Research priority out of 100, not a return forecast">Score /100</th>
+                    <th scope="col">Saved quote</th>
+                    <th scope="col" data-sort="momentum">Attention Δ</th>
+                    <th scope="col" class="col-tertiary">Market</th>
                   </tr>
                 </thead>
                 <tbody id="rankingBody"></tbody>
               </table>
             </div>
-            <div id="boardEmpty" class="board-empty" hidden><h3>No matching stocks</h3><p>Try another search or clear your filters to see the full snapshot.</p><button id="resetView" class="panel-toggle" type="button">Clear search & filters</button></div>
+            <div id="boardEmpty" class="board-empty" hidden><h3>No matching stocks</h3><p>Try another search or clear your filters to see the full snapshot.</p><button id="resetView" class="panel-toggle" type="button">Clear search & filters</button><button id="retrySnapshot" class="panel-toggle" type="button" hidden>Retry loading data</button></div>
             <button id="moreTickers" class="board-more" type="button" aria-controls="rankingBody" aria-expanded="false" hidden>Show all tickers</button>
+            <p class="board-footnote">Scores prioritize research, not returns. <span>☆ saves to this browser.</span></p>
           </div>
 
           <aside id="detailPanel" class="side-panel" aria-label="Selected stock detail">
@@ -412,7 +416,7 @@
     <script src="technology-model.js?v=20261009-1"></script>
     <script src="research-model.js?v=20261009-1"></script>
     <script src="research-views.js?v=20261009-1"></script>
-    <script src="script.js?v=20261009-1"></script>
+    <script src="script.js?v=20261009-2"></script>
     <script src="enhancements.js?v=20261009-1"></script>
     <script src="adoption.js?v=20261009-1"></script>
     <script src="springs.js?v=20261009-1"></script>
@@ -421,7 +425,7 @@
     <script src="clusters.js?v=20261009-1"></script>
     <script src="calibration.js"></script>
     <script src="alerts.js?v=20261002-2"></script>
-    <script src="layout-fix.js?v=20261002-2"></script>
+    <script src="layout-fix.js?v=20261009-2"></script>
     <script src="declutter.js?v=20260925-1"></script>
     <script src="tabs.js?v=20261002-1"></script>
   </body>
