@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T11:35:34.352Z",
+  "generatedAt": "2026-10-09T11:29:49.615Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
       "sourceUrl": "https://www.t-mobile.com/news/category/network",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -42,8 +42,8 @@
       "sourceUrl": "https://www.t-mobile.com/coverage/satellite-phone-service",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -72,8 +72,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -157,14 +157,14 @@
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:41:33.808Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-09T11:29:49.615Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "b15229b93e09fbfd8eda1d681e6702c4ba17b98c2d7c802e2a587188e0590fe5",
+      "fingerprint": "b92f4c38347e346a29920401065baabb41824262de35d4f84e334f86429c3cde",
       "items": [
         {
           "url": "https://ir.quantumscape.com/news-releases/news-release-details/former-us-air-force-chief-scientist-dr-mark-maybury-joins",
@@ -179,6 +179,10 @@
           "title": "QuantumScape Announces Agreement with Honda on Solid-State Battery Technology"
         },
         {
+          "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-qs-powerblock-rack-energy-storage-ai-data",
+          "title": "QuantumScape Announces QS PowerBlock for In-Rack Energy Storage in AI Data Centers"
+        },
+        {
           "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-timing-first-quarter-2026-business",
           "title": "QuantumScape Announces Timing of First Quarter 2026 Business Results and Webcast"
         },
@@ -187,20 +191,16 @@
           "title": "QuantumScape Announces Timing of Second Quarter 2026 Business Results and Webcast"
         },
         {
+          "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-timing-third-quarter-2026-business",
+          "title": "QuantumScape Announces Timing of Third Quarter 2026 Business Results and Webcast"
+        },
+        {
           "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-appoints-defense-executive-ross-niebergall-board",
           "title": "QuantumScape Appoints Defense Executive Ross Niebergall to Board of Directors"
         },
         {
-          "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-inaugurates-eagle-line-solid-state-battery-pilot",
-          "title": "QuantumScape Inaugurates Eagle Line for Solid-State Battery Pilot Production"
-        },
-        {
           "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-first-quarter-2026-business-and-financial",
           "title": "QuantumScape Reports First Quarter 2026 Business and Financial Results"
-        },
-        {
-          "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-fourth-quarter-2025-business-and-financial",
-          "title": "QuantumScape Reports Fourth Quarter 2025 Business and Financial Results"
         },
         {
           "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-second-quarter-2026-business-and-financial",
@@ -217,23 +217,25 @@
         "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-inaugurates-eagle-line-solid-state-battery-pilot",
         "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-first-quarter-2026-business-and-financial",
         "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-fourth-quarter-2025-business-and-financial",
-        "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-second-quarter-2026-business-and-financial"
+        "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-reports-second-quarter-2026-business-and-financial",
+        "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-qs-powerblock-rack-energy-storage-ai-data",
+        "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-timing-third-quarter-2026-business"
       ],
       "matchedItems": 10,
       "extractedEntries": 10,
       "newestPublicationAt": null,
-      "excerpt": "News Releases QuantumScape Reports Second Quarter 2026 Business and Financial Results SAN JOSE, Calif., July 22, 2026 (GLOBE NEWSWIRE) -- QuantumScape Corporation (NASDAQ: QS), a global leader in next-generation solid-state lithium-metal ba",
+      "excerpt": "News Releases QuantumScape Announces Timing of Third Quarter 2026 Business Results and Webcast SAN JOSE, Calif., Oct. 08, 2026 (GLOBE NEWSWIRE) -- QuantumScape Corporation (NASDAQ: QS), a global leader in next-generation solid-state lithium",
       "title": "News Releases | QuantumScape",
-      "etag": "\"1791393702\"",
-      "lastModified": "Wed, 07 Oct 2026 17:21:42 GMT"
+      "etag": "\"1791491074\"",
+      "lastModified": "Thu, 08 Oct 2026 20:24:34 GMT"
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -255,8 +257,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
@@ -285,8 +287,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -312,7 +314,7 @@
       "newestPublicationAt": null,
       "excerpt": "Rogers Satellite Connect where towers don’t reach. Our satellite-to-mobile service keeps you connected where it wasn’t possible before. Get Rogers Satellite on us with new 5G+ mobile plans 1 For all Canadians, on any provider. Get Rogers Sa",
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b9f-3+ji0qLRPK9RSZHE8p5OdhOk1Vo\"",
+      "etag": "W/\"29b94-0RKq6k/bFn3E2CJ8sksfBfLPdTw\"",
       "lastModified": null
     },
     "meta-news": {
@@ -320,8 +322,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
@@ -354,16 +356,16 @@
       "newestPublicationAt": "2026-10-08T05:49:36.000Z",
       "excerpt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"9110ccd2a3fa5b95e2f674122b186445\"",
-      "lastModified": "Thu, 08 Oct 2026 07:23:48 GMT"
+      "etag": "W/\"f8ae132736e625e8fd86710247187530\"",
+      "lastModified": "Thu, 08 Oct 2026 16:58:11 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -414,38 +416,40 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-08T11:35:34.352Z",
+      "lastChangedAt": "2026-10-09T11:29:49.615Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "634017ff80b57316c23b77a0015e0a1e1445fc609a737badc7141e513eda7a5e",
+      "fingerprint": "312afbb66d4d3b7094d642ee498a47ed96ee9c4236a312749a07f71bf1eacf67",
       "items": [
-        {
-          "url": "https://waymo.com/blog/2026/09/transit-rewards",
-          "title": "Read more: Introducing transit rewards"
-        },
-        {
-          "url": "https://waymo.com/blog/2026/09/waymo-in-singapore",
-          "title": "Read more: Singapore, Next Stop: Bringing Scalable, Safe Autonomous Mobility to the Lion City"
-        },
         {
           "url": "https://waymo.com/blog/2026/10/incident-management-exercises",
           "title": "Read more: Preparing for the Unexpected: A New Framework for AV Incident Management Exercises"
+        },
+        {
+          "url": "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
+          "title": "Read more: Sober Drivers Still Face Nearly 4x Nighttime Risk: Why Road Safety Demands a Safe System Approach"
+        },
+        {
+          "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
+          "title": "Read more: Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion"
         }
       ],
       "seenLinks": [
         "https://waymo.com/blog/2026/09/allianzpartnership",
         "https://waymo.com/blog/2026/09/transit-rewards",
         "https://waymo.com/blog/2026/09/waymo-in-singapore",
-        "https://waymo.com/blog/2026/10/incident-management-exercises"
+        "https://waymo.com/blog/2026/10/incident-management-exercises",
+        "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
+        "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing"
       ],
       "matchedItems": 3,
       "extractedEntries": 3,
       "newestPublicationAt": null,
-      "excerpt": "Preparing for the Unexpected: A New Framework for AV Incident Management Exercises Every driver — human or autonomous — can encounter the unexpected. The best time to work out how to respond to an emergency is before it happens. The Waymo T",
+      "excerpt": "Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion Today, Waymo closed a $5 billion term loan, marking our first debt financing and an important step in our evolution into a scaling commercial enterprise. Steve Fieler, ",
       "title": "Waypoint - The official Waymo blog",
       "etag": null,
       "lastModified": null
@@ -455,31 +459,25 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-08T11:35:34.352Z",
+      "lastChangedAt": "2026-10-09T11:29:49.615Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "053e47a6c1229fc106a4480f9cb8fd14fe68e0760ff53f555617816c68f1c441",
+      "fingerprint": "819c0e90332e94cfd29beecd51aeb45f1eeeaa938692257928d19ccbe5bb2cf7",
       "items": [
         {
-          "url": "https://www.fcc.gov/edoc/425692",
-          "title": "Chairman Carr Proposes Transformation in Connectivity",
-          "excerpt": "Meeting proposals to unleash wireless services for terrestrial, satellite, and drones.",
+          "url": "https://www.fcc.gov/edoc/425711",
+          "title": "Modernizing the Supplemental Coverage from Space Rules",
+          "excerpt": "This is not a final, adopted action. This has been circulated for tentative consideration by the Commission at its Open Meeting. The issues referenced and the Commission's ultimate resolution of those issues are subject to change.",
           "publishedAt": null
         },
         {
-          "url": "https://www.fcc.gov/edoc/425674",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/425675",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
+          "url": "https://www.fcc.gov/edoc/425716",
+          "title": "Wireless Telecommunications Bureau Establishes A New Docket And The Process For Comment On Eligible Space Station Operator Transition Plans",
+          "excerpt": "With this Public Notice, the Wireless Telecommunications Bureau (WTB) establishes GN Docket No. 26-289, which is captioned Eligible Satellite Operator Transition Plans for the Upper C-Band.",
           "publishedAt": null
         }
       ],
@@ -489,10 +487,12 @@
         "https://www.fcc.gov/edoc/425636",
         "https://www.fcc.gov/edoc/425692",
         "https://www.fcc.gov/edoc/425674",
-        "https://www.fcc.gov/edoc/425675"
+        "https://www.fcc.gov/edoc/425675",
+        "https://www.fcc.gov/edoc/425711",
+        "https://www.fcc.gov/edoc/425716"
       ],
-      "matchedItems": 3,
-      "extractedEntries": 32,
+      "matchedItems": 2,
+      "extractedEntries": 23,
       "newestPublicationAt": null,
       "excerpt": null,
       "title": "FCC releases",
@@ -504,15 +504,27 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-07T11:19:04.056Z",
+      "lastChangedAt": "2026-10-09T11:29:49.615Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "7b75d5dcddd99d744dba9bcd5813b75b394741e38fa3bf8321af175bada01a16",
+      "fingerprint": "ea6b907031f697401d50972efe0bd2780ee44dda9c6e7a5021ef7e3213a38293",
       "items": [
+        {
+          "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+          "title": "NSF–UKRI metascience statement",
+          "excerpt": "The United States National Science Foundation (NSF) and United Kingdom Research and Innovation (UKRI) have long advanced knowledge through the ingenuity of our researchers and the institutions that enable them. Both UKRI and NSF intend to b",
+          "publishedAt": "2026-10-08T13:26:57.000Z"
+        },
+        {
+          "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+          "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+          "excerpt": "The U.S. National Science Foundation today announced plans to launch a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age , the first comprehensive rethinking o",
+          "publishedAt": "2026-10-08T13:45:03.000Z"
+        },
         {
           "url": "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real",
           "title": "Podcast: Could holographic 3D printing be real?",
@@ -580,12 +592,6 @@
           "publishedAt": "2026-08-26T16:09:28.000Z"
         },
         {
-          "url": "https://www.nsf.gov/news/eight-nsf-research-institutes-propel-us-quantum-science-290m",
-          "title": "Eight NSF research institutes to propel U.S. quantum science with $290M investment",
-          "excerpt": "Understanding and wielding the quantum properties of nature is the ambitious objective of eight research institutes that will collectively receive more than $290 million from the U.S. National Science Foundation. The investment is an expans",
-          "publishedAt": "2026-08-25T14:00:08.000Z"
-        },
-        {
           "url": "https://www.nsf.gov/news/podcast-educator-wins-presidential-ai-challenge",
           "title": "Podcast: Educator wins Presidential AI Challenge",
           "excerpt": "U.S. National Science Foundation-supported researchers are behind an educational effort to introduce artificial intelligence techniques to elementary school children...",
@@ -596,12 +602,6 @@
           "title": "Podcast: Researchers bring AI to elementary schoolers",
           "excerpt": "Researchers discuss the challenges of introducing artificial intelligence concepts into elementary school curriculum and how the project led to a win in the inaugural Presidential AI Challenge...",
           "publishedAt": "2026-08-25T17:31:01.000Z"
-        },
-        {
-          "url": "https://www.nsf.gov/news/nsf-announces-15b-foundational-research-drive-scientific",
-          "title": "NSF announces $1.5B for foundational research to drive scientific breakthroughs for American technological leadership",
-          "excerpt": "The U.S. National Science Foundation today released 12 new notices of funding opportunities (NOFOs) providing over $1.5 billion for foundational research, including basic and use-inspired inquiry...",
-          "publishedAt": "2026-08-17T15:00:07.000Z"
         }
       ],
       "seenLinks": [
@@ -620,23 +620,25 @@
         "https://www.nsf.gov/news/podcast-researchers-bring-ai-elementary-schoolers",
         "https://www.nsf.gov/news/nsf-announces-15b-foundational-research-drive-scientific",
         "https://www.nsf.gov/news/podcast-legacy-survey-space-time-lsst",
-        "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real"
+        "https://www.nsf.gov/news/podcast-could-holographic-3d-printing-be-real",
+        "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+        "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support"
       ],
       "matchedItems": 15,
       "extractedEntries": 15,
-      "newestPublicationAt": "2026-10-06T21:02:14.000Z",
+      "newestPublicationAt": "2026-10-08T13:45:03.000Z",
       "excerpt": null,
       "title": "NSF research news",
-      "etag": "\"1791454985-gzip\"",
-      "lastModified": "Thu, 08 Oct 2026 10:23:05 GMT"
+      "etag": "\"1791524182-gzip\"",
+      "lastModified": "Fri, 09 Oct 2026 05:36:22 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-08T11:35:34.352Z",
       "nextAttemptAt": null,
@@ -1003,26 +1005,80 @@
       "newestPublicationAt": "2026-10-08T04:00:00.000Z",
       "excerpt": null,
       "title": "MIT energy research",
-      "etag": "\"1791458598\"",
-      "lastModified": "Thu, 08 Oct 2026 11:23:18 GMT"
+      "etag": "\"1791545141\"",
+      "lastModified": "Fri, 09 Oct 2026 11:25:41 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
-      "lastChangedAt": "2026-10-08T11:35:34.352Z",
+      "lastChangedAt": "2026-10-09T11:29:49.615Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "0a8c6a19c4abfc7647764b82a6312aa81a83e67628790c5c3edc4d14bc37dc6d",
+      "fingerprint": "dac47958b8d542c706e12709f0524be72c020a8594f3fb442978d6f3229899c6",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03116-w",
+          "title": "Five movements from the edge of the singularity",
+          "excerpt": "",
+          "publishedAt": "2026-10-09"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11266-0",
+          "title": "Author Correction: Histone readers MLLT1 and MLLT3 concentrate AID to confer locus specificity",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11070-w",
+          "title": "Editorial Expression of Concern: Maternal gut bacteria promote neurodevelopmental abnormalities in mouse offspring",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03218-5",
+          "title": "Women are talking about menopause — health systems must listen",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02921-7",
+          "title": "US proposes $100,000 charge for international students to do post-graduate work",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03193-x",
+          "title": "How to build a mouse: embryo development captured in stunning detail",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03045-8",
           "title": "Woody ‘blankets’ are being deployed on Arctic permafrost to reduce carbon emissions",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03128-6",
+          "title": "Will AI scoop your science? Some researchers see a gloomy future",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03215-8",
+          "title": "Plague scare: what scientists know — and what Russia won’t say",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03199-5",
+          "title": "Big dogs age faster than little ones — rogue ‘jumping genes’ might be to blame",
           "excerpt": "",
           "publishedAt": "2026-10-08"
         },
@@ -1117,6 +1173,12 @@
           "publishedAt": "2026-10-07"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03212-x",
+          "title": "Daily briefing: Chemistry Nobel goes to mirror-molecule researchers",
+          "excerpt": "",
+          "publishedAt": "2026-10-07"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03132-w",
           "title": "Can your brain grow new neurons? How researchers are solving a century-old puzzle",
           "excerpt": "",
@@ -1154,7 +1216,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03093-0",
-          "title": "Chemistry Nobel for solving mystery of how ‘handed’ organic molecules can emerge",
+          "title": "Chemistry Nobel awarded for solving mystery of how ‘handed’ organic molecules can emerge",
           "excerpt": "",
           "publishedAt": "2026-10-07"
         },
@@ -1409,66 +1471,6 @@
           "title": "Circular DNA exposes a weakness in cancer cells",
           "excerpt": "",
           "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03150-8",
-          "title": "Flu season could kick off ‘incredibly’ early — what scientists are watching",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03092-1",
-          "title": "Nobel physics prize awarded for detection of cosmic neutrinos",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02967-7",
-          "title": "Brain organoids grafted into cortex-free mice will advance human brain research",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03130-y",
-          "title": "How to mobilize the agile science needed in a crisis",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03094-z",
-          "title": "‘What took them so long?’ This year’s medicine Nobel winner is overdue",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03157-1",
-          "title": "The top cancer success stories of the past 50 years, by the numbers",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03185-x",
-          "title": "Daily briefing: Medicine Nobel prize goes to optogenetics",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03091-2",
-          "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03134-8",
-          "title": "How big tech is building a military–industrial complex in the age of AI",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03135-7",
-          "title": "AI biohazard hype must not divert attention from the real risks we face now",
-          "excerpt": "",
-          "publishedAt": "2026-10-05"
         }
       ],
       "seenLinks": [
@@ -1623,14 +1625,24 @@
         "https://www.nature.com/articles/s41586-026-11142-x",
         "https://www.nature.com/articles/s41586-026-11067-5",
         "https://www.nature.com/articles/s41586-026-11121-2",
-        "https://www.nature.com/articles/d41586-026-03190-0"
+        "https://www.nature.com/articles/d41586-026-03190-0",
+        "https://www.nature.com/articles/d41586-026-03116-w",
+        "https://www.nature.com/articles/s41586-026-11266-0",
+        "https://www.nature.com/articles/s41586-026-11070-w",
+        "https://www.nature.com/articles/d41586-026-03218-5",
+        "https://www.nature.com/articles/d41586-026-02921-7",
+        "https://www.nature.com/articles/d41586-026-03193-x",
+        "https://www.nature.com/articles/d41586-026-03128-6",
+        "https://www.nature.com/articles/d41586-026-03215-8",
+        "https://www.nature.com/articles/d41586-026-03199-5",
+        "https://www.nature.com/articles/d41586-026-03212-x"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-08",
+      "newestPublicationAt": "2026-10-09",
       "excerpt": null,
       "title": "Nature research and news",
-      "etag": "\"b045e682550f8de1f626bede1cc1c08d\"",
+      "etag": "\"68046729bb98dcc8bd0fe9b08809e279\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1638,8 +1650,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -2023,8 +2035,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -2408,8 +2420,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-05T11:49:09.276Z",
       "nextAttemptAt": null,
@@ -2794,8 +2806,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3179,8 +3191,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3564,8 +3576,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -3868,8 +3880,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4253,8 +4265,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 3,
       "status": "ok",
-      "lastAttemptAt": "2026-10-08T11:35:34.352Z",
-      "lastSuccessAt": "2026-10-08T11:35:34.352Z",
+      "lastAttemptAt": "2026-10-09T11:29:49.615Z",
+      "lastSuccessAt": "2026-10-09T11:29:49.615Z",
       "baselineAt": "2026-10-03T01:14:00.102Z",
       "lastChangedAt": "2026-10-03T02:05:33.241Z",
       "nextAttemptAt": null,
@@ -4635,6 +4647,234 @@
     }
   },
   "events": [
+    {
+      "id": "c6dd60986ce7e9156121b4ba",
+      "sourceId": "qs-news",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "QuantumScape",
+      "kind": "new-link",
+      "title": "QuantumScape Announces QS PowerBlock for In-Rack Energy Storage in AI Data Centers",
+      "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-qs-powerblock-rack-energy-storage-ai-data",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bdd15b124221ba78dcda0c6e",
+      "sourceId": "qs-news",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "QuantumScape",
+      "kind": "new-link",
+      "title": "QuantumScape Announces Timing of Third Quarter 2026 Business Results and Webcast",
+      "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-timing-third-quarter-2026-business",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3f60dad67c04d52de0d84b1e",
+      "sourceId": "waymo-news",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Waymo",
+      "kind": "new-link",
+      "title": "Read more: Sober Drivers Still Face Nearly 4x Nighttime Risk: Why Road Safety Demands a Safe System Approach",
+      "url": "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dace2850a90e4805568239ef",
+      "sourceId": "waymo-news",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Waymo",
+      "kind": "new-link",
+      "title": "Read more: Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion",
+      "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "094ddec418ce1ec25daf14a6",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Modernizing the Supplemental Coverage from Space Rules",
+      "url": "https://www.fcc.gov/edoc/425711",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "92dabcfcc917e46cd0d15996",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Wireless Telecommunications Bureau Establishes A New Docket And The Process For Comment On Eligible Space Station Operator Transition Plans",
+      "url": "https://www.fcc.gov/edoc/425716",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a538e03282bb7491819e5027",
+      "sourceId": "nsf-research",
+      "themes": [],
+      "owner": "NSF",
+      "kind": "new-link",
+      "title": "NSF–UKRI metascience statement",
+      "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08T13:26:57.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a2acf36f1cda3ac2fb76d23e",
+      "sourceId": "nsf-research",
+      "themes": [],
+      "owner": "NSF",
+      "kind": "new-link",
+      "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08T13:45:03.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b5ca780d46fdcbcc5a6b9b24",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Five movements from the edge of the singularity",
+      "url": "https://www.nature.com/articles/d41586-026-03116-w",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-09",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ac25473d247a93b66f76705a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: Histone readers MLLT1 and MLLT3 concentrate AID to confer locus specificity",
+      "url": "https://www.nature.com/articles/s41586-026-11266-0",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "47d37b8993caa152b08cdcb9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Editorial Expression of Concern: Maternal gut bacteria promote neurodevelopmental abnormalities in mouse offspring",
+      "url": "https://www.nature.com/articles/s41586-026-11070-w",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "167208db75d30d400821eb1b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Women are talking about menopause — health systems must listen",
+      "url": "https://www.nature.com/articles/d41586-026-03218-5",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "469bb1cbd999f891083697a5",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "US proposes $100,000 charge for international students to do post-graduate work",
+      "url": "https://www.nature.com/articles/d41586-026-02921-7",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9689a59073a4e32dc4266ffd",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How to build a mouse: embryo development captured in stunning detail",
+      "url": "https://www.nature.com/articles/d41586-026-03193-x",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a8d2ff6e549c03b07c1020f6",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Will AI scoop your science? Some researchers see a gloomy future",
+      "url": "https://www.nature.com/articles/d41586-026-03128-6",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "07ffcb3bf3fb06b2684c17a7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Plague scare: what scientists know — and what Russia won’t say",
+      "url": "https://www.nature.com/articles/d41586-026-03215-8",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6400df666e052436b9855de9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Big dogs age faster than little ones — rogue ‘jumping genes’ might be to blame",
+      "url": "https://www.nature.com/articles/d41586-026-03199-5",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "13f86c65e90428260c6f518a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Chemistry Nobel goes to mirror-molecule researchers",
+      "url": "https://www.nature.com/articles/d41586-026-03212-x",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "publishedAt": "2026-10-07",
+      "verification": "unreviewed"
+    },
     {
       "id": "a19e823a8ada01f963ecb7fd",
       "sourceId": "meta-news",
