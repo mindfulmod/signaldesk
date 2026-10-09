@@ -56,16 +56,21 @@ export async function saveThemes(themes) {
 }
 
 function closesOf(entry) {
-  return (entry?.rows || []).map((r) => r[3]);
+  return (entry?.rows || []).map((r) => Number.isFinite(r[4]) && (!r[6] || r[6].price === "observed") ? r[3] : null);
 }
 
-// Aligns a member's close series with SPY's by trailing index position
-// (both ledgers are appended daily in the same run, so the last N rows line
-// up on trading days in practice; this is a pragmatic join, not a strict
-// date match).
+// Join observations by date before calculating relative returns. A missing
+// member session must not shift its return window relative to the benchmark.
+export function alignedCloses(entry, benchmarkRows) {
+  const values = closesOf(entry), byDate = new Map((entry?.rows || []).map((r, i) => [r[0], values[i]]));
+  return benchmarkRows.map(r => byDate.get(r[0]) ?? null);
+}
+
+// Inputs must already be date-aligned (the collector uses alignedCloses).
 export function relativeReturn(memberCloses, spyCloses, window = REL_RETURN_WINDOW) {
   const n = Math.min(memberCloses.length, spyCloses.length);
   if (n <= window) return null;
+  if (![...memberCloses.slice(-window - 1), ...spyCloses.slice(-window - 1)].every(Number.isFinite)) return null;
   const memberNow = memberCloses[memberCloses.length - 1];
   const memberThen = memberCloses[memberCloses.length - 1 - window];
   const spyNow = spyCloses[spyCloses.length - 1];
@@ -124,7 +129,7 @@ export function computeDecaySignal(memberCloseSeries, spyCloses, window = DECAY_
   for (let i = minLen - window - 1; i < minLen; i += 1) {
     const spyBase = spyCloses[spyCloses.length - minLen];
     const spyNow = spyCloses[spyCloses.length - minLen + i];
-    if (!Number.isFinite(spyNow) || !Number.isFinite(spyBase) || spyBase <= 0) continue;
+    if (!Number.isFinite(spyNow) || !Number.isFinite(spyBase) || spyBase <= 0) return null;
     const relValues = memberCloseSeries
       .map((closes) => {
         const base = closes[closes.length - minLen];
@@ -133,7 +138,8 @@ export function computeDecaySignal(memberCloseSeries, spyCloses, window = DECAY_
         return now / base - spyNow / spyBase;
       })
       .filter(Number.isFinite);
-    if (relValues.length) index.push(relValues.reduce((s, v) => s + v, 0) / relValues.length);
+    if (relValues.length !== memberCloseSeries.length) return null;
+    index.push(relValues.reduce((s, v) => s + v, 0) / relValues.length);
   }
   if (index.length < window) return null;
   const current = index.at(-1);
@@ -152,7 +158,7 @@ function assignStage({ relBreadthXS, attnBreadthXS, language, decay, membersWith
 
 // Computes universe-wide breadth stats (the beta guard) once, over every
 // ledger ticker with enough history -- not just theme members.
-function universeBreadthStats(ledger, spyCloses) {
+function universeBreadthStats(ledger, spyCloses, benchmarkRows) {
   let relHits = 0;
   let relKnown = 0;
   let newHighHits = 0;
@@ -161,17 +167,17 @@ function universeBreadthStats(ledger, spyCloses) {
   let attnKnown = 0;
 
   for (const entry of Object.values(ledger.tickers || {})) {
-    const closes = closesOf(entry);
+    const closes = alignedCloses(entry, benchmarkRows);
     const rel = relativeReturn(closes, spyCloses);
     if (rel !== null) {
       relKnown += 1;
       if (rel >= REL_RETURN_THRESHOLD) relHits += 1;
     }
-    if (closes.filter(Number.isFinite).length >= NEW_HIGH_YEAR_WINDOW) {
+    if (closes.length >= NEW_HIGH_YEAR_WINDOW + NEW_HIGH_LOOKBACK && closes.slice(-NEW_HIGH_YEAR_WINDOW - NEW_HIGH_LOOKBACK).every(Number.isFinite)) {
       newHighKnown += 1;
       if (madeNewHighRecently(closes)) newHighHits += 1;
     }
-    const hot = isAttentionHot(entry);
+    const hot = entry.rows?.at(-1)?.[0] === benchmarkRows.at(-1)?.[0] ? isAttentionHot(entry) : null;
     if (hot !== null) {
       attnKnown += 1;
       if (hot) attnHits += 1;
@@ -179,9 +185,9 @@ function universeBreadthStats(ledger, spyCloses) {
   }
 
   return {
-    relBreadth: relKnown ? relHits / relKnown : 0,
-    newHighBreadth: newHighKnown ? newHighHits / newHighKnown : 0,
-    attnBreadth: attnKnown ? attnHits / attnKnown : 0,
+    relBreadth: relKnown ? relHits / relKnown : null,
+    newHighBreadth: newHighKnown ? newHighHits / newHighKnown : null,
+    attnBreadth: attnKnown ? attnHits / attnKnown : null,
   };
 }
 
@@ -189,8 +195,9 @@ function universeBreadthStats(ledger, spyCloses) {
 // Layer 0a (build item 6) -- absent for now, so language stays 0 everywhere.
 export function computeThemeHeat(ledger, registry, { phraseVelocity = new Map() } = {}) {
   const spyCloses = closesOf(ledger.tickers?.SPY);
+  const benchmarkRows = ledger.tickers?.SPY?.rows || [];
   const hasSpy = spyCloses.filter(Number.isFinite).length > REL_RETURN_WINDOW;
-  const universe = hasSpy ? universeBreadthStats(ledger, spyCloses) : { relBreadth: 0, newHighBreadth: 0, attnBreadth: 0 };
+  const universe = universeBreadthStats(ledger, spyCloses, benchmarkRows);
 
   const themes = (registry.themes || []).map((theme) => {
     const memberEntries = theme.members.map((m) => ({ ticker: m.t, entry: ledger.tickers?.[m.t] })).filter((m) => m.entry);
@@ -204,7 +211,7 @@ export function computeThemeHeat(ledger, registry, { phraseVelocity = new Map() 
     const memberCloseSeries = [];
 
     for (const { entry } of memberEntries) {
-      const closes = closesOf(entry);
+      const closes = alignedCloses(entry, benchmarkRows);
       if (hasSpy) {
         const rel = relativeReturn(closes, spyCloses);
         if (rel !== null) {
@@ -213,11 +220,11 @@ export function computeThemeHeat(ledger, registry, { phraseVelocity = new Map() 
           memberCloseSeries.push(closes);
         }
       }
-      if (closes.filter(Number.isFinite).length >= NEW_HIGH_YEAR_WINDOW) {
+      if (closes.length >= NEW_HIGH_YEAR_WINDOW + NEW_HIGH_LOOKBACK && closes.slice(-NEW_HIGH_YEAR_WINDOW - NEW_HIGH_LOOKBACK).every(Number.isFinite)) {
         newHighKnown += 1;
         if (madeNewHighRecently(closes)) newHighHits += 1;
       }
-      const hot = isAttentionHot(entry);
+      const hot = entry.rows?.at(-1)?.[0] === benchmarkRows.at(-1)?.[0] ? isAttentionHot(entry) : null;
       if (hot !== null) {
         attnKnown += 1;
         if (hot) attnHits += 1;
@@ -229,21 +236,23 @@ export function computeThemeHeat(ledger, registry, { phraseVelocity = new Map() 
     const newHighBreadth = newHighKnown ? newHighHits / newHighKnown : null;
     const attnBreadth = attnKnown ? attnHits / attnKnown : null;
 
-    const relBreadthXS = relBreadth !== null ? Math.max(0, relBreadth - universe.relBreadth) : 0;
-    const newHighBreadthXS = newHighBreadth !== null ? Math.max(0, newHighBreadth - universe.newHighBreadth) : 0;
-    const attnBreadthXS = attnBreadth !== null ? Math.max(0, attnBreadth - universe.attnBreadth) : 0;
+    const relBreadthXS = relBreadth !== null && universe.relBreadth !== null ? Math.max(0, relBreadth - universe.relBreadth) : null;
+    const newHighBreadthXS = newHighBreadth !== null && universe.newHighBreadth !== null ? Math.max(0, newHighBreadth - universe.newHighBreadth) : null;
+    const attnBreadthXS = attnBreadth !== null && universe.attnBreadth !== null ? Math.max(0, attnBreadth - universe.attnBreadth) : null;
 
     const language = phraseVelocity.get(theme.id)?.score || 0;
     const heat = Math.round(100 * (0.3 * relBreadthXS + 0.25 * newHighBreadthXS + 0.25 * attnBreadthXS + 0.2 * language));
 
     const decay = hasSpy ? computeDecaySignal(memberCloseSeries, spyCloses) : null;
-    const stage = assignStage({ relBreadthXS, attnBreadthXS, language, decay, membersWithData });
+    const complete = hasSpy && [relKnown, newHighKnown, attnKnown].every(n => n >= MIN_MEMBERS_WITH_DATA) && [relBreadthXS, newHighBreadthXS, attnBreadthXS].every(Number.isFinite);
+    const stage = complete ? assignStage({ relBreadthXS, attnBreadthXS, language, decay, membersWithData }) : "insufficient-data";
 
     return {
       id: theme.id,
       name: theme.name,
       stage,
-      heat: membersWithData >= MIN_MEMBERS_WITH_DATA ? heat : null,
+      heat: complete ? heat : null,
+      coverage: { relativeReturn: relKnown, newHigh: newHighKnown, attention: attnKnown, totalMembers: theme.members.length, benchmarkReady: hasSpy },
       evidence: {
         relBreadth,
         newHighBreadth,
@@ -260,6 +269,7 @@ export function computeThemeHeat(ledger, registry, { phraseVelocity = new Map() 
   });
 
   return {
+    integrityVersion: 2,
     generatedAt: new Date().toISOString(),
     languageAvailable: phraseVelocity.size > 0,
     universe,

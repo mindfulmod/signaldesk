@@ -1,5 +1,6 @@
 import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import { loadLedger, saveLedger, updateLedger, articleFromWikipediaUrl } from "./lib/ledger.mjs";
 import { textBetween, attrBetween, countWord, escapeRegExp } from "./lib/xml.mjs";
 import { createHostGuard, hostOf, summariseFailures } from "./lib/host-guard.mjs";
@@ -30,6 +31,7 @@ import {
 } from "./lib/co-mention.mjs";
 import { COMMON_WORD_TICKERS } from "./lib/ticker-noise.mjs";
 import quality from "../data-quality.js";
+import { verifyArticle, stripCorporate } from "./lib/wiki-article.mjs";
 import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
 import {
   loadPhraseHistory,
@@ -457,12 +459,14 @@ async function main() {
         // Fill in a real name + brand aliases for any ticker the SEC map missed.
         if (market.name && market.name !== ticker) enrichRegistryName(ticker, market.name);
         events.push({
+          ...market,
           source: "Price/Volume",
           ticker,
           name: stockName(ticker),
-          title: `${ticker} $${market.lastPrice.toFixed(2)}, price ${signed(market.priceMove)}%, volume ${market.relativeVolume.toFixed(1)}x`,
+          title: `${ticker} $${market.lastPrice.toFixed(2)}, price ${market.priceMove == null ? "unverified" : `${signed(market.priceMove)}%`}, volume ${market.relativeVolume == null ? "unverified" : `${market.relativeVolume.toFixed(1)}x`}`,
           url: `https://finance.yahoo.com/quote/${ticker}`,
-          mentions: Math.max(1, Math.round(Math.abs(market.priceMove) + market.relativeVolume * 3)),
+          mentions: 0,
+          activityUnit: "market observation; not attention",
           sentiment: market.priceMove > 1 ? 0.25 : market.priceMove < -1 ? -0.18 : 0,
           priceMove: market.priceMove,
           relativeVolume: market.relativeVolume,
@@ -511,6 +515,10 @@ async function main() {
     await sleep(150);
   }
 
+  for (const event of events) {
+    event.eventId = createHash("sha256").update(`${event.source}|${event.url}|${event.ticker}`).digest("hex").slice(0, 24);
+    event.observedAt ||= new Date().toISOString();
+  }
   const signals = aggregate(events, previous);
   await enrichMarketCaps(signals, failures);
   await enrichProfiles(signals, failures);
@@ -623,6 +631,7 @@ function slimHistorySnapshot(snapshot) {
   return {
     date: snapshot.date,
     generatedAt: snapshot.generatedAt,
+    sourceHealth: snapshot.sourceHealth || [],
     signals: (snapshot.signals || []).map(slimHistorySignal),
   };
 }
@@ -641,6 +650,7 @@ async function updateHistory(payload) {
   const dailySnapshot = slimHistorySnapshot({
     date,
     generatedAt: payload.generatedAt,
+    sourceHealth: payload.sourceHealth,
     signals: payload.signals,
   });
   const snapshots = existing
@@ -666,7 +676,7 @@ async function redditItems(feed) {
     title: `${data.title || ""} ${data.selftext || ""}`,
     url: data.url_overridden_by_dest || `https://reddit.com${data.permalink}`,
     score: Math.max(1, Math.log10((data.score || 0) + 10) * 3 + (data.num_comments || 0) / 40),
-    published: new Date((data.created_utc || Date.now() / 1000) * 1000).toISOString(),
+    published: data.created_utc ? new Date(data.created_utc * 1000).toISOString() : null,
   }));
 }
 
@@ -784,7 +794,7 @@ async function gdeltMarketNews() {
       title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
       url: item.url || url,
       score: 2,
-      published: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
+      published: item.seendate ? parseGdeltDate(item.seendate) : null,
     }))
     .filter((item) => hasMarketContext(item.title))
     .slice(0, 80);
@@ -873,7 +883,8 @@ async function buildFinraUniverse(failures) {
       name: symbol,
       title: `${symbol} FINRA short volume ${(ratio * 100).toFixed(0)}% of reported volume (${shortVol.toLocaleString()} shares)`,
       url: "https://www.finra.org/finra-data/browse-catalog/short-sale-volume-data/daily-short-sale-volume-files",
-      mentions: Math.max(1, Math.round(ratio * 10 + Math.log10(shortVol + 1))),
+      mentions: 0,
+      activityUnit: "short-sale volume observation; not attention",
       sentiment: ratio > 0.55 ? -0.1 : 0,
       priceMove: 0,
       relativeVolume: 1 + Math.min(2, ratio),
@@ -963,7 +974,7 @@ function discoverTickerMentions(discovery, source, text, url, weight = 1, publis
     const mentions = Math.max(1, Math.round(weight * candidate.confidence));
     existing.mentions += mentions;
     existing.score += mentions + candidate.confidence;
-    existing.events.push({ source, text, url, mentions, published: published || new Date().toISOString() });
+    existing.events.push({ source, text, url, mentions, published: published || null, observedAt: new Date().toISOString() });
     discovery.set(candidate.ticker, existing);
   }
 }
@@ -1151,11 +1162,12 @@ function dedupeEntries(entries) {
 function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
   const market = new Map(); // ticker -> latest Price/Volume snapshot
   for (const event of events) {
-    if (event.source === "Price/Volume" && quality.quoteState(event) === "current") {
+    if (event.source === "Price/Volume" && event.marketMetricsVersion === 2 && Number.isFinite(event.priceMove) && Number.isFinite(event.relativeVolume) && quality.quoteState(event) === "current") {
       market.set(event.ticker, {
+        marketMetricsVersion: 2,
         priceMove: Number(event.priceMove),
         lastPrice: Number(event.lastPrice),
-        relativeVolume: Number(event.relativeVolume) || 1,
+        relativeVolume: event.relativeVolume,
         quoteAsOf: event.quoteAsOf,
       });
     }
@@ -1197,6 +1209,7 @@ function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
     rows.push({
       ticker,
       name: stockName(ticker),
+      marketMetricsVersion: 2,
       priceMove: quote.priceMove,
       lastPrice: Number.isFinite(quote.lastPrice) ? quote.lastPrice : null,
       relativeVolume: quote.relativeVolume,
@@ -1261,11 +1274,13 @@ async function fetchMarket(ticker, failures = null) {
   }
 
   if (yahooMarket && stooqMarket) {
+    if (yahooMarket.quoteAsOf.slice(0, 10) !== stooqMarket.quoteAsOf.slice(0, 10)) return Date.parse(yahooMarket.quoteAsOf) >= Date.parse(stooqMarket.quoteAsOf) ? yahooMarket : stooqMarket;
     const gap = Math.abs(yahooMarket.lastPrice - stooqMarket.lastPrice) / Math.max(0.01, stooqMarket.lastPrice);
     if (gap > 0.25) {
       return {
-        ...stooqMarket,
-        quoteSource: `Stooq public daily quote; Yahoo mismatch ${yahooMarket.lastPrice.toFixed(2)}`,
+        ...yahooMarket,
+        priceMove: null, relativeVolume: null,
+        marketQuality: [...(yahooMarket.marketQuality || []), "Same-day providers disagree; comparison quarantined"],
       };
     }
     return yahooMarket;
@@ -1274,59 +1289,38 @@ async function fetchMarket(ticker, failures = null) {
   return yahooMarket || stooqMarket;
 }
 
-async function fetchYahooMarket(ticker) {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=5d&interval=1d`;
-  const json = await fetchJson(url);
-  const result = json.chart?.result?.[0];
-  if (result?.meta?.symbol && result.meta.symbol.toUpperCase() !== ticker.toUpperCase()) return null;
-  const quote = result?.indicators?.quote?.[0];
-  const closes = (quote?.close || []).filter(Number.isFinite);
-  const volumes = (quote?.volume || []).filter(Number.isFinite);
-  if (closes.length < 2 || volumes.length < 2) return null;
-  const last = Number.isFinite(result?.meta?.regularMarketPrice) ? result.meta.regularMarketPrice : closes.at(-1);
-  const prev = closes.at(-2);
-  const avgVolume = volumes.slice(0, -1).reduce((sum, value) => sum + value, 0) / Math.max(1, volumes.length - 1);
-  const quoteAsOf = result?.meta?.regularMarketTime
-    ? new Date(result.meta.regularMarketTime * 1000).toISOString()
-    : new Date().toISOString();
-  return {
-    lastPrice: last,
-    priceMove: ((last - prev) / prev) * 100,
-    relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
-    volume: volumes.at(-1),
-    quoteAsOf,
-    quoteSource: "Yahoo public chart",
-    name: result?.meta?.longName || result?.meta?.shortName || result?.meta?.symbol || ticker,
-  };
+export async function fetchYahooMarket(ticker) {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=1mo&interval=1d&events=splits`;
+  return parseYahooMarket(await fetchJson(url), ticker);
 }
-
-async function fetchStooqMarket(ticker) {
+export function parseYahooMarket(json, ticker, now = Date.now()) {
+  const result = json.chart?.result?.[0], meta = result?.meta, quote = result?.indicators?.quote?.[0];
+  if (meta?.symbol?.toUpperCase() !== ticker.toUpperCase() || !meta.regularMarketTime || !(meta.regularMarketPrice > 0)) return null;
+  const asOf = new Date(meta.regularMarketTime * 1000).toISOString(), day = asOf.slice(0, 10);
+  const rows = (result.timestamp || []).map((t, i) => ({ date: new Date(t * 1000).toISOString(), close: quote?.close?.[i], volume: quote?.volume?.[i] }));
+  const current = rows.findLast(r => r.date.slice(0, 10) === day);
+  const previous = rows.findLast(r => r.date.slice(0, 10) < day);
+  const baseline = rows.filter(r => r.date.slice(0, 10) < day).slice(-20);
+  const splits = Object.values(result.events?.splits || {});
+  const split = splits.some(e => e.date * 1000 > Date.parse(previous?.date) && e.date * 1000 <= Date.parse(asOf));
+  const volumeSplit = splits.some(e => e.date * 1000 >= Date.parse(baseline[0]?.date) && e.date * 1000 <= Date.parse(asOf));
+  const comparison = quality.marketComparison({ last: meta.regularMarketPrice, previous: previous?.close, asOf, previousAsOf: previous?.date, volumes: volumeSplit ? [] : [...baseline.map(r => r.volume), current?.volume], split, now });
+  return { ...comparison, lastPrice: meta.regularMarketPrice, volume: quality.number(current?.volume), quoteAsOf: asOf,
+    quoteSource: "Yahoo public chart", name: meta.longName || meta.shortName || ticker };
+}
+export async function fetchStooqMarket(ticker) {
   const symbol = `${ticker.toLowerCase()}.us`;
-  const url = `https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&i=d`;
-  const csv = await fetchText(url);
-  const rows = csv
-    .trim()
-    .split(/\r?\n/)
-    .slice(1)
-    .map((line) => line.split(","))
-    .filter((row) => row.length >= 6 && row[4] !== "N/D");
-  if (rows.length < 2) return null;
-  const lastRow = rows.at(-1);
-  const prevRow = rows.at(-2);
-  const last = Number(lastRow[4]);
-  const prev = Number(prevRow[4]);
-  const volumes = rows.slice(-6).map((row) => Number(row[5])).filter(Number.isFinite);
-  if (!Number.isFinite(last) || !Number.isFinite(prev) || !volumes.length) return null;
-  const avgVolume = volumes.slice(0, -1).reduce((sum, value) => sum + value, 0) / Math.max(1, volumes.length - 1);
-  return {
-    lastPrice: last,
-    priceMove: ((last - prev) / prev) * 100,
-    relativeVolume: avgVolume ? volumes.at(-1) / avgVolume : 1,
-    volume: volumes.at(-1),
-    quoteAsOf: `${lastRow[0]}T20:00:00.000Z`,
-    quoteSource: "Stooq public daily quote",
-    name: ticker,
-  };
+  return parseStooqMarket(await fetchText(`https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&i=d`), ticker);
+}
+export function parseStooqMarket(csv, ticker, now = Date.now()) {
+  const rows = csv.trim().split(/\r?\n/).slice(1).map(line => line.split(","))
+    .filter(row => row.length >= 6 && /^\d{4}-\d{2}-\d{2}$/.test(row[0])).sort((a,b) => a[0].localeCompare(b[0]));
+  const last = rows.at(-1), previous = rows.at(-2);
+  if (!last || !(Number(last[4]) > 0)) return null;
+  const asOf = `${last[0]}T20:00:00.000Z`;
+  return { ...quality.marketComparison({ last: last[4], previous: previous?.[4], asOf, previousAsOf: previous?.[0],
+    volumes: rows.slice(-21).map(r => r[5]), basis: "provider daily; corporate-action basis unverified", now }),
+    lastPrice: Number(last[4]), volume: quality.number(last[5]), quoteAsOf: asOf, quoteSource: "Stooq public daily quote", name: ticker };
 }
 
 function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
@@ -1363,7 +1357,8 @@ function collectMentions(events, source, text, url, weight = 1, published = "", 
         lastPrice: null,
         quoteAsOf: null,
         quoteSource: null,
-        published: published || new Date().toISOString(),
+        published: published || null,
+        observedAt: new Date().toISOString(),
       });
     }
   }
@@ -1439,7 +1434,7 @@ async function collectStockTwitsSentiment(events, failures, ticker, name) {
         lastPrice: null,
         quoteAsOf: null,
         quoteSource: null,
-        published: message?.created_at || new Date().toISOString(),
+        published: message?.created_at || null,
       });
     }
   } catch (error) {
@@ -1547,7 +1542,7 @@ async function collectHackerNews(events, failures, ticker, name) {
         lastPrice: null,
         quoteAsOf: null,
         quoteSource: null,
-        published: hit?.created_at || new Date().toISOString(),
+        published: hit?.created_at || null,
       });
     }
   } catch (error) {
@@ -1568,7 +1563,7 @@ async function collectFourChanBiz(events, failures, discovery) {
         const url = thread?.no ? `https://boards.4chan.org/biz/thread/${thread.no}` : "https://boards.4chan.org/biz/";
         // replies count gives a rough "how active" weight, capped to avoid swamping.
         const weight = Math.min(5, 1 + Math.round((Number(thread?.replies) || 0) / 40));
-        collectMentions(events, "4chan", text, url, weight, new Date().toISOString(), "", discovery);
+        collectMentions(events, "4chan", text, url, weight, thread.time ? new Date(thread.time * 1000).toISOString() : "", "", discovery);
         scanned += 1;
       }
     }
@@ -1617,85 +1612,38 @@ function rankHeadlines(items) {
   });
 }
 
-function aggregate(events, previous) {
-  const previousByTicker = new Map((previous?.signals || []).map((item) => [item.ticker, item]));
+export function aggregate(events, previous) {
+  const previousByTicker = new Map((previous?.signals || []).map(item => [item.ticker, item]));
+  const previousCoverage = (previous?.sourceHealth || []).filter(s => ["covered", "no-matches"].includes(s.state)).map(s => s.source);
   const map = new Map();
   for (const event of events) {
-    const item =
-      map.get(event.ticker) ||
-      {
-        ticker: event.ticker,
-        name: event.name,
-        mentions: 0,
-        weightedSentiment: 0,
-        weightedPrice: 0,
-        weightedVolume: 0,
-        lastPrice: previousByTicker.get(event.ticker)?.lastPrice ?? null,
-        quoteAsOf: previousByTicker.get(event.ticker)?.quoteAsOf ?? null,
-        quoteSource: previousByTicker.get(event.ticker)?.quoteSource ?? null,
-        sources: Object.fromEntries(SOURCES.map((source) => [source, 0])),
-        latest: [],
-      };
-    item.mentions += event.mentions;
-    item.weightedSentiment += event.sentiment * event.mentions;
-    item.weightedPrice += event.priceMove * event.mentions;
-    item.weightedVolume += event.relativeVolume * event.mentions;
-    if (Number.isFinite(event.lastPrice)) {
-      item.lastPrice = event.lastPrice;
-      item.quoteAsOf = event.quoteAsOf;
-      item.quoteSource = event.quoteSource;
+    const isMarket = quality.MARKET_SOURCES.includes(event.source);
+    const weight = isMarket ? 0 : Math.max(0, Number(event.mentions) || 0);
+    const prior = previousByTicker.get(event.ticker);
+    const item = map.get(event.ticker) || {
+      ticker: event.ticker, name: event.name, mentions: 0, weightedSentiment: 0,
+      lastPrice: prior?.lastPrice ?? null, quoteAsOf: prior?.quoteAsOf ?? null, quoteSource: prior?.quoteSource ?? null,
+      priceMove: null, relativeVolume: null, marketMetricsVersion: 2, marketQuality: ["No current market observation"],
+      sources: Object.fromEntries(SOURCES.map(source => [source, 0])), latest: [],
+    };
+    item.mentions += weight;
+    item.weightedSentiment += (Number(event.sentiment) || 0) * weight;
+    item.sources[event.source] = (item.sources[event.source] || 0) + (isMarket ? 1 : weight);
+    if (event.source === "Price/Volume" && event.marketMetricsVersion === 2 && Number.isFinite(event.lastPrice)) {
+      for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume"]) item[key] = event[key] ?? null;
     }
-    item.sources[event.source] = (item.sources[event.source] || 0) + event.mentions;
-    item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published });
+    item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published, observedAt: event.observedAt || null });
     map.set(event.ticker, item);
   }
-
-  const maxMentions = Math.max(1, ...[...map.values()].map((item) => item.mentions));
-  return [...map.values()]
-    .map((item) => {
-      const prev = previousByTicker.get(item.ticker)?.mentions || 0;
-      // No prior snapshot to compare against = unknown acceleration, not a
-      // made-up default. null renders as "new" and scores as neutral; the old
-      // +35 placeholder was displayed as if measured and boosted every
-      // first-appearance ticker's rank.
-      const momentum = prev ? ((item.mentions - prev) / prev) * 100 : null;
-      const sentiment = item.mentions ? item.weightedSentiment / item.mentions : 0;
-      const priceMove = item.mentions ? item.weightedPrice / item.mentions : 0;
-      const relativeVolume = item.mentions ? item.weightedVolume / item.mentions : 1;
-      const sourceBreadth = SOURCES.filter((source) => item.sources[source] > 0).length / SOURCES.length;
-      const shortPressure = clamp(0, 1, (item.sources["FINRA Short Volume"] || 0) / Math.max(8, item.mentions));
-      const signalScore = clamp(
-        0,
-        100,
-        27 * Math.sqrt(item.mentions / maxMentions) +
-          20 * clamp(0, 1, (momentum ?? 0) / 80 + 0.25) +
-          17 * clamp(0, 1, (sentiment + 0.25) / 0.7) +
-          12 * clamp(0, 1, priceMove / 6) +
-          9 * clamp(0, 1, relativeVolume / 2.5) +
-          9 * sourceBreadth +
-          6 * shortPressure
-      );
-      const rankedHeadlines = rankHeadlines(item.latest);
-      return {
-        ticker: item.ticker,
-        name: item.name,
-        mentions: item.mentions,
-        momentum,
-        sentiment,
-        priceMove,
-        lastPrice: item.lastPrice,
-        quoteAsOf: item.quoteAsOf,
-        quoteSource: item.quoteSource,
-        relativeVolume,
-        optionsActivity: 0,
-        signalScore,
-        sources: item.sources,
-        topHeadline: pickTopHeadline(rankedHeadlines),
-        latest: rankedHeadlines.slice(0, 6),
-      };
-    })
-    .sort((a, b) => b.signalScore - a.signalScore)
-    .slice(0, 75);
+  const items = [...map.values()].map(item => {
+    const prior = previousByTicker.get(item.ticker), ranked = rankHeadlines(item.latest);
+    const signal = { ...item, sentiment: item.mentions ? item.weightedSentiment / item.mentions : null,
+      previousSources: prior?.sources || null, previousCoverage, optionsActivity: 0,
+      activityUnit: "weighted attention (not post counts)", topHeadline: pickTopHeadline(ranked), latest: ranked.slice(0, 6) };
+    delete signal.weightedSentiment;
+    return quality.scopeSignal(quality.normalizeSignal(signal), SOURCES);
+  });
+  return quality.scoreSignals(items).sort((a,b) => b.signalScore - a.signalScore).slice(0, 75);
 }
 
 function scoreSentiment(text) {
@@ -1861,6 +1809,7 @@ async function enrichProfiles(signals, failures) {
       const profile = await fetchCompanyBlurb(signal.name, signal.ticker);
       if (profile?.extract) {
         signal.description = profile.extract;
+        signal.profileIdentityVersion = 2;
         signal.descriptionUrl = profile.url || null;
       }
     } catch (error) {
@@ -1943,48 +1892,13 @@ async function fetchCompanyBlurb(name, ticker) {
   return null;
 }
 
-const COMPANY_STOPWORDS = new Set([
-  "the", "inc", "incorporated", "corp", "corporation", "company", "co", "ltd",
-  "limited", "plc", "llc", "lp", "sa", "ag", "nv", "holdings", "holding", "group",
-  "class", "common", "stock", "ordinary", "shares", "share", "new", "ny",
-]);
-
-// One-line Wikidata descriptions that signal the article is NOT a business/fund.
-const NON_COMPANY_DESCRIPTION = /\b(city|town|village|township|municipality|county|borough|hamlet|district|region|province|island|river|lake|mountain|peak|ocean|sea|desert|valley|park|species|genus|plant|animal|bird|fish|insect|dinosaur|mineral|apparatus|instrument|arena|stadium|venue|amphitheatre|amphitheater|skyscraper|bridge|castle|palace|church|cathedral|temple|mosque|film|movie|tv series|web series|miniseries|sitcom|album|song|single|soundtrack|music group|musical group|girl group|boy group|vocal group|rock band|pop band|band|novel|magazine|newspaper|video game|comic|character|deity|goddess|mytholog|saint|emperor|princess|footballer|cricketer|actor|actress|singer|rapper|musician|composer|painter|poet|politician|senator|philosopher|given name|surname|family name|language|dialect|battle|treaty|university|college|polytechnic|academy|degree mill|lawsuit|antitrust|court case|legal case)\b/;
-// Strong business terms that override the backstop (e.g. "American film studio company").
-const COMPANY_DESCRIPTION = /\b(compan|corporation|incorporated|firm|manufactur|supplier|retailer|bank|insurer|insurance|conglomerate|enterprise|fund|etf|exchange-traded|trust|fintech|biotech|pharmaceutical|technolog|software|semiconductor|airline|automaker|provider|operator|holding)\b/;
-
-// Guard against the opensearch returning a lexically-close but semantically-wrong
-// article. Require the company name and the article title to actually line up, then
-// reject titles whose one-line description is clearly a non-company topic.
-function isCompanyMatch(query, summary) {
-  const tokens = (value) =>
-    String(value || "")
-      .toLowerCase()
-      .replace(/[^a-z0-9 ]+/g, " ")
-      .split(/\s+/)
-      .filter((word) => word && !COMPANY_STOPWORDS.has(word));
-  const qTokens = tokens(query);
-  const tTokens = new Set(tokens(summary.title));
-  if (!qTokens.length || !tTokens.size) return false;
-  const description = String(summary.description || "").toLowerCase();
-  // The article title must line up with the company name. A short Wikipedia title
-  // ("AbCellera") still matches "AbCellera Biologics" (title ⊆ name). But when the title
-  // carries EXTRA significant words — "Advanced Micro Devices, Inc. v. Intel Corp." (a
-  // lawsuit) or "Atlantic International University" (a degree mill) — only trust it if the
-  // title still contains the whole name AND the one-liner positively reads as a company.
-  const queryInTitle = qTokens.every((word) => tTokens.has(word));
-  const titleInQuery = [...tTokens].every((word) => qTokens.includes(word));
-  if (!titleInQuery) {
-    if (!queryInTitle) return false;
-    if (!COMPANY_DESCRIPTION.test(description)) return false;
-  }
-  // Category backstop: reject places/objects/works/people/bands/schools/legal cases
-  // unless the description also carries a clear business term.
-  if (description && NON_COMPANY_DESCRIPTION.test(description) && !COMPANY_DESCRIPTION.test(description)) {
-    return false;
-  }
-  return true;
+// Require both a business/fund and the same issuer identity; lexical overlap
+// alone cannot distinguish Applied Digital from the unrelated historical ADDS.
+export function isCompanyMatch(query, summary) {
+  if (!verifyArticle(query, summary, { minOverlap: 1 }).ok) return false;
+  const name = stripCorporate(query).join(" ");
+  const title = stripCorporate(summary.title.replace(/\s*\([^)]*\)\s*$/, "")).join(" ");
+  return name === title || String(summary.extract || "").toLowerCase().startsWith(String(query).toLowerCase());
 }
 
 function trimToSentences(text, maxSentences, maxChars) {
@@ -2076,8 +1990,8 @@ async function updateLedgerFromRun({ events, signals, failures }) {
   const priceByTicker = new Map();
   for (const event of events) {
     if (!event.ticker) continue;
-    mentionsByTicker.set(event.ticker, (mentionsByTicker.get(event.ticker) || 0) + (Number(event.mentions) || 0));
-    if (event.source === "Price/Volume" && Number.isFinite(event.lastPrice)) {
+    if (!quality.MARKET_SOURCES.includes(event.source)) mentionsByTicker.set(event.ticker, (mentionsByTicker.get(event.ticker) || 0) + (Number(event.mentions) || 0));
+    if (event.source === "Price/Volume" && Number.isFinite(event.priceMove) && event.quoteAsOf?.slice(0, 10) === dateStr && Number.isFinite(event.lastPrice)) {
       priceByTicker.set(event.ticker, { close: event.lastPrice, volume: Number.isFinite(event.volume) ? event.volume : null });
     }
   }
@@ -2433,7 +2347,7 @@ async function updateCalibrationStep(springEvents, themeEvents, failures) {
     const registry = await loadThemeRegistry();
     const dateStr = new Date().toISOString().slice(0, 10);
 
-    const newEntries = buildLogEntries({ springEvents, themeEvents, ledger, dateStr });
+    const newEntries = buildLogEntries({ springEvents, themeEvents, ledger, dateStr, registry });
     const prevLog = await loadCalibrationLog();
     const log = updateCalibrationLog(prevLog, newEntries, ledger, registry, dateStr);
     await saveCalibrationLog(log);

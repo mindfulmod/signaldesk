@@ -71,7 +71,7 @@ export function findCloseNear(rows, targetDateStr, toleranceDays = GRADE_TOLERAN
   let best = null;
   let bestDiff = Infinity;
   for (const row of rows) {
-    if (!Number.isFinite(row[3])) continue;
+    if (!Number.isFinite(row[3]) || !Number.isFinite(row[4]) || (row[6] && row[6].price !== "observed")) continue;
     const diff = Math.abs(toTime(row[0]) - target);
     if (diff <= toleranceMs && diff < bestDiff) {
       best = row[3];
@@ -101,7 +101,7 @@ export function themeRelativeReturn(memberTickers, ledger, fromDateStr, toDateSt
     const to = findCloseNear(rows, toDateStr);
     if (Number.isFinite(from) && Number.isFinite(to) && from > 0) memberReturns.push(to / from - 1);
   }
-  if (!memberReturns.length) return null;
+  if (!memberReturns.length || memberReturns.length !== memberTickers.length) return null;
   const avgReturn = memberReturns.reduce((sum, v) => sum + v, 0) / memberReturns.length;
   return avgReturn - spyReturn;
 }
@@ -119,7 +119,7 @@ function median(values) {
 // "dead-coil" are gradable per-ticker springs events -- "new-coil-hot-theme"
 // isn't a terminal state worth forward-grading on its own (the coil's
 // eventual release/death is what release/dead-coil already capture).
-export function buildLogEntries({ springEvents, themeEvents, ledger, dateStr }) {
+export function buildLogEntries({ springEvents, themeEvents, ledger, dateStr, registry = {} }) {
   const entries = [];
   for (const event of springEvents) {
     if (event.type !== "release" && event.type !== "dead-coil") continue;
@@ -145,6 +145,7 @@ export function buildLogEntries({ springEvents, themeEvents, ledger, dateStr }) 
       ticker: null,
       theme: event.theme,
       stage: event.toStage,
+      memberTickers: (registry.themes?.find(t => t.id === event.theme)?.members || []).map(m => m.t),
       date: dateStr,
       basePrice: null,
       graded: {},
@@ -163,30 +164,31 @@ export function updateCalibrationLog(log, newEntries, ledger, registry, todayStr
     let nextGraded = entry.graded;
     let changed = false;
     for (const [label, days] of Object.entries(GRADING_HORIZONS)) {
-      if (label in nextGraded) continue;
+      if (Number.isFinite(nextGraded[label])) continue;
       if (!isHorizonReachable(entry.date, days, todayStr)) continue;
       const targetDate = addDaysStr(entry.date, days);
 
       let ret;
       if (entry.type === "theme-stage") {
-        const members = (registry.themes?.find((t) => t.id === entry.theme)?.members || []).map((m) => m.t);
+        const members = entry.memberTickers || [];
         ret = themeRelativeReturn(members, ledger, entry.date, targetDate);
       } else {
         const closeAtHorizon = findCloseNear(ledger.tickers?.[entry.ticker]?.rows, targetDate);
         ret = Number.isFinite(closeAtHorizon) && entry.basePrice > 0 ? closeAtHorizon / entry.basePrice - 1 : null;
       }
       if (!changed) nextGraded = { ...entry.graded };
-      nextGraded[label] = ret; // null = attempted but ungradeable (e.g. delisted/pruned); still marked so it isn't retried forever
+      nextGraded[label] = ret; // Missing observations are retried; never a zero return.
       changed = true;
     }
-    return changed ? { ...entry, graded: nextGraded } : entry;
+    return changed ? { ...entry, graded: nextGraded, lastGradeAttempt: todayStr,
+      missingness: Object.fromEntries(Object.entries(nextGraded).filter(([, value]) => value === null).map(([label]) => [label, entry.type === "theme-stage" && !entry.memberTickers?.length ? "Event-time basket unavailable; later membership is not substituted" : "Target price unavailable; retry on later collections"])) } : entry;
   });
 
   // Prune fully-graded entries first once over the cap, oldest first.
   let pruned = graded;
   if (pruned.length > CALIBRATION_LOG_MAX) {
     const horizonLabels = Object.keys(GRADING_HORIZONS);
-    const isFullyGraded = (e) => horizonLabels.every((label) => label in e.graded);
+    const isFullyGraded = (e) => horizonLabels.every((label) => Number.isFinite(e.graded[label]));
     const sortedByAge = [...pruned].sort((a, b) => a.date.localeCompare(b.date));
     const excess = pruned.length - CALIBRATION_LOG_MAX;
     const toDrop = new Set(
@@ -208,9 +210,10 @@ export function pendingSubjects(log) {
   const themes = new Set();
   const horizonLabels = Object.keys(GRADING_HORIZONS);
   for (const entry of log.entries) {
-    if (horizonLabels.every((label) => label in entry.graded)) continue; // fully graded
+    if (horizonLabels.every((label) => Number.isFinite(entry.graded[label]))) continue;
     if (entry.ticker) tickers.add(entry.ticker);
     if (entry.theme) themes.add(entry.theme);
+    for (const ticker of entry.memberTickers || []) tickers.add(ticker);
   }
   return { tickers, themes };
 }
@@ -248,7 +251,7 @@ export function aggregateCalibration(log) {
   }
 
   const horizonLabels = Object.keys(GRADING_HORIZONS);
-  const pending = log.entries.filter((e) => !horizonLabels.every((label) => label in e.graded)).length;
+  const pending = log.entries.filter((e) => !horizonLabels.every((label) => Number.isFinite(e.graded[label]))).length;
 
   return { generatedAt: new Date().toISOString(), totalEvents: log.entries.length, pending, summary };
 }

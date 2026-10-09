@@ -155,6 +155,7 @@
   }
 
   function themeCard(theme) {
+    if (themesData?.integrityVersion !== 2) theme = { ...theme, stage: "insufficient-data", heat: null, evidence: {} };
     const copy = STAGE_COPY[theme.stage] || STAGE_COPY.quiet;
     const heatDisplay = Number.isFinite(theme.heat) ? theme.heat : "—";
     const members = theme.members || [];
@@ -196,6 +197,11 @@
     if (!selectedThemeId) {
       container.hidden = true;
       container.innerHTML = "";
+      return;
+    }
+    if (diffusionData?.integrityVersion !== 2) {
+      container.hidden = false;
+      container.innerHTML = '<p class="diffusion-empty">Earlier classifications are withheld pending an integrity-checked collection with observed prices and matched benchmark dates.</p>';
       return;
     }
     const theme = (diffusionData?.themes || []).find((t) => t.id === selectedThemeId);

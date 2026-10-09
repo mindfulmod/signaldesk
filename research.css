@@ -1,10 +1,11 @@
 /* Research surfaces share the existing semantic palettes. */
 .technology-panel [hidden] { display: none !important; }
-.intel-brief-lead { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(220px, .65fr); gap: 36px; padding: 18px 0 30px; border-bottom: 1px solid var(--line); }
-.intel-brief-lead h3 { font-size: clamp(1.9rem, 3.2vw, 2.85rem); letter-spacing: -.055em; line-height: 1.08; margin: 12px 0 16px; font-weight: 560; }
-.intel-brief-lead > div > p:not(.tech-sector) { max-width: 53ch; font-size: .9rem; line-height: 1.7; color: var(--muted); }
-.intel-brief-status { align-self: end; padding: 18px 20px; border-left: 2px solid var(--accent-line); background: var(--panel-3); border-radius: 0 8px 8px 0; }
-.intel-brief-status p { font-size: .76rem !important; margin: 8px 0; }
+.intel-brief-lead { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 12px 0 22px; }
+.intel-brief-lead h3 { font-size: clamp(1.65rem, 3vw, 2.15rem); letter-spacing: -.045em; line-height: 1.15; margin: 8px 0; font-weight: 570; }
+.intel-brief-lead p { margin: 0; }
+.intel-brief-lead > div > p:not(.tech-sector) { font-size: .85rem; line-height: 1.6; color: var(--muted); }
+.intel-brief-status { display: grid; gap: 2px; text-align: right; }
+.intel-brief-status .tech-text-button { text-align: right; }
 .intel-brief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 30px 0; }
 .intel-block-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .intel-block-head h4 { margin: 0; font-size: .92rem; letter-spacing: -.01em; }
@@ -13,18 +14,45 @@
 .intel-brief-item h5 { margin: 5px 0; }
 .intel-brief-item p, .intel-quiet { color: var(--muted); font-size: .82rem; line-height: 1.7; margin: 7px 0; }
 .intel-quiet { padding: 24px 0 18px; }
-.intel-focus-heading { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin: 36px 0 15px; }
-.intel-focus-heading h4 { font-size: .95rem; margin: 0; }
-.intel-focus-heading p { font-size: .76rem; color: var(--muted); }
+.intel-quiet .intel-icon { width: 32px; height: 32px; color: var(--faint); }
 .intel-focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.intel-focus-card { display: grid; gap: 14px; text-align: left; background: var(--panel-3); border: 1px solid var(--line-2); color: var(--ink); padding: 22px; border-radius: 10px; transition: background 120ms ease-out, border-color 120ms ease-out; }
+.intel-focus-card { display: grid; grid-template-columns: minmax(0, 1fr) 48%; grid-template-rows: 1fr auto; align-items: center; text-align: left; background: var(--panel-2); border: 1px solid var(--line); color: var(--ink); padding: 24px 24px 0; border-radius: 12px; min-height: 236px; overflow: hidden; transition: border-color 120ms ease-out, background 120ms ease-out; }
 .intel-focus-card:hover { background: var(--selected); border-color: var(--accent); }
-.intel-focus-card strong { display: flex; justify-content: space-between; gap: 12px; font-size: 1.2rem; font-weight: 560; letter-spacing: -.02em; }
-.intel-focus-card > span:last-child { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+.intel-focus-copy { display: grid; gap: 12px; padding-block: 8px 20px; position: relative; z-index: 1; }
+.intel-focus-copy strong { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 570; letter-spacing: -.035em; line-height: 1.15; }
+.intel-focus-copy > span:last-child { color: var(--muted); font-size: .8rem; line-height: 1.5; }
+.intel-focus-card img { display: block; width: 110%; max-width: none; height: 180px; object-fit: contain; margin-left: -3%; pointer-events: none; }
+.intel-focus-footer { display: flex; grid-column: 1 / -1; justify-content: space-between; align-items: center; gap: 12px; min-height: 50px; border-top: 1px solid var(--line-2); font-size: .72rem; color: var(--muted); }
+.intel-focus-footer > span:last-child { color: var(--accent); font-weight: 550; }
+.intel-art-note { margin: 8px 0 0; font-size: .65rem; color: var(--muted); text-align: right; }
+.intel-icon { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
+.intel-theme-mark { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 auto; border-radius: 10px; background: var(--accent-dim); color: var(--accent); }
+.intel-adoption-row { display: flex; width: 100%; gap: 12px; align-items: center; min-height: 78px; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); background: transparent; padding: 12px 0; text-align: left; }
+.intel-adoption-row:hover strong { color: var(--accent); }
+.intel-adoption-row > span:nth-child(2) { display: grid; gap: 4px; flex: 1; min-width: 0; }
+.intel-adoption-row strong { font-size: .82rem; line-height: 1.4; font-weight: 550; }
+.intel-adoption-row > span:last-child { color: var(--muted); font-size: .8rem; }
+.intel-stage-dots { display: flex; gap: 5px; align-items: center; }
+.intel-stage-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--line-2); }
+.intel-stage-dots .is-current { background: var(--accent); outline: 1px solid var(--accent); outline-offset: 2px; }
+.intel-brief-item h5 .tech-text-button { color: var(--ink); font-size: .87rem; font-weight: 550; }
+.intel-brief-item h5 .tech-text-button:hover { color: var(--accent); }
+.intel-checkpoints { border-top: 1px solid var(--line); padding-top: 22px; }
+.intel-checkpoint-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 16px; }
+.intel-checkpoint-grid article { min-width: 0; }
+.intel-checkpoint-grid .tech-text-button { color: var(--ink); font-weight: 550; }
+.intel-checkpoint-grid summary { font-size: .77rem; min-height: 44px; padding: 12px 0; color: var(--accent); cursor: pointer; }
+.intel-checkpoint-grid p { font-size: .8rem; color: var(--muted); line-height: 1.65; }
 .intel-disclosure { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 24px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .intel-disclosure summary { cursor: pointer; min-height: 44px; padding: 10px 0; color: var(--ink); }
 .intel-disclosure p { max-width: 100ch; }
 .intel-segment { display: flex; gap: 8px; margin: 12px 0 20px; }
+.intel-segment .tech-button { display: inline-flex; align-items: center; gap: 9px; }
+.intel-segment .intel-icon { width: 19px; height: 19px; }
+.intel-tracker-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 10px 0; }
+.intel-tracker-head h3 { font-size: clamp(1.35rem, 2.5vw, 1.8rem); letter-spacing: -.035em; margin: 0 0 10px; }
+.intel-tracker-head p { color: var(--muted); max-width: 65ch; font-size: .83rem; line-height: 1.65; margin: 0; }
+.intel-tracker-head img { width: 170px; height: 110px; object-fit: contain; flex-shrink: 0; }
 .intel-inline-filters { display: flex; align-items: end; gap: 18px; flex-wrap: wrap; margin: 20px 0; }
 .intel-inline-filters label, .intel-review-form label { display: grid; gap: 8px; font-size: .77rem; color: var(--muted); min-width: 0; }
 .intel-inline-filters select, .intel-review-form input, .intel-review-form select, .intel-review-form textarea { color: var(--ink); background: var(--panel-3); border: 1px solid var(--control-line); border-radius: 6px; font: inherit; padding: 10px 12px; min-height: 44px; max-width: 100%; min-width: 0; }
@@ -32,10 +60,11 @@
 .intel-program { border: 1px solid var(--line); border-radius: 9px; padding: 20px; min-width: 0; }
 .intel-program h4 { font-size: 1.02rem; line-height: 1.5; margin: 16px 0 10px; }
 .intel-program p { color: var(--muted); font-size: .8rem; line-height: 1.7; }
-.intel-compare { display: flex; gap: 6px; align-items: center; font-size: .65rem; color: var(--muted); line-height: 1.5; }
+.intel-program .intel-observed { color: var(--ink); font-weight: 550; }
+.intel-program-stage { display: flex; align-items: center; gap: 10px; margin: 24px 0 0; padding: 14px 12px; border-radius: 7px; color: var(--accent); background: var(--accent-dim); font-size: .75rem; }
+.intel-program .intel-disclosure, .intel-rollout .intel-disclosure { margin-top: 10px; padding-top: 0; }
+.intel-compare { display: flex; gap: 6px; align-items: center; min-height: 44px; font-size: .65rem; color: var(--muted); line-height: 1.5; }
 .intel-compare input { width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--accent); }
-.intel-next { display: grid; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
-.intel-next strong { color: var(--ink); font-weight: 550; }
 .intel-comparison { margin-top: 32px; }
 .intel-comparison h4 { font-size: 1rem; }
 .intel-table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; }
@@ -45,10 +74,17 @@
 .intel-table tbody th { max-width: 260px; font-weight: 500; }
 .intel-table small { display: block; color: var(--muted); font-size: .68rem; margin-top: 5px; font-weight: 400; }
 .intel-unknown { color: var(--muted); font-size: .8rem; }
-.intel-rollouts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.intel-rollouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
 .intel-rollout { border: 1px solid var(--line); border-radius: 9px; padding: 22px; min-width: 0; }
 .intel-rollout h4 { font-size: 1.2rem; margin: 18px 0 8px; }
 .intel-rollout-capability { font-size: .86rem; color: var(--accent); }
+.intel-capabilities { margin: 20px 0; }
+.intel-capabilities > div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 14px; align-items: start; padding: 13px 0; border-top: 1px solid var(--line); }
+.intel-capabilities dt { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: .72rem; }
+.intel-capabilities dt .intel-icon { width: 18px; height: 18px; }
+.intel-capabilities dd { margin: 0; font-size: .76rem; line-height: 1.6; }
+.intel-service-limit { display: grid; gap: 5px; padding: 12px; border-radius: 6px; background: var(--panel-3); font-size: .77rem; color: var(--muted); line-height: 1.6; }
+.intel-service-limit strong { color: var(--ink); font-weight: 550; }
 .intel-specs { margin: 22px 0; }
 .intel-specs > div { display: grid; grid-template-columns: minmax(90px, .4fr) 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .77rem; line-height: 1.7; }
 .intel-specs dt { color: var(--muted); }
@@ -57,6 +93,16 @@
 .intel-metric-row { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .intel-metric-row small { display: block; }
 .intel-company-quote { display: grid; gap: 7px; margin: 18px 0; }
+.intel-company-identity { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.intel-company-identity h3 { margin-bottom: 0; }
+.intel-company-identity h3 button { color: var(--ink); font-size: 1.05rem; font-weight: 550; }
+.intel-company-identity h3 button:hover { color: var(--accent); }
+.intel-risk-tags { display: flex; flex-wrap: wrap; gap: 5px 14px; list-style: none; padding: 0; font-size: .72rem; line-height: 1.6; color: var(--muted); }
+.intel-risk-tags li::before { content: "·"; color: var(--amber); margin-right: 6px; }
+.tech-company .intel-disclosure { margin-top: 12px; padding-top: 0; }
+.intel-discovery-stats { display: flex; gap: 32px; margin: 20px 0; }
+.intel-discovery-stats dd { margin: 0 0 5px; font-size: 1.7rem; line-height: 1; font-family: var(--mono); color: var(--ink); }
+.intel-discovery-stats dt { font-size: .72rem; color: var(--muted); }
 .intel-price { color: var(--ink); font-size: 1.45rem; font-family: var(--mono); letter-spacing: -.04em; font-weight: 500; }
 .intel-economics { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, .8fr); gap: 32px; margin-top: 30px; }
 .intel-financial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); border-radius: 8px; overflow: hidden; }
@@ -82,21 +128,34 @@
 @media (max-width: 980px) {
   .intel-brief-lead { gap: 20px; }
   .intel-program-grid { grid-template-columns: 1fr; }
+  .intel-rollouts { grid-template-columns: 1fr; }
   .intel-program .intel-block-head { justify-content: start; }
   .intel-economics { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   .intel-brief-lead, .intel-brief-grid, .intel-focus-grid, .intel-rollouts, .intel-discovery-grid, .intel-form-grid { grid-template-columns: 1fr; }
-  .intel-brief-lead { padding-top: 10px; gap: 12px; }
-  .intel-brief-lead h3 { font-size: 2rem; }
-  .intel-brief-status { padding: 12px 16px; }
+  .intel-brief-lead { padding-top: 10px; gap: 16px; align-items: start; flex-direction: column; }
+  .intel-brief-lead h3 { font-size: 1.7rem; }
+  .intel-brief-status { text-align: left; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+  .intel-brief-status .tech-text-button { text-align: left; }
+  .intel-brief-status .tech-health { flex-basis: 100%; }
   .intel-brief-grid { gap: 24px; margin-top: 24px; }
-  .intel-focus-heading { display: block; }
-  .intel-focus-card, .intel-rollout { padding: 18px; }
-  .intel-focus-card strong { font-size: 1.1rem; }
+  .intel-rollout { padding: 18px; }
+  .intel-focus-card { min-height: 160px; padding: 14px 14px 0; grid-template-columns: minmax(0, 1fr) 42%; }
+  .intel-focus-card strong { font-size: 1.25rem; }
+  .intel-focus-copy > span:last-child { display: none; }
+  .intel-focus-card img { width: 135%; height: 96px; margin-left: -12%; }
+  .intel-focus-footer { font-size: .68rem; }
+  .intel-art-note { text-align: left; line-height: 1.5; }
+  .intel-checkpoint-grid { grid-template-columns: 1fr; gap: 18px; }
+  .intel-checkpoints > .intel-block-head { align-items: start; flex-direction: column; }
   .intel-specs > div { grid-template-columns: 90px 1fr; gap: 12px; }
   .intel-inline-filters { gap: 12px; }
   .intel-inline-filters label { flex: 1 1 130px; }
+  .intel-tracker-head { gap: 10px; }
+  .intel-tracker-head img { width: 90px; height: 90px; }
+  .intel-tracker-head h3 { font-size: 1.3rem; }
+  .intel-segment .tech-button { gap: 6px; font-size: .73rem; }
   .intel-financial-grid article { padding: 14px; }
   .intel-financial-grid strong { font-size: .95rem; }
   .intel-form-actions { align-items: stretch; flex-direction: column; }

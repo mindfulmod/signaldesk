@@ -7,7 +7,7 @@ import config from "../research-config.js";
 import model from "../technology-model.js";
 import reviewModel from "../research-model.js";
 import { collectTechnology, publicMonitor } from "./lib/technology-monitor.mjs";
-import { buildDocuments, discoverTopics } from "./lib/research-intelligence.mjs";
+import { buildDocumentInventory, discoverTopics } from "./lib/research-intelligence.mjs";
 import { collectCompanies } from "./lib/company-intelligence.mjs";
 
 async function saved(path, fallback = {}) {
@@ -38,11 +38,11 @@ export async function main(args = process.argv.slice(2)) {
   const now = new Date().toISOString();
   const state = await collectTechnology(registry, previous, { now, force: args.includes("--force"), retryErrors: args.includes("--retry-errors") });
   const data = publicMonitor(state);
-  const documents = buildDocuments(registry, state, previousResearch, now);
+  const { documents, documentIndex } = buildDocumentInventory(registry, state, previousResearch, now, reviews.reviews);
   const companies = args.includes("--sources-only") ? previousCompanies : await collectCompanies(config, state, previousCompanies, { now, apiKey: process.env.SIGNALDESK_QUOTE_API_KEY || "" });
   const research = { schemaVersion: 1, collectionId: randomUUID(), generatedAt: now, sourceCheckedAt: data.generatedAt,
     runUrl: process.env.GITHUB_RUN_ID ? `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}` : null,
-    documents, reviews: reviews.reviews, companies: companies.companies || {}, providerMode: companies.providerMode || "Not collected",
+    documents, documentIndex, reviews: reviews.reviews, companies: companies.companies || {}, providerMode: companies.providerMode || "Not collected",
     discovery: discoverTopics(documents, registry.themes, previousResearch.discovery, now, config.sources.filter(s => s.discovery), state.sources),
     coverage: { totalSources: config.sources.length, readableSources: Object.values(data.sources).filter(s => s.status === "ok").length, companies: config.companies.length },
   };

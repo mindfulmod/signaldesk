@@ -32,6 +32,7 @@
     ]).sort((a, b) => (day(a.due) || Infinity) - (day(b.due) || Infinity) || a.theme.localeCompare(b.theme));
   }
   function monitorState(source, state, now = new Date()) {
+    if (source.accessStatus === "permission-required" || state?.status === "paused") return "paused";
     if (!state?.lastAttemptAt) return "not-checked";
     if (state.status === "error") return "unavailable";
     const succeededAt = Date.parse(state.lastSuccessAt);

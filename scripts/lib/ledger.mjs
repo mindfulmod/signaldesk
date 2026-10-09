@@ -3,12 +3,12 @@
 // attention/price trail is lost once it falls out of the ranking; this ledger
 // keeps a row per tracked ticker per day regardless of rank.
 //
-// Row shape: [date, mentions, shareOfVoice, close, volume, wikiViews]
+// Row shape: [date, attentionWeight, shareOfVoice, close, volume, wikiViews, quality]
+// The optional quality object distinguishes observed from missing fields.
 // `volume` is raw daily share volume, not a pre-computed relative-volume
 // ratio — the coil detector needs a consistent 60d-average baseline for its
 // release trigger, and a stored ratio would carry whatever baseline window
-// happened to produce it (today's live quote uses a ~4d window, Yahoo's
-// backfill would otherwise use a 20d window). Storing raw volume lets the
+// happened to produce it. Storing raw volume lets the
 // detector compute one consistent ratio itself.
 import { readFile, writeFile } from "node:fs/promises";
 import { articleQueries, verifyArticle } from "./wiki-article.mjs";
@@ -63,18 +63,18 @@ export function upsertRow(ledger, ticker, meta, row) {
 }
 
 // Merge historical [date, close, volume] rows fetched from Yahoo into a
-// ticker's ledger, filling gaps without mention data (backfilled days show 0
-// mentions/shareOfVoice — no historical social data exists for them).
+// ticker's ledger, preserving unknown attention on backfilled days.
 export function mergeBackfillRows(ledger, ticker, backfillRows) {
   const entry = ledger.tickers[ticker] || { meta: {}, rows: [] };
   const byDate = new Map(entry.rows.map((r) => [r[ROW_DATE], r]));
   for (const [date, close, volume] of backfillRows) {
     const existing = byDate.get(date);
     if (existing) {
-      if (!Number.isFinite(existing[ROW_CLOSE]) && Number.isFinite(close)) existing[ROW_CLOSE] = close;
-      if (!Number.isFinite(existing[ROW_VOLUME]) && Number.isFinite(volume)) existing[ROW_VOLUME] = volume;
+      const unverifiedPrice = !Number.isFinite(existing[ROW_CLOSE]) || (existing[6] ? existing[6].price !== "observed" : !Number.isFinite(existing[ROW_VOLUME]));
+      if (unverifiedPrice && Number.isFinite(close)) { existing[ROW_CLOSE] = close; if (existing[6]) existing[6].price = "observed"; }
+      if (!Number.isFinite(existing[ROW_VOLUME]) && Number.isFinite(volume)) { existing[ROW_VOLUME] = volume; if (existing[6]) existing[6].volume = "observed"; }
     } else {
-      byDate.set(date, [date, 0, 0, Number.isFinite(close) ? close : null, Number.isFinite(volume) ? volume : null, null]);
+      byDate.set(date, [date, null, null, Number.isFinite(close) ? close : null, Number.isFinite(volume) ? volume : null, null, { price: Number.isFinite(close) ? "observed" : "missing", volume: Number.isFinite(volume) ? "observed" : "missing", attention: "missing" }]);
     }
   }
   entry.rows = [...byDate.values()].sort((a, b) => a[ROW_DATE].localeCompare(b[ROW_DATE]));
@@ -275,7 +275,7 @@ export async function updateLedger({
 }) {
   const stats = { upserted: 0, backfilled: 0, pageviewsFetched: 0, articlesResolved: 0, articlesMissed: 0, pruned: 0 };
   const activeTickers = new Set(mentionsByTicker.keys());
-  const allTickers = new Set([...activeTickers, ...Object.keys(ledger.tickers)]);
+  const allTickers = new Set([...activeTickers, ...priceByTicker.keys(), ...Object.keys(ledger.tickers)]);
   const newlySeen = [];
 
   for (const ticker of allTickers) {
@@ -284,15 +284,15 @@ export async function updateLedger({
     const price = priceByTicker.get(ticker);
     const prevEntry = ledger.tickers[ticker];
     const wasNew = !prevEntry;
-    const prevRow = prevEntry?.rows?.at(-1);
-    const close = Number.isFinite(price?.close) ? price.close : prevRow ? prevRow[ROW_CLOSE] : null;
+    const close = Number.isFinite(price?.close) ? price.close : null;
     const volume = Number.isFinite(price?.volume) ? price.volume : null;
     // firstSeen marks where *real* observed shareOfVoice begins — backfilled
     // pre-ledger days get shareOfVoice=0 as a placeholder (unknown, not
     // confirmed zero), so the coil detector must not treat them as real
     // attention history when it falls back to shareOfVoice.
     const meta = { ...(registryMeta.get(ticker) || {}), ...(wasNew ? { firstSeen: dateStr } : {}) };
-    upsertRow(ledger, ticker, meta, [dateStr, mentions, Number(shareOfVoice.toFixed(6)), close, volume, null]);
+    upsertRow(ledger, ticker, meta, [dateStr, activeTickers.has(ticker) ? mentions : null, activeTickers.has(ticker) ? Number(shareOfVoice.toFixed(6)) : null, close, volume, null,
+      { price: close === null ? "missing" : "observed", volume: volume === null ? "missing" : "observed", attention: activeTickers.has(ticker) ? "observed" : "missing" }]);
     stats.upserted += 1;
     if (wasNew) newlySeen.push({ ticker, mentions });
   }

@@ -7,6 +7,39 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 9, 2026 Desk workspace pass: the desktop list and detail pane now share
+a bounded height instead of leaving a page-length empty column beneath a short
+detail pane. `layout-fix.js` owns the desktop scroll boundaries; table headings
+stick at `top: 0` inside the list. At 1180px and below, keep ordinary page
+scrolling and the detail sheet. Do not add a second page-level sticky offset to
+these panes. `desk-cleanup.css` owns compact spacing and the summary/action/
+disclosure hierarchy, using the existing appearance tokens.
+
+The detail starts with the saved quote, research assessment and visible risks,
+then offers a quote check, source review and local watchlist save. Source links,
+metrics, history and full quality notes remain available in native disclosures.
+Preserve open sections and scroll on same-stock rerenders; reset on a new stock.
+Keyboard selection focuses the detail heading, and Back to list restores the
+selected ticker. Do not duplicate IDs between the desktop pane and mobile sheet.
+
+Entirely unknown comparison columns collapse only when **every matching stock**
+lacks that measure. Keep the visible coverage notice, individual quote warnings,
+and full CSV data. Zero is a valid observation, not missing data. Mixed-coverage
+views retain the columns. The detail rank must use the board's filtered ordering.
+Tests: `scripts/test/desk-workspace.test.mjs`; check All, watchlist removal,
+filters, missing searches, and the expanded 50-row list at desktop/mobile widths.
+
+October 8, 2026 art pass: Technology uses one compact introduction, with its
+navigation above the optional native `#techScope` filter disclosure. Keep that
+wrapper hidden on detail/tracker views rather than hiding only its children.
+`research-views.js` owns the topic pictograms and editorial stage markers.
+Only the current stage is highlighted; these are not completion percentages.
+The battery and satellite illustrations in `assets/art/` are concepts, never
+product evidence or coverage maps. Both are transparent WebP files under 60 KB,
+with empty alt text beside identifying headings. Preserve the concept label,
+visible risk flags, original dates and explicit unknowns. Secondary technical
+details use native disclosures; do not remove their underlying evidence.
+
 Appearance update: `appearance.css` is the only color-token registry. It defines
 soft slate dark mode and warm light mode, including readable source/chart colors,
 control edges and sheet backdrops. Do not add hardcoded component colors.
@@ -81,7 +114,7 @@ Script load order in `index.html` matters:
    `.nojekyll` (repo root) prevents the known Jekyll-failure class; do not
    delete it.
 4. **Breakpoints** (both styles.css and layout-fix.js define rules at these):
-   - `≥1181px`: desktop — sticky detail side panel next to the table.
+   - `≥1181px`: desktop — bounded list and detail panes, each independently scrollable.
    - `≤1180px`: detail side panel is `display:none`; ticker clicks open the
      bottom sheet (`#detailSheet`). The sheet must never appear ≥1181px.
    - `≤980px`: Filters opens in a bounded, scrollable section above main;
@@ -175,8 +208,8 @@ that the detector has ever fired before building a panel on top of it.
    port 8793, backed by `.claude/static-server.mjs`) — file:// works but won't
    exercise URL state, and it takes the `data/*.js` fallback path rather than
    the JSON path the live site uses.
-3. Test at 375px (sheet, collapsed panels, card table) AND ≥1400px (sticky
-   panel, no sheet). Check the console for errors both times.
+3. Test at 375px (sheet, collapsed panels, card table) AND ≥1400px (bounded
+   workspace, no sheet). Check the console for errors both times.
 4. Click a ticker in each surface that selects one (table row, radar card,
    attention map row) — all three route through the same selection path and
    all three have broken independently before.
