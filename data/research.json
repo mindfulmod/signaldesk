@@ -1,10 +1,383 @@
 {
   "schemaVersion": 1,
-  "collectionId": "1152e27d-0373-46eb-8dac-0deca3864a02",
-  "generatedAt": "2026-10-08T21:28:50.875Z",
-  "sourceCheckedAt": "2026-10-08T11:35:34.352Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/37847034735",
+  "collectionId": "032cadde-ed4f-4d5b-9797-71a8c277b33f",
+  "generatedAt": "2026-10-09T11:29:49.615Z",
+  "sourceCheckedAt": "2026-10-09T11:29:49.615Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/37924046680",
   "documents": [
+    {
+      "id": "01121e4776f8aa3e5ead13c9",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11070-w",
+      "title": "Editorial Expression of Concern: Maternal gut bacteria promote neurodevelopmental abnormalities in mouse offspring",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "02a0a94fe23cf5f354cb9c89",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03093-0",
+      "title": "Chemistry Nobel awarded for solving mystery of how ‘handed’ organic molecules can emerge",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-07",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "revision",
+      "previousId": "907bc100e035596d5f04aed7",
+      "previousExcerpt": null,
+      "previousTitle": "Chemistry Nobel for solving mystery of how ‘handed’ organic molecules can emerge",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "02d30a43a2e463f5a616afd3",
+      "sourceId": "waymo-news",
+      "url": "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
+      "title": "Read more: Sober Drivers Still Face Nearly 4x Nighttime Risk: Why Road Safety Demands a Safe System Approach",
+      "excerpt": null,
+      "owner": "Waymo",
+      "tier": "company",
+      "themes": [
+        "robotaxis"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Risk / setback language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "04e01ca4dd5ee1771fb6003e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03193-x",
+      "title": "How to build a mouse: embryo development captured in stunning detail",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "100bdc9c43f9dbd046e24a39",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03116-w",
+      "title": "Five movements from the edge of the singularity",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-09",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1cb1c3a062f53d27e010133a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02921-7",
+      "title": "US proposes $100,000 charge for international students to do post-graduate work",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2923a8e8c0664da7283b78f6",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11266-0",
+      "title": "Author Correction: Histone readers MLLT1 and MLLT3 concentrate AID to confer locus specificity",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "329255139986cfeec54d0c4c",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03128-6",
+      "title": "Will AI scoop your science? Some researchers see a gloomy future",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3f21d544faab346d1b21a415",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03218-5",
+      "title": "Women are talking about menopause — health systems must listen",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "47183292900e0ef2345aa97c",
+      "sourceId": "qs-news",
+      "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-qs-powerblock-rack-energy-storage-ai-data",
+      "title": "QuantumScape Announces QS PowerBlock for In-Rack Energy Storage in AI Data Centers",
+      "excerpt": null,
+      "owner": "QuantumScape",
+      "tier": "company",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4e4e27c7ac26e21ebb458e8c",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+      "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "excerpt": "The U.S. National Science Foundation today announced plans to launch a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age , the first comprehensive rethinking o",
+      "owner": "NSF",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08T13:45:03.000Z",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "68102bbd53eb8dea49b294a6",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
+      "title": "NSF–UKRI metascience statement",
+      "excerpt": "The United States National Science Foundation (NSF) and United Kingdom Research and Innovation (UKRI) have long advanced knowledge through the ingenuity of our researchers and the institutions that enable them. Both UKRI and NSF intend to b",
+      "owner": "NSF",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08T13:26:57.000Z",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "774f5fa388580a2ec405d9bb",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03212-x",
+      "title": "Daily briefing: Chemistry Nobel goes to mirror-molecule researchers",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-07",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b9805455af35e135beb2ec71",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/425711",
+      "title": "Modernizing the Supplemental Coverage from Space Rules",
+      "excerpt": "This is not a final, adopted action. This has been circulated for tentative consideration by the Commission at its Open Meeting. The issues referenced and the Commission's ultimate resolution of those issues are subject to change.",
+      "owner": "FCC",
+      "tier": "regulator",
+      "themes": [
+        "satellite-phones"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c192f2948c32e6ae752ea7bd",
+      "sourceId": "waymo-news",
+      "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
+      "title": "Read more: Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion",
+      "excerpt": null,
+      "owner": "Waymo",
+      "tier": "company",
+      "themes": [
+        "robotaxis"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c33710fdefc8a43dc64cb49f",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/425716",
+      "title": "Wireless Telecommunications Bureau Establishes A New Docket And The Process For Comment On Eligible Space Station Operator Transition Plans",
+      "excerpt": "With this Public Notice, the Wireless Telecommunications Bureau (WTB) establishes GN Docket No. 26-289, which is captioned Eligible Satellite Operator Transition Plans for the Upper C-Band.",
+      "owner": "FCC",
+      "tier": "regulator",
+      "themes": [
+        "satellite-phones"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c954f79a4742f7e030cad1b1",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03199-5",
+      "title": "Big dogs age faster than little ones — rogue ‘jumping genes’ might be to blame",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ce42a3ec5e8654a001a7d21b",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03215-8",
+      "title": "Plague scare: what scientists know — and what Russia won’t say",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "themes": [],
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d15f276635ee7ba69ad453c7",
+      "sourceId": "qs-news",
+      "url": "https://ir.quantumscape.com/news-releases/news-release-details/quantumscape-announces-timing-third-quarter-2026-business",
+      "title": "QuantumScape Announces Timing of Third Quarter 2026 Business Results and Webcast",
+      "excerpt": null,
+      "owner": "QuantumScape",
+      "tier": "company",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "publishedAt": null,
+      "detectedAt": "2026-10-09T11:29:49.615Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "056b42c2476f2f08fde5b5b2",
       "sourceId": "waymo-news",
@@ -12436,17 +12809,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 4.52,
+        "price": 4.58,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:00.000Z",
+        "asOf": "2026-10-08T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -12480,6 +12853,15 @@
           "price": 4.52,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.58,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -13608,17 +13990,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 2.4,
+        "price": 2.42,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:00.000Z",
+        "asOf": "2026-10-08T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -13652,6 +14034,15 @@
           "price": 2.4,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 2.42,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -14632,17 +15023,17 @@
       "factsCheckedAt": "2026-10-05T11:49:09.276Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 182.91,
+        "price": 186,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:02.000Z",
+        "asOf": "2026-10-08T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -14676,6 +15067,15 @@
           "price": 182.91,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 186,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -15924,17 +16324,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 167.65,
+        "price": 171.31,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:00.000Z",
+        "asOf": "2026-10-08T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -15968,6 +16368,15 @@
           "price": 167.65,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 171.31,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -17106,17 +17515,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 60.65,
+        "price": 56.93,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:01.000Z",
+        "asOf": "2026-10-08T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -17150,6 +17559,15 @@
           "price": 60.65,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 56.93,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -18130,17 +18548,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 721.31,
+        "price": 720.89,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:01.000Z",
+        "asOf": "2026-10-08T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -18174,6 +18592,15 @@
           "price": 721.31,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 720.89,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -19470,17 +19897,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 529.76,
+        "price": 522.61,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:01.000Z",
+        "asOf": "2026-10-08T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -19514,6 +19941,15 @@
           "price": 529.76,
           "currency": "USD",
           "asOf": "2026-10-07T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 522.61,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -20810,17 +21246,17 @@
       "factsCheckedAt": "2026-10-03T01:41:33.808Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-08T11:35:34.352Z",
+      "quoteAttemptAt": "2026-10-09T02:32:39.655Z",
       "quote": {
-        "price": 350.5,
+        "price": 348.29,
         "currency": "USD",
-        "asOf": "2026-10-07T20:00:01.000Z",
+        "asOf": "2026-10-08T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-08T11:35:34.352Z",
+      "quoteCheckedAt": "2026-10-09T02:32:39.655Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -20858,6 +21294,15 @@
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
           "marketCap": null
+        },
+        {
+          "price": 348.29,
+          "currency": "USD",
+          "asOf": "2026-10-08T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
         }
       ],
       "valuation": null,
@@ -20866,7 +21311,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-08T21:28:50.875Z",
+    "generatedAt": "2026-10-09T11:29:49.615Z",
     "coverageKey": "81a0ea07b00c3e76dba30561",
     "history": [
       {
@@ -20930,6 +21375,18 @@
           "0712deadb475d5556818729d"
         ],
         "documentCount": 168
+      },
+      {
+        "date": "2026-10-09",
+        "topics": [
+          "15ce4bfeb2c4c225b2228ac9",
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1",
+          "0aef6f4b72c4e512490d7390",
+          "adb8682d9498bc8bcbb4e1f3",
+          "0712deadb475d5556818729d"
+        ],
+        "documentCount": 181
       }
     ],
     "candidates": [
@@ -20951,7 +21408,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -20971,7 +21428,7 @@
         ],
         "firstObservedAt": "2026-10-08",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -20991,7 +21448,7 @@
         ],
         "firstObservedAt": "2026-10-08",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -21011,7 +21468,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -21031,7 +21488,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "0712deadb475d5556818729d",
@@ -21051,7 +21508,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       }
     ],
     "archive": [
@@ -21073,7 +21530,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -21093,7 +21550,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -21113,7 +21570,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "0712deadb475d5556818729d",
@@ -21133,7 +21590,7 @@
         ],
         "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -21153,7 +21610,7 @@
         ],
         "firstObservedAt": "2026-10-08",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -21173,11 +21630,11 @@
         ],
         "firstObservedAt": "2026-10-08",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-08"
+        "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 168,
-    "comparableDays": 6,
+    "datedDocuments": 181,
+    "comparableDays": 7,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
