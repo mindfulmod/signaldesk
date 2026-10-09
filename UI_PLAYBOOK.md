@@ -7,6 +7,17 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 8, 2026 art pass: Technology uses one compact introduction, with its
+navigation above the optional native `#techScope` filter disclosure. Keep that
+wrapper hidden on detail/tracker views rather than hiding only its children.
+`research-views.js` owns the topic pictograms and editorial stage markers.
+Only the current stage is highlighted; these are not completion percentages.
+The battery and satellite illustrations in `assets/art/` are concepts, never
+product evidence or coverage maps. Both are transparent WebP files under 60 KB,
+with empty alt text beside identifying headings. Preserve the concept label,
+visible risk flags, original dates and explicit unknowns. Secondary technical
+details use native disclosures; do not remove their underlying evidence.
+
 Appearance update: `appearance.css` is the only color-token registry. It defines
 soft slate dark mode and warm light mode, including readable source/chart colors,
 control edges and sheet backdrops. Do not add hardcoded component colors.

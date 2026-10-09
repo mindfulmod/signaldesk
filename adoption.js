@@ -42,9 +42,9 @@
   function empty(message) { return `<div class="tech-empty"><h3>No matching technologies</h3><p>${esc(message)}</p><button type="button" class="tech-button" data-clear-tech>Clear technology filters</button></div>`; }
   function card(t) {
     const stats = model.evidenceSummary(t);
-    return `<article class="tech-card"><div class="tech-card-top"><span class="tech-sector">${esc(t.sector)}</span>${followButton(t)}</div>
-      <h3><button type="button" data-open-tech="${esc(t.id)}">${esc(t.name)} <span aria-hidden="true">↗</span></button></h3>${stage(t)}
-      <p class="tech-proof">${esc(t.headline)}</p><p class="tech-card-thesis">${esc(t.thesis)}</p>
+    return `<article class="tech-card"><div class="tech-card-top"><div class="tech-card-identity">${views.themeMark(t.id)}<span class="tech-sector">${esc(t.sector)}</span></div>${followButton(t)}</div>
+      <h3><button type="button" data-open-tech="${esc(t.id)}">${esc(t.name)} <span aria-hidden="true">↗</span></button></h3>
+      ${views.stageTrack(t.stage)}<p class="tech-proof">${esc(t.headline)}</p>
       <p class="tech-risk"><span>Watch the gap</span>${esc(t.unknowns[0])}</p>
       <div class="tech-card-foot"><span>${stats.observations} observation${stats.observations === 1 ? "" : "s"} · ${stats.owners} reporting owner${stats.owners === 1 ? "" : "s"}</span><span class="${model.isOverdue(t.reviewDue) ? "tech-warning" : ""}">${model.isOverdue(t.reviewDue) ? "Review overdue" : `Reviewed ${esc(t.reviewedAt)}`}</span></div></article>`;
   }
@@ -61,9 +61,11 @@
   }
   function dossier(t) {
     const summary = model.evidenceSummary(t);
+    const art = { "solid-state-batteries": "battery-cell", "satellite-phones": "satellite-phone" }[t.id];
     return `<article class="tech-dossier"><button type="button" class="tech-text-button tech-back" data-back-tech>← Back to ${esc(view)}</button>
       <div class="tech-dossier-head"><div><p class="tech-sector">${esc(t.sector)}</p><h3 id="techProfileTitle" tabindex="-1">${esc(t.name)}</h3>${stage(t)}</div>${followButton(t)}</div>
-      <p class="tech-lead">${esc(t.thesis)}</p><div class="tech-profile-grid"><div class="tech-thesis"><h4>What is real</h4><p>${esc(t.stageReason)}</p><h4>Keep the definitions straight</h4><p>${esc(t.scope)}</p><h4>What would change the view</h4><p>${esc(t.nextCheck)}</p><h4>What could go wrong</h4><p>${esc(t.risk)}</p><h4>Still unknown</h4><ul>${t.unknowns.map(u => `<li>${esc(u)}</li>`).join("")}</ul><p class="tech-meta">Reviewed ${esc(t.reviewedAt)} · ${model.isOverdue(t.reviewDue) ? "Review overdue" : "Next review"} ${esc(t.reviewDue)}</p></div>
+      <div class="tech-dossier-intro"><p class="tech-lead">${esc(t.thesis)}</p>${art ? `<figure><img src="assets/art/${art}.webp" width="720" height="480" alt="" decoding="async"><figcaption>Concept illustration</figcaption></figure>` : ""}</div>
+      <div class="tech-profile-grid"><div class="tech-thesis"><h4>What is real</h4><p>${esc(t.stageReason)}</p><h4>What could go wrong</h4><p>${esc(t.risk)}</p><details class="intel-disclosure"><summary>Scope, unknowns &amp; next proof</summary><h4>Keep the definitions straight</h4><p>${esc(t.scope)}</p><h4>What would change the view</h4><p>${esc(t.nextCheck)}</p><h4>Still unknown</h4><ul>${t.unknowns.map(u => `<li>${esc(u)}</li>`).join("")}</ul></details><p class="tech-meta">Reviewed ${esc(t.reviewedAt)} · ${model.isOverdue(t.reviewDue) ? "Review overdue" : "Next review"} ${esc(t.reviewDue)}</p></div>
       <div><h4>Evidence ledger</h4><p class="tech-meta">${summary.observations} observation${summary.observations === 1 ? "" : "s"} · ${summary.targets} target${summary.targets === 1 ? "" : "s"} · ${summary.owners} reporting owner${summary.owners === 1 ? "" : "s"}. Company reports are not independent verification.</p>
       <ol class="tech-evidence">${t.evidence.map(e => `<li><span class="tech-kind kind-${esc(e.kind)}">${esc(model.kinds[e.kind])}</span><h5>${esc(e.display)}</h5><p>${esc(e.metric)} · ${esc(e.period)}</p><p class="tech-meta">${e.publishedAt ? `Published ${esc(e.publishedAt)}` : "Publication date not provided"} · checked ${esc(e.checkedAt)}</p>${link(e.url, e.publisher)}<p class="tech-caveat">${esc(e.caveat)}</p></li>`).join("")}</ol></div></div>
       ${["solid-state-batteries", "satellite-phones"].includes(t.id) ? `<button class="tech-button" data-tracker="${t.id === "solid-state-batteries" ? "batteries" : "satellite"}">Open detailed ${t.id === "solid-state-batteries" ? "program comparison" : "rollout tracker"} →</button>` : ""}
@@ -83,15 +85,18 @@
   }
   function render() {
     const themes = themeList(), selected = reviewedThemes().find(t => t.id === selectedId);
+    // Compare/filter updates should not close the evidence the reader opened.
+    const disclosureState = new Map([...content.querySelectorAll("details[data-disclosure]")].map(node => [node.dataset.disclosure, node.open]));
     const specialized = ["trackers", "discovery"].includes(view) || selectedCompany || selected || reviewingId;
     byId("techFilterDisclosure").hidden = Boolean(specialized);
     byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || view === "trackers");
-    byId("techSearch").closest(".tech-controls").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
+    byId("techScope").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
     byId("techSearch").closest("label").querySelector("span").textContent = view === "discovery" ? "Find a discovery lead" : "Find a technology";
     root.querySelectorAll("[data-tech-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.techView === view)));
     byId("techFollowedOnly").setAttribute("aria-pressed", String(followedOnly));
     const activeFilters = Number(byId("techSector").value !== "all") + Number(byId("techStage").value !== "all") + Number(followedOnly);
-    byId("techFilterLabel").textContent = `Filters & following${activeFilters ? ` · ${activeFilters} active` : ""}`;
+    byId("techFilterLabel").textContent = `Filter ${view === "discovery" ? "leads" : "technologies"}${(view !== "discovery" && activeFilters) || byId("techSearch").value ? " · active" : ""}`;
+    byId("techResultStatus").hidden = view === "brief" && !activeFilters && !byId("techSearch").value && !selected && !selectedCompany && !reviewingId;
     byId("techResultStatus").textContent = reviewingId ? "Local evidence review · not published" : selectedCompany ? `${selectedCompany} · permanent company coverage` : selected ? `${selected.name} · research profile` : view === "discovery" ? "Exploratory leads · not verified adoption" : view === "trackers" ? "Program and service evidence · use the filters below" : `${themes.length} of ${data.themes.length} technologies${followedOnly ? " · following only" : ""}`;
     byId("techRegistryStatus").textContent = `${data.themes.length} themes · ${config.sources.length} sources · ${config.companies.length} permanent companies`;
     byId("adoptionFollowStatus").textContent = storageWorking ? `${followed.size} technologies followed · ${drafts.length} local review drafts. Browser-local saves; no push subscription.` : "Browser storage is unavailable. Changes work for this session only; export drafts before leaving.";
@@ -103,10 +108,13 @@
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
     else if (!themes.length) content.innerHTML = empty("Try a broader search, another stage, or turn off Following only. Your saved follows will not be deleted.");
     else if (view === "brief") content.innerHTML = views.brief(themes, research, monitor, [...followed], researchStatus);
-    else if (view === "radar") content.innerHTML = `<div class="tech-radar-grid">${themes.map(card).join("")}</div>`;
+    else if (view === "radar") content.innerHTML = `<div class="tech-view-head"><div><h3>The technology radar</h3><p>Compare editorial evidence stages, then open a theme for its sources. These are not forecasts.</p></div></div><div class="tech-radar-grid">${themes.map(card).join("")}</div>`;
     else if (view === "milestones") content.innerHTML = `<div class="tech-view-head"><div><h3>Milestones to watch</h3><p>Our review dates, company targets and undated evidence checks are intentionally separate. A passed target window means unverified—not automatically failed.</p></div></div><ol class="tech-timeline">${model.milestones(themes).map(milestoneRow).join("")}</ol>`;
     else if (view === "companies") content.innerHTML = views.companies(themes, research, null);
     else content.innerHTML = renderInbox(themes);
+    for (const node of content.querySelectorAll("details[data-disclosure]")) {
+      if (disclosureState.has(node.dataset.disclosure)) node.open = disclosureState.get(node.dataset.disclosure);
+    }
   }
   async function loadMonitor() {
     monitorStatus = "loading"; if (view === "inbox" && !selectedId) render();
@@ -154,9 +162,6 @@
     details.append(summary, field); content.prepend(details); field.focus(); field.select();
   }
   function focusProfile() { byId("techProfileTitle")?.focus({ preventScroll: true }); content.scrollIntoView({ block: "start" }); }
-  const narrow = window.matchMedia("(max-width: 680px)");
-  byId("techFilterDisclosure").open = !narrow.matches;
-  narrow.addEventListener("change", () => { byId("techFilterDisclosure").open = !narrow.matches; });
   for (const sector of [...new Set(data.themes.map(t => t.sector))]) { const option = document.createElement("option"); option.value = option.textContent = sector; byId("techSector").appendChild(option); }
   for (const id of ["techSearch", "techSector", "techStage"]) byId(id).addEventListener(id === "techSearch" ? "input" : "change", () => { selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); });
   root.addEventListener("change", event => {

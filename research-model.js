@@ -69,8 +69,9 @@
     return { runwayMonths, runwayCaveat: "Cash and equivalents only, divided by historical operating burn. Excludes marketable securities, other liquidity, capital expenditure, financing and future changes. This is not the company's total cash runway or a forecast." };
   }
   function buildBrief({ themes = [], research, monitor, followed = [], now = Date.now() }) {
-    const ids = new Set(followed.length ? followed : themes.map(t => t.id));
-    const selected = themes.filter(t => ids.has(t.id));
+    const followedIds = new Set(followed);
+    const selected = themes.filter(t => !followed.length || followedIds.has(t.id));
+    const ids = new Set(selected.map(t => t.id));
     const reviews = activeReviews(research?.reviews || []).filter(r => ids.has(r.themeId) && ageHours(r.reviewedAt, now) >= 0 && ageHours(r.reviewedAt, now) <= 168);
     const reviewedIds = new Set((research?.reviews || []).map(r => r.candidateId));
     const documents = (research?.documents || []).filter(d => d.themes.some(t => ids.has(t)) && !reviewedIds.has(d.id) && d.changeType !== "baseline" && ageHours(d.detectedAt, now) >= 0 && ageHours(d.detectedAt, now) <= 168);
