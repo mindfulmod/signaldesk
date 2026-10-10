@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "85480dac-25ce-4392-ab73-d2ffe0844ba5",
-  "generatedAt": "2026-10-09T21:13:53.454Z",
-  "sourceCheckedAt": "2026-10-09T21:13:53.454Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/37992124913",
+  "collectionId": "56827541-fb62-4ee8-a400-b5618e2ae824",
+  "generatedAt": "2026-10-10T01:54:11.487Z",
+  "sourceCheckedAt": "2026-10-10T01:54:11.487Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38014936025",
   "documents": [
     {
       "id": "010e51c8530bac4b38dd78fc",
@@ -40763,11 +40763,22 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-09T21:13:53.454Z",
+    "generatedAt": "2026-10-10T01:54:11.487Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
         "date": "2026-10-09",
+        "topics": [
+          "15ce4bfeb2c4c225b2228ac9",
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1",
+          "0aef6f4b72c4e512490d7390",
+          "adb8682d9498bc8bcbb4e1f3"
+        ],
+        "documentCount": 163
+      },
+      {
+        "date": "2026-10-10",
         "topics": [
           "15ce4bfeb2c4c225b2228ac9",
           "70511d3302d1f485eb6285b3",
@@ -40797,7 +40808,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -40817,7 +40828,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -40837,7 +40848,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -40857,7 +40868,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -40877,7 +40888,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       }
     ],
     "archive": [
@@ -40899,7 +40910,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -40919,7 +40930,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -40939,27 +40950,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
-      },
-      {
-        "id": "0712deadb475d5556818729d",
-        "phrase": "2d semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "efbbde446528f23b9750adbf"
-        ],
-        "firstObservedAt": "2026-10-03",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -40979,7 +40970,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-09"
+        "lastSeenAt": "2026-10-10"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -40998,6 +40989,26 @@
           "8c4c64b404a61832fe0845c9"
         ],
         "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-10"
+      },
+      {
+        "id": "0712deadb475d5556818729d",
+        "phrase": "2d semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "efbbde446528f23b9750adbf"
+        ],
+        "firstObservedAt": "2026-10-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-10-09"
       }
