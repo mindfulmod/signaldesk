@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T01:54:11.487Z",
+  "generatedAt": "2026-10-10T10:47:17.149Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-10T01:54:11.487Z",
-      "nextAttemptAt": "2026-10-10T05:54:11.487Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "nextAttemptAt": "2026-10-10T16:47:17.149Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 3
+      "failureStreak": 4
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -234,8 +234,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -265,7 +265,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b9f-3+ji0qLRPK9RSZHE8p5OdhOk1Vo\"",
+      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
       "lastModified": null
     },
     "meta-news": {
@@ -273,8 +273,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -316,8 +316,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -365,16 +365,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"06bead5cdada637d5f54927663b80ce9\"",
-      "lastModified": "Fri, 02 Oct 2026 22:21:00 GMT"
+      "etag": "W/\"838f7f5bdfcef6ac23ad9a5225596edb\"",
+      "lastModified": "Fri, 09 Oct 2026 20:09:41 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -433,18 +433,34 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-10T10:47:17.149Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "items": [],
-      "seenLinks": [],
-      "matchedItems": 0,
-      "extractedEntries": 1,
+      "fingerprint": "188fce45e875bf7af4c4a7ca20d3a84ae14fd062fcf640e24b5924edb8ba2904",
+      "items": [
+        {
+          "url": "https://www.fcc.gov/edoc/425765",
+          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/425768",
+          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+          "excerpt": ".",
+          "publishedAt": null
+        }
+      ],
+      "seenLinks": [
+        "https://www.fcc.gov/edoc/425765",
+        "https://www.fcc.gov/edoc/425768"
+      ],
+      "matchedItems": 2,
+      "extractedEntries": 14,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -460,8 +476,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -586,16 +602,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1791545782-gzip\"",
-      "lastModified": "Fri, 09 Oct 2026 11:36:22 GMT"
+      "etag": "\"1791610591-gzip\"",
+      "lastModified": "Sat, 10 Oct 2026 05:36:31 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -965,23 +981,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1791557512\"",
-      "lastModified": "Fri, 09 Oct 2026 14:51:52 GMT"
+      "etag": "\"1791628681\"",
+      "lastModified": "Sat, 10 Oct 2026 10:38:01 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-10T10:47:17.149Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "cf4958a964ddf739389c447f8951c81408f92dcdb06a2f6f6be722e26c9083ed",
+      "fingerprint": "f2941d6a92eab3462ae336bcc67e18915998c68dbfdcf1630a861a99e730caef",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03159-z",
+          "title": "Breaking down nerve-cell scaffold relieves chronic pain in mice",
+          "excerpt": "",
+          "publishedAt": "2026-10-09"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03216-7",
           "title": "Briefing Chat: Top researchers are being misled by sham academic societies",
@@ -997,6 +1019,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03217-6",
           "title": "The life of Darwin and the science of clouds: Books in brief",
+          "excerpt": "",
+          "publishedAt": "2026-10-09"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03210-z",
+          "title": "Watch this invisible tattoo appear under UV light",
           "excerpt": "",
           "publishedAt": "2026-10-09"
         },
@@ -1419,18 +1447,6 @@
           "title": "Astronomy’s ‘adrenaline junkies’: Nobel prize captures the thrill of neutrino physics",
           "excerpt": "",
           "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02798-6",
-          "title": "Rising numbers of Asian and African PhD students choose to study in China",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03105-z",
-          "title": "How digital breakdowns affect supply chains — and endanger the global economy",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
         }
       ],
       "seenLinks": [
@@ -1508,7 +1524,9 @@
         "https://www.nature.com/articles/d41586-026-03175-z",
         "https://www.nature.com/articles/d41586-026-03095-y",
         "https://www.nature.com/articles/d41586-026-02798-6",
-        "https://www.nature.com/articles/d41586-026-03105-z"
+        "https://www.nature.com/articles/d41586-026-03105-z",
+        "https://www.nature.com/articles/d41586-026-03159-z",
+        "https://www.nature.com/articles/d41586-026-03210-z"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
@@ -1519,7 +1537,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"bb2da33b0052b0249950a385f9893144\"",
+      "etag": "\"2d325875b1751a748e1cd4ef2a9876f3\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1527,8 +1545,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2154,8 +2172,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2796,8 +2814,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3345,8 +3363,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3984,8 +4002,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4671,8 +4689,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5164,8 +5182,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5796,8 +5814,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-09T15:18:03.534Z",
-      "lastSuccessAt": "2026-10-09T15:18:03.534Z",
+      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
+      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -6434,6 +6452,58 @@
     }
   },
   "events": [
+    {
+      "id": "e13132619902b1e1f549ecf2",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+      "url": "https://www.fcc.gov/edoc/425765",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "61880bdac19450e92824ea20",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+      "url": "https://www.fcc.gov/edoc/425768",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4363637060fa2695a253b86c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Breaking down nerve-cell scaffold relieves chronic pain in mice",
+      "url": "https://www.nature.com/articles/d41586-026-03159-z",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "publishedAt": "2026-10-09",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ac4b4690ce6f5466c65aaace",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Watch this invisible tattoo appear under UV light",
+      "url": "https://www.nature.com/articles/d41586-026-03210-z",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "publishedAt": "2026-10-09",
+      "verification": "unreviewed"
+    },
     {
       "id": "c6dd60986ce7e9156121b4ba",
       "sourceId": "qs-news",

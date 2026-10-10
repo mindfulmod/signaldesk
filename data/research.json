@@ -1,10 +1,138 @@
 {
   "schemaVersion": 1,
-  "collectionId": "56827541-fb62-4ee8-a400-b5618e2ae824",
-  "generatedAt": "2026-10-10T01:54:11.487Z",
-  "sourceCheckedAt": "2026-10-10T01:54:11.487Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38014936025",
+  "collectionId": "aa74481c-37aa-47cb-b7c3-655eb6ad9c21",
+  "generatedAt": "2026-10-10T10:47:17.149Z",
+  "sourceCheckedAt": "2026-10-10T10:47:17.149Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38046104876",
   "documents": [
+    {
+      "id": "6ba1d3941a82052606fd8b31",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03210-z",
+      "title": "Watch this invisible tattoo appear under UV light",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e211b6ac3f3a82575524643a",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "announcementAt": "2026-10-09",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-09",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d85d5617f854cc3cf0fa5ae9",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03159-z",
+      "title": "Breaking down nerve-cell scaffold relieves chronic pain in mice",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "f3707524548cc44e4760b848",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "announcementAt": "2026-10-09",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-09",
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f1afccbdfa44093278e81171",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/425768",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "7c88615d102f8dac44c9e428",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f47b9fb9a7e86827cf5bebf4",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/425765",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "fc29818f001d700abfe7391b",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-10T10:47:17.149Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "010e51c8530bac4b38dd78fc",
       "sourceId": "sec-tm",
@@ -21889,95 +22017,6 @@
       "verification": "unreviewed",
       "associatedThemes": [],
       "metadataOnly": true
-    },
-    {
-      "id": "c1aa7e63ebfec22f57cfee15",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525154103/d84624d8k.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-07-01",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "c1d31e34829a183e559e64ae",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/d41586-026-02972-w",
-      "title": "Strange and beautiful creatures spotted on the Challenger expedition",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-29",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "c223822f90a4ee53ab4394ed",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/found-industries-aims-to-strengthen-americas-industrial-supply-chains-0503",
-      "title": "Found Industries aims to strengthen America’s industrial supply chains",
-      "excerpt": "Founded by Peter Godart ’15, SM ’19, PhD ’21, the company has developed technologies for extracting critical metals and making fuel out of aluminum.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-05-03T04:00:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-05-03T04:00:00.000Z"
-    },
-    {
-      "id": "c2f70aae456f9298eb5e4a02",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525010492/d929748d8k.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-01-22",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -27659,6 +27698,42 @@
       "versions": {
         "eb06f1eaf541e838ae5586b1": "2026-10-09T15:18:03.534Z"
       }
+    },
+    "fc29818f001d700abfe7391b": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "latestId": "f47b9fb9a7e86827cf5bebf4",
+      "versions": {
+        "f47b9fb9a7e86827cf5bebf4": "2026-10-10T10:47:17.149Z"
+      }
+    },
+    "7c88615d102f8dac44c9e428": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "latestId": "f1afccbdfa44093278e81171",
+      "versions": {
+        "f1afccbdfa44093278e81171": "2026-10-10T10:47:17.149Z"
+      }
+    },
+    "f3707524548cc44e4760b848": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "latestId": "d85d5617f854cc3cf0fa5ae9",
+      "versions": {
+        "d85d5617f854cc3cf0fa5ae9": "2026-10-10T10:47:17.149Z"
+      }
+    },
+    "e211b6ac3f3a82575524643a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-10T10:47:17.149Z",
+      "latestId": "6ba1d3941a82052606fd8b31",
+      "versions": {
+        "6ba1d3941a82052606fd8b31": "2026-10-10T10:47:17.149Z"
+      }
     }
   },
   "reviews": [],
@@ -28689,17 +28764,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 4.565,
+        "price": 4.58,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:01.000Z",
+        "asOf": "2026-10-09T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -28748,9 +28823,9 @@
           "marketCap": null
         },
         {
-          "price": 4.565,
+          "price": 4.58,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:01.000Z",
+          "asOf": "2026-10-09T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -30391,17 +30466,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 2.409,
+        "price": 2.385,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:11.000Z",
+        "asOf": "2026-10-09T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -30450,9 +30525,9 @@
           "marketCap": null
         },
         {
-          "price": 2.409,
+          "price": 2.385,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:11.000Z",
+          "asOf": "2026-10-09T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -31860,17 +31935,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 185,
+        "price": 185.3,
         "currency": "USD",
-        "asOf": "2026-10-09T15:16:56.000Z",
+        "asOf": "2026-10-09T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -31919,9 +31994,9 @@
           "marketCap": null
         },
         {
-          "price": 185,
+          "price": 185.3,
           "currency": "USD",
-          "asOf": "2026-10-09T15:16:56.000Z",
+          "asOf": "2026-10-09T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -33678,17 +33753,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 152.64,
+        "price": 148.58,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:12.000Z",
+        "asOf": "2026-10-09T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -33737,9 +33812,9 @@
           "marketCap": null
         },
         {
-          "price": 152.64,
+          "price": 148.58,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:12.000Z",
+          "asOf": "2026-10-09T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -35483,17 +35558,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 50.14,
+        "price": 50.965,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:13.000Z",
+        "asOf": "2026-10-09T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35542,9 +35617,9 @@
           "marketCap": null
         },
         {
-          "price": 50.14,
+          "price": 50.965,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:13.000Z",
+          "asOf": "2026-10-09T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -36919,17 +36994,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 721.035,
+        "price": 718.67,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:12.000Z",
+        "asOf": "2026-10-09T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -36978,9 +37053,9 @@
           "marketCap": null
         },
         {
-          "price": 721.035,
+          "price": 718.67,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:12.000Z",
+          "asOf": "2026-10-09T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -38804,17 +38879,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 533.3,
+        "price": 535.07,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:12.000Z",
+        "asOf": "2026-10-09T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -38863,9 +38938,9 @@
           "marketCap": null
         },
         {
-          "price": 533.3,
+          "price": 535.07,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:12.000Z",
+          "asOf": "2026-10-09T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -40689,17 +40764,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-09T15:18:03.534Z",
+      "quoteAttemptAt": "2026-10-10T10:47:17.149Z",
       "quote": {
-        "price": 351.2,
+        "price": 351.66,
         "currency": "USD",
-        "asOf": "2026-10-09T15:18:13.000Z",
+        "asOf": "2026-10-09T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-09T15:18:03.534Z",
+      "quoteCheckedAt": "2026-10-10T10:47:17.149Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -40748,9 +40823,9 @@
           "marketCap": null
         },
         {
-          "price": 351.2,
+          "price": 351.66,
           "currency": "USD",
-          "asOf": "2026-10-09T15:18:13.000Z",
+          "asOf": "2026-10-09T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
@@ -40763,7 +40838,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-10T01:54:11.487Z",
+    "generatedAt": "2026-10-10T10:47:17.149Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -40786,7 +40861,7 @@
           "0aef6f4b72c4e512490d7390",
           "adb8682d9498bc8bcbb4e1f3"
         ],
-        "documentCount": 163
+        "documentCount": 164
       }
     ],
     "candidates": [
@@ -41013,8 +41088,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 163,
-    "comparableDays": 1,
+    "datedDocuments": 164,
+    "comparableDays": 2,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
