@@ -36,7 +36,7 @@
     if (!state?.lastAttemptAt) return "not-checked";
     if (state.status === "error") return "unavailable";
     const succeededAt = Date.parse(state.lastSuccessAt);
-    if (!Number.isFinite(succeededAt) || succeededAt > now.getTime() || now.getTime() - succeededAt > source.intervalHours * 2 * 3600000) return "stale";
+    if (!Number.isFinite(succeededAt) || succeededAt > now.getTime() || now.getTime() - succeededAt > (source.freshnessHours || source.intervalHours * 2) * 3600000) return "stale";
     return state.matchedItems === 0 && source.mode === "links" ? "no-matches" : "current";
   }
   function safeUrl(value) { try { const u = new URL(value); return u.protocol === "https:" && !u.username && !u.password ? u.href : ""; } catch { return ""; } }

@@ -41,10 +41,18 @@ stock attention. Technology keeps the `#research` URL for compatibility, with
 older theme machinery inside a collapsed **Market research tools** section.
 New visitors start on Technology; explicit stock links still open the Desk.
 
-Technology includes five curated categories, 22 source contracts and eight
+Technology includes five curated categories, 24 source contracts and eight
 permanently covered companies. Source changes are unverified review candidates,
 not automatically confirmed facts. Follows, dismissals and review drafts are
 browser-local, not push alerts.
+
+**Discover** has two lanes: extracted headline patterns and an **Open scan** of
+unmapped stories with no technology-keyword gate. Five broad feeds (NSF, MIT
+research, Nature, NIST and the official Hacker News API) are sampled daily.
+Community votes are attention, never adoption; reporting owners are not
+automatically independent confirmations. Coverage details expose collection
+dates, content dates, source limitations and gaps. See the October 10 discovery
+pass in [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md) for the operating contract.
 
 Panel status below is as of **2026-08-29** and is meant to be kept honest. A
 panel with nothing in it says what it is waiting for rather than rendering a

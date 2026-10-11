@@ -38,12 +38,12 @@ export async function main(args = process.argv.slice(2)) {
   const now = new Date().toISOString();
   const state = await collectTechnology(registry, previous, { now, force: args.includes("--force"), retryErrors: args.includes("--retry-errors") });
   const data = publicMonitor(state);
-  const { documents, documentIndex } = buildDocumentInventory(registry, state, previousResearch, now, reviews.reviews);
+  const { documents, documentIndex, discoveryTruncated } = buildDocumentInventory(registry, state, previousResearch, now, reviews.reviews);
   const companies = args.includes("--sources-only") ? previousCompanies : await collectCompanies(config, state, previousCompanies, { now, apiKey: process.env.SIGNALDESK_QUOTE_API_KEY || "" });
   const research = { schemaVersion: 1, collectionId: randomUUID(), generatedAt: now, sourceCheckedAt: data.generatedAt,
     runUrl: process.env.GITHUB_RUN_ID ? `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}` : null,
     documents, documentIndex, reviews: reviews.reviews, companies: companies.companies || {}, providerMode: companies.providerMode || "Not collected",
-    discovery: discoverTopics(documents, registry.themes, previousResearch.discovery, now, config.sources.filter(s => s.discovery), state.sources),
+    discovery: discoverTopics(documents, registry.themes, previousResearch.discovery, now, config.sources.filter(s => s.discovery), state.sources, { discoveryTruncated }),
     coverage: { totalSources: config.sources.length, readableSources: Object.values(data.sources).filter(s => s.status === "ok").length, companies: config.companies.length },
   };
   for (const [name, content] of [

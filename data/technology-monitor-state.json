@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T20:18:26.792Z",
+  "generatedAt": "2026-10-11T01:42:22.208Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -604,385 +604,6 @@
       "title": "NSF research news",
       "etag": "\"1791610591-gzip\"",
       "lastModified": "Sat, 10 Oct 2026 05:36:31 GMT"
-    },
-    "mit-energy": {
-      "id": "mit-energy",
-      "sourceUrl": "https://news.mit.edu/rss/topic/energy",
-      "extractorVersion": 4,
-      "status": "ok",
-      "lastAttemptAt": "2026-10-10T10:47:17.149Z",
-      "lastSuccessAt": "2026-10-10T10:47:17.149Z",
-      "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
-      "nextAttemptAt": null,
-      "failureStreak": 0,
-      "error": null,
-      "fingerprint": "133ea0599f6f45811cfcbb9a3257b6aaba64d672cdcda19687a1080e99022057",
-      "items": [
-        {
-          "url": "https://news.mit.edu/2026/mitigating-environmental-threat-of-data-centers-christina-delimitrou-1008",
-          "title": "Using AI to mitigate the growing environmental threat of data centers",
-          "excerpt": "By rethinking how large cloud computing systems operate, Associate Professor Christina Delimitrou seeks to make data centers more energy efficient.",
-          "publishedAt": "2026-10-08T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/climate-action-learning-lab-bridges-research-policy-for-effective-climate-solutions-0929",
-          "title": "Climate Action Learning Lab bridges research and policy for effective climate solutions",
-          "excerpt": "J-PAL North America’s Learning Lab supported a second cohort of U.S. government and nonprofit organizations in building and using rigorous evidence to advance effective decarbonization and adaptation strategies.",
-          "publishedAt": "2026-09-29T20:35:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/pressurized-experiments-could-help-wind-farms-generate-more-power-0928",
-          "title": "Pressurized experiments could help wind farms generate more power",
-          "excerpt": "A new way of simulating wind turbines in the field shows how tweaking turbine operation could unlock tens of thousands of dollars per turbine every year.",
-          "publishedAt": "2026-09-28T15:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915",
-          "title": "MIT makes progress on campus climate goals",
-          "excerpt": "Innovative strategies, technologies, and collaborations are helping MIT advance solutions on campus and beyond.",
-          "publishedAt": "2026-09-15T19:55:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/3-questions-putting-nuclear-waste-into-perspective-0915",
-          "title": "3 Questions: Putting nuclear waste into perspective",
-          "excerpt": "Professor Haruko Wainwright believes the risks posed by radioactive wastes cannot be properly assessed without also considering the hazards of chemical wastes.",
-          "publishedAt": "2026-09-15T19:30:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/electrochemical-approach-turns-ammonia-into-pure-hydrogen-0909",
-          "title": "An electrochemical approach turns ammonia into pure hydrogen",
-          "excerpt": "An MIT team has demonstrated a more efficient way to extract pure hydrogen gas from hydrogen carrier molecules.",
-          "publishedAt": "2026-09-09T15:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/study-predicts-large-disparities-access-food-water-energy-2050-0908",
-          "title": "Study predicts large disparities in access to food, water, and energy in 2050",
-          "excerpt": "In some regions of the world, the poorest people may spend about 50 percent of their income on food, while the richest spend about 5 percent.",
-          "publishedAt": "2026-09-08T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/researchers-uncover-hidden-pore-network-within-nuclear-fuel-0813",
-          "title": "Researchers uncover hidden pore network within nuclear fuel",
-          "excerpt": "New understanding of how nuclear fuel breaks down and changes in an operating nuclear reactor could help keep some reactors running longer, will inform the next generation of nuclear reactor fuel systems.",
-          "publishedAt": "2026-08-13T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810",
-          "title": "MIT researchers tackle the economic realities of fusion power",
-          "excerpt": "Their new study aims to give budding industry a framework for understanding how fusion can be profitable.",
-          "publishedAt": "2026-08-10T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/new-way-watch-heat-move-through-electronics-0806",
-          "title": "A new way to watch heat move through electronics",
-          "excerpt": "MIT researchers can now precisely measure how heat moves through multilayered materials like computer chips.",
-          "publishedAt": "2026-08-06T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/working-automate-nuclear-plant-operations-lauren-fortier-0724",
-          "title": "Working to automate nuclear plant operations",
-          "excerpt": "PhD student Lauren Fortier is building on the experience she gained operating a nuclear plant for the Navy to solve a critical hurdle in the wider adoption of the energy source.",
-          "publishedAt": "2026-07-24T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/energy-systems-reliable-grid-future-is-about-location-0716",
-          "title": "For energy systems that power a reliable grid, the future is all about location",
-          "excerpt": "MIT researchers find that where new energy projects are built could be key to avoiding blackouts in a future with hotter weather and other challenges.",
-          "publishedAt": "2026-07-16T09:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/hydrogen-clean-fuel-of-the-future-if-we-can-ship-it-0707",
-          "title": "Hydrogen: clean fuel of the future — if we can find a cheap and clean way to ship it",
-          "excerpt": "A team led by MIT Energy Initiative researchers developed the HyCAT tool, enabling decision-makers to explore the cost and carbon emissions of their options for shipping hydrogen fuel to their site.",
-          "publishedAt": "2026-07-07T15:10:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/interdisciplinary-mit-teams-win-top-honors-nasa-competition-0630",
-          "title": "MIT student teams win top honors in NASA competition",
-          "excerpt": "Three MIT teams took five top awards in the 2026 NASA RASC-AL Competition for designing critical elements for the moon base and future missions to Mars.",
-          "publishedAt": "2026-06-30T17:30:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/mit-researchers-advance-toward-greater-bandwidth-more-energy-efficient-0630",
-          "title": "MIT researchers advance toward greater bandwidth, more energy-efficient communications",
-          "excerpt": "The FUTUR-IC research program integrates electronics and photonics in microchip systems.",
-          "publishedAt": "2026-06-30T17:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
-          "title": "How data centers can better manage energy use",
-          "excerpt": "A new study suggests flexibility in the timing of electricity consumption could lower consumer costs.",
-          "publishedAt": "2026-06-26T15:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/students-across-northeast-step-inside-mitnanos-cleanroom-0626",
-          "title": "Students from across the Northeast step inside MIT.nano’s cleanroom",
-          "excerpt": "A hands-on boot camp teaches integrated photonics to community and four-year college students in the region.",
-          "publishedAt": "2026-06-26T14:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/new-chip-could-help-tiny-robots-traverse-complex-environments-0623",
-          "title": "New chip could help tiny robots traverse complex environments",
-          "excerpt": "Researchers combined an efficient algorithm with dedicated hardware to rapidly generate 3D maps for navigation using minimal memory and power.",
-          "publishedAt": "2026-06-23T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/mit-media-future-tech-massachusetts-can-absolutely-lead",
-          "title": "MIT in the media: For the future of tech, \"Massachusetts can absolutely lead\"",
-          "excerpt": "Leaders, faculty across MIT discuss fostering innovation and talent in Greater Boston in special series of articles published alongside the outlet's annual list of 'Tech Power Players'",
-          "publishedAt": "2026-06-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/expanding-deepening-climate-reporting-through-local-messengers-0615",
-          "title": "Expanding and deepening climate reporting through local messengers",
-          "excerpt": "A new impact report shows how the MIT Environmental Solutions Journalism Fellowship has brought community-centered climate coverage to nearly 3 million readers and listeners.",
-          "publishedAt": "2026-06-17T20:10:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/jinhua-zhao-named-head-department-urban-studies-planning-0611",
-          "title": "Jinhua Zhao named head of the Department of Urban Studies and Planning",
-          "excerpt": "An expert in behavioral science and transportation, Zhao combines these studies with AI and public policy to address some of the most urgent challenges facing cities.",
-          "publishedAt": "2026-06-11T20:20:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/nuclear-inspired-cooling-system-ferveret-could-make-data-centers-more-sustainable-0610",
-          "title": "Startup’s nuclear-inspired cooling system could make data centers more sustainable",
-          "excerpt": "Founded by two researchers from MIT, Ferveret reduces the amount of energy and water required to cool the chips that power AI.",
-          "publishedAt": "2026-06-10T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/new-laboratory-aims-to-advance-quantum-research-nation-0528",
-          "title": "New laboratory at MIT aims to advance quantum research for the nation",
-          "excerpt": "The Quantum Systems Laboratory will catalyze quantum innovation and be open to government, academic, and industry researchers.",
-          "publishedAt": "2026-05-28T21:20:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
-          "title": "MIT researchers develop a low-cost technique to get lithium out of rocks",
-          "excerpt": "The low-temperature process could unlock cleaner lithium from America’s abundant hard rock while minimizing waste.",
-          "publishedAt": "2026-05-28T18:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/place-based-pathways-to-a-viable-future-0527",
-          "title": "Place-based pathways to a viable future",
-          "excerpt": "Living Climate Futures Symposium explores climate challenges and solutions at the community level.",
-          "publishedAt": "2026-05-27T20:25:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
-          "title": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
-          "excerpt": "The MBA student and entrepreneur is learning to lead a more resilient future with her renewable energy company.",
-          "publishedAt": "2026-05-26T20:10:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/startup-making-reusable-emergency-housing-wins-mit-100k-competition-0518",
-          "title": "Startup making reusable emergency housing wins MIT $100K competition",
-          "excerpt": "Uplift Microhome’s modular housing units can provide their own power and water, for faster deployments.",
-          "publishedAt": "2026-05-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
-          "title": "How the war in the Middle East is impacting global energy systems",
-          "excerpt": "Expect energy disruptions and economic damage, especially in developing countries, and prepare to build a more resilient, sustainable energy system, says International Energy Agency executive director.",
-          "publishedAt": "2026-05-15T19:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
-          "title": "3 Questions: Shedding light on why power grids go dark",
-          "excerpt": "Pablo Duenas-Martinez, a MITEI research scientist, describes the “death spiral” of events that caused the 12-hour Iberian peninsula power outage in 2025, and five lessons learned.",
-          "publishedAt": "2026-05-12T21:25:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/qa-expanding-mit-global-reach-through-universal-learning-0512",
-          "title": "Q&A: Expanding MIT’s global reach through Universal Learning",
-          "excerpt": "Dimitris Bertsimas and Megan Mitchell discuss the motivation behind Universal Learning, and what sets the new MIT Open Learning educational initiative apart.",
-          "publishedAt": "2026-05-12T15:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
-          "title": "For most US drivers, EVs offer emissions benefits and cost savings",
-          "excerpt": "When it comes to emissions, individual driving patterns matter as much as how “green” the regional electricity mix is, MIT researchers report.",
-          "publishedAt": "2026-05-12T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/celebrating-dorm-to-market-social-entrepreneurship-0507",
-          "title": "Celebrating dorm-to-market social entrepreneurship at MIT",
-          "excerpt": "At the 25th IDEAS Social Innovation Incubator Showcase and Awards, 21 student-led ventures joined 1,200 alumni-led ventures tackling the world’s most pressing problems through social entrepreneurship.",
-          "publishedAt": "2026-05-07T15:20:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/found-industries-aims-to-strengthen-americas-industrial-supply-chains-0503",
-          "title": "Found Industries aims to strengthen America’s industrial supply chains",
-          "excerpt": "Founded by Peter Godart ’15, SM ’19, PhD ’21, the company has developed technologies for extracting critical metals and making fuel out of aluminum.",
-          "publishedAt": "2026-05-03T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/faster-way-to-estimate-ai-power-consumption-0427",
-          "title": "A faster way to estimate AI power consumption",
-          "excerpt": "The “EnergAIzer” method generates reliable results in seconds, enabling data center operators to efficiently allocate resources and reduce wasted energy.",
-          "publishedAt": "2026-04-27T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/power-and-energy-climate-entrepreneurship-0424",
-          "title": "The power of “and” in energy and climate entrepreneurship",
-          "excerpt": "Greentown Labs CEO Georgina Campbell Flatter emphasizes the importance of collaboration in the entrepreneurship space, and the role that universities play in this landscape.",
-          "publishedAt": "2026-04-24T17:27:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
-          "title": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
-          "excerpt": "Rep. Jake Auchincloss visits the MIT Plasma Science and Fusion Center to learn about scaling geothermal energy.",
-          "publishedAt": "2026-04-21T22:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/geothermal-energy-turns-red-hot-0415",
-          "title": "Geothermal energy turns red hot",
-          "excerpt": "MIT Energy Initiative symposium maps a path to tap the planet’s heat-rich rocks for clean power at scale.",
-          "publishedAt": "2026-04-15T23:30:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/sixteen-new-startnano-companies-developing-hard-tech-solutions-with-mitnano-0407",
-          "title": "Sixteen new START.nano companies are developing hard-tech solutions with the support of MIT.nano",
-          "excerpt": "Startup accelerator program grows to over 30 companies, almost half of them with MIT pedigrees.",
-          "publishedAt": "2026-04-07T20:40:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/urban-planning-students-engage-communities-through-freedom-summer-fellowship-0403",
-          "title": "Urban planning students engage with communities through the Freedom Summer Fellowship",
-          "excerpt": "“You can’t teach planning today without grappling with how policy actually unfolds within communities,” says Professor Phillip Thompson.",
-          "publishedAt": "2026-04-03T21:15:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
-          "title": "Working to advance the nuclear renaissance",
-          "excerpt": "Dean Price, assistant professor in the Department of Nuclear Science and Engineering, sees a bright future for nuclear power, and believes AI can help us realize that vision.",
-          "publishedAt": "2026-04-03T20:55:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
-          "title": "Toward cheaper, cleaner hydrogen production",
-          "excerpt": "Co-founded by Dan Sobek ’88, SM ’92, PhD ’97, 1s1 Energy has developed electrochemical cell materials for hydrogen electrolyzers that it says reduces energy use by 30 percent.",
-          "publishedAt": "2026-04-03T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/championing-stellarators-sophia-henneberg-0325",
-          "title": "Championing fusion’s promising underdog",
-          "excerpt": "Sophia Henneberg, assistant professor in the Department of Nuclear Science and Engineering, is developing stellarators to harness fusion energy.",
-          "publishedAt": "2026-03-25T21:20:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
-          "title": "Active Surfaces aims to install peel-and-stick solar panels everywhere",
-          "excerpt": "This award-winning startup with roots at the MIT Energy Initiative is developing lightweight, flexible, high-efficiency solar energy films designed to be used on roofs, walls, and any curved surface.",
-          "publishedAt": "2026-03-24T20:55:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/3-questions-madison-goldberg-communicating-about-climate-0323",
-          "title": "3 Questions: Communicating about climate, in audio and beyond",
-          "excerpt": "Madison Goldberg, the new host of the Ask MIT Climate podcast, talks about her career as a science communicator as well as ideas she thinks it’s important for climate communicators to convey.",
-          "publishedAt": "2026-03-23T20:40:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
-          "title": "Turning extreme heat into large-scale energy storage",
-          "excerpt": "Fourth Power, founded by Professor Asegun Henry, is developing thermal batteries for efficiently storing excess electricity from utility grids and power producers.",
-          "publishedAt": "2026-03-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/sustaining-diplomacy-amid-us-china-competition-0318",
-          "title": "Sustaining diplomacy amid competition in US-China relations",
-          "excerpt": "At MIT, former U.S. ambassador to China Nicholas Burns highlights climate change as an area for diplomatic engagement, while exploring areas including China's emphasis on STEM education.",
-          "publishedAt": "2026-03-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
-          "title": "Next-generation geothermal energy: Promise, progress, and challenges",
-          "excerpt": "Geothermal innovators at MIT and elsewhere are seeking deeper and hotter rocks to generate electricity at scale.",
-          "publishedAt": "2026-03-13T18:55:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
-          "title": "New method could increase LLM training efficiency",
-          "excerpt": "By leveraging idle computing time, researchers can double the speed of model training while preserving accuracy.",
-          "publishedAt": "2026-02-26T05:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
-          "title": "Electrifying boilers to decarbonize industry",
-          "excerpt": "AtmosZero, co-founded by Addison Stark SM ’10, PhD ’14, developed a modular heat pump to electrify the centuries-old steam boiler.",
-          "publishedAt": "2026-01-21T05:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
-          "title": "3 Questions: How AI could optimize the power grid",
-          "excerpt": "While the growing energy demands of AI are worrying, some techniques can also help make power grids cleaner and more efficient.",
-          "publishedAt": "2026-01-09T05:00:00.000Z"
-        }
-      ],
-      "seenLinks": [
-        "https://news.mit.edu/2026/mitigating-environmental-threat-of-data-centers-christina-delimitrou-1008",
-        "https://news.mit.edu/2026/climate-action-learning-lab-bridges-research-policy-for-effective-climate-solutions-0929",
-        "https://news.mit.edu/2026/pressurized-experiments-could-help-wind-farms-generate-more-power-0928",
-        "https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915",
-        "https://news.mit.edu/2026/3-questions-putting-nuclear-waste-into-perspective-0915",
-        "https://news.mit.edu/2026/electrochemical-approach-turns-ammonia-into-pure-hydrogen-0909",
-        "https://news.mit.edu/2026/study-predicts-large-disparities-access-food-water-energy-2050-0908",
-        "https://news.mit.edu/2026/researchers-uncover-hidden-pore-network-within-nuclear-fuel-0813",
-        "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810",
-        "https://news.mit.edu/2026/new-way-watch-heat-move-through-electronics-0806",
-        "https://news.mit.edu/2026/working-automate-nuclear-plant-operations-lauren-fortier-0724",
-        "https://news.mit.edu/2026/energy-systems-reliable-grid-future-is-about-location-0716",
-        "https://news.mit.edu/2026/hydrogen-clean-fuel-of-the-future-if-we-can-ship-it-0707",
-        "https://news.mit.edu/2026/interdisciplinary-mit-teams-win-top-honors-nasa-competition-0630",
-        "https://news.mit.edu/2026/mit-researchers-advance-toward-greater-bandwidth-more-energy-efficient-0630",
-        "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
-        "https://news.mit.edu/2026/students-across-northeast-step-inside-mitnanos-cleanroom-0626",
-        "https://news.mit.edu/2026/new-chip-could-help-tiny-robots-traverse-complex-environments-0623",
-        "https://news.mit.edu/2026/mit-media-future-tech-massachusetts-can-absolutely-lead",
-        "https://news.mit.edu/2026/expanding-deepening-climate-reporting-through-local-messengers-0615",
-        "https://news.mit.edu/2026/jinhua-zhao-named-head-department-urban-studies-planning-0611",
-        "https://news.mit.edu/2026/nuclear-inspired-cooling-system-ferveret-could-make-data-centers-more-sustainable-0610",
-        "https://news.mit.edu/2026/new-laboratory-aims-to-advance-quantum-research-nation-0528",
-        "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
-        "https://news.mit.edu/2026/place-based-pathways-to-a-viable-future-0527",
-        "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
-        "https://news.mit.edu/2026/startup-making-reusable-emergency-housing-wins-mit-100k-competition-0518",
-        "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
-        "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
-        "https://news.mit.edu/2026/qa-expanding-mit-global-reach-through-universal-learning-0512",
-        "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
-        "https://news.mit.edu/2026/celebrating-dorm-to-market-social-entrepreneurship-0507",
-        "https://news.mit.edu/2026/found-industries-aims-to-strengthen-americas-industrial-supply-chains-0503",
-        "https://news.mit.edu/2026/faster-way-to-estimate-ai-power-consumption-0427",
-        "https://news.mit.edu/2026/power-and-energy-climate-entrepreneurship-0424",
-        "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
-        "https://news.mit.edu/2026/geothermal-energy-turns-red-hot-0415",
-        "https://news.mit.edu/2026/sixteen-new-startnano-companies-developing-hard-tech-solutions-with-mitnano-0407",
-        "https://news.mit.edu/2026/urban-planning-students-engage-communities-through-freedom-summer-fellowship-0403",
-        "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
-        "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
-        "https://news.mit.edu/2026/championing-stellarators-sophia-henneberg-0325",
-        "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
-        "https://news.mit.edu/2026/3-questions-madison-goldberg-communicating-about-climate-0323",
-        "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
-        "https://news.mit.edu/2026/sustaining-diplomacy-amid-us-china-competition-0318",
-        "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
-        "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
-        "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
-        "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109"
-      ],
-      "matchedItems": 50,
-      "extractedEntries": 50,
-      "newestPublicationAt": "2026-10-08T04:00:00.000Z",
-      "excerpt": null,
-      "publishedAt": null,
-      "announcementAt": null,
-      "researchUrl": null,
-      "researchPublishedAt": null,
-      "title": "MIT energy research",
-      "etag": "\"1791628681\"",
-      "lastModified": "Sat, 10 Oct 2026 10:38:01 GMT"
     },
     "nature-research": {
       "id": "nature-research",
@@ -6447,6 +6068,1538 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Alphabet SEC filings",
+      "etag": null,
+      "lastModified": null
+    },
+    "mit-research": {
+      "id": "mit-research",
+      "sourceUrl": "https://news.mit.edu/rss/research",
+      "extractorVersion": 4,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-11T01:42:22.208Z",
+      "lastSuccessAt": "2026-10-11T01:42:22.208Z",
+      "baselineAt": "2026-10-11T01:42:22.208Z",
+      "lastChangedAt": null,
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "db4780d106e58486c9a8ba035e6c989d332ab4be0c487cb88485fc8c54606bec",
+      "items": [
+        {
+          "url": "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
+          "title": "Shape-sensing sheet digitally tracks its movement as it bends and twists",
+          "excerpt": "",
+          "publishedAt": "2026-10-08T18:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/turning-tide-massachusetts-shellfishing-data-1007",
+          "title": "Turning the tide on Massachusetts shellfishing data",
+          "excerpt": "",
+          "publishedAt": "2026-10-07T19:55:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
+          "title": "Planning system ensures a robot’s flight path will remain collision-free",
+          "excerpt": "",
+          "publishedAt": "2026-10-07T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/supercomputing-researchers-document-evolution-ai-hardware-1006",
+          "title": "Supercomputing researchers document evolution of AI hardware",
+          "excerpt": "",
+          "publishedAt": "2026-10-06T20:55:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/astronomers-catch-star-slowly-snacking-on-brown-dwarf-1005",
+          "title": "Astronomers catch a star slowly snacking on a brown dwarf, 300 light years away",
+          "excerpt": "",
+          "publishedAt": "2026-10-05T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/mit-transit-lab-to-develop-ai-platform-public-transit-agencies-0930",
+          "title": "MIT Transit Lab to develop an AI platform for public transit agencies",
+          "excerpt": "",
+          "publishedAt": "2026-09-30T15:15:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/game-playing-ai-stratego-new-champ-0930",
+          "title": "This game-playing AI is the new champ at Stratego",
+          "excerpt": "",
+          "publishedAt": "2026-09-30T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/lung-cancers-can-use-two-different-mechanisms-evade-kras-inhibiting-drugs-0930",
+          "title": "Lung cancers can use two different mechanisms to evade KRAS-inhibiting drugs",
+          "excerpt": "",
+          "publishedAt": "2026-09-30T09:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/climate-action-learning-lab-bridges-research-policy-for-effective-climate-solutions-0929",
+          "title": "Climate Action Learning Lab bridges research and policy for effective climate solutions",
+          "excerpt": "",
+          "publishedAt": "2026-09-29T20:35:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/powered-by-muscle-cells-paper-thin-robot-swims-through-watery-maze-0929",
+          "title": "Powered by muscle cells, a paper-thin robot swims through watery maze",
+          "excerpt": "",
+          "publishedAt": "2026-09-29T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/algorithmic-monoculture-effects-depend-on-details-0929",
+          "title": "The effects of an “algorithmic monoculture” depend on the details",
+          "excerpt": "",
+          "publishedAt": "2026-09-29T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/when-we-talk-to-machines-sherry-turkle-book-0929",
+          "title": "Who we become when we talk to machines",
+          "excerpt": "",
+          "publishedAt": "2026-09-29T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/pressurized-experiments-could-help-wind-farms-generate-more-power-0928",
+          "title": "Pressurized experiments could help wind farms generate more power",
+          "excerpt": "",
+          "publishedAt": "2026-09-28T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+          "title": "New formulation helps RNA vaccines withstand high temperatures",
+          "excerpt": "",
+          "publishedAt": "2026-09-28T09:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-technique-could-accelerate-development-rna-therapies-0925",
+          "title": "A new technique could accelerate the development of RNA therapies",
+          "excerpt": "",
+          "publishedAt": "2026-09-25T17:25:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+          "title": "Estimating suicide risk from text",
+          "excerpt": "",
+          "publishedAt": "2026-09-24T21:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/biologists-identify-cellular-pathway-allows-colorectal-cancer-metastasize-0924",
+          "title": "Biologists identify a cellular pathway that allows colorectal cancer to metastasize",
+          "excerpt": "",
+          "publishedAt": "2026-09-24T18:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-cell-collection-device-could-improve-early-cancer-detection-0924",
+          "title": "New cell-collection device could improve early cancer detection",
+          "excerpt": "",
+          "publishedAt": "2026-09-24T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/studying-cities-using-visual-ai-fabio-duarte-martina-mazzarello-carlo-ratti-fan-zhang-book-0924",
+          "title": "The promise and peril of using visual AI to study cities",
+          "excerpt": "",
+          "publishedAt": "2026-09-24T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/how-brain-keeps-its-options-straight-at-decision-time-0922",
+          "title": "How the brain keeps its options straight at decision time",
+          "excerpt": "",
+          "publishedAt": "2026-09-22T20:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/poitras-center-to-fuel-early-careers-50-young-scientists-psychiatric-disorders-research-0922",
+          "title": "Poitras Center to fuel early careers of 50 young scientists dedicated to psychiatric disorders research",
+          "excerpt": "",
+          "publishedAt": "2026-09-22T19:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/finding-purpose-through-research-0921",
+          "title": "Finding purpose through research",
+          "excerpt": "",
+          "publishedAt": "2026-09-21T20:35:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/batteries-safely-break-down-in-gi-tract-could-improve-ingestible-devices-0921",
+          "title": "Batteries that safely break down in the GI tract could improve ingestible devices",
+          "excerpt": "",
+          "publishedAt": "2026-09-21T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/unmasking-zombie-cells-aging-tissue-ai-powered-barcode-0921",
+          "title": "Unmasking “zombie cells” in aging tissue with an AI-powered barcode",
+          "excerpt": "",
+          "publishedAt": "2026-09-21T09:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/mit-researchers-mapping-extreme-weather-risks-building-tools-to-act-0918",
+          "title": "MIT researchers are mapping extreme weather risks — and building tools to act on them",
+          "excerpt": "",
+          "publishedAt": "2026-09-18T16:55:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/how-enzymes-influence-bacterial-protein-production-0918",
+          "title": "A new understanding of how enzymes influence bacterial protein production",
+          "excerpt": "",
+          "publishedAt": "2026-09-18T16:20:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/robotic-lab-runs-optics-experiments-on-demand-0917",
+          "title": "Robotic lab sets up and runs optics experiments on demand",
+          "excerpt": "",
+          "publishedAt": "2026-09-17T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/nanoscale-mechanics-could-enable-brain-inspired-computing-0916",
+          "title": "Nanoscale mechanics could enable brain-inspired computing",
+          "excerpt": "",
+          "publishedAt": "2026-09-16T18:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-ai-technique-could-make-minimally-invasive-surgeries-safer-more-precise-0916",
+          "title": "New AI technique could make minimally invasive surgeries safer and more precise",
+          "excerpt": "",
+          "publishedAt": "2026-09-16T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/marine-bacteria-team-up-to-break-down-carbon-storing-molecules-0914",
+          "title": "Marine bacteria team up to break down one of the ocean's toughest carbon-storing molecules",
+          "excerpt": "",
+          "publishedAt": "2026-09-14T20:30:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+          "title": "New method enables AI for safety-critical situations",
+          "excerpt": "",
+          "publishedAt": "2026-09-14T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/injectable-nanodevices-could-provide-effective-treatment-drug-resistant-glioblastoma-0909",
+          "title": "Injectable nanodevices could provide effective treatment for drug-resistant glioblastoma",
+          "excerpt": "",
+          "publishedAt": "2026-09-09T20:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/pink-noise-burst-may-mean-more-restorative-sleep-0909",
+          "title": "A burst of “pink noise” may lead to more restorative sleep",
+          "excerpt": "",
+          "publishedAt": "2026-09-09T18:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/electrochemical-approach-turns-ammonia-into-pure-hydrogen-0909",
+          "title": "An electrochemical approach turns ammonia into pure hydrogen",
+          "excerpt": "",
+          "publishedAt": "2026-09-09T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/study-predicts-large-disparities-access-food-water-energy-2050-0908",
+          "title": "Study predicts large disparities in access to food, water, and energy in 2050",
+          "excerpt": "",
+          "publishedAt": "2026-09-08T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/researchers-tune-into-arctic-under-ice-sounds-test-through-ice-communication-0904",
+          "title": "Researchers tune into Arctic under-ice sounds and test through-ice communication",
+          "excerpt": "",
+          "publishedAt": "2026-09-04T16:25:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-method-allows-following-gene-activity-over-time-same-cells-0904",
+          "title": "New method allows scientists to follow gene activity over time in the same cells",
+          "excerpt": "",
+          "publishedAt": "2026-09-04T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/fabrication-platform-could-enable-flexible-transparent-next-generation-photonic-chips-0903",
+          "title": "Fabrication platform could enable flexible, transparent next-generation photonic chips",
+          "excerpt": "",
+          "publishedAt": "2026-09-03T15:45:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-qubit-architecture-enables-faster-more-accurate-operations-0903",
+          "title": "New qubit architecture enables faster, more accurate operations",
+          "excerpt": "",
+          "publishedAt": "2026-09-03T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+          "title": "System helps humans predict when self-driving cars will make mistakes",
+          "excerpt": "",
+          "publishedAt": "2026-09-02T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/new-research-shows-neutrino-laser-impossible-0902",
+          "title": "New research shows a neutrino laser is impossible",
+          "excerpt": "",
+          "publishedAt": "2026-09-02T14:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/cognition-consciousness-arise-from-analog-computations-says-new-theory-0901",
+          "title": "Cognition and consciousness arise from analog computations, says new theory",
+          "excerpt": "",
+          "publishedAt": "2026-09-01T20:35:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/brains-striatum-atlas-could-guide-researchers-new-drug-treatments-0901",
+          "title": "Atlas of the brain’s striatum could guide researchers to new drug treatments",
+          "excerpt": "",
+          "publishedAt": "2026-09-01T15:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/study-peptides-can-form-well-defined-structures-harsh-venus-conditions-0831",
+          "title": "Study: Peptides can form well-defined structures in harsh, Venus-like conditions",
+          "excerpt": "",
+          "publishedAt": "2026-08-31T19:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/mit-engineers-create-system-for-building-shape-changing-smart-devices-0827",
+          "title": "MIT engineers create a system for building shape-changing smart devices",
+          "excerpt": "",
+          "publishedAt": "2026-08-27T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
+          "title": "AI helps design new materials that work in the real world",
+          "excerpt": "",
+          "publishedAt": "2026-08-26T09:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/retooling-to-help-democracy-revive-daron-acemoglu-book-0826",
+          "title": "Retooling to help democracy revive",
+          "excerpt": "",
+          "publishedAt": "2026-08-26T04:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/meteorite-dust-holds-records-magnetism-may-have-helped-form-sun-0824",
+          "title": "Meteorite dust holds records of magnetism that may have helped form the sun",
+          "excerpt": "",
+          "publishedAt": "2026-08-24T19:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/generating-scenarios-extreme-events-without-extreme-data-0824",
+          "title": "Generating scenarios for extreme events, without extreme data",
+          "excerpt": "",
+          "publishedAt": "2026-08-24T18:00:00.000Z"
+        },
+        {
+          "url": "https://news.mit.edu/2026/language-skills-stay-strong-older-adults-even-while-other-cognitive-abilities-decline-0824",
+          "title": "Language skills stay strong in older adults, even while other cognitive abilities decline",
+          "excerpt": "",
+          "publishedAt": "2026-08-24T09:00:00.000Z"
+        }
+      ],
+      "seenLinks": [
+        "https://news.mit.edu/2026/shape-sensing-sheet-digitally-tracks-movement-bends-twists-1008",
+        "https://news.mit.edu/2026/turning-tide-massachusetts-shellfishing-data-1007",
+        "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
+        "https://news.mit.edu/2026/supercomputing-researchers-document-evolution-ai-hardware-1006",
+        "https://news.mit.edu/2026/astronomers-catch-star-slowly-snacking-on-brown-dwarf-1005",
+        "https://news.mit.edu/2026/mit-transit-lab-to-develop-ai-platform-public-transit-agencies-0930",
+        "https://news.mit.edu/2026/game-playing-ai-stratego-new-champ-0930",
+        "https://news.mit.edu/2026/lung-cancers-can-use-two-different-mechanisms-evade-kras-inhibiting-drugs-0930",
+        "https://news.mit.edu/2026/climate-action-learning-lab-bridges-research-policy-for-effective-climate-solutions-0929",
+        "https://news.mit.edu/2026/powered-by-muscle-cells-paper-thin-robot-swims-through-watery-maze-0929",
+        "https://news.mit.edu/2026/algorithmic-monoculture-effects-depend-on-details-0929",
+        "https://news.mit.edu/2026/when-we-talk-to-machines-sherry-turkle-book-0929",
+        "https://news.mit.edu/2026/pressurized-experiments-could-help-wind-farms-generate-more-power-0928",
+        "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+        "https://news.mit.edu/2026/new-technique-could-accelerate-development-rna-therapies-0925",
+        "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+        "https://news.mit.edu/2026/biologists-identify-cellular-pathway-allows-colorectal-cancer-metastasize-0924",
+        "https://news.mit.edu/2026/new-cell-collection-device-could-improve-early-cancer-detection-0924",
+        "https://news.mit.edu/2026/studying-cities-using-visual-ai-fabio-duarte-martina-mazzarello-carlo-ratti-fan-zhang-book-0924",
+        "https://news.mit.edu/2026/how-brain-keeps-its-options-straight-at-decision-time-0922",
+        "https://news.mit.edu/2026/poitras-center-to-fuel-early-careers-50-young-scientists-psychiatric-disorders-research-0922",
+        "https://news.mit.edu/2026/finding-purpose-through-research-0921",
+        "https://news.mit.edu/2026/batteries-safely-break-down-in-gi-tract-could-improve-ingestible-devices-0921",
+        "https://news.mit.edu/2026/unmasking-zombie-cells-aging-tissue-ai-powered-barcode-0921",
+        "https://news.mit.edu/2026/mit-researchers-mapping-extreme-weather-risks-building-tools-to-act-0918",
+        "https://news.mit.edu/2026/how-enzymes-influence-bacterial-protein-production-0918",
+        "https://news.mit.edu/2026/robotic-lab-runs-optics-experiments-on-demand-0917",
+        "https://news.mit.edu/2026/nanoscale-mechanics-could-enable-brain-inspired-computing-0916",
+        "https://news.mit.edu/2026/new-ai-technique-could-make-minimally-invasive-surgeries-safer-more-precise-0916",
+        "https://news.mit.edu/2026/marine-bacteria-team-up-to-break-down-carbon-storing-molecules-0914",
+        "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+        "https://news.mit.edu/2026/injectable-nanodevices-could-provide-effective-treatment-drug-resistant-glioblastoma-0909",
+        "https://news.mit.edu/2026/pink-noise-burst-may-mean-more-restorative-sleep-0909",
+        "https://news.mit.edu/2026/electrochemical-approach-turns-ammonia-into-pure-hydrogen-0909",
+        "https://news.mit.edu/2026/study-predicts-large-disparities-access-food-water-energy-2050-0908",
+        "https://news.mit.edu/2026/researchers-tune-into-arctic-under-ice-sounds-test-through-ice-communication-0904",
+        "https://news.mit.edu/2026/new-method-allows-following-gene-activity-over-time-same-cells-0904",
+        "https://news.mit.edu/2026/fabrication-platform-could-enable-flexible-transparent-next-generation-photonic-chips-0903",
+        "https://news.mit.edu/2026/new-qubit-architecture-enables-faster-more-accurate-operations-0903",
+        "https://news.mit.edu/2026/system-helps-humans-predict-when-self-driving-cars-will-make-mistakes-0902",
+        "https://news.mit.edu/2026/new-research-shows-neutrino-laser-impossible-0902",
+        "https://news.mit.edu/2026/cognition-consciousness-arise-from-analog-computations-says-new-theory-0901",
+        "https://news.mit.edu/2026/brains-striatum-atlas-could-guide-researchers-new-drug-treatments-0901",
+        "https://news.mit.edu/2026/study-peptides-can-form-well-defined-structures-harsh-venus-conditions-0831",
+        "https://news.mit.edu/2026/mit-engineers-create-system-for-building-shape-changing-smart-devices-0827",
+        "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826",
+        "https://news.mit.edu/2026/retooling-to-help-democracy-revive-daron-acemoglu-book-0826",
+        "https://news.mit.edu/2026/meteorite-dust-holds-records-magnetism-may-have-helped-form-sun-0824",
+        "https://news.mit.edu/2026/generating-scenarios-extreme-events-without-extreme-data-0824",
+        "https://news.mit.edu/2026/language-skills-stay-strong-older-adults-even-while-other-cognitive-abilities-decline-0824"
+      ],
+      "matchedItems": 50,
+      "datedItems": 50,
+      "extractedEntries": 50,
+      "newestPublicationAt": "2026-10-08T18:00:00.000Z",
+      "excerpt": null,
+      "publishedAt": null,
+      "announcementAt": null,
+      "researchUrl": null,
+      "researchPublishedAt": null,
+      "title": "MIT News · all research",
+      "etag": "\"1791681926\"",
+      "lastModified": "Sun, 11 Oct 2026 01:25:26 GMT"
+    },
+    "nist-research": {
+      "id": "nist-research",
+      "sourceUrl": "https://www.nist.gov/news-events/news/rss.xml",
+      "extractorVersion": 4,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-11T01:42:22.208Z",
+      "lastSuccessAt": "2026-10-11T01:42:22.208Z",
+      "baselineAt": "2026-10-11T01:42:22.208Z",
+      "lastChangedAt": null,
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "ecfe9d18f35cca5a75c7aecec454633750c0c5ffd005bc71a0783e35b1b779b8",
+      "items": [
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "excerpt": "As the nation’s lead agency for measurement science and standards, NIST is uniquely positioned to bridge the distance between fundamental discovery and industrial capability.",
+          "publishedAt": "2026-10-08T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/10/nist-study-shows-how-toxic-substances-mixed-fentanyl-vary-across-us-and",
+          "title": "NIST Study Shows How the Toxic Substances Mixed Into Fentanyl Vary Across the U.S. and Change Over Time",
+          "excerpt": "Alerting first responders and law enforcement to the presence of these dangerous chemicals in local supplies of fentanyl can help save lives.",
+          "publishedAt": "2026-10-08T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/10/physicist-jun-ye-wins-wolf-prize-physics",
+          "title": "Physicist Jun Ye Wins Wolf Prize in Physics",
+          "excerpt": "The award cites Ye’s achievement in “transformative, widely applicable advances in the control of ultracold atomic systems.”",
+          "publishedAt": "2026-10-05T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-provides-updates-national-construction-safety-team-activities",
+          "title": "NIST Provides Updates on National Construction Safety Team Activities",
+          "excerpt": "The presentations highlighted the importance of NIST applying its own expertise and the expertise of others through collaborations and contracts.",
+          "publishedAt": "2026-09-28T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
+          "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+          "excerpt": "Projects will address local cybersecurity workforce needs and will offer practical learning opportunities including internships, apprenticeships and hands-on projects.",
+          "publishedAt": "2026-09-18T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+          "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
+          "excerpt": "The awards will help small and medium-sized manufacturers increase the adoption of advanced manufacturing technology.",
+          "publishedAt": "2026-09-15T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens",
+          "title": "NIST Finalizes Guidelines on Protecting Online Identity and Access Tokens From Misuse",
+          "excerpt": "The finalized publication is designed to help organizations take effective steps to avoid exposing tokens to attackers.",
+          "publishedAt": "2026-09-15T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
+          "title": "NIST-Developed Quantum Sensors Improve Nuclear Monitoring",
+          "excerpt": "New X-ray measurements will allow scientists to more accurately monitor nuclear material at power plants and weapons facilities.",
+          "publishedAt": "2026-09-10T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/08/nist-researchers-supersize-quantum-technology-help-detect-faint-photons",
+          "title": "NIST Researchers Supersize Quantum Technology to Help Detect Faint Photons",
+          "excerpt": "Our everyday life is flooded with photons, the quantum building blocks of light. For cutting-edge technology, from quantum computing to deep-tissue imaging, detecting every single photon counts. “Photons carry information,” said Kristen Par",
+          "publishedAt": "2026-08-24T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/08/nist-national-construction-safety-team-advisory-committee-meeting-scheduled",
+          "title": "NIST National Construction Safety Team Advisory Committee Meeting Scheduled for Sept. 23 and 24, 2026",
+          "excerpt": "Anyone wishing to attend the virtual meeting must register by 5 p.m. EDT on Wednesday, Sept. 16.",
+          "publishedAt": "2026-08-13T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/08/nist-researchers-correct-common-error-confounding-nanotech-measurements",
+          "title": "NIST Researchers Correct Common Error Confounding Nanotech Measurements",
+          "excerpt": "The scientists offer a practical solution that relies on accounting for measurement errors before testing materials or developing products.",
+          "publishedAt": "2026-08-06T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network",
+          "title": "‘Spooky’ Particles Transit DC Suburbs, a Step Toward a Quantum Network",
+          "excerpt": "The achievement shows that fragile quantum entanglement can survive even in tough, real-world conditions.",
+          "publishedAt": "2026-08-05T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
+          "title": "NIST Joins National Genesis Mission to Accelerate AI Innovation",
+          "excerpt": "NIST will execute two of its efforts through its Centers for AI in Manufacturing and Critical Infrastructure.",
+          "publishedAt": "2026-08-04T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/07/nist-announces-funding-opportunity-14-mep-centers-advance-small-and-medium",
+          "title": "NIST Announces Funding Opportunity for 14 MEP Centers to Advance Small and Medium-Sized U.S. Manufacturers",
+          "excerpt": "NIST MEP will host an informational webinar on Tuesday, July 28, 2026, at 1 p.m. ET to provide general information about this opportunity and guidance on preparing applications.",
+          "publishedAt": "2026-07-22T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/07/nist-receives-new-patent-microbe-killing-water-heater",
+          "title": "NIST Receives New Patent for Microbe-Killing Water Heater",
+          "excerpt": "Warm water in household pipes can be a breeding ground for harmful bacteria.",
+          "publishedAt": "2026-07-14T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/07/new-fabric-test-material-could-help-strengthen-domestic-supply-chain",
+          "title": "New Fabric Test Material Could Help Strengthen Domestic Supply Chain for Textiles and Clothing",
+          "excerpt": "Researchers estimate that 56% of textiles can be recycled or recovered, but most don’t make it back into the domestic supply chain.",
+          "publishedAt": "2026-07-09T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/07/arvind-raman-confirmed-18th-nist-director",
+          "title": "Arvind Raman Confirmed as the 18th NIST Director",
+          "excerpt": "Raman comes to NIST from Purdue University, where he was the dean of engineering.",
+          "publishedAt": "2026-07-06T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/nist-launches-center-drive-manufacture-quantum-technologies",
+          "title": "NIST Launches Center to Drive the Manufacture of Quantum Technologies",
+          "excerpt": "NIST has announced an agreement with SRI International to establish the Quantum Manufacturing Engineering Center (QMEC).",
+          "publishedAt": "2026-06-29T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/nist-releases-technical-findings-what-caused-2021-partial-collapse",
+          "title": "NIST Releases Technical Findings on What Caused the 2021 Partial Collapse of Champlain Towers South",
+          "excerpt": "In an investigation that began just days after the tragedy, the team examined two dozen possible scenarios for where and why the collapse started.",
+          "publishedAt": "2026-06-22T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/nist-expands-its-library-chemical-fingerprints-identify-unknown-substances",
+          "title": "NIST Expands Its Library of ‘Chemical Fingerprints’ to Identify Unknown Substances",
+          "excerpt": "Researchers and manufacturers rely on the library to identify unknown compounds in food, drugs, cosmetics, the environment, body fluids, forensic evidence and even space rocks.",
+          "publishedAt": "2026-06-09T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
+          "title": "NIST Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems",
+          "excerpt": "The proof extends to AI the logic used by famed mathematician Kurt Gödel, whose incompleteness theorems have had a profound effect on math for nearly a century.",
+          "publishedAt": "2026-06-09T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time",
+          "title": "New AI Model Shows How to Evacuate for Fires One Safe Step at a Time",
+          "excerpt": "A NIST-led team has created a new AI model that can identify safe evacuation routes in a single-story floor plan during a fire, with a multilevel version in the works.",
+          "publishedAt": "2026-06-04T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/06/nist-researchers-discover-new-way-whisk-alloys-together-lasers",
+          "title": "NIST Researchers Discover a New Way to Whisk Alloys Together With Lasers",
+          "excerpt": "NIST also improved how X-rays are used to study the atomic structure of metals in real time during 3D printing, allowing researchers to observe how materials change under extreme conditions.",
+          "publishedAt": "2026-06-04T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
+          "title": "NIST Expands AI Consortium’s Scope, Calls for New Members",
+          "excerpt": "The consortium will focus on AI innovation and adoption, with six task groups concentrating on different aspects of AI measurement science and evaluation.",
+          "publishedAt": "2026-05-29T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/05/shooting-moon-ultrastable-lasers-dark-craters-could-enable-lunar-navigation",
+          "title": "Shooting for the Moon: Ultrastable Lasers in Dark Craters Could Enable Lunar Navigation, Precision Timekeeping, New Science",
+          "excerpt": "Lunar craters in permanent shadow could be ideal locations for building the most stable optical lasers ever made.",
+          "publishedAt": "2026-05-18T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/05/wear-and-tear-changes-measurable-pfas-levels-firefighter-hoods-gloves-and",
+          "title": "Wear and Tear Changes Measurable PFAS Levels in Firefighter Hoods, Gloves and Wildland Gear",
+          "excerpt": "In the fourth of an ongoing series of reports, NIST shows that wear and tear increased the levels of PFAS found in hoods and gloves.",
+          "publishedAt": "2026-05-13T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/04/nist-weighs-mystery-gravitational-constant",
+          "title": "NIST Weighs In on the Mystery of the Gravitational Constant",
+          "excerpt": "A NIST researcher has unveiled the results of a 10-year quest to measure the constant.",
+          "publishedAt": "2026-04-16T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/04/any-color-you-nist-scientists-create-any-wavelength-lasers-tiny-circuits",
+          "title": "Any Color You Like: NIST Scientists Create ‘Any Wavelength’ Lasers in Tiny Circuits for Light",
+          "excerpt": "NIST scientists and collaborators have pioneered a way to make integrated circuits for light by depositing complex patterns of specialized materials onto silicon wafers.",
+          "publishedAt": "2026-04-15T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/03/nist-researchers-develop-photonic-chip-packaging-can-withstand-extreme",
+          "title": "NIST Researchers Develop Photonic Chip Packaging That Can Withstand Extreme Environments",
+          "excerpt": "The advance could allow these technologies to operate in deep-space probes, inside nuclear reactors, in ultrahigh vacuum systems, and at temperatures both near absolute zero and in scorchingly hot industrial settings.",
+          "publishedAt": "2026-03-30T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/03/nist-helps-fingerprint-examiners-new-data-and-software-release",
+          "title": "NIST Helps Fingerprint Examiners With New Data and Software Release",
+          "excerpt": "The new tools are an annotated collection of 10,000 fingerprints and a software program that can sort fingerprints according to their quality.",
+          "publishedAt": "2026-03-23T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/03/nist-submits-annual-report-congress-summarizing-fy-2025-progress-national",
+          "title": "NIST Submits Annual Report to Congress Summarizing FY 2025 Progress on National Construction Safety Team Investigations",
+          "excerpt": "The report includes an overview of work completed on the Champlain Towers South investigation.",
+          "publishedAt": "2026-03-19T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/02/2-health-care-organizations-will-receive-2025-baldrige-national-quality",
+          "title": "2 Health Care Organizations Will Receive 2025 Baldrige National Quality Awards",
+          "excerpt": "The award highlights organizations that focus on resilience.",
+          "publishedAt": "2026-02-19T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/02/nist-releases-new-forensic-genetic-reference-material-help-crime",
+          "title": "NIST Releases New Forensic Genetic Reference Material to Help Crime Laboratories Analyze Challenging Cases",
+          "excerpt": "The reference material is the first to include mixtures of high-quality and degraded DNA from different individuals.",
+          "publishedAt": "2026-02-17T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+          "title": "Announcing the &quot;AI Agent Standards Initiative&quot; for Interoperable and Secure Innovation",
+          "excerpt": "The Initiative will ensure that the next generation of AI is widely adopted with confidence, can function securely on behalf of its users, and can interoperate smoothly across the digital ecosystem.",
+          "publishedAt": "2026-02-17T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology",
+          "title": "NIST Allocates Over $3 Million to Small Businesses Advancing AI, Biotechnology, Semiconductors, Quantum and More",
+          "excerpt": "NIST is allocating funding to eight small businesses in seven states under the Small Business Innovation Research (SBIR) program.",
+          "publishedAt": "2026-02-10T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/02/space-final-frontier-standards",
+          "title": "Space: The Final Frontier for Standards",
+          "excerpt": "Seven NIST reference materials, including house dust and freeze-dried human liver tissue, have been flown to the International Space Station.",
+          "publishedAt": "2026-02-09T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems",
+          "title": "CAISI Issues Request for Information About Securing AI Agent Systems",
+          "excerpt": "The Center for AI Standards and Innovation (CAISI) at the U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) has published a Request for Information (RFI) seeking insights from industry, academia, and the se",
+          "publishedAt": "2026-01-12T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2025/12/nist-launches-centers-ai-manufacturing-and-critical-infrastructure",
+          "title": "NIST Launches Centers for AI in Manufacturing and Critical Infrastructure",
+          "excerpt": "NIST has expanded its collaboration with the nonprofit MITRE Corporation as part of its efforts to ensure U.S. leadership in artificial intelligence.",
+          "publishedAt": "2025-12-22T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2025/12/nist-physicists-bring-unruly-molecules-quantum-party",
+          "title": "NIST Physicists Bring Unruly Molecules to the Quantum Party",
+          "excerpt": "Molecules can serve as versatile building blocks for quantum technologies, but they are much harder to control than atoms.",
+          "publishedAt": "2025-12-18T12:00:00.000Z"
+        },
+        {
+          "url": "https://www.nist.gov/news-events/news/2025/12/securing-smart-speakers-home-health-care-nist-offers-new-guidelines",
+          "title": "Securing Smart Speakers for Home Health Care: NIST Offers New Guidelines",
+          "excerpt": "Cybersecurity and privacy risks can threaten patient confidentiality.",
+          "publishedAt": "2025-12-17T12:00:00.000Z"
+        }
+      ],
+      "seenLinks": [
+        "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+        "https://www.nist.gov/news-events/news/2026/10/nist-study-shows-how-toxic-substances-mixed-fentanyl-vary-across-us-and",
+        "https://www.nist.gov/news-events/news/2026/10/physicist-jun-ye-wins-wolf-prize-physics",
+        "https://www.nist.gov/news-events/news/2026/09/nist-provides-updates-national-construction-safety-team-activities",
+        "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
+        "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+        "https://www.nist.gov/news-events/news/2026/09/nist-finalizes-guidelines-protecting-online-identity-and-access-tokens",
+        "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
+        "https://www.nist.gov/news-events/news/2026/08/nist-researchers-supersize-quantum-technology-help-detect-faint-photons",
+        "https://www.nist.gov/news-events/news/2026/08/nist-national-construction-safety-team-advisory-committee-meeting-scheduled",
+        "https://www.nist.gov/news-events/news/2026/08/nist-researchers-correct-common-error-confounding-nanotech-measurements",
+        "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network",
+        "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
+        "https://www.nist.gov/news-events/news/2026/07/nist-announces-funding-opportunity-14-mep-centers-advance-small-and-medium",
+        "https://www.nist.gov/news-events/news/2026/07/nist-receives-new-patent-microbe-killing-water-heater",
+        "https://www.nist.gov/news-events/news/2026/07/new-fabric-test-material-could-help-strengthen-domestic-supply-chain",
+        "https://www.nist.gov/news-events/news/2026/07/arvind-raman-confirmed-18th-nist-director",
+        "https://www.nist.gov/news-events/news/2026/06/nist-launches-center-drive-manufacture-quantum-technologies",
+        "https://www.nist.gov/news-events/news/2026/06/nist-releases-technical-findings-what-caused-2021-partial-collapse",
+        "https://www.nist.gov/news-events/news/2026/06/nist-expands-its-library-chemical-fingerprints-identify-unknown-substances",
+        "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
+        "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time",
+        "https://www.nist.gov/news-events/news/2026/06/nist-researchers-discover-new-way-whisk-alloys-together-lasers",
+        "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
+        "https://www.nist.gov/news-events/news/2026/05/shooting-moon-ultrastable-lasers-dark-craters-could-enable-lunar-navigation",
+        "https://www.nist.gov/news-events/news/2026/05/wear-and-tear-changes-measurable-pfas-levels-firefighter-hoods-gloves-and",
+        "https://www.nist.gov/news-events/news/2026/04/nist-weighs-mystery-gravitational-constant",
+        "https://www.nist.gov/news-events/news/2026/04/any-color-you-nist-scientists-create-any-wavelength-lasers-tiny-circuits",
+        "https://www.nist.gov/news-events/news/2026/03/nist-researchers-develop-photonic-chip-packaging-can-withstand-extreme",
+        "https://www.nist.gov/news-events/news/2026/03/nist-helps-fingerprint-examiners-new-data-and-software-release",
+        "https://www.nist.gov/news-events/news/2026/03/nist-submits-annual-report-congress-summarizing-fy-2025-progress-national",
+        "https://www.nist.gov/news-events/news/2026/02/2-health-care-organizations-will-receive-2025-baldrige-national-quality",
+        "https://www.nist.gov/news-events/news/2026/02/nist-releases-new-forensic-genetic-reference-material-help-crime",
+        "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+        "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology",
+        "https://www.nist.gov/news-events/news/2026/02/space-final-frontier-standards",
+        "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems",
+        "https://www.nist.gov/news-events/news/2025/12/nist-launches-centers-ai-manufacturing-and-critical-infrastructure",
+        "https://www.nist.gov/news-events/news/2025/12/nist-physicists-bring-unruly-molecules-quantum-party",
+        "https://www.nist.gov/news-events/news/2025/12/securing-smart-speakers-home-health-care-nist-offers-new-guidelines"
+      ],
+      "matchedItems": 40,
+      "datedItems": 40,
+      "extractedEntries": 40,
+      "newestPublicationAt": "2026-10-08T12:00:00.000Z",
+      "excerpt": null,
+      "publishedAt": null,
+      "announcementAt": null,
+      "researchUrl": null,
+      "researchPublishedAt": null,
+      "title": "NIST research & standards",
+      "etag": "\"1791624122-gzip\"",
+      "lastModified": "Sat, 10 Oct 2026 09:22:02 GMT"
+    },
+    "hn-discovery": {
+      "id": "hn-discovery",
+      "sourceUrl": "https://hacker-news.firebaseio.com/v0/topstories.json",
+      "extractorVersion": 4,
+      "status": "ok",
+      "lastAttemptAt": "2026-10-11T01:42:22.208Z",
+      "lastSuccessAt": "2026-10-11T01:42:22.208Z",
+      "baselineAt": "2026-10-11T01:42:22.208Z",
+      "lastChangedAt": null,
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "142b40e57e591227b53d1bf4a186c880dece75e8d9271039eebb2719882ffd2c",
+      "items": [
+        {
+          "url": "https://news.ycombinator.com/item?id=50038971",
+          "title": "Ask HN: Resources for best practices in software development with AI?",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:37:35.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": null,
+          "engagement": {
+            "points": 2,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038922",
+          "title": "Alternatives Won't Replace College, but They Must Adapt",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:26:26.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.insidehighered.com/opinion/columns/tough-love/2026/10/05/alternatives-wont-replace-college-they-must-adapt-column",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038883",
+          "title": "Show HN: Littleguys – Claude Code, Codex and OpenClaw agents in your menu bar",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:19:18.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://littleguys.hervalicio.us/",
+          "engagement": {
+            "points": 5,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038865",
+          "title": "Anthropic asks users to stop being mean to Claude",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:17:22.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.theregister.com/ai-and-ml/2026/10/09/anthropic-asks-users-to-stop-being-mean-to-claude/5302218",
+          "engagement": {
+            "points": 2,
+            "comments": 1,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038805",
+          "title": "Ocudu 26.10 brings satellite connectivity to open-source 5G",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:10:26.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.linuxfoundation.org/press/ocudu-ecosystem-foundation-announces-ocudu-26.10-and-invites-developers-to-the-ocudu-ecosystem-developer-summit-october-20-22-near-washington-dc-to-learn-m-1791460743158",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038795",
+          "title": "Genkit Dart 1.0: Build production-ready agentic apps with Dart and Flutter",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:09:46.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://flutter.dev/blog/announcing-genkit-dart-1-0",
+          "engagement": {
+            "points": 2,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038743",
+          "title": "Why your AI agents can't reach the tools you're signed in to, and how to fix it",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:03:41.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://read.aindeev.com/p/why-your-ai-agents-cant-reach-the",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038733",
+          "title": "Long-term memory for AI coding agents as a tree of plain files",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:02:14.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/gonzaroman/IHMT-MEMORY",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038726",
+          "title": "Why Constant-Time Crypto?",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T01:00:51.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.bearssl.org/constanttime.html",
+          "engagement": {
+            "points": 6,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038717",
+          "title": "Show HN: Markdownee – scrapes web into Markdown, own Trafilatura typescript port",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:59:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.markdownee.com/",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038692",
+          "title": "Mindset before tools: How to Win Innovation",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:56:31.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://architectureintel.com/mindset-before-tools-how-to-win-innovation-634ffc570ebb?postPublishedType=initial",
+          "engagement": {
+            "points": 4,
+            "comments": 1,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038673",
+          "title": "Sensor Fusion",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:52:40.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://en.wikipedia.org/wiki/Sensor_fusion",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038640",
+          "title": "Generative AI scandal has come to one of Nikon's competitions",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:47:37.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.dpreview.com/news/generative-ai-scandal-has-come-to-one-of-nikons-competitions/",
+          "engagement": {
+            "points": 7,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038634",
+          "title": "WallHop – 12ft.io is gone, so I built a replacement",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:46:48.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://wallhop.io/",
+          "engagement": {
+            "points": 57,
+            "comments": 32,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038623",
+          "title": "PSPi 6 – Raspberry Pi in a PSP",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:45:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/othermod/PSPi-Version-6",
+          "engagement": {
+            "points": 5,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038618",
+          "title": "Consistency is not a localized property",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:44:54.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://n-the-loop.com/blog/consistency-is-not-a-localized-property/",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038609",
+          "title": "TypeScript-Native Frontend Framework",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:43:56.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/PureStackStudio/PureStack",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038608",
+          "title": "Ask HN: Are iPhones the Handheld Version of Flock?",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:42:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": null,
+          "engagement": {
+            "points": 7,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038599",
+          "title": "LLM Pareto Frontier over time [video]",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:41:24.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.youtube.com/watch?v=I01v36VIrno",
+          "engagement": {
+            "points": 5,
+            "comments": 1,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038516",
+          "title": "Stop Reaching for WebSockets by Default: WebSockets vs. SSE vs. Long Polling",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:30:08.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://medium.com/@anirbansingha20/websockets-vs-long-polling-vs-server-sent-events-fa9bc1644cb8",
+          "engagement": {
+            "points": 6,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038499",
+          "title": "Show HN: Free LED pixel-pitch and display-size calculators (open source)",
+          "excerpt": "",
+          "publishedAt": "2026-10-11T00:26:53.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://boardsy.co.uk/free-exhibition-display-tools/",
+          "engagement": {
+            "points": 4,
+            "comments": 1,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50038332",
+          "title": "Show HN: TruthBeacon – Open-source Discord moderation app in Tauri and Rust",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T23:57:01.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/boredpolymath/truth-beacon",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50037949",
+          "title": "Build your own decision model",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T22:50:10.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://nishtahir.com/build-your-own-decision-model/",
+          "engagement": {
+            "points": 111,
+            "comments": 21,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50037852",
+          "title": "Show HN: ManimGX – Manim's API on a Rust/wgpu engine, for 3D videos in Python",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T22:33:30.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/academa-labs/manimgx",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50037428",
+          "title": "Show HN: Try Free Long-Term Memory for AI 50M-Token Window",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T21:36:50.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/corbenicai/galahad",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50037364",
+          "title": "Show HN: Throw Alice and Bob into Sagittarius A*",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T21:28:06.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/steveking-gh/black-hole-lab",
+          "engagement": {
+            "points": 2,
+            "comments": 0,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50036864",
+          "title": "A city-building game in which the city would prefer you didn't",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T20:31:50.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://housing.over.pizza/",
+          "engagement": {
+            "points": 168,
+            "comments": 67,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50035886",
+          "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T18:48:35.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+          "engagement": {
+            "points": 120,
+            "comments": 83,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50035530",
+          "title": "Why DuckDB 2.0 is faster",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T18:08:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
+          "engagement": {
+            "points": 145,
+            "comments": 49,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50034081",
+          "title": "Knuth reward check",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T15:47:01.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.thomas-huehn.com/knuth-reward-check/",
+          "engagement": {
+            "points": 147,
+            "comments": 51,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50033407",
+          "title": "Bitwarden Dual License Model",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T14:32:50.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+          "engagement": {
+            "points": 347,
+            "comments": 249,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50033357",
+          "title": "Unikernels were hard. key word: were",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T14:27:09.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://ghuntley.com/unikernels/",
+          "engagement": {
+            "points": 99,
+            "comments": 43,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50032758",
+          "title": "I would like the value of my home to rise, while my property taxes fall",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T13:29:03.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
+          "engagement": {
+            "points": 219,
+            "comments": 512,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50031653",
+          "title": "Apple/macOS removed from official Unix registry",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T10:57:31.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.opengroup.org//openbrand/register/",
+          "engagement": {
+            "points": 253,
+            "comments": 220,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50031614",
+          "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T10:52:09.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/rociiu/talorys",
+          "engagement": {
+            "points": 250,
+            "comments": 122,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50029830",
+          "title": "Food processing influences metabolism and brain activity",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T05:22:30.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+          "engagement": {
+            "points": 107,
+            "comments": 84,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50029487",
+          "title": "The Lightbulb Computer",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T04:12:26.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://lightbulbcomputer.com/",
+          "engagement": {
+            "points": 243,
+            "comments": 43,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50029123",
+          "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T03:02:47.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+          "engagement": {
+            "points": 416,
+            "comments": 265,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50028275",
+          "title": "REA Reverse – Engineer Anything",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T00:37:07.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://rea.tools/",
+          "engagement": {
+            "points": 708,
+            "comments": 307,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50028162",
+          "title": "How strong is the strong interaction?",
+          "excerpt": "",
+          "publishedAt": "2026-10-10T00:13:16.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://cerncourier.com/how-strong-is-the-strong-interaction/",
+          "engagement": {
+            "points": 50,
+            "comments": 12,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50027257",
+          "title": "Recent AI models struggled to match a human algorithmic innovation",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T22:14:40.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://epoch.ai/publications/innovationeval",
+          "engagement": {
+            "points": 75,
+            "comments": 60,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50024499",
+          "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T18:10:55.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://carrierexplode.com/",
+          "engagement": {
+            "points": 410,
+            "comments": 50,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50024242",
+          "title": "Rampart: Browser native on-device PII radaction",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T17:52:07.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://ndstudio.gov/posts/say-hello-to-rampart",
+          "engagement": {
+            "points": 74,
+            "comments": 30,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50024055",
+          "title": "Show HN: The rarest tech books and docs you've probably never read",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T17:39:44.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://readrare.com/",
+          "engagement": {
+            "points": 165,
+            "comments": 60,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50021899",
+          "title": "Five months treating bugs like patients and coding agents like a medical team",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T15:26:33.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.cockroachlabs.com/blog/experiment-running-hospital-code/",
+          "engagement": {
+            "points": 57,
+            "comments": 26,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50020901",
+          "title": "Getting old Macromedia Director Games to run on modern Hardware",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T14:18:03.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://werwolv.net/posts/macromedia_copy_protection/",
+          "engagement": {
+            "points": 38,
+            "comments": 6,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50018817",
+          "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T11:03:48.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+          "engagement": {
+            "points": 412,
+            "comments": 188,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50017247",
+          "title": "Nix wrote half of my debugger",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T07:29:08.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://fzakaria.com/2026/10/07/nix-wrote-half-of-my-debugger",
+          "engagement": {
+            "points": 132,
+            "comments": 23,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50016956",
+          "title": "Mxc: Microsoft Execution Containers version 1.0.0",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T06:52:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+          "engagement": {
+            "points": 160,
+            "comments": 37,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50016696",
+          "title": "Whooping Cranes Learned to Migrate by Following Costumed Pilots",
+          "excerpt": "",
+          "publishedAt": "2026-10-09T06:21:36.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://theverifiedpost.com/article/whooping-cranes-ultralight-costumed-pilots-operation-migration",
+          "engagement": {
+            "points": 57,
+            "comments": 7,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50006930",
+          "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support",
+          "excerpt": "",
+          "publishedAt": "2026-10-08T15:23:19.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/moritzwilksch/diffle",
+          "engagement": {
+            "points": 9,
+            "comments": 1,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50005743",
+          "title": "C for Rust programmers",
+          "excerpt": "",
+          "publishedAt": "2026-10-08T13:44:36.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://bd103.dev/blog/2026-10-07-c-for-rust-programmers/",
+          "engagement": {
+            "points": 98,
+            "comments": 100,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50003545",
+          "title": "Show HN: Proton Drive for Linux",
+          "excerpt": "",
+          "publishedAt": "2026-10-08T09:10:42.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://oss.lsantos.dev/proton-drive-linux-fs/",
+          "engagement": {
+            "points": 115,
+            "comments": 41,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49997481",
+          "title": "Eye of Sauron: Long-Range Hidden Spy Camera Detection (2024)",
+          "excerpt": "",
+          "publishedAt": "2026-10-07T19:15:57.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-qibo",
+          "engagement": {
+            "points": 313,
+            "comments": 74,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49991852",
+          "title": "2D Vehicles",
+          "excerpt": "",
+          "publishedAt": "2026-10-07T12:30:40.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://patkerr.co.uk/2d-vehicles/",
+          "engagement": {
+            "points": 359,
+            "comments": 82,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49986919",
+          "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
+          "excerpt": "",
+          "publishedAt": "2026-10-07T01:44:59.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
+          "engagement": {
+            "points": 134,
+            "comments": 52,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49984349",
+          "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
+          "excerpt": "",
+          "publishedAt": "2026-10-06T21:22:44.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://openscad.org/",
+          "engagement": {
+            "points": 105,
+            "comments": 86,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49980880",
+          "title": "Grieving the loss of details",
+          "excerpt": "",
+          "publishedAt": "2026-10-06T16:37:21.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+          "engagement": {
+            "points": 347,
+            "comments": 275,
+            "observedAt": "2026-10-11T01:42:22.783Z"
+          }
+        }
+      ],
+      "seenLinks": [
+        "https://news.ycombinator.com/item?id=50038971",
+        "https://news.ycombinator.com/item?id=50038922",
+        "https://news.ycombinator.com/item?id=50038883",
+        "https://news.ycombinator.com/item?id=50038865",
+        "https://news.ycombinator.com/item?id=50038805",
+        "https://news.ycombinator.com/item?id=50038795",
+        "https://news.ycombinator.com/item?id=50038743",
+        "https://news.ycombinator.com/item?id=50038733",
+        "https://news.ycombinator.com/item?id=50038726",
+        "https://news.ycombinator.com/item?id=50038717",
+        "https://news.ycombinator.com/item?id=50038692",
+        "https://news.ycombinator.com/item?id=50038673",
+        "https://news.ycombinator.com/item?id=50038640",
+        "https://news.ycombinator.com/item?id=50038634",
+        "https://news.ycombinator.com/item?id=50038623",
+        "https://news.ycombinator.com/item?id=50038618",
+        "https://news.ycombinator.com/item?id=50038609",
+        "https://news.ycombinator.com/item?id=50038608",
+        "https://news.ycombinator.com/item?id=50038599",
+        "https://news.ycombinator.com/item?id=50038516",
+        "https://news.ycombinator.com/item?id=50038499",
+        "https://news.ycombinator.com/item?id=50038332",
+        "https://news.ycombinator.com/item?id=50037949",
+        "https://news.ycombinator.com/item?id=50037852",
+        "https://news.ycombinator.com/item?id=50037428",
+        "https://news.ycombinator.com/item?id=50037364",
+        "https://news.ycombinator.com/item?id=50036864",
+        "https://news.ycombinator.com/item?id=50035886",
+        "https://news.ycombinator.com/item?id=50035530",
+        "https://news.ycombinator.com/item?id=50034081",
+        "https://news.ycombinator.com/item?id=50033407",
+        "https://news.ycombinator.com/item?id=50033357",
+        "https://news.ycombinator.com/item?id=50032758",
+        "https://news.ycombinator.com/item?id=50031653",
+        "https://news.ycombinator.com/item?id=50031614",
+        "https://news.ycombinator.com/item?id=50029830",
+        "https://news.ycombinator.com/item?id=50029487",
+        "https://news.ycombinator.com/item?id=50029123",
+        "https://news.ycombinator.com/item?id=50028275",
+        "https://news.ycombinator.com/item?id=50028162",
+        "https://news.ycombinator.com/item?id=50027257",
+        "https://news.ycombinator.com/item?id=50024499",
+        "https://news.ycombinator.com/item?id=50024242",
+        "https://news.ycombinator.com/item?id=50024055",
+        "https://news.ycombinator.com/item?id=50021899",
+        "https://news.ycombinator.com/item?id=50020901",
+        "https://news.ycombinator.com/item?id=50018817",
+        "https://news.ycombinator.com/item?id=50017247",
+        "https://news.ycombinator.com/item?id=50016956",
+        "https://news.ycombinator.com/item?id=50016696",
+        "https://news.ycombinator.com/item?id=50006930",
+        "https://news.ycombinator.com/item?id=50005743",
+        "https://news.ycombinator.com/item?id=50003545",
+        "https://news.ycombinator.com/item?id=49997481",
+        "https://news.ycombinator.com/item?id=49991852",
+        "https://news.ycombinator.com/item?id=49986919",
+        "https://news.ycombinator.com/item?id=49984349",
+        "https://news.ycombinator.com/item?id=49980880"
+      ],
+      "matchedItems": 58,
+      "datedItems": 58,
+      "extractedEntries": 58,
+      "newestPublicationAt": "2026-10-11T01:37:35.000Z",
+      "excerpt": null,
+      "publishedAt": null,
+      "announcementAt": null,
+      "researchUrl": null,
+      "researchPublishedAt": null,
+      "title": "Hacker News · open discovery",
       "etag": null,
       "lastModified": null
     }

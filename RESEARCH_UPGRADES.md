@@ -106,7 +106,7 @@ Configuration is in `research-config.js`. To publish a reviewed claim:
    normal Git review. Corrections append; originals stay in history. Editorial
    stage/checkpoint assessments are updated separately.
 
-Retention: 800 document versions / 180 days, 400 source events, 90 discovery
+Retention: 4,000 document versions / 180 days, 400 source events, 90 discovery
 history days, a 200-topic / 90-day saved-lead archive and 120 quote observations per company. Export local review drafts
 before clearing browser storage; follows/drafts do not sync across devices.
 
@@ -204,7 +204,7 @@ and dark mode (375px mobile viewport, no horizontal page overflow or console
 warnings/errors). Permission-paused sources are explicitly separated in the
 freshness watchdog as well as the UI; they are not disguised as outages.
 
-Retention policy: full document text is bounded to 180 days / 800 versions except
+Retention policy (expanded October 10): full document text is bounded to 180 days / 4,000 versions except
 published-review references; compact hashed identity/version dates persist without
 expiry. Co-mention attribution persists per hashed URL while only the trailing
 13 weeks contributes to the live graph. Earlier unattributed graph totals remain
@@ -219,6 +219,102 @@ made. Existing scheduled jobs/retries remain best-effort and timestamped. Do not
 mark all H01–H16 production-closed from green local tests alone.
 
 The audit details below preserve the original evidence and acceptance criteria.
+
+### October 10 · Open discovery and source-quality pass
+
+The earlier visual/audit PR #5 was merged on October 9. A read-only production
+health check on October 10 passed with 19/20 active sources and 8/8 recent quotes:
+QuantumScape's newsroom returned 403; two T-Mobile collectors remained
+permission-paused. These are distinct from a stale local checkout. This is an
+observed snapshot, not a guarantee that future scheduled runs succeed.
+
+Implemented in the next branch:
+
+- Replace the energy-only MIT feed with its broad research feed. Remove the
+  keyword-filtered Microsoft company blog from open discovery (retain it for
+  the existing AI-work theme). Add NIST's official broad news feed and a bounded
+  sample from the official Hacker News API. Total: 24 contracts, 22 active,
+  five open-discovery feeds. No accounts or paid subscriptions were added.
+- Hacker News: 30 top + 20 new + 10 Show HN IDs, deduplicated; at most three
+  concurrent item requests. Never fetch story destinations or user profiles.
+  Deleted/dead/non-story records are excluded. A request failure marks the
+  sample incomplete, not a readable zero. Preserve submission dates separately
+  from article dates and nullable point/comment observations. These counts do
+  not create new document versions or prove product use.
+- MIT is link/title/date metadata only; no copied story body or imagery.
+  New source contracts link to publisher/API documentation and state their
+  purpose, bias and content-quiet threshold. Metadata access is not a blanket
+  license for commercial republication of full articles or media.
+- Open scan exposes dated, unmapped stories without the pattern extractor's
+  technical-vocabulary gate. A feed-balanced preview prevents community volume
+  from hiding quieter science sources. It is bounded to 120 stories, not a
+  census. Pattern grouping remains deliberately heuristic; unfamiliar wording
+  can be missed there, and adjacent patterns may overlap.
+- Linked primary stories and exact repeated titles are deduplicated. HN is one
+  reporting owner, not a new independent owner for every contributor or linked
+  domain. Paraphrased syndication and research-institution conflicts still need
+  editorial checks.
+- Momentum requires each of the preceding 28 UTC collection days, unchanged
+  coverage and a nonzero prior-period sample. Config/method changes reset
+  comparability. A missing day, quiet/failed feed or clipped 28-day archive
+  withholds momentum. Compact identity memory keeps truncation warnings alive
+  after full-text eviction. The enlarged archive remains bounded to 4,000
+  versions / 180 days, with published reviews pinned.
+- Discover now separates Patterns, Open scan and browser-local Saved leads;
+  includes a signal-type filter; shows concise evidence counts and a next check;
+  and moves methodology/source detail into an accessible disclosure. Unknown
+  adoption is never turned into a numeric traction score.
+- The existing twice-daily watchdog also checks discovery coverage and loss of
+  an entire research/community lane, and warns about readable-but-undated/quiet
+  feeds. Six-hour collection opportunities, Toronto calendar-day checks and
+  bounded retries remain best-effort. Browser reloads do not initiate collection.
+  The brief, source-health labels and watchdog now share a 36-hour check window.
+
+The local collection returned 21/22 active sources, all five discovery feeds,
+and 8/8 recent quotes. The compact identity ledger also exposed 20 discovery
+records that had already left the previous 800-version text archive. That gap
+is now visible: current checks continue to accumulate, but counts are explicitly
+limited to retained stories and momentum remains withheld until a complete
+28-day comparison window exists. Missing text was not reconstructed or invented.
+
+How to take an unfamiliar lead from attention to traction:
+
+1. Daily automated intake: broad research + developer attention. Inspect both
+   patterns and Open scan; save useful patterns. A lead is not an investment call.
+2. Editorial corroboration: resolve the original story, separate institutions,
+   companies and customers, and require distinct evidence over time. Do not use
+   reprints or a funding announcement as a customer-demand count.
+3. Define the adoption test before promoting a new theme: paying active users
+   and retention for software; qualified customer deliveries, repeat orders,
+   yield and cost for hardware; usage, reliability and capacity for infrastructure.
+   Keep units, denominators, dates, geography and targets explicit. Add the theme
+   and primary/customer/regulator contracts through repository review.
+4. Only then map public-company exposure, product-level economics and valuation.
+   Technology progress does not establish stock upside.
+
+Remaining H16 work: a theme-proposal workflow for unclassified stories; consented
+or licensed consumer-demand/app-usage datasets; repository/release activity using
+official APIs; broader international coverage; and product-specific usage/revenue
+series. GitHub stars, Google Trends and app usage are **not connected** in this
+pass. A future weekly editorial review should investigate the strongest leads and
+sample unclassified stories to audit recall; no unattended editorial approval or
+new notification subscription was created.
+
+Primary source contracts reviewed: [MIT RSS](https://news.mit.edu/rss),
+[MIT reuse policy](https://news.mit.edu/terms-of-use),
+[NIST RSS](https://www.nist.gov/coo/nist-rss-feeds),
+[official Hacker News API](https://github.com/HackerNews/API).
+arXiv expansion is not enabled here; its [API terms](https://info.arxiv.org/help/api/tou.html)
+require a single connection and at least three seconds between legacy API requests.
+
+Verification: 280 tests pass on Node 20 and Node 24, including 17 new discovery
+regressions. Browser checks at 375, 980 and 1440px cover both palettes, source
+disclosures, research/community filtering, search-empty recovery, saved-lead
+persistence/removal, pagination focus and no horizontal overflow. The browser
+reported no console warnings/errors. Test-only saves were removed afterward.
+
+Release gate: publish through a new PR, then verify hosted data and the first
+scheduled run after merge. Do not equate local collection success with deployment.
 
 Execution order:
 

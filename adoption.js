@@ -15,13 +15,14 @@
   let drafts = []; try { const saved = JSON.parse(localStorage.getItem(draftKey) || "[]"); if (Array.isArray(saved)) drafts = saved.filter(d => d && typeof d.candidateId === "string"); } catch { /* session drafts still work */ }
   let discoveryFollowed = readList(discoveryKey), research = null, researchStatus = "loading", selectedCompany = null, reviewingId = null, reviewFilter = "pending", queueLimit = 24;
   let trackerType = "batteries", trackerState = { compare: [], batteryStage: "all", country: "all", serviceStatus: "all" };
-  let discoverySavedOnly = false;
+  let discoverySavedOnly = false, discoveryMode = "patterns", discoveryLane = "all", discoveryLimit = 24;
   let view = "brief", selectedId = null, monitor = null, monitorStatus = "loading", showDismissed = false;
   const params = new URLSearchParams(location.search);
   if (data.themes.some(t => t.id === params.get("tech"))) selectedId = params.get("tech");
   if (["brief", "radar", "milestones", "inbox", "companies", "trackers", "discovery"].includes(params.get("techView"))) view = params.get("techView");
   if (config.companies.some(c => c.ticker === params.get("company"))) { selectedCompany = params.get("company"); view = "companies"; }
   if (params.get("tracker") === "satellite") trackerType = "satellite";
+  if (params.get("scan") === "open") discoveryMode = "open";
   let followedOnly = false, storageWorking = true;
   function save(key, values) { try { localStorage.setItem(key, JSON.stringify([...values])); } catch { storageWorking = false; } }
   function setUrl() {
@@ -31,6 +32,7 @@
       if (view !== "brief") url.searchParams.set("techView", view); else url.searchParams.delete("techView");
       if (selectedCompany) url.searchParams.set("company", selectedCompany); else url.searchParams.delete("company");
       if (view === "trackers") url.searchParams.set("tracker", trackerType); else url.searchParams.delete("tracker");
+      if (view === "discovery" && discoveryMode === "open" && !discoverySavedOnly) url.searchParams.set("scan", "open"); else url.searchParams.delete("scan");
       window.history.replaceState(null, "", url);
     } catch { /* optional deep links */ }
   }
@@ -96,7 +98,7 @@
     byId("techFollowedOnly").setAttribute("aria-pressed", String(followedOnly));
     const activeFilters = Number(byId("techSector").value !== "all") + Number(byId("techStage").value !== "all") + Number(followedOnly);
     byId("techFilterLabel").textContent = `Filter ${view === "discovery" ? "leads" : "technologies"}${(view !== "discovery" && activeFilters) || byId("techSearch").value ? " · active" : ""}`;
-    byId("techResultStatus").hidden = view === "brief" && !activeFilters && !byId("techSearch").value && !selected && !selectedCompany && !reviewingId;
+    byId("techResultStatus").hidden = ["brief", "discovery"].includes(view) && !activeFilters && !byId("techSearch").value && !selected && !selectedCompany && !reviewingId;
     byId("techResultStatus").textContent = reviewingId ? "Local evidence review · not published" : selectedCompany ? `${selectedCompany} · permanent company coverage` : selected ? `${selected.name} · research profile` : view === "discovery" ? "Exploratory leads · not verified adoption" : view === "trackers" ? "Program and service evidence · use the filters below" : `${themes.length} of ${data.themes.length} technologies${followedOnly ? " · following only" : ""}`;
     byId("techRegistryStatus").textContent = `${data.themes.length} themes · ${config.sources.length} sources · ${config.companies.length} permanent companies`;
     byId("adoptionFollowStatus").textContent = storageWorking ? `${followed.size} technologies followed · ${drafts.length} local review drafts. Browser-local saves; no push subscription.` : "Browser storage is unavailable. Changes work for this session only; export drafts before leaving.";
@@ -104,7 +106,7 @@
     if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId) || research.reviews.filter(r => r.candidateId === reviewingId).at(-1), research.reviews));
     else if (selectedCompany) content.innerHTML = views.companies(themes, research, selectedCompany);
     else if (selected) content.innerHTML = dossier(selected);
-    else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly);
+    else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly, { mode: discoveryMode, lane: discoveryLane, limit: discoveryLimit, monitor });
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
     else if (!themes.length) content.innerHTML = empty("Try a broader search, another stage, or turn off Following only. Your saved follows will not be deleted.");
     else if (view === "brief") content.innerHTML = views.brief(themes, research, monitor, [...followed], researchStatus);
@@ -169,6 +171,7 @@
     const target = event.target;
     if (target.id === "techShowDismissed") showDismissed = target.checked;
     else if (target.id === "reviewFilter") { reviewFilter = target.value; queueLimit = 24; }
+    else if (target.id === "discoveryLane") { discoveryLane = target.value; discoveryLimit = 24; }
     else if (target.id === "batteryStage") trackerState.batteryStage = target.value;
     else if (target.id === "rolloutCountry") trackerState.country = target.value;
     else if (target.id === "rolloutStatus") trackerState.serviceStatus = target.value;
@@ -214,13 +217,16 @@
     else if (button.hasAttribute("data-company-back")) { selectedCompany = null; setUrl(); render(); }
     else if (button.dataset.tracker) { trackerType = button.dataset.tracker; selectedId = null; selectedCompany = null; reviewingId = null; view = "trackers"; setUrl(); render(); }
     else if (button.hasAttribute("data-clear-comparison")) { trackerState.compare = []; render(); }
-    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; render(); root.querySelector("[data-saved-discovery]")?.focus(); }
+    else if (button.dataset.discoveryMode) { discoveryMode = button.dataset.discoveryMode; discoverySavedOnly = false; discoveryLimit = 24; setUrl(); render(); root.querySelector(`[data-discovery-mode="${discoveryMode}"]`)?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; discoveryLimit = 24; setUrl(); render(); root.querySelector("[data-saved-discovery]")?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-clear-discovery")) { byId("techSearch").value = ""; discoveryLane = "all"; discoveryLimit = 24; render(); byId("discoveryLane")?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-more-discovery")) { const previousLimit = discoveryLimit; discoveryLimit += 24; render(); root.querySelectorAll("[data-discovery-item]")[previousLimit]?.focus(); }
     else if (button.dataset.review) { reviewingId = button.dataset.review; view = "inbox"; selectedId = null; selectedCompany = null; setUrl(); render(); content.scrollIntoView({ block: "start" }); root.querySelector('[name="reviewer"]')?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-cancel-review")) { reviewingId = null; render(); }
     else if (button.dataset.discardReview) { drafts = drafts.filter(d => d.candidateId !== button.dataset.discardReview); save(draftKey, drafts); reviewingId = null; render(); }
     else if (button.hasAttribute("data-more-reviews")) { queueLimit += 24; render(); }
     else if (button.hasAttribute("data-export-reviews")) exportReviews();
-    else if (button.dataset.followDiscovery) { const id = button.dataset.followDiscovery; discoveryFollowed = discoveryFollowed.includes(id) ? discoveryFollowed.filter(v => v !== id) : [...discoveryFollowed, id]; save(discoveryKey, discoveryFollowed); render(); root.querySelector(`[data-follow-discovery="${id}"]`)?.focus({ preventScroll: true }); }
+    else if (button.dataset.followDiscovery) { const id = button.dataset.followDiscovery; discoveryFollowed = discoveryFollowed.includes(id) ? discoveryFollowed.filter(v => v !== id) : [...discoveryFollowed, id]; save(discoveryKey, discoveryFollowed); render(); (root.querySelector(`[data-follow-discovery="${CSS.escape(id)}"]`) || root.querySelector("[data-saved-discovery]"))?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-back-tech")) { const id = selectedId; selectedId = null; setUrl(); render(); root.querySelector(`[data-open-tech="${CSS.escape(id)}"]`)?.focus(); }
     else if (button.hasAttribute("data-clear-tech")) { byId("techSearch").value = ""; byId("techSector").value = "all"; byId("techStage").value = "all"; followedOnly = false; selectedId = null; setUrl(); render(); byId("techSearch").focus(); }
     else if (button.dataset.stock) window.SIGNALDESK_FIND_STOCK?.(button.dataset.stock);

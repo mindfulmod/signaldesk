@@ -316,6 +316,15 @@ Rules for future changes:
 
 ## Copy & tone rules (these are product identity — do not drift)
 
+October 10, 2026 · Discover refinement: retain the existing two palettes and
+typography. A compact Notice → Corroborate → Validate guide separates discovery
+from adoption. Patterns and the keyword-free Open scan serve different tasks;
+neither is a ranked list of future winners. Show source counts, a concrete next
+check and an inspectable original, with methods and source contracts in a native
+disclosure. Include signal-type filtering, saved-lead recovery and bounded
+pagination. Research and community attention must stay distinguishable, and the
+snapshot's collection date must not replace a story's publication/submission date.
+
 The technology brief/trackers use `research-views.js` for escaped HTML,
 `research-model.js` for evidence rules, `adoption.js` for local state/navigation,
 and `research.css` for token-only layout. `research-config.js` loads before the
