@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T12:24:17.073Z",
+  "generatedAt": "2026-10-12T23:12:01.481Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -73,14 +73,14 @@
       "id": "ast-investor",
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
-      "status": "error",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-11T10:59:52.949Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-12T23:12:01.481Z",
+      "lastSuccessAt": "2026-10-12T23:12:01.481Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-10-12T13:24:17.073Z",
-      "failureStreak": 1,
-      "error": "fetch failed",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
       "fingerprint": "2506cb6445a2b386cd1efc6f45597b3ad114c6ec5e765b129892d56c91e0f959",
       "items": [
         {
@@ -162,11 +162,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "nextAttemptAt": "2026-10-12T18:24:17.073Z",
+      "lastAttemptAt": "2026-10-12T23:12:01.481Z",
+      "nextAttemptAt": "2026-10-13T05:12:01.481Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 8
+      "failureStreak": 9
     },
     "toyota-news": {
       "id": "toyota-news",
