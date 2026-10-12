@@ -1,10 +1,258 @@
 {
   "schemaVersion": 1,
-  "collectionId": "3b940b9f-7f19-4f86-a607-79f7271bb462",
-  "generatedAt": "2026-10-12T01:44:14.482Z",
-  "sourceCheckedAt": "2026-10-11T20:33:00.812Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38193020860",
+  "collectionId": "5346f885-806c-4262-acd5-d2b621cc4087",
+  "generatedAt": "2026-10-12T12:24:17.073Z",
+  "sourceCheckedAt": "2026-10-12T12:24:17.073Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38248780792",
   "documents": [
+    {
+      "id": "0396c6f72f8eaf75f7d2ac00",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11253-5",
+      "title": "Author Correction: Timing and trajectory of BCR::ABL1 -driven chronic myeloid leukaemia",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "0eddb8749fa74836d71cb3fb",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1b505ed20d2ca14cf10ee0dd",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03240-7",
+      "title": "Award-winning microscopy image disqualified over AI use",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "02c501f6ee59645fa1eebf4a",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3ac8c53c32674de76bd50ca5",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03227-4",
+      "title": "Private, offline and yours: how to search the literature with local AI systems",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "9eeabde3578837b20f9090eb",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "40af18df88db4b1c0fcad099",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02714-y",
+      "title": "I told ChatGPT to ‘continue’ — it went too far",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "17dcddce0bbc541d4a77f397",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "532edb72f1633c4cb51bba94",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03224-7",
+      "title": "Does the decline of book reading mark the end of rational thinking?",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "54683b13cf2f4c69946975d0",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6273f132cee49fb1ed4b832e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03207-8",
+      "title": "Hidden signals in sleep can predict future health",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "b4b564929724338ae4a4f31a",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7242169e9cd302fa5e1835e2",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03181-1",
+      "title": "What does a PhD pay? Data reveal huge gaps across Europe",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "c7d1e5346dbd23dcea6bce4d",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7d297db064fc52bedc90be71",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03225-6",
+      "title": "Keep medical doctors in academia — without them, health-care research will suffer",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "f5496092088fe8ccae3b52e3",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-12T12:24:17.073Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
     {
       "id": "6ba1d3941a82052606fd8b31",
       "sourceId": "nature-research",
@@ -21839,184 +22087,6 @@
         "solid-state-batteries"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "bdab43021f67ccecbfdc0ece",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526258667/d26760d8k.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-06-05",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "be2d12e6ee65e2255b04b498",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/d41586-026-03015-0",
-      "title": "How to spend $25 billion on science: OpenAI’s staggeringly rich research charity gets under way",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Research / test language",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "bff512135473d01ac6ac1360",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087835/msft-20240730.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2024-07-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "c02b353c70f9d67ca507b338",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/qa-expanding-mit-global-reach-through-universal-learning-0512",
-      "title": "Q&A: Expanding MIT’s global reach through Universal Learning",
-      "excerpt": "Dimitris Bertsimas and Megan Mitchell discuss the motivation behind Universal Learning, and what sets the new MIT Open Learning educational initiative apart.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-05-12T15:00:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-05-12T15:00:00.000Z"
-    },
-    {
-      "id": "c0a1b5ec447eba4f36e8169e",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
-      "title": "Microsoft · 10-K · 10-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-07-29",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "c13428d681457510f8666509",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/urban-planning-students-engage-communities-through-freedom-summer-fellowship-0403",
-      "title": "Urban planning students engage with communities through the Freedom Summer Fellowship",
-      "excerpt": "“You can’t teach planning today without grappling with how policy actually unfolds within communities,” says Professor Phillip Thompson.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-04-03T21:15:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-04-03T21:15:00.000Z"
-    },
-    {
-      "id": "c17bb9400361dab9f8980ff3",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/msft-20240630.htm",
-      "title": "Microsoft · 10-K · 10-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2024-07-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "c18652160aab45ccf289a181",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/d41586-026-02201-4",
-      "title": "I turn up late to meetings to dodge small talk. Am I wrong?",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -27734,6 +27804,78 @@
       "versions": {
         "6ba1d3941a82052606fd8b31": "2026-10-10T10:47:17.149Z"
       }
+    },
+    "02c501f6ee59645fa1eebf4a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "1b505ed20d2ca14cf10ee0dd",
+      "versions": {
+        "1b505ed20d2ca14cf10ee0dd": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "0eddb8749fa74836d71cb3fb": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "0396c6f72f8eaf75f7d2ac00",
+      "versions": {
+        "0396c6f72f8eaf75f7d2ac00": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "f5496092088fe8ccae3b52e3": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "7d297db064fc52bedc90be71",
+      "versions": {
+        "7d297db064fc52bedc90be71": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "c7d1e5346dbd23dcea6bce4d": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "7242169e9cd302fa5e1835e2",
+      "versions": {
+        "7242169e9cd302fa5e1835e2": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "b4b564929724338ae4a4f31a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "6273f132cee49fb1ed4b832e",
+      "versions": {
+        "6273f132cee49fb1ed4b832e": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "17dcddce0bbc541d4a77f397": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "40af18df88db4b1c0fcad099",
+      "versions": {
+        "40af18df88db4b1c0fcad099": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "54683b13cf2f4c69946975d0": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "532edb72f1633c4cb51bba94",
+      "versions": {
+        "532edb72f1633c4cb51bba94": "2026-10-12T12:24:17.073Z"
+      }
+    },
+    "9eeabde3578837b20f9090eb": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-12T12:24:17.073Z",
+      "latestId": "3ac8c53c32674de76bd50ca5",
+      "versions": {
+        "3ac8c53c32674de76bd50ca5": "2026-10-12T12:24:17.073Z"
+      }
     }
   },
   "reviews": [],
@@ -28764,7 +28906,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 4.58,
         "currency": "USD",
@@ -28774,7 +28916,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -30466,7 +30608,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 2.385,
         "currency": "USD",
@@ -30476,7 +30618,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -31935,7 +32077,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 185.3,
         "currency": "USD",
@@ -31945,7 +32087,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -33753,7 +33895,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 148.58,
         "currency": "USD",
@@ -33763,7 +33905,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35558,7 +35700,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 50.965,
         "currency": "USD",
@@ -35568,7 +35710,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -36994,7 +37136,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 718.67,
         "currency": "USD",
@@ -37004,7 +37146,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -38879,7 +39021,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 535.07,
         "currency": "USD",
@@ -38889,7 +39031,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -40764,7 +40906,7 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T20:33:00.812Z",
+      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
       "quote": {
         "price": 351.66,
         "currency": "USD",
@@ -40774,7 +40916,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T20:33:00.812Z",
+      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -40838,7 +40980,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-12T01:44:14.482Z",
+    "generatedAt": "2026-10-12T12:24:17.073Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -40883,7 +41025,7 @@
           "0aef6f4b72c4e512490d7390",
           "adb8682d9498bc8bcbb4e1f3"
         ],
-        "documentCount": 164
+        "documentCount": 170
       }
     ],
     "candidates": [
@@ -41110,13 +41252,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 164,
-    "comparableDays": 3,
+    "datedDocuments": 170,
+    "comparableDays": 4,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
     "totalSources": 22,
-    "readableSources": 19,
+    "readableSources": 18,
     "companies": 8
   }
 }
