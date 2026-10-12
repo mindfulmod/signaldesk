@@ -1,1 +1,1 @@
-window.SIGNALDESK_HOT_MONITOR = {"generatedAt":"2026-10-09T23:20:30.258Z","evidenceVersion":2,"tickers":{}};
+window.SIGNALDESK_HOT_MONITOR = {"generatedAt":"2026-10-12T21:49:54.094Z","evidenceVersion":2,"tickers":{}};
