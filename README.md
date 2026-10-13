@@ -116,6 +116,15 @@ twice daily; SEC financial facts refresh weekly or on a new filing. Claims still
 require human review. A separate public-site watchdog checks freshness twice
 a day. GitHub scheduling is best-effort, not guaranteed delivery.
 
+The public watchdog also checks market coverage independently of research.
+`node scripts/check-market-health.mjs --live` measures quotes actually collected
+in the snapshot separately from carried-forward prices and usable comparisons.
+Operational targets: at least 50 tickers and recent collected quotes for 75% of
+the universe; warn after 36 hours, fail after 96 hours (weekend tolerance, not a
+live-feed guarantee). Degraded data remains visible with warnings, but the job
+fails after publication rather than reporting a healthy collection. These checks
+do not certify provider licensing, market completeness or investment quality.
+
 The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 
 It:

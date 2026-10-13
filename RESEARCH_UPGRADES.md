@@ -2,6 +2,36 @@
 
 ## October 13 release follow-up
 
+Market reliability follow-up (branch implementation, not yet deployed):
+
+- Production snapshot at 19:57 UTC contained 75 stocks: 31 newly collected
+  recent quotes, 30 complete comparisons, 5 still-recent retained prices,
+  1 stale retained price and 38 missing quotes at the audit time. The scheduled
+  job was green despite this loss of coverage.
+- Reproduced Yahoo's symbol-specific 404 for BBBYQ followed by a successful GME
+  quote. Missing symbols had been counted as provider failures, causing the
+  shared host circuit breaker to skip valid tickers. Yahoo 404 now leaves the
+  provider available; 403/429 still trigger backoff. No access blocks bypassed.
+- Added a published market health check after refresh and in the twice-daily
+  watchdog, independent of research health. Operational targets are at least
+  50 stocks, 75% recent quotes collected in this snapshot, and publication within
+  96 hours (warning after 36). Retained prices cannot satisfy collection targets;
+  quarantined comparisons stay unknown. Targets are availability requirements,
+  not investment-model tuning or a guarantee of complete market coverage.
+- Desk summary explicitly separates refreshed quotes, retained prices and
+  usable comparisons. The existing compact layout and source disclosures remain.
+- Live health correctly fails the published 31/75 snapshot. A bounded real
+  adapter probe confirms BBBYQ 404 no longer prevents GME from returning a dated
+  quote. Full-universe recovery still needs verification after deployment.
+- Verification: all 313 tests pass on Node 24 and Node 20, including missing-symbol
+  transport, genuine refusals, partial/retained/stale coverage, malformed data,
+  zero comparisons, workflow wiring and Desk counts. Syntax/whitespace checks
+  pass. Desktop/light and 375px/dark browser checks show no page overflow or
+  console errors.
+- Follow-up found during browser QA: a Samsung/SK Hynix headline appears beside
+  SXTC in the news panel. Audit ticker/headline identity matching next; do not
+  treat retrieval by ticker query as proof that an article concerns that company.
+
 Personal investigations follow-up (branch implementation, not yet deployed):
 
 - Discover → Saved → Investigate turns any retained story/pattern into a personal

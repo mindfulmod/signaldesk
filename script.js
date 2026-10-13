@@ -689,10 +689,9 @@ function updateStatus() {
   markBlockedSources();
   const coverage = byId("coverageStatus");
   if (coverage) {
-    const signals = snapshot.signals || [];
-    const priced = signals.filter(marketEvidenceCurrent).length;
+    const market = window.SIGNALDESK_QUALITY.marketCoverage(snapshot);
     const sources = window.SIGNALDESK_QUALITY.sourceHealth(snapshot);
-    coverage.textContent = `${formatShortDateTime(snapshot.generatedAt)} snapshot · ${priced}/${signals.length} tickers with recent market data · ${sources.filter(row => row.tickers > 0).length}/${sources.length} sources with matches`;
+    coverage.textContent = `${formatShortDateTime(snapshot.generatedAt)} snapshot · ${market.collectedQuotes}/${market.total} quotes refreshed · ${market.completeComparisons} usable price/volume comparisons${market.retainedQuotes ? ` · ${market.retainedQuotes} older quotes retained` : ""} · ${sources.filter(row => row.tickers > 0).length}/${sources.length} sources with matches. Quotes are not live.`;
   }
 }
 

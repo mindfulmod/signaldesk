@@ -7,6 +7,12 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 13 market-coverage follow-up: `data-quality.js.marketCoverage` is shared
+by the Desk summary and `scripts/check-market-health.mjs`. Collected quotes,
+carried-forward prices and complete price/volume comparisons are different
+counts. Do not relabel all three as recent market data. Retained quotes keep
+their original timestamps and never count as a successful current collection.
+
 October 9, 2026 Desk workspace pass: the desktop list and detail pane now share
 a bounded height instead of leaving a page-length empty column beneath a short
 detail pane. `layout-fix.js` owns the desktop scroll boundaries; table headings

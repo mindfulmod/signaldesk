@@ -326,18 +326,23 @@ const hostGuard = createHostGuard();
 // newest one, and treating the first 403 as a host failure skipped all 8
 // remaining dates. That silently cost the run its entire short-volume seed on
 // every refresh before publication -- 3 of the 4 daily scheduled runs.
-async function guardedRequest(url, headers, { missingIsAnswer = false } = {}) {
+// A missing ticker (404) is not a host outage. Keep that narrower contract
+// separate from FINRA's file-date probing: Yahoo 403/429 must still back off.
+async function guardedRequest(url, headers, { missingIsAnswer = false, notFoundIsAnswer = false } = {}) {
   const host = hostOf(url);
   if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   const wait = hostGuard.waitFor(host);
   if (wait > 0) await sleep(wait);
   hostGuard.markRequest(host);
+  let expectedMissingResponse = false;
   try {
     const response = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
     if (!response.ok) {
       // Note the success before throwing: the host is demonstrably alive and
       // responsive, which is exactly what the breaker wants to know.
-      if (missingIsAnswer && (response.status === 403 || response.status === 404)) {
+      expectedMissingResponse = (response.status === 404 && (missingIsAnswer || notFoundIsAnswer)) || (response.status === 403 && missingIsAnswer);
+      await response.body?.cancel();
+      if (expectedMissingResponse) {
         hostGuard.noteSuccess(host);
         throw new Error(`${response.status} ${response.statusText}`);
       }
@@ -346,7 +351,7 @@ async function guardedRequest(url, headers, { missingIsAnswer = false } = {}) {
     hostGuard.noteSuccess(host);
     return response;
   } catch (error) {
-    if (missingIsAnswer && /\b(403|404)\b/.test(error.message)) throw error;
+    if (expectedMissingResponse) throw error;
     hostGuard.noteFailure(host, error);
     throw error;
   }
@@ -1291,7 +1296,7 @@ async function fetchMarket(ticker, failures = null) {
 
 export async function fetchYahooMarket(ticker) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=1mo&interval=1d&events=splits`;
-  return parseYahooMarket(await fetchJson(url), ticker);
+  return parseYahooMarket(await fetchJson(url, { notFoundIsAnswer: true }), ticker);
 }
 export function parseYahooMarket(json, ticker, now = Date.now()) {
   const result = json.chart?.result?.[0], meta = result?.meta, quote = result?.indicators?.quote?.[0];
@@ -1673,8 +1678,8 @@ function cleanXml(value) {
     .trim();
 }
 
-async function fetchJson(url) {
-  const response = await guardedRequest(url, { "User-Agent": USER_AGENT, Accept: "application/json" });
+async function fetchJson(url, options = {}) {
+  const response = await guardedRequest(url, { "User-Agent": USER_AGENT, Accept: "application/json" }, options);
   return response.json();
 }
 

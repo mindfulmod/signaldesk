@@ -25,6 +25,20 @@
     if (item?.lastPrice == null || !Number.isFinite(Number(item.lastPrice)) || Number(item.lastPrice) <= 0) return "missing";
     return recent(item.quoteAsOf, now, QUOTE_MAX_HOURS) ? "current" : "stale";
   }
+  function marketCoverage(snapshot = {}, now = Date.now()) {
+    const rows = Array.isArray(snapshot?.signals) ? snapshot.signals : [];
+    const recentQuotes = rows.filter(s => quoteState(s, now) === "current");
+    // A carried-forward quote can remain useful with its original date, but
+    // cannot stand in for a successful collection in this snapshot.
+    const collected = recentQuotes.filter(s => s.marketMetricsVersion === 2 && Number(s.sources?.["Price/Volume"]) > 0);
+    const price = s => Number.isFinite(s.priceMove), volume = s => relativeVolume(s.relativeVolume) !== null;
+    return { total: rows.length, recentQuotes: recentQuotes.length, collectedQuotes: collected.length,
+      retainedQuotes: recentQuotes.length - collected.length,
+      staleQuotes: rows.filter(s => quoteState(s, now) === "stale").length,
+      missingQuotes: rows.filter(s => quoteState(s, now) === "missing").length,
+      priceComparisons: collected.filter(price).length, volumeComparisons: collected.filter(volume).length,
+      completeComparisons: collected.filter(s => price(s) && volume(s)).length };
+  }
   function usableNews(entry, now = Date.now()) {
     return Boolean(entry?.title && recent(entry.published, now) && !GENERIC_PAGE.test(entry.title));
   }
@@ -133,6 +147,6 @@
     const scale = 85 / Math.max(1, ...values);
     return items.map((item, i) => ({ ...item, signalScore: values[i] * scale }));
   }
-  return { SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, usableNews, earningsHeadline, sourceHealth,
+  return { SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, marketCoverage, usableNews, earningsHeadline, sourceHealth,
     MARKET_SOURCES, number, attentionTotal, relativeVolume, marketComparison, normalizeSignal, aggregateSignals, scopeSignal, scoreSignals };
 });

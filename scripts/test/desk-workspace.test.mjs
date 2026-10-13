@@ -21,6 +21,18 @@ const signal = (extra = {}) => ({ ticker: "PEP", name: "Pepsico Inc", lastPrice:
   priceMove: 1.5, relativeVolume: 2, signalScore: 50, momentum: 20, sentiment: null,
   sources: { "Price/Volume": 1, StockTwits: 8 }, latest: [], ...extra });
 
+test("Desk coverage distinguishes collected quotes, retained quotes and usable comparisons", () => {
+  const coverage = { textContent: "" };
+  const c = controller({ getElementById: id => id === "coverageStatus" ? coverage : null });
+  c.fixture = { generatedAt: new Date().toISOString(), signals: [signal(),
+    signal({ ticker: "OTHER", sources: {} }), signal({ ticker: "THIRD", priceMove: null })] };
+  vm.runInContext("snapshot = fixture; setDataStatus = () => {}; markBlockedSources = () => {}; updateStatus();", c);
+  assert.match(coverage.textContent, /2\/3 quotes refreshed/);
+  assert.match(coverage.textContent, /1 usable price\/volume comparisons/);
+  assert.match(coverage.textContent, /1 older quotes retained/);
+  assert.match(coverage.textContent, /Quotes are not live/);
+});
+
 test("comparison columns disappear only when every matching row is unknown", () => {
   const c = controller();
   const unknown = signal({ marketMetricsVersion: undefined, priceMove: null, momentum: null });
