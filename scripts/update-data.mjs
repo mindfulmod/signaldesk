@@ -135,9 +135,6 @@ const FINRA_MIN_RATIO = 0.30;
 const FINRA_MIN_SHORT_VOL = 50_000;
 // SEC requires a descriptive User-Agent with contact info for its public data APIs.
 const SEC_USER_AGENT = "SignalDesk/1.0 (m.aali9@gmail.com)";
-// Market-cap split (USD). A single $500M threshold makes the UI a clean two-way toggle.
-const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
-const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 
 const SOURCES = [
   "Wallstreetbets",
@@ -516,7 +513,7 @@ async function main() {
   }
   const signals = aggregate(events, previous);
   console.log(`Social context complete; enriching ${signals.length} ranked stocks with issuer data.`);
-  await enrichMarketCaps(signals, failures);
+  await enrichIssuerNames(signals, failures);
   console.log("Issuer enrichment complete; checking company descriptions.");
   await enrichProfiles(signals, failures);
   await enrichHotMonitorProfiles(signals, failures);
@@ -1298,7 +1295,8 @@ export function parseYahooMarket(json, ticker, now = Date.now()) {
   const volumeSplit = splits.some(e => e.date * 1000 >= Date.parse(baseline[0]?.date) && e.date * 1000 <= Date.parse(asOf));
   const comparison = quality.marketComparison({ last: meta.regularMarketPrice, previous: previous?.close, asOf, previousAsOf: previous?.date, volumes: volumeSplit ? [] : [...baseline.map(r => r.volume), current?.volume], split, now });
   return { ...comparison, lastPrice: meta.regularMarketPrice, volume: quality.number(current?.volume), quoteAsOf: asOf,
-    quoteSource: "Yahoo public chart", name: meta.longName || meta.shortName || ticker };
+    quoteSource: "Yahoo public chart", instrumentType: meta.instrumentType || null,
+    name: meta.longName || meta.shortName || ticker };
 }
 export async function fetchStooqMarket(ticker) {
   const symbol = `${ticker.toLowerCase()}.us`;
@@ -1594,6 +1592,7 @@ export function aggregate(events, previous) {
       ticker: event.ticker, name: event.name, mentions: 0, weightedSentiment: 0,
       aliases: stockRegistry.get(event.ticker)?.aliases || [],
       lastPrice: prior?.lastPrice ?? null, quoteAsOf: prior?.quoteAsOf ?? null, quoteSource: prior?.quoteSource ?? null,
+      instrumentType: prior?.instrumentType ?? null,
       priceMove: null, relativeVolume: null, marketMetricsVersion: 2, marketQuality: ["No current market observation"],
       sources: Object.fromEntries(SOURCES.map(source => [source, 0])), latest: [],
     };
@@ -1601,7 +1600,7 @@ export function aggregate(events, previous) {
     item.weightedSentiment += (Number(event.sentiment) || 0) * weight;
     item.sources[event.source] = (item.sources[event.source] || 0) + (isMarket ? 1 : weight);
     if (event.source === "Price/Volume" && event.marketMetricsVersion === 2 && Number.isFinite(event.lastPrice)) {
-      for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume"]) item[key] = event[key] ?? null;
+      for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume", "instrumentType"]) item[key] = event[key] ?? null;
     }
     item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published, observedAt: event.observedAt || null, companyMatch: event.companyMatch || null });
     map.set(event.ticker, item);
@@ -1723,10 +1722,10 @@ async function fetchTextWithUA(url, ua) {
   return response.text();
 }
 
-// Enrich each signal with the issuer's real company name and an estimated market
-// cap + size tier, using only free, no-key SEC data: the official ticker→company
-// map (names) and XBRL shares outstanding × our public price (cap).
-async function enrichMarketCaps(signals, failures) {
+// SEC's ticker map establishes issuer names, not capitalization. Do not multiply
+// an XBRL share count by a quote: period, class and ADR basis are not established.
+// Current quote adapters supply no dated capitalization observation.
+async function enrichIssuerNames(signals, failures) {
   let secMap;
   try {
     secMap = await fetchSecTickerMap();
@@ -1741,24 +1740,6 @@ async function enrichMarketCaps(signals, failures) {
     if (record?.title && (!signal.name || signal.name === signal.ticker)) {
       signal.name = cleanCompanyName(record.title);
     }
-  }
-
-  // Market caps only where we have a price to multiply by.
-  const withPrice = signals.filter((signal) => Number.isFinite(signal.lastPrice) && signal.lastPrice > 0);
-  for (const signal of withPrice) {
-    const record = secMap.get(signal.ticker.toUpperCase());
-    if (!record?.cik) continue;
-    try {
-      const shares = await fetchSharesOutstanding(record.cik);
-      if (!Number.isFinite(shares) || shares <= 0) continue;
-      const marketCap = shares * signal.lastPrice;
-      signal.marketCap = Math.round(marketCap);
-      signal.capTier = capTierFor(marketCap);
-    } catch {
-      // Best-effort: leave marketCap/capTier unset if SEC has no data for this issuer.
-    }
-    // Be polite to SEC's rate limits (<10 req/s).
-    await sleep(120);
   }
 }
 
@@ -1893,11 +1874,6 @@ function cleanCompanyName(title) {
   return title.toLowerCase().replace(/\b([a-z])/g, (match) => match.toUpperCase());
 }
 
-function capTierFor(marketCap) {
-  if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
-  return marketCap >= LARGE_CAP_MIN ? "large" : "small";
-}
-
 let secTickerMapCache = null;
 async function fetchSecTickerMap() {
   if (secTickerMapCache) return secTickerMapCache;
@@ -1913,19 +1889,6 @@ async function fetchSecTickerMap() {
   }
   secTickerMapCache = map;
   return map;
-}
-
-async function fetchSharesOutstanding(cik) {
-  const url = `https://data.sec.gov/api/xbrl/companyconcept/CIK${cik}/dei/EntityCommonStockSharesOutstanding.json`;
-  const json = await fetchJsonWithUA(url, SEC_USER_AGENT);
-  const points = json?.units?.shares;
-  if (!Array.isArray(points) || !points.length) return null;
-  // Latest reported value by filing date.
-  const latest = points
-    .filter((point) => Number.isFinite(point.val))
-    .sort((a, b) => String(a.filed || a.end).localeCompare(String(b.filed || b.end)))
-    .at(-1);
-  return latest ? latest.val : null;
 }
 
 async function fetchJsonWithUA(url, ua) {

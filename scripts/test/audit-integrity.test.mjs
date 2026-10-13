@@ -83,7 +83,8 @@ function stockController(enhanced = false) {
 for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "enhanced" : "fallback"} controller shares scope, score and CSV selection`, async () => {
   const { context, downloaded } = stockController(enhanced);
   const quoteAt = new Date().toISOString();
-  context.current = { generatedAt: quoteAt, signals: [signal("INTC", { capTier: "small", previousSources: { ApeWisdom: 4 }, previousCoverage: ["ApeWisdom"], momentum: 162.5, sources: { ApeWisdom: 1, "Google News": 30, "Price/Volume": 5 }, latest: [{ source: "Google News", title: "Intel reports earnings", published: quoteAt }] }), signal("PEP", { capTier: "large" })] };
+  const capEvidence = (ticker, value) => ({ version: 1, method: "provider-reported", ticker, value, currency: "USD", instrumentType: "EQUITY", asOf: quoteAt, collectedAt: quoteAt, provider: "Test provider", url: "https://example.org/capitalization" });
+  context.current = { generatedAt: quoteAt, signals: [signal("INTC", { marketCapEvidence: capEvidence("INTC", 100_000_000), previousSources: { ApeWisdom: 4 }, previousCoverage: ["ApeWisdom"], momentum: 162.5, sources: { ApeWisdom: 1, "Google News": 30, "Price/Volume": 5 }, latest: [{ source: "Google News", title: "Intel reports earnings", published: quoteAt }] }), signal("PEP", { marketCapEvidence: capEvidence("PEP", 1_000_000_000) })] };
   vm.runInContext('snapshot=current; history={snapshots:[]}; getState=()=>({sources:["ApeWisdom"],query:"",start:"",end:""}); capFilter="small"; watchlist=new Set(["INTC"]); watchlistFilter=true;', context);
   const items = context.filteredSignals(), intel = items.find(i => i.ticker === "INTC");
   assert.equal(intel.momentum, -75); assert.equal(intel.discovery.activeSources, 1);

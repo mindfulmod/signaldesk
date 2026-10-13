@@ -15,7 +15,8 @@ test("market health accepts recent collected quotes and real zero comparisons", 
   assert.equal(result.ok, true);
   assert.equal(result.coverage.collectedQuotes, 75);
   assert.equal(result.coverage.completeComparisons, 75);
-  assert.deepEqual(result.warnings, []);
+  assert.equal(result.capitalization.unknown, 75);
+  assert.match(result.warnings.join(" "), /75\/75.*capitalization/);
 });
 
 test("partial production-like coverage fails despite a freshly generated snapshot", () => {
@@ -103,8 +104,9 @@ test("provider warnings survive healthy coverage without certifying investment q
   const data = snapshot(); data.failures = ["Price/Volume XYZ: Yahoo 429", "Unrelated feed warning"];
   const result = marketHealth(data, now);
   assert.equal(result.ok, true);
-  assert.deepEqual(result.warnings, ["Price/Volume XYZ: Yahoo 429"]);
-  assert.match(result.note, /Does not certify provider licensing/);
+  assert.ok(result.warnings.includes("Price/Volume XYZ: Yahoo 429"));
+  assert.match(result.warnings.join(" "), /capitalization/);
+  assert.match(result.note, /Does not certify provider accuracy or licensing/);
 });
 
 test("market health runs after publication and independently of research health", () => {

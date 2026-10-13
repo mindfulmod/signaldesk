@@ -2,6 +2,52 @@
 
 ## October 13 release follow-up
 
+Capitalization integrity follow-up (branch implementation, not yet deployed):
+
+- Removed the Desk's SEC share-count × price enrichment. It did not establish
+  share-class/ADR basis, period or corporate-action alignment. SEC issuer-name
+  enrichment remains; no share-count requests are needed for Desk size labels.
+- Probed the configured Yahoo chart response for AAPL, GOOG and SXTC: all three
+  returned prices, symbol and instrument type, but no capitalization or shares
+  outstanding field. This is bounded evidence, not a claim about every ticker.
+  No new provider or undocumented authenticated endpoint has been connected.
+- The shared capitalization gate requires a provider-reported value with its
+  own metric date, collection date, exact ticker, currency and source URL.
+  Unknown, stale, foreign-currency and non-equity observations cannot become USD
+  size classifications. Fresh quote dates cannot refresh old capitalization.
+- Historical estimates stay in the raw archive and are retained as unverified
+  during normalization. The board, detail, both controller paths, risk labels
+  and CSV export all withhold them. Size coverage is explicit, with Unknown and
+  specific empty-state recovery. $500M ranges replace misleading large/small
+  labels without changing the threshold. Unknown size adds no numeric penalty.
+- Added a public-health failure for unsupported capitalization or size tiers,
+  and coverage warnings for missing values. A clean health result is not proof
+  of complete fundamental-data coverage. Regression fixtures cover legacy
+  ADR/class/split-like rows, identity, currency, invalid values/dates/URLs,
+  stale observations, aggregate carry-forward, filters, risk labels and exports.
+- Remaining requirement: select a permitted, sustainable capitalization source
+  with field-specific dates and methodology. Current adapters intentionally
+  leave this measure unknown; no active adapter is claimed to fill the new
+  evidence contract. Verify licensing, share-class treatment and hosted daily
+  availability before enabling it. This gap remains on the release checklist.
+- Full collector completed at 23:53:52 UTC: 75/75 recent collected quotes, 74
+  price/volume comparisons, 66 equities with unavailable capitalization and 9
+  ETFs marked not applicable. No unsupported caps or headline mismatches passed
+  the shared health gate. JSON and file-browser fallbacks match. Push alerts
+  were disabled. This does not certify hosted scheduled-run performance.
+- Desktop (1440px) and phone (375px) checks verified filter recovery, unknown
+  metrics, selection feedback, detail navigation, no horizontal overflow and
+  no console errors. A missing pressed state on the new Unknown button was
+  caught in the browser and fixed with a regression test.
+- Verification: all 337 tests pass on Node 24 and Node 20; syntax and diff
+  checks pass. Stock links from the board, Research radar and Attention map
+  still select the correct detail. No production deployment has been performed.
+- Follow-up UI finding: the Attention map groups both `early` and `building`
+  stages under "Early ignition", while the detail labels them differently.
+  Reconcile the grouping label and per-row stage without retuning score rules.
+  Some saved explanation copy still calls weighted social activity "mentions";
+  audit that copy alongside prior-period comparability and detector provenance.
+
 Full-refresh validation follow-up (branch implementation, not yet deployed):
 
 - Ran the complete market collector with outbound push notifications disabled.
@@ -40,7 +86,7 @@ Full-refresh validation follow-up (branch implementation, not yet deployed):
   snapshot passes. Generated files come from the normal collector, not manual
   replacements. Both JSON and file-browser data copies are verified together.
 
-Priority release gap found during this pass: the Desk's `enrichMarketCaps`
+Historical finding addressed above: the Desk's former `enrichMarketCaps`
 multiplies the latest SEC share value by its saved price without establishing
 share-class/ADR basis, share period or corporate-action consistency. The
 research-company economics path already avoids this assumption, but the Desk

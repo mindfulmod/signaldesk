@@ -19,6 +19,14 @@ export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH
   if (coverage.retainedQuotes) warnings.push(`${coverage.retainedQuotes} recent quotes are retained from earlier collections and do not count as current collection success`);
   if (coverage.missingQuotes || coverage.staleQuotes) warnings.push(`Quotes: ${coverage.missingQuotes} missing, ${coverage.staleQuotes} stale or invalid`);
   if (coverage.completeComparisons < coverage.collectedQuotes) warnings.push(`${coverage.collectedQuotes - coverage.completeComparisons} collected quotes lack a usable price/volume comparison; preserve the quarantine, do not invent normal values`);
+  const capRows = rows.map(s => ({ ticker: s?.ticker, ...quality.capitalization(s, now) }));
+  const unsupportedCaps = rows.filter((s, i) => (s?.marketCap != null || s?.capTier != null) &&
+    (s.marketCap !== capRows[i].marketCap || s.capTier !== capRows[i].capTier)).map(s => s.ticker);
+  if (unsupportedCaps.length) errors.push(`Unsupported published capitalization or size tier: ${unsupportedCaps.join(", ")}`);
+  const capitalization = { total: rows.length, current: capRows.filter(s => s.marketCap !== null).length,
+    unknown: capRows.filter(s => s.marketCap === null && s.marketCapState !== "not-applicable").length,
+    notApplicable: capRows.filter(s => s.marketCapState === "not-applicable").length, unsupported: unsupportedCaps };
+  if (capitalization.unknown) warnings.push(`${capitalization.unknown}/${rows.length} tickers lack recent attributable USD capitalization; size filters and micro-cap risk checks cannot classify them`);
   const validHeadline = entry => entry && typeof entry === "object" && typeof entry.title === "string" && entry.title.trim() && quality.SOURCES.includes(entry.source);
   const headlineMismatches = rows.filter(s => s?.topHeadline && (!validHeadline(s.topHeadline) || !quality.articleMatches(s.topHeadline, s))).map(s => s.ticker);
   const marketNews = Array.isArray(snapshot?.marketNews) ? snapshot.marketNews : [];
@@ -30,7 +38,7 @@ export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH
   if (quarantinedTickers.length) warnings.push(`Saved news remains quarantined for ${quarantinedTickers.length} tickers; exclusions are not verified absence of news`);
   if (snapshot?.failures != null && !Array.isArray(snapshot.failures)) errors.push("Market failure diagnostics are malformed");
   for (const failure of Array.isArray(snapshot?.failures) ? snapshot.failures : []) if (/Price\/Volume/.test(String(failure))) warnings.push(String(failure));
-  return { ok: !errors.length, errors, warnings, generatedAt: snapshot?.generatedAt || null, coverage, targets,
+  return { ok: !errors.length, errors, warnings, generatedAt: snapshot?.generatedAt || null, coverage, capitalization, targets,
     identity: { headlineMismatches, newsMismatches, quarantinedTickers },
-    note: "Snapshot/quote availability and lexical headline identity only. Does not certify provider licensing, complete market coverage, article truth, causality, model calibration or future returns." };
+    note: "Snapshot/quote availability, capitalization provenance and lexical headline identity checks only. Does not certify provider accuracy or licensing, complete market coverage, article truth, causality, model calibration or future returns." };
 }

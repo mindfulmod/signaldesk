@@ -10,6 +10,7 @@ const css = readFileSync(new URL("../../desk-cleanup.css", import.meta.url), "ut
 const layout = readFileSync(new URL("../../layout-fix.js", import.meta.url), "utf8");
 
 function controller(document = {}) {
+  document = { getElementById: () => null, ...document };
   const context = vm.createContext({ document, window: { SIGNALDESK_QUALITY: quality }, Intl, Date, URLSearchParams, console });
   vm.runInContext(source.replace(/\ninit\(\);\s*$/, ""), context);
   vm.runInContext("tickerHistory = () => [];", context);

@@ -72,6 +72,29 @@
   const clamp = value => Math.max(0, Math.min(1, value));
   const attentionTotal = sources => Object.entries(sources || {}).reduce((sum, [source, count]) => sum + (MARKET_SOURCES.includes(source) ? 0 : Math.max(0, number(count) || 0)), 0);
   function relativeVolume(value) { const n = number(value); return n !== null && n >= 0 && n <= 25 ? n : null; }
+  // A share count × quote is not a verified issuer capitalization: share class,
+  // ADR ratio, currency and corporate-action dates may differ. Only an explicit
+  // provider-reported observation can enter size filters or risk calculations.
+  // asOf belongs to the capitalization itself, never borrowed from a quote.
+  function capitalization(item, now = Date.now()) {
+    const e = item?.marketCapEvidence;
+    const empty = (state, reason) => ({ marketCap: null, capTier: null, marketCapState: state, marketCapQuality: reason });
+    if (item?.instrumentType && item.instrumentType !== "EQUITY") return empty("not-applicable", "Company market capitalization is not used for this instrument type; fund assets are a different measure.");
+    if (!e) return empty(item?.marketCap != null || item?.unverifiedMarketCap != null ? "unverified" : "unavailable", "No attributable capitalization observation. SEC shares × price estimates are excluded; share class, ADR basis and dates may differ.");
+    let url;
+    try { url = new URL(e.url); } catch { /* Invalid provenance stays unknown. */ }
+    if (e.version !== 1 || e.method !== "provider-reported" || e.ticker !== item?.ticker || e.instrumentType !== "EQUITY" ||
+        typeof e.value !== "number" || !Number.isFinite(e.value) || e.value <= 0 ||
+        typeof e.provider !== "string" || !e.provider.trim() || url?.protocol !== "https:" || url.username || url.password ||
+        !Number.isFinite(Date.parse(e.asOf)) || !Number.isFinite(Date.parse(e.collectedAt)) ||
+        Date.parse(e.asOf) > Date.parse(e.collectedAt) + 300_000 || Date.parse(e.collectedAt) > new Date(now).getTime() + 300_000) {
+      return empty("unverified", "Capitalization provenance is incomplete or mismatched; excluded from size filters and risk calculations.");
+    }
+    if (e.currency !== "USD") return empty("unsupported-currency", "Capitalization is not reported in USD; no verified currency conversion is configured.");
+    if (!recent(e.asOf, now, QUOTE_MAX_HOURS)) return empty("stale", "Capitalization is older than the 96-hour freshness limit or future-dated; excluded from size filters and risk calculations.");
+    return { marketCap: e.value, capTier: e.value >= 500_000_000 ? "large" : "small", marketCapState: "current",
+      marketCapQuality: "Provider-reported USD capitalization; not independently audited or a measure of valuation attractiveness." };
+  }
   function marketComparison({ last, previous, asOf, previousAsOf, volumes = [], split = false, basis = "unadjusted", now = Date.now() }) {
     const price = number(last), prior = number(previous), issues = [];
     const gap = (Date.parse(asOf) - Date.parse(previousAsOf)) / 86400000;
@@ -99,7 +122,9 @@
     const excludedNewsSources = [...new Set([...(item.excludedNewsSources || []), ...quarantinedNews.map(entry => entry.source)])];
     for (const source of excludedNewsSources) sources[source] = 0;
     const valid = item.marketMetricsVersion === 2;
-    return { ...item, sources, mentions: attentionTotal(sources), activityUnit: "weighted attention (not post counts)",
+    return { ...item, ...capitalization(item),
+      unverifiedMarketCap: item.unverifiedMarketCap ?? (!item.marketCapEvidence ? number(item.marketCap) : null),
+      sources, mentions: attentionTotal(sources), activityUnit: "weighted attention (not post counts)",
       quarantinedNews, excludedNewsSources,
       previousCoverage: (item.previousCoverage || []).filter(source => !excludedNewsSources.includes(source)),
       momentum: excludedNewsSources.length ? null : number(item.momentum), sentiment: excludedNewsSources.length ? null : number(item.sentiment),
@@ -134,7 +159,7 @@
           attentionWindow: { start: snapshots[0]?.date, end: snapshots.at(-1)?.date } });
       }
     }
-    return [...map.values()].map(normalizeSignal);
+    return [...map.values()].map(item => normalizeSignal(item));
   }
   function scopeSignal(item, selectedSources) {
     const selected = new Set(selectedSources), sources = Object.fromEntries(SOURCES.map(s => [s, selected.has(s) ? item.sources?.[s] || 0 : 0]));
@@ -161,5 +186,5 @@
     return items.map((item, i) => ({ ...item, signalScore: values[i] * scale }));
   }
   return { articleMatches: identity.articleMatches, SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, marketCoverage, usableNews, earningsHeadline, sourceHealth,
-    MARKET_SOURCES, number, attentionTotal, relativeVolume, marketComparison, normalizeSignal, aggregateSignals, scopeSignal, scoreSignals };
+    MARKET_SOURCES, number, attentionTotal, relativeVolume, capitalization, marketComparison, normalizeSignal, aggregateSignals, scopeSignal, scoreSignals };
 });

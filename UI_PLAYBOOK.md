@@ -7,6 +7,20 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 13 capitalization follow-up: `data-quality.js.capitalization` is the
+shared gate for company size. Legacy SEC shares × price estimates remain in raw
+history, but are excluded from filters, displayed values, micro-cap penalties
+and CSV numeric fields. A usable `marketCapEvidence` needs version 1,
+`method: provider-reported`, exact ticker, EQUITY instrument type, positive
+numeric value, USD currency, provider, credential-free HTTPS source URL, and
+separate capitalization `asOf` and `collectedAt` timestamps. Quote time is not a
+capitalization timestamp. The 96-hour freshness limit tolerates long weekends;
+it does not mean live data. Current quote adapters provide no such observation.
+Filters use explicit $500M bands, not conventional large/small-cap labels, and
+offer Unknown plus a coverage count and specific recovery state. Unknown size
+is a coverage warning, not a micro-cap classification or a score penalty.
+The health watchdog rejects published caps or tiers without matching evidence.
+
 October 13 headline identity: load `company-identity.js` before `data-quality.js`.
 Collection and browser use the same lexical identity gate. Quarantined news
 stays under Source evidence with its original date/link, but must not be a

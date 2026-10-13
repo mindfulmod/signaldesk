@@ -100,7 +100,7 @@ let snapshot = null;
 let history = null;
 let selectedTicker = "";
 let rankMode = "signal";
-let capFilter = "all"; // "all" | "large" | "small"
+let capFilter = "all"; // "all" | "large" (≥$500M) | "small" (<$500M) | "unknown"
 let attentionFilter = "all"; // "all" | "quiet" | "attention"
 let attentionHighThreshold = Infinity; // peer-relative cutoff, recomputed each render
 let rangeStart = ""; // ISO date; empty = all available snapshots
@@ -155,7 +155,6 @@ function starButton(ticker) {
   return `<button type="button" class="star-btn${on ? " on" : ""}" data-star="${ticker}" aria-pressed="${on}" aria-label="${on ? "Remove" : "Add"} ${escapeHtml(ticker)} ${on ? "from" : "to"} watchlist" title="${on ? "Remove from" : "Add to"} watchlist">${on ? "★" : "☆"}</button>`;
 }
 
-const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
 const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 // Relative-volume values above this are almost always a data artifact (thin name
 // divided by a near-zero average), so we treat them as unknown rather than a signal.
@@ -397,16 +396,11 @@ function visibleSignals(items = filteredSignals()) {
   return applyWatchlistFilter(applyAttentionFilter(applyCapFilter(items)));
 }
 
-function capTierFor(marketCap) {
-  if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
-  return marketCap >= LARGE_CAP_MIN ? "large" : "small";
-}
-
 function applyCapFilter(items) {
   if (capFilter === "all") return items;
   return items.filter((item) => {
-    const tier = item.capTier || capTierFor(item.marketCap);
-    return tier === capFilter;
+    const tier = window.SIGNALDESK_QUALITY.capitalization(item).capTier;
+    return capFilter === "unknown" ? tier === null : tier === capFilter;
   });
 }
 
@@ -439,6 +433,7 @@ function render() {
   }
 
   const items = filteredSignals();
+  updateCapCoverage(items);
   attentionHighThreshold = computeAttentionThreshold(items);
   const ranked = visibleSignals(items);
   const top50 = ranked.slice(0, 50);
@@ -533,8 +528,9 @@ function discoveryProfile(item) {
     penalty += Math.min(8, (concentration - 0.75) * 28 + 2);
     risks.push("One-source heavy");
   }
-  if (Number.isFinite(item.marketCap) && item.marketCap > 0 && item.marketCap < 100_000_000) {
-    penalty += item.marketCap < 25_000_000 ? 8 : 5;
+  const cap = window.SIGNALDESK_QUALITY.capitalization(item);
+  if (cap.marketCap !== null && cap.marketCap < 100_000_000) {
+    penalty += cap.marketCap < 25_000_000 ? 8 : 5;
     risks.push("Micro-cap volatility");
   }
   if (social > 0 && catalyst === 0) {
@@ -549,6 +545,8 @@ function discoveryProfile(item) {
     penalty += 6;
     risks.push("Price not confirming");
   }
+  // Keep concrete observed risks ahead of a coverage gap in compact rows.
+  if (cap.marketCap === null && cap.marketCapState !== "not-applicable") risks.push("Company size unknown");
 
   const raw = 100 * (0.14 * attention + 0.22 * acceleration + 0.2 * breadth + 0.22 * confirmation + 0.22 * catalystEvidence);
   const score = Math.round(clamp(0, 100, raw - penalty));
@@ -733,7 +731,11 @@ function renderTable(items) {
   const exactQuery = byId("tickerSearch").value.trim().startsWith("$");
   byId("boardEmpty").querySelector("h3").textContent = exactQuery ? "No snapshot coverage for this ticker" : "No matching stocks";
   byId("boardEmpty").querySelector("p").textContent = exactQuery ? "This ticker is not in the current filtered snapshot. Missing coverage is not an investment conclusion. Clear the search or try another data window." : "Try another search or clear your filters to see the full snapshot.";
-  const capLabel = capFilter === "large" ? " large-cap" : capFilter === "small" ? " small-cap" : "";
+  if (["large", "small"].includes(capFilter)) {
+    byId("boardEmpty").querySelector("h3").textContent = "No verified company sizes match this view";
+    byId("boardEmpty").querySelector("p").textContent = "This size filter requires recent, attributable USD capitalization. Unknown values are excluded, not assumed small. Clear filters or choose Unknown / N/A to inspect unclassified records.";
+  }
+  const capLabel = capFilter === "large" ? " $500M+" : capFilter === "small" ? " below-$500M" : capFilter === "unknown" ? " unclassified-size" : "";
   const attnLabel = attentionFilter === "quiet" ? " quiet-mover" : attentionFilter === "attention" ? " big-attention" : "";
   const watchLabel = watchlistFilter ? " watchlist" : "";
   const filterLabel = `${watchLabel}${attnLabel}${capLabel}`;
@@ -1018,8 +1020,10 @@ function detailMarkup(item, rank) {
       ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
       ${statBlock("Acceleration", item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no comparable prior coverage" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
-      ${statBlock("Market cap", Number.isFinite(item.marketCap) && item.marketCap > 0 ? `$${shortFmt.format(item.marketCap)}` : "-", capTierName(item))}
+      ${statBlock("Market cap", capValueText(item), capTierName(item))}
       </div>
+
+      ${capitalizationMarkup(item)}
 
       ${detailTrendMarkup(item)}
 
@@ -1083,10 +1087,28 @@ function sentimentTone(value) {
 }
 
 function capTierName(item) {
-  const tier = item.capTier;
-  if (tier === "large") return "Large cap";
-  if (tier === "small") return "Small cap";
-  return Number.isFinite(item.marketCap) && item.marketCap > 0 ? "" : "no SEC cap";
+  const cap = window.SIGNALDESK_QUALITY.capitalization(item);
+  if (cap.capTier === "large") return "USD · $500M+";
+  if (cap.capTier === "small") return "USD · below $500M";
+  return cap.marketCapState === "not-applicable" ? "not company equity" : "excluded from size filters";
+}
+
+function capValueText(item) {
+  const cap = window.SIGNALDESK_QUALITY.capitalization(item);
+  return cap.marketCap !== null ? `$${shortFmt.format(cap.marketCap)}` : cap.marketCapState === "not-applicable" ? "N/A" : "Unknown";
+}
+
+function capitalizationMarkup(item) {
+  const cap = window.SIGNALDESK_QUALITY.capitalization(item), e = item.marketCapEvidence;
+  const source = cap.marketCap !== null ? ` <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${escapeHtml(e.provider)}</a> · ${escapeHtml(formatShortDateTime(e.asOf))}.` : "";
+  return `<p class="data-caveat">Market cap: ${escapeHtml(cap.marketCapQuality)}${source}</p>`;
+}
+
+function updateCapCoverage(items) {
+  const node = byId("capCoverage");
+  if (!node) return;
+  const count = items.filter(item => window.SIGNALDESK_QUALITY.capitalization(item).marketCap !== null).length;
+  node.textContent = `${count}/${items.length} matching tickers have recent, attributable USD capitalization. Unknown / N/A includes funds, whose assets are a different measure. Select an active filter again to include all sizes.`;
 }
 
 // Condensed attention: group totals (Social / News / Market) and only list the
@@ -1303,16 +1325,14 @@ function formatQuoteCell(item) {
   if (price === "-") return '<span class="quote-warning">No quote</span>';
   const hasDate = item.quoteAsOf && Number.isFinite(Date.parse(item.quoteAsOf));
   const meta = [item.quoteSource, hasDate ? formatShortDateTime(item.quoteAsOf) : "Quote time unavailable"].filter(Boolean).join(" • ");
-  const cap = Number.isFinite(item.marketCap) && item.marketCap > 0 ? `<small class="quote-cap" title="${escapeHtml(capLabelFor(item))}">$${shortFmt.format(item.marketCap)} cap</small>` : "";
+  const cap = window.SIGNALDESK_QUALITY.capitalization(item).marketCap !== null ? `<small class="quote-cap" title="${escapeHtml(capLabelFor(item))}">${capValueText(item)} cap</small>` : "";
   const warning = window.SIGNALDESK_QUALITY.quoteState(item) === "stale" ? '<small class="quote-warning">Stale quote · not current</small>' : "";
   const date = hasDate ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric" }).format(new Date(item.quoteAsOf)) : "Undated";
   return `<span class="quote-price" title="${escapeHtml(meta)}">${price}</span>${warning}${cap}<small class="quote-meta" title="${escapeHtml(meta)}">${escapeHtml(date)}</small>`;
 }
 
 function capLabelFor(item) {
-  const tier = item.capTier || capTierFor(item.marketCap);
-  const tierName = tier === "large" ? "Large cap" : tier === "small" ? "Small cap" : "";
-  return `$${shortFmt.format(item.marketCap)}${tierName ? ` • ${tierName}` : ""}`;
+  return `${capValueText(item)} • ${capTierName(item)}`;
 }
 
 function formatShortDateTime(value) {
@@ -1326,10 +1346,11 @@ function formatShortDateTime(value) {
 
 function exportCsv() {
   const data = visibleSignals().slice(0, 50);
-  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "attention_weights_not_posts", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", "market_as_of", "comparison_start", "market_quality", ...SOURCES];
+  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "attention_weights_not_posts", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", "market_as_of", "comparison_start", "market_quality", "market_cap_usd", "market_cap_state", "market_cap_as_of", "market_cap_provider", "market_cap_url", "market_cap_quality", ...SOURCES];
   const lines = [header.join(",")].concat(
     data.map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
+      const cap = window.SIGNALDESK_QUALITY.capitalization(item), e = cap.marketCap !== null ? item.marketCapEvidence : null;
       return [
         index + 1,
         item.ticker,
@@ -1348,6 +1369,10 @@ function exportCsv() {
         item.quoteAsOf || "",
         item.marketWindow?.previousAsOf || "",
         `"${(item.marketQuality || []).join(" | ").replaceAll('"', '""')}"`,
+        cap.marketCap ?? "", cap.marketCapState, e?.asOf || "",
+        `"${String(e?.provider || "").replaceAll('"', '""')}"`,
+        `"${String(e?.url || "").replaceAll('"', '""')}"`,
+        `"${cap.marketCapQuality.replaceAll('"', '""')}"`,
         ...SOURCES.map((source) => item.sources[source] || 0),
       ].join(",");
     })
@@ -1386,6 +1411,7 @@ function bindEvents() {
   });
   byId("capLarge").addEventListener("click", () => setCapFilter(capFilter === "large" ? "all" : "large"));
   byId("capSmall").addEventListener("click", () => setCapFilter(capFilter === "small" ? "all" : "small"));
+  byId("capUnknown").addEventListener("click", () => setCapFilter(capFilter === "unknown" ? "all" : "unknown"));
   byId("attnAll").addEventListener("click", () => {
     attentionFilter = "all";
     watchlistFilter = false;
@@ -1433,11 +1459,15 @@ function setRankMode(mode) {
 
 function setCapFilter(filter) {
   capFilter = filter;
-  byId("capLarge").classList.toggle("active", filter === "large");
-  byId("capLarge").setAttribute("aria-pressed", String(filter === "large"));
-  byId("capSmall").classList.toggle("active", filter === "small");
-  byId("capSmall").setAttribute("aria-pressed", String(filter === "small"));
+  syncCapControls();
   render();
+}
+
+function syncCapControls() {
+  for (const [id, value] of [["capLarge", "large"], ["capSmall", "small"], ["capUnknown", "unknown"]]) {
+    byId(id).classList.toggle("active", capFilter === value);
+    byId(id).setAttribute("aria-pressed", String(capFilter === value));
+  }
 }
 
 function setAttentionFilter(filter) {
@@ -1466,10 +1496,7 @@ function syncControls() {
     th.classList.toggle("sort-active", active);
     th.setAttribute("aria-sort", active ? "descending" : "none");
   });
-  byId("capLarge").classList.toggle("active", capFilter === "large");
-  byId("capLarge").setAttribute("aria-pressed", String(capFilter === "large"));
-  byId("capSmall").classList.toggle("active", capFilter === "small");
-  byId("capSmall").setAttribute("aria-pressed", String(capFilter === "small"));
+  syncCapControls();
   byId("attnAttention").classList.toggle("active", attentionFilter === "attention");
   byId("attnAttention").setAttribute("aria-pressed", String(attentionFilter === "attention"));
   byId("attnQuiet").classList.toggle("active", attentionFilter === "quiet");
@@ -1494,7 +1521,7 @@ function applyUrlParams() {
   const sort = params.get("sort");
   if (["signal", "mentions", "momentum"].includes(sort)) rankMode = sort;
   const cap = params.get("cap");
-  if (["large", "small"].includes(cap)) capFilter = cap;
+  if (["large", "small", "unknown"].includes(cap)) capFilter = cap;
   const attn = params.get("attn");
   if (["attention", "quiet"].includes(attn)) attentionFilter = attn;
   if (params.get("watch") === "1") watchlistFilter = true;
