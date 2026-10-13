@@ -1,5 +1,21 @@
 # Research intelligence work plan
 
+## October 13 release follow-up
+
+- Open scan now supports saving individual source records, including stories
+  outside the extracted pattern vocabulary. The local shortlist mixes stories
+  and patterns, preserves source dates, gives lane-specific validation steps,
+  and exposes missing records rather than silently dropping saved IDs.
+- Production checked October 13: research snapshot 21:31 UTC, 19/20 active
+  sources readable, 8/8 quotes within the health window. QuantumScape newsroom
+  still returns 403; two T-Mobile sources remain permission-paused. Research
+  refresh, Pages deployment and the public watchdog all succeeded. The new
+  five-feed discovery configuration remains branch-only until deployment.
+- Promotion into a new curated technology still needs editorial review. A
+  saved story is not a verified theme or an automated adoption metric. Additional
+  consumer-demand, usage and international sources remain separate gated work.
+
+
 Original implementation scope (upgrades 1–9): daily collection; living source contracts; permanent company
 coverage; reviewed evidence revisions; battery programs; satellite rollouts;
 emerging-topic discovery; company economics; a focused daily brief.

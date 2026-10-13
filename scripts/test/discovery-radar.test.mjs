@@ -158,3 +158,31 @@ test("discovery saved and filter empty states keep recovery and retention limits
   assert.match(views.discovery({}, "no match", [], false, { lane: "community" }), /Try All signals/);
   assert.doesNotMatch(views.discovery(null, "", []), /NaN|undefined|Infinity/);
 });
+test("open scan stories can be saved without belonging to an extracted pattern", () => {
+  const d = doc("unexpected", "A shape-sensing sheet");
+  const research = { documents: [d], discovery: { candidates: [], archive: [], openScan: [d.id] } };
+  assert.match(views.discovery(research, "", [], false, { mode: "open" }), /data-follow-discovery="story:unexpected"/);
+  const saved = views.discovery(research, "", ["story:unexpected"], true);
+  assert.match(saved, /A shape-sensing sheet/);
+  assert.match(saved, /Next check/);
+  assert.match(saved, /replication and evidence of use outside the lab/);
+  assert.doesNotMatch(saved, /Remove unavailable saved lead|No saved leads/);
+  assert.match(views.discovery(research, "", ["story:unexpected"], true, { lane: "community" }), /No saved leads/);
+});
+test("saved stories survive leaving the open scan and surface missing archive records honestly", () => {
+  const d = doc("older", "Earlier story", hn);
+  const research = { documents: [d], discovery: { candidates: [], archive: [], openScan: [] } };
+  const saved = views.discovery(research, "", ["story:older", "story:missing"], true);
+  assert.match(saved, /Earlier story/); assert.match(saved, /paying customers/);
+  assert.match(saved, /1 saved lead has left/); assert.match(saved, /4,000 versions/);
+  assert.match(saved, /data-follow-discovery="story:missing"/);
+});
+test("saved pattern and story pagination uses one shared item limit", () => {
+  const d = doc("one", "New material");
+  const candidate = { id: "topic", phrase: "new material", owners: ["Lab"], documentIds: [d.id], recentDocuments: 1, status: "Early lead" };
+  const research = { documents: [d], discovery: { archive: [candidate], candidates: [], openScan: [] } };
+  const one = views.discovery(research, "", ["topic", "story:one"], true, { limit: 1 });
+  assert.equal((one.match(/data-discovery-item/g) || []).length, 1); assert.match(one, /Show 24 more/);
+  const two = views.discovery(research, "", ["topic", "story:one"], true, { limit: 2 });
+  assert.equal((two.match(/data-discovery-item/g) || []).length, 2);
+});

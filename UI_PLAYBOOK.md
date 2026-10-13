@@ -325,6 +325,13 @@ disclosure. Include signal-type filtering, saved-lead recovery and bounded
 pagination. Research and community attention must stay distinguishable, and the
 snapshot's collection date must not replace a story's publication/submission date.
 
+October 13 follow-up: Open scan stories can be saved directly to the same local
+shortlist as patterns. `story:` IDs refer to retained document versions, not a
+verified trend or notification subscription. Saved stories remain accessible
+after leaving the 14-day scan, until their source record leaves the bounded
+archive. Preserve filtering, shared pagination, missing-record recovery and
+focus return when the last saved item is removed.
+
 The technology brief/trackers use `research-views.js` for escaped HTML,
 `research-model.js` for evidence rules, `adoption.js` for local state/navigation,
 and `research.css` for token-only layout. `research-config.js` loads before the
