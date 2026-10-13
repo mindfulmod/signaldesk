@@ -14,6 +14,15 @@
 - Promotion into a new curated technology still needs editorial review. A
   saved story is not a verified theme or an automated adoption metric. Additional
   consumer-demand, usage and international sources remain separate gated work.
+- Release reconciliation preserved all 948 branch and 800 main document versions
+  (972 unique before collection), both identity histories and source events.
+  The normal collector then produced 1,030 retained versions; health passed
+  with 21/22 active sources, 5/5 discovery feeds and 8/8 quote coverage. Old
+  discovery archive gaps still suppress momentum; this merge does not invent
+  missing history. Main's newer company quote timestamps are retained.
+- Verification: 283 deterministic tests pass on Node 24 and Node 20. Browser
+  checks covered story save/reload/remove, empty-state focus return, a 375px dark
+  layout and 1440px light layout without horizontal overflow or console errors.
 
 
 Original implementation scope (upgrades 1–9): daily collection; living source contracts; permanent company

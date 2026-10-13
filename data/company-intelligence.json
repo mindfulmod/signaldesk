@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T01:13:41.306Z",
+  "generatedAt": "2026-10-13T21:31:18.480Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1029,17 +1029,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 4.58,
+        "price": 4.27,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -1091,6 +1091,15 @@
           "price": 4.58,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.27,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -2731,17 +2740,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 2.385,
+        "price": 2.23,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -2793,6 +2802,15 @@
           "price": 2.385,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 2.23,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -4200,17 +4218,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 185.3,
+        "price": 184.72,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:02.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -4262,6 +4280,15 @@
           "price": 185.3,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 184.72,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -6018,17 +6045,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 148.58,
+        "price": 151.87,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -6080,6 +6107,15 @@
           "price": 148.58,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 151.87,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -7823,17 +7859,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 50.965,
+        "price": 51.46,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -7885,6 +7921,15 @@
           "price": 50.965,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 51.46,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -9259,17 +9304,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 718.67,
+        "price": 742.96,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -9321,6 +9366,15 @@
           "price": 718.67,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 742.96,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -11144,17 +11198,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 535.07,
+        "price": 541.15,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -11206,6 +11260,15 @@
           "price": 535.07,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 541.15,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -13029,17 +13092,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-11T01:13:41.306Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 351.66,
+        "price": 352.72,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-11T01:13:41.306Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -13091,6 +13154,15 @@
           "price": 351.66,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
+        },
+        {
+          "price": 352.72,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
