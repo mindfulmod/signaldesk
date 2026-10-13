@@ -479,6 +479,7 @@ async function main() {
 
   // News, step 1 (primary): sweep the broad market wires. ~10 requests total,
   // matched against the whole registry locally.
+  console.log(`Quote collection complete: ${events.filter(e => e.source === "Price/Volume").length} observations across the candidate universe; final board coverage is checked after ranking.`);
   await collectNewswires(events, failures, discovery);
 
   // News, step 2 (targeted top-up): only the biggest movers that the wire sweep
@@ -497,6 +498,7 @@ async function main() {
 
   // StockTwits per-symbol sentiment for the most-mentioned tickers. Bullish/Bearish
   // tags make this our richest explicit social-sentiment signal.
+  console.log("News matching complete; collecting social context.");
   for (const { ticker, name } of newsUniverseEntries(events, STOCKTWITS_LIMIT)) {
     await collectStockTwitsSentiment(events, failures, ticker, name);
     await sleep(350);
@@ -513,7 +515,9 @@ async function main() {
     event.observedAt ||= new Date().toISOString();
   }
   const signals = aggregate(events, previous);
+  console.log(`Social context complete; enriching ${signals.length} ranked stocks with issuer data.`);
   await enrichMarketCaps(signals, failures);
+  console.log("Issuer enrichment complete; checking company descriptions.");
   await enrichProfiles(signals, failures);
   await enrichHotMonitorProfiles(signals, failures);
 
@@ -557,7 +561,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     dataMode: "real-public-no-key",
     sourceNote:
-      "Best-effort public data. Direct Reddit and Nasdaq adapters are paused after repeated failures; historical records remain available. Source coverage reports matched tickers, not completeness.",
+      "Best-effort public data. Direct Reddit, Nasdaq and the unavailable Yahoo broad-news RSS adapter are paused; historical records remain available. Yahoo price quotes remain active. Source coverage reports matched tickers, not completeness.",
     discoveryNote:
       "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
     sources: SOURCES,
@@ -700,7 +704,7 @@ async function xmlItemsPolite(url, fallbackUrl = url) {
 // headline against the ticker registry locally. One request per wire regardless
 // of how many tickers we cover, so this cannot be rate-limited by universe size
 // the way per-ticker fan-out was.
-async function collectNewswires(events, failures, discovery) {
+export async function collectNewswires(events, failures, discovery, wires = NEWSWIRES) {
   let matched = 0;
   let headlines = 0;
   // Wires overlap (a MarketWatch story appears on both its topstories and
@@ -708,7 +712,7 @@ async function collectNewswires(events, failures, discovery) {
   // same headline twice would inflate a ticker's mention count, which feeds the
   // ranking — so dedupe on normalised title text across the whole sweep.
   const seenTitles = new Set();
-  for (const wire of NEWSWIRES) {
+  for (const wire of wires) {
     if (quality.PAUSED_SOURCES[wire.source]) continue;
     try {
       const items = await xmlItemsPolite(wire.url);

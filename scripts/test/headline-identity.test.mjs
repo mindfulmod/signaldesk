@@ -127,3 +127,20 @@ test("market measurements cannot become fallback social chatter after a headline
   const item = quality.normalizeSignal({ ...stock, sources: { "Price/Volume": 1 }, latest: [article(unrelated), { source: "Price/Volume", title: "SXTC price falls", published: now }] });
   assert.equal(quality.scopeSignal(item, quality.SOURCES).topHeadline, null);
 });
+
+test("full-run regressions: ordinary verbs, reporting people and underlying ETF holdings are not issuer news", () => {
+  const takeTwo = { ticker: "TTWO", name: "Take 2 Interactive", aliases: ["take", "take two interactive software"] };
+  const retirement = article("My wife wants to take an $8,000 trip to Italy", { source: "MarketWatch", companyMatch: { version: 1, kind: "company-name", value: "take" } });
+  assert.equal(identity.articleMatches(retirement, takeTwo), false);
+  assert.ok(identity.match(takeTwo, "Take 2 Interactive reports results"));
+  const johnson = { ticker: "JNJ", name: "Johnson & Johnson", aliases: ["johnson"] };
+  assert.equal(identity.articleMatches(article("3 - Johnson Cameron Richard (0002062556) (Reporting)", { source: "SEC Filings", companyMatch: { version: 1, kind: "company-name", value: "johnson" } }), johnson), false);
+  assert.equal(identity.match(johnson, "Johnson wins a medal"), null);
+  assert.ok(identity.match(johnson, "Johnson & Johnson reports results", { source: "SEC Filings" }));
+  const fund = { ticker: "SK", name: "Corgi SK hynix 2x Daily ETF", aliases: ["sk", "corgi"] };
+  assert.equal(identity.match(fund, unrelated), null);
+  assert.equal(identity.match(fund, "Corgi wins dog show"), null);
+  assert.ok(identity.match(fund, "Corgi SK hynix 2x Daily ETF announces distribution"));
+  assert.ok(identity.match(fund, "$SK ETF announces distribution"));
+  assert.ok(identity.match({ ticker: "SKHY", name: "SK hynix Inc." }, unrelated));
+});

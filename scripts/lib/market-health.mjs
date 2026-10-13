@@ -1,4 +1,5 @@
 import quality from "../../data-quality.js";
+import identity from "../../company-identity.js";
 
 // Operational release targets, not investment-model parameters. Keep degraded
 // snapshots available with warnings; fail the job after publication so an outage
@@ -18,8 +19,18 @@ export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH
   if (coverage.retainedQuotes) warnings.push(`${coverage.retainedQuotes} recent quotes are retained from earlier collections and do not count as current collection success`);
   if (coverage.missingQuotes || coverage.staleQuotes) warnings.push(`Quotes: ${coverage.missingQuotes} missing, ${coverage.staleQuotes} stale or invalid`);
   if (coverage.completeComparisons < coverage.collectedQuotes) warnings.push(`${coverage.collectedQuotes - coverage.completeComparisons} collected quotes lack a usable price/volume comparison; preserve the quarantine, do not invent normal values`);
+  const validHeadline = entry => entry && typeof entry === "object" && typeof entry.title === "string" && entry.title.trim() && quality.SOURCES.includes(entry.source);
+  const headlineMismatches = rows.filter(s => s?.topHeadline && (!validHeadline(s.topHeadline) || !quality.articleMatches(s.topHeadline, s))).map(s => s.ticker);
+  const marketNews = Array.isArray(snapshot?.marketNews) ? snapshot.marketNews : [];
+  if (snapshot?.marketNews != null && !Array.isArray(snapshot.marketNews)) errors.push("Market news feed is malformed");
+  const newsMismatches = marketNews.filter(entry => !validHeadline(entry) || !identity.NEWS_SOURCES.has(entry.source) || !quality.articleMatches(entry, entry)).map(entry => entry?.ticker || "unknown");
+  if (headlineMismatches.length) errors.push(`Unverified company identity in highlighted headlines: ${headlineMismatches.join(", ")}`);
+  if (newsMismatches.length) errors.push(`Unverified company identity in market news: ${newsMismatches.join(", ")}`);
+  const quarantinedTickers = rows.filter(s => s?.quarantinedNews?.length).map(s => s.ticker);
+  if (quarantinedTickers.length) warnings.push(`Saved news remains quarantined for ${quarantinedTickers.length} tickers; exclusions are not verified absence of news`);
   if (snapshot?.failures != null && !Array.isArray(snapshot.failures)) errors.push("Market failure diagnostics are malformed");
   for (const failure of Array.isArray(snapshot?.failures) ? snapshot.failures : []) if (/Price\/Volume/.test(String(failure))) warnings.push(String(failure));
   return { ok: !errors.length, errors, warnings, generatedAt: snapshot?.generatedAt || null, coverage, targets,
-    note: "Snapshot/quote availability only. Does not certify provider licensing, complete market coverage, model calibration or future returns." };
+    identity: { headlineMismatches, newsMismatches, quarantinedTickers },
+    note: "Snapshot/quote availability and lexical headline identity only. Does not certify provider licensing, complete market coverage, article truth, causality, model calibration or future returns." };
 }

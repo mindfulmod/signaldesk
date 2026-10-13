@@ -2,6 +2,53 @@
 
 ## October 13 release follow-up
 
+Full-refresh validation follow-up (branch implementation, not yet deployed):
+
+- Ran the complete market collector with outbound push notifications disabled.
+  The 23:33 UTC run recovered 75/75 newly collected recent quotes and 74 complete
+  price/volume comparisons, versus production's 31/75 and 30. One comparison
+  remained quarantined; missing candidate symbols and provider refusals stayed
+  in the warnings. This does not establish performance from GitHub's network.
+- Manual inspection of that first refreshed dataset caught additional false
+  matches that the initial lexical health gate did not: Take-Two from the verb
+  "take", Johnson & Johnson from a reporting person's surname, and ETF tickers
+  mistaken for the underlying business. Added regressions and stricter rules:
+  compound company names and SEC filing aliases require the full company name;
+  funds require their full fund name, cashtag or exchange-qualified symbol.
+- The published health watchdog now independently flags unsupported highlighted
+  headlines and market-news identities, even when all quotes are present.
+  Quarantined records remain warnings, not promoted evidence. Malformed news
+  payloads fail rather than slipping past identity checks.
+- Paused Yahoo Public News's broad RSS endpoint after saved 404 failures on
+  October 9, 12 and 13. Existing CNBC/MarketWatch/Google and other wires remain;
+  Yahoo price quotes are separate and active. A no-network regression verifies
+  the paused adapter cannot issue a request. No replacement source is assumed.
+- Added stage progress messages to the collector so long profile/enrichment
+  stages are distinguishable from a stalled job. The full-history normalization
+  check covered 81 snapshots / 6,075 stock rows in about 305 ms on this machine;
+  this is not a browser/mobile performance guarantee.
+- Re-ran the full collector after those fixes and the Yahoo-news pause. The
+  23:40:21 UTC dataset contains 75/75 newly collected recent quotes, 74 complete
+  comparisons, 14 news/quote records and no highlighted identity mismatches.
+  Manually checked all 14 titles against their named issuers: the Take-Two,
+  Johnson reporting-person and SK ETF false positives are absent; SK hynix's
+  own company record remains. One extreme-price comparison is still withheld.
+  The four paused sources are explicit; StockTwits refusal and candidate quote
+  failures remain warnings. No external push alerts were sent.
+- Verification: 328 tests pass on Node 24 and Node 20. The stronger live-site
+  check correctly fails the older production snapshot; the regenerated local
+  snapshot passes. Generated files come from the normal collector, not manual
+  replacements. Both JSON and file-browser data copies are verified together.
+
+Priority release gap found during this pass: the Desk's `enrichMarketCaps`
+multiplies the latest SEC share value by its saved price without establishing
+share-class/ADR basis, share period or corporate-action consistency. The
+research-company economics path already avoids this assumption, but the Desk
+does not. Replace it with attributable provider capitalization or explicit
+unknowns, repair cap filters/risk labels/exports, and verify with class/split/
+stale fixtures before claiming data readiness. Historical detector outputs also
+need identity-version provenance before they can be retrospectively certified.
+
 Company/headline identity follow-up (branch implementation, not yet deployed):
 
 - Reproduced the SXTC false match: a generated `china` alias attached Samsung /

@@ -33,6 +33,8 @@ test("source coverage handles collapsed failures and distinguishes no matches fr
   assert.equal(row("GDELT News").state, "unavailable");
   assert.equal(row("CNBC").state, "no-matches");
   assert.equal(row("Nasdaq").state, "paused");
+  assert.equal(row("Yahoo Public News").state, "paused");
+  assert.match(row("Yahoo Public News").reason, /price quotes are separate/);
 });
 test("every adoption observation has period, provenance and a caveat", () => {
   const ids = new Set();

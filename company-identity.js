@@ -29,7 +29,7 @@
   "VERY",
   "WANT", "WAS", "WAY", "WE", "WELL", "WENT", "WERE", "WHAT", "WHEN", "WHERE",
   "WHICH", "WHILE", "WHO", "WHY", "WILL", "WISH", "WITH", "WOULD",
-  "YET", "YOU", "YOUR", "BULL", "WOLF", "KEY", "STRATEGY",
+  "YET", "YOU", "YOUR", "BULL", "WOLF", "KEY", "STRATEGY", "TAKE",
 ]);
   const GENERIC = new Set([...[
   "block", "open", "square", "beyond", "match", "unity", "carnival", "national",
@@ -60,7 +60,8 @@
   }
   function aliasesFor(name, ticker = "") {
     const full = companyName(name), lead = full.split(" ")[0];
-    return [...new Set([full, lead])].filter(alias => safeAlias(alias, full === words(ticker) ? ticker : ""));
+    const compound = /&|\band\b/i.test(String(name || ""));
+    return [...new Set([full, ...(compound ? [] : [lead])])].filter(alias => safeAlias(alias, full === words(ticker) ? ticker : ""));
   }
   function match(stock, title, { source = "" } = {}) {
     const ticker = String(stock?.ticker || "").toUpperCase();
@@ -72,11 +73,14 @@
     const symbol = escaped(ticker), end = "(?![A-Za-z0-9]|[.-][A-Za-z0-9])";
     if (new RegExp("(^|[^A-Za-z0-9$])\\$" + symbol + end, "i").test(text)) return { version: 1, kind: "cashtag", value: ticker };
     if (new RegExp("\\b(?:NASDAQ|NYSE|AMEX|OTC(?:MKTS)?)\\s*:\\s*" + symbol + end, "i").test(text)) return { version: 1, kind: "exchange-symbol", value: ticker };
-    if (ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
+    const fund = /\b(etf|fund|trust)\b/i.test(String(stock?.name || ""));
+    if (!fund && ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
         && new RegExp("(^|[^A-Za-z0-9.$-])" + symbol + end).test(text)) return { version: 1, kind: "symbol", value: ticker };
     const normalized = " " + words(text) + " ";
     const derived = aliasesFor(stock?.name, ticker);
+    const full = companyName(stock?.name), strictName = source === "SEC Filings" || fund || /&|\band\b/i.test(String(stock?.name || ""));
     const aliases = [...new Set([...derived, ...(Array.isArray(stock?.aliases) ? stock.aliases : [])])]
+      .filter(alias => !strictName || words(alias) === full)
       .filter(alias => derived.includes(alias) || safeAlias(alias, ticker)).map(words).sort((a,b) => b.length - a.length);
     const alias = aliases.find(value => normalized.includes(" " + value + " "));
     return alias ? { version: 1, kind: "company-name", value: alias } : null;

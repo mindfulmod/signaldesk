@@ -5,12 +5,13 @@
   else root.SIGNALDESK_QUALITY = api;
 })(typeof globalThis !== "undefined" ? globalThis : this, function (identity) {
   const SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan", "GDELT News", "Google News", "Bing News", "SEC Filings", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq", "FINRA Short Volume", "Price/Volume"];
-  // No matched coverage in the last ten saved daily snapshots, plus repeated
-  // access failures. Retain adapters/history; re-enable only after a CI probe.
+  // Source-specific pauses based on repeated saved collection failures.
+  // Retain adapters/history; re-enable only after a permitted, successful probe.
   const PAUSED_SOURCES = {
     Wallstreetbets: "Direct Reddit access repeatedly blocked. Reddit attention is still covered indirectly by ApeWisdom.",
     "Reddit Finance": "Direct Reddit access repeatedly blocked. Reddit attention is still covered indirectly by ApeWisdom.",
     Nasdaq: "Repeated API and RSS timeouts. Broad newswires and the capped Google News top-up remain active.",
+    "Yahoo Public News": "The broad RSS endpoint returned 404 on October 9, 12 and 13. Paused pending a working, permitted replacement; Yahoo price quotes are separate and remain active.",
   };
   const NEWS_MAX_HOURS = 72;
   const QUOTE_MAX_HOURS = 96; // tolerates weekends/long weekends; not a live quote SLA

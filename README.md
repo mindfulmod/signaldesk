@@ -130,6 +130,9 @@ such as a country name and partial ticker matches are rejected. Unsupported
 saved headlines remain inspectable as quarantined evidence; affected source
 totals are excluded rather than guessed from an incomplete article archive.
 These are lexical checks, not proof that an article caused a market move.
+The published health check also fails when highlighted headlines or market-news
+rows lack that company match, even if quote coverage passes. Quarantined records
+remain warnings, not promoted evidence; malformed news payloads fail explicitly.
 
 The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 

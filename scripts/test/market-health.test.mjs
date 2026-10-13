@@ -113,3 +113,32 @@ test("market health runs after publication and independently of research health"
   assert.ok(refresh.indexOf("verify-publication.mjs signals") < refresh.indexOf("check-market-health.mjs --live"));
   assert.match(watchdog, /if: \$\{\{ !cancelled\(\) \}\}\s+run: node scripts\/check-market-health.mjs --live/);
 });
+
+test("a quote-healthy publication still fails for falsely attached company headlines", () => {
+  const data = snapshot();
+  const stock = { ticker: "SXTC", name: "China SXT Pharmaceuticals, Inc." };
+  const bad = { source: "Google News", title: "Samsung, SK Hynix shares plunge on China competition fears" };
+  data.signals[0] = { ...data.signals[0], ...stock, topHeadline: bad };
+  data.marketNews = [{ ...stock, ...bad }];
+  const result = marketHealth(data, now);
+  assert.equal(result.coverage.collectedQuotes, 75);
+  assert.equal(result.ok, false);
+  assert.deepEqual(result.identity.headlineMismatches, ["SXTC"]);
+  assert.deepEqual(result.identity.newsMismatches, ["SXTC"]);
+});
+
+test("quarantined historical evidence is visible but is not a promoted mismatch", () => {
+  const data = snapshot();
+  data.signals[0].quarantinedNews = [{ source: "CNBC", title: "Unrelated report" }];
+  data.marketNews = [{ ticker: "WDC", name: "Western Digital", source: "CNBC", title: "Western Digital reports earnings" }];
+  const result = marketHealth(data, now);
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.identity.quarantinedTickers, ["T0"]);
+  assert.match(result.warnings.join(" "), /not verified absence/);
+  data.marketNews = {};
+  assert.equal(marketHealth(data, now).ok, false);
+  for (const row of [null, {}, { ticker: "WDC", title: "WDC rises", source: "Unknown" }, { ticker: "WDC", source: "CNBC" }]) {
+    data.marketNews = [row];
+    assert.equal(marketHealth(data, now).ok, false);
+  }
+});
