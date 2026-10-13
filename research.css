@@ -1,4 +1,45 @@
 /* Research surfaces share the existing semantic palettes. */
+.technology-panel #techContent { scroll-margin-top: 112px; }
+.intel-notebook-shelf { margin: 0 0 24px; padding: 20px; background: var(--panel-3); border: 1px solid var(--line); border-radius: 10px; }
+.intel-notebook-shelf h4 { margin: 0; }
+.intel-notebook-shelf h4 span { color: var(--muted); font-weight: 400; }
+.intel-notebook-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.intel-notebook-item { display: grid; gap: 7px; text-align: left; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); cursor: pointer; min-width: 0; }
+.intel-notebook-item strong { overflow-wrap: anywhere; font-size: .9rem; }
+.intel-notebook-item > span:last-child { color: var(--muted); font-size: .76rem; line-height: 1.5; }
+.intel-notebook-item:hover { border-color: var(--accent); }
+.intel-notebook-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr); gap: 32px; align-items: start; margin-top: 24px; }
+.intel-notebook-layout > * { min-width: 0; }
+.intel-notebook > .tech-back { margin-bottom: 0; }
+.intel-notebook > .tech-view-head { margin: 12px 0; }
+.intel-notebook-layout > section > .intel-disclosure:first-child { margin-top: 0; }
+.intel-notebook #notebookNotice:empty { display: none; }
+.intel-notebook [role="alert"]:empty { display: none; }
+.intel-notebook .intel-review-form { margin-top: 12px; gap: 16px; }
+.intel-notebook #notebookNotice:not(:empty) { padding: 10px 0; color: var(--accent); font-size: .82rem; }
+.intel-notebook-origins { border-left: 1px solid var(--line); padding-left: 24px; }
+.intel-notebook-origins article { border-bottom: 1px solid var(--line); padding-block: 14px; }
+.intel-notebook-origins p { font-size: .8rem; line-height: 1.6; overflow-wrap: anywhere; }
+.intel-notebook-check { margin: 20px 0; padding: 18px; border-left: 3px solid var(--accent); background: var(--panel-2); }
+.intel-notebook-check h4 { margin: 9px 0; }
+.intel-notebook-check p { font-size: .84rem; line-height: 1.6; }
+.intel-notebook-history { table-layout: fixed; }
+.intel-notebook-history th:first-child, .intel-notebook-history td:first-child { width: 112px; white-space: nowrap; }
+.intel-notebook-history th:nth-child(2), .intel-notebook-history td:nth-child(2) { width: 175px; }
+.intel-notebook-history td { overflow-wrap: anywhere; }
+.intel-notebook-history td { vertical-align: top; }
+.intel-notebook-history p { margin: 8px 0; max-width: 36em; }
+.intel-notebook [readonly] { color: var(--muted); background: var(--panel-3); }
+.intel-investigate { display: inline-block; min-height: 44px; margin-top: 8px; }
+.intel-notebook form button, .intel-notebook-history button { min-height: 44px; }
+.intel-notebook-shelf form label { display: grid; gap: 8px; font-size: .8rem; }
+.intel-notebook-shelf textarea { width: 100%; color: var(--ink); background: var(--panel); border: 1px solid var(--control-line); border-radius: 6px; padding: 10px; }
+@media (max-width: 760px) {
+  .intel-notebook-layout, .intel-notebook-list { grid-template-columns: 1fr; }
+  .intel-notebook-origins { border-left: 0; border-top: 1px solid var(--line); padding: 12px 0 0; }
+  .intel-notebook-shelf { padding: 14px; }
+  .intel-notebook-shelf > .intel-block-head { flex-wrap: wrap; }
+}
 .technology-panel [hidden] { display: none !important; }
 .intel-brief-lead { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 12px 0 22px; }
 .intel-brief-lead h3 { font-size: clamp(1.65rem, 3vw, 2.15rem); letter-spacing: -.045em; line-height: 1.15; margin: 8px 0; font-weight: 570; }

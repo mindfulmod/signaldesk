@@ -2,6 +2,11 @@
 (() => {
   const data = window.SIGNALDESK_TECHNOLOGY, model = window.SIGNALDESK_TECH_MODEL;
   const researchModel = window.SIGNALDESK_RESEARCH_MODEL, views = window.SIGNALDESK_RESEARCH_VIEWS, config = window.SIGNALDESK_RESEARCH_CONFIG;
+  const notebookModel = window.SIGNALDESK_DISCOVERY_NOTEBOOK, notebookViews = window.SIGNALDESK_NOTEBOOK_VIEWS;
+  const notebookKey = "signaldesk-investigations-v1";
+  let notebookPlans = [], notebookEditing = null, notebookFields = null, observationFields = null, notebookDirty = false, notebookStorageIssue = "", notebookStorageLast = null;
+  try { notebookStorageLast = localStorage.getItem(notebookKey); if (notebookStorageLast) notebookPlans = notebookModel.importBundle(notebookStorageLast); }
+  catch { notebookStorageIssue = "The saved notebook could not be loaded and has been left untouched. New investigations work for this session only; export them before leaving."; }
   const root = document.querySelector(".technology-panel"), content = document.getElementById("techContent");
   if (!data || !model || !root || !content) return;
   const byId = id => document.getElementById(id);
@@ -91,7 +96,7 @@
     const disclosureState = new Map([...content.querySelectorAll("details[data-disclosure]")].map(node => [node.dataset.disclosure, node.open]));
     const specialized = ["trackers", "discovery"].includes(view) || selectedCompany || selected || reviewingId;
     byId("techFilterDisclosure").hidden = Boolean(specialized);
-    byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || view === "trackers");
+    byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || (view === "discovery" && notebookEditing) || view === "trackers");
     byId("techScope").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
     byId("techSearch").closest("label").querySelector("span").textContent = view === "inbox" ? "Search documents, owners & titles" : view === "discovery" ? "Find a discovery lead" : "Find a technology";
     root.querySelectorAll("[data-tech-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.techView === view)));
@@ -106,6 +111,7 @@
     if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId) || research.reviews.filter(r => r.candidateId === reviewingId).at(-1), research.reviews));
     else if (selectedCompany) content.innerHTML = views.companies(themes, research, selectedCompany);
     else if (selected) content.innerHTML = dossier(selected);
+    else if (view === "discovery" && notebookEditing) content.innerHTML = notebookViews.editor({ ...notebookEditing, ...notebookFields }, notebookPlans.some(p => p.id === notebookEditing.id));
     else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly, { mode: discoveryMode, lane: discoveryLane, limit: discoveryLimit, monitor });
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
     else if (!themes.length) content.innerHTML = empty("Try a broader search, another stage, or turn off Following only. Your saved follows will not be deleted.");
@@ -114,10 +120,52 @@
     else if (view === "milestones") content.innerHTML = `<div class="tech-view-head"><div><h3>Milestones to watch</h3><p>Our review dates, company targets and undated evidence checks are intentionally separate. A passed target window means unverified—not automatically failed.</p></div></div><ol class="tech-timeline">${model.milestones(themes).map(milestoneRow).join("")}</ol>`;
     else if (view === "companies") content.innerHTML = views.companies(themes, research, null);
     else content.innerHTML = renderInbox(themes);
+    if (view === "discovery" && discoverySavedOnly && !notebookEditing) {
+      content.querySelector(".intel-discovery-context")?.insertAdjacentHTML("afterend", notebookViews.shelf(notebookPlans));
+      for (const saved of content.querySelectorAll("article [data-follow-discovery]")) {
+        const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button intel-investigate";
+        action.dataset.notebookOpen = saved.dataset.followDiscovery; action.textContent = notebookPlans.some(p => p.id === saved.dataset.followDiscovery) ? "Open investigation →" : "Investigate →";
+        const article = saved.closest("article"); (article.querySelector(".intel-scan-body") || article).append(action);
+      }
+    }
     for (const node of content.querySelectorAll("details[data-disclosure]")) {
       if (disclosureState.has(node.dataset.disclosure)) node.open = disclosureState.get(node.dataset.disclosure);
     }
+    if (view === "discovery" && notebookStorageIssue) { const warning = document.createElement("p"); warning.className = "tech-inbox-warning"; warning.textContent = notebookStorageIssue; content.prepend(warning); const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = "Personal investigation · session only · export before leaving"; }
+    if (view === "discovery" && notebookEditing && observationFields) for (const [name, value] of Object.entries(observationFields)) { const field = byId("notebookObservationForm")?.elements.namedItem(name); if (field) field.value = value; }
+    if (view === "discovery" && notebookEditing?.observations.length) {
+      const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button"; action.dataset.notebookSeries = ""; action.textContent = "Track a different metric →";
+      byId("notebookPlanForm")?.append(action);
+    }
   }
+  function persistNotebook() {
+    if (notebookStorageIssue) return;
+    try {
+      if (localStorage.getItem(notebookKey) !== notebookStorageLast) { notebookStorageIssue = "Another tab changed this notebook. Its data has not been overwritten. Your changes are session-only; export them before reloading."; return; }
+      const raw = JSON.stringify(notebookModel.bundle(notebookPlans)); localStorage.setItem(notebookKey, raw); notebookStorageLast = raw;
+    }
+    catch { notebookStorageIssue = "Notebook storage is unavailable or full. These changes are session-only. Export your backup before leaving."; }
+  }
+  function replaceNotebook(plan) {
+    if (!notebookPlans.some(p => p.id === plan.id) && notebookPlans.length >= notebookModel.limits.plans) throw new Error(`At most ${notebookModel.limits.plans} investigations are supported. Export before starting a separate notebook.`);
+    notebookPlans = [...notebookPlans.filter(p => p.id !== plan.id), plan]; notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; persistNotebook();
+  }
+  function notebookNotice(message) { const notice = byId("notebookNotice"); if (notice) { notice.textContent = message; notice.tabIndex = -1; notice.focus({ preventScroll: true }); } }
+  function exportNotebook() {
+    const bundle = notebookModel.bundle(notebookPlans); download("signaldesk-investigations.json", bundle);
+    byId("notebookExportFallback")?.remove();
+    const details = document.createElement("details"), summary = document.createElement("summary"), field = document.createElement("textarea");
+    details.id = "notebookExportFallback"; details.className = "intel-disclosure intel-export"; details.open = true;
+    summary.textContent = "Saved investigations only · backup download requested. Copy JSON if downloads are blocked. Save pending edits before exporting.";
+    field.readOnly = true; field.rows = 6; field.setAttribute("aria-label", "Investigation backup JSON"); field.value = JSON.stringify(bundle, null, 2);
+    details.append(summary, field); content.prepend(details); field.focus(); field.select();
+  }
+  root.addEventListener("input", event => {
+    const form = event.target.form;
+    if (form?.id === "notebookPlanForm") { notebookFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
+    if (form?.id === "notebookObservationForm") { observationFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
+  });
+  window.addEventListener("beforeunload", event => { if (notebookDirty) { event.preventDefault(); event.returnValue = ""; } });
   async function loadMonitor() {
     monitorStatus = "loading"; if (view === "inbox" && !selectedId) render();
     try {
@@ -189,6 +237,24 @@
     if (focusId) byId(focusId)?.focus(); else if (compareId) root.querySelector(`[data-compare="${CSS.escape(compareId)}"]`)?.focus();
   });
   root.addEventListener("submit", event => {
+    if (["notebookPlanForm", "notebookObservationForm", "notebookImportForm"].includes(event.target.id)) {
+      event.preventDefault(); const fields = Object.fromEntries(new FormData(event.target)), now = new Date().toISOString();
+      const errorId = event.target.id === "notebookPlanForm" ? "notebookPlanErrors" : event.target.id === "notebookImportForm" ? "notebookImportErrors" : "notebookObservationErrors";
+      try {
+        if (event.target.id === "notebookImportForm") { notebookPlans = notebookModel.importBundle(fields.backup, notebookPlans); persistNotebook(); render(); byId("adoptionFollowStatus").textContent = notebookStorageIssue || "Investigation backup imported. No public evidence was changed."; }
+        else {
+          const plan = notebookPlans.find(p => p.id === notebookEditing.id) || notebookEditing;
+          if (event.target.id === "notebookPlanForm") { const pending = observationFields; replaceNotebook(notebookModel.updatePlan(plan, fields, now)); observationFields = pending; notebookDirty = Boolean(pending); }
+          else {
+            // Never discard an unsaved plan edit while saving a measurement.
+            if (notebookFields) throw new Error("Save the investigation changes before adding an observation");
+            replaceNotebook(notebookModel.addObservation(plan, { ...fields, value: fields.value.trim() === "" ? null : Number(fields.value), id: `obs-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`, recordedAt: now, withdrawn: false }, now));
+          }
+          render(); notebookNotice(notebookStorageIssue || "Saved locally. No public evidence or source collection was changed.");
+        }
+      } catch (error) { const target = byId(errorId); target.textContent = error.message; target.tabIndex = -1; target.focus(); }
+      return;
+    }
     if (event.target.id !== "evidenceReviewForm") return;
     event.preventDefault();
     const document = research?.documents.find(d => d.id === reviewingId); if (!document) return;
@@ -204,6 +270,24 @@
   });
   root.addEventListener("click", event => {
     const button = event.target.closest("button"); if (!button) return;
+    if (button.dataset.notebookOpen) {
+      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
+      const plan = notebookPlans.find(p => p.id === button.dataset.notebookOpen) || notebookModel.seed(button.dataset.notebookOpen, research);
+      if (!plan) { byId("adoptionFollowStatus").textContent = "The original source record is no longer available. Open a retained source to start an investigation."; return; }
+      notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; view = "discovery"; render(); byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return;
+    }
+    if (button.hasAttribute("data-notebook-back")) { if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return; notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; discoverySavedOnly = true; render(); root.querySelector("[data-saved-discovery]")?.focus(); return; }
+    if (button.hasAttribute("data-notebook-export")) { exportNotebook(); return; }
+    if (button.hasAttribute("data-notebook-series")) {
+      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
+      const now = new Date().toISOString(); notebookEditing = { ...notebookEditing, id: `investigation-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, metric: "", unit: "", scope: "", observations: [], createdAt: now, updatedAt: now }; notebookFields = null; observationFields = null; notebookDirty = false; render(); const form = byId("notebookPlanForm"); form.closest("details").open = true; form.elements.metric.focus(); return;
+    }
+    if (button.dataset.notebookWithdraw) {
+      if (notebookDirty) { notebookNotice("Save your pending changes before changing an evidence record."); return; }
+      const plan = notebookPlans.find(p => p.id === notebookEditing?.id);
+      if (plan) { replaceNotebook({ ...plan, updatedAt: new Date().toISOString(), observations: plan.observations.map(o => o.id === button.dataset.notebookWithdraw ? { ...o, withdrawn: !o.withdrawn } : o) }); render(); notebookNotice("Record status changed locally. The original observation is preserved."); }
+      return;
+    }
     if (button.dataset.follow) {
       const id = button.dataset.follow;
       if (followed.has(id)) followed.delete(id); else followed.add(id);

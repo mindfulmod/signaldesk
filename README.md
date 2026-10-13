@@ -54,6 +54,14 @@ automatically independent confirmations. Coverage details expose collection
 dates, content dates, source limitations and gaps. See the October 10 discovery
 pass in [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md) for the operating contract.
 
+Saved discoveries can become **personal investigations**: define a hypothesis,
+one scoped adoption metric and a review checkpoint, then record dated source-backed
+observations. Targets and lower bounds stay labeled; corrections retain withdrawn
+records. Investigations are browser-local and manually entered—not automatically
+collected or published. Export/import backups move them between browsers without
+silently overwriting conflicting versions. Up to 25 investigations and 40 records
+per investigation are supported.
+
 Panel status below is as of **2026-08-29** and is meant to be kept honest. A
 panel with nothing in it says what it is waiting for rather than rendering a
 blank. These historical panel placements predate the current layout.

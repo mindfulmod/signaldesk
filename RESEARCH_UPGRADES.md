@@ -2,6 +2,37 @@
 
 ## October 13 release follow-up
 
+Personal investigations follow-up (branch implementation, not yet deployed):
+
+- Discover → Saved → Investigate turns any retained story/pattern into a personal
+  hypothesis, defined metric/unit/scope, next evidence check and dated review
+  checkpoint. Separate metric series are supported without rewriting old units.
+- Manually entered observations require original source links, reporting owner,
+  publication date, period and limitations. Zero is distinct from missing.
+  Future reported results, impossible dates, percentage values over 100 and
+  unsafe source URLs are rejected. Future targets remain explicitly targets.
+- Corrections withdraw/restore old observations without deleting their content.
+  No automatic growth or adoption score is calculated from these manual entries.
+- Link metadata persists outside the shared discovery archive. Browser-local
+  backup export includes a copyable fallback; restore validates all entries and
+  rejects conflicting versions without overwriting. Concurrent-tab writes and
+  unavailable/corrupt storage preserve existing data and show session-only warnings.
+- Limits: 25 investigations / 40 records each. This is a research workspace, not
+  cross-device sync, an automated source adapter or published editorial approval.
+  Public theme promotion and adoption-series collectors remain separate work.
+- A browser trial exposed unscoped Desk column widths squeezing research tables.
+  Those rules now apply only to the Desk; notebook source columns retain usable
+  width and horizontal scrolling stays inside evidence tables on phones.
+- Verification: 15 notebook/layout regressions cover provenance, impossible dates,
+  zero/missingness, future targets, fixed metric definitions, immutable record IDs,
+  retention bounds, atomic restore conflicts, escaping and due-date semantics.
+  Browser QA on isolated local origins covered save/reload, real JSON download,
+  restore into a clean notebook, withdrawal/restoration, separate metric series,
+  cross-tab conflict preservation, simultaneous form edits and rejected future
+  reported results. Test records are explicitly labeled QA and never entered
+  repository evidence. Desktop/light and phone/dark checks preserve readable
+  tables without page overflow. Full suite: 298 tests.
+
 - Open scan now supports saving individual source records, including stories
   outside the extracted pattern vocabulary. The local shortlist mixes stories
   and patterns, preserves source dates, gives lane-specific validation steps,

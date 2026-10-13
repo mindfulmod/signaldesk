@@ -332,6 +332,19 @@ after leaving the 14-day scan, until their source record leaves the bounded
 archive. Preserve filtering, shared pagination, missing-record recovery and
 focus return when the last saved item is removed.
 
+The personal investigation notebook stays inside Discover → Saved. Its pure
+validation/backup model is `discovery-notebook.js`; escaped views are in
+`discovery-notebook-views.js`; `adoption.js` handles browser-local persistence and
+form state. No notebook edit changes generated data, reviewed claims or source
+configuration. Never relabel a manual notebook as an automatic adoption tracker.
+Keep targets, lower bounds, reported figures and withdrawn records distinguishable.
+Metric/unit/scope become immutable once a record exists; a separate metric series
+gets a new investigation ID. Source-link metadata is retained with the notebook.
+Backups reject conflicting versions atomically, and storage writes detect another
+tab's changes before overwriting. Preserve unsaved form values across rerenders.
+Stock-table column rules in `layout-fix.js` must remain scoped to `.table-panel`;
+unscoped `th/td` widths collapse research source columns at desktop sizes.
+
 The technology brief/trackers use `research-views.js` for escaped HTML,
 `research-model.js` for evidence rules, `adoption.js` for local state/navigation,
 and `research.css` for token-only layout. `research-config.js` loads before the
