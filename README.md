@@ -125,6 +125,12 @@ live-feed guarantee). Degraded data remains visible with warnings, but the job
 fails after publication rather than reporting a healthy collection. These checks
 do not certify provider licensing, market completeness or investment quality.
 
+Company/news matching is shared between collection and display. Generic aliases
+such as a country name and partial ticker matches are rejected. Unsupported
+saved headlines remain inspectable as quarantined evidence; affected source
+totals are excluded rather than guessed from an incomplete article archive.
+These are lexical checks, not proof that an article caused a market move.
+
 The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 
 It:

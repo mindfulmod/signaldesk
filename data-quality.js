@@ -1,9 +1,9 @@
 // Shared, deterministic evidence rules. Browser global + Node import; no network.
 (function (root, factory) {
-  const api = factory();
+  const api = factory(typeof module === "object" && module.exports ? require("./company-identity.js") : root.SIGNALDESK_IDENTITY);
   if (typeof module === "object" && module.exports) module.exports = api;
   else root.SIGNALDESK_QUALITY = api;
-})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+})(typeof globalThis !== "undefined" ? globalThis : this, function (identity) {
   const SOURCES = ["Wallstreetbets", "Reddit Finance", "StockTwits", "ApeWisdom", "Hacker News", "4chan", "GDELT News", "Google News", "Bing News", "SEC Filings", "Yahoo Public News", "CNBC", "MarketWatch", "Press Releases", "Financial Media", "Nasdaq", "FINRA Short Volume", "Price/Volume"];
   // No matched coverage in the last ten saved daily snapshots, plus repeated
   // access failures. Retain adapters/history; re-enable only after a CI probe.
@@ -90,14 +90,24 @@
   }
   function normalizeSignal(item) {
     const sources = Object.fromEntries(SOURCES.map(s => [s, MARKET_SOURCES.includes(s) ? (Number(item.sources?.[s]) > 0 ? 1 : 0) : Math.max(0, number(item.sources?.[s]) || 0)]));
+    const rejected = [...(item.quarantinedNews || []), ...(item.latest || []), ...(item.topHeadline ? [item.topHeadline] : [])]
+      .filter(entry => !identity.articleMatches(entry, item));
+    const quarantinedNews = [...new Map(rejected.map(entry => [`${entry.source}|${entry.url}|${entry.title}`, entry])).values()];
+    // A saved top-six list cannot reconstruct full source totals. Exclude the
+    // affected source rather than subtracting an invented per-article weight.
+    const excludedNewsSources = [...new Set([...(item.excludedNewsSources || []), ...quarantinedNews.map(entry => entry.source)])];
+    for (const source of excludedNewsSources) sources[source] = 0;
     const valid = item.marketMetricsVersion === 2;
     return { ...item, sources, mentions: attentionTotal(sources), activityUnit: "weighted attention (not post counts)",
-      momentum: number(item.momentum), sentiment: number(item.sentiment),
+      quarantinedNews, excludedNewsSources,
+      previousCoverage: (item.previousCoverage || []).filter(source => !excludedNewsSources.includes(source)),
+      momentum: excludedNewsSources.length ? null : number(item.momentum), sentiment: excludedNewsSources.length ? null : number(item.sentiment),
       priceMove: valid ? number(item.priceMove) : null, relativeVolume: valid ? relativeVolume(item.relativeVolume) : null,
       marketQuality: valid ? item.marketQuality || [] : ["Legacy blended market measurements are unverified; awaiting a new collection"],
       description: item.profileIdentityVersion === 2 ? item.description : null,
       descriptionUrl: item.profileIdentityVersion === 2 ? item.descriptionUrl : null,
-      latest: item.latest || [], topHeadline: item.topHeadline || null };
+      latest: (item.latest || []).filter(entry => identity.articleMatches(entry, item)),
+      topHeadline: item.topHeadline && identity.articleMatches(item.topHeadline, item) ? item.topHeadline : null };
   }
   function aggregateSignals(snapshots, previousSnapshots = []) {
     const map = new Map(), previous = new Map();
@@ -115,13 +125,15 @@
         const latest = [...(old?.latest || []), ...signal.latest];
         // Market observations are latest-in-range, never averaged by attention.
         map.set(signal.ticker, { ...signal, sources, mentions: attentionTotal(sources), latest,
+          quarantinedNews: [...(old?.quarantinedNews || []), ...signal.quarantinedNews],
+          excludedNewsSources: [...new Set([...(old?.excludedNewsSources || []), ...signal.excludedNewsSources])],
           momentum: null, previousSources: previous.get(signal.ticker) || (snapshots.length === 1 ? signal.previousSources : null),
           previousCoverage: previousSnapshots.length ? priorCoverage : snapshots.length === 1 ? signal.previousCoverage || [] : [],
           marketPeriodLabel: snapshots.length > 1 ? "latest session in selected range" : "quoted session",
           attentionWindow: { start: snapshots[0]?.date, end: snapshots.at(-1)?.date } });
       }
     }
-    return [...map.values()];
+    return [...map.values()].map(normalizeSignal);
   }
   function scopeSignal(item, selectedSources) {
     const selected = new Set(selectedSources), sources = Object.fromEntries(SOURCES.map(s => [s, selected.has(s) ? item.sources?.[s] || 0 : 0]));
@@ -132,7 +144,7 @@
     const latest = item.latest.filter(e => selected.has(e.source));
     const scoped = { ...item, sources, mentions, momentum: prior > 0 ? (mentions / prior - 1) * 100 : null,
       sentiment: selectedSources.length === SOURCES.length ? item.sentiment : null, latest,
-      topHeadline: item.topHeadline && selected.has(item.topHeadline.source) ? item.topHeadline : latest.find(e => usableNews(e)) || null };
+      topHeadline: item.topHeadline && selected.has(item.topHeadline.source) ? item.topHeadline : latest.find(e => identity.NEWS_SOURCES.has(e.source) && usableNews(e)) || null };
     if (!selected.has("Price/Volume")) Object.assign(scoped, { priceMove: null, relativeVolume: null, lastPrice: null, quoteAsOf: null, marketQuality: ["Market source excluded by filter"] });
     return scoped;
   }
@@ -147,6 +159,6 @@
     const scale = 85 / Math.max(1, ...values);
     return items.map((item, i) => ({ ...item, signalScore: values[i] * scale }));
   }
-  return { SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, marketCoverage, usableNews, earningsHeadline, sourceHealth,
+  return { articleMatches: identity.articleMatches, SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, marketCoverage, usableNews, earningsHeadline, sourceHealth,
     MARKET_SOURCES, number, attentionTotal, relativeVolume, marketComparison, normalizeSignal, aggregateSignals, scopeSignal, scoreSignals };
 });

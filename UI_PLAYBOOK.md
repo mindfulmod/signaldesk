@@ -7,6 +7,14 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 13 headline identity: load `company-identity.js` before `data-quality.js`.
+Collection and browser use the same lexical identity gate. Quarantined news
+stays under Source evidence with its original date/link, but must not be a
+headline/catalyst or contribute its affected source total to the score. Do not
+invent per-story subtraction from a truncated saved list. Multi-day aggregation
+must preserve exclusions. `enhancements.js` reads the HTTP `snapshot` before
+the file-only global; its global news feed must not use `filteredSignals()`.
+
 October 13 market-coverage follow-up: `data-quality.js.marketCoverage` is shared
 by the Desk summary and `scripts/check-market-health.mjs`. Collected quotes,
 carried-forward prices and complete price/volume comparisons are different

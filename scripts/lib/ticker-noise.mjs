@@ -14,33 +14,8 @@
 //
 // Being on this list does NOT exclude a ticker from the dashboard. It only
 // raises the bar for what counts as a text mention of it.
-export const COMMON_WORD_TICKERS = new Set([
-  "A", "ABOUT", "AFTER", "AGAIN", "AGO", "ALL", "ALSO", "AM", "AN", "ANY", "ARE", "AS", "AT",
-  "BACK", "BE", "BEEN", "BEST", "BIG", "BUT", "BY",
-  "CAN", "CASH", "CLEAR", "COST", "COULD",
-  "DAY", "DID", "DO", "DOES", "DOWN",
-  "EACH", "EU", "EVEN", "EVER", "EVERY",
-  "FAST", "FEW", "FIND", "FOR", "FREE", "FROM", "FUND",
-  "GET", "GO", "GOOD", "GOT", "GREAT",
-  "HAD", "HAS", "HAVE", "HE", "HELP", "HER", "HERE", "HIGH", "HIM", "HIS", "HOME", "HOPE", "HOUR", "HOW", "HUGE",
-  "IF", "IN", "INTO", "IS", "IT", "ITS",
-  "JUST",
-  "KEEP", "KNOW",
-  "LAST", "LESS", "LET", "LIFE", "LIKE", "LONG", "LOT", "LOVE", "LOW",
-  "MADE", "MANY", "MAY", "ME", "MIND", "MORE", "MOST", "MUCH", "MUST", "MY",
-  "NEED", "NET", "NEW", "NEXT", "NICE", "NO", "NONE", "NOR", "NOT", "NOW",
-  "OF", "OFF", "OG", "ON", "ONCE", "ONE", "ONLY", "OPEN", "OR", "OTHER", "OUR", "OUT", "OVER", "OWN",
-  "PART", "PAST", "PER", "PLAN", "PLAY",
-  "RE", "REAL", "RIDE", "ROAD", "RUN",
-  "S", "SAID", "SAME", "SAVE", "SAW", "SAY", "SEE", "SELF", "SET", "SHE", "SO", "SOME", "STILL", "SURE",
-  "T", "TALK", "TH", "THAN", "THAT", "THE", "THEM", "THEN", "THERE", "THEY", "THIS",
-  "TO", "TOO", "TOP", "TRUE", "TURN", "TWO",
-  "UP", "US", "USE",
-  "VERY",
-  "WANT", "WAS", "WAY", "WE", "WELL", "WENT", "WERE", "WHAT", "WHEN", "WHERE",
-  "WHICH", "WHILE", "WHO", "WHY", "WILL", "WISH", "WITH", "WOULD",
-  "YET", "YOU", "YOUR",
-]);
+import identity from "../../company-identity.js";
+export const COMMON_WORD_TICKERS = identity.COMMON_WORD_TICKERS;
 
 export function isCommonWordTicker(ticker) {
   return COMMON_WORD_TICKERS.has(String(ticker || "").toUpperCase());

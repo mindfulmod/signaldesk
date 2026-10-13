@@ -2,6 +2,36 @@
 
 ## October 13 release follow-up
 
+Company/headline identity follow-up (branch implementation, not yet deployed):
+
+- Reproduced the SXTC false match: a generated `china` alias attached Samsung /
+  SK Hynix and Visa news to China SXT Pharmaceuticals. Shared issuer matching now
+  rejects generic/geographic aliases, requires exact symbol boundaries and
+  stronger evidence for common-word tickers. Aggregator publisher suffixes and
+  GDELT domain/country metadata do not establish company identity.
+- Collection records the matching symbol/name and method. Per-ticker searches
+  are filters, not identity proof; an unrelated result cannot stop the next
+  news source from being tried. HN comment matching uses the same identity rules.
+- Browser normalization quarantines unsupported saved headlines, preserving
+  titles/dates/HTTPS links in Source evidence. Since the top-six archive cannot
+  reconstruct all original article weights, the affected source total is excluded
+  from scoring and tone/change are unknown. Multi-day views preserve that
+  exclusion and audit trail. Raw historical files are not rewritten or "repaired".
+- Fixed the global news panel reading a file-only global on HTTP pages, then
+  incorrectly falling back to filtered board rows. Both paths now use the loaded
+  snapshot independently of search/filter selection. Market measurements can
+  no longer become fallback "notable chatter" after a headline is removed.
+- Verification: 324 tests pass on Node 24/20, including actual collection,
+  browser feed execution, exact symbol classes/prefixes, legitimate Meta/Bank of
+  America matches, generic alias rejection, source-total quarantine, multi-day
+  preservation and escaped audit links. Desktop/light and 375px/dark QA verified
+  SXTC's rejected evidence, independent WDC/STX/LCID news and no horizontal overflow.
+- Limits: lexical identity evidence is not full article/entity verification or
+  causality. Historical detector outputs outside the normalized Desk remain
+  historical, not retroactively certified. Ambiguous legacy brand aliases can
+  be withheld pending stronger issuer evidence. Deployment and the first full
+  scheduled collection still require release verification.
+
 Market reliability follow-up (branch implementation, not yet deployed):
 
 - Production snapshot at 19:57 UTC contained 75 stocks: 31 newly collected

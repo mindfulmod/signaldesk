@@ -999,12 +999,14 @@ function detailMarkup(item, rank) {
     </div>
 
     ${detailNextSteps(item)}
+    ${(item.excludedNewsSources || []).length ? '<p class="data-caveat">Some saved news failed company matching. Affected source totals are excluded from the score; public tone and attention change are unknown. Inspect the quarantined records below.</p>' : ""}
     ${topHeadlineMarkup(item) || '<p class="desk-evidence-gap">No qualifying headline captured. Read the source record before inferring a catalyst.</p>'}
 
     <details class="desk-disclosure" data-detail-section="evidence">
       <summary>Source evidence <span>Read & verify</span></summary>
       <p class="data-caveat">Weighted activity is not a count of posts. Multiple source types do not independently verify a claim. Check the original report, date and company disclosure.</p>
       ${headlinesMarkup(item) || '<p class="muted-note">No additional saved headlines in this scope. Source counts can include activity without a captured article.</p>'}
+      ${quarantinedNewsMarkup(item)}
       ${attentionMarkup(item)}
     </details>
 
@@ -1166,6 +1168,15 @@ function topHeadlineMarkup(item) {
       ${headline.url ? `<a href="${headline.url}" target="_blank" rel="noopener">${escapeHtml(headline.title)}</a>` : `<span>${escapeHtml(headline.title)}</span>`}
       <span class="catalyst-meta"><span class="headline-src" style="color:${SOURCE_COLORS[headline.source] || "var(--muted)"}">${escapeHtml(headline.source)}</span>${when ? ` · ${when}` : ""}</span>
     </div>`;
+}
+
+function quarantinedNewsMarkup(item) {
+  if (!item.quarantinedNews?.length) return "";
+  return `<h3>Quarantined news · company match unverified</h3><p class="data-caveat">Retained for audit, not catalyst evidence. Excluded sources: ${escapeHtml((item.excludedNewsSources || []).join(", "))}.</p><ul class="headline-list">${item.quarantinedNews.map(entry => {
+    let url = "";
+    try { const parsed = new URL(entry.url); if (parsed.protocol === "https:" && !parsed.username && !parsed.password) url = parsed.href; } catch {}
+    return `<li><span class="headline-src">${escapeHtml(entry.source)}</span><span class="headline-date">${Number.isFinite(Date.parse(entry.published)) ? escapeHtml(formatShortDateTime(entry.published)) : "Publication date unavailable"}</span>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.title)}</a>` : `<span>${escapeHtml(entry.title)}</span>`}</li>`;
+  }).join("")}</ul>`;
 }
 
 function headlinesMarkup(item) {
