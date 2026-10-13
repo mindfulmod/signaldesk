@@ -1,10 +1,506 @@
 {
   "schemaVersion": 1,
-  "collectionId": "7d88b2f6-0487-420b-b454-14559665f19a",
-  "generatedAt": "2026-10-12T23:12:01.481Z",
-  "sourceCheckedAt": "2026-10-12T23:12:01.481Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38320838549",
+  "collectionId": "f259c90c-3955-4fd6-a465-75e9b7d885cc",
+  "generatedAt": "2026-10-13T12:08:25.253Z",
+  "sourceCheckedAt": "2026-10-13T12:08:25.253Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38395076764",
   "documents": [
+    {
+      "id": "26cd8672208951d741b4ccb8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03246-1",
+      "title": "When microbes degrade plastic, where does it go?",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "34773285c5b822415f9e638c",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3d1f022547121785ee5128ab",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03231-8",
+      "title": "Daily briefing: Mathematicians up in arms over OpenAI’s preprint deluge",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "575abb2ea97b2490c4ed3a0c",
+      "originalPublishedAt": "2026-10-08",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-08",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "40c6c1a05339d2d105b88e95",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03247-0",
+      "title": "Is this idea from AI or humans? A detector claims it can tell",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "5562ab49ad214cb2b9722656",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4481eb26b6b90566f05b2ca0",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03226-5",
+      "title": "What’s the secret sauce for happy scientists at work? These eight countries offer some clues",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "9a2b7cd33075b666804f74ee",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5e1e1c577e6abd085af50f21",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03251-4",
+      "title": "Economics Nobel awarded for work on stabilizing economies in crisis",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3c27f18142d60c5cbec4e80e",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "62df8f7462c5f59a8b674aa4",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02921-7",
+      "title": "US proposes $100,000 charge for international students to do postgraduate work",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "11ea80af6287cfb8ec1bd3fc",
+      "originalPublishedAt": "2026-10-08",
+      "firstSeenAt": "2026-10-09T11:29:49.615Z",
+      "announcementAt": "2026-10-08",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "revision",
+      "previousId": "1cb1c3a062f53d27e010133a",
+      "previousExcerpt": null,
+      "previousTitle": "US proposes $100,000 charge for international students to do post-graduate work",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7187aa2ed8c32d8809d46de9",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03215-8",
+      "title": "Plague scare: what scientists know, and what Russia won’t say",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ccf24331e5e0092932c9fd7f",
+      "originalPublishedAt": "2026-10-08",
+      "firstSeenAt": "2026-10-09T11:29:49.615Z",
+      "announcementAt": "2026-10-08",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-08",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "revision",
+      "previousId": "ce42a3ec5e8654a001a7d21b",
+      "previousExcerpt": null,
+      "previousTitle": "Plague scare: what scientists know — and what Russia won’t say",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8ab1b9be886c00aad12baa3f",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02715-x",
+      "title": "In the AI era, coding means thinking like a systems architect",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "f6828c9215335a8594207f9e",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9d37434f28652e787d59d238",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02970-y",
+      "title": "Beyond the solvent fog: watching molecules dance in the crowd",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "23d688e4ba674587e05dcd1a",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a811c8f815575bc672ee0ea3",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03234-5",
+      "title": "Why not every global problem can be tackled by an IPCC-like organization",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "8e298ec88b4928c04d52734f",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bbddda768752b8aca4643864",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03245-2",
+      "title": "Decentralized AI needs more evidence on energy use",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "434112a6d64733281ca473cd",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d22889e7199850a8e5fdefd0",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03243-4",
+      "title": "Daily briefing: Rogue ‘jumping genes’ age bigs dogs faster than little ones",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3aff0a1261f0f4cf0cb5782c",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-09",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-09",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d2835190baeb1abc955867e4",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03255-0",
+      "title": "Daily briefing: Visit a huge climate experiment in the Amazon rainforest",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "995c01da2fc8f83b7c231922",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dae4e74cfc83af45735c3043",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11250-8",
+      "title": "Antiviral immunity via telomerase-like reverse transcription in bacteria",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "76216234d757ef4d60e54710",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-12",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e5287459253afa463d9f8738",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03244-3",
+      "title": "Preserve research data for tomorrow’s AI-enabled integrity checks",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "c63f3fed9636a2d3f75d91f3",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fad0e4518254f05a485afd14",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02668-1",
+      "title": "Admire another researcher’s work? Tell them about it",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "d860998e96fe886b19c1564a",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
     {
       "id": "0396c6f72f8eaf75f7d2ac00",
       "sourceId": "nature-research",
@@ -21723,370 +22219,6 @@
       "associatedThemes": [],
       "metadataOnly": true,
       "originalPublishedAt": "2026-09-17T20:21:43.000Z"
-    },
-    {
-      "id": "b5b040ef7527ddea604f57d2",
-      "sourceId": "sec-meta",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/meta-20250331.htm",
-      "title": "Meta Platforms · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Meta Platforms",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-05-01",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-glasses"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "b6f922bb46d847d0d9bbefe2",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000031/goog-20260330.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-04-02",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "b6f9822afdcf9c60835d4c5e",
-      "sourceId": "sec-tm",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526220511/d50033d6k.htm",
-      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Toyota",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-05-13",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "b6fa6b9b0a9b2cd13c899a17",
-      "sourceId": "sec-sldp",
-      "url": "https://www.sec.gov/Archives/edgar/data/1844862/000110465926055631/tm2613507d1_8k.htm",
-      "title": "Solid Power · 8-K · FORM 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Solid Power",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-05-05",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "b854f8d7bd2afb612ed081cf",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11075-5",
-      "title": "An amygdala to anterior hypothalamic circuit gates stress sensitivity",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "b8b32f1fbca546bb9be6e5f0",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm",
-      "title": "Microsoft · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-01-28",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "b9def77ae45982d69e23b762",
-      "sourceId": "sec-asts",
-      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315225012681/form8-k.htm",
-      "title": "AST SpaceMobile · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "AST SpaceMobile",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-09-05",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "ba306afff06dcff6a29fe79d",
-      "sourceId": "fcc-releases",
-      "url": "https://www.fcc.gov/edoc/425555",
-      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-      "excerpt": ".",
-      "owner": "FCC",
-      "tier": "regulator",
-      "themes": [],
-      "publishedAt": null,
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bb02e1baa07304a1eac1bea7",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-08-10",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bba56d47b9692688114a2dc3",
-      "sourceId": "fcc-releases",
-      "url": "https://www.fcc.gov/edoc/425556",
-      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-      "excerpt": ".",
-      "owner": "FCC",
-      "tier": "regulator",
-      "themes": [],
-      "publishedAt": null,
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bbbb38b44920d6adb092f35d",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/celebrating-dorm-to-market-social-entrepreneurship-0507",
-      "title": "Celebrating dorm-to-market social entrepreneurship at MIT",
-      "excerpt": "At the 25th IDEAS Social Innovation Incubator Showcase and Awards, 21 student-led ventures joined 1,200 alumni-led ventures tackling the world’s most pressing problems through social entrepreneurship.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-05-07T15:20:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-05-07T15:20:00.000Z"
-    },
-    {
-      "id": "bbc22858fa0bdb39825165ad",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
-      "title": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
-      "excerpt": "Rep. Jake Auchincloss visits the MIT Plasma Science and Fusion Center to learn about scaling geothermal energy.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-04-21T22:00:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-04-21T22:00:00.000Z"
-    },
-    {
-      "id": "bc588182a2f704866145da95",
-      "sourceId": "sec-qs",
-      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525313459/qs-20251210.htm",
-      "title": "QuantumScape · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "QuantumScape",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-12-10",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bc5e4609797b2bedb7d8b523",
-      "sourceId": "sec-meta",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026039193/meta-20260527.htm",
-      "title": "Meta Platforms · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Meta Platforms",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-05-29",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-glasses"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bcd6c1eddbcd1e14bb1da660",
-      "sourceId": "sec-asts",
-      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226006223/form8-k.htm",
-      "title": "AST SpaceMobile · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "AST SpaceMobile",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-02-11",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "bd2aa5af31177f10a3b51d9f",
-      "sourceId": "sec-sldp",
-      "url": "https://www.sec.gov/Archives/edgar/data/1844862/000110465925104388/tm2529523d1_8k.htm",
-      "title": "Solid Power · 8-K · FORM 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Solid Power",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-10-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -22139,12 +22271,13 @@
     },
     "11ea80af6287cfb8ec1bd3fc": {
       "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-08",
       "firstSeenAt": "2026-10-09T11:29:49.615Z",
-      "latestId": "1cb1c3a062f53d27e010133a",
+      "latestId": "62df8f7462c5f59a8b674aa4",
       "versions": {
-        "1cb1c3a062f53d27e010133a": "2026-10-09T11:29:49.615Z"
-      },
-      "originalPublishedAt": "2026-10-08"
+        "1cb1c3a062f53d27e010133a": "2026-10-09T11:29:49.615Z",
+        "62df8f7462c5f59a8b674aa4": "2026-10-13T12:08:25.253Z"
+      }
     },
     "3416d10ee4430350523646db": {
       "sourceId": "nature-research",
@@ -22245,12 +22378,13 @@
     },
     "ccf24331e5e0092932c9fd7f": {
       "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-08",
       "firstSeenAt": "2026-10-09T11:29:49.615Z",
-      "latestId": "ce42a3ec5e8654a001a7d21b",
+      "latestId": "7187aa2ed8c32d8809d46de9",
       "versions": {
-        "ce42a3ec5e8654a001a7d21b": "2026-10-09T11:29:49.615Z"
-      },
-      "originalPublishedAt": "2026-10-08"
+        "ce42a3ec5e8654a001a7d21b": "2026-10-09T11:29:49.615Z",
+        "7187aa2ed8c32d8809d46de9": "2026-10-13T12:08:25.253Z"
+      }
     },
     "a38e9f47528c3f55de8e2871": {
       "sourceId": "qs-news",
@@ -27876,6 +28010,132 @@
       "versions": {
         "3ac8c53c32674de76bd50ca5": "2026-10-12T12:24:17.073Z"
       }
+    },
+    "c63f3fed9636a2d3f75d91f3": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "e5287459253afa463d9f8738",
+      "versions": {
+        "e5287459253afa463d9f8738": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "434112a6d64733281ca473cd": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "bbddda768752b8aca4643864",
+      "versions": {
+        "bbddda768752b8aca4643864": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "34773285c5b822415f9e638c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "26cd8672208951d741b4ccb8",
+      "versions": {
+        "26cd8672208951d741b4ccb8": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "8e298ec88b4928c04d52734f": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "a811c8f815575bc672ee0ea3",
+      "versions": {
+        "a811c8f815575bc672ee0ea3": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "5562ab49ad214cb2b9722656": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "40c6c1a05339d2d105b88e95",
+      "versions": {
+        "40c6c1a05339d2d105b88e95": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "9a2b7cd33075b666804f74ee": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "4481eb26b6b90566f05b2ca0",
+      "versions": {
+        "4481eb26b6b90566f05b2ca0": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "d860998e96fe886b19c1564a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "fad0e4518254f05a485afd14",
+      "versions": {
+        "fad0e4518254f05a485afd14": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "f6828c9215335a8594207f9e": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "8ab1b9be886c00aad12baa3f",
+      "versions": {
+        "8ab1b9be886c00aad12baa3f": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "3c27f18142d60c5cbec4e80e": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "5e1e1c577e6abd085af50f21",
+      "versions": {
+        "5e1e1c577e6abd085af50f21": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "23d688e4ba674587e05dcd1a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "9d37434f28652e787d59d238",
+      "versions": {
+        "9d37434f28652e787d59d238": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "995c01da2fc8f83b7c231922": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "d2835190baeb1abc955867e4",
+      "versions": {
+        "d2835190baeb1abc955867e4": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "76216234d757ef4d60e54710": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-12",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "dae4e74cfc83af45735c3043",
+      "versions": {
+        "dae4e74cfc83af45735c3043": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "3aff0a1261f0f4cf0cb5782c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-09",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "d22889e7199850a8e5fdefd0",
+      "versions": {
+        "d22889e7199850a8e5fdefd0": "2026-10-13T12:08:25.253Z"
+      }
+    },
+    "575abb2ea97b2490c4ed3a0c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-08",
+      "firstSeenAt": "2026-10-13T12:08:25.253Z",
+      "latestId": "3d1f022547121785ee5128ab",
+      "versions": {
+        "3d1f022547121785ee5128ab": "2026-10-13T12:08:25.253Z"
+      }
     }
   },
   "reviews": [],
@@ -28906,17 +29166,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 4.58,
+        "price": 4.27,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -28968,6 +29228,15 @@
           "price": 4.58,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.27,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -30608,17 +30877,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 2.385,
+        "price": 2.23,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -30670,6 +30939,15 @@
           "price": 2.385,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 2.23,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -32077,17 +32355,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 185.3,
+        "price": 184.72,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:02.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -32139,6 +32417,15 @@
           "price": 185.3,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 184.72,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -33895,17 +34182,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 148.58,
+        "price": 151.87,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -33957,6 +34244,15 @@
           "price": 148.58,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 151.87,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -35700,17 +35996,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 50.965,
+        "price": 51.46,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35762,6 +36058,15 @@
           "price": 50.965,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 51.46,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -37136,17 +37441,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 718.67,
+        "price": 742.96,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -37198,6 +37503,15 @@
           "price": 718.67,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 742.96,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -39021,17 +39335,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 535.07,
+        "price": 541.15,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:01.000Z",
+        "asOf": "2026-10-12T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39083,6 +39397,15 @@
           "price": 535.07,
           "currency": "USD",
           "asOf": "2026-10-09T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 541.15,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -40906,17 +41229,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-12T12:24:17.073Z",
+      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
       "quote": {
-        "price": 351.66,
+        "price": 352.72,
         "currency": "USD",
-        "asOf": "2026-10-09T20:00:00.000Z",
+        "asOf": "2026-10-12T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-12T12:24:17.073Z",
+      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -40972,6 +41295,15 @@
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
           "marketCap": null
+        },
+        {
+          "price": 352.72,
+          "currency": "USD",
+          "asOf": "2026-10-12T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
         }
       ],
       "valuation": null,
@@ -40980,7 +41312,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-12T23:12:01.481Z",
+    "generatedAt": "2026-10-13T12:08:25.253Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -41026,6 +41358,17 @@
           "adb8682d9498bc8bcbb4e1f3"
         ],
         "documentCount": 169
+      },
+      {
+        "date": "2026-10-13",
+        "topics": [
+          "15ce4bfeb2c4c225b2228ac9",
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1",
+          "0aef6f4b72c4e512490d7390",
+          "adb8682d9498bc8bcbb4e1f3"
+        ],
+        "documentCount": 182
       }
     ],
     "candidates": [
@@ -41047,7 +41390,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -41067,7 +41410,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -41087,7 +41430,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -41107,7 +41450,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -41127,7 +41470,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       }
     ],
     "archive": [
@@ -41149,7 +41492,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "0aef6f4b72c4e512490d7390",
@@ -41169,7 +41512,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -41189,7 +41532,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -41209,7 +41552,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -41229,7 +41572,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-12"
+        "lastSeenAt": "2026-10-13"
       },
       {
         "id": "0712deadb475d5556818729d",
@@ -41252,7 +41595,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 169,
+    "datedDocuments": 182,
     "comparableDays": 4,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },

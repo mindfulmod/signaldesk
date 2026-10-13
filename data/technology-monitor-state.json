@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T23:12:01.481Z",
+  "generatedAt": "2026-10-13T12:08:25.253Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T23:12:01.481Z",
-      "lastSuccessAt": "2026-10-12T23:12:01.481Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-12T23:12:01.481Z",
-      "nextAttemptAt": "2026-10-13T05:12:01.481Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "nextAttemptAt": "2026-10-13T18:08:25.253Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 9
+      "failureStreak": 10
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -234,8 +234,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -265,7 +265,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b94-0RKq6k/bFn3E2CJ8sksfBfLPdTw\"",
+      "etag": "W/\"29bb6-kl09nWkXPHmnppeHw5gxdheA8js\"",
       "lastModified": null
     },
     "meta-news": {
@@ -273,8 +273,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -308,22 +308,22 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"f8ae132736e625e8fd86710247187530\"",
-      "lastModified": "Thu, 08 Oct 2026 16:58:11 GMT"
+      "etag": "W/\"68d00fbebc81765d9434affb1f45cd37\"",
+      "lastModified": "Mon, 12 Oct 2026 17:16:59 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-13T12:08:25.253Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "ce4313349833ae19e490c8140e30f3f0f5cf9915cd1a35f75647bdbd4338e65a",
+      "fingerprint": "c5b14e49302792953da51a8fe534d431fb3dfc94d68c0b930f6dedb05cea23b5",
       "items": [
         {
           "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
@@ -342,12 +342,6 @@
           "title": "Microsoft’s commitment for AI in education: Protecting students, strengthening learning",
           "excerpt": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have lear",
           "publishedAt": "2026-09-16T18:59:58.000Z"
-        },
-        {
-          "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
-          "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
-          "excerpt": "AI workloads are scaling faster than any single infrastructure approach can support — with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, M",
-          "publishedAt": "2026-07-20T13:00:02.000Z"
         }
       ],
       "seenLinks": [
@@ -356,7 +350,7 @@
         "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
         "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/"
       ],
-      "matchedItems": 4,
+      "matchedItems": 3,
       "extractedEntries": 10,
       "newestPublicationAt": "2026-09-25T12:03:50.000Z",
       "excerpt": null,
@@ -365,16 +359,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"838f7f5bdfcef6ac23ad9a5225596edb\"",
-      "lastModified": "Fri, 09 Oct 2026 20:09:41 GMT"
+      "etag": "W/\"a6386237bc42167fd5bc16d9cad6bd51\"",
+      "lastModified": "Mon, 12 Oct 2026 13:19:15 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -433,8 +427,8 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-11T10:59:52.949Z",
       "nextAttemptAt": null,
@@ -447,7 +441,7 @@
         "https://www.fcc.gov/edoc/425768"
       ],
       "matchedItems": 0,
-      "extractedEntries": 1,
+      "extractedEntries": 2,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -463,8 +457,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -589,16 +583,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1791805027-gzip\"",
-      "lastModified": "Mon, 12 Oct 2026 11:37:07 GMT"
+      "etag": "\"1791877857-gzip\"",
+      "lastModified": "Tue, 13 Oct 2026 07:50:57 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -968,23 +962,71 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1791807056\"",
-      "lastModified": "Mon, 12 Oct 2026 12:10:56 GMT"
+      "etag": "\"1791892410\"",
+      "lastModified": "Tue, 13 Oct 2026 11:53:30 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-12T12:24:17.073Z",
+      "lastChangedAt": "2026-10-13T12:08:25.253Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "0823cc0e157dbd674226561808a1fbc88c2a10a97d3e3a489e79b296ed7e733c",
+      "fingerprint": "df729a3693226f2bda207f3304dc1225dd30d3dac8c3339c3061f8aa4cee04a0",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03244-3",
+          "title": "Preserve research data for tomorrow’s AI-enabled integrity checks",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03245-2",
+          "title": "Decentralized AI needs more evidence on energy use",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03246-1",
+          "title": "When microbes degrade plastic, where does it go?",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03234-5",
+          "title": "Why not every global problem can be tackled by an IPCC-like organization",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03247-0",
+          "title": "Is this idea from AI or humans? A detector claims it can tell",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03226-5",
+          "title": "What’s the secret sauce for happy scientists at work? These eight countries offer some clues",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02668-1",
+          "title": "Admire another researcher’s work? Tell them about it",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02715-x",
+          "title": "In the AI era, coding means thinking like a systems architect",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03240-7",
           "title": "Award-winning microscopy image disqualified over AI use",
@@ -1000,6 +1042,18 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03225-6",
           "title": "Keep medical doctors in academia — without them, health-care research will suffer",
+          "excerpt": "",
+          "publishedAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03251-4",
+          "title": "Economics Nobel awarded for work on stabilizing economies in crisis",
+          "excerpt": "",
+          "publishedAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02970-y",
+          "title": "Beyond the solvent fog: watching molecules dance in the crowd",
           "excerpt": "",
           "publishedAt": "2026-10-12"
         },
@@ -1022,8 +1076,20 @@
           "publishedAt": "2026-10-12"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03255-0",
+          "title": "Daily briefing: Visit a huge climate experiment in the Amazon rainforest",
+          "excerpt": "",
+          "publishedAt": "2026-10-12"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03224-7",
           "title": "Does the decline of book reading mark the end of rational thinking?",
+          "excerpt": "",
+          "publishedAt": "2026-10-12"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11250-8",
+          "title": "Antiviral immunity via telomerase-like reverse transcription in bacteria",
           "excerpt": "",
           "publishedAt": "2026-10-12"
         },
@@ -1076,6 +1142,12 @@
           "publishedAt": "2026-10-09"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03243-4",
+          "title": "Daily briefing: Rogue ‘jumping genes’ age bigs dogs faster than little ones",
+          "excerpt": "",
+          "publishedAt": "2026-10-09"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03116-w",
           "title": "Five movements from the edge of the singularity",
           "excerpt": "",
@@ -1101,7 +1173,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-02921-7",
-          "title": "US proposes $100,000 charge for international students to do post-graduate work",
+          "title": "US proposes $100,000 charge for international students to do postgraduate work",
           "excerpt": "",
           "publishedAt": "2026-10-08"
         },
@@ -1118,6 +1190,12 @@
           "publishedAt": "2026-10-08"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03231-8",
+          "title": "Daily briefing: Mathematicians up in arms over OpenAI’s preprint deluge",
+          "excerpt": "",
+          "publishedAt": "2026-10-08"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03128-6",
           "title": "Will AI scoop your science? Some researchers see a gloomy future",
           "excerpt": "",
@@ -1125,7 +1203,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03215-8",
-          "title": "Plague scare: what scientists know — and what Russia won’t say",
+          "title": "Plague scare: what scientists know, and what Russia won’t say",
           "excerpt": "",
           "publishedAt": "2026-10-08"
         },
@@ -1350,90 +1428,6 @@
           "title": "Overcoming key challenges in the evolutionary transition to multicellularity",
           "excerpt": "",
           "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11153-8",
-          "title": "tRNA dosage regulates lineage dependency and resistance in prostate cancer",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11073-7",
-          "title": "A chiral superlattice route to spin-split topological antiferromagnetism",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11125-y",
-          "title": "Dynamics of human cardiogenesis and its disruption in trisomy 21",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11097-z",
-          "title": "Australia’s current wildfire crisis linked to colonial land-use change",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11111-4",
-          "title": "Retrofitting language models to operate over bytes",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11095-1",
-          "title": "Spatially deterministic nucleation of 2D semiconductors by etching flux",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11144-9",
-          "title": "A split attractor design for rapidly writing a navigational goal",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11116-z",
-          "title": "Cryo-EM structure of a methanogen nitrogenase–PII protein supercomplex",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11107-0",
-          "title": "A Jurassic mammaliaform swimmer and transformation of the mammalian pharynx",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11114-1",
-          "title": "Human lung organoid modelling of tissue-resident antiviral T cell responses",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11142-x",
-          "title": "A gut microbial odd-chain fatty acid alleviates atherosclerosis in mice",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11067-5",
-          "title": "Observation of critical topological phase transition",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11121-2",
-          "title": "5-oxoETE links redox control of epithelial damage detection and resilience",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11244-6",
-          "title": "Author Correction: Anodic Pd membrane H 2 extraction enhances thermochemical dehydrogenation",
-          "excerpt": "",
-          "publishedAt": "2026-10-06"
         }
       ],
       "seenLinks": [
@@ -1521,18 +1515,32 @@
         "https://www.nature.com/articles/d41586-026-03207-8",
         "https://www.nature.com/articles/d41586-026-02714-y",
         "https://www.nature.com/articles/d41586-026-03224-7",
-        "https://www.nature.com/articles/d41586-026-03227-4"
+        "https://www.nature.com/articles/d41586-026-03227-4",
+        "https://www.nature.com/articles/d41586-026-03244-3",
+        "https://www.nature.com/articles/d41586-026-03245-2",
+        "https://www.nature.com/articles/d41586-026-03246-1",
+        "https://www.nature.com/articles/d41586-026-03234-5",
+        "https://www.nature.com/articles/d41586-026-03247-0",
+        "https://www.nature.com/articles/d41586-026-03226-5",
+        "https://www.nature.com/articles/d41586-026-02668-1",
+        "https://www.nature.com/articles/d41586-026-02715-x",
+        "https://www.nature.com/articles/d41586-026-03251-4",
+        "https://www.nature.com/articles/d41586-026-02970-y",
+        "https://www.nature.com/articles/d41586-026-03255-0",
+        "https://www.nature.com/articles/s41586-026-11250-8",
+        "https://www.nature.com/articles/d41586-026-03243-4",
+        "https://www.nature.com/articles/d41586-026-03231-8"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-12",
+      "newestPublicationAt": "2026-10-13",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"b7acb7176af7ee23aeedeea261b8b9e7\"",
+      "etag": "\"88791eaf79ee539e4118ed04f2ea1494\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1540,8 +1548,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2167,8 +2175,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2809,8 +2817,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3358,8 +3366,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3997,8 +4005,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4684,8 +4692,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5177,8 +5185,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5809,8 +5817,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-12T12:24:17.073Z",
-      "lastSuccessAt": "2026-10-12T12:24:17.073Z",
+      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
+      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -6447,6 +6455,174 @@
     }
   },
   "events": [
+    {
+      "id": "b8b46d9060cfc1bf078c37e3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Preserve research data for tomorrow’s AI-enabled integrity checks",
+      "url": "https://www.nature.com/articles/d41586-026-03244-3",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ade9a85448ea553300bc904c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Decentralized AI needs more evidence on energy use",
+      "url": "https://www.nature.com/articles/d41586-026-03245-2",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ade198703c6670320a41a4ed",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "When microbes degrade plastic, where does it go?",
+      "url": "https://www.nature.com/articles/d41586-026-03246-1",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7ba41aa370165d0dea5a85eb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why not every global problem can be tackled by an IPCC-like organization",
+      "url": "https://www.nature.com/articles/d41586-026-03234-5",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b7015ce2070abf323ec2e7ca",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Is this idea from AI or humans? A detector claims it can tell",
+      "url": "https://www.nature.com/articles/d41586-026-03247-0",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7aa416831cba5050ff8ca757",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "What’s the secret sauce for happy scientists at work? These eight countries offer some clues",
+      "url": "https://www.nature.com/articles/d41586-026-03226-5",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "50f04cb96aea2fe1a6d0ccda",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Admire another researcher’s work? Tell them about it",
+      "url": "https://www.nature.com/articles/d41586-026-02668-1",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b9f402d173da58c1e1caeb7b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "In the AI era, coding means thinking like a systems architect",
+      "url": "https://www.nature.com/articles/d41586-026-02715-x",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9539ddf6328b050964d7dca7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Economics Nobel awarded for work on stabilizing economies in crisis",
+      "url": "https://www.nature.com/articles/d41586-026-03251-4",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-12",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "84625283f2ebd875a6646b9c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Beyond the solvent fog: watching molecules dance in the crowd",
+      "url": "https://www.nature.com/articles/d41586-026-02970-y",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-12",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "08ecc5298faec1db62d35323",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Visit a huge climate experiment in the Amazon rainforest",
+      "url": "https://www.nature.com/articles/d41586-026-03255-0",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-12",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5acc710f422e7b0889d502b1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Antiviral immunity via telomerase-like reverse transcription in bacteria",
+      "url": "https://www.nature.com/articles/s41586-026-11250-8",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-12",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f7e4e03bae965b66effaffcf",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Rogue ‘jumping genes’ age bigs dogs faster than little ones",
+      "url": "https://www.nature.com/articles/d41586-026-03243-4",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-09",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "21e968b3185af7a768fb412f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Mathematicians up in arms over OpenAI’s preprint deluge",
+      "url": "https://www.nature.com/articles/d41586-026-03231-8",
+      "detectedAt": "2026-10-13T12:08:25.253Z",
+      "publishedAt": "2026-10-08",
+      "verification": "unreviewed"
+    },
     {
       "id": "ef1448d19eca9753457cdc86",
       "sourceId": "nature-research",
