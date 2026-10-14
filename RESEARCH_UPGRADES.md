@@ -24,6 +24,16 @@ Branch implementation, not deployed:
   notebook access, unsaved-edit round trips, broad-discovery recovery, desktop
   light mode and 375px dark mode without horizontal overflow or console errors.
 
+Scheduled-refresh reconciliation: production commit `f6743ce` arrived during
+verification. Accepted its newer company records and quotes for all eight
+companies while preserving all 1,066 branch document versions, discovery
+history and actual source-check timestamps. The upstream document inventory
+was unchanged from its parent and was already fully represented in the branch.
+Recomputed discovery from retained source state without adding collection-day
+receipts; the one-day comparable history and momentum hold remain intact.
+Research health passes with 21/22 active sources readable, five current
+discovery feeds, four content checks and two intentional permission pauses.
+
 ## October 14 notebook recovery and storage safety
 
 Branch implementation, not deployed. Fixed a data-loss edge case where saving a
