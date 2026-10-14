@@ -1,4 +1,22 @@
 /* Research surfaces share the existing semantic palettes. */
+.intel-research-start { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0; margin: 0 0 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.intel-research-start > div { display: grid; gap: 5px; }
+.intel-research-start strong { font-size: .88rem; font-weight: 550; }
+.intel-research-start span { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+.intel-research-start > button { flex-shrink: 0; }
+.intel-personal-checks { margin: 0 0 26px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); }
+.intel-personal-checks h4 { font-size: 1.05rem; margin: 6px 0; }
+.intel-personal-checks > .intel-block-head { flex-wrap: wrap; }
+.intel-personal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px; margin-top: 16px; }
+.intel-personal-grid article { min-width: 0; padding-top: 14px; border-top: 1px solid var(--line); }
+.intel-personal-grid h5 { margin: 8px 0; font-size: .9rem; overflow-wrap: anywhere; }
+.intel-personal-grid h5 button { text-align: left; line-height: 1.5; min-height: 44px; }
+.intel-personal-grid p { font-size: .8rem; line-height: 1.65; overflow-wrap: anywhere; }
+@media (max-width: 680px) {
+  .intel-research-start { align-items: start; flex-direction: column; gap: 12px; }
+  .intel-personal-checks { padding: 14px; }
+  .intel-personal-grid { grid-template-columns: 1fr; gap: 8px; }
+}
 .technology-panel #techContent { scroll-margin-top: 112px; }
 .intel-notebook-shelf { margin: 0 0 24px; padding: 20px; background: var(--panel-3); border: 1px solid var(--line); border-radius: 10px; }
 .intel-notebook-shelf h4 { margin: 0; }

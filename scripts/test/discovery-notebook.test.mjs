@@ -153,3 +153,48 @@ test("browser exit protection includes committed session-only records, not just 
   assert.match(source, /includes saved records and session-only changes, but not unsaved form edits/);
   assert.match(source, /notebookStorage\.issue \|\| "Record status saved on this browser/);
 });
+
+test("brief checkpoints prioritize due investigations without mixing in paused or closed work", () => {
+  const plans = [
+    { ...plan(), id: "future", reviewOn: "2026-10-20" },
+    { ...plan(), id: "today", reviewOn: today },
+    { ...plan(), id: "older", reviewOn: "2026-10-01" },
+    { ...plan(), id: "paused", reviewOn: "2026-09-01", status: "paused" },
+    { ...plan(), id: "closed", reviewOn: "2026-09-01", status: "closed" },
+    { ...plan(), id: "later", reviewOn: "2026-11-01" }
+  ];
+  const result = notebook.checkpoints(plans, today);
+  assert.deepEqual(result.next.map(p => p.id), ["older", "today", "future"]);
+  assert.deepEqual(result.next.map(p => p.reviewState), ["overdue", "today", "upcoming"]);
+  assert.equal(result.active, 4); assert.equal(result.due, 2); assert.equal(result.paused, 1); assert.equal(result.closed, 1);
+  assert.equal(plans[0].id, "future", "do not reorder the saved notebook");
+});
+test("brief record counts exclude targets and withdrawn measurements, but keep reported zero", () => {
+  const result = notebook.checkpoints([{ ...plan(), observations: [observation(), observation({ id: "bound", qualifier: "lower-bound" }), observation({ id: "target", qualifier: "target" }), observation({ id: "withdrawn", withdrawn: true })] }], today);
+  assert.equal(result.next[0].reportedRecords, 2);
+});
+test("empty brief offers broad discovery without an empty personal-research panel", () => {
+  const html = views.checkpoints([]);
+  assert.match(html, /Explore new leads/); assert.match(html, /data-open-discovery-scan/);
+  assert.doesNotMatch(html, /intel-personal-checks|0 investigations|No active/);
+});
+test("personal brief escapes notes, bounds excerpts and distinguishes manual checks from alerts", () => {
+  const html = views.checkpoints([{ ...plan(), title: "<script>new theme</script>", nextCheck: "<img>" + "evidence ".repeat(100), reviewOn: today }], { today, sessionOnly: true });
+  assert.match(html, /1 investigation needs a check/);
+  assert.match(html, /&lt;script&gt;/); assert.doesNotMatch(html, /<script>|<img>/);
+  assert.match(html, /not alerts or automatic monitoring/); assert.match(html, /independent of theme filters/);
+  assert.match(html, /Session-only changes/); assert.match(html, /0 reported records/);
+  assert.match(html, /data-notebook-open="story:source"/); assert.ok(html.length < 2000);
+  const paused = views.checkpoints([{ ...plan(), status: "paused" }], { today });
+  assert.match(paused, /No active checks/); assert.match(paused, /1 paused/); assert.match(paused, /View all 1/);
+});
+test("brief-to-notebook routing preserves same-investigation edits and leaves broad discovery reachable", () => {
+  const source = readFileSync(new URL("../../adoption.js", import.meta.url), "utf8");
+  assert.match(source, /if \(view === "brief" && !candidate && !selectedCompany && !selected\)/);
+  assert.match(source, /notebookEditing\?\.id === button\.dataset\.notebookOpen/);
+  assert.match(source, /data-open-discovery-scan[^\n]*closeNotebookEditor\(\)/);
+  assert.match(source, /data-notebook-shelf[^\n]*discoverySavedOnly = true/);
+  assert.match(source, /notebookFields\) byId\("notebookPlanForm"\)\.closest\("details"\)\.open = true/);
+  assert.match(views.editor(plan(), true, { pendingEdits: true }), /Personal investigation · unsaved changes/);
+  assert.doesNotMatch(views.editor(plan(), true, { pendingEdits: true }), /Personal investigation · saved on this browser/);
+});

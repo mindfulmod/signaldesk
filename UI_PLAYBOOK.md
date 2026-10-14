@@ -408,6 +408,12 @@ validation/backup model is `discovery-notebook.js`; escaped views are in
 `discovery-notebook-views.js`; `adoption.js` handles browser-local persistence and
 form state. No notebook edit changes generated data, reviewed claims or source
 configuration. Never relabel a manual notebook as an automatic adoption tracker.
+The brief's personal checklist is owned by `discovery-notebook.js.checkpoints`
+and `discovery-notebook-views.js.checkpoints`. Show at most three active checks,
+earliest review dates first, independently of theme filters. Dates are manual
+UTC checkpoints—not notifications or collected evidence. With no notebook, use
+the compact broad-discovery action, not an empty panel. Resume a pending editor
+without discarding its fields, reopen the pending form and label it unsaved.
 `createStorageSession` distinguishes a submitted form from durable storage.
 A save must be read back before it clears session-only protection. The exit
 warning covers both dirty form edits and committed records that could not be

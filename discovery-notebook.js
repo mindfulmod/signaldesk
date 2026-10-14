@@ -108,5 +108,12 @@
     };
   }
   const due = (p, today = new Date().toISOString().slice(0, 10)) => p.status === "watching" && day(p.reviewOn) && p.reviewOn <= today;
-  return { limits, validatePlan, validateObservation, seed, updatePlan, addObservation, importBundle, bundle, createStorageSession, due };
+  function checkpoints(plans, today = new Date().toISOString().slice(0, 10)) {
+    const active = plans.filter(p => p.status === "watching" && day(p.reviewOn)).sort((a, b) => a.reviewOn.localeCompare(b.reviewOn) || a.title.localeCompare(b.title) || a.id.localeCompare(b.id));
+    return { active: active.length, due: active.filter(p => p.reviewOn <= today).length,
+      paused: plans.filter(p => p.status === "paused").length, closed: plans.filter(p => p.status === "closed").length,
+      next: active.slice(0, 3).map(p => ({ ...p, reviewState: p.reviewOn < today ? "overdue" : p.reviewOn === today ? "today" : "upcoming",
+        reportedRecords: p.observations.filter(o => !o.withdrawn && o.qualifier !== "target").length })) };
+  }
+  return { limits, validatePlan, validateObservation, seed, updatePlan, addObservation, importBundle, bundle, createStorageSession, due, checkpoints };
 });

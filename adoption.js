@@ -108,7 +108,7 @@
     if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId) || research.reviews.filter(r => r.candidateId === reviewingId).at(-1), research.reviews));
     else if (selectedCompany) content.innerHTML = views.companies(themes, research, selectedCompany);
     else if (selected) content.innerHTML = dossier(selected);
-    else if (view === "discovery" && notebookEditing) content.innerHTML = notebookViews.editor({ ...notebookEditing, ...notebookFields }, notebookPlans.some(p => p.id === notebookEditing.id));
+    else if (view === "discovery" && notebookEditing) content.innerHTML = notebookViews.editor({ ...notebookEditing, ...notebookFields }, notebookPlans.some(p => p.id === notebookEditing.id), { pendingEdits: notebookDirty });
     else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly, { mode: discoveryMode, lane: discoveryLane, limit: discoveryLimit, monitor });
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
     else if (view === "inbox") content.innerHTML = renderInbox(themes);
@@ -118,6 +118,11 @@
     else if (view === "milestones") content.innerHTML = `<div class="tech-view-head"><div><h3>Milestones to watch</h3><p>Our review dates, company targets and undated evidence checks are intentionally separate. A passed target window means unverified—not automatically failed.</p></div></div><ol class="tech-timeline">${model.milestones(themes).map(milestoneRow).join("")}</ol>`;
     else if (view === "companies") content.innerHTML = views.companies(themes, research, null);
     else content.innerHTML = renderInbox(themes);
+    if (view === "brief" && !candidate && !selectedCompany && !selected) {
+      const checks = notebookViews.checkpoints(notebookPlans, { sessionOnly: notebookStorage.hasUnpersistedChanges });
+      const heading = content.querySelector(".intel-brief-lead");
+      if (heading) heading.insertAdjacentHTML("afterend", checks); else content.insertAdjacentHTML("afterbegin", checks);
+    }
     if (view === "discovery" && discoverySavedOnly && !notebookEditing) {
       content.querySelector(".intel-discovery-context")?.insertAdjacentHTML("afterend", notebookViews.shelf(notebookPlans));
       for (const saved of content.querySelectorAll("article [data-follow-discovery]")) {
@@ -144,6 +149,10 @@
     notebookPlans = [...notebookPlans.filter(p => p.id !== plan.id), plan]; notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; persistNotebook();
   }
   function notebookNotice(message) { const notice = byId("notebookNotice"); if (notice) { notice.textContent = message; notice.tabIndex = -1; notice.focus({ preventScroll: true }); } }
+  function closeNotebookEditor() {
+    if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return false;
+    notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; return true;
+  }
   function exportNotebook() {
     const bundle = notebookModel.bundle(notebookPlans); download("signaldesk-investigations.json", bundle);
     byId("notebookExportFallback")?.remove();
@@ -157,6 +166,7 @@
     const form = event.target.form;
     if (form?.id === "notebookPlanForm") { notebookFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
     if (form?.id === "notebookObservationForm") { observationFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
+    if (notebookDirty && form?.id?.startsWith("notebook")) { const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = `Personal investigation · unsaved changes${notebookStorage.issue ? " · session only" : ""}`; }
   });
   window.addEventListener("beforeunload", event => { if (notebookStorage.shouldWarnBeforeUnload(notebookDirty)) { event.preventDefault(); event.returnValue = ""; } });
   async function loadMonitor() {
@@ -264,11 +274,14 @@
   root.addEventListener("click", event => {
     const button = event.target.closest("button"); if (!button) return;
     if (button.dataset.notebookOpen) {
+      // Returning from the brief to the same investigation resumes pending edits.
+      if (notebookEditing?.id === button.dataset.notebookOpen) { view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); if (notebookFields) byId("notebookPlanForm").closest("details").open = true; if (observationFields) byId("notebookObservationForm").closest("details").open = true; byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return; }
       if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
       const plan = notebookPlans.find(p => p.id === button.dataset.notebookOpen) || notebookModel.seed(button.dataset.notebookOpen, research);
       if (!plan) { byId("adoptionFollowStatus").textContent = "The original source record is no longer available. Open a retained source to start an investigation."; return; }
-      notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; view = "discovery"; render(); byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return;
+      notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return;
     }
+    if (button.hasAttribute("data-notebook-shelf")) { if (!closeNotebookEditor()) return; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoverySavedOnly = true; discoveryLane = "all"; byId("techSearch").value = ""; setUrl(); render(); const title = byId("notebookShelfTitle"); title?.setAttribute("tabindex", "-1"); title?.focus(); return; }
     if (button.hasAttribute("data-notebook-back")) { if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return; notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; discoverySavedOnly = true; render(); root.querySelector("[data-saved-discovery]")?.focus(); return; }
     if (button.hasAttribute("data-notebook-export")) { exportNotebook(); return; }
     if (button.hasAttribute("data-notebook-series")) {
@@ -288,7 +301,7 @@
       root.querySelector(`[data-follow="${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
     } else if (button.id === "techFollowedOnly") { followedOnly = !followedOnly; selectedId = null; setUrl(); render(); }
     else if (button.hasAttribute("data-show-health")) { view = "inbox"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); const health = byId("researchSourceHealth"); if (health) { health.open = true; health.scrollIntoView({ block: "start" }); health.querySelector("summary").focus(); } }
-    else if (button.hasAttribute("data-open-discovery-scan")) { view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoveryMode = "open"; discoverySavedOnly = false; discoveryLane = "all"; discoveryLimit = 24; byId("techSearch").value = ""; setUrl(); render(); content.scrollIntoView({ block: "start" }); content.querySelector("h3")?.setAttribute("tabindex", "-1"); content.querySelector("h3")?.focus(); }
+    else if (button.hasAttribute("data-open-discovery-scan")) { if (!closeNotebookEditor()) return; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoveryMode = "open"; discoverySavedOnly = false; discoveryLane = "all"; discoveryLimit = 24; byId("techSearch").value = ""; setUrl(); render(); content.scrollIntoView({ block: "start" }); content.querySelector("h3")?.setAttribute("tabindex", "-1"); content.querySelector("h3")?.focus(); }
     else if (button.dataset.techView) { view = button.dataset.techView; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); }
     else if (button.dataset.openTech) { selectedId = button.dataset.openTech; selectedCompany = null; reviewingId = null; setUrl(); render(); focusProfile(); }
     else if (button.dataset.openCompany) { selectedCompany = button.dataset.openCompany; selectedId = null; reviewingId = null; view = "companies"; setUrl(); render(); byId("companyProfileTitle")?.focus({ preventScroll: true }); content.scrollIntoView({ block: "start" }); }

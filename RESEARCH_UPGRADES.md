@@ -1,5 +1,29 @@
 # Research intelligence work plan
 
+## October 14 personal research checks in the daily brief
+
+Branch implementation, not deployed:
+
+- The daily brief now surfaces up to three active personal investigations,
+  ordered by review date, with overdue/today/upcoming labels and their next
+  evidence check. Paused and closed investigations stay out of the active queue.
+  These UTC dates are a manual checklist, not alerts, collection schedules or
+  company events. Reported-record counts exclude targets and withdrawn records.
+- Personal checks are independent of preset-theme filters, including an empty
+  theme result. View all opens the complete local notebook. With no notebook,
+  one compact Explore new leads action opens the keyword-free Open scan rather
+  than displaying an empty personal-research panel.
+- Returning from the brief to the same investigation resumes pending plan or
+  observation fields without asking to discard them. The pending form reopens
+  and the editor labels unsaved changes both while typing and after rerender.
+  Moving to the notebook shelf or Open scan preserves the discard safeguard.
+- Fixed Open scan navigation reopening a previously active notebook editor.
+  Source-health recovery now clears that editor only after handling unsaved edits.
+- Browser QA used three clearly labeled example investigations on an isolated
+  origin, not user research. Verified due ordering, theme-filter independence,
+  notebook access, unsaved-edit round trips, broad-discovery recovery, desktop
+  light mode and 375px dark mode without horizontal overflow or console errors.
+
 ## October 14 notebook recovery and storage safety
 
 Branch implementation, not deployed. Fixed a data-loss edge case where saving a
