@@ -33,10 +33,12 @@ export function researchHealth(research, monitor, now = Date.now(), scope = conf
       if (!validCounts || !Number.isFinite(candidate.momentumPercent) || Math.abs(candidate.momentumPercent - (candidate.recentDocuments / candidate.priorDocuments - 1) * 100) > 1e-8) errors.push(`Invalid story-count momentum: ${candidate.id}`);
     }
   }
-  const companies = Object.values(research?.companies || {}), covered = companies.filter(c => model.freshness(c.quote?.asOf, now, 96) === "current");
+  const companies = Object.values(research?.companies || {}), quotes = scope.companies.map(c => ({ ticker: c.ticker, ...model.companyQuote(research?.companies?.[c.ticker], c.ticker, now) })), covered = quotes.filter(q => q.current);
+  for (const quote of quotes.filter(q => !q.current)) warnings.push(`${quote.ticker}: ${quote.reason}`);
+  for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.valuation) errors.push(`${ticker}: unsupported capitalization; quote timestamps do not establish capitalization dates`);
   if (!companies.length || companies.length !== scope.companies.length || scope.companies.some(c => !research?.companies?.[c.ticker])) errors.push("Permanent company universe is incomplete");
   for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.factsError || model.freshness(company.factsCheckedAt, now, 192) !== "current") warnings.push(ticker + ": financial source check unavailable or older than eight days; inspect original reporting periods");
-  if (covered.length < companies.length) warnings.push(`Recent prices: ${covered.length}/${companies.length}; missing/stale prices must remain labeled`);
-  if (companies.length && covered.length < Math.ceil(companies.length * .75)) errors.push("Fewer than 75% of tracked companies have a quote within 96 hours");
-  return { ok: !errors.length, errors, warnings, sourceCoverage: `${current.length}/${active.length} active`, contentChecks: audit.contentIssues, pausedSources: expected - active.length, discoveryCoverage: `${discoveryCurrent.length}/${discovery.length} current`, quoteCoverage: `${covered.length}/${companies.length}` };
+  if (covered.length < scope.companies.length) warnings.push(`Usable recent prices: ${covered.length}/${scope.companies.length}; missing, invalid and stale prices must remain labeled`);
+  if (scope.companies.length && covered.length < Math.ceil(scope.companies.length * .75)) errors.push("Fewer than 75% of tracked companies have a valid sourced quote within 96 hours");
+  return { ok: !errors.length, errors, warnings, sourceCoverage: `${current.length}/${active.length} active`, contentChecks: audit.contentIssues, pausedSources: expected - active.length, discoveryCoverage: `${discoveryCurrent.length}/${discovery.length} current`, quoteCoverage: `${covered.length}/${scope.companies.length}` };
 }

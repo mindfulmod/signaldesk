@@ -1,7 +1,13 @@
 import { boundedJson } from "./research-fetch.mjs";
+import researchModel from "../../research-model.js";
 const SEC_HEADERS = { "User-Agent": "SignalDesk/2.0 (m.aali9@gmail.com)", Accept: "application/json" };
 const day = value => String(value || "").slice(0, 10);
-const finite = value => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+const finite = value => ["number", "string"].includes(typeof value) && String(value).trim() !== "" && Number.isFinite(Number(value));
+function checkedQuote(quote, ticker, now) {
+  const check = researchModel.companyQuote({ ticker, quote, quoteCheckedAt: now }, ticker, Date.parse(now));
+  if (!check.usable) throw new Error(check.reason);
+  return quote;
+}
 const METRICS = {
   cash: ["CashAndCashEquivalentsAtCarryingValue", "CashAndCashEquivalents"],
   revenue: ["RevenueFromContractWithCustomerIncludingAssessedTax", "RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "Revenue", "SalesRevenueNet"],
@@ -59,17 +65,17 @@ export function yahooQuote(data, ticker, now = new Date().toISOString()) {
   if (!meta || meta.symbol?.toUpperCase() !== ticker || !finite(meta.regularMarketPrice) || Number(meta.regularMarketPrice) <= 0 || !meta.regularMarketTime || !meta.currency) throw new Error("No valid matching quote");
   const asOf = new Date(meta.regularMarketTime * 1000).toISOString();
   if (Date.parse(asOf) > Date.parse(now) + 300000) throw new Error("Quote timestamp is in the future");
-  return { price: Number(meta.regularMarketPrice), currency: meta.currency, asOf, precision: "time", provider: "Yahoo public chart", url: `https://finance.yahoo.com/quote/${ticker}/`, marketCap: finite(meta.marketCap) && Number(meta.marketCap) > 0 ? Number(meta.marketCap) : null };
+  return checkedQuote({ price: Number(meta.regularMarketPrice), currency: meta.currency, asOf, precision: "time", provider: "Yahoo public chart", url: `https://finance.yahoo.com/quote/${ticker}/`, marketCap: null }, ticker, now);
 }
 export function alphaQuote(data, ticker, now = new Date().toISOString()) {
   const q = data?.["Global Quote"];
   if (!q || q["01. symbol"] !== ticker || !finite(q["05. price"]) || Number(q["05. price"]) <= 0 || !/^\d{4}-\d{2}-\d{2}$/.test(q["07. latest trading day"] || "") || q["07. latest trading day"] > day(now)) throw new Error("Licensed quote unavailable or quota reached");
-  return { price: Number(q["05. price"]), currency: "USD", asOf: q["07. latest trading day"], precision: "day", provider: "Alpha Vantage end-of-day", url: `https://www.alphavantage.co/documentation/#latestprice`, marketCap: null };
+  return checkedQuote({ price: Number(q["05. price"]), currency: "USD", asOf: q["07. latest trading day"], precision: "day", provider: "Alpha Vantage end-of-day", url: `https://www.alphavantage.co/documentation/#latestprice`, marketCap: null }, ticker, now);
 }
 export function stooqQuote(csv, ticker, now = new Date().toISOString()) {
   const row = csv.trim().split(/\r?\n/).at(-1)?.split(",");
   if (!row || row[0]?.toUpperCase() !== `${ticker}.US` || !/^\d{4}-\d{2}-\d{2}$/.test(row[1]) || row[1] > day(now) || !finite(row[6]) || Number(row[6]) <= 0) throw new Error("No matching Stooq daily quote");
-  return { price: Number(row[6]), currency: "USD", asOf: row[1], precision: "day", provider: "Stooq public daily quote", url: `https://stooq.com/q/?s=${ticker.toLowerCase()}.us`, marketCap: null };
+  return checkedQuote({ price: Number(row[6]), currency: "USD", asOf: row[1], precision: "day", provider: "Stooq public daily quote", url: `https://stooq.com/q/?s=${ticker.toLowerCase()}.us`, marketCap: null }, ticker, now);
 }
 export async function collectCompanies(config, monitor, previous = {}, { now = new Date().toISOString(), fetchImpl = fetch, apiKey = "", sleep = ms => new Promise(r => setTimeout(r, ms)) } = {}) {
   const companies = {}, errors = [];
@@ -109,14 +115,15 @@ export async function collectCompanies(config, monitor, previous = {}, { now = n
         quote = stooqQuote(text, c.ticker, now);
       } catch (e) { failures.push(`Stooq: ${e.message}`); }
       if (quote) {
-        if (!row.quote || Date.parse(quote.asOf) >= Date.parse(row.quote.asOf)) row.quote = quote;
+        if (!researchModel.companyQuote(row, c.ticker, Date.parse(now)).usable || Date.parse(quote.asOf) >= Date.parse(row.quote.asOf)) row.quote = quote;
         row.quoteCheckedAt = now; row.quoteError = null;
         row.quoteHistory = [...(prior.quoteHistory || []).filter(p => day(p.asOf) !== day(quote.asOf)), quote].slice(-120);
       } else { row.quoteError = failures.join("; "); errors.push(`${c.ticker}: ${row.quoteError}`); }
       await sleep(200);
     }
-    // Valuation is never fabricated from ADRs, mixed share classes or missing shares.
-    row.valuation = row.quote?.marketCap ? { marketCap: row.quote.marketCap, currency: row.quote.currency, asOf: row.quote.asOf, provider: row.quote.provider } : null;
+    // No configured adapter supplies a separately dated capitalization observation.
+    // A quote's timestamp must not be reused to certify a market-cap field.
+    row.valuation = null;
     companies[c.ticker] = row;
   }
   return { schemaVersion: 1, generatedAt: now, providerMode: apiKey ? "Configured end-of-day provider with public fallback" : "Public quote fallbacks; no licensed provider configured", companies, errors };

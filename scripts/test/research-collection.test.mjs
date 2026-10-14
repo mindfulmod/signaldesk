@@ -115,7 +115,7 @@ test("saved discovery leads remain inspectable after leaving the current window"
   assert.equal(next.archive[0].lastSeenAt, "2026-10-02");
 });
 test("health gates missing publications, incomplete coverage and stale prices", () => {
-  const research = { generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { quote: { asOf: now } } } };
+  const research = { generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { ...companyQuoteFixture("QS", now) } } };
   const monitor = { sources: { news: { id: "news", status: "ok", lastSuccessAt: now } } };
   assert.equal(researchHealth(research, monitor, Date.parse(now), { sources: [{ id: "news" }], companies: [{ ticker: "QS" }] }).ok, true);
   assert.equal(researchHealth({ ...research, generatedAt: "2026-09-01" }, monitor, Date.parse(now)).ok, false);
@@ -130,3 +130,4 @@ test("publication verification waits for the exact or newer public snapshot", as
   let clock = 0;
   await assert.rejects(verifyPublication(expected, async () => { clock += 250000; throw new Error("offline"); }, { clock: () => clock, sleep: async () => {} }), /did not reach/);
 });
+import { companyQuoteFixture } from "./helpers/company-quote.mjs";

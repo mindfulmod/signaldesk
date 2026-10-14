@@ -7,6 +7,22 @@
   const safeUrl = value => { try { const u = new URL(value); return u.protocol === "https:" && !u.username && !u.password && (!u.port || u.port === "443") ? u.href : ""; } catch { return ""; } };
   function ageHours(value, now = Date.now()) { const time = date(value); return time === null ? null : (Number(now) - time) / 3600000; }
   function freshness(value, now = Date.now(), hours = 36) { const age = ageHours(value, now); return age === null ? "missing" : age < -.1 ? "invalid" : age > hours ? "overdue" : "current"; }
+  function companyQuote(row, ticker, now = Date.now()) {
+    const q = row?.quote;
+    if (!q) return { state: "missing", usable: false, current: false, reason: "No saved quote. Check the original quote source." };
+    const validDate = value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z)?$/.test(value) && date(value) !== null && new Date(value).toISOString().slice(0, 10) === value.slice(0, 10);
+    let reason = "";
+    if (!ticker || row.ticker !== ticker) reason = "Company identity does not match this quote record.";
+    else if (!Number.isFinite(q.price) || q.price <= 0) reason = "The saved price is missing or invalid.";
+    else if (!/^[A-Z]{3}$/.test(q.currency || "")) reason = "The quote currency is not established.";
+    else if (typeof q.provider !== "string" || !q.provider.trim() || !safeUrl(q.url)) reason = "The quote has no inspectable source.";
+    else if (!validDate(q.asOf) || !["day", "time"].includes(q.precision) || (q.precision === "day") !== (q.asOf.length === 10)) reason = "The original quote date or precision is invalid.";
+    else if (!validDate(row.quoteCheckedAt) || freshness(row.quoteCheckedAt, now, Infinity) !== "current" || Date.parse(row.quoteCheckedAt) + 300000 < Date.parse(q.asOf)) reason = "The quote collection timestamp is missing or inconsistent.";
+    else if (freshness(q.asOf, now, 96) === "invalid") reason = "The quote is dated in the future.";
+    if (reason) return { state: "invalid", usable: false, current: false, reason: `${reason} Price withheld; inspect the original source.` };
+    const current = freshness(q.asOf, now, 96) === "current";
+    return { state: current ? "current" : "stale", usable: true, current, reason: current ? "Saved quote—not a live trading feed." : "Historical quote, more than 96 hours old. Check the original source before use." };
+  }
   // Transport health and evidence usefulness are separate. A recent HTTP success
   // cannot turn an undated item, permission pause or missing sample into traction.
   function sourceAudit(sources, monitor, now = Date.now()) {
@@ -132,5 +148,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, ageHours, freshness, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
+  return { safeUrl, ageHours, freshness, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
 });

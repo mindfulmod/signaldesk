@@ -133,7 +133,7 @@ test("even 28 successful checks cannot produce momentum from a clipped archive",
 test("discovery watchdog detects a lost lane even when total source coverage passes", () => {
   const sources = [hn, ...Array.from({ length: 6 }, (_, i) => ({ ...lab, id: `s${i}` }))];
   const states = state(sources); states[hn.id].status = "error";
-  const research = { generatedAt: now, coverage: { totalSources: sources.length }, companies: { QS: { quote: { asOf: now }, factsCheckedAt: now } } };
+  const research = { generatedAt: now, coverage: { totalSources: sources.length }, companies: { QS: { ...companyQuoteFixture("QS", now), factsCheckedAt: now } } };
   const health = researchHealth(research, { sources: states }, Date.parse(now), { sources, companies: [{ ticker: "QS" }] });
   assert.match(health.errors.join(" "), /community lane/); assert.equal(health.sourceCoverage, "6/7 active");
   states[hn.id].status = "ok"; states[hn.id].newestPublicationAt = "2026-09-01";
@@ -187,3 +187,4 @@ test("saved pattern and story pagination uses one shared item limit", () => {
   const two = views.discovery(research, "", ["topic", "story:one"], true, { limit: 2 });
   assert.equal((two.match(/data-discovery-item/g) || []).length, 2);
 });
+import { companyQuoteFixture } from "./helpers/company-quote.mjs";

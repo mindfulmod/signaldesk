@@ -7,6 +7,14 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+Permanent-company quote integrity: `research-model.js.companyQuote` is shared
+by the collector, company cards/profiles and research watchdog. Current coverage
+requires a usable positive price, record identity, currency, original date,
+precision, collection timestamp and inspectable source—not merely a recent
+timestamp. Invalid values are withheld; valid old quotes remain historical.
+No configured permanent-company adapter supplies separately dated capitalization
+evidence. Do not restore valuation from quote metadata or quote timestamps.
+
 October 14 source audit: `research-model.js.sourceAudit` separates recent
 collection success from missing/quiet content and deliberate pauses. The brief,
 Source health and scheduled research watchdog share this contract. Source health

@@ -1,5 +1,33 @@
 # Research intelligence work plan
 
+## October 14 permanent-company quote integrity
+
+Branch implementation, not deployed:
+
+- The collector, company cards/profiles and research watchdog now share
+  `research-model.js.companyQuote`. A recent timestamp alone is not coverage:
+  require matching record ticker, positive numeric price, explicit three-letter
+  currency, inspectable HTTPS source, valid original date/precision and a
+  consistent collection timestamp. Invalid prices are withheld with a reason
+  and source link; valid observations older than 96 hours remain historical.
+- Quote parsers reject impossible calendar dates and boolean prices. A valid
+  new response can replace an invalid retained quote rather than being blocked
+  by its malformed or future timestamp. Existing retry/cache cadence remains.
+- Removed the capitalization path that copied a quote timestamp onto an
+  undated provider market-cap field. Configured adapters do not provide an
+  independently dated capitalization observation, so valuation stays unknown.
+  Cached legacy valuation is cleared by the collector and rejected by health
+  checks; the UI never displays that unsupported figure.
+- Saved data passes the stricter audit: eight of eight permanent company
+  quotes usable/current. No generated snapshots were changed in this pass.
+  Live production quotes also pass, but the branch watchdog correctly reports
+  missing branch-only discovery feeds (MIT, NIST and Hacker News) on production.
+  That is a deployment/configuration gap, not proof those collectors failed.
+- Isolated browser fixtures covered missing price, mismatched identity and
+  historical price, including source recovery and legacy valuation suppression.
+  Verified 1440px light / 375px dark layouts, no horizontal overflow or console
+  errors, and all three stock-selection entry points on the normal app.
+
 ## October 14 personal research checks in the daily brief
 
 Branch implementation, not deployed:
