@@ -1,5 +1,46 @@
 # Research intelligence work plan
 
+## October 14 broader discovery: public procurement pilot
+
+Review-stage implementation only: not connected to the app, scheduled collection,
+published data or headline-momentum scores.
+
+- Added `scripts/pilot-procurement.mjs` and a bounded, fixture-tested adapter for
+  the [official USAspending public API](https://api.usaspending.gov/). The
+  [transaction contract](https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_transaction.md)
+  supports a keyword-free sample of federal scientific R&D contract actions
+  (NAICS prefix 5417). It does not cover all technology spending, private demand,
+  grants or technologies purchased under other classifications.
+- One live request returned 100 actions across 99 awards: 30 positive obligation
+  changes, 25 negative changes and 45 zero-dollar changes. The sample reached
+  its cap and the provider reported more results. These are sample composition,
+  not market growth, adoption or newly awarded customer counts. Several records
+  describe work on established programs; new action dates do not imply new tech.
+- Preserves award/modification identity, exact signed cents, original action
+  date, separate observation time and an unknown publication date. Conflicting
+  duplicate identities reject the sample. A failed refresh retains prior
+  evidence and its original successful-check time. One bounded request, no
+  pagination or retries, redirect refusal and response-size/time limits.
+- As the [federal spending guide](https://www.usaspending.gov/federal-spending-guide)
+  explains, obligations represent commitments, not payments. Negative changes
+  can reduce earlier commitments. Do not present these amounts as recipient
+  revenue, delivered products, repeat customers or consumer adoption.
+- Access decision: the official API explicitly provides public access, and the
+  pilot uses factual award metadata and a short description, not full reports
+  or recipient profiles. The API code's license is not treated as a blanket
+  license for every linked document. No account, paid access or terms acceptance.
+- Verification: all 405 tests pass on Node 20 and Node 24, including nine pilot
+  regressions for query scope, identity, dates, money, sampling limits, bounded
+  requests, malformed replies and preservation of prior evidence on failure.
+
+Before activation: resolve retention/reuse scope; add revision-aware historical
+storage and delayed-record reconciliation; choose a documented sampling protocol
+and daily freshness contract; wire source health and failure visibility; create
+a distinct **Public R&D spending** evidence lane. Never mix its counts or action
+dates into research-publication acceleration. Back-test coverage before making
+any trend comparisons. Keep consumer usage, deployments and repeat orders as
+separate evidence gaps requiring their own validated sources.
+
 ## October 14 coherent research refresh and recovery
 
 Branch implementation, not deployed:
