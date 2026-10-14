@@ -1,5 +1,30 @@
 # Research intelligence work plan
 
+## October 14 notebook recovery and storage safety
+
+Branch implementation, not deployed. Fixed a data-loss edge case where saving a
+valid investigation cleared the dirty-form flag even when local storage failed;
+closing the page could then discard session-only records without the app's exit
+warning.
+
+- Added a tested storage session that distinguishes form submission from a
+  verified write/read-back. Quota errors, denied getters, silent write failures,
+  malformed saved data and cross-tab changes stay explicit; existing storage is
+  not overwritten after an unresolved conflict or initial read failure.
+- Exit protection now covers both pending form edits and unpersisted committed
+  records, including imported backups and withdrawal changes. Browser unload
+  prompts are best-effort, not a recovery mechanism; the visible session-only
+  warning and export instruction remain necessary.
+- Export text states that the backup includes session-only records but excludes
+  unsaved form edits. Requesting a download or showing the copyable JSON does not
+  claim a completed backup or clear protection. No server-side storage or sync
+  is implied.
+- Verified in an isolated quota-failure preview with synthetic research only:
+  failed-persistence import remained accessible after a reload attempt; editor
+  labels stayed session-only; exported JSON contained the complete record.
+  Phone width 375px had no horizontal overflow. User notebook data and appearance
+  preferences were not used by the isolated preview.
+
 ## October 14 discovery history: actual daily collection, not cached replays
 
 Branch implementation, not deployed. The previous builder could treat a

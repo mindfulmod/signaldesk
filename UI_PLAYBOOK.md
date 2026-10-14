@@ -408,6 +408,13 @@ validation/backup model is `discovery-notebook.js`; escaped views are in
 `discovery-notebook-views.js`; `adoption.js` handles browser-local persistence and
 form state. No notebook edit changes generated data, reviewed claims or source
 configuration. Never relabel a manual notebook as an automatic adoption tracker.
+`createStorageSession` distinguishes a submitted form from durable storage.
+A save must be read back before it clears session-only protection. The exit
+warning covers both dirty form edits and committed records that could not be
+persisted, including imports and withdrawals. Requesting an export is not proof
+that a backup was saved and must not clear this warning. Corrupt/conflicting
+storage stays untouched; browser unload warnings are best-effort, so keep the
+visible export instruction. Do not label in-memory records as saved on disk.
 Keep targets, lower bounds, reported figures and withdrawn records distinguishable.
 Metric/unit/scope become immutable once a record exists; a separate metric series
 gets a new investigation ID. Source-link metadata is retained with the notebook.

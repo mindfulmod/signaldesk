@@ -93,3 +93,63 @@ test("stock-board column sizing cannot leak into research tables", () => {
   assert.doesNotMatch(layout, /^\s+(?:th|td):nth-child/m);
   assert.match(layout, /\.table-panel th:nth-child\(1\)/);
 });
+
+function storageFixture(initial = null) {
+  let raw = initial;
+  return { getItem: () => raw, setItem: (_key, value) => { raw = value; }, read: () => raw };
+}
+test("notebook persistence confirms a durable write before clearing the exit warning", () => {
+  const storage = storageFixture(), session = notebook.createStorageSession(() => storage, today);
+  assert.deepEqual(session.initialPlans, []); assert.equal(session.shouldWarnBeforeUnload(), false);
+  assert.equal(session.shouldWarnBeforeUnload(true), true);
+  assert.equal(session.save([plan()]), true); assert.equal(session.shouldWarnBeforeUnload(), false);
+  assert.deepEqual(notebook.createStorageSession(() => storage, today).initialPlans, [plan()]);
+});
+test("quota errors and silent write failures keep session-only saved work protected", () => {
+  for (const write of [() => { throw new Error("Quota exceeded"); }, () => {}]) {
+    const storage = storageFixture(), session = notebook.createStorageSession(() => storage, today);
+    storage.setItem = write;
+    assert.equal(session.save([plan()]), false);
+    assert.equal(session.hasUnpersistedChanges, true);
+    assert.equal(session.shouldWarnBeforeUnload(false), true, "saving a form must not disable exit protection");
+    assert.match(session.issue, /session-only/);
+    const exported = notebook.bundle([plan()]);
+    assert.deepEqual(notebook.importBundle(JSON.stringify(exported), [], today), [plan()]);
+    assert.equal(session.shouldWarnBeforeUnload(), true, "requesting a backup is not confirmation it was saved");
+  }
+});
+test("an unavailable storage getter stays usable in memory without crashing startup", () => {
+  const session = notebook.createStorageSession(() => { throw new Error("Access denied"); }, today);
+  assert.equal(session.shouldWarnBeforeUnload(), false, "no new work exists yet");
+  assert.deepEqual(session.initialPlans, []);
+  assert.equal(session.save([plan()]), false); assert.equal(session.shouldWarnBeforeUnload(), true);
+});
+test("corrupt stored notebooks are preserved and cannot be silently replaced by a new save", () => {
+  const storage = storageFixture("{broken"), session = notebook.createStorageSession(() => storage, today);
+  assert.match(session.issue, /left untouched/); assert.equal(session.save([plan()]), false);
+  assert.equal(storage.read(), "{broken"); assert.equal(session.shouldWarnBeforeUnload(), true);
+});
+test("another tab's changed or deleted notebook is not overwritten and local work is protected", () => {
+  for (const replacement of [null, JSON.stringify(notebook.bundle([{ ...plan(), title: "Other tab" }]))]) {
+    const storage = storageFixture(JSON.stringify(notebook.bundle([plan()])));
+    const session = notebook.createStorageSession(() => storage, today);
+    storage.setItem("ignored", replacement);
+    assert.equal(session.save([{ ...plan(), title: "My pending work" }]), false);
+    assert.equal(storage.read(), replacement); assert.match(session.issue, /Another tab/);
+    assert.equal(session.shouldWarnBeforeUnload(), true);
+  }
+});
+test("persistent notebook failure remains protected across subsequent saves and imports", () => {
+  const storage = storageFixture(), session = notebook.createStorageSession(() => storage, today);
+  const write = storage.setItem; storage.setItem = () => { throw new Error("Quota"); };
+  assert.equal(session.save([plan()]), false);
+  storage.setItem = write;
+  assert.equal(session.save([{ ...plan(), title: "Another in-memory edit" }]), false, "do not overwrite after an unresolved conflict or error");
+  assert.equal(session.shouldWarnBeforeUnload(), true); assert.equal(storage.read(), null);
+});
+test("browser exit protection includes committed session-only records, not just dirty forms", () => {
+  const source = readFileSync(new URL("../../adoption.js", import.meta.url), "utf8");
+  assert.match(source, /beforeunload[^\n]*notebookStorage\.shouldWarnBeforeUnload\(notebookDirty\)/);
+  assert.match(source, /includes saved records and session-only changes, but not unsaved form edits/);
+  assert.match(source, /notebookStorage\.issue \|\| "Record status saved on this browser/);
+});

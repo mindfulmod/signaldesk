@@ -81,6 +81,32 @@
     return [...all.values()];
   }
   const bundle = plans => ({ schemaVersion: 1, kind: "signaldesk-investigations", exportedAt: new Date().toISOString(), note: "Personal, manually entered research. Not published verification, automatic monitoring or investment advice.", plans });
+  function createStorageSession(getStorage, today = new Date().toISOString().slice(0, 10)) {
+    const key = "signaldesk-investigations-v1";
+    let last = null, plans = [], issue = "", volatile = false;
+    try { last = getStorage().getItem(key); if (last) plans = importBundle(last, [], today); }
+    catch { issue = "The saved notebook could not be loaded and has been left untouched. New investigations work for this session only; export them before leaving."; }
+    return {
+      initialPlans: plans,
+      get issue() { return issue; },
+      get hasUnpersistedChanges() { return volatile; },
+      shouldWarnBeforeUnload(pendingEdits = false) { return Boolean(pendingEdits || volatile); },
+      save(next) {
+        // Saving a form is not proof of durable storage. Keep this flag until an
+        // actual write is read back; merely requesting an export cannot clear it.
+        volatile = true;
+        if (issue) return false;
+        try {
+          const storage = getStorage();
+          if (storage.getItem(key) !== last) { issue = "Another tab changed this notebook. Its data has not been overwritten. Your changes are session-only; export them before reloading."; return false; }
+          const raw = JSON.stringify(bundle(next));
+          storage.setItem(key, raw);
+          if (storage.getItem(key) !== raw) throw new Error("Notebook write could not be verified");
+          last = raw; volatile = false; return true;
+        } catch { issue = "Notebook storage is unavailable or full. These changes are session-only. Export your backup before leaving."; return false; }
+      }
+    };
+  }
   const due = (p, today = new Date().toISOString().slice(0, 10)) => p.status === "watching" && day(p.reviewOn) && p.reviewOn <= today;
-  return { limits, validatePlan, validateObservation, seed, updatePlan, addObservation, importBundle, bundle, due };
+  return { limits, validatePlan, validateObservation, seed, updatePlan, addObservation, importBundle, bundle, createStorageSession, due };
 });
