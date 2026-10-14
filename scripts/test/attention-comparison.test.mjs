@@ -102,6 +102,7 @@ test("actual history UI withholds false percentage trends and explains sampled u
   const withheld = c.detailTrendMarkup({ ticker: "SXTC" });
   assert.match(withheld, /No comparable trend yet/); assert.doesNotMatch(withheld, /<svg|80%/);
   assert.match(withheld, /Saved observations/);
+  assert.match(withheld, /data-detail-section="observations"/, "open history disclosure participates in same-stock state preservation");
   c.fixture.snapshots = [prior(), current()];
   const valid = c.detailTrendMarkup({ ticker: "SXTC" });
   assert.match(valid, /\+100%/); assert.match(valid, /Same sources: ApeWisdom/);

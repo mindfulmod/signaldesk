@@ -332,7 +332,7 @@ function rankBadge(ticker, currentRank, prevRanks) {
 
 function detailTrendMarkup(item) {
   const hist = tickerHistory(item.ticker), observations = hist.observations || [], series = hist.series || [];
-  const saved = observations.length ? `<details class="desk-disclosure"><summary>Saved observations <span>Last ${observations.length} snapshots</span></summary><p class="data-caveat">All-source weighted totals after known exclusions, not post counts. Missing tickers are not zero; these totals may not be comparable.</p><ul>${observations.map(row => `<li>${escapeHtml(row.date || "Undated")}: ${row.mentions === null ? "Not captured" : `${shortFmt.format(row.mentions)} saved weight`}</li>`).join("")}</ul></details>` : "";
+  const saved = observations.length ? `<details class="desk-disclosure" data-detail-section="observations"><summary>Saved observations <span>Last ${observations.length} snapshots</span></summary><p class="data-caveat">All-source weighted totals after known exclusions, not post counts. Missing tickers are not zero; these totals may not be comparable.</p><ul>${observations.map(row => `<li>${escapeHtml(row.date || "Undated")}: ${row.mentions === null ? "Not captured" : `${shortFmt.format(row.mentions)} saved weight`}</li>`).join("")}</ul></details>` : "";
   if (series.length < 2) return `<div class="detail-section trend-section"><h3>Attention history</h3><p class="muted-note">No comparable trend yet. At least two successive snapshots need the same observed sources, healthy collection and valid company matching. Missing or excluded coverage is not zero.</p>${saved}</div>`;
   const mentions = series.map((h) => h.mentions);
   const first = mentions[0];
