@@ -12,12 +12,16 @@ on:
       - ".github/workflows/refresh-research.yml"
       - "research-config.js"
       - "research-model.js"
+      - "research-loader.js"
       - "research-reviews.json"
       - "technology-registry.js"
       - "technology-model.js"
       - "scripts/update-technology.mjs"
+      - "scripts/verify-publication.mjs"
+      - "scripts/check-research-health.mjs"
       - "scripts/lib/technology-monitor.mjs"
       - "scripts/lib/research-*.mjs"
+      - "scripts/lib/discovery-history.mjs"
       - "scripts/lib/company-intelligence.mjs"
 permissions:
   contents: write
@@ -61,4 +65,4 @@ jobs:
         run: node scripts/verify-publication.mjs research
       - name: Enforce source and price freshness targets
         if: ${{ !cancelled() }}
-        run: node scripts/check-research-health.mjs
+        run: node scripts/check-research-health.mjs --live

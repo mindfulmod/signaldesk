@@ -2,6 +2,10 @@
 (() => {
   const data = window.SIGNALDESK_TECHNOLOGY, model = window.SIGNALDESK_TECH_MODEL;
   const researchModel = window.SIGNALDESK_RESEARCH_MODEL, views = window.SIGNALDESK_RESEARCH_VIEWS, config = window.SIGNALDESK_RESEARCH_CONFIG;
+  const notebookModel = window.SIGNALDESK_DISCOVERY_NOTEBOOK, notebookViews = window.SIGNALDESK_NOTEBOOK_VIEWS;
+  const notebookStorage = notebookModel.createStorageSession(() => localStorage);
+  let notebookPlans = notebookStorage.initialPlans, notebookEditing = null, notebookFields = null, observationFields = null, notebookDirty = false;
+  let notebookReturn = null;
   const root = document.querySelector(".technology-panel"), content = document.getElementById("techContent");
   if (!data || !model || !root || !content) return;
   const byId = id => document.getElementById(id);
@@ -15,14 +19,16 @@
   let drafts = []; try { const saved = JSON.parse(localStorage.getItem(draftKey) || "[]"); if (Array.isArray(saved)) drafts = saved.filter(d => d && typeof d.candidateId === "string"); } catch { /* session drafts still work */ }
   let discoveryFollowed = readList(discoveryKey), research = null, researchStatus = "loading", selectedCompany = null, reviewingId = null, reviewFilter = "pending", queueLimit = 24;
   let trackerType = "batteries", trackerState = { compare: [], batteryStage: "all", country: "all", serviceStatus: "all" };
-  let discoverySavedOnly = false;
+  let discoverySavedOnly = false, discoveryMode = "patterns", discoveryLane = "all", discoveryLimit = 24;
   let view = "brief", selectedId = null, monitor = null, monitorStatus = "loading", showDismissed = false;
   const params = new URLSearchParams(location.search);
   if (data.themes.some(t => t.id === params.get("tech"))) selectedId = params.get("tech");
   if (["brief", "radar", "milestones", "inbox", "companies", "trackers", "discovery"].includes(params.get("techView"))) view = params.get("techView");
   if (config.companies.some(c => c.ticker === params.get("company"))) { selectedCompany = params.get("company"); view = "companies"; }
   if (params.get("tracker") === "satellite") trackerType = "satellite";
+  if (params.get("scan") === "open") discoveryMode = "open";
   let followedOnly = false, storageWorking = true;
+  let refreshFocusTarget = null;
   function save(key, values) { try { localStorage.setItem(key, JSON.stringify([...values])); } catch { storageWorking = false; } }
   function setUrl() {
     try {
@@ -31,6 +37,7 @@
       if (view !== "brief") url.searchParams.set("techView", view); else url.searchParams.delete("techView");
       if (selectedCompany) url.searchParams.set("company", selectedCompany); else url.searchParams.delete("company");
       if (view === "trackers") url.searchParams.set("tracker", trackerType); else url.searchParams.delete("tracker");
+      if (view === "discovery" && discoveryMode === "open" && !discoverySavedOnly) url.searchParams.set("scan", "open"); else url.searchParams.delete("scan");
       window.history.replaceState(null, "", url);
     } catch { /* optional deep links */ }
   }
@@ -75,78 +82,144 @@
       <button type="button" class="tech-button" data-export-tech="${esc(t.id)}">Export research JSON</button></article>`;
   }
   function renderInbox(themes) {
-    const ids = new Set(themes.map(t => t.id));
-    const sources = data.sources.filter(s => !s.themes.length || s.themes.some(id => ids.has(id)));
-    const healthLabels = { "paused": "Permission review", "not-checked": "Not checked", "unavailable": "Unavailable", "stale": "Check overdue", "no-matches": "No matching links", "current": "Readable" };
-    const intro = monitorStatus === "loading" ? "Loading saved source checks…" : monitorStatus === "error" ? "Saved source checks could not be loaded. This is not proof that sources are unchanged." : `Source collection ${dateTime(monitor?.generatedAt)}. Seven-day scheduling, calendar-day checks and retry opportunities every six hours. Reloading does not trigger collection.`;
+    // Health is a full-collection audit, independent of the document filters.
+    const sources = data.sources;
     return views.reviewQueue(themes, research, { drafts, reviewFilter, queueLimit, showDismissed, restrictThemes: followedOnly || byId("techSector").value !== "all" || byId("techStage").value !== "all", query: byId("techSearch").value, dismissed: [...dismissed] }) + `
       <label class="tech-check"><input type="checkbox" id="techShowDismissed" ${showDismissed ? "checked" : ""} /> Include locally dismissed changes</label>
-      <details class="intel-disclosure" id="researchSourceHealth"><summary>Source health · ${sources.length} configured sources</summary><p>${esc(intro)}</p><button type="button" class="tech-button" data-refresh-monitor ${monitorStatus === "loading" || researchStatus === "loading" ? "disabled" : ""}>Reload saved research</button><div class="tech-source-list">${sources.map(s => { const state = monitor?.sources?.[s.id], health = model.monitorState(s, state); return `<article class="tech-source"><div><h5>${link(s.url, s.name)}</h5><p class="tech-meta">${esc(s.tier)} · ${esc(s.expectedCadence)} · ${state?.matchedItems ?? "—"} matching documents</p><p class="tech-meta">Last success: ${dateTime(state?.lastSuccessAt)} · last attempt: ${dateTime(state?.lastAttemptAt)}</p>${s.accessNote || state?.accessNote ? `<p class="tech-warning">${esc(s.accessNote || state.accessNote)}</p>` : ""}${state?.error ? `<p class="tech-warning">${esc(state.error)} · ${state.failureStreak} failed check${state.failureStreak === 1 ? "" : "s"}. Retry eligible ${dateTime(state.nextAttemptAt)}.</p>` : ""}</div><span class="tech-health health-${health}">${healthLabels[health]}</span></article>`; }).join("")}</div></details>`;
+      ${views.sourceHealth(sources, monitor, { loading: monitorStatus === "loading" || researchStatus === "loading", failed: monitorStatus === "error" })}`;
   }
   function render() {
+    root.dataset.view = view;
     const themes = themeList(), selected = reviewedThemes().find(t => t.id === selectedId);
     // Compare/filter updates should not close the evidence the reader opened.
     const disclosureState = new Map([...content.querySelectorAll("details[data-disclosure]")].map(node => [node.dataset.disclosure, node.open]));
     const specialized = ["trackers", "discovery"].includes(view) || selectedCompany || selected || reviewingId;
     byId("techFilterDisclosure").hidden = Boolean(specialized);
-    byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || view === "trackers");
+    byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || (view === "discovery" && notebookEditing) || view === "trackers");
     byId("techScope").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
     byId("techSearch").closest("label").querySelector("span").textContent = view === "inbox" ? "Search documents, owners & titles" : view === "discovery" ? "Find a discovery lead" : "Find a technology";
     root.querySelectorAll("[data-tech-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.techView === view)));
     byId("techFollowedOnly").setAttribute("aria-pressed", String(followedOnly));
     const activeFilters = Number(byId("techSector").value !== "all") + Number(byId("techStage").value !== "all") + Number(followedOnly);
     byId("techFilterLabel").textContent = `Filter ${view === "discovery" ? "leads" : "technologies"}${(view !== "discovery" && activeFilters) || byId("techSearch").value ? " · active" : ""}`;
-    byId("techResultStatus").hidden = view === "brief" && !activeFilters && !byId("techSearch").value && !selected && !selectedCompany && !reviewingId;
+    byId("techResultStatus").hidden = ["brief", "discovery"].includes(view) && !activeFilters && !byId("techSearch").value && !selected && !selectedCompany && !reviewingId;
     byId("techResultStatus").textContent = reviewingId ? "Local evidence review · not published" : selectedCompany ? `${selectedCompany} · permanent company coverage` : selected ? `${selected.name} · research profile` : view === "discovery" ? "Exploratory leads · not verified adoption" : view === "trackers" ? "Program and service evidence · use the filters below" : `${themes.length} of ${data.themes.length} technologies${followedOnly ? " · following only" : ""}`;
     byId("techRegistryStatus").textContent = `${data.themes.length} themes · ${config.sources.length} sources · ${config.companies.length} permanent companies`;
     byId("adoptionFollowStatus").textContent = storageWorking ? `${followed.size} technologies followed · ${drafts.length} local review drafts. Browser-local saves; no push subscription.` : "Browser storage is unavailable. Changes work for this session only; export drafts before leaving.";
+    if (notebookStorage.hasUnpersistedChanges) byId("adoptionFollowStatus").textContent += " Notebook changes are session-only. Export a backup from Discover → Saved before leaving.";
     const candidate = research?.documents?.find(d => d.id === reviewingId);
     if (candidate) content.innerHTML = views.reviewEditor(candidate, data.themes, research.reviews, researchModel.correctionDraft(drafts.find(d => d.candidateId === reviewingId) || research.reviews.filter(r => r.candidateId === reviewingId).at(-1), research.reviews));
     else if (selectedCompany) content.innerHTML = views.companies(themes, research, selectedCompany);
     else if (selected) content.innerHTML = dossier(selected);
-    else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly);
+    else if (view === "discovery" && notebookEditing) content.innerHTML = notebookViews.editor({ ...notebookEditing, ...notebookFields }, notebookPlans.some(p => p.id === notebookEditing.id), { pendingEdits: notebookDirty });
+    else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly, { mode: discoveryMode, lane: discoveryLane, limit: discoveryLimit, monitor });
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
+    else if (view === "inbox") content.innerHTML = renderInbox(themes);
     else if (!themes.length) content.innerHTML = empty("Try a broader search, another stage, or turn off Following only. Your saved follows will not be deleted.");
     else if (view === "brief") content.innerHTML = views.brief(themes, research, monitor, [...followed], researchStatus);
     else if (view === "radar") content.innerHTML = `<div class="tech-view-head"><div><h3>The technology radar</h3><p>Compare editorial evidence stages, then open a theme for its sources. These are not forecasts.</p></div></div><div class="tech-radar-grid">${themes.map(card).join("")}</div>`;
     else if (view === "milestones") content.innerHTML = `<div class="tech-view-head"><div><h3>Milestones to watch</h3><p>Our review dates, company targets and undated evidence checks are intentionally separate. A passed target window means unverified—not automatically failed.</p></div></div><ol class="tech-timeline">${model.milestones(themes).map(milestoneRow).join("")}</ol>`;
     else if (view === "companies") content.innerHTML = views.companies(themes, research, null);
     else content.innerHTML = renderInbox(themes);
+    if (view === "brief" && !candidate && !selectedCompany && !selected) {
+      const checks = notebookViews.checkpoints(notebookPlans, { sessionOnly: notebookStorage.hasUnpersistedChanges });
+      const heading = content.querySelector(".intel-brief-lead");
+      if (heading) heading.insertAdjacentHTML("afterend", checks); else content.insertAdjacentHTML("afterbegin", checks);
+    }
+    if (view === "discovery" && !notebookEditing) {
+      if (discoverySavedOnly) content.querySelector(".intel-discovery-context")?.insertAdjacentHTML("afterend", notebookViews.shelf(notebookPlans));
+      for (const saved of content.querySelectorAll("article [data-follow-discovery]")) {
+        const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button intel-investigate";
+        action.dataset.notebookOpen = saved.dataset.followDiscovery; action.textContent = notebookPlans.some(p => p.id === saved.dataset.followDiscovery) ? "Open investigation →" : "Investigate →";
+        const article = saved.closest("article");
+        action.setAttribute("aria-label", `${action.textContent.replace(" →", "")}: ${article.querySelector("h4")?.textContent || "discovery lead"}`);
+        if (article.querySelector(".intel-scan-body")) article.querySelector(".intel-scan-body").append(action);
+        else article.insertBefore(action, article.querySelector("details"));
+      }
+    }
     for (const node of content.querySelectorAll("details[data-disclosure]")) {
       if (disclosureState.has(node.dataset.disclosure)) node.open = disclosureState.get(node.dataset.disclosure);
     }
+    if (view === "discovery" && notebookStorage.issue) { const warning = document.createElement("p"); warning.className = "tech-inbox-warning"; warning.setAttribute("role", "alert"); warning.textContent = notebookStorage.issue; content.prepend(warning); const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = "Personal investigation · session only · export before leaving"; }
+    if (view === "discovery" && notebookEditing && notebookReturn && !notebookReturn.savedOnly) content.querySelector("[data-notebook-back]").textContent = "← Back to discoveries";
+    if (view === "discovery" && notebookEditing && observationFields) for (const [name, value] of Object.entries(observationFields)) { const field = byId("notebookObservationForm")?.elements.namedItem(name); if (field) field.value = value; }
+    if (view === "discovery" && notebookEditing?.observations.length) {
+      const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button"; action.dataset.notebookSeries = ""; action.textContent = "Track a different metric →";
+      byId("notebookPlanForm")?.append(action);
+    }
+    updateSnapshotStatus();
   }
-  async function loadMonitor() {
-    monitorStatus = "loading"; if (view === "inbox" && !selectedId) render();
-    try {
+  function persistNotebook() {
+    notebookStorage.save(notebookPlans);
+  }
+  function replaceNotebook(plan) {
+    if (!notebookPlans.some(p => p.id === plan.id) && notebookPlans.length >= notebookModel.limits.plans) throw new Error(`At most ${notebookModel.limits.plans} investigations are supported. Export before starting a separate notebook.`);
+    notebookPlans = [...notebookPlans.filter(p => p.id !== plan.id), plan]; notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; persistNotebook();
+  }
+  function notebookNotice(message) { const notice = byId("notebookNotice"); if (notice) { notice.textContent = message; notice.tabIndex = -1; notice.focus({ preventScroll: true }); } }
+  function closeNotebookEditor() {
+    if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return false;
+    notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; notebookReturn = null; return true;
+  }
+  function exportNotebook() {
+    const bundle = notebookModel.bundle(notebookPlans); download("signaldesk-investigations.json", bundle);
+    byId("notebookExportFallback")?.remove();
+    const details = document.createElement("details"), summary = document.createElement("summary"), field = document.createElement("textarea");
+    details.id = "notebookExportFallback"; details.className = "intel-disclosure intel-export"; details.open = true;
+    summary.textContent = "Backup requested · includes saved records and session-only changes, but not unsaved form edits. Verify the download or copy this JSON before leaving.";
+    field.readOnly = true; field.rows = 6; field.setAttribute("aria-label", "Investigation backup JSON"); field.value = JSON.stringify(bundle, null, 2);
+    details.append(summary, field); content.prepend(details); field.focus(); field.select();
+  }
+  root.addEventListener("input", event => {
+    const form = event.target.form;
+    if (form?.id === "notebookPlanForm") { notebookFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
+    if (form?.id === "notebookObservationForm") { observationFields = Object.fromEntries(new FormData(form)); notebookDirty = true; }
+    if (notebookDirty && form?.id?.startsWith("notebook")) { const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = `Personal investigation · unsaved changes${notebookStorage.issue ? " · session only" : ""}`; }
+  });
+  window.addEventListener("beforeunload", event => { if (notebookStorage.shouldWarnBeforeUnload(notebookDirty)) { event.preventDefault(); event.returnValue = ""; } });
+  function updateSnapshotStatus() {
+    const state = researchLoader.state, banner = byId("techRefreshStatus"), retained = Boolean(state.research);
+    const stamp = retained ? dateTime(state.research.generatedAt) : "";
+    const localFile = location.protocol === "file:", instruction = localFile ? "Local file snapshot. Reopen this page to load changed files; collection is separate." : "Reload retrieves published files, not live collection.";
+    const stale = retained && (researchModel.freshness(state.research.generatedAt) !== "current" || researchModel.freshness(state.monitor.generatedAt) !== "current");
+    banner.dataset.state = state.status;
+    byId("techRefreshMessage").textContent = state.status === "loading"
+      ? `Loading published research…${retained ? ` Keeping the ${stamp} snapshot visible.` : " Reviewed profiles and personal notes remain available."}`
+      : state.status === "error"
+        ? `${state.error} ${retained ? `Showing the retained ${stamp} snapshot; it was not refreshed.` : "No automatic research snapshot is loaded; empty results do not mean no activity."} ${instruction}`
+        : retained ? `${stale ? "Historical publication" : "Saved publication"} · ${stamp}. ${instruction}${reviewingId || notebookDirty ? " Your open editor is unchanged." : ""}`
+          : "Loading published research…";
+    byId("techRefreshMessage").classList.toggle("tech-warning", state.status === "error" || stale);
+    for (const button of root.querySelectorAll("[data-refresh-monitor]")) {
+      button.disabled = state.status === "loading";
+      button.textContent = state.status === "loading" ? "Loading…" : localFile ? "Recheck local snapshot" : state.status === "error" ? "Retry loading research" : "Reload saved research";
+    }
+  }
+  const researchLoader = window.SIGNALDESK_RESEARCH_LOADER.create({
+    read: async name => {
       if (location.protocol === "file:") {
-        if (!window.SIGNALDESK_TECH_MONITOR) throw new Error("Missing file bundle");
-        monitor = window.SIGNALDESK_TECH_MONITOR;
-      } else {
-        const response = await fetch(`data/technology-monitor.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
-        if (!response.ok) throw new Error("Saved checks unavailable");
-        const candidate = await response.json();
-        if (candidate.schemaVersion !== 1 || !Array.isArray(candidate.events) || !candidate.sources) throw new Error("Invalid monitor payload");
-        monitor = candidate;
+        const candidate = name === "research" ? window.SIGNALDESK_RESEARCH : window.SIGNALDESK_TECH_MONITOR;
+        if (!candidate) throw new Error("Missing file bundle");
+        return candidate;
       }
-      monitorStatus = "ready";
-    } catch { monitorStatus = "error"; }
-    if (!reviewingId) render();
-  }
-  async function loadResearch() {
-    researchStatus = "loading";
-    try {
-      let candidate = window.SIGNALDESK_RESEARCH;
-      if (location.protocol !== "file:") {
-        const response = await fetch(`data/research.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
-        if (!response.ok) throw new Error("Saved research unavailable"); candidate = await response.json();
-      }
-      if (candidate?.schemaVersion !== 1 || !Array.isArray(candidate.documents) || !Array.isArray(candidate.reviews) || !candidate.companies) throw new Error("Invalid research payload");
-      research = candidate; researchStatus = "ready";
-      drafts = researchModel.reconcileDrafts(drafts, research.reviews); save(draftKey, drafts);
-    } catch { researchStatus = "error"; }
-    if (!reviewingId) render();
-  }
+      const response = await fetch(`data/${name}.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("Saved publication unavailable");
+      return response.json();
+    },
+    onChange: state => {
+      researchStatus = monitorStatus = state.status;
+      research = state.research; monitor = state.monitor;
+      if (state.status === "ready") { drafts = researchModel.reconcileDrafts(drafts, research.reviews); save(draftKey, drafts); }
+      // Loading state updates stay outside the content, so typing and focus survive.
+      if (state.status === "loading") refreshFocusTarget = document.activeElement?.hasAttribute("data-refresh-monitor") ? { area: content.contains(document.activeElement) ? "content" : "banner", view } : null;
+      const restoreReload = state.status !== "loading" && refreshFocusTarget?.view === view && (document.activeElement === document.body || document.activeElement?.hasAttribute("data-refresh-monitor"));
+      if (state.status !== "loading" && !reviewingId && !notebookDirty) {
+        render();
+      } else updateSnapshotStatus();
+      if (restoreReload) (refreshFocusTarget.area === "content" ? content : byId("techRefreshStatus")).querySelector("[data-refresh-monitor]")?.focus({ preventScroll: true });
+      if (state.status !== "loading") refreshFocusTarget = null;
+    }
+  });
   function download(name, value) {
     const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }));
     const a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -169,6 +242,7 @@
     const target = event.target;
     if (target.id === "techShowDismissed") showDismissed = target.checked;
     else if (target.id === "reviewFilter") { reviewFilter = target.value; queueLimit = 24; }
+    else if (target.id === "discoveryLane") { discoveryLane = target.value; discoveryLimit = 24; }
     else if (target.id === "batteryStage") trackerState.batteryStage = target.value;
     else if (target.id === "rolloutCountry") trackerState.country = target.value;
     else if (target.id === "rolloutStatus") trackerState.serviceStatus = target.value;
@@ -186,6 +260,24 @@
     if (focusId) byId(focusId)?.focus(); else if (compareId) root.querySelector(`[data-compare="${CSS.escape(compareId)}"]`)?.focus();
   });
   root.addEventListener("submit", event => {
+    if (["notebookPlanForm", "notebookObservationForm", "notebookImportForm"].includes(event.target.id)) {
+      event.preventDefault(); const fields = Object.fromEntries(new FormData(event.target)), now = new Date().toISOString();
+      const errorId = event.target.id === "notebookPlanForm" ? "notebookPlanErrors" : event.target.id === "notebookImportForm" ? "notebookImportErrors" : "notebookObservationErrors";
+      try {
+        if (event.target.id === "notebookImportForm") { notebookPlans = notebookModel.importBundle(fields.backup, notebookPlans); persistNotebook(); render(); byId("adoptionFollowStatus").textContent = notebookStorage.issue || "Investigation backup imported. No public evidence was changed."; }
+        else {
+          const plan = notebookPlans.find(p => p.id === notebookEditing.id) || notebookEditing;
+          if (event.target.id === "notebookPlanForm") { const pending = observationFields; replaceNotebook(notebookModel.updatePlan(plan, fields, now)); observationFields = pending; notebookDirty = Boolean(pending); }
+          else {
+            // Never discard an unsaved plan edit while saving a measurement.
+            if (notebookFields) throw new Error("Save the investigation changes before adding an observation");
+            replaceNotebook(notebookModel.addObservation(plan, { ...fields, value: fields.value.trim() === "" ? null : Number(fields.value), id: `obs-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`, recordedAt: now, withdrawn: false }, now));
+          }
+          render(); notebookNotice(notebookStorage.issue || "Saved on this browser. No public evidence or source collection was changed.");
+        }
+      } catch (error) { const target = byId(errorId); target.textContent = error.message; target.tabIndex = -1; target.focus(); }
+      return;
+    }
     if (event.target.id !== "evidenceReviewForm") return;
     event.preventDefault();
     const document = research?.documents.find(d => d.id === reviewingId); if (!document) return;
@@ -201,30 +293,64 @@
   });
   root.addEventListener("click", event => {
     const button = event.target.closest("button"); if (!button) return;
+    if (button.dataset.notebookOpen) {
+      // Returning from the brief to the same investigation resumes pending edits.
+      if (notebookEditing?.id === button.dataset.notebookOpen) { view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); if (notebookFields) byId("notebookPlanForm").closest("details").open = true; if (observationFields) byId("notebookObservationForm").closest("details").open = true; byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return; }
+      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
+      const plan = notebookPlans.find(p => p.id === button.dataset.notebookOpen) || notebookModel.seed(button.dataset.notebookOpen, research);
+      if (!plan) { byId("adoptionFollowStatus").textContent = "The original source record is no longer available. Open a retained source to start an investigation."; return; }
+      notebookReturn = view === "discovery" && !notebookEditing ? { mode: discoveryMode, savedOnly: discoverySavedOnly, lane: discoveryLane, limit: discoveryLimit, query: byId("techSearch").value, id: button.dataset.notebookOpen } : null;
+      notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return;
+    }
+    if (button.hasAttribute("data-notebook-shelf")) { if (!closeNotebookEditor()) return; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoverySavedOnly = true; discoveryLane = "all"; byId("techSearch").value = ""; setUrl(); render(); const title = byId("notebookShelfTitle"); title?.setAttribute("tabindex", "-1"); title?.focus(); return; }
+    if (button.hasAttribute("data-notebook-back")) {
+      const origin = notebookReturn;
+      if (!closeNotebookEditor()) return;
+      if (origin) { discoveryMode = origin.mode; discoverySavedOnly = origin.savedOnly; discoveryLane = origin.lane; discoveryLimit = origin.limit; byId("techSearch").value = origin.query; }
+      else discoverySavedOnly = true;
+      setUrl(); render();
+      (origin && root.querySelector(`[data-notebook-open="${CSS.escape(origin.id)}"]`) || root.querySelector("[data-saved-discovery]"))?.focus();
+      return;
+    }
+    if (button.hasAttribute("data-notebook-export")) { exportNotebook(); return; }
+    if (button.hasAttribute("data-notebook-series")) {
+      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
+      const now = new Date().toISOString(); notebookEditing = { ...notebookEditing, id: `investigation-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, metric: "", unit: "", scope: "", observations: [], createdAt: now, updatedAt: now }; notebookFields = null; observationFields = null; notebookDirty = false; render(); const form = byId("notebookPlanForm"); form.closest("details").open = true; form.elements.metric.focus(); return;
+    }
+    if (button.dataset.notebookWithdraw) {
+      if (notebookDirty) { notebookNotice("Save your pending changes before changing an evidence record."); return; }
+      const plan = notebookPlans.find(p => p.id === notebookEditing?.id);
+      if (plan) { replaceNotebook({ ...plan, updatedAt: new Date().toISOString(), observations: plan.observations.map(o => o.id === button.dataset.notebookWithdraw ? { ...o, withdrawn: !o.withdrawn } : o) }); render(); notebookNotice(notebookStorage.issue || "Record status saved on this browser. The original observation is preserved."); }
+      return;
+    }
     if (button.dataset.follow) {
       const id = button.dataset.follow;
       if (followed.has(id)) followed.delete(id); else followed.add(id);
       save(followKey, followed); render();
       root.querySelector(`[data-follow="${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
     } else if (button.id === "techFollowedOnly") { followedOnly = !followedOnly; selectedId = null; setUrl(); render(); }
-    else if (button.hasAttribute("data-show-health")) { view = "inbox"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); const health = byId("researchSourceHealth"); health.open = true; health.scrollIntoView({ block: "start" }); health.querySelector("summary").focus(); }
+    else if (button.hasAttribute("data-show-health")) { view = "inbox"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); const health = byId("researchSourceHealth"); if (health) { health.open = true; health.scrollIntoView({ block: "start" }); health.querySelector("summary").focus(); } }
+    else if (button.hasAttribute("data-open-discovery-scan")) { if (!closeNotebookEditor()) return; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoveryMode = "open"; discoverySavedOnly = false; discoveryLane = "all"; discoveryLimit = 24; byId("techSearch").value = ""; setUrl(); render(); content.scrollIntoView({ block: "start" }); content.querySelector("h3")?.setAttribute("tabindex", "-1"); content.querySelector("h3")?.focus(); }
     else if (button.dataset.techView) { view = button.dataset.techView; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); }
     else if (button.dataset.openTech) { selectedId = button.dataset.openTech; selectedCompany = null; reviewingId = null; setUrl(); render(); focusProfile(); }
     else if (button.dataset.openCompany) { selectedCompany = button.dataset.openCompany; selectedId = null; reviewingId = null; view = "companies"; setUrl(); render(); byId("companyProfileTitle")?.focus({ preventScroll: true }); content.scrollIntoView({ block: "start" }); }
     else if (button.hasAttribute("data-company-back")) { selectedCompany = null; setUrl(); render(); }
     else if (button.dataset.tracker) { trackerType = button.dataset.tracker; selectedId = null; selectedCompany = null; reviewingId = null; view = "trackers"; setUrl(); render(); }
     else if (button.hasAttribute("data-clear-comparison")) { trackerState.compare = []; render(); }
-    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; render(); root.querySelector("[data-saved-discovery]")?.focus(); }
+    else if (button.dataset.discoveryMode) { discoveryMode = button.dataset.discoveryMode; discoverySavedOnly = false; discoveryLimit = 24; setUrl(); render(); root.querySelector(`[data-discovery-mode="${discoveryMode}"]`)?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; discoveryLimit = 24; setUrl(); render(); root.querySelector("[data-saved-discovery]")?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-clear-discovery")) { byId("techSearch").value = ""; discoveryLane = "all"; discoveryLimit = 24; render(); byId("discoveryLane")?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-more-discovery")) { const previousLimit = discoveryLimit; discoveryLimit += 24; render(); root.querySelectorAll("[data-discovery-item]")[previousLimit]?.focus(); }
     else if (button.dataset.review) { reviewingId = button.dataset.review; view = "inbox"; selectedId = null; selectedCompany = null; setUrl(); render(); content.scrollIntoView({ block: "start" }); root.querySelector('[name="reviewer"]')?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-cancel-review")) { reviewingId = null; render(); }
     else if (button.dataset.discardReview) { drafts = drafts.filter(d => d.candidateId !== button.dataset.discardReview); save(draftKey, drafts); reviewingId = null; render(); }
     else if (button.hasAttribute("data-more-reviews")) { queueLimit += 24; render(); }
     else if (button.hasAttribute("data-export-reviews")) exportReviews();
-    else if (button.dataset.followDiscovery) { const id = button.dataset.followDiscovery; discoveryFollowed = discoveryFollowed.includes(id) ? discoveryFollowed.filter(v => v !== id) : [...discoveryFollowed, id]; save(discoveryKey, discoveryFollowed); render(); root.querySelector(`[data-follow-discovery="${id}"]`)?.focus({ preventScroll: true }); }
+    else if (button.dataset.followDiscovery) { const id = button.dataset.followDiscovery; discoveryFollowed = discoveryFollowed.includes(id) ? discoveryFollowed.filter(v => v !== id) : [...discoveryFollowed, id]; save(discoveryKey, discoveryFollowed); render(); (root.querySelector(`[data-follow-discovery="${CSS.escape(id)}"]`) || root.querySelector("[data-saved-discovery]"))?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-back-tech")) { const id = selectedId; selectedId = null; setUrl(); render(); root.querySelector(`[data-open-tech="${CSS.escape(id)}"]`)?.focus(); }
     else if (button.hasAttribute("data-clear-tech")) { byId("techSearch").value = ""; byId("techSector").value = "all"; byId("techStage").value = "all"; followedOnly = false; selectedId = null; setUrl(); render(); byId("techSearch").focus(); }
     else if (button.dataset.stock) window.SIGNALDESK_FIND_STOCK?.(button.dataset.stock);
-    else if (button.hasAttribute("data-refresh-monitor")) { loadMonitor(); loadResearch(); }
+    else if (button.hasAttribute("data-refresh-monitor")) researchLoader.load();
     else if (button.dataset.dismiss) { const id = button.dataset.dismiss; if (dismissed.has(id)) dismissed.delete(id); else dismissed.add(id); save(dismissedKey, dismissed); render(); byId("techShowDismissed")?.focus(); }
     else if (button.dataset.exportTech) {
       const t = reviewedThemes().find(t => t.id === button.dataset.exportTech);
@@ -232,5 +358,5 @@
       const url = URL.createObjectURL(blob), a = document.createElement("a"); a.href = url; a.download = `signaldesk-${t.id}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
   });
-  render(); loadMonitor(); loadResearch();
+  render(); researchLoader.load();
 })();

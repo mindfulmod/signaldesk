@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { fetchCommunity } from "./research-community.mjs";
 
 const hash = value => createHash("sha256").update(value).digest("hex");
 const EXTRACTOR_VERSION = 4;
@@ -28,7 +29,7 @@ export function extractFeed(xml, source) {
     usableEntries++;
     if (!relevant(`${title} ${excerpt}`, source)) continue;
     const publishedAt = timestamp(textOnly(xmlText(block, "pubDate") || xmlText(block, "published") || xmlText(block, "dc:date") || xmlText(block, "updated")));
-    items.set(url, { url, title, excerpt, publishedAt });
+    items.set(url, { url, title, excerpt: source.metadataOnly ? "" : excerpt, publishedAt });
   }
   if (!usableEntries) throw new Error("Feed has no safe article URLs; collection contract needs review");
   return inventory([...items.values()].slice(0, 100), source.name, { extractedEntries: usableEntries });
@@ -125,11 +126,12 @@ export function updateSource(source, previous, result, now) {
   items.forEach(item => seen.add(item.url));
   return { state: { id: source.id, sourceUrl: source.url, extractorVersion: EXTRACTOR_VERSION, status: "ok", lastAttemptAt: now, lastSuccessAt: now, baselineAt: base.baselineAt || now,
     lastChangedAt: changed ? now : base.lastChangedAt || null, nextAttemptAt: null, failureStreak: 0, error: null, fingerprint, items,
-    seenLinks: [...seen].slice(-3000), matchedItems: items.length, extractedEntries: result.extractedEntries ?? items.length, newestPublicationAt: items.map(i => i.publishedAt).filter(Boolean).sort().at(-1) || null, excerpt: result.excerpt || null,
+    seenLinks: [...seen].slice(-3000), matchedItems: items.length, datedItems: items.filter(i => i.publishedAt).length, extractedEntries: result.extractedEntries ?? items.length, newestPublicationAt: items.map(i => i.publishedAt).filter(Boolean).sort().at(-1) || null, excerpt: result.excerpt || null,
     publishedAt: result.publishedAt || null, announcementAt: result.announcementAt || null, researchUrl: result.researchUrl || null, researchPublishedAt: result.researchPublishedAt || null,
     title, etag: result.etag || null, lastModified: result.lastModified || null }, events };
 }
 export async function fetchSource(source, previous, { fetchImpl = fetch, timeoutMs = 15000, maxBytes = 1500000 } = {}) {
+  if (source.format === "hn") return fetchCommunity(source, { fetchImpl, timeoutMs });
   const signal = AbortSignal.timeout(timeoutMs);
   const headers = { "User-Agent": source.format === "sec" ? "SignalDesk/2.0 (m.aali9@gmail.com)" : "SignalDesk/2.0 (+https://mindfulmod.github.io/signaldesk/; m.aali9@gmail.com)", Accept: source.format === "sec" ? "application/json" : source.format === "rss" ? "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.1" : "text/html,application/xhtml+xml" };
   if (previous?.fingerprint && previous.etag) headers["If-None-Match"] = previous.etag;

@@ -7,6 +7,103 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+Discovery investigation entry: every rendered pattern/story now offers a direct
+Investigate action, including unsaved leads. `adoption.js` keeps an in-memory
+return context (mode, filters, query, result limit and originating lead ID).
+Back restores that list and focuses its action. Opening a plan does not save it
+or alter the shortlist. Preserve the existing dirty-editor confirmation and
+session-only notebook protection. The compact discovery header uses scoped
+`data-view="discovery"` styles; its how-to guide remains in a native disclosure.
+
+Research refresh: `research-loader.js` validates and commits the research/monitor
+pair together. `research.sourceCheckedAt` must match `monitor.generatedAt`;
+company-only assembly may make `research.generatedAt` newer. Never substitute
+half a failed download or an older CDN response into an existing snapshot.
+Concurrent reloads share one operation. `#techRefreshStatus` stays outside
+`#techContent` so progress/error updates do not destroy active fields or focus.
+Keep dirty notebooks and evidence-review editors untouched when loading ends.
+The HTTP action retrieves published files, not live collection; file mode only
+rechecks loaded bundles and explains that changed files require reopening.
+
+Permanent-company quote integrity: `research-model.js.companyQuote` is shared
+by the collector, company cards/profiles and research watchdog. Current coverage
+requires a usable positive price, record identity, currency, original date,
+precision, collection timestamp and inspectable source—not merely a recent
+timestamp. Invalid values are withheld; valid old quotes remain historical.
+No configured permanent-company adapter supplies separately dated capitalization
+evidence. Do not restore valuation from quote metadata or quote timestamps.
+
+October 14 source audit: `research-model.js.sourceAudit` separates recent
+collection success from missing/quiet content and deliberate pauses. The brief,
+Source health and scheduled research watchdog share this contract. Source health
+always covers the configured universe, independently of the review queue's theme
+filters. `research-views.js.sourceHealth` renders exception-first rows, with
+readable and paused groups collapsed. Preserve `data-disclosure` keys across
+rerenders. Irregular filings do not need daily publications; undated product
+pages are page-change checks. A readable source with no dated matching content
+is not proof of adoption. Do not merge these dimensions into one green score.
+
+October 14 cluster evidence follow-up: `clusters.js` accepts integrity version 3
+only. Co-mention history preserves original headline/source/issuer observations
+and rechecks identity every run. Different headlines at the same URL cannot
+form a pair; a URL contributes at most once per pair. Version 2 pair-only records
+remain in `legacyDocuments` for audit, not graph weights. Cards show document
+counts, dated original links in a native disclosure and a concrete next check.
+One multi-company article is a single-document lead, not repeated attention;
+several links are not necessarily independent reporting or adoption evidence.
+Active proof-quarter leaders recalculate neighbors from the checked graph; the
+hot-monitor protocol is version 3. Never carry old neighbor lists forward.
+The graph deliberately disables bare-symbol matching: TV, SNES and forum SMG
+were real false positives. Require a distinctive company name, cashtag or
+exchange-qualified symbol. This reduces recall and is not a complete market map.
+
+October 14 attention-comparison follow-up: new market signals carry
+`attentionMetricsVersion: 1` and `attentionObservedSources`. A filled source
+catalog with zeros is not proof that a source observed this ticker. Comparisons
+require explicit source observation, valid counts, healthy source collection,
+company-match exclusions on both sides, matching sample counts/spacing, and
+ordered non-overlapping saved windows. `attentionComparison` records the dates.
+Change the protocol version when collection/weight definitions cease to match;
+never retroactively stamp legacy history as verified. Percentage change from a
+zero baseline stays unknown; an explicitly observed current zero is valid.
+
+`attentionHistory` selects only the latest contiguous comparable source series
+within 14 saved snapshots, names the common sources, and breaks on missing
+tickers, failed coverage or long gaps. The disclosure preserves dated totals and
+missing records without drawing a percentage trend through them. These are
+sampled weights, not unique posts or continuous daily coverage; source windows
+may overlap. The Attention map's Developing attention group contains early and
+building stages, with each row showing its actual stage. Do not label the whole
+mixed group Early ignition or call weighted source totals post/article counts.
+
+October 13 capitalization follow-up: `data-quality.js.capitalization` is the
+shared gate for company size. Legacy SEC shares × price estimates remain in raw
+history, but are excluded from filters, displayed values, micro-cap penalties
+and CSV numeric fields. A usable `marketCapEvidence` needs version 1,
+`method: provider-reported`, exact ticker, EQUITY instrument type, positive
+numeric value, USD currency, provider, credential-free HTTPS source URL, and
+separate capitalization `asOf` and `collectedAt` timestamps. Quote time is not a
+capitalization timestamp. The 96-hour freshness limit tolerates long weekends;
+it does not mean live data. Current quote adapters provide no such observation.
+Filters use explicit $500M bands, not conventional large/small-cap labels, and
+offer Unknown plus a coverage count and specific recovery state. Unknown size
+is a coverage warning, not a micro-cap classification or a score penalty.
+The health watchdog rejects published caps or tiers without matching evidence.
+
+October 13 headline identity: load `company-identity.js` before `data-quality.js`.
+Collection and browser use the same lexical identity gate. Quarantined news
+stays under Source evidence with its original date/link, but must not be a
+headline/catalyst or contribute its affected source total to the score. Do not
+invent per-story subtraction from a truncated saved list. Multi-day aggregation
+must preserve exclusions. `enhancements.js` reads the HTTP `snapshot` before
+the file-only global; its global news feed must not use `filteredSignals()`.
+
+October 13 market-coverage follow-up: `data-quality.js.marketCoverage` is shared
+by the Desk summary and `scripts/check-market-health.mjs`. Collected quotes,
+carried-forward prices and complete price/volume comparisons are different
+counts. Do not relabel all three as recent market data. Retained quotes keep
+their original timestamps and never count as a successful current collection.
+
 October 9, 2026 Desk workspace pass: the desktop list and detail pane now share
 a bounded height instead of leaving a page-length empty column beneath a short
 detail pane. `layout-fix.js` owns the desktop scroll boundaries; table headings
@@ -315,6 +412,48 @@ Rules for future changes:
   reason was that no covered name moved enough to qualify.
 
 ## Copy & tone rules (these are product identity — do not drift)
+
+October 10, 2026 · Discover refinement: retain the existing two palettes and
+typography. A compact Notice → Corroborate → Validate guide separates discovery
+from adoption. Patterns and the keyword-free Open scan serve different tasks;
+neither is a ranked list of future winners. Show source counts, a concrete next
+check and an inspectable original, with methods and source contracts in a native
+disclosure. Include signal-type filtering, saved-lead recovery and bounded
+pagination. Research and community attention must stay distinguishable, and the
+snapshot's collection date must not replace a story's publication/submission date.
+
+October 13 follow-up: Open scan stories can be saved directly to the same local
+shortlist as patterns. `story:` IDs refer to retained document versions, not a
+verified trend or notification subscription. Saved stories remain accessible
+after leaving the 14-day scan, until their source record leaves the bounded
+archive. Preserve filtering, shared pagination, missing-record recovery and
+focus return when the last saved item is removed.
+
+The personal investigation notebook stays inside Discover → Saved. Its pure
+validation/backup model is `discovery-notebook.js`; escaped views are in
+`discovery-notebook-views.js`; `adoption.js` handles browser-local persistence and
+form state. No notebook edit changes generated data, reviewed claims or source
+configuration. Never relabel a manual notebook as an automatic adoption tracker.
+The brief's personal checklist is owned by `discovery-notebook.js.checkpoints`
+and `discovery-notebook-views.js.checkpoints`. Show at most three active checks,
+earliest review dates first, independently of theme filters. Dates are manual
+UTC checkpoints—not notifications or collected evidence. With no notebook, use
+the compact broad-discovery action, not an empty panel. Resume a pending editor
+without discarding its fields, reopen the pending form and label it unsaved.
+`createStorageSession` distinguishes a submitted form from durable storage.
+A save must be read back before it clears session-only protection. The exit
+warning covers both dirty form edits and committed records that could not be
+persisted, including imports and withdrawals. Requesting an export is not proof
+that a backup was saved and must not clear this warning. Corrupt/conflicting
+storage stays untouched; browser unload warnings are best-effort, so keep the
+visible export instruction. Do not label in-memory records as saved on disk.
+Keep targets, lower bounds, reported figures and withdrawn records distinguishable.
+Metric/unit/scope become immutable once a record exists; a separate metric series
+gets a new investigation ID. Source-link metadata is retained with the notebook.
+Backups reject conflicting versions atomically, and storage writes detect another
+tab's changes before overwriting. Preserve unsaved form values across rerenders.
+Stock-table column rules in `layout-fix.js` must remain scoped to `.table-panel`;
+unscoped `th/td` widths collapse research source columns at desktop sizes.
 
 The technology brief/trackers use `research-views.js` for escaped HTML,
 `research-model.js` for evidence rules, `adoption.js` for local state/navigation,

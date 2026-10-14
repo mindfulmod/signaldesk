@@ -10,6 +10,7 @@ const css = readFileSync(new URL("../../desk-cleanup.css", import.meta.url), "ut
 const layout = readFileSync(new URL("../../layout-fix.js", import.meta.url), "utf8");
 
 function controller(document = {}) {
+  document = { getElementById: () => null, ...document };
   const context = vm.createContext({ document, window: { SIGNALDESK_QUALITY: quality }, Intl, Date, URLSearchParams, console });
   vm.runInContext(source.replace(/\ninit\(\);\s*$/, ""), context);
   vm.runInContext("tickerHistory = () => [];", context);
@@ -20,6 +21,18 @@ const signal = (extra = {}) => ({ ticker: "PEP", name: "Pepsico Inc", lastPrice:
   quoteAsOf: new Date().toISOString(), quoteSource: "Public chart", marketMetricsVersion: 2,
   priceMove: 1.5, relativeVolume: 2, signalScore: 50, momentum: 20, sentiment: null,
   sources: { "Price/Volume": 1, StockTwits: 8 }, latest: [], ...extra });
+
+test("Desk coverage distinguishes collected quotes, retained quotes and usable comparisons", () => {
+  const coverage = { textContent: "" };
+  const c = controller({ getElementById: id => id === "coverageStatus" ? coverage : null });
+  c.fixture = { generatedAt: new Date().toISOString(), signals: [signal(),
+    signal({ ticker: "OTHER", sources: {} }), signal({ ticker: "THIRD", priceMove: null })] };
+  vm.runInContext("snapshot = fixture; setDataStatus = () => {}; markBlockedSources = () => {}; updateStatus();", c);
+  assert.match(coverage.textContent, /2\/3 quotes refreshed/);
+  assert.match(coverage.textContent, /1 usable price\/volume comparisons/);
+  assert.match(coverage.textContent, /1 older quotes retained/);
+  assert.match(coverage.textContent, /Quotes are not live/);
+});
 
 test("comparison columns disappear only when every matching row is unknown", () => {
   const c = controller();

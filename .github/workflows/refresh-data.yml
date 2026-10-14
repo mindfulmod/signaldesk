@@ -122,3 +122,7 @@ jobs:
         if: ${{ !cancelled() && steps.stocks.outcome == 'success' }}
         timeout-minutes: 5
         run: node scripts/verify-publication.mjs signals
+
+      - name: Enforce published market coverage targets
+        if: ${{ !cancelled() && steps.stocks.outcome == 'success' }}
+        run: node scripts/check-market-health.mjs --live

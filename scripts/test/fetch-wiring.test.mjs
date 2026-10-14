@@ -38,7 +38,7 @@ function assertNotReferenceError(error, helperName) {
   );
 }
 
-const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, hostGuard } =
+const { guardedRequest, fetchJson, fetchJsonWithUA, fetchJsonRetry, fetchText, fetchTextWithUA, fetchMarket, fetchYahooMarket, hostGuard } =
   await import("../update-data.mjs");
 
 // A 5-day daily chart, the shape fetchYahooMarket parses.
@@ -228,4 +228,47 @@ test("fetchMarket: losing every quote source reports why instead of failing sile
   } finally {
     restoreFetch();
   }
+});
+
+test("missing Yahoo symbols do not block the next valid market quote", async () => {
+  let calls = 0;
+  mockFetchOnce(async url => {
+    calls++;
+    return String(url).includes("/VALID?") ? new Response(yahooChart({ symbol: "VALID" }), { status: 200 }) : new Response('{"chart":{"error":{"code":"Not Found"}}}', { status: 404, statusText: "Not Found" });
+  });
+  try {
+    for (const ticker of ["GONE1", "GONE2", "GONE3", "GONE4"]) await assert.rejects(() => fetchYahooMarket(ticker), /404/);
+    assert.equal(hostGuard.isBlocked("query1.finance.yahoo.com"), false);
+    assert.equal((await fetchYahooMarket("VALID")).lastPrice, 12);
+    assert.equal(calls, 5, "valid symbol reaches the provider instead of being skipped");
+  } finally { restoreFetch(); }
+});
+
+test("404-only exception never bypasses forbidden or rate-limited providers", async () => {
+  for (const status of [403, 429]) {
+    const host = `not-found-refusal-${status}.example`;
+    mockFetchOnce(async () => new Response("", { status }));
+    try {
+      await assert.rejects(() => fetchJson(`https://${host}/x`, { notFoundIsAnswer: true }), new RegExp(String(status)));
+      assert.equal(hostGuard.isBlocked(host), true);
+    } finally { restoreFetch(); }
+  }
+});
+
+test("ordinary endpoint 404s still expose a broken feed", async () => {
+  const host = "broken-feed-404.example";
+  mockFetchOnce(async () => new Response("", { status: 404 }));
+  try {
+    for (let i = 0; i < 3; i++) await assert.rejects(() => fetchJson(`https://${host}/feed`), /404/);
+    assert.equal(hostGuard.isBlocked(host), true);
+  } finally { restoreFetch(); }
+});
+
+test("a network error mentioning 404 is not an expected HTTP response", async () => {
+  const host = "network-message-404.example";
+  mockFetchOnce(async () => { throw new Error("upstream request 404 failed before a response"); });
+  try {
+    for (let i = 0; i < 3; i++) await assert.rejects(() => fetchJson(`https://${host}/x`, { notFoundIsAnswer: true }), /upstream/);
+    assert.equal(hostGuard.isBlocked(host), true);
+  } finally { restoreFetch(); }
 });

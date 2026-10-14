@@ -83,7 +83,12 @@ function stockController(enhanced = false) {
 for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "enhanced" : "fallback"} controller shares scope, score and CSV selection`, async () => {
   const { context, downloaded } = stockController(enhanced);
   const quoteAt = new Date().toISOString();
-  context.current = { generatedAt: quoteAt, signals: [signal("INTC", { capTier: "small", previousSources: { ApeWisdom: 4 }, previousCoverage: ["ApeWisdom"], momentum: 162.5, sources: { ApeWisdom: 1, "Google News": 30, "Price/Volume": 5 }, latest: [{ source: "Google News", title: "Intel reports earnings", published: quoteAt }] }), signal("PEP", { capTier: "large" })] };
+  const capEvidence = (ticker, value) => ({ version: 1, method: "provider-reported", ticker, value, currency: "USD", instrumentType: "EQUITY", asOf: quoteAt, collectedAt: quoteAt, provider: "Test provider", url: "https://example.org/capitalization" });
+  context.current = { generatedAt: quoteAt, signals: [signal("INTC", { marketCapEvidence: capEvidence("INTC", 100_000_000), previousSources: { ApeWisdom: 4 }, previousCoverage: ["ApeWisdom"], momentum: 162.5, sources: { ApeWisdom: 1, "Google News": 30, "Price/Volume": 5 }, latest: [{ source: "Google News", title: "Intel reports earnings", published: quoteAt }] }), signal("PEP", { marketCapEvidence: capEvidence("PEP", 1_000_000_000) })] };
+  context.current.sourceHealth = [src("ApeWisdom")];
+  Object.assign(context.current.signals[0], { attentionMetricsVersion: 1, attentionObservedSources: ["ApeWisdom"] });
+  const prior = { generatedAt: new Date(Date.parse(quoteAt)-86400000).toISOString(), sourceHealth: [src("ApeWisdom")], signals: [signal("INTC", { attentionMetricsVersion: 1, attentionObservedSources: ["ApeWisdom"], sources: { ApeWisdom: 4 } })] };
+  context.current.signals[0] = quality.attachAttentionComparison(context.current.signals[0], [context.current], [prior]);
   vm.runInContext('snapshot=current; history={snapshots:[]}; getState=()=>({sources:["ApeWisdom"],query:"",start:"",end:""}); capFilter="small"; watchlist=new Set(["INTC"]); watchlistFilter=true;', context);
   const items = context.filteredSignals(), intel = items.find(i => i.ticker === "INTC");
   assert.equal(intel.momentum, -75); assert.equal(intel.discovery.activeSources, 1);
@@ -92,6 +97,8 @@ for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "en
   context.exportCsv();
   const csv = await downloaded().text();
   assert.match(csv, /INTC/); assert.doesNotMatch(csv, /PEP/); assert.match(csv, /attention_weights_not_posts/);
+  assert.match(csv, /attention_current_window_end,attention_prior_window_end,attention_comparison_note/);
+  assert.match(csv, /Change in sampled weighted activity/);
   const sample = signal("INTC", { signalScore: 30 });
   const scores = [-.01, 0, .01, 1, 10].map(momentum => context.discoveryProfile({ ...sample, momentum }).score);
   assert.ok(scores.every((score, i) => !i || score >= scores[i-1]), scores.join(","));
@@ -163,14 +170,14 @@ test("H06: ASTS consolidated context and QS share class are accession/period bou
 });
 
 test("H07: graph refresh/replay is idempotent and actual edits replace attribution", () => {
-  const events = ["NVDA","AMD"].map(ticker=>({ticker,source:"4chan",url:"https://boards.4chan.org/biz/thread/62670923",title:"NVDA AMD",published:"2026-09-10"}));
+  const events = ["NVDA","AMD"].map(ticker=>({ticker,source:"4chan",url:"https://boards.4chan.org/biz/thread/62670923",title:"$NVDA $AMD",published:"2026-09-10"}));
   const first = computeCoMention({weeks:{}},events,"2026-09-11").nextHistory;
   const second = computeCoMention(first,events,"2026-09-18").nextHistory;
   assert.deepEqual(second.weeks,first.weeks);
   assert.equal(Object.values(second.weeks)[0]["AMD|NVDA"],1);
-  const edited = computeCoMention(second,[...events,{...events[0],ticker:"TSLA",title:"Now also TSLA"}],"2026-09-18").nextHistory;
+  const edited = computeCoMention(second,[...events,{...events[0],ticker:"TSLA",title:"Now also $TSLA"}],"2026-09-18").nextHistory;
   assert.equal(Object.values(edited.weeks)[0]["AMD|NVDA"],1);
-  assert.equal(Object.values(edited.weeks)[0]["NVDA|TSLA"],1);
+  assert.equal(Object.values(edited.weeks)[0]["NVDA|TSLA"],undefined, "different titles at one thread URL are not a co-mention");
   const collector=readFileSync(new URL("../update-data.mjs",import.meta.url),"utf8");
   assert.match(collector,/thread\.time \? new Date\(thread\.time \* 1000\)/);
 });
@@ -181,9 +188,10 @@ const views=viewsContext.window.SIGNALDESK_RESEARCH_VIEWS;
 test("H16: brief excludes paused collectors from current coverage", () => {
   const monitor = {sources: Object.fromEntries(config.sources.map(s => [s.id,{status:"ok", lastSuccessAt: new Date().toISOString()}]))};
   const html = views.brief(registry.themes, {generatedAt:new Date().toISOString(), documents:[], reviews:[], coverage:{readableSources:22}}, monitor, [], "ready");
-  assert.match(html, /20\/20 active sources readable · 2 paused/);
+  const active = config.sources.filter(s => s.accessStatus !== "permission-required").length;
+  assert.ok(html.includes(`${active}/${active} active sources readable · 2 paused`));
   const scope = {sources:[{id:"active"},{id:"paused",accessStatus:"permission-required"}],companies:[{ticker:"QS"}]};
-  const health = researchHealth({generatedAt:now,coverage:{totalSources:2},companies:{QS:{quote:{asOf:now},factsCheckedAt:now}}},{sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
+  const health = researchHealth({schemaVersion:1,documents:[],reviews:[],sourceCheckedAt:now,generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{schemaVersion:1,events:[],generatedAt:now,sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
   assert.equal(health.ok,true); assert.equal(health.sourceCoverage,"1/1 active"); assert.equal(health.pausedSources,1);
 });
 test("H09: real controller theme scope allows incident, holographic, Nobel and owner search", () => {
@@ -214,8 +222,8 @@ test("H10: published drafts reconcile, edits preserve content and corrections ge
 test("H11: capacity/age eviction cannot turn unchanged documents into new events; review refs survive", () => {
   const sources=Array.from({length:4},(_,i)=>({id:"s"+i,owner:"Lab",themes:[],mode:"links"}));
   const registry={sources,themes:[]};
-  const state={sources:Object.fromEntries(sources.map(s=>[s.id,{status:"ok",lastSuccessAt:now,baselineAt:now,items:Array.from({length:201},(_,i)=>({url:`https://example.org/${s.id}/${i}`,title:"Original article "+i}))}]))};
-  const first=buildDocumentInventory(registry,state,{},now);assert.equal(first.documents.length,800);assert.equal(Object.keys(first.documentIndex).length,804);
+  const state={sources:Object.fromEntries(sources.map(s=>[s.id,{status:"ok",lastSuccessAt:now,baselineAt:now,items:Array.from({length:1001},(_,i)=>({url:`https://example.org/${s.id}/${i}`,title:"Original article "+i}))}]))};
+  const first=buildDocumentInventory(registry,state,{},now);assert.equal(first.documents.length,4000);assert.equal(Object.keys(first.documentIndex).length,4004);
   for(const s of Object.values(state.sources))s.lastSuccessAt="2026-10-10T20:00:00Z";
   const next=buildDocumentInventory(registry,state,first,"2026-10-10T20:00:00Z");
   assert.deepEqual(next.documents,first.documents);
@@ -275,3 +283,4 @@ test("latent calibration: freezes event basket and retries missing target prices
   log=updateCalibrationLog(log,[],{tickers:{SPY:{rows:[row("2026-01-01",100),row("2026-01-31",100)]},OLD:{rows:[row("2026-01-01",100),row("2026-01-31",120)]}}},registry,"2026-02-02");
   assert.ok(Math.abs(log.entries[0].graded["30d"]-.2)<1e-9);
 });
+import { companyQuoteFixture } from "./helpers/company-quote.mjs";

@@ -31,6 +31,7 @@ import {
 } from "./lib/co-mention.mjs";
 import { COMMON_WORD_TICKERS } from "./lib/ticker-noise.mjs";
 import quality from "../data-quality.js";
+import identity from "../company-identity.js";
 import { verifyArticle, stripCorporate } from "./lib/wiki-article.mjs";
 import { loadLeaders, saveLeaders, loadHotMonitor, saveHotMonitor, computeProofQuarters } from "./lib/proof-quarter.mjs";
 import {
@@ -134,9 +135,6 @@ const FINRA_MIN_RATIO = 0.30;
 const FINRA_MIN_SHORT_VOL = 50_000;
 // SEC requires a descriptive User-Agent with contact info for its public data APIs.
 const SEC_USER_AGENT = "SignalDesk/1.0 (m.aali9@gmail.com)";
-// Market-cap split (USD). A single $500M threshold makes the UI a clean two-way toggle.
-const LARGE_CAP_MIN = 500_000_000; // large cap: >= $500M
-const SMALL_CAP_MAX = 500_000_000; // small cap:  < $500M
 
 const SOURCES = [
   "Wallstreetbets",
@@ -200,19 +198,6 @@ let activeHotMonitorTickers = new Set();
 const POSITIVE = ["beat", "beats", "surge", "surges", "jump", "jumps", "rally", "bullish", "upgrade", "growth", "record", "strong", "buy", "breakout", "higher", "gain", "gains"];
 const NEGATIVE = ["miss", "misses", "fall", "falls", "drop", "drops", "lawsuit", "probe", "downgrade", "weak", "bearish", "sell", "lower", "loss", "cuts", "cut"];
 const AMBIGUOUS_TICKERS = new Set(["AI", "ARM", "NET", "T", "F", "ON", "ARE", "CAN", "NOW", "A", "GO", "IT"]);
-// Brand words too generic to use as a headline-matching alias on their own — a
-// company literally named "Block" or "Open" would otherwise hoover up unrelated
-// articles. For these we keep only the symbol/cashtag match.
-const BRAND_STOPWORDS = new Set([
-  "block", "open", "square", "beyond", "match", "unity", "carnival", "national",
-  "general", "global", "american", "united", "first", "next", "core", "energy",
-  "power", "capital", "financial", "holdings", "group", "trust", "fund", "growth",
-  "value", "metals", "mining", "gold", "silver", "bank", "health", "medical",
-  "digital", "data", "cloud", "systems", "solutions", "technologies", "industries",
-  "international", "enterprise", "partners", "realty", "resources", "materials",
-  "motors", "auto", "retail", "media", "five", "best", "good", "real", "world",
-  "service", "services", "products", "brands", "company", "corporation",
-]);
 const TICKER_STOPWORDS = new Set([
   "CEO",
   "CFO",
@@ -326,18 +311,23 @@ const hostGuard = createHostGuard();
 // newest one, and treating the first 403 as a host failure skipped all 8
 // remaining dates. That silently cost the run its entire short-volume seed on
 // every refresh before publication -- 3 of the 4 daily scheduled runs.
-async function guardedRequest(url, headers, { missingIsAnswer = false } = {}) {
+// A missing ticker (404) is not a host outage. Keep that narrower contract
+// separate from FINRA's file-date probing: Yahoo 403/429 must still back off.
+async function guardedRequest(url, headers, { missingIsAnswer = false, notFoundIsAnswer = false } = {}) {
   const host = hostOf(url);
   if (hostGuard.isBlocked(host)) throw new Error(`skipped: ${host} cooling down after an earlier failure`);
   const wait = hostGuard.waitFor(host);
   if (wait > 0) await sleep(wait);
   hostGuard.markRequest(host);
+  let expectedMissingResponse = false;
   try {
     const response = await fetch(url, { headers, signal: AbortSignal.timeout(20000) });
     if (!response.ok) {
       // Note the success before throwing: the host is demonstrably alive and
       // responsive, which is exactly what the breaker wants to know.
-      if (missingIsAnswer && (response.status === 403 || response.status === 404)) {
+      expectedMissingResponse = (response.status === 404 && (missingIsAnswer || notFoundIsAnswer)) || (response.status === 403 && missingIsAnswer);
+      await response.body?.cancel();
+      if (expectedMissingResponse) {
         hostGuard.noteSuccess(host);
         throw new Error(`${response.status} ${response.statusText}`);
       }
@@ -346,7 +336,7 @@ async function guardedRequest(url, headers, { missingIsAnswer = false } = {}) {
     hostGuard.noteSuccess(host);
     return response;
   } catch (error) {
-    if (missingIsAnswer && /\b(403|404)\b/.test(error.message)) throw error;
+    if (expectedMissingResponse) throw error;
     hostGuard.noteFailure(host, error);
     throw error;
   }
@@ -394,7 +384,7 @@ async function main() {
   // happens later, after price/news data exists, and takes effect next run).
   const hotMonitor = await loadHotMonitor();
   const today = new Date().toISOString().slice(0, 10);
-  for (const [ticker, info] of Object.entries(hotMonitor.evidenceVersion === 2 ? hotMonitor.tickers || {} : {})) {
+  for (const [ticker, info] of Object.entries(hotMonitor.evidenceVersion === 3 ? hotMonitor.tickers || {} : {})) {
     if (info.expiresDate && info.expiresDate >= today) {
       registerStock(ticker, ticker, [ticker]);
       activeHotMonitorTickers.add(ticker);
@@ -486,6 +476,7 @@ async function main() {
 
   // News, step 1 (primary): sweep the broad market wires. ~10 requests total,
   // matched against the whole registry locally.
+  console.log(`Quote collection complete: ${events.filter(e => e.source === "Price/Volume").length} observations across the candidate universe; final board coverage is checked after ranking.`);
   await collectNewswires(events, failures, discovery);
 
   // News, step 2 (targeted top-up): only the biggest movers that the wire sweep
@@ -504,6 +495,7 @@ async function main() {
 
   // StockTwits per-symbol sentiment for the most-mentioned tickers. Bullish/Bearish
   // tags make this our richest explicit social-sentiment signal.
+  console.log("News matching complete; collecting social context.");
   for (const { ticker, name } of newsUniverseEntries(events, STOCKTWITS_LIMIT)) {
     await collectStockTwitsSentiment(events, failures, ticker, name);
     await sleep(350);
@@ -519,8 +511,11 @@ async function main() {
     event.eventId = createHash("sha256").update(`${event.source}|${event.url}|${event.ticker}`).digest("hex").slice(0, 24);
     event.observedAt ||= new Date().toISOString();
   }
-  const signals = aggregate(events, previous);
-  await enrichMarketCaps(signals, failures);
+  const generatedAt = new Date().toISOString();
+  const signals = aggregate(events, previous, { failures, generatedAt });
+  console.log(`Social context complete; enriching ${signals.length} ranked stocks with issuer data.`);
+  await enrichIssuerNames(signals, failures);
+  console.log("Issuer enrichment complete; checking company descriptions.");
   await enrichProfiles(signals, failures);
   await enrichHotMonitorProfiles(signals, failures);
 
@@ -561,10 +556,10 @@ async function main() {
     return;
   }
   const payload = {
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     dataMode: "real-public-no-key",
     sourceNote:
-      "Best-effort public data. Direct Reddit and Nasdaq adapters are paused after repeated failures; historical records remain available. Source coverage reports matched tickers, not completeness.",
+      "Best-effort public data. Direct Reddit, Nasdaq and the unavailable Yahoo broad-news RSS adapter are paused; historical records remain available. Yahoo price quotes remain active. Source coverage reports matched tickers, not completeness.",
     discoveryNote:
       "Fully dynamic universe: FINRA short-volume data builds the daily ticker list, supplemented by ticker extraction from public news articles and SEC filings. No hardcoded seed list.",
     sources: SOURCES,
@@ -707,7 +702,7 @@ async function xmlItemsPolite(url, fallbackUrl = url) {
 // headline against the ticker registry locally. One request per wire regardless
 // of how many tickers we cover, so this cannot be rate-limited by universe size
 // the way per-ticker fan-out was.
-async function collectNewswires(events, failures, discovery) {
+export async function collectNewswires(events, failures, discovery, wires = NEWSWIRES) {
   let matched = 0;
   let headlines = 0;
   // Wires overlap (a MarketWatch story appears on both its topstories and
@@ -715,7 +710,7 @@ async function collectNewswires(events, failures, discovery) {
   // same headline twice would inflate a ticker's mention count, which feeds the
   // ranking — so dedupe on normalised title text across the whole sweep.
   const seenTitles = new Set();
-  for (const wire of NEWSWIRES) {
+  for (const wire of wires) {
     if (quality.PAUSED_SOURCES[wire.source]) continue;
     try {
       const items = await xmlItemsPolite(wire.url);
@@ -774,11 +769,12 @@ async function collectTickerNews(events, failures, ticker, name) {
     try {
       const items = (await load()).filter(item => quality.usableNews(item));
       if (!items.length) continue;
+      const before = events.length;
       for (const item of items) {
         collectMentions(events, source, item.title, item.url, item.score || 2, item.published, ticker);
       }
       // One good source per ticker is enough; skip the rest of the budget.
-      return;
+      if (events.length > before) return;
     } catch (error) {
       failures.push(`${source} ${ticker}: ${error.message}`);
     }
@@ -791,7 +787,7 @@ async function gdeltMarketNews() {
   const json = await fetchJsonRetry(url);
   return (json.articles || [])
     .map((item) => ({
-      title: `${item.title || ""} ${item.domain || ""} ${item.sourceCountry || ""}`.trim(),
+      title: String(item.title || "").trim(),
       url: item.url || url,
       score: 2,
       published: item.seendate ? parseGdeltDate(item.seendate) : null,
@@ -1045,7 +1041,7 @@ async function validateDiscoveredTickers(discovery, failures) {
   return events;
 }
 
-function registerStock(ticker, name, aliases = []) {
+export function registerStock(ticker, name, aliases = []) {
   const normalized = ticker.toUpperCase();
   if (!isPossibleTicker(normalized)) return;
   const existing = stockRegistry.get(normalized);
@@ -1070,14 +1066,7 @@ function registerStock(ticker, name, aliases = []) {
 // enough, the lead brand word ("palantir"). Generic single words are dropped so a
 // company called "Block" doesn't match every article containing that word.
 function brandAliasesFor(name) {
-  const cleaned = cleanCompanyForSearch(name).toLowerCase();
-  if (!cleaned || !/[a-z]/.test(cleaned)) return [];
-  const aliases = new Set();
-  const words = cleaned.split(" ").filter(Boolean);
-  if (words.length > 1 && cleaned.length >= 6) aliases.add(cleaned);
-  const lead = words[0];
-  if (lead && lead.length >= 4 && !BRAND_STOPWORDS.has(lead) && !COMMON_WORD_TICKERS.has(lead.toUpperCase())) aliases.add(lead);
-  return [...aliases];
+  return identity.aliasesFor(name);
 }
 
 // Write a real company name + brand aliases back into the registry. FINRA seeds
@@ -1175,11 +1164,11 @@ function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
 
   const stories = new Map(); // ticker -> [{source,title,url,published}]
   for (const event of events) {
-    if (!MARKET_NEWS_SOURCES.has(event.source) || !quality.usableNews(event)) continue;
+    if (!MARKET_NEWS_SOURCES.has(event.source) || !quality.usableNews(event) || !identity.articleMatches(event, event)) continue;
     const title = String(event.title).trim();
     if (title.length < 12) continue;
     if (!stories.has(event.ticker)) stories.set(event.ticker, []);
-    stories.get(event.ticker).push({ source: event.source, title, url: event.url, published: event.published });
+    stories.get(event.ticker).push({ source: event.source, title, url: event.url, published: event.published, companyMatch: event.companyMatch || null });
   }
 
   const rows = [];
@@ -1215,6 +1204,7 @@ function buildMarketNews(events, limit = MARKET_NEWS_LIMIT) {
       relativeVolume: quote.relativeVolume,
       quoteAsOf: quote.quoteAsOf,
       source: best.source,
+      companyMatch: best.companyMatch,
       title: best.title.slice(0, 200),
       url: best.url,
       published: best.published,
@@ -1291,7 +1281,7 @@ async function fetchMarket(ticker, failures = null) {
 
 export async function fetchYahooMarket(ticker) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=1mo&interval=1d&events=splits`;
-  return parseYahooMarket(await fetchJson(url), ticker);
+  return parseYahooMarket(await fetchJson(url, { notFoundIsAnswer: true }), ticker);
 }
 export function parseYahooMarket(json, ticker, now = Date.now()) {
   const result = json.chart?.result?.[0], meta = result?.meta, quote = result?.indicators?.quote?.[0];
@@ -1306,7 +1296,8 @@ export function parseYahooMarket(json, ticker, now = Date.now()) {
   const volumeSplit = splits.some(e => e.date * 1000 >= Date.parse(baseline[0]?.date) && e.date * 1000 <= Date.parse(asOf));
   const comparison = quality.marketComparison({ last: meta.regularMarketPrice, previous: previous?.close, asOf, previousAsOf: previous?.date, volumes: volumeSplit ? [] : [...baseline.map(r => r.volume), current?.volume], split, now });
   return { ...comparison, lastPrice: meta.regularMarketPrice, volume: quality.number(current?.volume), quoteAsOf: asOf,
-    quoteSource: "Yahoo public chart", name: meta.longName || meta.shortName || ticker };
+    quoteSource: "Yahoo public chart", instrumentType: meta.instrumentType || null,
+    name: meta.longName || meta.shortName || ticker };
 }
 export async function fetchStooqMarket(ticker) {
   const symbol = `${ticker.toLowerCase()}.us`;
@@ -1323,32 +1314,21 @@ export function parseStooqMarket(csv, ticker, now = Date.now()) {
     lastPrice: Number(last[4]), volume: quality.number(last[5]), quoteAsOf: asOf, quoteSource: "Stooq public daily quote", name: ticker };
 }
 
-function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
+export function collectMentions(events, source, text, url, weight = 1, published = "", forceTicker = "", discovery = null) {
   if (isClassActionSpam(text)) return;
   if (MARKET_NEWS_SOURCES.has(source) && !quality.usableNews({ title: text, published })) return;
   const normalized = ` ${text.toLowerCase().replace(/[^a-z0-9.$&+ -]/g, " ")} `;
   if (!forceTicker) discoverTickerMentions(discovery, source, text, url, weight, published);
   for (const { ticker, name, aliases } of stockRegistry.values()) {
     if (forceTicker && forceTicker !== ticker) continue;
-    const cashtag = normalized.includes(`$${ticker.toLowerCase()}`);
-    const tickerWord = new RegExp(`(^|[^a-z])${escapeRegExp(ticker.toLowerCase())}([^a-z]|$)`).test(normalized);
-    // Symbols that are also common English words ("YOU", "BE", "ALL") or a
-    // single letter ("V" matches the "V" in "N.V.") hit ordinary prose on a
-    // bare word boundary, so they only count with a cashtag or an alias that
-    // is itself distinctive (not the bare symbol, not a common word).
-    const gated = AMBIGUOUS_TICKERS.has(ticker) || COMMON_WORD_TICKERS.has(ticker) || ticker.length === 1;
-    const aliasHit = aliases.some((alias) => {
-      const lower = alias.toLowerCase();
-      if (gated && (lower === ticker.toLowerCase() || COMMON_WORD_TICKERS.has(lower.toUpperCase()))) return false;
-      return normalized.includes(` ${lower} `);
-    });
-    const hit = gated ? cashtag || aliasHit : cashtag || tickerWord || aliasHit;
+    const hit = identity.match({ ticker, name, aliases }, text.slice(0, 240), { source });
     if (hit) {
       events.push({
         source,
         ticker,
         name,
         title: text.slice(0, 240),
+        companyMatch: hit,
         url,
         mentions: Math.max(1, Math.round(weight)),
         sentiment: scoreSentiment(normalized),
@@ -1509,25 +1489,14 @@ async function collectHackerNews(events, failures, ticker, name) {
   const cleanName = cleanCompanyForSearch(name);
   const hasName = cleanName && cleanName.toUpperCase() !== ticker;
   const query = hasName ? cleanName : ticker;
-  const nameToken = hasName
-    ? cleanName.split(" ").find((word) => word.length >= 4 && !COMMON_WORD_TICKERS.has(word.toUpperCase()))?.toLowerCase()
-    : "";
   const cutoff = Math.floor(Date.now() / 1000) - HN_LOOKBACK_DAYS * 86400;
   const url = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(query)}&tags=comment&numericFilters=created_at_i>${cutoff}&hitsPerPage=20`;
   try {
     const json = await fetchJson(url);
     const hits = Array.isArray(json?.hits) ? json.hits : [];
-    const cashtag = new RegExp(`\\$${escapeRegExp(ticker)}\\b`, "i");
-    const wordTag = new RegExp(`(^|[^A-Za-z0-9])${escapeRegExp(ticker)}([^A-Za-z0-9]|$)`);
     for (const hit of hits) {
       const text = cleanXml(String(hit?.comment_text || ""));
-      const lower = text.toLowerCase();
-      // Accept a cashtag, the company name token, or (for 4+ char symbols only) a
-      // word-boundary symbol match — keeps out common-word false positives.
-      const matches =
-        cashtag.test(text) ||
-        (nameToken && lower.includes(nameToken)) ||
-        (ticker.length >= 4 && !COMMON_WORD_TICKERS.has(ticker) && wordTag.test(text));
+      const matches = identity.match({ ticker, name }, text);
       if (!matches) continue;
       events.push({
         source: "Hacker News",
@@ -1612,9 +1581,8 @@ function rankHeadlines(items) {
   });
 }
 
-export function aggregate(events, previous) {
+export function aggregate(events, previous, { failures = [], generatedAt = new Date().toISOString() } = {}) {
   const previousByTicker = new Map((previous?.signals || []).map(item => [item.ticker, item]));
-  const previousCoverage = (previous?.sourceHealth || []).filter(s => ["covered", "no-matches"].includes(s.state)).map(s => s.source);
   const map = new Map();
   for (const event of events) {
     const isMarket = quality.MARKET_SOURCES.includes(event.source);
@@ -1622,28 +1590,34 @@ export function aggregate(events, previous) {
     const prior = previousByTicker.get(event.ticker);
     const item = map.get(event.ticker) || {
       ticker: event.ticker, name: event.name, mentions: 0, weightedSentiment: 0,
+      aliases: stockRegistry.get(event.ticker)?.aliases || [],
       lastPrice: prior?.lastPrice ?? null, quoteAsOf: prior?.quoteAsOf ?? null, quoteSource: prior?.quoteSource ?? null,
+      instrumentType: prior?.instrumentType ?? null,
       priceMove: null, relativeVolume: null, marketMetricsVersion: 2, marketQuality: ["No current market observation"],
       sources: Object.fromEntries(SOURCES.map(source => [source, 0])), latest: [],
+      attentionMetricsVersion: 1, attentionObservedSources: [],
     };
     item.mentions += weight;
     item.weightedSentiment += (Number(event.sentiment) || 0) * weight;
     item.sources[event.source] = (item.sources[event.source] || 0) + (isMarket ? 1 : weight);
+    if (!isMarket && !item.attentionObservedSources.includes(event.source)) item.attentionObservedSources.push(event.source);
     if (event.source === "Price/Volume" && event.marketMetricsVersion === 2 && Number.isFinite(event.lastPrice)) {
-      for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume"]) item[key] = event[key] ?? null;
+      for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume", "instrumentType"]) item[key] = event[key] ?? null;
     }
-    item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published, observedAt: event.observedAt || null });
+    item.latest.push({ source: event.source, title: event.title, url: event.url, published: event.published, observedAt: event.observedAt || null, companyMatch: event.companyMatch || null });
     map.set(event.ticker, item);
   }
   const items = [...map.values()].map(item => {
-    const prior = previousByTicker.get(item.ticker), ranked = rankHeadlines(item.latest);
+    const ranked = rankHeadlines(item.latest);
     const signal = { ...item, sentiment: item.mentions ? item.weightedSentiment / item.mentions : null,
-      previousSources: prior?.sources || null, previousCoverage, optionsActivity: 0,
+      optionsActivity: 0,
       activityUnit: "weighted attention (not post counts)", topHeadline: pickTopHeadline(ranked), latest: ranked.slice(0, 6) };
     delete signal.weightedSentiment;
-    return quality.scopeSignal(quality.normalizeSignal(signal), SOURCES);
+    return quality.normalizeSignal(signal);
   });
-  return quality.scoreSignals(items).sort((a,b) => b.signalScore - a.signalScore).slice(0, 75);
+  const current = { generatedAt, signals: items, sourceHealth: quality.sourceHealth({ signals: items, failures, generatedAt }) };
+  const compared = items.map(item => quality.scopeSignal(quality.attachAttentionComparison(item, [current], previous ? [previous] : []), SOURCES));
+  return quality.scoreSignals(compared).sort((a,b) => b.signalScore - a.signalScore).slice(0, 75);
 }
 
 function scoreSentiment(text) {
@@ -1673,8 +1647,8 @@ function cleanXml(value) {
     .trim();
 }
 
-async function fetchJson(url) {
-  const response = await guardedRequest(url, { "User-Agent": USER_AGENT, Accept: "application/json" });
+async function fetchJson(url, options = {}) {
+  const response = await guardedRequest(url, { "User-Agent": USER_AGENT, Accept: "application/json" }, options);
   return response.json();
 }
 
@@ -1752,10 +1726,10 @@ async function fetchTextWithUA(url, ua) {
   return response.text();
 }
 
-// Enrich each signal with the issuer's real company name and an estimated market
-// cap + size tier, using only free, no-key SEC data: the official ticker→company
-// map (names) and XBRL shares outstanding × our public price (cap).
-async function enrichMarketCaps(signals, failures) {
+// SEC's ticker map establishes issuer names, not capitalization. Do not multiply
+// an XBRL share count by a quote: period, class and ADR basis are not established.
+// Current quote adapters supply no dated capitalization observation.
+async function enrichIssuerNames(signals, failures) {
   let secMap;
   try {
     secMap = await fetchSecTickerMap();
@@ -1770,24 +1744,6 @@ async function enrichMarketCaps(signals, failures) {
     if (record?.title && (!signal.name || signal.name === signal.ticker)) {
       signal.name = cleanCompanyName(record.title);
     }
-  }
-
-  // Market caps only where we have a price to multiply by.
-  const withPrice = signals.filter((signal) => Number.isFinite(signal.lastPrice) && signal.lastPrice > 0);
-  for (const signal of withPrice) {
-    const record = secMap.get(signal.ticker.toUpperCase());
-    if (!record?.cik) continue;
-    try {
-      const shares = await fetchSharesOutstanding(record.cik);
-      if (!Number.isFinite(shares) || shares <= 0) continue;
-      const marketCap = shares * signal.lastPrice;
-      signal.marketCap = Math.round(marketCap);
-      signal.capTier = capTierFor(marketCap);
-    } catch {
-      // Best-effort: leave marketCap/capTier unset if SEC has no data for this issuer.
-    }
-    // Be polite to SEC's rate limits (<10 req/s).
-    await sleep(120);
   }
 }
 
@@ -1922,11 +1878,6 @@ function cleanCompanyName(title) {
   return title.toLowerCase().replace(/\b([a-z])/g, (match) => match.toUpperCase());
 }
 
-function capTierFor(marketCap) {
-  if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
-  return marketCap >= LARGE_CAP_MIN ? "large" : "small";
-}
-
 let secTickerMapCache = null;
 async function fetchSecTickerMap() {
   if (secTickerMapCache) return secTickerMapCache;
@@ -1942,19 +1893,6 @@ async function fetchSecTickerMap() {
   }
   secTickerMapCache = map;
   return map;
-}
-
-async function fetchSharesOutstanding(cik) {
-  const url = `https://data.sec.gov/api/xbrl/companyconcept/CIK${cik}/dei/EntityCommonStockSharesOutstanding.json`;
-  const json = await fetchJsonWithUA(url, SEC_USER_AGENT);
-  const points = json?.units?.shares;
-  if (!Array.isArray(points) || !points.length) return null;
-  // Latest reported value by filing date.
-  const latest = points
-    .filter((point) => Number.isFinite(point.val))
-    .sort((a, b) => String(a.filed || a.end).localeCompare(String(b.filed || b.end)))
-    .at(-1);
-  return latest ? latest.val : null;
 }
 
 async function fetchJsonWithUA(url, ua) {
@@ -2106,7 +2044,7 @@ async function computeCoMentionStep(events, failures) {
     const leaders = await loadLeaders();
     const leaderTickers = (leaders.leaders || []).map((l) => l.ticker);
 
-    const { nextHistory, payload } = computeCoMention(history, events, dateStr, leaderTickers, prevClusters.leaderNeighbors || {});
+    const { nextHistory, payload } = computeCoMention(history, events, dateStr, leaderTickers, prevClusters.integrityVersion === 3 ? prevClusters.leaderNeighbors || {} : {});
     await saveCoMentionHistory(nextHistory);
     await saveClusters(payload);
     console.log(`Co-mention: ${payload.graphNodes} nodes, ${payload.graphEdges} edges, ${payload.communities.length} communities (Q=${payload.overallModularity.toFixed(3)})`);

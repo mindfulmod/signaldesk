@@ -1,10 +1,11 @@
 import { createHash } from "node:crypto";
+import { discoveryHistory, recordDiscoveryDay } from "./discovery-history.mjs";
 const hash = value => createHash("sha256").update(value).digest("hex").slice(0, 24);
 const days = (value, now) => (Date.parse(now) - Date.parse(value)) / 86400000;
 const normal = text => String(text).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 const STOP = new Set("a an and are as at be been by can could for from has have how in into is it its may more new of on or our the their this to using was were what when why will with world first next research researchers study scientists says shows company companies announces announced results quarter university news technology technologies says towards report reports million billion today us about latest after over under through than that these they you your make makes made we all advances advance".split(" "));
 const TECH_WORDS = /\b(battery|batteries|quantum|photonics|photonic|robot|robots|robotics|fusion|hydrogen|semiconductor|chip|chips|computing|compute|nuclear|reactor|satellite|wireless|bioengineering|biomanufacturing|superconductor|superconducting|sodium|lithium|electrolyte|perovskite|solar|carbon|capture|geothermal|storage|neuromorphic|agent|agents|autonomous|synthetic|biological|silicon|optical|laser|lasers|solid|state|ai)\b/;
-for (const word of ["between", "during", "without", "versus", "toward", "provides", "brings"]) STOP.add(word);
+for (const word of ["between", "during", "without", "versus", "toward", "provides", "brings", "where", "which", "who", "control", "ev", "improves", "improve", "develop", "develops", "developed", "achieves", "enables", "enable", "reveals", "reveal", "use", "uses", "used", "help", "helps", "helping", "wins", "award", "prize", "across", "via", "throughout"]) STOP.add(word);
 // Open-ended noun phrases, not a curated list of future winners. Requiring a
 // technical noun at the end avoids verb fragments such as "AI is igniting".
 const TECH_END = /^(batter(?:y|ies)|cells?|chips?|semiconductors?|computing|compute|communications?|networks?|robot(?:s|ics)?|fusion|reactors?|hydrogen|storage|capture|photonics|lasers?|optics|electrolytes?|superconductors?|materials?|proteins?|biology|bioengineering|biomanufacturing|agents?|sensors?|correction|processors?|transistors?|fabrication|interfaces?|satellites?|engines?|propulsion|manufacturing)$/;
@@ -27,10 +28,10 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
   // Reclassifying a heuristic does not create a publication or a new version.
   const documents = new Map((previous.documents || []).map(d => {
     const source = registry.sources.find(s => s.id === d.sourceId);
-    return [d.id, source ? { ...d, themes: documentThemes(registry, source, d), associatedThemes: source.themes, headlineSignal: headlineSignal(d.title), metadataOnly: d.metadataOnly ?? source.mode !== "page" } : d];
+    return [d.id, source ? { ...d, discovery: Boolean(source.discovery), themes: documentThemes(registry, source, d), associatedThemes: source.themes, headlineSignal: headlineSignal(d.title), metadataOnly: d.metadataOnly ?? source.mode !== "page" } : d];
   }));
   // Compact identity memory outlives the bounded text archive. Never expire an
-  // identity just because its full excerpt aged out or the archive reached 800.
+  // identity just because its full excerpt aged out or the archive reached its cap.
   const documentIndex = structuredClone(previous.documentIndex || {});
   for (const d of documents.values()) {
     const key = hash(`${d.sourceId}|${d.url}`);
@@ -50,10 +51,11 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
       const storyId = hash(`${source.id}|${item.url}`), record = documentIndex[storyId];
       const old = documents.get(record?.latestId);
       const originalPublishedAt = [record?.originalPublishedAt, item.publishedAt].filter(Boolean).sort()[0] || null;
-      if (documents.has(id)) { documents.set(id, { ...documents.get(id), originalPublishedAt, publishedAt: item.publishedAt || null }); continue; }
+      const attention = { linkedUrl: item.linkedUrl || null, dateKind: item.dateKind || "publication", engagement: item.engagement || null };
+      if (documents.has(id)) { documents.set(id, { ...documents.get(id), originalPublishedAt, publishedAt: item.publishedAt || null, ...attention }); continue; }
       if (record?.versions[id]) continue; // Unchanged archived version, not news.
       documents.set(id, { id, sourceId: source.id, url: item.url, title: item.title, excerpt: item.excerpt || null, owner: source.owner, tier: source.tier,
-        storyId, originalPublishedAt, firstSeenAt: record?.firstSeenAt || saved.lastSuccessAt, announcementAt: item.announcementAt || item.publishedAt || null,
+        storyId, originalPublishedAt, ...attention, firstSeenAt: record?.firstSeenAt || saved.lastSuccessAt, announcementAt: item.dateKind === "community-submission" ? null : item.announcementAt || item.publishedAt || null,
         researchPublishedAt: item.researchPublishedAt || null, researchUrl: item.researchUrl || null, metadataOnly: source.mode !== "page" && !item.metadataCheckedAt,
         themes: documentThemes(registry, source, item), associatedThemes: source.themes,
         filingItems: item.filingItems || [], reportDate: item.reportDate || null, acceptedAt: item.acceptedAt || null, exhibitsIndexUrl: item.exhibitsIndexUrl || null,
@@ -66,8 +68,12 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
   const protectedIds = new Set(reviews.map(r => r.candidateId));
   const sorted = [...documents.values()].sort((a, b) => b.detectedAt.localeCompare(a.detectedAt) || a.id.localeCompare(b.id));
   const retained = sorted.filter(d => protectedIds.has(d.id));
-  retained.push(...sorted.filter(d => !protectedIds.has(d.id) && days(d.detectedAt, now) <= 180).slice(0, Math.max(0, 800 - retained.length)));
-  return { documents: retained.sort((a, b) => b.detectedAt.localeCompare(a.detectedAt) || a.id.localeCompare(b.id)), documentIndex };
+  retained.push(...sorted.filter(d => !protectedIds.has(d.id) && days(d.detectedAt, now) <= 180).slice(0, Math.max(0, 4000 - retained.length)));
+  const retainedIds = new Set(retained.map(d => d.id)), discoveryIds = new Set(registry.sources.filter(s => s.discovery).map(s => s.id));
+  // The compact index must keep this warning alive on subsequent collections;
+  // an evicted but unchanged document cannot silently restore comparability.
+  const discoveryTruncated = Object.values(documentIndex).some(d => discoveryIds.has(d.sourceId) && days(d.originalPublishedAt, now) >= 0 && days(d.originalPublishedAt, now) <= 28 && !retainedIds.has(d.latestId));
+  return { documents: retained.sort((a, b) => b.detectedAt.localeCompare(a.detectedAt) || a.id.localeCompare(b.id)), documentIndex, discoveryTruncated };
 }
 export function buildDocuments(...args) { return buildDocumentInventory(...args).documents; }
 export function topicPhrases(title) {
@@ -80,14 +86,13 @@ export function topicPhrases(title) {
   }
   return [...phrases];
 }
-export function discoverTopics(documents, themes, previous = {}, now = new Date().toISOString(), sources = [], states = {}) {
+export function discoverTopics(documents, themes, previous = {}, now = new Date().toISOString(), sources = [], states = {}, { discoveryTruncated = false } = {}) {
   const sourceIds = sources.map(s => s.id);
-  const coverageKey = hash(JSON.stringify([3, sources.map(s => [s.id, s.url, s.format, s.terms, s.linkPattern]).sort((a, b) => a[0].localeCompare(b[0]))]));
-  const healthy = sources.length > 0 && sources.every(s => states[s.id]?.status === "ok" && days(states[s.id].lastSuccessAt, now) >= 0 && days(states[s.id].lastSuccessAt, now) <= 1.5);
-  const comparableHistory = previous.coverageKey === coverageKey ? previous.history || [] : [];
+  const collection = discoveryHistory(sources, states, previous, now);
+  const { coverageKey, coverage, healthy, collectedToday, completeHistory, historyDays, comparableHistory, legacyHistory } = collection;
   const known = new Set(themes.flatMap(t => [t.name, ...t.aliases]).map(normal));
   const originalDates = new Map();
-  const storyKey = d => d.url || d.storyId || d.id;
+  const storyKey = d => d.linkedUrl || d.url || d.storyId || d.id;
   for (const d of documents) {
     const date = d.originalPublishedAt || d.publishedAt;
     const key = storyKey(d);
@@ -97,8 +102,8 @@ export function discoverTopics(documents, themes, previous = {}, now = new Date(
   // Latest wording represents a canonical URL once; revision history is retained
   // in documents. Title dedup is a secondary syndication guard, not story identity.
   const seen = new Set(), titles = new Set();
-  const unique = [...dated].sort((a, b) => (b.detectedAt || "").localeCompare(a.detectedAt || "")).filter(d => {
-    const key = d.url || d.storyId || d.id, title = normal(d.title);
+  const unique = [...dated].sort((a, b) => Number(a.tier === "community") - Number(b.tier === "community") || (b.detectedAt || "").localeCompare(a.detectedAt || "")).filter(d => {
+    const key = storyKey(d), title = normal(d.title);
     if (seen.has(key) || titles.has(title)) return false;
     seen.add(key); titles.add(title); return true;
   });
@@ -108,27 +113,41 @@ export function discoverTopics(documents, themes, previous = {}, now = new Date(
     const group = groups.get(phrase) || { phrase, recent: [], prior: [] };
     group[days(d.publishedAt, now) <= 14 ? "recent" : "prior"].push(d); groups.set(phrase, group);
   }
-  const historyDays = new Set(comparableHistory.filter(s => days(s.date, now) <= 29).map(s => s.date));
+  const observed = new Map();
+  for (const candidate of [...(previous.archive || []), ...(previous.candidates || [])]) {
+    const first = candidate.firstObservedAt;
+    if (first && days(first, now) >= 0 && (!observed.has(candidate.id) || first < observed.get(candidate.id))) observed.set(candidate.id, first);
+  }
   const candidates = [...groups.values()].filter(g => g.recent.length).map(g => {
     const owners = [...new Set(g.recent.map(d => d.owner))];
     const weeks = [...new Set(g.recent.map(d => Math.floor(days(d.publishedAt, now) / 7)))];
     const sustained = owners.length >= 2 && g.recent.length >= 3 && weeks.length >= 2;
-    const comparable = healthy && historyDays.size >= 28 && g.prior.length > 0;
+    const comparable = collectedToday && !discoveryTruncated && completeHistory && g.prior.length > 0;
+    const dates = g.recent.map(d => d.publishedAt).sort();
     return { id: hash(g.phrase), phrase: g.phrase, owners, recentDocuments: g.recent.length, priorDocuments: g.prior.length,
       momentumPercent: comparable ? (g.recent.length / g.prior.length - 1) * 100 : null,
       status: sustained ? "Repeated across sources" : owners.length >= 2 ? "Cross-source lead" : "Single-owner lead",
       evidenceTypes: [...new Set(g.recent.map(d => d.headlineSignal))], documentIds: g.recent.map(d => d.id),
-      firstObservedAt: comparableHistory.find(s => s.topics.includes(hash(g.phrase)))?.date || now.slice(0, 10),
+      lanes: [...new Set(g.recent.map(d => d.tier === "community" ? "community" : "research"))],
+      spanDays: Math.floor((Date.parse(dates.at(-1)) - Date.parse(dates[0])) / 86400000),
+      nextCheck: owners.length < 2 ? "Find another reporting owner, then look for customer use." : "Check paying usage, repeat orders or measured deployment—not more headlines.",
+      firstObservedAt: [observed.get(hash(g.phrase)), comparableHistory.find(s => s.topics.includes(hash(g.phrase)))?.date, now.slice(0, 10)].filter(Boolean).sort()[0],
       caveat: "An extracted headline phrase, not a verified technology category or adoption claim." };
   }).sort((a, b) => b.owners.length - a.owners.length || b.recentDocuments - a.recentDocuments || b.phrase.split(" ").length - a.phrase.split(" ").length || a.phrase.localeCompare(b.phrase));
   // Prefer the most informative overlapping phrase for the same story set.
   const selected = [];
   for (const c of candidates) if (!selected.some(s => (s.phrase.includes(c.phrase) || c.phrase.includes(s.phrase)) && s.documentIds.join() === c.documentIds.join())) selected.push(c);
-  const date = now.slice(0, 10), history = comparableHistory.filter(s => s.date !== date && days(s.date, now) <= 90);
-  if (healthy) history.push({ date, topics: selected.slice(0, 30).map(c => c.id), documentCount: unique.length });
+  const date = now.slice(0, 10), history = recordDiscoveryDay(collection, selected.slice(0, 30).map(c => c.id), unique.length);
   const currentCandidates = selected.slice(0, 30).map(c => ({ ...c, lastSeenAt: date }));
   const archive = new Map([...(previous.archive || []), ...(previous.candidates || [])].map(c => [c.id, { ...c, lastSeenAt: c.lastSeenAt || previous.generatedAt?.slice(0, 10) }]));
   currentCandidates.forEach(c => archive.set(c.id, c));
-  return { generatedAt: now, coverageKey, history, candidates: currentCandidates, archive: [...archive.values()].filter(c => days(c.lastSeenAt, now) <= 90).sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt)).slice(0, 200), datedDocuments: unique.length, comparableDays: historyDays.size,
-    note: `28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history.${healthy ? "" : " At least one discovery feed is unavailable or overdue; history accumulation is paused."}` };
+  // No theme or technical-vocabulary gate: unexpected subjects must remain
+  // visible even when phrase extraction cannot name them. Balance the preview
+  // across feeds so a high-volume community cannot bury scientific sources.
+  const unmatched = unique.filter(d => !d.themes?.length && days(d.publishedAt, now) <= 14).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const queues = sources.map(s => unmatched.filter(d => d.sourceId === s.id));
+  const openScan = [];
+  while (openScan.length < 120 && queues.some(q => q.length)) for (const q of queues) if (q.length && openScan.length < 120) openScan.push(q.shift().id);
+  return { generatedAt: now, historyVersion: 1, calendar: "America/Toronto", coverageKey, history, legacyHistory, coverage, healthy, collectedToday, discoveryTruncated, openScan, unmatchedDocuments: unmatched.length, candidates: currentCandidates, archive: [...archive.values()].filter(c => days(c.lastSeenAt, now) <= 90).sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt)).slice(0, 200), datedDocuments: unique.length, comparableDays: historyDays.size,
+    note: `Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption.${healthy ? "" : " Coverage is incomplete, quiet, undated or overdue; comparable history is paused."}${healthy && !collectedToday ? " Some readable checks are from a previous calendar day; today's history is not yet complete." : ""}${legacyHistory.length ? " Older history without compatible per-source check receipts is retained for audit, not comparisons." : ""}${discoveryTruncated ? " Older records have left the archive. Counts describe retained records only; momentum is withheld until the comparison window is complete." : ""}` };
 }

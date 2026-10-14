@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="tabs.css?v=20261002-2" />
     <link rel="stylesheet" href="desk-cleanup.css?v=20261009-2" />
     <link rel="stylesheet" href="technology.css?v=20261008-3" />
-    <link rel="stylesheet" href="research.css?v=20261008-3" />
+    <link rel="stylesheet" href="research.css?v=20261014-4" />
     <link rel="stylesheet" href="appearance.css?v=20261002-2" />
   </head>
   <body>
@@ -59,10 +59,11 @@
         <section class="control-group" aria-labelledby="size-heading">
           <h2 id="size-heading">Market cap</h2>
           <div class="cap-toggle" role="group" aria-label="Market cap filter">
-            <button id="capLarge" type="button" aria-pressed="false">Large cap</button>
-            <button id="capSmall" type="button" aria-pressed="false">Small cap</button>
+            <button id="capLarge" type="button" aria-pressed="false">$500M+</button>
+            <button id="capSmall" type="button" aria-pressed="false">Below $500M</button>
+            <button id="capUnknown" type="button" aria-pressed="false">Unknown / N/A</button>
           </div>
-          <p class="range-note">No selection includes all company sizes.</p>
+          <p id="capCoverage" class="range-note">USD, provider-reported values only. Without a size filter, unknowns stay in the list.</p>
         </section>
 
         <section class="control-group" aria-labelledby="platform-heading">
@@ -212,6 +213,10 @@
             </div>
           </details>
           <p id="techResultStatus" class="tech-meta" role="status"></p>
+          <div id="techRefreshStatus" class="intel-refresh-status">
+            <p id="techRefreshMessage" class="tech-meta" role="status" aria-live="polite">Loading published research…</p>
+            <button type="button" class="tech-text-button" data-refresh-monitor disabled>Reload saved research</button>
+          </div>
           <div id="techContent"></div>
           <p id="adoptionFollowStatus" class="adoption-note" role="status">Following and inbox dismissals are saved on this browser, not a notification subscription.</p>
           <details class="tech-method"><summary>How to read this radar</summary><p>Stages are editorial assessments of the cited programs, not probabilities or a ranking of future stock returns. A pilot is not a shipped product; a shipped product is not proof of mass adoption. Multiple pages from one company count as one reporting owner, not independent confirmation.</p><p>Source checks detect page changes, not verified facts. A human must review a disclosure before it becomes an observation. Older disclosures keep their original dates. An overdue review does not erase historical evidence.</p></details>
@@ -234,7 +239,7 @@
             <div>
               <p class="section-kicker">Market psychology at a glance</p>
               <h2 id="movers-heading">Attention map</h2>
-              <p>Separate early ignition from confirmed participation and moves that may already be crowded</p>
+                <p>Compare developing attention, market-aligned activity and crowded moves</p>
             </div>
           </div>
           <div id="moversBoard" class="movers-grid"></div>
@@ -279,7 +284,7 @@
             <div>
               <p class="section-kicker">Co-mention graph, trailing ~90 days</p>
               <h2 id="clusters-heading">Emerging clusters</h2>
-              <p>Ticker groups that keep appearing together in the same headlines or posts, detected by community structure in the co-mention graph — not a curated theme, just a pattern worth a human look.</p>
+              <p>Find possible relationships beyond your tracked themes. Start with a shared headline, then check the underlying business connection.</p>
             </div>
           </div>
           <div id="clustersFeed" class="clusters-feed"></div>
@@ -290,7 +295,7 @@
             <div>
               <p class="section-kicker">Sustained attention + price compression</p>
               <h2 id="springs-heading">Springs board</h2>
-              <p>Coiled: attention holding while price stays tight. Released: the breakout that historically mattered. Dead coil: it compressed and nothing came of it.</p>
+              <p>Coiled: sustained attention with a tight price range. Released: price moved beyond that range. Dead coil: the setup expired. These labels do not predict returns.</p>
             </div>
           </div>
           <div id="springsBoard" class="springs-board"></div>
@@ -409,23 +414,27 @@
         for (const name of bundles) document.write(`<script src="data/${name}.js"><\/script>`);
       }
     </script>
-    <script src="data-quality.js?v=20261009-1"></script>
+    <script src="company-identity.js?v=20261014-1"></script>
+  <script src="data-quality.js?v=20261014-1"></script>
     <script src="adoption-watchlist.js?v=20260925-1"></script>
-    <script src="research-config.js?v=20261009-1"></script>
+    <script src="research-config.js?v=20261010-1"></script>
     <script src="technology-registry.js?v=20261003-1"></script>
-    <script src="technology-model.js?v=20261009-1"></script>
-    <script src="research-model.js?v=20261009-1"></script>
-    <script src="research-views.js?v=20261009-1"></script>
-    <script src="script.js?v=20261009-2"></script>
-    <script src="enhancements.js?v=20261009-1"></script>
-    <script src="adoption.js?v=20261009-1"></script>
+    <script src="technology-model.js?v=20261010-1"></script>
+    <script src="research-model.js?v=20261014-2"></script>
+    <script src="research-loader.js?v=20261014-1"></script>
+    <script src="discovery-notebook.js?v=20261014-2"></script>
+    <script src="discovery-notebook-views.js?v=20261014-1"></script>
+    <script src="research-views.js?v=20261014-3"></script>
+  <script src="script.js?v=20261014-2"></script>
+  <script src="enhancements.js?v=20261013-1"></script>
+    <script src="adoption.js?v=20261014-5"></script>
     <script src="springs.js?v=20261009-1"></script>
     <script src="themes.js?v=20261009-1"></script>
     <script src="phrase-radar.js?v=20261002-2"></script>
-    <script src="clusters.js?v=20261009-1"></script>
+    <script src="clusters.js?v=20261014-1"></script>
     <script src="calibration.js"></script>
     <script src="alerts.js?v=20261002-2"></script>
-    <script src="layout-fix.js?v=20261009-2"></script>
+    <script src="layout-fix.js?v=20261013-1"></script>
     <script src="declutter.js?v=20260925-1"></script>
     <script src="tabs.js?v=20261002-1"></script>
   </body>

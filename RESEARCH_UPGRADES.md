@@ -1,5 +1,603 @@
 # Research intelligence work plan
 
+## October 14 publication-pair release gate
+
+Branch implementation, not deployed:
+
+- The publication verifier now fetches both public research and source-check
+  files and uses the browser loader's shared compatibility validation. A newer
+  research assembly cannot disguise older source checks. Both must be coherent
+  and at least as recent as the expected collection; a compatible company-only
+  assembly can retain the same source-check generation. Invalid local pairs
+  fail before polling. Failed propagation checks retain the last specific error.
+- The scheduled research watchdog rejects malformed or mismatched publication
+  pairs before calculating coverage, including missing source rows and invalid
+  company records. Such coverage is unavailable, not zero or healthy. Existing
+  fixtures now contain the actual schema and source-check timestamps rather than
+  partial objects that could not be served to the browser.
+- Post-publication research health now checks `--live`, matching the market
+  workflow, instead of rechecking only local generated files. Changes to the
+  shared loader, verifier and health command trigger the research workflow.
+- All 423 tests pass on Node 20 and Node 24. Seven added tests cover partial
+  propagation, malformed/missing files, newer assemblies with older checks,
+  compatible newer pairs, invalid local input, safe watchdog failures and live
+  workflow wiring. Local saved research passes: 21/22 active sources readable,
+  5/5 discovery feeds current, 8/8 valid company quotes; warnings remain visible.
+- Read-only production checks still show the release gap: PR #6 is open and
+  mergeable, not merged; main is `f6743ce2e9203218ac5cf304ec2de5b2f9b49366`.
+  Production lacks the branch's full discovery configuration (2/5 branch-defined
+  feeds current). Its market snapshot dated 2026-10-14T00:24:19.372Z has only
+  31/75 recent collected quotes, unsupported capitalization and highlighted
+  headline identity failures under the repaired contracts. A one-attempt public
+  pair check correctly rejects the older deployed source-check generation.
+  These are observed release/configuration and data-quality gaps, not a claim
+  that merging alone will repair provider access or establish adoption.
+- UI verification remains pending from the prior pass. Rechecked the same
+  browser handles: the stalled tab is still listed, no dialog handle is exposed,
+  and the fresh preview's Open scan click still leaves Patterns selected. No
+  additional UI success is inferred. No new automation or deployment was started.
+
+## October 14 discovery-to-investigation UI pass
+
+Branch implementation; browser verification is partially complete, not deployed.
+
+- Reduced discovery-specific header spacing and type scale. Moved the existing
+  Notice → Corroborate → Validate guide into a native, state-preserving disclosure
+  with concrete instructions. Source coverage and history warnings remain
+  visible. Same-size 1440px comparison moved the first lead from 657px to 585px
+  below the viewport top; no claim about conversion or research outcomes.
+- Investigate is now available directly on patterns and Open scan stories, not
+  only after saving and switching to Saved. It opens an unsaved personal plan;
+  no automatic shortlist save, public claim or collector is created. Existing
+  plans use Open investigation. Returning restores the originating mode, search,
+  signal filter, expanded result limit and initiating button focus.
+- Verified direct pattern entry and return focus, keyboard story entry, and
+  48-row expansion. Desktop light and 375px dark views have no horizontal
+  overflow; the fresh preview reports no console errors. All 416 tests pass on
+  Node 20 and Node 24; touched scripts pass syntax checks.
+- Remaining browser checks: filtered/paginated return, dirty-editor cancellation,
+  mobile interactions and the required three stock-selection entry paths. The
+  embedded browser stalled while invoking the existing unsaved-edits confirm
+  dialog. Dialog inspection returned no handle; the original test tab remained
+  listed but unresponsive, and fresh-tab clicks did not change views. Requested
+  user dismissal rather than treating these checks as passed. Only an unsaved
+  QA hypothesis was entered; no test investigation was persisted.
+
+## October 14 broader discovery: public procurement pilot
+
+Review-stage implementation only: not connected to the app, scheduled collection,
+published data or headline-momentum scores.
+
+- Added `scripts/pilot-procurement.mjs` and a bounded, fixture-tested adapter for
+  the [official USAspending public API](https://api.usaspending.gov/). The
+  [transaction contract](https://github.com/fedspendingtransparency/usaspending-api/blob/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_transaction.md)
+  supports a keyword-free sample of federal scientific R&D contract actions
+  (NAICS prefix 5417). It does not cover all technology spending, private demand,
+  grants or technologies purchased under other classifications.
+- One live request returned 100 actions across 99 awards: 30 positive obligation
+  changes, 25 negative changes and 45 zero-dollar changes. The sample reached
+  its cap and the provider reported more results. These are sample composition,
+  not market growth, adoption or newly awarded customer counts. Several records
+  describe work on established programs; new action dates do not imply new tech.
+- Preserves award/modification identity, exact signed cents, original action
+  date, separate observation time and an unknown publication date. Conflicting
+  duplicate identities reject the sample. A failed refresh retains prior
+  evidence and its original successful-check time. One bounded request, no
+  pagination or retries, redirect refusal and response-size/time limits.
+- As the [federal spending guide](https://www.usaspending.gov/federal-spending-guide)
+  explains, obligations represent commitments, not payments. Negative changes
+  can reduce earlier commitments. Do not present these amounts as recipient
+  revenue, delivered products, repeat customers or consumer adoption.
+- Access decision: the official API explicitly provides public access, and the
+  pilot uses factual award metadata and a short description, not full reports
+  or recipient profiles. The API code's license is not treated as a blanket
+  license for every linked document. No account, paid access or terms acceptance.
+- Verification: all 405 tests pass on Node 20 and Node 24, including nine pilot
+  regressions for query scope, identity, dates, money, sampling limits, bounded
+  requests, malformed replies and preservation of prior evidence on failure.
+
+### Procurement journal follow-up
+
+- `procurement-history.mjs` now preserves immutable checked observations and
+  content-addressed record versions. Corrections and reversions retain the same
+  action identity; unchanged observations reuse records. Absence from a capped
+  or empty sample never deletes an action or labels it cancelled. Summary counts
+  mean first observed / record changed / unchanged / not in latest sample, not
+  new awards, growth, adoption or independent confirmation.
+- Validates every retained record, hash, reference, coverage receipt and date
+  before fetching or writing. Rejects conflicting replay and older observations.
+  Original pilot snapshots migrate using their original observation time, not
+  the migration date. Failed checks preserve prior snapshot and history.
+- The pilot command resumes its output history by default. Exclusive output
+  locks prevent overlapping writers; atomic replacement avoids partial JSON.
+  Corrupt files and attempts to replace history from a different prior file fail
+  without changing the destination. Review-stage limits are 400 observations,
+  30,000 unique record versions and 40 MB; reaching a limit requires an explicit
+  archive decision, never silent pruning. Stale locks need process review.
+- Real migration plus one fresh API request retained all 100 original actions,
+  with two observations and no new/changed actions. A real 320-character excerpt
+  ending in a space exposed a reconstruction edge case; its exact original
+  representation is now preserved and regression-tested. This is repeatability
+  evidence, not coverage of delayed records or adoption trends.
+- All 415 tests pass on Node 20 and Node 24. Ten journal tests cover corrections,
+  reversions, disappearance, replay, corrupt metadata, migration, failed refresh,
+  retention limits, automatic resumption and overlapping writers.
+
+Before activation: resolve retention/reuse scope and delayed-record
+reconciliation; choose a documented sampling protocol
+and daily freshness contract; wire source health and failure visibility; create
+a distinct **Public R&D spending** evidence lane. Never mix its counts or action
+dates into research-publication acceleration. Back-test coverage before making
+any trend comparisons. Keep consumer usage, deployments and repeat orders as
+separate evidence gaps requiring their own validated sources.
+
+## October 14 coherent research refresh and recovery
+
+Branch implementation, not deployed:
+
+- Technology now has a shared, compact publication status and reload action on
+  every view. Failed first loads explicitly mean no automatic snapshot, not no
+  activity. Failed later loads name the retained snapshot and offer retry.
+- `research-loader.js` loads research and source checks as one compatible pair.
+  It validates both HTTP and local-file payloads, rejects mismatched source-check
+  generations and older responses, and preserves the last complete pair on
+  failure. Overlapping refresh requests share a single in-flight operation.
+- Refresh progress does not rerender content. Completed refreshes preserve open
+  evidence-review editors and dirty notebook forms; other views keep disclosures
+  and source-health reload focus. No reload initiates a collector or changes its
+  schedule. File-mode copy explicitly says to reopen the page for changed bundles.
+- Isolated browser tests exercised partial download failure, incompatible files,
+  successful retry, failed initial loading, view switching and dirty notebook
+  preservation. Verified desktop light/mobile dark layouts without overflow and
+  normal stock selection through all three entry points. Direct file-URL browser
+  QA was blocked by browser policy; payload validation is covered by unit tests.
+
+## October 14 permanent-company quote integrity
+
+Branch implementation, not deployed:
+
+- The collector, company cards/profiles and research watchdog now share
+  `research-model.js.companyQuote`. A recent timestamp alone is not coverage:
+  require matching record ticker, positive numeric price, explicit three-letter
+  currency, inspectable HTTPS source, valid original date/precision and a
+  consistent collection timestamp. Invalid prices are withheld with a reason
+  and source link; valid observations older than 96 hours remain historical.
+- Quote parsers reject impossible calendar dates and boolean prices. A valid
+  new response can replace an invalid retained quote rather than being blocked
+  by its malformed or future timestamp. Existing retry/cache cadence remains.
+- Removed the capitalization path that copied a quote timestamp onto an
+  undated provider market-cap field. Configured adapters do not provide an
+  independently dated capitalization observation, so valuation stays unknown.
+  Cached legacy valuation is cleared by the collector and rejected by health
+  checks; the UI never displays that unsupported figure.
+- Saved data passes the stricter audit: eight of eight permanent company
+  quotes usable/current. No generated snapshots were changed in this pass.
+  Live production quotes also pass, but the branch watchdog correctly reports
+  missing branch-only discovery feeds (MIT, NIST and Hacker News) on production.
+  That is a deployment/configuration gap, not proof those collectors failed.
+- Isolated browser fixtures covered missing price, mismatched identity and
+  historical price, including source recovery and legacy valuation suppression.
+  Verified 1440px light / 375px dark layouts, no horizontal overflow or console
+  errors, and all three stock-selection entry points on the normal app.
+
+## October 14 personal research checks in the daily brief
+
+Branch implementation, not deployed:
+
+- The daily brief now surfaces up to three active personal investigations,
+  ordered by review date, with overdue/today/upcoming labels and their next
+  evidence check. Paused and closed investigations stay out of the active queue.
+  These UTC dates are a manual checklist, not alerts, collection schedules or
+  company events. Reported-record counts exclude targets and withdrawn records.
+- Personal checks are independent of preset-theme filters, including an empty
+  theme result. View all opens the complete local notebook. With no notebook,
+  one compact Explore new leads action opens the keyword-free Open scan rather
+  than displaying an empty personal-research panel.
+- Returning from the brief to the same investigation resumes pending plan or
+  observation fields without asking to discard them. The pending form reopens
+  and the editor labels unsaved changes both while typing and after rerender.
+  Moving to the notebook shelf or Open scan preserves the discard safeguard.
+- Fixed Open scan navigation reopening a previously active notebook editor.
+  Source-health recovery now clears that editor only after handling unsaved edits.
+- Browser QA used three clearly labeled example investigations on an isolated
+  origin, not user research. Verified due ordering, theme-filter independence,
+  notebook access, unsaved-edit round trips, broad-discovery recovery, desktop
+  light mode and 375px dark mode without horizontal overflow or console errors.
+
+Scheduled-refresh reconciliation: production commit `f6743ce` arrived during
+verification. Accepted its newer company records and quotes for all eight
+companies while preserving all 1,066 branch document versions, discovery
+history and actual source-check timestamps. The upstream document inventory
+was unchanged from its parent and was already fully represented in the branch.
+Recomputed discovery from retained source state without adding collection-day
+receipts; the one-day comparable history and momentum hold remain intact.
+Research health passes with 21/22 active sources readable, five current
+discovery feeds, four content checks and two intentional permission pauses.
+
+## October 14 notebook recovery and storage safety
+
+Branch implementation, not deployed. Fixed a data-loss edge case where saving a
+valid investigation cleared the dirty-form flag even when local storage failed;
+closing the page could then discard session-only records without the app's exit
+warning.
+
+- Added a tested storage session that distinguishes form submission from a
+  verified write/read-back. Quota errors, denied getters, silent write failures,
+  malformed saved data and cross-tab changes stay explicit; existing storage is
+  not overwritten after an unresolved conflict or initial read failure.
+- Exit protection now covers both pending form edits and unpersisted committed
+  records, including imported backups and withdrawal changes. Browser unload
+  prompts are best-effort, not a recovery mechanism; the visible session-only
+  warning and export instruction remain necessary.
+- Export text states that the backup includes session-only records but excludes
+  unsaved form edits. Requesting a download or showing the copyable JSON does not
+  claim a completed backup or clear protection. No server-side storage or sync
+  is implied.
+- Verified in an isolated quota-failure preview with synthetic research only:
+  failed-persistence import remained accessible after a reload attempt; editor
+  labels stayed session-only; exported JSON contained the complete record.
+  Phone width 375px had no horizontal overflow. User notebook data and appearance
+  preferences were not used by the isolated preview.
+
+## October 14 discovery history: actual daily collection, not cached replays
+
+Branch implementation, not deployed. The previous builder could treat a
+still-readable cached source check as a new UTC history day, even though the
+collector itself follows Toronto calendar days. Earlier history saved topic IDs
+but not the source-check receipts needed to verify daily coverage.
+
+- `discovery-history.mjs` now requires actual successful checks from every
+  discovery source on the same Toronto date, usable dated samples, matching
+  endpoints and a compatible collection contract. Rebuilding cached data cannot
+  mint another day. Contract identity includes owner, lane, extractor version and
+  publication-age policy as well as endpoint/extraction configuration.
+- Each comparable day records its per-source check timestamps. Missing/invalid
+  receipts, conflicting duplicate dates and future dates cannot count. Later
+  failed retries preserve earlier successful daily receipts but block a current
+  growth claim. Calendar arithmetic covers both DST transitions.
+- A growth percentage needs today plus all preceding 28 collection dates, a
+  complete retained story window and a nonzero prior story count. The public
+  health gate rejects unsupported percentages and inconsistent count arithmetic.
+  These remain sampled story counts, never adoption or customer growth.
+- Legacy rows remain in a separate audit list (90-day retention, at most 500
+  records), not the comparable history. Existing lead first-observed dates survive
+  a contract reset; a methodology change cannot create a newly discovered lead.
+- Fresh real-source collection at 2026-10-14 00:59 UTC: all five discovery feeds
+  readable with dated samples, 11 current phrase leads and 363 deduplicated dated
+  stories in the 28-day window. One new-contract Toronto collection day; two
+  legacy rows retained. Existing archive gaps remain flagged and all momentum
+  percentages stay withheld. Overall source status remains 21/22 active readable,
+  with two permission pauses and the QuantumScape 403 retained explicitly.
+
+## October 14 source audit and measured-traction follow-up
+
+Branch implementation, not deployed:
+
+- Review → Source health is now an exception-first audit, with separate counts
+  for readable active sources, content checks, collection checks and pauses.
+  Readability includes sources with content warnings; it is not an adoption or
+  accuracy score. Detailed dates, samples, terms and limitations are disclosed
+  per source. Healthy and paused groups start collapsed.
+- The audit stays available even when theme filters match nothing. Its source
+  universe is global, while the evidence-review queue still respects filters.
+  Open disclosures survive saved-data reloads. A recovery action opens the
+  keyword-free Open scan with its search and lane filters reset.
+- The scheduled health checker shares source identity/readability logic and
+  reports missing dates and empty samples outside the discovery feeds too.
+  Irregular filings are not given arbitrary daily publication deadlines, and
+  undated capability pages remain page-change checks, not dated adoption.
+- Saved collection inspected: 2026-10-13 22:49 UTC, 21/22 active sources readable,
+  five discovery feeds current, two T-Mobile sources paused. QuantumScape's
+  newsroom refuses collection (403). Toyota/FCC samples have no matching items;
+  BMW/AST link inventories lack extracted publication dates. These remain
+  explicit warnings, not fabricated zeros or permission workarounds.
+
+### Next measured-use adapter: CPUC autonomous-vehicle reporting
+
+Candidate only; **not connected to the scheduled collector**. Inspection of the
+[official quarterly reporting page](https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/quarterly-reporting)
+and its linked deployment template and 2026 Q2 archive confirmed a monthly
+aggregate CSV inside the public Waymo driverless-deployment report. A bounded
+range read retrieved the small monthly member without downloading or extracting
+the trip-level records. No public app metrics have been created from it.
+
+Activation gates:
+
+1. Resolve reuse of company-submitted data. CPUC's [conditions of use](https://www.cpuc.ca.gov/about-cpuc/conditions-of-use)
+   distinguish state-owned information from third-party material. Public
+   availability is not a blanket reuse clearance; do not infer authorization
+   from the regulator hosting a company submission. The robots endpoint returned
+   an unsuccessful response during inspection, which is not a permission grant.
+2. Keep California driverless **deployment** separate from pilot programs,
+   other states and all-US marketing totals. The dictionary defines `TotalTrips`
+   as completed trips—not paid rides, unique users, revenue or independent audit.
+   Passenger counts likewise are not unique people. Preserve redactions.
+3. Use CSV Year/Month as the reporting period; the filename month is submission
+   time. Start with the 2025 reporting definition and do not silently splice
+   earlier periods across the changed calendar/template. Verify at least two
+   consecutive quarter archives before drawing a trend.
+4. Poll the index daily but label the underlying releases quarterly and the
+   observations monthly. Preserve revisions, original period, collection time,
+   archive member and checksum. A fresh check does not make an old period new.
+5. Bound all ranges/decompression/CSV sizes, validate archive consistency and
+   checksum, refuse an ignored Range request, reject ambiguous duplicate months,
+   and retain last-valid observations with a failure warning. Never fetch the
+   granular trip/location files to fill this aggregate-only feature.
+6. Show an accessible monthly chart with a value table, scope, reporting lag and
+   original link. Machine-parsed reports are not automatically accepted editorial
+   claims. Test revisions, redactions, missing months and incompatible scopes.
+
+### Finding trends we did not already name
+
+Keep a broad discovery lane without a theme-keyword gate; balance sources so
+one prolific publisher cannot dominate it. Then separate three evidence lanes:
+research novelty, attention, and measured use. Save unfamiliar leads and record
+one falsifiable next check. Promote a lead only after original evidence and
+compatible measurements support it—not because several outlets repeat a release.
+
+Remaining coverage work: permitted consumer-demand and repeat-use datasets,
+international/non-English sources, and time series of delivered output or paid
+usage. Search interest, repository stars and community votes can help prioritize
+research but must not be presented as customers. Battery yield/deliveries and
+satellite paying usage remain unknown until suitable disclosures are reviewed.
+
+## October 14 attention-comparison integrity
+
+Branch implementation, not yet deployed:
+
+- Reproduced two misleading comparison paths: prior-source totals were not
+  normalized for rejected company matches, and global source health could
+  substitute for a ticker missing from one window. Current-side partial
+  collection and unobserved catalog zeros were also insufficiently gated.
+- Added a versioned sampled-attention contract and explicit per-ticker observed
+  sources. Comparisons need usable observations and source health on both sides,
+  no identity exclusions, equal sample counts/spacing, and dated ordered windows.
+  No source is silently dropped from a user's requested comparison scope.
+  Old snapshots remain unverified; no historical version is fabricated.
+- A valid observed zero can produce -100%; a missing observation cannot. A zero
+  baseline has no percentage growth. Named-source fixture comparisons still
+  work, including unaffected sources alongside quarantined prior news.
+- History now shows only the latest comparable common-source sequence (up to
+  14 saved snapshots), names those sources and breaks on missing records,
+  coverage changes or long gaps. Dated all-source totals remain inspectable
+  separately. Snapshot windows can overlap and are not unique-post counts,
+  continuous daily coverage, adoption or predictions of returns.
+- Added comparison notes/window dates to detail and CSV. Unsafe rank deltas
+  are withheld when source coverage or the tracked universe differs. Public
+  health rejects unsupported saved attention percentages.
+- Renamed the mixed Attention-map group Developing attention and display each
+  member's true stage. Replaced social mention/news hit counts in the summary
+  with weighted activity, and removed the unsupported claim that low captured
+  activity proves the crowd has not arrived. Scoring thresholds are unchanged.
+- Full refresh completed with a 2026-10-14 00:04:58 UTC collection timestamp:
+  75/75 recent collected quotes, 74 complete comparisons, 75 versioned attention
+  records, and no unsupported headline/cap/attention claims in the health gate.
+  This is the first new-protocol collection; all prior attention coverage remains
+  unverified, so no all-source percentage is promoted. 68 company caps remain
+  unknown and 7 ETFs are not applicable. Provider failures remain explicit.
+- All 81 existing daily snapshot records are preserved exactly; a new UTC
+  date brings the archive to 82 unique dates. JSON/file-browser payloads match.
+  Normal ledger retention pruned 29 dormant tickers; no history dates were lost.
+  Push notifications were disabled. This does not verify the hosted schedule.
+- Verification: 346 tests on Node 24 and Node 20, syntax/diff checks, desktop
+  1440px and phone 375px. Checked source-history disclosures, exact stage labels,
+  all three stock-selection routes and phone detail dismissal. No horizontal
+  overflow or console errors. A full-history normalization probe returned 1,308
+  distinct tickers in roughly 352ms locally; not a mobile performance guarantee.
+- Still required: historical detector provenance/calibration, a permitted
+  capitalization source, representative adoption metrics, production merge/
+  deployment approval and verification of hosted scheduled refreshes. Healthy
+  sample comparisons alone do not establish any of these release requirements.
+
+## October 13 release follow-up
+
+Capitalization integrity follow-up (branch implementation, not yet deployed):
+
+- Removed the Desk's SEC share-count × price enrichment. It did not establish
+  share-class/ADR basis, period or corporate-action alignment. SEC issuer-name
+  enrichment remains; no share-count requests are needed for Desk size labels.
+- Probed the configured Yahoo chart response for AAPL, GOOG and SXTC: all three
+  returned prices, symbol and instrument type, but no capitalization or shares
+  outstanding field. This is bounded evidence, not a claim about every ticker.
+  No new provider or undocumented authenticated endpoint has been connected.
+- The shared capitalization gate requires a provider-reported value with its
+  own metric date, collection date, exact ticker, currency and source URL.
+  Unknown, stale, foreign-currency and non-equity observations cannot become USD
+  size classifications. Fresh quote dates cannot refresh old capitalization.
+- Historical estimates stay in the raw archive and are retained as unverified
+  during normalization. The board, detail, both controller paths, risk labels
+  and CSV export all withhold them. Size coverage is explicit, with Unknown and
+  specific empty-state recovery. $500M ranges replace misleading large/small
+  labels without changing the threshold. Unknown size adds no numeric penalty.
+- Added a public-health failure for unsupported capitalization or size tiers,
+  and coverage warnings for missing values. A clean health result is not proof
+  of complete fundamental-data coverage. Regression fixtures cover legacy
+  ADR/class/split-like rows, identity, currency, invalid values/dates/URLs,
+  stale observations, aggregate carry-forward, filters, risk labels and exports.
+- Remaining requirement: select a permitted, sustainable capitalization source
+  with field-specific dates and methodology. Current adapters intentionally
+  leave this measure unknown; no active adapter is claimed to fill the new
+  evidence contract. Verify licensing, share-class treatment and hosted daily
+  availability before enabling it. This gap remains on the release checklist.
+- Full collector completed at 23:53:52 UTC: 75/75 recent collected quotes, 74
+  price/volume comparisons, 66 equities with unavailable capitalization and 9
+  ETFs marked not applicable. No unsupported caps or headline mismatches passed
+  the shared health gate. JSON and file-browser fallbacks match. Push alerts
+  were disabled. This does not certify hosted scheduled-run performance.
+- Desktop (1440px) and phone (375px) checks verified filter recovery, unknown
+  metrics, selection feedback, detail navigation, no horizontal overflow and
+  no console errors. A missing pressed state on the new Unknown button was
+  caught in the browser and fixed with a regression test.
+- Verification: all 337 tests pass on Node 24 and Node 20; syntax and diff
+  checks pass. Stock links from the board, Research radar and Attention map
+  still select the correct detail. No production deployment has been performed.
+- Follow-up UI finding: the Attention map groups both `early` and `building`
+  stages under "Early ignition", while the detail labels them differently.
+  Reconcile the grouping label and per-row stage without retuning score rules.
+  Some saved explanation copy still calls weighted social activity "mentions";
+  audit that copy alongside prior-period comparability and detector provenance.
+
+Full-refresh validation follow-up (branch implementation, not yet deployed):
+
+- Ran the complete market collector with outbound push notifications disabled.
+  The 23:33 UTC run recovered 75/75 newly collected recent quotes and 74 complete
+  price/volume comparisons, versus production's 31/75 and 30. One comparison
+  remained quarantined; missing candidate symbols and provider refusals stayed
+  in the warnings. This does not establish performance from GitHub's network.
+- Manual inspection of that first refreshed dataset caught additional false
+  matches that the initial lexical health gate did not: Take-Two from the verb
+  "take", Johnson & Johnson from a reporting person's surname, and ETF tickers
+  mistaken for the underlying business. Added regressions and stricter rules:
+  compound company names and SEC filing aliases require the full company name;
+  funds require their full fund name, cashtag or exchange-qualified symbol.
+- The published health watchdog now independently flags unsupported highlighted
+  headlines and market-news identities, even when all quotes are present.
+  Quarantined records remain warnings, not promoted evidence. Malformed news
+  payloads fail rather than slipping past identity checks.
+- Paused Yahoo Public News's broad RSS endpoint after saved 404 failures on
+  October 9, 12 and 13. Existing CNBC/MarketWatch/Google and other wires remain;
+  Yahoo price quotes are separate and active. A no-network regression verifies
+  the paused adapter cannot issue a request. No replacement source is assumed.
+- Added stage progress messages to the collector so long profile/enrichment
+  stages are distinguishable from a stalled job. The full-history normalization
+  check covered 81 snapshots / 6,075 stock rows in about 305 ms on this machine;
+  this is not a browser/mobile performance guarantee.
+- Re-ran the full collector after those fixes and the Yahoo-news pause. The
+  23:40:21 UTC dataset contains 75/75 newly collected recent quotes, 74 complete
+  comparisons, 14 news/quote records and no highlighted identity mismatches.
+  Manually checked all 14 titles against their named issuers: the Take-Two,
+  Johnson reporting-person and SK ETF false positives are absent; SK hynix's
+  own company record remains. One extreme-price comparison is still withheld.
+  The four paused sources are explicit; StockTwits refusal and candidate quote
+  failures remain warnings. No external push alerts were sent.
+- Verification: 328 tests pass on Node 24 and Node 20. The stronger live-site
+  check correctly fails the older production snapshot; the regenerated local
+  snapshot passes. Generated files come from the normal collector, not manual
+  replacements. Both JSON and file-browser data copies are verified together.
+
+Historical finding addressed above: the Desk's former `enrichMarketCaps`
+multiplies the latest SEC share value by its saved price without establishing
+share-class/ADR basis, share period or corporate-action consistency. The
+research-company economics path already avoids this assumption, but the Desk
+does not. Replace it with attributable provider capitalization or explicit
+unknowns, repair cap filters/risk labels/exports, and verify with class/split/
+stale fixtures before claiming data readiness. Historical detector outputs also
+need identity-version provenance before they can be retrospectively certified.
+
+Company/headline identity follow-up (branch implementation, not yet deployed):
+
+- Reproduced the SXTC false match: a generated `china` alias attached Samsung /
+  SK Hynix and Visa news to China SXT Pharmaceuticals. Shared issuer matching now
+  rejects generic/geographic aliases, requires exact symbol boundaries and
+  stronger evidence for common-word tickers. Aggregator publisher suffixes and
+  GDELT domain/country metadata do not establish company identity.
+- Collection records the matching symbol/name and method. Per-ticker searches
+  are filters, not identity proof; an unrelated result cannot stop the next
+  news source from being tried. HN comment matching uses the same identity rules.
+- Browser normalization quarantines unsupported saved headlines, preserving
+  titles/dates/HTTPS links in Source evidence. Since the top-six archive cannot
+  reconstruct all original article weights, the affected source total is excluded
+  from scoring and tone/change are unknown. Multi-day views preserve that
+  exclusion and audit trail. Raw historical files are not rewritten or "repaired".
+- Fixed the global news panel reading a file-only global on HTTP pages, then
+  incorrectly falling back to filtered board rows. Both paths now use the loaded
+  snapshot independently of search/filter selection. Market measurements can
+  no longer become fallback "notable chatter" after a headline is removed.
+- Verification: 324 tests pass on Node 24/20, including actual collection,
+  browser feed execution, exact symbol classes/prefixes, legitimate Meta/Bank of
+  America matches, generic alias rejection, source-total quarantine, multi-day
+  preservation and escaped audit links. Desktop/light and 375px/dark QA verified
+  SXTC's rejected evidence, independent WDC/STX/LCID news and no horizontal overflow.
+- Limits: lexical identity evidence is not full article/entity verification or
+  causality. Historical detector outputs outside the normalized Desk remain
+  historical, not retroactively certified. Ambiguous legacy brand aliases can
+  be withheld pending stronger issuer evidence. Deployment and the first full
+  scheduled collection still require release verification.
+
+Market reliability follow-up (branch implementation, not yet deployed):
+
+- Production snapshot at 19:57 UTC contained 75 stocks: 31 newly collected
+  recent quotes, 30 complete comparisons, 5 still-recent retained prices,
+  1 stale retained price and 38 missing quotes at the audit time. The scheduled
+  job was green despite this loss of coverage.
+- Reproduced Yahoo's symbol-specific 404 for BBBYQ followed by a successful GME
+  quote. Missing symbols had been counted as provider failures, causing the
+  shared host circuit breaker to skip valid tickers. Yahoo 404 now leaves the
+  provider available; 403/429 still trigger backoff. No access blocks bypassed.
+- Added a published market health check after refresh and in the twice-daily
+  watchdog, independent of research health. Operational targets are at least
+  50 stocks, 75% recent quotes collected in this snapshot, and publication within
+  96 hours (warning after 36). Retained prices cannot satisfy collection targets;
+  quarantined comparisons stay unknown. Targets are availability requirements,
+  not investment-model tuning or a guarantee of complete market coverage.
+- Desk summary explicitly separates refreshed quotes, retained prices and
+  usable comparisons. The existing compact layout and source disclosures remain.
+- Live health correctly fails the published 31/75 snapshot. A bounded real
+  adapter probe confirms BBBYQ 404 no longer prevents GME from returning a dated
+  quote. Full-universe recovery still needs verification after deployment.
+- Verification: all 313 tests pass on Node 24 and Node 20, including missing-symbol
+  transport, genuine refusals, partial/retained/stale coverage, malformed data,
+  zero comparisons, workflow wiring and Desk counts. Syntax/whitespace checks
+  pass. Desktop/light and 375px/dark browser checks show no page overflow or
+  console errors.
+- Follow-up found during browser QA: a Samsung/SK Hynix headline appears beside
+  SXTC in the news panel. Audit ticker/headline identity matching next; do not
+  treat retrieval by ticker query as proof that an article concerns that company.
+
+Personal investigations follow-up (branch implementation, not yet deployed):
+
+- Discover → Saved → Investigate turns any retained story/pattern into a personal
+  hypothesis, defined metric/unit/scope, next evidence check and dated review
+  checkpoint. Separate metric series are supported without rewriting old units.
+- Manually entered observations require original source links, reporting owner,
+  publication date, period and limitations. Zero is distinct from missing.
+  Future reported results, impossible dates, percentage values over 100 and
+  unsafe source URLs are rejected. Future targets remain explicitly targets.
+- Corrections withdraw/restore old observations without deleting their content.
+  No automatic growth or adoption score is calculated from these manual entries.
+- Link metadata persists outside the shared discovery archive. Browser-local
+  backup export includes a copyable fallback; restore validates all entries and
+  rejects conflicting versions without overwriting. Concurrent-tab writes and
+  unavailable/corrupt storage preserve existing data and show session-only warnings.
+- Limits: 25 investigations / 40 records each. This is a research workspace, not
+  cross-device sync, an automated source adapter or published editorial approval.
+  Public theme promotion and adoption-series collectors remain separate work.
+- A browser trial exposed unscoped Desk column widths squeezing research tables.
+  Those rules now apply only to the Desk; notebook source columns retain usable
+  width and horizontal scrolling stays inside evidence tables on phones.
+- Verification: 15 notebook/layout regressions cover provenance, impossible dates,
+  zero/missingness, future targets, fixed metric definitions, immutable record IDs,
+  retention bounds, atomic restore conflicts, escaping and due-date semantics.
+  Browser QA on isolated local origins covered save/reload, real JSON download,
+  restore into a clean notebook, withdrawal/restoration, separate metric series,
+  cross-tab conflict preservation, simultaneous form edits and rejected future
+  reported results. Test records are explicitly labeled QA and never entered
+  repository evidence. Desktop/light and phone/dark checks preserve readable
+  tables without page overflow. Full suite: 298 tests.
+
+- Open scan now supports saving individual source records, including stories
+  outside the extracted pattern vocabulary. The local shortlist mixes stories
+  and patterns, preserves source dates, gives lane-specific validation steps,
+  and exposes missing records rather than silently dropping saved IDs.
+- Production checked October 13: research snapshot 21:31 UTC, 19/20 active
+  sources readable, 8/8 quotes within the health window. QuantumScape newsroom
+  still returns 403; two T-Mobile sources remain permission-paused. Research
+  refresh, Pages deployment and the public watchdog all succeeded. The new
+  five-feed discovery configuration remains branch-only until deployment.
+- Promotion into a new curated technology still needs editorial review. A
+  saved story is not a verified theme or an automated adoption metric. Additional
+  consumer-demand, usage and international sources remain separate gated work.
+- Release reconciliation preserved all 948 branch and 800 main document versions
+  (972 unique before collection), both identity histories and source events.
+  The normal collector then produced 1,030 retained versions; health passed
+  with 21/22 active sources, 5/5 discovery feeds and 8/8 quote coverage. Old
+  discovery archive gaps still suppress momentum; this merge does not invent
+  missing history. Main's newer company quote timestamps are retained.
+- Verification: 283 deterministic tests pass on Node 24 and Node 20. Browser
+  checks covered story save/reload/remove, empty-state focus return, a 375px dark
+  layout and 1440px light layout without horizontal overflow or console errors.
+
+
 Original implementation scope (upgrades 1–9): daily collection; living source contracts; permanent company
 coverage; reviewed evidence revisions; battery programs; satellite rollouts;
 emerging-topic discovery; company economics; a focused daily brief.
@@ -106,7 +704,7 @@ Configuration is in `research-config.js`. To publish a reviewed claim:
    normal Git review. Corrections append; originals stay in history. Editorial
    stage/checkpoint assessments are updated separately.
 
-Retention: 800 document versions / 180 days, 400 source events, 90 discovery
+Retention: 4,000 document versions / 180 days, 400 source events, 90 discovery
 history days, a 200-topic / 90-day saved-lead archive and 120 quote observations per company. Export local review drafts
 before clearing browser storage; follows/drafts do not sync across devices.
 
@@ -204,7 +802,7 @@ and dark mode (375px mobile viewport, no horizontal page overflow or console
 warnings/errors). Permission-paused sources are explicitly separated in the
 freshness watchdog as well as the UI; they are not disguised as outages.
 
-Retention policy: full document text is bounded to 180 days / 800 versions except
+Retention policy (expanded October 10): full document text is bounded to 180 days / 4,000 versions except
 published-review references; compact hashed identity/version dates persist without
 expiry. Co-mention attribution persists per hashed URL while only the trailing
 13 weeks contributes to the live graph. Earlier unattributed graph totals remain
@@ -219,6 +817,102 @@ made. Existing scheduled jobs/retries remain best-effort and timestamped. Do not
 mark all H01–H16 production-closed from green local tests alone.
 
 The audit details below preserve the original evidence and acceptance criteria.
+
+### October 10 · Open discovery and source-quality pass
+
+The earlier visual/audit PR #5 was merged on October 9. A read-only production
+health check on October 10 passed with 19/20 active sources and 8/8 recent quotes:
+QuantumScape's newsroom returned 403; two T-Mobile collectors remained
+permission-paused. These are distinct from a stale local checkout. This is an
+observed snapshot, not a guarantee that future scheduled runs succeed.
+
+Implemented in the next branch:
+
+- Replace the energy-only MIT feed with its broad research feed. Remove the
+  keyword-filtered Microsoft company blog from open discovery (retain it for
+  the existing AI-work theme). Add NIST's official broad news feed and a bounded
+  sample from the official Hacker News API. Total: 24 contracts, 22 active,
+  five open-discovery feeds. No accounts or paid subscriptions were added.
+- Hacker News: 30 top + 20 new + 10 Show HN IDs, deduplicated; at most three
+  concurrent item requests. Never fetch story destinations or user profiles.
+  Deleted/dead/non-story records are excluded. A request failure marks the
+  sample incomplete, not a readable zero. Preserve submission dates separately
+  from article dates and nullable point/comment observations. These counts do
+  not create new document versions or prove product use.
+- MIT is link/title/date metadata only; no copied story body or imagery.
+  New source contracts link to publisher/API documentation and state their
+  purpose, bias and content-quiet threshold. Metadata access is not a blanket
+  license for commercial republication of full articles or media.
+- Open scan exposes dated, unmapped stories without the pattern extractor's
+  technical-vocabulary gate. A feed-balanced preview prevents community volume
+  from hiding quieter science sources. It is bounded to 120 stories, not a
+  census. Pattern grouping remains deliberately heuristic; unfamiliar wording
+  can be missed there, and adjacent patterns may overlap.
+- Linked primary stories and exact repeated titles are deduplicated. HN is one
+  reporting owner, not a new independent owner for every contributor or linked
+  domain. Paraphrased syndication and research-institution conflicts still need
+  editorial checks.
+- Momentum requires each of the preceding 28 UTC collection days, unchanged
+  coverage and a nonzero prior-period sample. Config/method changes reset
+  comparability. A missing day, quiet/failed feed or clipped 28-day archive
+  withholds momentum. Compact identity memory keeps truncation warnings alive
+  after full-text eviction. The enlarged archive remains bounded to 4,000
+  versions / 180 days, with published reviews pinned.
+- Discover now separates Patterns, Open scan and browser-local Saved leads;
+  includes a signal-type filter; shows concise evidence counts and a next check;
+  and moves methodology/source detail into an accessible disclosure. Unknown
+  adoption is never turned into a numeric traction score.
+- The existing twice-daily watchdog also checks discovery coverage and loss of
+  an entire research/community lane, and warns about readable-but-undated/quiet
+  feeds. Six-hour collection opportunities, Toronto calendar-day checks and
+  bounded retries remain best-effort. Browser reloads do not initiate collection.
+  The brief, source-health labels and watchdog now share a 36-hour check window.
+
+The local collection returned 21/22 active sources, all five discovery feeds,
+and 8/8 recent quotes. The compact identity ledger also exposed 20 discovery
+records that had already left the previous 800-version text archive. That gap
+is now visible: current checks continue to accumulate, but counts are explicitly
+limited to retained stories and momentum remains withheld until a complete
+28-day comparison window exists. Missing text was not reconstructed or invented.
+
+How to take an unfamiliar lead from attention to traction:
+
+1. Daily automated intake: broad research + developer attention. Inspect both
+   patterns and Open scan; save useful patterns. A lead is not an investment call.
+2. Editorial corroboration: resolve the original story, separate institutions,
+   companies and customers, and require distinct evidence over time. Do not use
+   reprints or a funding announcement as a customer-demand count.
+3. Define the adoption test before promoting a new theme: paying active users
+   and retention for software; qualified customer deliveries, repeat orders,
+   yield and cost for hardware; usage, reliability and capacity for infrastructure.
+   Keep units, denominators, dates, geography and targets explicit. Add the theme
+   and primary/customer/regulator contracts through repository review.
+4. Only then map public-company exposure, product-level economics and valuation.
+   Technology progress does not establish stock upside.
+
+Remaining H16 work: a theme-proposal workflow for unclassified stories; consented
+or licensed consumer-demand/app-usage datasets; repository/release activity using
+official APIs; broader international coverage; and product-specific usage/revenue
+series. GitHub stars, Google Trends and app usage are **not connected** in this
+pass. A future weekly editorial review should investigate the strongest leads and
+sample unclassified stories to audit recall; no unattended editorial approval or
+new notification subscription was created.
+
+Primary source contracts reviewed: [MIT RSS](https://news.mit.edu/rss),
+[MIT reuse policy](https://news.mit.edu/terms-of-use),
+[NIST RSS](https://www.nist.gov/coo/nist-rss-feeds),
+[official Hacker News API](https://github.com/HackerNews/API).
+arXiv expansion is not enabled here; its [API terms](https://info.arxiv.org/help/api/tou.html)
+require a single connection and at least three seconds between legacy API requests.
+
+Verification: 280 tests pass on Node 20 and Node 24, including 17 new discovery
+regressions. Browser checks at 375, 980 and 1440px cover both palettes, source
+disclosures, research/community filtering, search-empty recovery, saved-lead
+persistence/removal, pagination focus and no horizontal overflow. The browser
+reported no console warnings/errors. Test-only saves were removed afterward.
+
+Release gate: publish through a new PR, then verify hosted data and the first
+scheduled run after merge. Do not equate local collection success with deployment.
 
 Execution order:
 
@@ -543,3 +1237,86 @@ October 9 source disposition:
    duplicate events. Decide explicitly whether contaminated history needs repair
    or a warning; no silent historical rewrite. Mark items complete only with
    linked test/review evidence and disclose any remaining limitations.
+
+### October 14 — cluster provenance and next-step UI
+
+- Replaced pair-only graph history with recheckable original headline, source,
+  URL and issuer observations. Preserved all 1,443 legacy documents for audit;
+  none can contribute graph weight. Same URL/different text cannot fabricate
+  a pair, and repeat collection cannot inflate its weight.
+- Manual inspection of the fresh collection exposed TV, SNES and forum SMG
+  as false ticker matches. Clusters now require distinctive company names,
+  cashtags or exchange-qualified symbols; bare abbreviations are insufficient.
+  This intentionally reduces recall. Five current documents support ten
+  tickers and five edges; no community qualifies. The prior 13 groups are not
+  evidence of themes disappearing—they used an incompatible matching method.
+- Retained proof-quarter leaders recalculate neighbors from the checked graph;
+  hot-monitor version 3 excludes old neighbor lists. Original historical alerts
+  are preserved. Model thresholds have not been tuned or validated by this fix.
+- Cluster cards show document counts, original headline links, date limitations
+  and a concrete business-relationship check. Empty states link directly to
+  Discover → Open scan. Removed the unsupported Springs claim that a release
+  was a breakout that “historically mattered.”
+- Fresh market collection at 2026-10-14 00:23 UTC produced 75/75 collected
+  quotes and 74/75 complete comparisons. Capitalization remains unverified;
+  attention percentages remain withheld; one ticker's saved news is quarantined.
+  StockTwits returned 403 and GDELT failed. All 81 earlier daily snapshots and
+  all legacy co-mention documents were preserved; JSON/file-mode bundles match.
+- Existing technology intake checks daily, including weekends, with six-hour
+  retry opportunities. The latest technology snapshot has all five discovery
+  feeds readable, but QS returns 403 and two T-Mobile sources are paused.
+  Readability is not accuracy, independence, permission for full-text reuse,
+  exhaustive recall or evidence of adoption. Automatic consumer usage, retention,
+  deployments, repeat orders and product-level revenue series remain gaps.
+- 354 tests pass on Node 20 and Node 24, including replay, legacy quarantine,
+  cross-headline contamination, bare-acronym false positives, inherited neighbor
+  removal, original-link safety and UI guidance. Browser checks cover stock
+  selection from board/radar/map at 1440px and 375px. Not merged or deployed;
+  hosted collection still needs verification after separately approved release.
+
+#### Broader discovery intake — next source pilot, not enabled
+
+Keep three independent evidence lanes: research novelty, developer/community
+interest, and demonstrated use. Sample unclassified stories as well as popular
+patterns, deduplicate reporting owners, and only compare time windows with
+unchanged source coverage. Promotion to a tracked theme needs an explicit
+adoption metric, dated primary/customer evidence, and a review checkpoint.
+
+- OpenAlex is a candidate for broader research metadata beyond the current
+  institutional feeds. Its [API reference](https://help.openalex.org/api/)
+  supports works/topics and basic keyless access; its
+  [filter documentation](https://help.openalex.org/api/filtering/) supports
+  publication-date windows but reserves updated/created-date synchronization
+  filters for paid plans. No paid access or account was activated.
+- A bounded, three-record keyless probe returned HTTP 200, but its date-sorted
+  sample included journal-title records rather than three unambiguous new
+  papers. A working endpoint is not a validated discovery feed. A pilot must
+  verify record type, original publication dates, DOI/source identity, duplicate
+  editions, language/geography coverage and sampling bias before enabling it.
+  Do not label those returned dates as new breakthroughs or use raw counts as
+  acceleration. Retain metadata only; full-text rights are separate.
+- GitHub's [starring documentation](https://docs.github.com/en/rest/activity/starring)
+  distinguishes stargazers from subscribers; even its `watchers_count` field
+  represents stars. A future developer lane must keep repository attention,
+  release/maintenance activity and actual product usage separate. No GitHub
+  popularity collector or automatic adoption series was added in this pass.
+
+#### Scheduled-data reconciliation before release
+
+The production data commit `2b317766ddfbce499363954f764572a8e0e60cb5`
+arrived during verification and conflicted with the review branch. Reconciled
+the JSON histories by identity/date rather than selecting one whole file:
+82 daily dates, 401 incoming-only ledger rows, 2,301 tracked ledger tickers,
+and 1,651 preserved legacy graph records including conflicting revisions.
+Unchanged-base values accept the other branch's change; competing ledger rows
+retain the repaired branch's version, with both originals recoverable from the
+merge parents. The next real collection rewrote today's ledger rows normally.
+
+Post-reconciliation full collection at 2026-10-14 00:36:42 UTC again passed
+market health: 75 collected quotes, 74 complete comparisons, no unsupported
+highlighted headline matches. The same 81 earlier daily snapshots remain
+unchanged, and all generated JSON/browser bundles match. GDELT now returned
+without an error but had no matched tickers; StockTwits remained forbidden.
+No external push notifications were sent. The graph remains five supporting
+documents / ten tickers / five edges / no qualifying communities. These results
+are branch verification, not a production deployment.
