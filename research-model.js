@@ -7,6 +7,32 @@
   const safeUrl = value => { try { const u = new URL(value); return u.protocol === "https:" && !u.username && !u.password && (!u.port || u.port === "443") ? u.href : ""; } catch { return ""; } };
   function ageHours(value, now = Date.now()) { const time = date(value); return time === null ? null : (Number(now) - time) / 3600000; }
   function freshness(value, now = Date.now(), hours = 36) { const age = ageHours(value, now); return age === null ? "missing" : age < -.1 ? "invalid" : age > hours ? "overdue" : "current"; }
+  // Transport health and evidence usefulness are separate. A recent HTTP success
+  // cannot turn an undated item, permission pause or missing sample into traction.
+  function sourceAudit(sources, monitor, now = Date.now()) {
+    const rows = sources.map(source => {
+      const state = monitor?.sources?.[source.id] || {};
+      const paused = source.accessStatus === "permission-required" || state.status === "paused";
+      const compatible = !state.sourceUrl || state.sourceUrl === source.url;
+      const checked = freshness(state.lastSuccessAt, now, source.freshnessHours || source.intervalHours * 2 || 36);
+      const readable = !paused && compatible && state.status === "ok" && checked === "current";
+      const publication = freshness(state.newestPublicationAt, now, source.quietAfterDays ? source.quietAfterDays * 24 : Infinity);
+      let issue = "", label = "Readable", next = "Inspect the original before accepting a claim; collection does not verify adoption.";
+      if (paused) { issue = "paused"; label = "Paused"; next = "Resolve access permission or choose an authorized replacement. Retained records are historical."; }
+      else if (!compatible) { issue = "collection"; label = "Source changed"; next = "Collect the configured endpoint before using its previous check as current coverage."; }
+      else if (state.status === "error") { issue = "collection"; label = "Check failed"; next = /403|401/.test(state.error || "") ? "Review source access or use another authorized source. Do not bypass the refusal." : "Wait for the scheduled retry; use dated original evidence in the meantime."; }
+      else if (!readable) { issue = "collection"; label = checked === "overdue" ? "Check overdue" : "Check unconfirmed"; next = "Inspect the scheduled collection. Reload only retrieves the saved snapshot."; }
+      else if (source.mode === "links" && state.matchedItems === 0) { issue = "content"; label = "No matching items"; next = "Inspect the feed and keyword filter. An empty sample is not proof that development stopped."; }
+      else if (source.mode === "links" && (!Number.isInteger(state.matchedItems) || state.matchedItems < 0)) { issue = "content"; label = "Sample count unknown"; next = "Check the extraction contract before interpreting this source's coverage."; }
+      else if (source.mode === "links" && (publication === "missing" || publication === "invalid" || state.datedItems === 0)) { issue = "content"; label = publication === "invalid" ? "Future content date" : "Dates unconfirmed"; next = "Open the originals to establish publication dates; the collection date is not the story date."; }
+      else if (source.quietAfterDays && publication === "overdue") { issue = "content"; label = "Content quiet"; next = `Check the original feed and parser: no extracted item is dated within ${source.quietAfterDays} days. This may be a normal publishing gap.`; }
+      return { source, state, readable, issue, label, next };
+    });
+    const groups = { attention: rows.filter(r => r.issue && r.issue !== "paused"), readable: rows.filter(r => !r.issue), paused: rows.filter(r => r.issue === "paused") };
+    groups.attention.sort((a, b) => Number(b.issue === "collection") - Number(a.issue === "collection") || a.source.name.localeCompare(b.source.name));
+    return { rows, groups, active: rows.length - groups.paused.length, readable: rows.filter(r => r.readable).length,
+      collectionIssues: rows.filter(r => r.issue === "collection").length, contentIssues: rows.filter(r => r.issue === "content").length };
+  }
   function validateReview(review, { themeIds = [], knownIds = [], documents = [], evidence = [], config } = {}) {
     const errors = [];
     if (!review || typeof review !== "object") return ["Review must be an object"];
@@ -106,5 +132,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, ageHours, freshness, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
+  return { safeUrl, ageHours, freshness, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
 });

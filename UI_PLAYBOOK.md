@@ -7,6 +7,16 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 14 source audit: `research-model.js.sourceAudit` separates recent
+collection success from missing/quiet content and deliberate pauses. The brief,
+Source health and scheduled research watchdog share this contract. Source health
+always covers the configured universe, independently of the review queue's theme
+filters. `research-views.js.sourceHealth` renders exception-first rows, with
+readable and paused groups collapsed. Preserve `data-disclosure` keys across
+rerenders. Irregular filings do not need daily publications; undated product
+pages are page-change checks. A readable source with no dated matching content
+is not proof of adoption. Do not merge these dimensions into one green score.
+
 October 14 cluster evidence follow-up: `clusters.js` accepts integrity version 3
 only. Co-mention history preserves original headline/source/issuer observations
 and rechecks identity every run. Different headlines at the same URL cannot

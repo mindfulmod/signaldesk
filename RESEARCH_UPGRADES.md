@@ -1,5 +1,77 @@
 # Research intelligence work plan
 
+## October 14 source audit and measured-traction follow-up
+
+Branch implementation, not deployed:
+
+- Review → Source health is now an exception-first audit, with separate counts
+  for readable active sources, content checks, collection checks and pauses.
+  Readability includes sources with content warnings; it is not an adoption or
+  accuracy score. Detailed dates, samples, terms and limitations are disclosed
+  per source. Healthy and paused groups start collapsed.
+- The audit stays available even when theme filters match nothing. Its source
+  universe is global, while the evidence-review queue still respects filters.
+  Open disclosures survive saved-data reloads. A recovery action opens the
+  keyword-free Open scan with its search and lane filters reset.
+- The scheduled health checker shares source identity/readability logic and
+  reports missing dates and empty samples outside the discovery feeds too.
+  Irregular filings are not given arbitrary daily publication deadlines, and
+  undated capability pages remain page-change checks, not dated adoption.
+- Saved collection inspected: 2026-10-13 22:49 UTC, 21/22 active sources readable,
+  five discovery feeds current, two T-Mobile sources paused. QuantumScape's
+  newsroom refuses collection (403). Toyota/FCC samples have no matching items;
+  BMW/AST link inventories lack extracted publication dates. These remain
+  explicit warnings, not fabricated zeros or permission workarounds.
+
+### Next measured-use adapter: CPUC autonomous-vehicle reporting
+
+Candidate only; **not connected to the scheduled collector**. Inspection of the
+[official quarterly reporting page](https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/quarterly-reporting)
+and its linked deployment template and 2026 Q2 archive confirmed a monthly
+aggregate CSV inside the public Waymo driverless-deployment report. A bounded
+range read retrieved the small monthly member without downloading or extracting
+the trip-level records. No public app metrics have been created from it.
+
+Activation gates:
+
+1. Resolve reuse of company-submitted data. CPUC's [conditions of use](https://www.cpuc.ca.gov/about-cpuc/conditions-of-use)
+   distinguish state-owned information from third-party material. Public
+   availability is not a blanket reuse clearance; do not infer authorization
+   from the regulator hosting a company submission. The robots endpoint returned
+   an unsuccessful response during inspection, which is not a permission grant.
+2. Keep California driverless **deployment** separate from pilot programs,
+   other states and all-US marketing totals. The dictionary defines `TotalTrips`
+   as completed trips—not paid rides, unique users, revenue or independent audit.
+   Passenger counts likewise are not unique people. Preserve redactions.
+3. Use CSV Year/Month as the reporting period; the filename month is submission
+   time. Start with the 2025 reporting definition and do not silently splice
+   earlier periods across the changed calendar/template. Verify at least two
+   consecutive quarter archives before drawing a trend.
+4. Poll the index daily but label the underlying releases quarterly and the
+   observations monthly. Preserve revisions, original period, collection time,
+   archive member and checksum. A fresh check does not make an old period new.
+5. Bound all ranges/decompression/CSV sizes, validate archive consistency and
+   checksum, refuse an ignored Range request, reject ambiguous duplicate months,
+   and retain last-valid observations with a failure warning. Never fetch the
+   granular trip/location files to fill this aggregate-only feature.
+6. Show an accessible monthly chart with a value table, scope, reporting lag and
+   original link. Machine-parsed reports are not automatically accepted editorial
+   claims. Test revisions, redactions, missing months and incompatible scopes.
+
+### Finding trends we did not already name
+
+Keep a broad discovery lane without a theme-keyword gate; balance sources so
+one prolific publisher cannot dominate it. Then separate three evidence lanes:
+research novelty, attention, and measured use. Save unfamiliar leads and record
+one falsifiable next check. Promote a lead only after original evidence and
+compatible measurements support it—not because several outlets repeat a release.
+
+Remaining coverage work: permitted consumer-demand and repeat-use datasets,
+international/non-English sources, and time series of delivered output or paid
+usage. Search interest, repository stars and community votes can help prioritize
+research but must not be presented as customers. Battery yield/deliveries and
+satellite paying usage remain unknown until suitable disclosures are reviewed.
+
 ## October 14 attention-comparison integrity
 
 Branch implementation, not yet deployed:

@@ -82,13 +82,11 @@
       <button type="button" class="tech-button" data-export-tech="${esc(t.id)}">Export research JSON</button></article>`;
   }
   function renderInbox(themes) {
-    const ids = new Set(themes.map(t => t.id));
-    const sources = data.sources.filter(s => !s.themes.length || s.themes.some(id => ids.has(id)));
-    const healthLabels = { "paused": "Permission review", "not-checked": "Not checked", "unavailable": "Unavailable", "stale": "Check overdue", "no-matches": "No matching links", "current": "Readable" };
-    const intro = monitorStatus === "loading" ? "Loading saved source checks…" : monitorStatus === "error" ? "Saved source checks could not be loaded. This is not proof that sources are unchanged." : `Source collection ${dateTime(monitor?.generatedAt)}. Seven-day scheduling, calendar-day checks and retry opportunities every six hours. Reloading does not trigger collection.`;
+    // Health is a full-collection audit, independent of the document filters.
+    const sources = data.sources;
     return views.reviewQueue(themes, research, { drafts, reviewFilter, queueLimit, showDismissed, restrictThemes: followedOnly || byId("techSector").value !== "all" || byId("techStage").value !== "all", query: byId("techSearch").value, dismissed: [...dismissed] }) + `
       <label class="tech-check"><input type="checkbox" id="techShowDismissed" ${showDismissed ? "checked" : ""} /> Include locally dismissed changes</label>
-      <details class="intel-disclosure" id="researchSourceHealth"><summary>Source health · ${sources.length} configured sources</summary><p>${esc(intro)}</p><button type="button" class="tech-button" data-refresh-monitor ${monitorStatus === "loading" || researchStatus === "loading" ? "disabled" : ""}>Reload saved research</button><div class="tech-source-list">${sources.map(s => { const state = monitor?.sources?.[s.id], health = model.monitorState(s, state); return `<article class="tech-source"><div><h5>${link(s.url, s.name)}</h5><p class="tech-meta">${esc(s.tier)} · ${esc(s.expectedCadence)} · ${state?.matchedItems ?? "—"} matching documents</p><p class="tech-meta">Last success: ${dateTime(state?.lastSuccessAt)} · last attempt: ${dateTime(state?.lastAttemptAt)}</p>${s.accessNote || state?.accessNote ? `<p class="tech-warning">${esc(s.accessNote || state.accessNote)}</p>` : ""}${state?.error ? `<p class="tech-warning">${esc(state.error)} · ${state.failureStreak} failed check${state.failureStreak === 1 ? "" : "s"}. Retry eligible ${dateTime(state.nextAttemptAt)}.</p>` : ""}</div><span class="tech-health health-${health}">${healthLabels[health]}</span></article>`; }).join("")}</div></details>`;
+      ${views.sourceHealth(sources, monitor, { loading: monitorStatus === "loading" || researchStatus === "loading", failed: monitorStatus === "error" })}`;
   }
   function render() {
     const themes = themeList(), selected = reviewedThemes().find(t => t.id === selectedId);
@@ -114,6 +112,7 @@
     else if (view === "discovery" && notebookEditing) content.innerHTML = notebookViews.editor({ ...notebookEditing, ...notebookFields }, notebookPlans.some(p => p.id === notebookEditing.id));
     else if (view === "discovery") content.innerHTML = views.discovery(research, byId("techSearch").value, discoveryFollowed, discoverySavedOnly, { mode: discoveryMode, lane: discoveryLane, limit: discoveryLimit, monitor });
     else if (view === "trackers") content.innerHTML = views.trackers(trackerType, research, trackerState);
+    else if (view === "inbox") content.innerHTML = renderInbox(themes);
     else if (!themes.length) content.innerHTML = empty("Try a broader search, another stage, or turn off Following only. Your saved follows will not be deleted.");
     else if (view === "brief") content.innerHTML = views.brief(themes, research, monitor, [...followed], researchStatus);
     else if (view === "radar") content.innerHTML = `<div class="tech-view-head"><div><h3>The technology radar</h3><p>Compare editorial evidence stages, then open a theme for its sources. These are not forecasts.</p></div></div><div class="tech-radar-grid">${themes.map(card).join("")}</div>`;
@@ -294,7 +293,8 @@
       save(followKey, followed); render();
       root.querySelector(`[data-follow="${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
     } else if (button.id === "techFollowedOnly") { followedOnly = !followedOnly; selectedId = null; setUrl(); render(); }
-    else if (button.hasAttribute("data-show-health")) { view = "inbox"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); const health = byId("researchSourceHealth"); health.open = true; health.scrollIntoView({ block: "start" }); health.querySelector("summary").focus(); }
+    else if (button.hasAttribute("data-show-health")) { view = "inbox"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); const health = byId("researchSourceHealth"); if (health) { health.open = true; health.scrollIntoView({ block: "start" }); health.querySelector("summary").focus(); } }
+    else if (button.hasAttribute("data-open-discovery-scan")) { view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoveryMode = "open"; discoverySavedOnly = false; discoveryLane = "all"; discoveryLimit = 24; byId("techSearch").value = ""; setUrl(); render(); content.scrollIntoView({ block: "start" }); content.querySelector("h3")?.setAttribute("tabindex", "-1"); content.querySelector("h3")?.focus(); }
     else if (button.dataset.techView) { view = button.dataset.techView; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); }
     else if (button.dataset.openTech) { selectedId = button.dataset.openTech; selectedCompany = null; reviewingId = null; setUrl(); render(); focusProfile(); }
     else if (button.dataset.openCompany) { selectedCompany = button.dataset.openCompany; selectedId = null; reviewingId = null; view = "companies"; setUrl(); render(); byId("companyProfileTitle")?.focus({ preventScroll: true }); content.scrollIntoView({ block: "start" }); }
