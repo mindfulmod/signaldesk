@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T09:42:19.686Z",
+  "generatedAt": "2026-10-14T15:27:08.235Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -426,14 +426,14 @@
       "id": "fcc-releases",
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
-      "status": "error",
-      "lastAttemptAt": "2026-10-14T09:42:19.686Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-14T15:27:08.235Z",
+      "lastSuccessAt": "2026-10-14T15:27:08.235Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-11T10:59:52.949Z",
-      "nextAttemptAt": "2026-10-14T10:42:19.686Z",
-      "failureStreak": 1,
-      "error": "Unexpected rss response content type",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
       "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "items": [],
       "seenLinks": [
@@ -441,7 +441,7 @@
         "https://www.fcc.gov/edoc/425768"
       ],
       "matchedItems": 0,
-      "extractedEntries": 2,
+      "extractedEntries": 3,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
