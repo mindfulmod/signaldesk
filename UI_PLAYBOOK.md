@@ -7,6 +7,16 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+Research refresh: `research-loader.js` validates and commits the research/monitor
+pair together. `research.sourceCheckedAt` must match `monitor.generatedAt`;
+company-only assembly may make `research.generatedAt` newer. Never substitute
+half a failed download or an older CDN response into an existing snapshot.
+Concurrent reloads share one operation. `#techRefreshStatus` stays outside
+`#techContent` so progress/error updates do not destroy active fields or focus.
+Keep dirty notebooks and evidence-review editors untouched when loading ends.
+The HTTP action retrieves published files, not live collection; file mode only
+rechecks loaded bundles and explains that changed files require reopening.
+
 Permanent-company quote integrity: `research-model.js.companyQuote` is shared
 by the collector, company cards/profiles and research watchdog. Current coverage
 requires a usable positive price, record identity, currency, original date,

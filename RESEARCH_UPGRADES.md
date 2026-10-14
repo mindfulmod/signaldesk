@@ -1,5 +1,26 @@
 # Research intelligence work plan
 
+## October 14 coherent research refresh and recovery
+
+Branch implementation, not deployed:
+
+- Technology now has a shared, compact publication status and reload action on
+  every view. Failed first loads explicitly mean no automatic snapshot, not no
+  activity. Failed later loads name the retained snapshot and offer retry.
+- `research-loader.js` loads research and source checks as one compatible pair.
+  It validates both HTTP and local-file payloads, rejects mismatched source-check
+  generations and older responses, and preserves the last complete pair on
+  failure. Overlapping refresh requests share a single in-flight operation.
+- Refresh progress does not rerender content. Completed refreshes preserve open
+  evidence-review editors and dirty notebook forms; other views keep disclosures
+  and source-health reload focus. No reload initiates a collector or changes its
+  schedule. File-mode copy explicitly says to reopen the page for changed bundles.
+- Isolated browser tests exercised partial download failure, incompatible files,
+  successful retry, failed initial loading, view switching and dirty notebook
+  preservation. Verified desktop light/mobile dark layouts without overflow and
+  normal stock selection through all three entry points. Direct file-URL browser
+  QA was blocked by browser policy; payload validation is covered by unit tests.
+
 ## October 14 permanent-company quote integrity
 
 Branch implementation, not deployed:

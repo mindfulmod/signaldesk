@@ -27,6 +27,7 @@
   if (params.get("tracker") === "satellite") trackerType = "satellite";
   if (params.get("scan") === "open") discoveryMode = "open";
   let followedOnly = false, storageWorking = true;
+  let refreshFocusTarget = null;
   function save(key, values) { try { localStorage.setItem(key, JSON.stringify([...values])); } catch { storageWorking = false; } }
   function setUrl() {
     try {
@@ -140,6 +141,7 @@
       const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button"; action.dataset.notebookSeries = ""; action.textContent = "Track a different metric →";
       byId("notebookPlanForm")?.append(action);
     }
+    updateSnapshotStatus();
   }
   function persistNotebook() {
     notebookStorage.save(notebookPlans);
@@ -169,37 +171,49 @@
     if (notebookDirty && form?.id?.startsWith("notebook")) { const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = `Personal investigation · unsaved changes${notebookStorage.issue ? " · session only" : ""}`; }
   });
   window.addEventListener("beforeunload", event => { if (notebookStorage.shouldWarnBeforeUnload(notebookDirty)) { event.preventDefault(); event.returnValue = ""; } });
-  async function loadMonitor() {
-    monitorStatus = "loading"; if (view === "inbox" && !selectedId) render();
-    try {
+  function updateSnapshotStatus() {
+    const state = researchLoader.state, banner = byId("techRefreshStatus"), retained = Boolean(state.research);
+    const stamp = retained ? dateTime(state.research.generatedAt) : "";
+    const localFile = location.protocol === "file:", instruction = localFile ? "Local file snapshot. Reopen this page to load changed files; collection is separate." : "Reload retrieves published files, not live collection.";
+    const stale = retained && (researchModel.freshness(state.research.generatedAt) !== "current" || researchModel.freshness(state.monitor.generatedAt) !== "current");
+    banner.dataset.state = state.status;
+    byId("techRefreshMessage").textContent = state.status === "loading"
+      ? `Loading published research…${retained ? ` Keeping the ${stamp} snapshot visible.` : " Reviewed profiles and personal notes remain available."}`
+      : state.status === "error"
+        ? `${state.error} ${retained ? `Showing the retained ${stamp} snapshot; it was not refreshed.` : "No automatic research snapshot is loaded; empty results do not mean no activity."} ${instruction}`
+        : retained ? `${stale ? "Historical publication" : "Saved publication"} · ${stamp}. ${instruction}${reviewingId || notebookDirty ? " Your open editor is unchanged." : ""}`
+          : "Loading published research…";
+    byId("techRefreshMessage").classList.toggle("tech-warning", state.status === "error" || stale);
+    for (const button of root.querySelectorAll("[data-refresh-monitor]")) {
+      button.disabled = state.status === "loading";
+      button.textContent = state.status === "loading" ? "Loading…" : localFile ? "Recheck local snapshot" : state.status === "error" ? "Retry loading research" : "Reload saved research";
+    }
+  }
+  const researchLoader = window.SIGNALDESK_RESEARCH_LOADER.create({
+    read: async name => {
       if (location.protocol === "file:") {
-        if (!window.SIGNALDESK_TECH_MONITOR) throw new Error("Missing file bundle");
-        monitor = window.SIGNALDESK_TECH_MONITOR;
-      } else {
-        const response = await fetch(`data/technology-monitor.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
-        if (!response.ok) throw new Error("Saved checks unavailable");
-        const candidate = await response.json();
-        if (candidate.schemaVersion !== 1 || !Array.isArray(candidate.events) || !candidate.sources) throw new Error("Invalid monitor payload");
-        monitor = candidate;
+        const candidate = name === "research" ? window.SIGNALDESK_RESEARCH : window.SIGNALDESK_TECH_MONITOR;
+        if (!candidate) throw new Error("Missing file bundle");
+        return candidate;
       }
-      monitorStatus = "ready";
-    } catch { monitorStatus = "error"; }
-    if (!reviewingId) render();
-  }
-  async function loadResearch() {
-    researchStatus = "loading";
-    try {
-      let candidate = window.SIGNALDESK_RESEARCH;
-      if (location.protocol !== "file:") {
-        const response = await fetch(`data/research.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
-        if (!response.ok) throw new Error("Saved research unavailable"); candidate = await response.json();
-      }
-      if (candidate?.schemaVersion !== 1 || !Array.isArray(candidate.documents) || !Array.isArray(candidate.reviews) || !candidate.companies) throw new Error("Invalid research payload");
-      research = candidate; researchStatus = "ready";
-      drafts = researchModel.reconcileDrafts(drafts, research.reviews); save(draftKey, drafts);
-    } catch { researchStatus = "error"; }
-    if (!reviewingId) render();
-  }
+      const response = await fetch(`data/${name}.json?t=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("Saved publication unavailable");
+      return response.json();
+    },
+    onChange: state => {
+      researchStatus = monitorStatus = state.status;
+      research = state.research; monitor = state.monitor;
+      if (state.status === "ready") { drafts = researchModel.reconcileDrafts(drafts, research.reviews); save(draftKey, drafts); }
+      // Loading state updates stay outside the content, so typing and focus survive.
+      if (state.status === "loading") refreshFocusTarget = document.activeElement?.hasAttribute("data-refresh-monitor") ? { area: content.contains(document.activeElement) ? "content" : "banner", view } : null;
+      const restoreReload = state.status !== "loading" && refreshFocusTarget?.view === view && (document.activeElement === document.body || document.activeElement?.hasAttribute("data-refresh-monitor"));
+      if (state.status !== "loading" && !reviewingId && !notebookDirty) {
+        render();
+      } else updateSnapshotStatus();
+      if (restoreReload) (refreshFocusTarget.area === "content" ? content : byId("techRefreshStatus")).querySelector("[data-refresh-monitor]")?.focus({ preventScroll: true });
+      if (state.status !== "loading") refreshFocusTarget = null;
+    }
+  });
   function download(name, value) {
     const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }));
     const a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -321,7 +335,7 @@
     else if (button.hasAttribute("data-back-tech")) { const id = selectedId; selectedId = null; setUrl(); render(); root.querySelector(`[data-open-tech="${CSS.escape(id)}"]`)?.focus(); }
     else if (button.hasAttribute("data-clear-tech")) { byId("techSearch").value = ""; byId("techSector").value = "all"; byId("techStage").value = "all"; followedOnly = false; selectedId = null; setUrl(); render(); byId("techSearch").focus(); }
     else if (button.dataset.stock) window.SIGNALDESK_FIND_STOCK?.(button.dataset.stock);
-    else if (button.hasAttribute("data-refresh-monitor")) { loadMonitor(); loadResearch(); }
+    else if (button.hasAttribute("data-refresh-monitor")) researchLoader.load();
     else if (button.dataset.dismiss) { const id = button.dataset.dismiss; if (dismissed.has(id)) dismissed.delete(id); else dismissed.add(id); save(dismissedKey, dismissed); render(); byId("techShowDismissed")?.focus(); }
     else if (button.dataset.exportTech) {
       const t = reviewedThemes().find(t => t.id === button.dataset.exportTech);
@@ -329,5 +343,5 @@
       const url = URL.createObjectURL(blob), a = document.createElement("a"); a.href = url; a.download = `signaldesk-${t.id}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
   });
-  render(); loadMonitor(); loadResearch();
+  render(); researchLoader.load();
 })();
