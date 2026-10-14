@@ -33,8 +33,35 @@ published data or headline-momentum scores.
   regressions for query scope, identity, dates, money, sampling limits, bounded
   requests, malformed replies and preservation of prior evidence on failure.
 
-Before activation: resolve retention/reuse scope; add revision-aware historical
-storage and delayed-record reconciliation; choose a documented sampling protocol
+### Procurement journal follow-up
+
+- `procurement-history.mjs` now preserves immutable checked observations and
+  content-addressed record versions. Corrections and reversions retain the same
+  action identity; unchanged observations reuse records. Absence from a capped
+  or empty sample never deletes an action or labels it cancelled. Summary counts
+  mean first observed / record changed / unchanged / not in latest sample, not
+  new awards, growth, adoption or independent confirmation.
+- Validates every retained record, hash, reference, coverage receipt and date
+  before fetching or writing. Rejects conflicting replay and older observations.
+  Original pilot snapshots migrate using their original observation time, not
+  the migration date. Failed checks preserve prior snapshot and history.
+- The pilot command resumes its output history by default. Exclusive output
+  locks prevent overlapping writers; atomic replacement avoids partial JSON.
+  Corrupt files and attempts to replace history from a different prior file fail
+  without changing the destination. Review-stage limits are 400 observations,
+  30,000 unique record versions and 40 MB; reaching a limit requires an explicit
+  archive decision, never silent pruning. Stale locks need process review.
+- Real migration plus one fresh API request retained all 100 original actions,
+  with two observations and no new/changed actions. A real 320-character excerpt
+  ending in a space exposed a reconstruction edge case; its exact original
+  representation is now preserved and regression-tested. This is repeatability
+  evidence, not coverage of delayed records or adoption trends.
+- All 415 tests pass on Node 20 and Node 24. Ten journal tests cover corrections,
+  reversions, disappearance, replay, corrupt metadata, migration, failed refresh,
+  retention limits, automatic resumption and overlapping writers.
+
+Before activation: resolve retention/reuse scope and delayed-record
+reconciliation; choose a documented sampling protocol
 and daily freshness contract; wire source health and failure visibility; create
 a distinct **Public R&D spending** evidence lane. Never mix its counts or action
 dates into research-publication acceleration. Back-test coverage before making
