@@ -85,6 +85,10 @@ for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "en
   const quoteAt = new Date().toISOString();
   const capEvidence = (ticker, value) => ({ version: 1, method: "provider-reported", ticker, value, currency: "USD", instrumentType: "EQUITY", asOf: quoteAt, collectedAt: quoteAt, provider: "Test provider", url: "https://example.org/capitalization" });
   context.current = { generatedAt: quoteAt, signals: [signal("INTC", { marketCapEvidence: capEvidence("INTC", 100_000_000), previousSources: { ApeWisdom: 4 }, previousCoverage: ["ApeWisdom"], momentum: 162.5, sources: { ApeWisdom: 1, "Google News": 30, "Price/Volume": 5 }, latest: [{ source: "Google News", title: "Intel reports earnings", published: quoteAt }] }), signal("PEP", { marketCapEvidence: capEvidence("PEP", 1_000_000_000) })] };
+  context.current.sourceHealth = [src("ApeWisdom")];
+  Object.assign(context.current.signals[0], { attentionMetricsVersion: 1, attentionObservedSources: ["ApeWisdom"] });
+  const prior = { generatedAt: new Date(Date.parse(quoteAt)-86400000).toISOString(), sourceHealth: [src("ApeWisdom")], signals: [signal("INTC", { attentionMetricsVersion: 1, attentionObservedSources: ["ApeWisdom"], sources: { ApeWisdom: 4 } })] };
+  context.current.signals[0] = quality.attachAttentionComparison(context.current.signals[0], [context.current], [prior]);
   vm.runInContext('snapshot=current; history={snapshots:[]}; getState=()=>({sources:["ApeWisdom"],query:"",start:"",end:""}); capFilter="small"; watchlist=new Set(["INTC"]); watchlistFilter=true;', context);
   const items = context.filteredSignals(), intel = items.find(i => i.ticker === "INTC");
   assert.equal(intel.momentum, -75); assert.equal(intel.discovery.activeSources, 1);
@@ -93,6 +97,8 @@ for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "en
   context.exportCsv();
   const csv = await downloaded().text();
   assert.match(csv, /INTC/); assert.doesNotMatch(csv, /PEP/); assert.match(csv, /attention_weights_not_posts/);
+  assert.match(csv, /attention_current_window_end,attention_prior_window_end,attention_comparison_note/);
+  assert.match(csv, /Change in sampled weighted activity/);
   const sample = signal("INTC", { signalScore: 30 });
   const scores = [-.01, 0, .01, 1, 10].map(momentum => context.discoveryProfile({ ...sample, momentum }).score);
   assert.ok(scores.every((score, i) => !i || score >= scores[i-1]), scores.join(","));

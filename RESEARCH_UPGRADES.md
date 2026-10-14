@@ -1,5 +1,53 @@
 # Research intelligence work plan
 
+## October 14 attention-comparison integrity
+
+Branch implementation, not yet deployed:
+
+- Reproduced two misleading comparison paths: prior-source totals were not
+  normalized for rejected company matches, and global source health could
+  substitute for a ticker missing from one window. Current-side partial
+  collection and unobserved catalog zeros were also insufficiently gated.
+- Added a versioned sampled-attention contract and explicit per-ticker observed
+  sources. Comparisons need usable observations and source health on both sides,
+  no identity exclusions, equal sample counts/spacing, and dated ordered windows.
+  No source is silently dropped from a user's requested comparison scope.
+  Old snapshots remain unverified; no historical version is fabricated.
+- A valid observed zero can produce -100%; a missing observation cannot. A zero
+  baseline has no percentage growth. Named-source fixture comparisons still
+  work, including unaffected sources alongside quarantined prior news.
+- History now shows only the latest comparable common-source sequence (up to
+  14 saved snapshots), names those sources and breaks on missing records,
+  coverage changes or long gaps. Dated all-source totals remain inspectable
+  separately. Snapshot windows can overlap and are not unique-post counts,
+  continuous daily coverage, adoption or predictions of returns.
+- Added comparison notes/window dates to detail and CSV. Unsafe rank deltas
+  are withheld when source coverage or the tracked universe differs. Public
+  health rejects unsupported saved attention percentages.
+- Renamed the mixed Attention-map group Developing attention and display each
+  member's true stage. Replaced social mention/news hit counts in the summary
+  with weighted activity, and removed the unsupported claim that low captured
+  activity proves the crowd has not arrived. Scoring thresholds are unchanged.
+- Full refresh completed with a 2026-10-14 00:04:58 UTC collection timestamp:
+  75/75 recent collected quotes, 74 complete comparisons, 75 versioned attention
+  records, and no unsupported headline/cap/attention claims in the health gate.
+  This is the first new-protocol collection; all prior attention coverage remains
+  unverified, so no all-source percentage is promoted. 68 company caps remain
+  unknown and 7 ETFs are not applicable. Provider failures remain explicit.
+- All 81 existing daily snapshot records are preserved exactly; a new UTC
+  date brings the archive to 82 unique dates. JSON/file-browser payloads match.
+  Normal ledger retention pruned 29 dormant tickers; no history dates were lost.
+  Push notifications were disabled. This does not verify the hosted schedule.
+- Verification: 346 tests on Node 24 and Node 20, syntax/diff checks, desktop
+  1440px and phone 375px. Checked source-history disclosures, exact stage labels,
+  all three stock-selection routes and phone detail dismissal. No horizontal
+  overflow or console errors. A full-history normalization probe returned 1,308
+  distinct tickers in roughly 352ms locally; not a mobile performance guarantee.
+- Still required: historical detector provenance/calibration, a permitted
+  capitalization source, representative adoption metrics, production merge/
+  deployment approval and verification of hosted scheduled refreshes. Healthy
+  sample comparisons alone do not establish any of these release requirements.
+
 ## October 13 release follow-up
 
 Capitalization integrity follow-up (branch implementation, not yet deployed):

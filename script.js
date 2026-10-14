@@ -265,12 +265,7 @@ function historySnapshots() {
 // have a single data point until they recur — these helpers degrade to "no
 // trend yet" / "NEW" rather than inventing continuity.
 function tickerHistory(ticker) {
-  return historySnapshots()
-    .map((snap) => {
-      const s = (snap.signals || []).find((x) => x.ticker === ticker);
-      return s ? { date: snap.date, mentions: window.SIGNALDESK_QUALITY.attentionTotal(s.sources), signalScore: Number(s.signalScore) || 0 } : null;
-    })
-    .filter(Boolean);
+  return window.SIGNALDESK_QUALITY.attentionHistory(historySnapshots(), ticker);
 }
 
 // Rank of every ticker in the snapshot immediately before the latest one,
@@ -285,6 +280,14 @@ function previousRankMap() {
   const snaps = historySnapshots();
   if (snaps.length < 2) return null;
   const prev = snaps[snaps.length - 2];
+  // Different source coverage or a changed universe makes a rank delta look
+  // like stock movement when it may only be a collection change.
+  const current = currentSnapshotEntry();
+  if (!current || current.signals.length !== prev.signals.length ||
+      !current.signals.every(item => prev.signals.some(s => s.ticker === item.ticker) &&
+        state.sources.filter(s => !quality.MARKET_SOURCES.includes(s) && !quality.PAUSED_SOURCES[s]).every(s =>
+          quality.attentionCoverageFor(current, item).includes(s) &&
+          quality.attentionCoverageFor(prev, prev.signals.find(p => p.ticker === item.ticker)).includes(s)))) return null;
   if (!(prev.signals || []).every(s => s.marketMetricsVersion === 2)) return null;
   const sorted = quality.scoreSignals((prev.signals || []).map(s => quality.scopeSignal(quality.normalizeSignal(s), state.sources))).sort((a, b) => {
     if (rankMode === "mentions") return (Number(b.mentions) || 0) - (Number(a.mentions) || 0);
@@ -328,24 +331,20 @@ function rankBadge(ticker, currentRank, prevRanks) {
 }
 
 function detailTrendMarkup(item) {
-  const hist = tickerHistory(item.ticker);
-  if (hist.length < 2) {
-    return `
-    <div class="detail-section trend-section">
-      <h3>All-source attention history</h3>
-      <p class="muted-note">First appearance in the tracked window — a trend line builds as ${escapeHtml(item.ticker)} recurs across daily snapshots.</p>
-    </div>`;
-  }
-  const mentions = hist.map((h) => h.mentions);
+  const hist = tickerHistory(item.ticker), observations = hist.observations || [], series = hist.series || [];
+  const saved = observations.length ? `<details class="desk-disclosure"><summary>Saved observations <span>Last ${observations.length} snapshots</span></summary><p class="data-caveat">All-source weighted totals after known exclusions, not post counts. Missing tickers are not zero; these totals may not be comparable.</p><ul>${observations.map(row => `<li>${escapeHtml(row.date || "Undated")}: ${row.mentions === null ? "Not captured" : `${shortFmt.format(row.mentions)} saved weight`}</li>`).join("")}</ul></details>` : "";
+  if (series.length < 2) return `<div class="detail-section trend-section"><h3>Attention history</h3><p class="muted-note">No comparable trend yet. At least two successive snapshots need the same observed sources, healthy collection and valid company matching. Missing or excluded coverage is not zero.</p>${saved}</div>`;
+  const mentions = series.map((h) => h.mentions);
   const first = mentions[0];
   const last = mentions[mentions.length - 1];
-  const pct = first ? ((last - first) / first) * 100 : 0;
+  const pct = first > 0 ? ((last - first) / first) * 100 : null;
   const dir = last >= first ? "up" : "down";
   return `
     <div class="detail-section trend-section">
-      <h3>All-source attention history <span class="trend-span">${hist.length} snapshots</span></h3>
+      <h3>Comparable source activity <span class="trend-span">${series.length} snapshots</span></h3>
       <div class="trend-spark">${sparkline(mentions, { w: 300, h: 56, pad: 3, fluid: true })}</div>
-      <p class="trend-foot"><span class="momentum ${dir}">${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%</span> weighted attention, ${shortFmt.format(first)} → ${shortFmt.format(last)}. Global saved context, independent of source filters; coverage can differ between snapshots.</p>
+      <p class="trend-foot">${pct === null ? "Percentage change unavailable from a zero baseline." : `<span class="momentum ${dir}">${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%</span>`} Sampled weight: ${shortFmt.format(first)} → ${shortFmt.format(last)}. ${escapeHtml(series[0].date)} to ${escapeHtml(series.at(-1).date)}.</p>
+      <p class="data-caveat">Same sources: ${escapeHtml(hist.sources.join(", "))}. Saved observations, not unique posts or continuous daily coverage; source windows can overlap. Independent of board filters.</p>${saved}
     </div>`;
 }
 
@@ -822,7 +821,7 @@ function renderMovers(items) {
     .slice(0, 5);
 
   const columns = [
-    { title: "Early ignition", sub: "Participation before broad crowding", list: early, value: (item) => `${item.discovery.score} setup` },
+    { title: "Developing attention", sub: "Early ignition or building activity — see each stock’s stage", list: early, value: (item) => `${escapeHtml(item.discovery.stage)} · ${item.discovery.score}` },
     { title: "Market aligned", sub: "Activity agrees; claims are not independently verified", list: confirmed, value: (item) => `${item.discovery.score} setup` },
     { title: "Crowded risk", sub: "Attention arrived after a large move", list: crowded, value: (item) => `${item.priceMove >= 0 ? "+" : ""}${item.priceMove.toFixed(1)}%` },
   ];
@@ -1018,12 +1017,13 @@ function detailMarkup(item, rank) {
       ${statBlock("Attention", `${item.signalScore.toFixed(0)}`, "/ 100 composite")}
       ${statBlock("Price", formatPrice(item.lastPrice), marketEvidenceCurrent(item) ? priceMoveText(item) : "No recent market data", marketEvidenceCurrent(item) ? priceTone(item.priceMove) : "")}
       ${statBlock("Rel. volume", marketEvidenceCurrent(item) ? `${item.relativeVolume.toFixed(1)}×` : "—", marketEvidenceCurrent(item) ? "snapshot ratio" : "unavailable")}
-      ${statBlock("Acceleration", item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no comparable prior coverage" : "attention vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
+      ${statBlock("Snapshot change", item.momentum == null ? "Unknown" : `${item.momentum >= 0 ? "+" : ""}${item.momentum.toFixed(0)}%`, item.momentum == null ? "no comparable prior coverage" : "sampled activity vs prior", item.momentum == null ? "" : momentumTone(item.momentum))}
       ${statBlock("Public tone", sentimentLabel(item.sentiment), "descriptive, not predictive", sentimentTone(item.sentiment))}
       ${statBlock("Market cap", capValueText(item), capTierName(item))}
       </div>
 
       ${capitalizationMarkup(item)}
+      ${item.attentionComparisonNote ? `<p class="data-caveat">Attention comparison: ${escapeHtml(item.attentionComparisonNote)}${window.SIGNALDESK_QUALITY.attentionComparisonValid(item.attentionComparison) ? ` Saved windows end ${escapeHtml(formatShortDateTime(item.attentionComparison.previousEnd))} and ${escapeHtml(formatShortDateTime(item.attentionComparison.currentEnd))}.` : ""}</p>` : ""}
 
       ${detailTrendMarkup(item)}
 
@@ -1227,8 +1227,8 @@ function headlinesMarkup(item) {
 // Shared definition of the human-attention a stock is getting, so the chips,
 // the plain-English takeaway, and the Quiet/Big-attention split all agree.
 const VOL_HOT = 1.3; // relative volume that counts as "elevated"
-const SOCIAL_BUZZ = 3; // social mentions that count as a crowd forming
-const NEWS_BUZZ = 4; // news hits that count as media attention
+const SOCIAL_BUZZ = 3; // weighted social activity threshold, not a post count
+const NEWS_BUZZ = 4; // weighted news activity threshold, not an article count
 const ATTENTION_HIGH = 5; // social + news that counts as "big attention"
 
 function attentionStats(item) {
@@ -1276,7 +1276,7 @@ function trendInterpretation(item) {
 
   // Quiet mover: volume spike with crowd still absent — lead with the anomaly.
   if (volHot && social < SOCIAL_BUZZ && news < NEWS_BUZZ) {
-    return `Under-the-radar: volume running ${item.relativeVolume.toFixed(1)}× normal${priceHot ? ` with price up ${item.priceMove.toFixed(1)}%` : ""} — crowd attention hasn't arrived yet, making this an early-mover signal.`;
+    return `Volume is ${item.relativeVolume.toFixed(1)}× its comparison baseline${priceHot ? ` with price up ${item.priceMove.toFixed(1)}%` : ""}, alongside low captured social/news weight. Missing coverage can look quiet; check the original sources before treating this as early attention.`;
   }
 
   // Build a differentiated description from the most distinctive signals.
@@ -1284,13 +1284,13 @@ function trendInterpretation(item) {
   const parts = [];
   if (priceHot) parts.push(`${item.priceMove >= 10 ? "strong " : ""}${item.priceMove.toFixed(1)}% price move`);
   if (volHot) parts.push(`${item.relativeVolume.toFixed(1)}× normal volume`);
-  if (social >= SOCIAL_BUZZ) parts.push(`${fmt.format(social)} social mention${social === 1 ? "" : "s"}`);
-  if (news >= NEWS_BUZZ) parts.push(`${fmt.format(news)} news hit${news === 1 ? "" : "s"}`);
+  if (social >= SOCIAL_BUZZ) parts.push(`${fmt.format(social)} weighted social activity`);
+  if (news >= NEWS_BUZZ) parts.push(`${fmt.format(news)} weighted news activity`);
   if (activeSources >= 4) parts.push(`${activeSources} data platforms`);
   if (item.sector) parts.push(item.sector);
 
   const lead =
-    social >= news && social >= SOCIAL_BUZZ ? "Retail" :
+    social >= news && social >= SOCIAL_BUZZ ? "Social" :
     news >= NEWS_BUZZ ? "News" :
     priceHot || volHot ? "Price/volume" : "Multi-source";
 
@@ -1346,11 +1346,12 @@ function formatShortDateTime(value) {
 
 function exportCsv() {
   const data = visibleSignals().slice(0, 50);
-  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "attention_weights_not_posts", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", "market_as_of", "comparison_start", "market_quality", "market_cap_usd", "market_cap_state", "market_cap_as_of", "market_cap_provider", "market_cap_url", "market_cap_quality", ...SOURCES];
+  const header = ["rank", "ticker", "name", "market_price", "setup_score", "attention_score", "stage", "evidence", "risk_flags", "attention_weights_not_posts", "momentum_percent", "sentiment", "price_move_percent", "relative_volume", "market_as_of", "comparison_start", "market_quality", "market_cap_usd", "market_cap_state", "market_cap_as_of", "market_cap_provider", "market_cap_url", "market_cap_quality", "attention_current_window_end", "attention_prior_window_end", "attention_comparison_note", ...SOURCES];
   const lines = [header.join(",")].concat(
     data.map((item, index) => {
       const profile = item.discovery || discoveryProfile(item);
       const cap = window.SIGNALDESK_QUALITY.capitalization(item), e = cap.marketCap !== null ? item.marketCapEvidence : null;
+      const comparison = window.SIGNALDESK_QUALITY.attentionComparisonValid(item.attentionComparison) ? item.attentionComparison : null;
       return [
         index + 1,
         item.ticker,
@@ -1373,6 +1374,8 @@ function exportCsv() {
         `"${String(e?.provider || "").replaceAll('"', '""')}"`,
         `"${String(e?.url || "").replaceAll('"', '""')}"`,
         `"${cap.marketCapQuality.replaceAll('"', '""')}"`,
+        comparison?.currentEnd || "", comparison?.previousEnd || "",
+        `"${String(item.attentionComparisonNote || "").replaceAll('"', '""')}"`,
         ...SOURCES.map((source) => item.sources[source] || 0),
       ].join(",");
     })

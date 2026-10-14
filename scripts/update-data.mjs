@@ -511,7 +511,8 @@ async function main() {
     event.eventId = createHash("sha256").update(`${event.source}|${event.url}|${event.ticker}`).digest("hex").slice(0, 24);
     event.observedAt ||= new Date().toISOString();
   }
-  const signals = aggregate(events, previous);
+  const generatedAt = new Date().toISOString();
+  const signals = aggregate(events, previous, { failures, generatedAt });
   console.log(`Social context complete; enriching ${signals.length} ranked stocks with issuer data.`);
   await enrichIssuerNames(signals, failures);
   console.log("Issuer enrichment complete; checking company descriptions.");
@@ -555,7 +556,7 @@ async function main() {
     return;
   }
   const payload = {
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     dataMode: "real-public-no-key",
     sourceNote:
       "Best-effort public data. Direct Reddit, Nasdaq and the unavailable Yahoo broad-news RSS adapter are paused; historical records remain available. Yahoo price quotes remain active. Source coverage reports matched tickers, not completeness.",
@@ -1580,9 +1581,8 @@ function rankHeadlines(items) {
   });
 }
 
-export function aggregate(events, previous) {
+export function aggregate(events, previous, { failures = [], generatedAt = new Date().toISOString() } = {}) {
   const previousByTicker = new Map((previous?.signals || []).map(item => [item.ticker, item]));
-  const previousCoverage = (previous?.sourceHealth || []).filter(s => ["covered", "no-matches"].includes(s.state)).map(s => s.source);
   const map = new Map();
   for (const event of events) {
     const isMarket = quality.MARKET_SOURCES.includes(event.source);
@@ -1595,10 +1595,12 @@ export function aggregate(events, previous) {
       instrumentType: prior?.instrumentType ?? null,
       priceMove: null, relativeVolume: null, marketMetricsVersion: 2, marketQuality: ["No current market observation"],
       sources: Object.fromEntries(SOURCES.map(source => [source, 0])), latest: [],
+      attentionMetricsVersion: 1, attentionObservedSources: [],
     };
     item.mentions += weight;
     item.weightedSentiment += (Number(event.sentiment) || 0) * weight;
     item.sources[event.source] = (item.sources[event.source] || 0) + (isMarket ? 1 : weight);
+    if (!isMarket && !item.attentionObservedSources.includes(event.source)) item.attentionObservedSources.push(event.source);
     if (event.source === "Price/Volume" && event.marketMetricsVersion === 2 && Number.isFinite(event.lastPrice)) {
       for (const key of ["lastPrice", "quoteAsOf", "quoteSource", "priceMove", "relativeVolume", "marketWindow", "marketQuality", "rawPriceMove", "rawRelativeVolume", "instrumentType"]) item[key] = event[key] ?? null;
     }
@@ -1606,14 +1608,16 @@ export function aggregate(events, previous) {
     map.set(event.ticker, item);
   }
   const items = [...map.values()].map(item => {
-    const prior = previousByTicker.get(item.ticker), ranked = rankHeadlines(item.latest);
+    const ranked = rankHeadlines(item.latest);
     const signal = { ...item, sentiment: item.mentions ? item.weightedSentiment / item.mentions : null,
-      previousSources: prior?.sources || null, previousCoverage, optionsActivity: 0,
+      optionsActivity: 0,
       activityUnit: "weighted attention (not post counts)", topHeadline: pickTopHeadline(ranked), latest: ranked.slice(0, 6) };
     delete signal.weightedSentiment;
-    return quality.scopeSignal(quality.normalizeSignal(signal), SOURCES);
+    return quality.normalizeSignal(signal);
   });
-  return quality.scoreSignals(items).sort((a,b) => b.signalScore - a.signalScore).slice(0, 75);
+  const current = { generatedAt, signals: items, sourceHealth: quality.sourceHealth({ signals: items, failures, generatedAt }) };
+  const compared = items.map(item => quality.scopeSignal(quality.attachAttentionComparison(item, [current], previous ? [previous] : []), SOURCES));
+  return quality.scoreSignals(compared).sort((a,b) => b.signalScore - a.signalScore).slice(0, 75);
 }
 
 function scoreSentiment(text) {

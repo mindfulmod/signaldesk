@@ -7,6 +7,25 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 14 attention-comparison follow-up: new market signals carry
+`attentionMetricsVersion: 1` and `attentionObservedSources`. A filled source
+catalog with zeros is not proof that a source observed this ticker. Comparisons
+require explicit source observation, valid counts, healthy source collection,
+company-match exclusions on both sides, matching sample counts/spacing, and
+ordered non-overlapping saved windows. `attentionComparison` records the dates.
+Change the protocol version when collection/weight definitions cease to match;
+never retroactively stamp legacy history as verified. Percentage change from a
+zero baseline stays unknown; an explicitly observed current zero is valid.
+
+`attentionHistory` selects only the latest contiguous comparable source series
+within 14 saved snapshots, names the common sources, and breaks on missing
+tickers, failed coverage or long gaps. The disclosure preserves dated totals and
+missing records without drawing a percentage trend through them. These are
+sampled weights, not unique posts or continuous daily coverage; source windows
+may overlap. The Attention map's Developing attention group contains early and
+building stages, with each row showing its actual stage. Do not label the whole
+mixed group Early ignition or call weighted source totals post/article counts.
+
 October 13 capitalization follow-up: `data-quality.js.capitalization` is the
 shared gate for company size. Legacy SEC shares × price estimates remain in raw
 history, but are excluded from filters, displayed values, micro-cap penalties

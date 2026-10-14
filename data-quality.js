@@ -126,7 +126,9 @@
       unverifiedMarketCap: item.unverifiedMarketCap ?? (!item.marketCapEvidence ? number(item.marketCap) : null),
       sources, mentions: attentionTotal(sources), activityUnit: "weighted attention (not post counts)",
       quarantinedNews, excludedNewsSources,
-      previousCoverage: (item.previousCoverage || []).filter(source => !excludedNewsSources.includes(source)),
+      currentCoverage: (item.currentCoverage || []).filter(source => !excludedNewsSources.includes(source) &&
+        item.attentionObservedSources?.includes(source) && number(item.sources?.[source]) !== null && Number(item.sources[source]) >= 0),
+      previousCoverage: (item.previousCoverage || []).filter(source => !excludedNewsSources.includes(source) && !(item.previousExcludedNewsSources || []).includes(source)),
       momentum: excludedNewsSources.length ? null : number(item.momentum), sentiment: excludedNewsSources.length ? null : number(item.sentiment),
       priceMove: valid ? number(item.priceMove) : null, relativeVolume: valid ? relativeVolume(item.relativeVolume) : null,
       marketQuality: valid ? item.marketQuality || [] : ["Legacy blended market measurements are unverified; awaiting a new collection"],
@@ -135,15 +137,67 @@
       latest: (item.latest || []).filter(entry => identity.articleMatches(entry, item)),
       topHeadline: item.topHeadline && identity.articleMatches(item.topHeadline, item) ? item.topHeadline : null };
   }
-  function aggregateSignals(snapshots, previousSnapshots = []) {
-    const map = new Map(), previous = new Map();
-    for (const daily of previousSnapshots) for (const raw of daily.signals || []) {
-      const item = normalizeSignal(raw), counts = previous.get(item.ticker) || {};
-      for (const s of SOURCES) counts[s] = (counts[s] || 0) + item.sources[s];
-      previous.set(item.ticker, counts);
+  function attentionCoverageFor(snapshot, raw) {
+    if (!raw || raw.attentionMetricsVersion !== 1) return [];
+    const clean = normalizeSignal(raw);
+    return SOURCES.filter(source => !MARKET_SOURCES.includes(source) &&
+      raw.attentionObservedSources?.includes(source) && number(raw.sources?.[source]) !== null && Number(raw.sources[source]) >= 0 &&
+      !clean.excludedNewsSources.includes(source) &&
+      (snapshot.sourceHealth || []).some(h => h.source === source && ["covered", "no-matches"].includes(h.state)));
+  }
+  function attentionWindowCoverage(snapshots, ticker) {
+    if (!snapshots.length) return [];
+    const coverage = snapshots.map(day => attentionCoverageFor(day, (day.signals || []).find(s => s.ticker === ticker)));
+    return SOURCES.filter(source => coverage.every(list => list.includes(source)));
+  }
+  function attentionWindowTimes(snapshots) {
+    const times = snapshots.map(s => Date.parse(s.generatedAt)).sort((a,b) => a-b);
+    const days = snapshots.map(s => String(s.generatedAt || "").slice(0, 10));
+    return times.length && times.every(Number.isFinite) && new Set(days).size === days.length ? times : [];
+  }
+  function attentionComparisonValid(comparison) {
+    if (comparison?.version !== 1 || !Number.isInteger(comparison.samples) || comparison.samples < 1) return false;
+    const values = [comparison.previousStart, comparison.previousEnd, comparison.currentStart, comparison.currentEnd];
+    if (!values.every(value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}T/.test(value))) return false;
+    const dates = values.map(Date.parse);
+    return dates.every(Number.isFinite) && dates[0] <= dates[1] && dates[1] < dates[2] && dates[2] <= dates[3];
+  }
+  function attachAttentionComparison(item, snapshots, previousSnapshots) {
+    const currentCoverage = attentionWindowCoverage(snapshots, item.ticker);
+    const currentTimes = attentionWindowTimes(snapshots), priorTimes = attentionWindowTimes(previousSnapshots);
+    const sameSpacing = currentTimes.every((t, i) => !i || Math.round((t-currentTimes[0])/86400000) === Math.round((priorTimes[i]-priorTimes[0])/86400000));
+    const valid = currentTimes.length === snapshots.length && priorTimes.length === previousSnapshots.length &&
+      currentTimes.length > 0 && currentTimes.length === priorTimes.length && priorTimes.at(-1) < currentTimes[0] && sameSpacing;
+    const priorRows = previousSnapshots.map(day => (day.signals || []).find(s => s.ticker === item.ticker));
+    const prior = priorRows.filter(Boolean).map(normalizeSignal);
+    return { ...item, currentCoverage,
+      previousSources: prior.length ? Object.fromEntries(SOURCES.map(s => [s, prior.reduce((n,row) => n + row.sources[s], 0)])) : null,
+      previousExcludedNewsSources: [...new Set(prior.flatMap(row => row.excludedNewsSources))],
+      previousCoverage: valid ? attentionWindowCoverage(previousSnapshots, item.ticker) : [],
+      attentionComparison: valid ? { version: 1, samples: snapshots.length,
+        currentStart: new Date(currentTimes[0]).toISOString(), currentEnd: new Date(currentTimes.at(-1)).toISOString(),
+        previousStart: new Date(priorTimes[0]).toISOString(), previousEnd: new Date(priorTimes.at(-1)).toISOString() } : null };
+  }
+  function attentionHistory(snapshots, ticker, limit = 14) {
+    const ordered = [...snapshots].sort((a,b) => Date.parse(a.generatedAt)-Date.parse(b.generatedAt)).slice(-limit);
+    const observations = ordered.map(day => {
+      const raw = (day.signals || []).find(s => s.ticker === ticker), clean = raw ? normalizeSignal(raw) : null;
+      return { date: day.date, asOf: day.generatedAt, mentions: clean ? attentionTotal(clean.sources) : null,
+        sources: clean?.sources || {}, coverage: attentionCoverageFor(day, raw) };
+    });
+    let sources = observations.at(-1)?.coverage || [], start = observations.length - 1;
+    if (sources.length) for (let i = observations.length - 2; i >= 0; i--) {
+      const gap = Date.parse(observations[i+1].asOf) - Date.parse(observations[i].asOf);
+      const common = sources.filter(s => observations[i].coverage.includes(s));
+      if (!common.length || !(gap > 0 && gap <= 96 * 3600000)) break;
+      sources = common; start = i;
     }
-    const priorCoverage = previousSnapshots.length && previousSnapshots.length === snapshots.length
-      ? SOURCES.filter(s => previousSnapshots.every(d => (d.sourceHealth || []).some(h => h.source === s && ["covered", "no-matches"].includes(h.state)))) : [];
+    const series = sources.length ? observations.slice(start).map(row => ({ date: row.date,
+      mentions: sources.reduce((total,source) => total + row.sources[source], 0) })) : [];
+    return { observations, series, sources };
+  }
+  function aggregateSignals(snapshots, previousSnapshots = []) {
+    const map = new Map();
     for (const daily of [...snapshots].sort((a, b) => (a.generatedAt || a.date || "").localeCompare(b.generatedAt || b.date || ""))) {
       for (const raw of daily.signals || []) {
         const signal = normalizeSignal(raw), old = map.get(signal.ticker);
@@ -153,22 +207,31 @@
         map.set(signal.ticker, { ...signal, sources, mentions: attentionTotal(sources), latest,
           quarantinedNews: [...(old?.quarantinedNews || []), ...signal.quarantinedNews],
           excludedNewsSources: [...new Set([...(old?.excludedNewsSources || []), ...signal.excludedNewsSources])],
-          momentum: null, previousSources: previous.get(signal.ticker) || (snapshots.length === 1 ? signal.previousSources : null),
-          previousCoverage: previousSnapshots.length ? priorCoverage : snapshots.length === 1 ? signal.previousCoverage || [] : [],
+          momentum: null,
           marketPeriodLabel: snapshots.length > 1 ? "latest session in selected range" : "quoted session",
           attentionWindow: { start: snapshots[0]?.date, end: snapshots.at(-1)?.date } });
       }
     }
-    return [...map.values()].map(item => normalizeSignal(item));
+    return [...map.values()].map(item => normalizeSignal(previousSnapshots.length || snapshots.length !== 1
+      ? attachAttentionComparison(item, snapshots, previousSnapshots)
+      : { ...item, currentCoverage: attentionWindowCoverage(snapshots, item.ticker),
+        attentionComparison: item.attentionComparison?.samples === 1 &&
+          Date.parse(item.attentionComparison.currentEnd) === Date.parse(snapshots[0].generatedAt) ? item.attentionComparison : null }));
   }
   function scopeSignal(item, selectedSources) {
     const selected = new Set(selectedSources), sources = Object.fromEntries(SOURCES.map(s => [s, selected.has(s) ? item.sources?.[s] || 0 : 0]));
     const attentionSources = selectedSources.filter(s => !MARKET_SOURCES.includes(s) && (!PAUSED_SOURCES[s] || item.sources?.[s] > 0 || item.previousSources?.[s] > 0));
-    const comparable = attentionSources.length && item.previousSources && attentionSources.every(s => item.previousCoverage?.includes(s));
+    const comparable = item.attentionMetricsVersion === 1 && attentionComparisonValid(item.attentionComparison) && attentionSources.length && item.previousSources &&
+      attentionSources.every(s => item.currentCoverage?.includes(s) && item.previousCoverage?.includes(s) &&
+        number(item.previousSources[s]) !== null && Number(item.previousSources[s]) >= 0 &&
+        !item.excludedNewsSources?.includes(s) && !item.previousExcludedNewsSources?.includes(s));
     const prior = comparable ? attentionSources.reduce((sum, s) => sum + (number(item.previousSources[s]) || 0), 0) : null;
     const mentions = attentionTotal(sources);
     const latest = item.latest.filter(e => selected.has(e.source));
     const scoped = { ...item, sources, mentions, momentum: prior > 0 ? (mentions / prior - 1) * 100 : null,
+      attentionComparisonNote: !comparable ? "No like-for-like source observations in both saved windows; missing or excluded coverage is not zero."
+        : prior === 0 ? "Prior observed activity was zero; a percentage change is undefined."
+        : "Change in sampled weighted activity, not unique posts, total public attention or adoption. Collection windows may overlap.",
       sentiment: selectedSources.length === SOURCES.length ? item.sentiment : null, latest,
       topHeadline: item.topHeadline && selected.has(item.topHeadline.source) ? item.topHeadline : latest.find(e => identity.NEWS_SOURCES.has(e.source) && usableNews(e)) || null };
     if (!selected.has("Price/Volume")) Object.assign(scoped, { priceMove: null, relativeVolume: null, lastPrice: null, quoteAsOf: null, marketQuality: ["Market source excluded by filter"] });
@@ -186,5 +249,6 @@
     return items.map((item, i) => ({ ...item, signalScore: values[i] * scale }));
   }
   return { articleMatches: identity.articleMatches, SOURCES, PAUSED_SOURCES, NEWS_MAX_HOURS, QUOTE_MAX_HOURS, recent, quoteState, marketCoverage, usableNews, earningsHeadline, sourceHealth,
-    MARKET_SOURCES, number, attentionTotal, relativeVolume, capitalization, marketComparison, normalizeSignal, aggregateSignals, scopeSignal, scoreSignals };
+    MARKET_SOURCES, number, attentionTotal, relativeVolume, capitalization, marketComparison, normalizeSignal,
+    attentionCoverageFor, attentionWindowCoverage, attentionComparisonValid, attachAttentionComparison, attentionHistory, aggregateSignals, scopeSignal, scoreSignals };
 });

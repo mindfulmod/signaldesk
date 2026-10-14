@@ -27,6 +27,13 @@ export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH
     unknown: capRows.filter(s => s.marketCap === null && s.marketCapState !== "not-applicable").length,
     notApplicable: capRows.filter(s => s.marketCapState === "not-applicable").length, unsupported: unsupportedCaps };
   if (capitalization.unknown) warnings.push(`${capitalization.unknown}/${rows.length} tickers lack recent attributable USD capitalization; size filters and micro-cap risk checks cannot classify them`);
+  const unsupportedAttention = rows.filter(s => s?.momentum != null && (!Number.isFinite(s.momentum) ||
+    quality.scopeSignal(quality.normalizeSignal(s), quality.SOURCES).momentum !== s.momentum)).map(s => s.ticker);
+  if (unsupportedAttention.length) errors.push(`Unsupported attention comparison: ${unsupportedAttention.join(", ")}`);
+  const attention = { total: rows.length, versioned: rows.filter(s => s?.attentionMetricsVersion === 1).length,
+    comparable: rows.filter(s => Number.isFinite(s?.momentum) && !unsupportedAttention.includes(s.ticker)).length };
+  if (attention.versioned < attention.total) warnings.push(`${attention.total-attention.versioned} legacy attention records lack per-source observation provenance; do not backfill a verified protocol version`);
+  if (!attention.comparable) warnings.push("No all-selected-source attention percentages are comparable; missing observations remain unknown, not zero");
   const validHeadline = entry => entry && typeof entry === "object" && typeof entry.title === "string" && entry.title.trim() && quality.SOURCES.includes(entry.source);
   const headlineMismatches = rows.filter(s => s?.topHeadline && (!validHeadline(s.topHeadline) || !quality.articleMatches(s.topHeadline, s))).map(s => s.ticker);
   const marketNews = Array.isArray(snapshot?.marketNews) ? snapshot.marketNews : [];
@@ -38,7 +45,7 @@ export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH
   if (quarantinedTickers.length) warnings.push(`Saved news remains quarantined for ${quarantinedTickers.length} tickers; exclusions are not verified absence of news`);
   if (snapshot?.failures != null && !Array.isArray(snapshot.failures)) errors.push("Market failure diagnostics are malformed");
   for (const failure of Array.isArray(snapshot?.failures) ? snapshot.failures : []) if (/Price\/Volume/.test(String(failure))) warnings.push(String(failure));
-  return { ok: !errors.length, errors, warnings, generatedAt: snapshot?.generatedAt || null, coverage, capitalization, targets,
-    identity: { headlineMismatches, newsMismatches, quarantinedTickers },
-    note: "Snapshot/quote availability, capitalization provenance and lexical headline identity checks only. Does not certify provider accuracy or licensing, complete market coverage, article truth, causality, model calibration or future returns." };
+  return { ok: !errors.length, errors, warnings, generatedAt: snapshot?.generatedAt || null, coverage, capitalization, attention, targets,
+    identity: { headlineMismatches, newsMismatches, quarantinedTickers }, unsupportedAttention,
+    note: "Snapshot/quote availability, capitalization and attention-comparison provenance, and lexical headline identity checks only. Does not certify provider accuracy or licensing, complete market coverage, article truth, causality, model calibration or future returns." };
 }
