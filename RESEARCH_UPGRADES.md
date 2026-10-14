@@ -1,5 +1,31 @@
 # Research intelligence work plan
 
+## October 14 discovery-to-investigation UI pass
+
+Branch implementation; browser verification is partially complete, not deployed.
+
+- Reduced discovery-specific header spacing and type scale. Moved the existing
+  Notice → Corroborate → Validate guide into a native, state-preserving disclosure
+  with concrete instructions. Source coverage and history warnings remain
+  visible. Same-size 1440px comparison moved the first lead from 657px to 585px
+  below the viewport top; no claim about conversion or research outcomes.
+- Investigate is now available directly on patterns and Open scan stories, not
+  only after saving and switching to Saved. It opens an unsaved personal plan;
+  no automatic shortlist save, public claim or collector is created. Existing
+  plans use Open investigation. Returning restores the originating mode, search,
+  signal filter, expanded result limit and initiating button focus.
+- Verified direct pattern entry and return focus, keyboard story entry, and
+  48-row expansion. Desktop light and 375px dark views have no horizontal
+  overflow; the fresh preview reports no console errors. All 416 tests pass on
+  Node 20 and Node 24; touched scripts pass syntax checks.
+- Remaining browser checks: filtered/paginated return, dirty-editor cancellation,
+  mobile interactions and the required three stock-selection entry paths. The
+  embedded browser stalled while invoking the existing unsaved-edits confirm
+  dialog. Dialog inspection returned no handle; the original test tab remained
+  listed but unresponsive, and fresh-tab clicks did not change views. Requested
+  user dismissal rather than treating these checks as passed. Only an unsaved
+  QA hypothesis was entered; no test investigation was persisted.
+
 ## October 14 broader discovery: public procurement pilot
 
 Review-stage implementation only: not connected to the app, scheduled collection,

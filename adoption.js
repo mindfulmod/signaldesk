@@ -5,6 +5,7 @@
   const notebookModel = window.SIGNALDESK_DISCOVERY_NOTEBOOK, notebookViews = window.SIGNALDESK_NOTEBOOK_VIEWS;
   const notebookStorage = notebookModel.createStorageSession(() => localStorage);
   let notebookPlans = notebookStorage.initialPlans, notebookEditing = null, notebookFields = null, observationFields = null, notebookDirty = false;
+  let notebookReturn = null;
   const root = document.querySelector(".technology-panel"), content = document.getElementById("techContent");
   if (!data || !model || !root || !content) return;
   const byId = id => document.getElementById(id);
@@ -88,6 +89,7 @@
       ${views.sourceHealth(sources, monitor, { loading: monitorStatus === "loading" || researchStatus === "loading", failed: monitorStatus === "error" })}`;
   }
   function render() {
+    root.dataset.view = view;
     const themes = themeList(), selected = reviewedThemes().find(t => t.id === selectedId);
     // Compare/filter updates should not close the evidence the reader opened.
     const disclosureState = new Map([...content.querySelectorAll("details[data-disclosure]")].map(node => [node.dataset.disclosure, node.open]));
@@ -124,18 +126,22 @@
       const heading = content.querySelector(".intel-brief-lead");
       if (heading) heading.insertAdjacentHTML("afterend", checks); else content.insertAdjacentHTML("afterbegin", checks);
     }
-    if (view === "discovery" && discoverySavedOnly && !notebookEditing) {
-      content.querySelector(".intel-discovery-context")?.insertAdjacentHTML("afterend", notebookViews.shelf(notebookPlans));
+    if (view === "discovery" && !notebookEditing) {
+      if (discoverySavedOnly) content.querySelector(".intel-discovery-context")?.insertAdjacentHTML("afterend", notebookViews.shelf(notebookPlans));
       for (const saved of content.querySelectorAll("article [data-follow-discovery]")) {
         const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button intel-investigate";
         action.dataset.notebookOpen = saved.dataset.followDiscovery; action.textContent = notebookPlans.some(p => p.id === saved.dataset.followDiscovery) ? "Open investigation →" : "Investigate →";
-        const article = saved.closest("article"); (article.querySelector(".intel-scan-body") || article).append(action);
+        const article = saved.closest("article");
+        action.setAttribute("aria-label", `${action.textContent.replace(" →", "")}: ${article.querySelector("h4")?.textContent || "discovery lead"}`);
+        if (article.querySelector(".intel-scan-body")) article.querySelector(".intel-scan-body").append(action);
+        else article.insertBefore(action, article.querySelector("details"));
       }
     }
     for (const node of content.querySelectorAll("details[data-disclosure]")) {
       if (disclosureState.has(node.dataset.disclosure)) node.open = disclosureState.get(node.dataset.disclosure);
     }
     if (view === "discovery" && notebookStorage.issue) { const warning = document.createElement("p"); warning.className = "tech-inbox-warning"; warning.setAttribute("role", "alert"); warning.textContent = notebookStorage.issue; content.prepend(warning); const label = content.querySelector(".intel-notebook .tech-sector"); if (label) label.textContent = "Personal investigation · session only · export before leaving"; }
+    if (view === "discovery" && notebookEditing && notebookReturn && !notebookReturn.savedOnly) content.querySelector("[data-notebook-back]").textContent = "← Back to discoveries";
     if (view === "discovery" && notebookEditing && observationFields) for (const [name, value] of Object.entries(observationFields)) { const field = byId("notebookObservationForm")?.elements.namedItem(name); if (field) field.value = value; }
     if (view === "discovery" && notebookEditing?.observations.length) {
       const action = document.createElement("button"); action.type = "button"; action.className = "tech-text-button"; action.dataset.notebookSeries = ""; action.textContent = "Track a different metric →";
@@ -153,7 +159,7 @@
   function notebookNotice(message) { const notice = byId("notebookNotice"); if (notice) { notice.textContent = message; notice.tabIndex = -1; notice.focus({ preventScroll: true }); } }
   function closeNotebookEditor() {
     if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return false;
-    notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; return true;
+    notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; notebookReturn = null; return true;
   }
   function exportNotebook() {
     const bundle = notebookModel.bundle(notebookPlans); download("signaldesk-investigations.json", bundle);
@@ -293,10 +299,19 @@
       if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
       const plan = notebookPlans.find(p => p.id === button.dataset.notebookOpen) || notebookModel.seed(button.dataset.notebookOpen, research);
       if (!plan) { byId("adoptionFollowStatus").textContent = "The original source record is no longer available. Open a retained source to start an investigation."; return; }
+      notebookReturn = view === "discovery" && !notebookEditing ? { mode: discoveryMode, savedOnly: discoverySavedOnly, lane: discoveryLane, limit: discoveryLimit, query: byId("techSearch").value, id: button.dataset.notebookOpen } : null;
       notebookEditing = plan; notebookFields = null; observationFields = null; notebookDirty = false; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return;
     }
     if (button.hasAttribute("data-notebook-shelf")) { if (!closeNotebookEditor()) return; view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; discoverySavedOnly = true; discoveryLane = "all"; byId("techSearch").value = ""; setUrl(); render(); const title = byId("notebookShelfTitle"); title?.setAttribute("tabindex", "-1"); title?.focus(); return; }
-    if (button.hasAttribute("data-notebook-back")) { if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return; notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; discoverySavedOnly = true; render(); root.querySelector("[data-saved-discovery]")?.focus(); return; }
+    if (button.hasAttribute("data-notebook-back")) {
+      const origin = notebookReturn;
+      if (!closeNotebookEditor()) return;
+      if (origin) { discoveryMode = origin.mode; discoverySavedOnly = origin.savedOnly; discoveryLane = origin.lane; discoveryLimit = origin.limit; byId("techSearch").value = origin.query; }
+      else discoverySavedOnly = true;
+      setUrl(); render();
+      (origin && root.querySelector(`[data-notebook-open="${CSS.escape(origin.id)}"]`) || root.querySelector("[data-saved-discovery]"))?.focus();
+      return;
+    }
     if (button.hasAttribute("data-notebook-export")) { exportNotebook(); return; }
     if (button.hasAttribute("data-notebook-series")) {
       if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;

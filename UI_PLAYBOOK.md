@@ -7,6 +7,14 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+Discovery investigation entry: every rendered pattern/story now offers a direct
+Investigate action, including unsaved leads. `adoption.js` keeps an in-memory
+return context (mode, filters, query, result limit and originating lead ID).
+Back restores that list and focuses its action. Opening a plan does not save it
+or alter the shortlist. Preserve the existing dirty-editor confirmation and
+session-only notebook protection. The compact discovery header uses scoped
+`data-view="discovery"` styles; its how-to guide remains in a native disclosure.
+
 Research refresh: `research-loader.js` validates and commits the research/monitor
 pair together. `research.sourceCheckedAt` must match `monitor.generatedAt`;
 company-only assembly may make `research.generatedAt` newer. Never substitute
