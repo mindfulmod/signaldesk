@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T22:49:47.128Z",
+  "generatedAt": "2026-10-14T00:59:29.217Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,11 +162,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-13T21:31:18.480Z",
-      "nextAttemptAt": "2026-10-14T03:31:18.480Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "nextAttemptAt": "2026-10-14T06:59:29.217Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 11,
+      "failureStreak": 12,
       "seenLinks": [],
       "baselineAt": null
     },
@@ -175,8 +175,8 @@
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -186,6 +186,7 @@
       "items": [],
       "seenLinks": [],
       "matchedItems": 0,
+      "datedItems": 0,
       "extractedEntries": 6,
       "newestPublicationAt": null,
       "excerpt": "Global Newsroom | Toyota Motor Corporation Official Global Website Toyota Global Newsroom LATEST NEWS INTEREST OUR PICKS Our Picks Sep. 24, 2026 An Honor Shared, a Future to Build Together: Akio Toyoda Inducted into Automotive Hall of Fame ",
@@ -202,8 +203,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -220,6 +221,7 @@
         "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china"
       ],
       "matchedItems": 1,
+      "datedItems": 0,
       "extractedEntries": 61,
       "newestPublicationAt": null,
       "excerpt": "PressClub Global. Login My.PressClub. Login. Contact World Wide Corporate Brands Technology People Heritage Motor Shows Sports Do you need help? Please contact our support team from 9 to 17 CET via support.pressclub@bmwgroup.com . Welcome t",
@@ -236,8 +238,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -259,6 +261,7 @@
         "https://www.rogers.com/support/terms/satellite-terms-conditions"
       ],
       "matchedItems": 2,
+      "datedItems": 0,
       "extractedEntries": 11,
       "newestPublicationAt": null,
       "excerpt": "Rogers Satellite keeps you connected in remote areas with satellite-ready apps, messaging, text-to-911 and emergency alerts on compatible smartphones.",
@@ -267,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29bb6-kl09nWkXPHmnppeHw5gxdheA8js\"",
+      "etag": "W/\"29b78-qy3oI9+puSQbl7RkTOe2xgHYktU\"",
       "lastModified": null
     },
     "meta-news": {
@@ -275,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -302,6 +305,7 @@
         "https://about.fb.com/news/2026/10/announcing-ranveer-singh-as-brand-ambassador-for-ray-ban-and-ray-ban-meta-in-india-along-with-exciting-new-updates-to-our-ai-glasses/"
       ],
       "matchedItems": 2,
+      "datedItems": 2,
       "extractedEntries": 10,
       "newestPublicationAt": "2026-10-08T05:49:36.000Z",
       "excerpt": null,
@@ -310,16 +314,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"68d00fbebc81765d9434affb1f45cd37\"",
-      "lastModified": "Mon, 12 Oct 2026 17:16:59 GMT"
+      "etag": "W/\"cf4eb4b20982a4db59f8d062f26d3b20\"",
+      "lastModified": "Tue, 13 Oct 2026 17:28:51 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-13T12:08:25.253Z",
       "nextAttemptAt": null,
@@ -369,8 +373,8 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -413,6 +417,7 @@
         "https://waymo.com/blog/2026/10/incident-management-exercises"
       ],
       "matchedItems": 3,
+      "datedItems": 3,
       "extractedEntries": 3,
       "newestPublicationAt": "2026-10-08",
       "excerpt": "Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion Today, Waymo closed a $5 billion term loan, marking our first debt financing and an important step in our evolution into a scaling commercial enterprise. Steve Fieler, ",
@@ -429,8 +434,8 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-11T10:59:52.949Z",
       "nextAttemptAt": null,
@@ -443,7 +448,8 @@
         "https://www.fcc.gov/edoc/425768"
       ],
       "matchedItems": 0,
-      "extractedEntries": 2,
+      "datedItems": 0,
+      "extractedEntries": 4,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -459,15 +465,21 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-14T00:59:29.217Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "ea6b907031f697401d50972efe0bd2780ee44dda9c6e7a5021ef7e3213a38293",
+      "fingerprint": "853917e87a0fdf0c4b07097edae8e6425a1f6b77defc34ac7c15ff0bcf5da8be",
       "items": [
+        {
+          "url": "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
+          "title": "Podcast: The hidden DNA code that controls your genes",
+          "excerpt": "From atoms and molecules to cells, understanding the building blocks of the natural world can lead to transformative technologies. NSF-supported researcher Torrey Rhyne-Carrigg discusses DNA initiators, using models for analysis, and her ex",
+          "publishedAt": "2026-10-13T19:57:51.000Z"
+        },
         {
           "url": "https://www.nsf.gov/news/nsf-ukri-metascience-statement",
           "title": "NSF–UKRI metascience statement",
@@ -477,7 +489,7 @@
         {
           "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
           "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
-          "excerpt": "The U.S. National Science Foundation today announced plans to launch a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age , the first comprehensive rethinking o",
+          "excerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age and in \" NSF leadership in a new golden age of science",
           "publishedAt": "2026-10-08T13:45:03.000Z"
         },
         {
@@ -511,16 +523,16 @@
           "publishedAt": "2026-09-16T17:13:07.000Z"
         },
         {
-          "url": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
-          "title": "Podcast: Creating thermal cloaking and new structures",
-          "excerpt": "Shelly Zhang, an NSF-supported researcher, discusses her work using additive manufacturing and topology optimization to create new structures, including a 3D thermal cloaking device...",
-          "publishedAt": "2026-09-14T21:28:01.000Z"
-        },
-        {
           "url": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
           "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
           "excerpt": "The U.S. National Science Foundation today announced a $20 million investment to launch a two-year pilot supporting small businesses in commercializing their deep-technology ventures. The pilot aims to address a persistent gap separating fe",
           "publishedAt": "2026-09-14T14:00:32.000Z"
+        },
+        {
+          "url": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
+          "title": "Podcast: Creating thermal cloaking and new structures",
+          "excerpt": "Shelly Zhang, an NSF-supported researcher, discusses her work using additive manufacturing and topology optimization to create new structures, including a 3D thermal cloaking device...",
+          "publishedAt": "2026-09-14T21:28:01.000Z"
         },
         {
           "url": "https://www.nsf.gov/news/nsf-leadership-new-golden-age-science",
@@ -551,12 +563,6 @@
           "title": "Podcast: Educator wins Presidential AI Challenge",
           "excerpt": "U.S. National Science Foundation-supported researchers are behind an educational effort to introduce artificial intelligence techniques to elementary school children...",
           "publishedAt": "2026-08-25T17:32:13.000Z"
-        },
-        {
-          "url": "https://www.nsf.gov/news/podcast-researchers-bring-ai-elementary-schoolers",
-          "title": "Podcast: Researchers bring AI to elementary schoolers",
-          "excerpt": "Researchers discuss the challenges of introducing artificial intelligence concepts into elementary school curriculum and how the project led to a win in the inaugural Presidential AI Challenge...",
-          "publishedAt": "2026-08-25T17:31:01.000Z"
         }
       ],
       "seenLinks": [
@@ -574,37 +580,45 @@
         "https://www.nsf.gov/news/podcast-lasers-materials-future",
         "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
         "https://www.nsf.gov/news/podcast-educator-wins-presidential-ai-challenge",
-        "https://www.nsf.gov/news/podcast-researchers-bring-ai-elementary-schoolers"
+        "https://www.nsf.gov/news/podcast-researchers-bring-ai-elementary-schoolers",
+        "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes"
       ],
       "matchedItems": 15,
+      "datedItems": 15,
       "extractedEntries": 15,
-      "newestPublicationAt": "2026-10-08T13:45:03.000Z",
+      "newestPublicationAt": "2026-10-13T19:57:51.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1791877857-gzip\"",
-      "lastModified": "Tue, 13 Oct 2026 07:50:57 GMT"
+      "etag": "\"1791923397-gzip\"",
+      "lastModified": "Tue, 13 Oct 2026 20:29:57 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-13T12:08:25.253Z",
+      "lastChangedAt": "2026-10-14T00:59:29.217Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "df729a3693226f2bda207f3304dc1225dd30d3dac8c3339c3061f8aa4cee04a0",
+      "fingerprint": "9046d8d8dd2ecac045b81eb6a97d5e5a1b4521b85f8c4beaa0d799c76d270a53",
       "items": [
         {
           "url": "https://www.nature.com/articles/d41586-026-03244-3",
           "title": "Preserve research data for tomorrow’s AI-enabled integrity checks",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11257-1",
+          "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunneling",
           "excerpt": "",
           "publishedAt": "2026-10-13"
         },
@@ -615,8 +629,26 @@
           "publishedAt": "2026-10-13"
         },
         {
+          "url": "https://www.nature.com/articles/s41586-026-11255-3",
+          "title": "Selective, Catalytic Oxidation of Polyethylene Surfaces",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03236-3",
+          "title": "Lead-tainted teeth reveal medieval mines’ unequal toll",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03246-1",
           "title": "When microbes degrade plastic, where does it go?",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02974-8",
+          "title": "A mysterious jelly seems to be left behind by toads",
           "excerpt": "",
           "publishedAt": "2026-10-13"
         },
@@ -627,8 +659,20 @@
           "publishedAt": "2026-10-13"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03220-x",
+          "title": "Diversify Nobel-prize nominations before it’s too late",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03247-0",
           "title": "Is this idea from AI or humans? A detector claims it can tell",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03221-w",
+          "title": "Whistleblowing in universities is ‘extraordinarily risky’: stronger protections are needed",
           "excerpt": "",
           "publishedAt": "2026-10-13"
         },
@@ -639,8 +683,26 @@
           "publishedAt": "2026-10-13"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03252-3",
+          "title": "Can GLP-1s heal the brain? Obesity drugs get a makeover for addiction and depression",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03153-5",
+          "title": "Inundated AI conferences impose submissions caps",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-02668-1",
           "title": "Admire another researcher’s work? Tell them about it",
+          "excerpt": "",
+          "publishedAt": "2026-10-13"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11246-4",
+          "title": "Author Correction: Parkinson’s disease as a somato-cognitive action network disorder",
           "excerpt": "",
           "publishedAt": "2026-10-13"
         },
@@ -997,60 +1059,6 @@
           "title": "Structural basis for regulating lipopolysaccharide transmembrane transport",
           "excerpt": "",
           "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11122-1",
-          "title": "A nuclear clock synchronized to 229 Th",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-10858-0",
-          "title": "Hydrogen bonding in water under extreme confinement",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11127-w",
-          "title": "Alveolar stem cells transdifferentiate to drive bronchiolar regeneration",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11099-x",
-          "title": "Experimental observation of critical topology",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11106-1",
-          "title": "Prehistoric global migration of vanishing gut microbes with humans",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11066-6",
-          "title": "A preinvasive regulatory T cell axis for lung cancer interception",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11101-6",
-          "title": "Mechanism of spliceosome termination",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11085-3",
-          "title": "A 7-eV bandgap semiconductor based on silicon-doped α-(Al x Ga 1− x ) 2 O 3",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11038-w",
-          "title": "Overcoming key challenges in the evolutionary transition to multicellularity",
-          "excerpt": "",
-          "publishedAt": "2026-10-07"
         }
       ],
       "seenLinks": [
@@ -1152,9 +1160,19 @@
         "https://www.nature.com/articles/d41586-026-03255-0",
         "https://www.nature.com/articles/s41586-026-11250-8",
         "https://www.nature.com/articles/d41586-026-03243-4",
-        "https://www.nature.com/articles/d41586-026-03231-8"
+        "https://www.nature.com/articles/d41586-026-03231-8",
+        "https://www.nature.com/articles/s41586-026-11257-1",
+        "https://www.nature.com/articles/s41586-026-11255-3",
+        "https://www.nature.com/articles/d41586-026-03236-3",
+        "https://www.nature.com/articles/d41586-026-02974-8",
+        "https://www.nature.com/articles/d41586-026-03220-x",
+        "https://www.nature.com/articles/d41586-026-03221-w",
+        "https://www.nature.com/articles/d41586-026-03252-3",
+        "https://www.nature.com/articles/d41586-026-03153-5",
+        "https://www.nature.com/articles/s41586-026-11246-4"
       ],
       "matchedItems": 75,
+      "datedItems": 75,
       "extractedEntries": 75,
       "newestPublicationAt": "2026-10-13",
       "excerpt": null,
@@ -1163,7 +1181,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"88791eaf79ee539e4118ed04f2ea1494\"",
+      "etag": "\"dde7359b3ec4c9e29830491f678f0899\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1171,8 +1189,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -1782,6 +1800,7 @@
         "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/qs-20230803.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 992,
       "newestPublicationAt": "2026-07-24",
       "excerpt": null,
@@ -1798,8 +1817,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2424,6 +2443,7 @@
         "https://www.sec.gov/Archives/edgar/data/1844862/000110465924086274/tm2420779d1_8k.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 475,
       "newestPublicationAt": "2026-09-14",
       "excerpt": null,
@@ -2440,8 +2460,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2973,6 +2993,7 @@
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525131083/d948032d6k.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 1000,
       "newestPublicationAt": "2026-10-05",
       "excerpt": null,
@@ -2989,8 +3010,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3612,6 +3633,7 @@
         "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000012/tmus-20241231.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 1002,
       "newestPublicationAt": "2026-09-03",
       "excerpt": null,
@@ -3628,8 +3650,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4299,6 +4321,7 @@
         "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/form8-k.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 628,
       "newestPublicationAt": "2026-09-28",
       "excerpt": null,
@@ -4315,8 +4338,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4792,7 +4815,8 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000065/meta-20240731.htm"
       ],
       "matchedItems": 31,
-      "extractedEntries": 1000,
+      "datedItems": 31,
+      "extractedEntries": 1001,
       "newestPublicationAt": "2026-07-30",
       "excerpt": null,
       "publishedAt": null,
@@ -4808,8 +4832,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5424,6 +5448,7 @@
         "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 1002,
       "newestPublicationAt": "2026-09-02",
       "excerpt": null,
@@ -5440,8 +5465,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T12:08:25.253Z",
-      "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -6065,6 +6090,7 @@
         "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/goog-20240630.htm"
       ],
       "matchedItems": 40,
+      "datedItems": 40,
       "extractedEntries": 1000,
       "newestPublicationAt": "2026-08-10",
       "excerpt": null,
@@ -6081,8 +6107,8 @@
       "sourceUrl": "https://news.mit.edu/rss/research",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T22:49:47.128Z",
-      "lastSuccessAt": "2026-10-13T22:49:47.128Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-11T01:42:22.208Z",
       "lastChangedAt": "2026-10-13T22:49:47.128Z",
       "nextAttemptAt": null,
@@ -6455,16 +6481,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT News · all research",
-      "etag": "\"1791931119\"",
-      "lastModified": "Tue, 13 Oct 2026 22:38:39 GMT"
+      "etag": "\"1791938359\"",
+      "lastModified": "Wed, 14 Oct 2026 00:39:19 GMT"
     },
     "nist-research": {
       "id": "nist-research",
       "sourceUrl": "https://www.nist.gov/news-events/news/rss.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T22:49:47.128Z",
-      "lastSuccessAt": "2026-10-13T22:49:47.128Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-11T01:42:22.208Z",
       "lastChangedAt": "2026-10-13T22:49:47.128Z",
       "nextAttemptAt": null,
@@ -6765,99 +6791,320 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NIST research & standards",
-      "etag": "\"1791925621-gzip\"",
-      "lastModified": "Tue, 13 Oct 2026 21:07:01 GMT"
+      "etag": "\"1791934682-gzip\"",
+      "lastModified": "Tue, 13 Oct 2026 23:38:02 GMT"
     },
     "hn-discovery": {
       "id": "hn-discovery",
       "sourceUrl": "https://hacker-news.firebaseio.com/v0/topstories.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-13T22:49:47.128Z",
-      "lastSuccessAt": "2026-10-13T22:49:47.128Z",
+      "lastAttemptAt": "2026-10-14T00:59:29.217Z",
+      "lastSuccessAt": "2026-10-14T00:59:29.217Z",
       "baselineAt": "2026-10-11T01:42:22.208Z",
-      "lastChangedAt": "2026-10-13T22:49:47.128Z",
+      "lastChangedAt": "2026-10-14T00:59:29.217Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "9ceba4db7cc741bc61a8010e21f01e954757e210be0f48e80887144d206573f9",
+      "fingerprint": "e0e53645e1c3ccd85ef5ec96589d507377fd5685f54967e6fe59028f9ab7556e",
       "items": [
         {
-          "url": "https://news.ycombinator.com/item?id=50080027",
-          "title": "Use the Saw, Fear the Saw",
+          "url": "https://news.ycombinator.com/item?id=50081084",
+          "title": "Who Decided AI Gets to Have Feelings?",
           "excerpt": "",
-          "publishedAt": "2026-10-13T22:48:37.000Z",
+          "publishedAt": "2026-10-14T00:58:32.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://stephango.com/saw",
-          "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50080007",
-          "title": "Grace Hopper Celebration Cancelled",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:46:49.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://anitab.org/press-release",
+          "linkedUrl": "https://middlelayer.substack.com/p/who-decided-ai-gets-to-have-feelings",
           "engagement": {
             "points": 1,
             "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50079984",
-          "title": "ARM64 bootloader for QEMU virt with verified A/B boot",
+          "url": "https://news.ycombinator.com/item?id=50081082",
+          "title": "A recent doubling of global warming rate signals a 1.5°C breach by 2028",
           "excerpt": "",
-          "publishedAt": "2026-10-13T22:44:41.000Z",
+          "publishedAt": "2026-10-14T00:58:26.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/rdrunky/bootloader",
+          "linkedUrl": "https://www.nature.com/articles/s41612-026-01561-y",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50079980",
-          "title": "Xbox is officially embracing the chaos of AI-powered game ports",
+          "url": "https://news.ycombinator.com/item?id=50081054",
+          "title": "Topgolf saved over $11.3M after leaving VMware",
           "excerpt": "",
-          "publishedAt": "2026-10-13T22:44:30.000Z",
+          "publishedAt": "2026-10-14T00:54:12.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration",
+          "linkedUrl": "https://arstechnica.com/information-technology/2026/10/topgolf-saved-over-11-3-million-after-leaving-vmware/",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50079963",
-          "title": "Quartz website mainly produced by one AI-assisted reporter",
+          "url": "https://news.ycombinator.com/item?id=50081045",
+          "title": "Creating a Garmin \"MCP\"",
           "excerpt": "",
-          "publishedAt": "2026-10-13T22:42:22.000Z",
+          "publishedAt": "2026-10-14T00:52:25.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://pressgazette.co.uk/publishers/digital-journalism/quartz-website-mainly-produced-by-one-ai-assisted-reporter-writing-50-stories-per-day/",
+          "linkedUrl": "https://jackantico.io/garmin-mcp",
           "engagement": {
-            "points": 1,
+            "points": 2,
             "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50079942",
-          "title": "Saudi National Charged with Bugging OpenAI's Office",
+          "url": "https://news.ycombinator.com/item?id=50081029",
+          "title": "The Machines That Make the Machines",
           "excerpt": "",
-          "publishedAt": "2026-10-13T22:41:03.000Z",
+          "publishedAt": "2026-10-14T00:50:07.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.wsj.com/tech/ai/saudi-national-charged-with-bugging-openais-office-7e960aad",
+          "linkedUrl": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080998",
+          "title": "U.S. Treasury Announces Record Enforcement Actions Against Bank of America",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:46:27.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://home.treasury.gov/news/press-releases/sb0657",
+          "engagement": {
+            "points": 3,
+            "comments": 1,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080983",
+          "title": "HN: Encrypted Privacy Aware Emails, ZyMail Hit the Globe",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:43:46.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": null,
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080968",
+          "title": "Ask HN: Could you find funding if you didn't want to build a $1-10B business?",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:42:31.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": null,
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080964",
+          "title": "AI, Hyperwar and End Times Fascism",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:41:27.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://efturnip.substack.com/p/ai-hyperwar-and-end-times-fascism",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080956",
+          "title": "Show HN: Fresh cleanup and reset a project after coding agent prs",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:39:57.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/Obedience-Corp/fresh",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080946",
+          "title": "Cargo-Litmus",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:38:24.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/Ellipsis-Labs/cargo-litmus",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080928",
+          "title": "The Law of Leaky Abstractions",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:35:26.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/",
+          "engagement": {
+            "points": 2,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080927",
+          "title": "Linear's CI playbook for agents",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:35:20.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://starsling.dev/blog/linear-ci",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080926",
+          "title": "SlowBooks Pro – From-scratch implementation of QuickBooks Pro 2003 for all OSes",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:35:03.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.slowbookspro.com/",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080904",
+          "title": "What I've been seeing lately (in software)",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:32:22.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://mei.puppycat.house/w/seeing-261010",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080836",
+          "title": "Show HN: Mosh-rs, Mosh rewritten in Rust with scrollback and Windows support",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:22:19.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/Arunjay4213/mosh-rs",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080783",
+          "title": "What a Jurassic forest may have sounded like",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:15:56.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.science.org/content/article/what-jurassic-forest-may-have-sounded",
+          "engagement": {
+            "points": 3,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080778",
+          "title": "Robot seized by German police after allegedly groping teenage girl",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:14:47.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.bbc.com/news/articles/ck9dzj40nzj5o",
+          "engagement": {
+            "points": 6,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080765",
+          "title": "Apple HomePod Mini 2",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:13:30.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.apple.com/homepod-mini/",
+          "engagement": {
+            "points": 3,
+            "comments": 1,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080763",
+          "title": "The new unit of work for document collaboration",
+          "excerpt": "",
+          "publishedAt": "2026-10-14T00:13:12.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://lexifina.com/blog/the-new-unit-of-work",
+          "engagement": {
+            "points": 2,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080450",
+          "title": "Show HN: Jevcrawl – A web crawler for AI agents with no LLM in the crawl loop",
+          "excerpt": "",
+          "publishedAt": "2026-10-13T23:35:20.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/RayenMlayeh/jevcrawl",
+          "engagement": {
+            "points": 4,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080275",
+          "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+          "excerpt": "",
+          "publishedAt": "2026-10-13T23:13:23.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://pulseos.finance/",
+          "engagement": {
+            "points": 30,
+            "comments": 18,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50080246",
+          "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
+          "excerpt": "",
+          "publishedAt": "2026-10-13T23:10:04.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://wonderhop.io/en/",
+          "engagement": {
+            "points": 2,
+            "comments": 1,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -6868,178 +7115,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.cphiri.dev/presentations/recreational-programming",
           "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079855",
-          "title": "Reddit Self-Promotion Rules",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:32:39.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://redship.io/blog/reddit-self-promotion-rules",
-          "engagement": {
-            "points": 3,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079842",
-          "title": "Running Qwen3.8 at 255 tok/s on a single 5090",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:31:48.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://meshapplied.com/",
-          "engagement": {
-            "points": 8,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079790",
-          "title": "California Billionaire Tax Fight: Newsom Backs Prop. 42",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:27:31.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://discord.com/channels/1519570089488289956/1522069205795606650/1559414533104074774",
-          "engagement": {
-            "points": 1,
-            "comments": 2,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079791",
-          "title": "Show HN: Sugabots – Group chats where your team and AI agents work together",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:27:31.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://sugabots.ai/",
-          "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079786",
-          "title": "Ask HN: How long before someone reverse-engineers Windows?",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:27:00.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": null,
-          "engagement": {
-            "points": 3,
-            "comments": 2,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079761",
-          "title": "The reverts will continue until morale improves",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:23:45.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": null,
-          "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079754",
-          "title": "Show HN: Enki LLM A pure rust (even kernels) with live GPU/CPU brain migration",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:23:07.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/enkiruntime/enki_llm",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079730",
-          "title": "Muse Wonder(Non-Full) Max Is Below Muse Spark 1.3 Max on Code Arena: WebDev",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:20:32.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://twitter.com/arena/status/2110120205464846828",
-          "engagement": {
-            "points": 1,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079705",
-          "title": "SF Housing Simulator",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:17:55.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://sfhousing.mindlace.net/",
-          "engagement": {
-            "points": 4,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079701",
-          "title": "The First Social Network: In rural Argentina residents send messages w AM radio",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:17:41.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.newyorker.com/magazine/2026/10/19/the-first-social-network",
-          "engagement": {
-            "points": 2,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079681",
-          "title": "HCP Vagrant Deprecation",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:16:12.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.hashicorp.com/en/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079638",
-          "title": "Nix and Lix local root-privilege-escalation vulnerabilities",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:11:45.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://lwn.net/Articles/1100247/",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079629",
-          "title": "Investing in Short AI Timelines",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T22:11:06.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://cambrianmanagement.ai/",
-          "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 36,
+            "comments": 9,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7050,9 +7128,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://alpha-nist.github.io/",
           "engagement": {
-            "points": 3,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 34,
+            "comments": 9,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7063,48 +7141,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.pi.website/blog/api-beta",
           "engagement": {
-            "points": 4,
+            "points": 22,
             "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079419",
-          "title": "Show HN: Florida HOAs are stealing homes",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T21:54:26.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://hoaspy.com/hoa/fl/south-florida-hoa-statistics.html",
-          "engagement": {
-            "points": 5,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079170",
-          "title": "Show HN: Railspike, a coding agent prompting system I've been using for 2 years",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T21:35:29.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://railspike.dev/",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50079111",
-          "title": "Show HN: Keep your eyes in one place while typing",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T21:31:36.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://claude.ai/artifact/XrdjCJXgerVYbG75qzv3HB",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7115,9 +7154,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
           "engagement": {
-            "points": 236,
-            "comments": 220,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 382,
+            "comments": 347,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7128,9 +7167,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://parsimony.lasu.dev/",
           "engagement": {
-            "points": 23,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 41,
+            "comments": 3,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7141,9 +7180,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://newsletter.pessimistsarchive.org/p/the-1st-time-machines-mogged-mathematicians",
           "engagement": {
-            "points": 18,
-            "comments": 16,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 34,
+            "comments": 25,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7154,9 +7193,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://guitoro.com/",
           "engagement": {
-            "points": 173,
-            "comments": 59,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 242,
+            "comments": 78,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7167,9 +7206,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://music.xy.dev/",
           "engagement": {
-            "points": 42,
-            "comments": 34,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 44,
+            "comments": 38,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7180,9 +7219,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://lab.specr.net/rigged-draw/",
           "engagement": {
-            "points": 64,
-            "comments": 31,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 70,
+            "comments": 40,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7193,9 +7232,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
           "engagement": {
-            "points": 167,
-            "comments": 40,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 192,
+            "comments": 45,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7206,9 +7245,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://deepmind.google/models/gemini/",
           "engagement": {
-            "points": 868,
-            "comments": 680,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 964,
+            "comments": 736,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7219,9 +7258,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
           "engagement": {
-            "points": 442,
-            "comments": 436,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 512,
+            "comments": 512,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7232,9 +7271,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.sammystraus.com/",
           "engagement": {
-            "points": 213,
-            "comments": 137,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 238,
+            "comments": 146,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7245,9 +7284,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
           "engagement": {
-            "points": 159,
-            "comments": 227,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 194,
+            "comments": 278,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7258,9 +7297,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
           "engagement": {
-            "points": 288,
-            "comments": 118,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 329,
+            "comments": 143,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7271,22 +7310,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
           "engagement": {
-            "points": 150,
-            "comments": 248,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50072120",
-          "title": "How to engineer an AI harness for game development",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T14:14:23.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
-          "engagement": {
-            "points": 109,
-            "comments": 49,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 181,
+            "comments": 300,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7297,9 +7323,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
           "engagement": {
-            "points": 259,
-            "comments": 501,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 282,
+            "comments": 535,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7310,9 +7336,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://docs.hypermass.io/docs/cli/",
           "engagement": {
-            "points": 8,
+            "points": 9,
             "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7323,9 +7349,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.apple.com/apple-homeview/",
           "engagement": {
-            "points": 614,
-            "comments": 746,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 648,
+            "comments": 771,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7336,22 +7362,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
           "engagement": {
-            "points": 214,
-            "comments": 90,
-            "observedAt": "2026-10-13T22:49:48.047Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50070554",
-          "title": "Worlds more habitable than Earth?",
-          "excerpt": "",
-          "publishedAt": "2026-10-13T12:23:34.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.nytimes.com/2026/10/13/science/inhabitable-planets-solar-system.html",
-          "engagement": {
-            "points": 72,
-            "comments": 146,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 218,
+            "comments": 93,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7362,9 +7375,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.firefox.com/en-US/enterprise/",
           "engagement": {
-            "points": 587,
-            "comments": 247,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 636,
+            "comments": 259,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7375,9 +7388,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://github.com/LargeModGames/spotatui",
           "engagement": {
-            "points": 36,
-            "comments": 5,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 45,
+            "comments": 8,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7388,9 +7401,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://eg2.haku.sh/",
           "engagement": {
-            "points": 372,
-            "comments": 82,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 391,
+            "comments": 85,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7401,9 +7414,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://github.com/rust-lang/rust/issues/164250",
           "engagement": {
-            "points": 640,
-            "comments": 361,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 669,
+            "comments": 373,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7414,9 +7427,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://pdftomp3.com/connect-ai/",
           "engagement": {
-            "points": 157,
-            "comments": 78,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 159,
+            "comments": 80,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7427,9 +7440,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://blog.character.ai/an-update-on-character-ai/",
           "engagement": {
-            "points": 261,
-            "comments": 258,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 284,
+            "comments": 266,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7440,9 +7453,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://blog.plover.com/prog/git/history-proposal.html",
           "engagement": {
-            "points": 13,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 24,
+            "comments": 5,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7453,9 +7466,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
           "engagement": {
-            "points": 114,
-            "comments": 18,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 142,
+            "comments": 28,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7466,22 +7479,22 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.bbc.com/travel/article/20261007-the-man-hiking-the-world-in-search-of-rare-cheeses",
           "engagement": {
-            "points": 31,
-            "comments": 8,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 47,
+            "comments": 15,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50058649",
-          "title": "IDRs as Records of Intent",
+          "url": "https://news.ycombinator.com/item?id=50057612",
+          "title": "Rebuilding the Original Odhner Model 127 Pinwheel Calculator",
           "excerpt": "",
-          "publishedAt": "2026-10-12T16:20:26.000Z",
+          "publishedAt": "2026-10-12T15:12:37.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://wrla.ch/log/2026/10/idrs-as-records-of-intent/",
+          "linkedUrl": "https://www.johnwolff.au/calculators/Tech/OdhnerPinwheel/Odhner127Rebuild.htm",
           "engagement": {
-            "points": 9,
-            "comments": 1,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 6,
+            "comments": 0,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         },
         {
@@ -7492,9 +7505,22 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
           "engagement": {
-            "points": 324,
-            "comments": 276,
-            "observedAt": "2026-10-13T22:49:48.047Z"
+            "points": 414,
+            "comments": 314,
+            "observedAt": "2026-10-14T00:59:36.536Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50053487",
+          "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+          "excerpt": "",
+          "publishedAt": "2026-10-12T09:05:02.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+          "engagement": {
+            "points": 26,
+            "comments": 1,
+            "observedAt": "2026-10-14T00:59:36.536Z"
           }
         }
       ],
@@ -7611,12 +7637,37 @@
         "https://news.ycombinator.com/item?id=50061659",
         "https://news.ycombinator.com/item?id=50059542",
         "https://news.ycombinator.com/item?id=50058649",
-        "https://news.ycombinator.com/item?id=50054092"
+        "https://news.ycombinator.com/item?id=50054092",
+        "https://news.ycombinator.com/item?id=50081084",
+        "https://news.ycombinator.com/item?id=50081082",
+        "https://news.ycombinator.com/item?id=50081054",
+        "https://news.ycombinator.com/item?id=50081045",
+        "https://news.ycombinator.com/item?id=50081029",
+        "https://news.ycombinator.com/item?id=50080998",
+        "https://news.ycombinator.com/item?id=50080983",
+        "https://news.ycombinator.com/item?id=50080968",
+        "https://news.ycombinator.com/item?id=50080964",
+        "https://news.ycombinator.com/item?id=50080956",
+        "https://news.ycombinator.com/item?id=50080946",
+        "https://news.ycombinator.com/item?id=50080928",
+        "https://news.ycombinator.com/item?id=50080927",
+        "https://news.ycombinator.com/item?id=50080926",
+        "https://news.ycombinator.com/item?id=50080904",
+        "https://news.ycombinator.com/item?id=50080836",
+        "https://news.ycombinator.com/item?id=50080783",
+        "https://news.ycombinator.com/item?id=50080778",
+        "https://news.ycombinator.com/item?id=50080765",
+        "https://news.ycombinator.com/item?id=50080763",
+        "https://news.ycombinator.com/item?id=50080450",
+        "https://news.ycombinator.com/item?id=50080275",
+        "https://news.ycombinator.com/item?id=50080246",
+        "https://news.ycombinator.com/item?id=50057612",
+        "https://news.ycombinator.com/item?id=50053487"
       ],
       "matchedItems": 55,
       "datedItems": 55,
       "extractedEntries": 56,
-      "newestPublicationAt": "2026-10-13T22:48:37.000Z",
+      "newestPublicationAt": "2026-10-14T00:58:32.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -7628,6 +7679,426 @@
     }
   },
   "events": [
+    {
+      "id": "813e47b74d68f027fde1c8be",
+      "sourceId": "nsf-research",
+      "themes": [],
+      "owner": "NSF",
+      "kind": "new-link",
+      "title": "Podcast: The hidden DNA code that controls your genes",
+      "url": "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13T19:57:51.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f303563f413f300fc15e66de",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunneling",
+      "url": "https://www.nature.com/articles/s41586-026-11257-1",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fa01d45d8dfdfee31bec0759",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Selective, Catalytic Oxidation of Polyethylene Surfaces",
+      "url": "https://www.nature.com/articles/s41586-026-11255-3",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dfd34b4cc1770b9c1daa2309",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Lead-tainted teeth reveal medieval mines’ unequal toll",
+      "url": "https://www.nature.com/articles/d41586-026-03236-3",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1fdd1bb0d42ad164595917f9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A mysterious jelly seems to be left behind by toads",
+      "url": "https://www.nature.com/articles/d41586-026-02974-8",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5ee0a0aca43f8900ba343b5b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Diversify Nobel-prize nominations before it’s too late",
+      "url": "https://www.nature.com/articles/d41586-026-03220-x",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b7d2e2745f463b67646526fe",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Whistleblowing in universities is ‘extraordinarily risky’: stronger protections are needed",
+      "url": "https://www.nature.com/articles/d41586-026-03221-w",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "934d29cfe85c30b6b0c7a902",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Can GLP-1s heal the brain? Obesity drugs get a makeover for addiction and depression",
+      "url": "https://www.nature.com/articles/d41586-026-03252-3",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ec3ad7bb7041a791945d2ecb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Inundated AI conferences impose submissions caps",
+      "url": "https://www.nature.com/articles/d41586-026-03153-5",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "59414ab26213e16269c584a0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: Parkinson’s disease as a somato-cognitive action network disorder",
+      "url": "https://www.nature.com/articles/s41586-026-11246-4",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "efed6e2c1cf78cc32fee4c04",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Who Decided AI Gets to Have Feelings?",
+      "url": "https://news.ycombinator.com/item?id=50081084",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:58:32.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c61387880bb3f96656e344d9",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "A recent doubling of global warming rate signals a 1.5°C breach by 2028",
+      "url": "https://news.ycombinator.com/item?id=50081082",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:58:26.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "414ec73f62a2116132df1c58",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Topgolf saved over $11.3M after leaving VMware",
+      "url": "https://news.ycombinator.com/item?id=50081054",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:54:12.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "06d31004d4d0163f88ac2ac2",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Creating a Garmin \"MCP\"",
+      "url": "https://news.ycombinator.com/item?id=50081045",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:52:25.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5c5ed85e03c7dc31a99c3667",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The Machines That Make the Machines",
+      "url": "https://news.ycombinator.com/item?id=50081029",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:50:07.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bd0348fe5ec0fd93558fe246",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "U.S. Treasury Announces Record Enforcement Actions Against Bank of America",
+      "url": "https://news.ycombinator.com/item?id=50080998",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:46:27.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "efd2d0d9da7272ee7d0449e9",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "HN: Encrypted Privacy Aware Emails, ZyMail Hit the Globe",
+      "url": "https://news.ycombinator.com/item?id=50080983",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:43:46.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bd8650bb8348a791aea1ddb2",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Ask HN: Could you find funding if you didn't want to build a $1-10B business?",
+      "url": "https://news.ycombinator.com/item?id=50080968",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:42:31.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "de07a7ce57c2c9ec2982556c",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "AI, Hyperwar and End Times Fascism",
+      "url": "https://news.ycombinator.com/item?id=50080964",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:41:27.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "22cf23d0c93d72b2a0b5a0c2",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Fresh cleanup and reset a project after coding agent prs",
+      "url": "https://news.ycombinator.com/item?id=50080956",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:39:57.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "78750e2974c8194b74c722c2",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Cargo-Litmus",
+      "url": "https://news.ycombinator.com/item?id=50080946",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:38:24.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "19765fca1de7da386bcac333",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The Law of Leaky Abstractions",
+      "url": "https://news.ycombinator.com/item?id=50080928",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:35:26.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "49e9f99532c5e2b836e20633",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Linear's CI playbook for agents",
+      "url": "https://news.ycombinator.com/item?id=50080927",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:35:20.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3b5c5324ffd7439f14858aa7",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "SlowBooks Pro – From-scratch implementation of QuickBooks Pro 2003 for all OSes",
+      "url": "https://news.ycombinator.com/item?id=50080926",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:35:03.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d1efd478db3730bca1771ca4",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "What I've been seeing lately (in software)",
+      "url": "https://news.ycombinator.com/item?id=50080904",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:32:22.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "05088712e98e2e398f908900",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Mosh-rs, Mosh rewritten in Rust with scrollback and Windows support",
+      "url": "https://news.ycombinator.com/item?id=50080836",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:22:19.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "01b1ddcf1bc526a9d957dc3b",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "What a Jurassic forest may have sounded like",
+      "url": "https://news.ycombinator.com/item?id=50080783",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:15:56.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8bcb4e45d412715b0e8d52c6",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Robot seized by German police after allegedly groping teenage girl",
+      "url": "https://news.ycombinator.com/item?id=50080778",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:14:47.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d704d6717e441a2fa4492377",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Apple HomePod Mini 2",
+      "url": "https://news.ycombinator.com/item?id=50080765",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:13:30.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6b3396d4309b417c72d8f6e4",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The new unit of work for document collaboration",
+      "url": "https://news.ycombinator.com/item?id=50080763",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-14T00:13:12.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "81301ad1324300c6f9be7fda",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Jevcrawl – A web crawler for AI agents with no LLM in the crawl loop",
+      "url": "https://news.ycombinator.com/item?id=50080450",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13T23:35:20.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7b0f72881d801d183720028f",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+      "url": "https://news.ycombinator.com/item?id=50080275",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13T23:13:23.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bd5cd8ff183729012173e32c",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
+      "url": "https://news.ycombinator.com/item?id=50080246",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-13T23:10:04.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "85eb9d1ae993efada98ec866",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Rebuilding the Original Odhner Model 127 Pinwheel Calculator",
+      "url": "https://news.ycombinator.com/item?id=50057612",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-12T15:12:37.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "05d1805cd6c336a0887f070a",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+      "url": "https://news.ycombinator.com/item?id=50053487",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "publishedAt": "2026-10-12T09:05:02.000Z",
+      "verification": "unreviewed"
+    },
     {
       "id": "e7c617d72be7e04963ad43a7",
       "sourceId": "mit-research",

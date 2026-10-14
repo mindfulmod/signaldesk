@@ -7,7 +7,7 @@ import model from "../../research-model.js";
 import techModel from "../../technology-model.js";
 import { communityItem, communityLink, fetchCommunity } from "../lib/research-community.mjs";
 import { buildDocumentInventory, discoverTopics, topicPhrases } from "../lib/research-intelligence.mjs";
-import { collectTechnology, extractFeed } from "../lib/technology-monitor.mjs";
+import { collectTechnology, extractFeed, calendarDay } from "../lib/technology-monitor.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
 
 const now = "2026-10-11T02:00:00Z";
@@ -15,7 +15,8 @@ const hn = config.sources.find(s => s.id === "hn-discovery");
 const lab = { id: "lab", owner: "Lab", name: "Lab feed", tier: "research", url: "https://example.org/feed", mode: "links", format: "rss", themes: [], terms: [], discovery: true, intervalHours: 24 };
 const row = (id, extra = {}) => ({ id, type: "story", title: "New technical work", time: Date.parse("2026-10-10T12:00:00Z") / 1000, score: 42, descendants: 8, url: "https://example.org/story", ...extra });
 const json = value => new Response(JSON.stringify(value), { headers: { "content-type": "application/json" } });
-const state = sources => Object.fromEntries(sources.map(s => [s.id, { id: s.id, status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 10, datedItems: 10 }]));
+const state = sources => Object.fromEntries(sources.map(s => [s.id, { id: s.id, sourceUrl: s.url, extractorVersion: 4, status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 10, datedItems: 10 }]));
+const historyDay = offset => { const date = new Date(Date.parse(calendarDay(now)) - offset * 86400000).toISOString().slice(0, 10); return { date, topics: [], sourceChecks: [{ id: lab.id, checkedAt: `${date}T12:00:00Z` }] }; };
 const doc = (id, title, source = lab, extra = {}) => ({ id, title, owner: source.owner, tier: source.tier, sourceId: source.id, discovery: true, themes: [], url: `https://example.org/${id}`, publishedAt: "2026-10-10", detectedAt: now, ...extra });
 
 test("discovery contracts widen topics without company keyword gates", () => {
@@ -107,7 +108,7 @@ test("fragment cleanup retains the useful technical phrase", () => {
 test("an interrupted monitoring window never yields a growth rate", () => {
   const rows = [doc("recent", "Quantum error correction"), doc("prior", "Quantum error correction improves", lab, { publishedAt: "2026-09-20" })];
   const first = discoverTopics(rows, [], {}, now, [lab], state([lab]));
-  first.history = Array.from({ length: 28 }, (_, i) => ({ date: new Date(Date.parse(now) - (i === 0 ? 0 : i + 1) * 86400000).toISOString().slice(0, 10), topics: [] }));
+  first.history = Array.from({ length: 28 }, (_, i) => historyDay(i === 0 ? 0 : i + 1));
   const next = discoverTopics(rows, [], first, now, [lab], state([lab]));
   assert.equal(next.comparableDays, 28); assert.equal(next.candidates[0].momentumPercent, null);
 });
@@ -125,7 +126,7 @@ test("retention gaps remain flagged after unchanged records are evicted", () => 
 test("even 28 successful checks cannot produce momentum from a clipped archive", () => {
   const rows = [doc("recent", "Quantum error correction"), doc("prior", "Quantum error correction improves", lab, { publishedAt: "2026-09-20" })];
   const first = discoverTopics(rows, [], {}, now, [lab], state([lab]));
-  first.history = Array.from({ length: 28 }, (_, i) => ({ date: new Date(Date.parse(now) - (i + 1) * 86400000).toISOString().slice(0, 10), topics: [] }));
+  first.history = Array.from({ length: 28 }, (_, i) => historyDay(i + 1));
   assert.equal(discoverTopics(rows, [], first, now, [lab], state([lab])).candidates[0].momentumPercent, 0);
   assert.equal(discoverTopics(rows, [], first, now, [lab], state([lab]), { discoveryTruncated: true }).candidates[0].momentumPercent, null);
 });

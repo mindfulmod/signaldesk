@@ -8,6 +8,7 @@ import { verifyPublication } from "../verify-publication.mjs";
 
 const now = "2026-10-02T16:00:00.000Z";
 const source = { id: "news", name: "News", owner: "Lab", tier: "research", url: "https://example.org/feed", allowedHosts: ["example.org"], mode: "links", format: "rss", terms: [], themes: [], discovery: true, cadence: "daily" };
+const discoveryState = { status: "ok", sourceUrl: source.url, extractorVersion: 4, lastSuccessAt: now, newestPublicationAt: now, matchedItems: 3, datedItems: 3 };
 const item = (title, url = "/article", date = "2026-10-01") => '<item><title><![CDATA[' + title + ']]></title><link>https://example.org' + url + '</link><description><![CDATA[<p>A measured result &amp; its limitations</p>]]></description><pubDate>' + date + '</pubDate></item>';
 const rss = content => "<rss><channel>" + content + "</channel></rss>";
 const feedResponse = body => new Response(body, { headers: { "content-type": "application/rss+xml" } });
@@ -85,21 +86,21 @@ test("discovery extracts technical noun phrases, not loose AI verb fragments", (
 const doc = (id, title, date, owner = "Lab") => ({ id, title, publishedAt: date, owner, sourceId: "news", discovery: true, headlineSignal: "Research / test language" });
 test("discovery deduplicates syndication and does not infer momentum from backfill", () => {
   const rows = [doc("a", "Quantum error correction", "2026-09-30"), doc("b", "Quantum error correction", "2026-09-30", "Republisher"), doc("c", "Quantum error correction improves", "2026-09-10")];
-  const result = discoverTopics(rows, [], {}, now, [source], { news: { status: "ok", lastSuccessAt: now } });
+  const result = discoverTopics(rows, [], {}, now, [source], { news: discoveryState });
   const lead = result.candidates.find(c => c.phrase === "quantum error correction");
   assert.equal(lead.recentDocuments, 1); assert.equal(lead.owners.length, 1); assert.equal(lead.momentumPercent, null);
   assert.equal(result.history.length, 1);
 });
 test("discovery coverage changes or failures cannot accumulate comparable monitoring history", () => {
-  const first = discoverTopics([], [], {}, now, [source], { news: { status: "ok", lastSuccessAt: now } });
+  const first = discoverTopics([], [], {}, now, [source], { news: discoveryState });
   assert.equal(discoverTopics([], [], first, now, [{ ...source, url: "https://example.org/new" }], {}).history.length, 0);
   assert.equal(discoverTopics([], [], {}, now, [source], { news: { status: "error", lastSuccessAt: now } }).history.length, 0);
 });
 test("a full comparable history enables story momentum, not adoption growth", () => {
   const rows = [doc("a", "Quantum error correction", "2026-09-30"), doc("b", "Quantum error correction improves", "2026-09-10")];
-  const first = discoverTopics(rows, [], {}, now, [source], { news: { status: "ok", lastSuccessAt: now } });
-  first.history = Array.from({ length: 28 }, (_, i) => ({ date: new Date(Date.parse(now) - (i + 1) * 86400000).toISOString().slice(0, 10), topics: [] }));
-  const result = discoverTopics(rows, [], first, now, [source], { news: { status: "ok", lastSuccessAt: now } });
+  const first = discoverTopics(rows, [], {}, now, [source], { news: discoveryState });
+  first.history = Array.from({ length: 28 }, (_, i) => { const date = new Date(Date.parse(calendarDay(now)) - (i + 1) * 86400000).toISOString().slice(0, 10); return { date, topics: [], sourceChecks: [{ id: source.id, checkedAt: `${date}T12:00:00Z` }] }; });
+  const result = discoverTopics(rows, [], first, now, [source], { news: discoveryState });
   assert.equal(result.candidates[0].momentumPercent, 0);
   assert.match(result.candidates[0].caveat, /not a verified/);
 });

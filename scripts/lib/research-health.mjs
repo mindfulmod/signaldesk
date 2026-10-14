@@ -1,5 +1,6 @@
 import model from "../../research-model.js";
 import config from "../../research-config.js";
+import { discoveryHistory } from "./discovery-history.mjs";
 export function researchHealth(research, monitor, now = Date.now(), scope = config) {
   const errors = [], warnings = [];
   if (model.freshness(research?.generatedAt, now, 36) !== "current") errors.push("Research publication is missing or more than 36 hours old");
@@ -23,6 +24,15 @@ export function researchHealth(research, monitor, now = Date.now(), scope = conf
     if (s.quietAfterDays && model.freshness(state.newestPublicationAt, now, s.quietAfterDays * 24) !== "current") warnings.push(`${s.id}: latest content is undated, future-dated or older than ${s.quietAfterDays} days; readable does not mean fresh content`);
   }
   if (research?.discovery?.discoveryTruncated) warnings.push("Discovery archive has gaps in the 28-day window; counts cover retained records only and momentum is withheld");
+  const momentum = (research?.discovery?.candidates || []).filter(c => c.momentumPercent !== null && c.momentumPercent !== undefined);
+  if (momentum.length) {
+    const history = Number.isFinite(Date.parse(research?.generatedAt)) ? discoveryHistory(discovery, monitor?.sources || {}, research.discovery, research.generatedAt) : null;
+    if (research.discovery.historyVersion !== 1 || !history?.completeHistory || !history.collectedToday || research.discovery.discoveryTruncated) errors.push("Published discovery momentum lacks compatible daily source-check receipts or has an archive gap");
+    for (const candidate of momentum) {
+      const validCounts = Number.isInteger(candidate.recentDocuments) && candidate.recentDocuments > 0 && Number.isInteger(candidate.priorDocuments) && candidate.priorDocuments > 0;
+      if (!validCounts || !Number.isFinite(candidate.momentumPercent) || Math.abs(candidate.momentumPercent - (candidate.recentDocuments / candidate.priorDocuments - 1) * 100) > 1e-8) errors.push(`Invalid story-count momentum: ${candidate.id}`);
+    }
+  }
   const companies = Object.values(research?.companies || {}), covered = companies.filter(c => model.freshness(c.quote?.asOf, now, 96) === "current");
   if (!companies.length || companies.length !== scope.companies.length || scope.companies.some(c => !research?.companies?.[c.ticker])) errors.push("Permanent company universe is incomplete");
   for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.factsError || model.freshness(company.factsCheckedAt, now, 192) !== "current") warnings.push(ticker + ": financial source check unavailable or older than eight days; inspect original reporting periods");

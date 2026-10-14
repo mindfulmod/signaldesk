@@ -1,5 +1,35 @@
 # Research intelligence work plan
 
+## October 14 discovery history: actual daily collection, not cached replays
+
+Branch implementation, not deployed. The previous builder could treat a
+still-readable cached source check as a new UTC history day, even though the
+collector itself follows Toronto calendar days. Earlier history saved topic IDs
+but not the source-check receipts needed to verify daily coverage.
+
+- `discovery-history.mjs` now requires actual successful checks from every
+  discovery source on the same Toronto date, usable dated samples, matching
+  endpoints and a compatible collection contract. Rebuilding cached data cannot
+  mint another day. Contract identity includes owner, lane, extractor version and
+  publication-age policy as well as endpoint/extraction configuration.
+- Each comparable day records its per-source check timestamps. Missing/invalid
+  receipts, conflicting duplicate dates and future dates cannot count. Later
+  failed retries preserve earlier successful daily receipts but block a current
+  growth claim. Calendar arithmetic covers both DST transitions.
+- A growth percentage needs today plus all preceding 28 collection dates, a
+  complete retained story window and a nonzero prior story count. The public
+  health gate rejects unsupported percentages and inconsistent count arithmetic.
+  These remain sampled story counts, never adoption or customer growth.
+- Legacy rows remain in a separate audit list (90-day retention, at most 500
+  records), not the comparable history. Existing lead first-observed dates survive
+  a contract reset; a methodology change cannot create a newly discovered lead.
+- Fresh real-source collection at 2026-10-14 00:59 UTC: all five discovery feeds
+  readable with dated samples, 11 current phrase leads and 363 deduplicated dated
+  stories in the 28-day window. One new-contract Toronto collection day; two
+  legacy rows retained. Existing archive gaps remain flagged and all momentum
+  percentages stay withheld. Overall source status remains 21/22 active readable,
+  with two permission pauses and the QuantumScape 403 retained explicitly.
+
 ## October 14 source audit and measured-traction follow-up
 
 Branch implementation, not deployed:

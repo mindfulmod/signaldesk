@@ -1,10 +1,1338 @@
 {
   "schemaVersion": 1,
-  "collectionId": "83ce24aa-6dbe-430b-8c0e-3f32ff5dabb1",
-  "generatedAt": "2026-10-13T22:49:47.128Z",
-  "sourceCheckedAt": "2026-10-13T22:49:47.128Z",
+  "collectionId": "4dc5c04d-0544-468d-b469-04129c5cf40f",
+  "generatedAt": "2026-10-14T00:59:29.217Z",
+  "sourceCheckedAt": "2026-10-14T00:59:29.217Z",
   "runUrl": null,
   "documents": [
+    {
+      "id": "05d35dc4b39675c10f75631f",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03236-3",
+      "title": "Lead-tainted teeth reveal medieval mines’ unequal toll",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "971435200a7127c84613b499",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0a005a37a33c62b76282356c",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50081045",
+      "title": "Creating a Garmin \"MCP\"",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "d12e5182300677d9064e15c5",
+      "originalPublishedAt": "2026-10-14T00:52:25.000Z",
+      "linkedUrl": "https://jackantico.io/garmin-mcp",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 2,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:52:25.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0b8b2b8d74cb211b664f3c00",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50053487",
+      "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "aa41f92d1ebf285e9a67b162",
+      "originalPublishedAt": "2026-10-12T09:05:02.000Z",
+      "linkedUrl": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 26,
+        "comments": 1,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12T09:05:02.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "21a84e11e2a5ef1ef25e853d",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080998",
+      "title": "U.S. Treasury Announces Record Enforcement Actions Against Bank of America",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "947c41cf9883acafe60671f3",
+      "originalPublishedAt": "2026-10-14T00:46:27.000Z",
+      "linkedUrl": "https://home.treasury.gov/news/press-releases/sb0657",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 3,
+        "comments": 1,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:46:27.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "246a6f6802954bd017e139c7",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50081082",
+      "title": "A recent doubling of global warming rate signals a 1.5°C breach by 2028",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "005cccfac4e235fdd3179542",
+      "originalPublishedAt": "2026-10-14T00:58:26.000Z",
+      "linkedUrl": "https://www.nature.com/articles/s41612-026-01561-y",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:58:26.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "297d17d4406102149d2cc936",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11255-3",
+      "title": "Selective, Catalytic Oxidation of Polyethylene Surfaces",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "904a877bddb07904081d001d",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2b381219e36a593ab4807d43",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080956",
+      "title": "Show HN: Fresh cleanup and reset a project after coding agent prs",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "b3313ecf010764d672664d86",
+      "originalPublishedAt": "2026-10-14T00:39:57.000Z",
+      "linkedUrl": "https://github.com/Obedience-Corp/fresh",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:39:57.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "39735a43c9fb38e9c59b0146",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080983",
+      "title": "HN: Encrypted Privacy Aware Emails, ZyMail Hit the Globe",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "7b303cf05349581e872c46b4",
+      "originalPublishedAt": "2026-10-14T00:43:46.000Z",
+      "linkedUrl": null,
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:43:46.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4c110e88b8a085384c21a7ea",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080763",
+      "title": "The new unit of work for document collaboration",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "f7c7b5398de33b5a192cddf0",
+      "originalPublishedAt": "2026-10-14T00:13:12.000Z",
+      "linkedUrl": "https://lexifina.com/blog/the-new-unit-of-work",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 2,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:13:12.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5243c2388b7d827dd736c9af",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03221-w",
+      "title": "Whistleblowing in universities is ‘extraordinarily risky’: stronger protections are needed",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "2fc3e8bf8807d65aa814ff61",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Risk / setback language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5e0f860bc7bc75f0c8f1e369",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03153-5",
+      "title": "Inundated AI conferences impose submissions caps",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "9d2e9b8554f9a708f0bc90ff",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5f70ebf1b41da060d400480a",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080946",
+      "title": "Cargo-Litmus",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "af12d04b5d08b51ccf63aebb",
+      "originalPublishedAt": "2026-10-14T00:38:24.000Z",
+      "linkedUrl": "https://github.com/Ellipsis-Labs/cargo-litmus",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:38:24.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "63148c711f3c7f55de2e8b74",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080275",
+      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "a2028374629c930f8aee6874",
+      "originalPublishedAt": "2026-10-13T23:13:23.000Z",
+      "linkedUrl": "https://pulseos.finance/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 30,
+        "comments": 18,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13T23:13:23.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "643c13db7abd855aa18f6261",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080927",
+      "title": "Linear's CI playbook for agents",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "816e84bd2d545a2a35e5c841",
+      "originalPublishedAt": "2026-10-14T00:35:20.000Z",
+      "linkedUrl": "https://starsling.dev/blog/linear-ci",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [
+        "ai-work"
+      ],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:35:20.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6bfb6970155d2e65fcbc5544",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080928",
+      "title": "The Law of Leaky Abstractions",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "257cc095b745efcf3f8fd2d1",
+      "originalPublishedAt": "2026-10-14T00:35:26.000Z",
+      "linkedUrl": "https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 2,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:35:26.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8fbcb04510c2f856567adb85",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
+      "title": "Podcast: The hidden DNA code that controls your genes",
+      "excerpt": "From atoms and molecules to cells, understanding the building blocks of the natural world can lead to transformative technologies. NSF-supported researcher Torrey Rhyne-Carrigg discusses DNA initiators, using models for analysis, and her ex",
+      "owner": "NSF",
+      "tier": "research",
+      "storyId": "69edd7cabd4f7483d5d2236f",
+      "originalPublishedAt": "2026-10-13T19:57:51.000Z",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13T19:57:51.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13T19:57:51.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "99133b6e8df5efd633dd79b5",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+      "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "excerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age and in \" NSF leadership in a new golden age of science",
+      "owner": "NSF",
+      "tier": "research",
+      "storyId": "eb39f2a95af40a37bfd415cd",
+      "originalPublishedAt": "2026-10-08T13:45:03.000Z",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-09T11:29:49.615Z",
+      "announcementAt": "2026-10-08T13:45:03.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-08T13:45:03.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "revision",
+      "previousId": "4e4e27c7ac26e21ebb458e8c",
+      "previousExcerpt": "The U.S. National Science Foundation today announced plans to launch a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age , the first comprehensive rethinking o",
+      "previousTitle": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9bf1841d61cffb25c1399e7d",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50081029",
+      "title": "The Machines That Make the Machines",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "97b9382ffaa71467c63a13c1",
+      "originalPublishedAt": "2026-10-14T00:50:07.000Z",
+      "linkedUrl": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:50:07.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9f2d3de99f498c256e802738",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50081084",
+      "title": "Who Decided AI Gets to Have Feelings?",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "ba2cd88d5a4558b848220523",
+      "originalPublishedAt": "2026-10-14T00:58:32.000Z",
+      "linkedUrl": "https://middlelayer.substack.com/p/who-decided-ai-gets-to-have-feelings",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 1,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:58:32.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b21c9355f121849ad335b605",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080765",
+      "title": "Apple HomePod Mini 2",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "31ff49dccb32a958662f5dc4",
+      "originalPublishedAt": "2026-10-14T00:13:30.000Z",
+      "linkedUrl": "https://www.apple.com/homepod-mini/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 3,
+        "comments": 1,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:13:30.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b8bc8bf6549bd77fb6f2f785",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03252-3",
+      "title": "Can GLP-1s heal the brain? Obesity drugs get a makeover for addiction and depression",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "272a8d5c9312e4f54880127a",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bfb5aad7df9b5b59163f8005",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080778",
+      "title": "Robot seized by German police after allegedly groping teenage girl",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "cd339fa297a23bc33bd5320b",
+      "originalPublishedAt": "2026-10-14T00:14:47.000Z",
+      "linkedUrl": "https://www.bbc.com/news/articles/ck9dzj40nzj5o",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 6,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:14:47.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c0a8ceb0c6afc21d442e46da",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080246",
+      "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "30496b59c1289c7f25a51aa9",
+      "originalPublishedAt": "2026-10-13T23:10:04.000Z",
+      "linkedUrl": "https://wonderhop.io/en/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 2,
+        "comments": 1,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13T23:10:04.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c23c7cc01a7622b2c20a3725",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11246-4",
+      "title": "Author Correction: Parkinson’s disease as a somato-cognitive action network disorder",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "344c3c7cde036a812056833b",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c87c64be0de4b9b5f8a47148",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080964",
+      "title": "AI, Hyperwar and End Times Fascism",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "2530f171147cecdb7afe0d2f",
+      "originalPublishedAt": "2026-10-14T00:41:27.000Z",
+      "linkedUrl": "https://efturnip.substack.com/p/ai-hyperwar-and-end-times-fascism",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 3,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:41:27.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cc1ef28a4672de94e20b73b0",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080904",
+      "title": "What I've been seeing lately (in software)",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "77cf47d7cee9a901e8d8edf1",
+      "originalPublishedAt": "2026-10-14T00:32:22.000Z",
+      "linkedUrl": "https://mei.puppycat.house/w/seeing-261010",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 3,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:32:22.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cc3ad68e9883d1b85f4cc836",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080926",
+      "title": "SlowBooks Pro – From-scratch implementation of QuickBooks Pro 2003 for all OSes",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "35daf7e473e0041aae5d00dd",
+      "originalPublishedAt": "2026-10-14T00:35:03.000Z",
+      "linkedUrl": "https://www.slowbookspro.com/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:35:03.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d12de996c73b117e33bba687",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11257-1",
+      "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunneling",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3a8ef8eb709f20b011d2efd5",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d9b5efee0dd174714171319c",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080968",
+      "title": "Ask HN: Could you find funding if you didn't want to build a $1-10B business?",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "5e8f2a32a7b4aac3b07ecf52",
+      "originalPublishedAt": "2026-10-14T00:42:31.000Z",
+      "linkedUrl": null,
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:42:31.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dc6ca8d7e44bc4afcaa349ae",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080836",
+      "title": "Show HN: Mosh-rs, Mosh rewritten in Rust with scrollback and Windows support",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "47a32df2cf2f96146f82d313",
+      "originalPublishedAt": "2026-10-14T00:22:19.000Z",
+      "linkedUrl": "https://github.com/Arunjay4213/mosh-rs",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:22:19.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e0ac70003c52f129d3bdbb3f",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080450",
+      "title": "Show HN: Jevcrawl – A web crawler for AI agents with no LLM in the crawl loop",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "9df8477ec969e62320d64158",
+      "originalPublishedAt": "2026-10-13T23:35:20.000Z",
+      "linkedUrl": "https://github.com/RayenMlayeh/jevcrawl",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 4,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [
+        "ai-work"
+      ],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13T23:35:20.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e52df9218f3fc9d670bac078",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50081054",
+      "title": "Topgolf saved over $11.3M after leaving VMware",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "6d6810a0639eac347b3872aa",
+      "originalPublishedAt": "2026-10-14T00:54:12.000Z",
+      "linkedUrl": "https://arstechnica.com/information-technology/2026/10/topgolf-saved-over-11-3-million-after-leaving-vmware/",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 1,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:54:12.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e73d8a91baf09c2ab38d5162",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02974-8",
+      "title": "A mysterious jelly seems to be left behind by toads",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "9b70ffbd302b59f7904a67ed",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e9eac0172da067c9a759fbb9",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50057612",
+      "title": "Rebuilding the Original Odhner Model 127 Pinwheel Calculator",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "fc031bda7c5a94fb8fc60789",
+      "originalPublishedAt": "2026-10-12T15:12:37.000Z",
+      "linkedUrl": "https://www.johnwolff.au/calculators/Tech/OdhnerPinwheel/Odhner127Rebuild.htm",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 6,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-12T15:12:37.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ece354c2d5b4b2e4293d4c77",
+      "sourceId": "hn-discovery",
+      "url": "https://news.ycombinator.com/item?id=50080783",
+      "title": "What a Jurassic forest may have sounded like",
+      "excerpt": null,
+      "owner": "Hacker News",
+      "tier": "community",
+      "storyId": "aece633ffc4c29fb7e7fa313",
+      "originalPublishedAt": "2026-10-14T00:15:56.000Z",
+      "linkedUrl": "https://www.science.org/content/article/what-jurassic-forest-may-have-sounded",
+      "dateKind": "community-submission",
+      "engagement": {
+        "points": 3,
+        "comments": 0,
+        "observedAt": "2026-10-14T00:59:36.536Z"
+      },
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-14T00:15:56.000Z",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fb5d97b7c68e197ac2215d32",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03220-x",
+      "title": "Diversify Nobel-prize nominations before it’s too late",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "5e113837e0577d9094575773",
+      "originalPublishedAt": "2026-10-13",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "announcementAt": "2026-10-13",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-13",
+      "detectedAt": "2026-10-14T00:59:29.217Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "02bc7c1453c5120481519d87",
       "sourceId": "hn-discovery",
@@ -132,9 +1460,9 @@
       "linkedUrl": "https://blog.plover.com/prog/git/history-proposal.html",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 13,
-        "comments": 1,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 24,
+        "comments": 5,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -208,9 +1536,9 @@
       "linkedUrl": "https://guitoro.com/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 173,
-        "comments": 59,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 242,
+        "comments": 78,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -246,9 +1574,9 @@
       "linkedUrl": "https://eg2.haku.sh/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 372,
-        "comments": 82,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 391,
+        "comments": 85,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -322,9 +1650,9 @@
       "linkedUrl": "https://github.com/rust-lang/rust/issues/164250",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 640,
-        "comments": 361,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 669,
+        "comments": 373,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -436,9 +1764,9 @@
       "linkedUrl": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 159,
-        "comments": 227,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 194,
+        "comments": 278,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -512,9 +1840,9 @@
       "linkedUrl": "https://www.pi.website/blog/api-beta",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 4,
+        "points": 22,
         "comments": 0,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -584,9 +1912,9 @@
       "linkedUrl": "https://parsimony.lasu.dev/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 23,
-        "comments": 1,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 41,
+        "comments": 3,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -660,9 +1988,9 @@
       "linkedUrl": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 114,
-        "comments": 18,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 142,
+        "comments": 28,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -698,9 +2026,9 @@
       "linkedUrl": "https://deepmind.google/models/gemini/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 868,
-        "comments": 680,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 964,
+        "comments": 736,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -736,9 +2064,9 @@
       "linkedUrl": "https://blog.character.ai/an-update-on-character-ai/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 261,
-        "comments": 258,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 284,
+        "comments": 266,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -812,9 +2140,9 @@
       "linkedUrl": "https://www.bbc.com/travel/article/20261007-the-man-hiking-the-world-in-search-of-rare-cheeses",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 31,
-        "comments": 8,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 47,
+        "comments": 15,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -850,9 +2178,9 @@
       "linkedUrl": "https://pdftomp3.com/connect-ai/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 157,
-        "comments": 78,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 159,
+        "comments": 80,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -926,9 +2254,9 @@
       "linkedUrl": "https://www.cphiri.dev/presentations/recreational-programming",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 2,
-        "comments": 0,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 36,
+        "comments": 9,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1002,9 +2330,9 @@
       "linkedUrl": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 324,
-        "comments": 276,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 414,
+        "comments": 314,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1078,9 +2406,9 @@
       "linkedUrl": "https://newsletter.pessimistsarchive.org/p/the-1st-time-machines-mogged-mathematicians",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 18,
-        "comments": 16,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 34,
+        "comments": 25,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1150,9 +2478,9 @@
       "linkedUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 442,
-        "comments": 436,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 512,
+        "comments": 512,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1264,9 +2592,9 @@
       "linkedUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 167,
-        "comments": 40,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 192,
+        "comments": 45,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1416,9 +2744,9 @@
       "linkedUrl": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 214,
-        "comments": 90,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 218,
+        "comments": 93,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1454,9 +2782,9 @@
       "linkedUrl": "https://www.sammystraus.com/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 213,
-        "comments": 137,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 238,
+        "comments": 146,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1492,9 +2820,9 @@
       "linkedUrl": "https://lab.specr.net/rigged-draw/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 64,
-        "comments": 31,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 70,
+        "comments": 40,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1530,9 +2858,9 @@
       "linkedUrl": "https://alpha-nist.github.io/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 3,
-        "comments": 0,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 34,
+        "comments": 9,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1644,9 +2972,9 @@
       "linkedUrl": "https://www.apple.com/apple-homeview/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 614,
-        "comments": 746,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 648,
+        "comments": 771,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1682,9 +3010,9 @@
       "linkedUrl": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 236,
-        "comments": 220,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 382,
+        "comments": 347,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1792,9 +3120,9 @@
       "linkedUrl": "https://github.com/LargeModGames/spotatui",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 36,
-        "comments": 5,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 45,
+        "comments": 8,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1830,9 +3158,9 @@
       "linkedUrl": "https://www.firefox.com/en-US/enterprise/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 587,
-        "comments": 247,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 636,
+        "comments": 259,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1906,9 +3234,9 @@
       "linkedUrl": "https://docs.hypermass.io/docs/cli/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 8,
+        "points": 9,
         "comments": 1,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -1982,9 +3310,9 @@
       "linkedUrl": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 288,
-        "comments": 118,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 329,
+        "comments": 143,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -2058,9 +3386,9 @@
       "linkedUrl": "https://music.xy.dev/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 42,
-        "comments": 34,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 44,
+        "comments": 38,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -2136,9 +3464,9 @@
       "linkedUrl": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 150,
-        "comments": 248,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 181,
+        "comments": 300,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -2174,9 +3502,9 @@
       "linkedUrl": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
       "dateKind": "community-submission",
       "engagement": {
-        "points": 259,
-        "comments": 501,
-        "observedAt": "2026-10-13T22:49:48.047Z"
+        "points": 282,
+        "comments": 535,
+        "observedAt": "2026-10-14T00:59:36.536Z"
       },
       "firstSeenAt": "2026-10-13T22:49:47.128Z",
       "announcementAt": null,
@@ -32116,12 +33444,13 @@
     },
     "eb39f2a95af40a37bfd415cd": {
       "sourceId": "nsf-research",
+      "originalPublishedAt": "2026-10-08T13:45:03.000Z",
       "firstSeenAt": "2026-10-09T11:29:49.615Z",
-      "latestId": "4e4e27c7ac26e21ebb458e8c",
+      "latestId": "99133b6e8df5efd633dd79b5",
       "versions": {
-        "4e4e27c7ac26e21ebb458e8c": "2026-10-09T11:29:49.615Z"
-      },
-      "originalPublishedAt": "2026-10-08T13:45:03.000Z"
+        "4e4e27c7ac26e21ebb458e8c": "2026-10-09T11:29:49.615Z",
+        "99133b6e8df5efd633dd79b5": "2026-10-14T00:59:29.217Z"
+      }
     },
     "79eb8421cce0cbed75f9d8ac": {
       "sourceId": "nsf-research",
@@ -39819,6 +41148,321 @@
       "latestId": "5c0a2ee32246fd7775236c81",
       "versions": {
         "5c0a2ee32246fd7775236c81": "2026-10-13T22:49:47.128Z"
+      }
+    },
+    "69edd7cabd4f7483d5d2236f": {
+      "sourceId": "nsf-research",
+      "originalPublishedAt": "2026-10-13T19:57:51.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "8fbcb04510c2f856567adb85",
+      "versions": {
+        "8fbcb04510c2f856567adb85": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "3a8ef8eb709f20b011d2efd5": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "d12de996c73b117e33bba687",
+      "versions": {
+        "d12de996c73b117e33bba687": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "904a877bddb07904081d001d": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "297d17d4406102149d2cc936",
+      "versions": {
+        "297d17d4406102149d2cc936": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "971435200a7127c84613b499": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "05d35dc4b39675c10f75631f",
+      "versions": {
+        "05d35dc4b39675c10f75631f": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "9b70ffbd302b59f7904a67ed": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "e73d8a91baf09c2ab38d5162",
+      "versions": {
+        "e73d8a91baf09c2ab38d5162": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "5e113837e0577d9094575773": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "fb5d97b7c68e197ac2215d32",
+      "versions": {
+        "fb5d97b7c68e197ac2215d32": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "2fc3e8bf8807d65aa814ff61": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "5243c2388b7d827dd736c9af",
+      "versions": {
+        "5243c2388b7d827dd736c9af": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "272a8d5c9312e4f54880127a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "b8bc8bf6549bd77fb6f2f785",
+      "versions": {
+        "b8bc8bf6549bd77fb6f2f785": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "9d2e9b8554f9a708f0bc90ff": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "5e0f860bc7bc75f0c8f1e369",
+      "versions": {
+        "5e0f860bc7bc75f0c8f1e369": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "344c3c7cde036a812056833b": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-13",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "c23c7cc01a7622b2c20a3725",
+      "versions": {
+        "c23c7cc01a7622b2c20a3725": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "ba2cd88d5a4558b848220523": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:58:32.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "9f2d3de99f498c256e802738",
+      "versions": {
+        "9f2d3de99f498c256e802738": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "005cccfac4e235fdd3179542": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:58:26.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "246a6f6802954bd017e139c7",
+      "versions": {
+        "246a6f6802954bd017e139c7": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "6d6810a0639eac347b3872aa": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:54:12.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "e52df9218f3fc9d670bac078",
+      "versions": {
+        "e52df9218f3fc9d670bac078": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "d12e5182300677d9064e15c5": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:52:25.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "0a005a37a33c62b76282356c",
+      "versions": {
+        "0a005a37a33c62b76282356c": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "97b9382ffaa71467c63a13c1": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:50:07.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "9bf1841d61cffb25c1399e7d",
+      "versions": {
+        "9bf1841d61cffb25c1399e7d": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "947c41cf9883acafe60671f3": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:46:27.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "21a84e11e2a5ef1ef25e853d",
+      "versions": {
+        "21a84e11e2a5ef1ef25e853d": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "7b303cf05349581e872c46b4": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:43:46.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "39735a43c9fb38e9c59b0146",
+      "versions": {
+        "39735a43c9fb38e9c59b0146": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "5e8f2a32a7b4aac3b07ecf52": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:42:31.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "d9b5efee0dd174714171319c",
+      "versions": {
+        "d9b5efee0dd174714171319c": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "2530f171147cecdb7afe0d2f": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:41:27.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "c87c64be0de4b9b5f8a47148",
+      "versions": {
+        "c87c64be0de4b9b5f8a47148": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "b3313ecf010764d672664d86": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:39:57.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "2b381219e36a593ab4807d43",
+      "versions": {
+        "2b381219e36a593ab4807d43": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "af12d04b5d08b51ccf63aebb": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:38:24.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "5f70ebf1b41da060d400480a",
+      "versions": {
+        "5f70ebf1b41da060d400480a": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "257cc095b745efcf3f8fd2d1": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:35:26.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "6bfb6970155d2e65fcbc5544",
+      "versions": {
+        "6bfb6970155d2e65fcbc5544": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "816e84bd2d545a2a35e5c841": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:35:20.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "643c13db7abd855aa18f6261",
+      "versions": {
+        "643c13db7abd855aa18f6261": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "35daf7e473e0041aae5d00dd": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:35:03.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "cc3ad68e9883d1b85f4cc836",
+      "versions": {
+        "cc3ad68e9883d1b85f4cc836": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "77cf47d7cee9a901e8d8edf1": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:32:22.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "cc1ef28a4672de94e20b73b0",
+      "versions": {
+        "cc1ef28a4672de94e20b73b0": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "47a32df2cf2f96146f82d313": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:22:19.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "dc6ca8d7e44bc4afcaa349ae",
+      "versions": {
+        "dc6ca8d7e44bc4afcaa349ae": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "aece633ffc4c29fb7e7fa313": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:15:56.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "ece354c2d5b4b2e4293d4c77",
+      "versions": {
+        "ece354c2d5b4b2e4293d4c77": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "cd339fa297a23bc33bd5320b": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:14:47.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "bfb5aad7df9b5b59163f8005",
+      "versions": {
+        "bfb5aad7df9b5b59163f8005": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "31ff49dccb32a958662f5dc4": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:13:30.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "b21c9355f121849ad335b605",
+      "versions": {
+        "b21c9355f121849ad335b605": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "f7c7b5398de33b5a192cddf0": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-14T00:13:12.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "4c110e88b8a085384c21a7ea",
+      "versions": {
+        "4c110e88b8a085384c21a7ea": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "9df8477ec969e62320d64158": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-13T23:35:20.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "e0ac70003c52f129d3bdbb3f",
+      "versions": {
+        "e0ac70003c52f129d3bdbb3f": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "a2028374629c930f8aee6874": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-13T23:13:23.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "63148c711f3c7f55de2e8b74",
+      "versions": {
+        "63148c711f3c7f55de2e8b74": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "30496b59c1289c7f25a51aa9": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-13T23:10:04.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "c0a8ceb0c6afc21d442e46da",
+      "versions": {
+        "c0a8ceb0c6afc21d442e46da": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "fc031bda7c5a94fb8fc60789": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-12T15:12:37.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "e9eac0172da067c9a759fbb9",
+      "versions": {
+        "e9eac0172da067c9a759fbb9": "2026-10-14T00:59:29.217Z"
+      }
+    },
+    "aa41f92d1ebf285e9a67b162": {
+      "sourceId": "hn-discovery",
+      "originalPublishedAt": "2026-10-12T09:05:02.000Z",
+      "firstSeenAt": "2026-10-14T00:59:29.217Z",
+      "latestId": "0b8b2b8d74cb211b664f3c00",
+      "versions": {
+        "0b8b2b8d74cb211b664f3c00": "2026-10-14T00:59:29.217Z"
       }
     }
   },
@@ -52996,9 +54640,52 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-13T22:49:47.128Z",
-    "coverageKey": "397b8b759803b5976b100f48",
+    "generatedAt": "2026-10-14T00:59:29.217Z",
+    "historyVersion": 1,
+    "calendar": "America/Toronto",
+    "coverageKey": "2a0e2ecbf5438da871796863",
     "history": [
+      {
+        "date": "2026-10-13",
+        "topics": [
+          "e748f8750672ca8b04b242be",
+          "31a85e22a24a7a4fba06c2c6",
+          "53beb385cf69a2c6c9d58738",
+          "bf97fa20a01bdcda8822e9e5",
+          "707beb189fd959123aa30113",
+          "3c41eea57eef8f06bf9d2476",
+          "adb8682d9498bc8bcbb4e1f3",
+          "4158a471a36ea5a49bc3d213",
+          "a76e09cc83495b8ceca587a0",
+          "0207ef61f3989b97c7f10894",
+          "43188ee64bff4831162717bd"
+        ],
+        "documentCount": 363,
+        "sourceChecks": [
+          {
+            "id": "nsf-research",
+            "checkedAt": "2026-10-14T00:59:29.217Z"
+          },
+          {
+            "id": "mit-research",
+            "checkedAt": "2026-10-14T00:59:29.217Z"
+          },
+          {
+            "id": "nature-research",
+            "checkedAt": "2026-10-14T00:59:29.217Z"
+          },
+          {
+            "id": "nist-research",
+            "checkedAt": "2026-10-14T00:59:29.217Z"
+          },
+          {
+            "id": "hn-discovery",
+            "checkedAt": "2026-10-14T00:59:29.217Z"
+          }
+        ]
+      }
+    ],
+    "legacyHistory": [
       {
         "date": "2026-10-11",
         "topics": [
@@ -53014,7 +54701,8 @@
           "0207ef61f3989b97c7f10894",
           "43188ee64bff4831162717bd"
         ],
-        "documentCount": 254
+        "documentCount": 254,
+        "coverageKey": "397b8b759803b5976b100f48"
       },
       {
         "date": "2026-10-13",
@@ -53033,7 +54721,8 @@
           "0207ef61f3989b97c7f10894",
           "43188ee64bff4831162717bd"
         ],
-        "documentCount": 328
+        "documentCount": 328,
+        "coverageKey": "397b8b759803b5976b100f48"
       }
     ],
     "coverage": [
@@ -53043,10 +54732,12 @@
         "lane": "research",
         "fresh": true,
         "quiet": false,
-        "lastSuccessAt": "2026-10-13T12:08:25.253Z",
-        "newestPublicationAt": "2026-10-08T13:45:03.000Z",
+        "sampleUsable": true,
+        "collectedToday": true,
+        "lastSuccessAt": "2026-10-14T00:59:29.217Z",
+        "newestPublicationAt": "2026-10-13T19:57:51.000Z",
         "matchedItems": 15,
-        "datedItems": null
+        "datedItems": 15
       },
       {
         "id": "mit-research",
@@ -53054,7 +54745,9 @@
         "lane": "research",
         "fresh": true,
         "quiet": false,
-        "lastSuccessAt": "2026-10-13T22:49:47.128Z",
+        "sampleUsable": true,
+        "collectedToday": true,
+        "lastSuccessAt": "2026-10-14T00:59:29.217Z",
         "newestPublicationAt": "2026-10-13T21:00:00.000Z",
         "matchedItems": 50,
         "datedItems": 50
@@ -53065,10 +54758,12 @@
         "lane": "research",
         "fresh": true,
         "quiet": false,
-        "lastSuccessAt": "2026-10-13T12:08:25.253Z",
+        "sampleUsable": true,
+        "collectedToday": true,
+        "lastSuccessAt": "2026-10-14T00:59:29.217Z",
         "newestPublicationAt": "2026-10-13",
         "matchedItems": 75,
-        "datedItems": null
+        "datedItems": 75
       },
       {
         "id": "nist-research",
@@ -53076,7 +54771,9 @@
         "lane": "research",
         "fresh": true,
         "quiet": false,
-        "lastSuccessAt": "2026-10-13T22:49:47.128Z",
+        "sampleUsable": true,
+        "collectedToday": true,
+        "lastSuccessAt": "2026-10-14T00:59:29.217Z",
         "newestPublicationAt": "2026-10-08T12:00:00.000Z",
         "matchedItems": 40,
         "datedItems": 40
@@ -53087,137 +54784,140 @@
         "lane": "community",
         "fresh": true,
         "quiet": false,
-        "lastSuccessAt": "2026-10-13T22:49:47.128Z",
-        "newestPublicationAt": "2026-10-13T22:48:37.000Z",
+        "sampleUsable": true,
+        "collectedToday": true,
+        "lastSuccessAt": "2026-10-14T00:59:29.217Z",
+        "newestPublicationAt": "2026-10-14T00:58:32.000Z",
         "matchedItems": 55,
         "datedItems": 55
       }
     ],
     "healthy": true,
+    "collectedToday": true,
     "discoveryTruncated": true,
     "openScan": [
-      "4e4e27c7ac26e21ebb458e8c",
+      "8fbcb04510c2f856567adb85",
       "384d0e25a9e79fa7bc96391e",
-      "26cd8672208951d741b4ccb8",
+      "05d35dc4b39675c10f75631f",
       "1c5743a88baa0eacae34a5f4",
-      "05fce2b76f0a80c08ec26aa9",
-      "68102bbd53eb8dea49b294a6",
+      "9f2d3de99f498c256e802738",
+      "99133b6e8df5efd633dd79b5",
       "cd029a901635617f730efa1f",
-      "40c6c1a05339d2d105b88e95",
+      "297d17d4406102149d2cc936",
       "f172990ca1d4a6ee0a110065",
-      "19259f137675a637a7492740",
-      "47cccd1accf39fa79f5e71cb",
+      "246a6f6802954bd017e139c7",
+      "68102bbd53eb8dea49b294a6",
       "765ac569f0b1d5118a8b712d",
-      "4481eb26b6b90566f05b2ca0",
+      "5243c2388b7d827dd736c9af",
       "f6ca5f4bfa4f0cd5009b1703",
-      "245d4dd81e237b33c90c092f",
-      "6500912e0fd2dbd695bf35d8",
+      "e52df9218f3fc9d670bac078",
+      "47cccd1accf39fa79f5e71cb",
       "3853f10364f750a13f4ce271",
-      "8ab1b9be886c00aad12baa3f",
-      "02bc7c1453c5120481519d87",
+      "5e0f860bc7bc75f0c8f1e369",
+      "0a005a37a33c62b76282356c",
+      "6500912e0fd2dbd695bf35d8",
       "4f26eb7b3b3b6c1e49248223",
-      "a811c8f815575bc672ee0ea3",
-      "63a15c09e140bd9b53addeca",
+      "b8bc8bf6549bd77fb6f2f785",
+      "9bf1841d61cffb25c1399e7d",
       "7cb7c288a35b4c3c6b70e72c",
-      "bbddda768752b8aca4643864",
-      "e6547e7f4f3e3423fe96837f",
+      "c23c7cc01a7622b2c20a3725",
+      "21a84e11e2a5ef1ef25e853d",
       "2ef9463af4f0bf1c337bba0c",
-      "e5287459253afa463d9f8738",
-      "5ac94aa0a3ee298172417450",
+      "d12de996c73b117e33bba687",
+      "39735a43c9fb38e9c59b0146",
       "2f7cb7e7a820541e50ee434e",
-      "fad0e4518254f05a485afd14",
-      "5bd4892c6e66f22ae9a657e3",
+      "e73d8a91baf09c2ab38d5162",
+      "d9b5efee0dd174714171319c",
       "fcb4c70528f40016acf185c7",
-      "5e1e1c577e6abd085af50f21",
-      "6ee2bf8332dc9ce393c42e6b",
+      "fb5d97b7c68e197ac2215d32",
+      "c87c64be0de4b9b5f8a47148",
       "3fc0aae61328091d015da6a4",
+      "26cd8672208951d741b4ccb8",
+      "2b381219e36a593ab4807d43",
+      "40c6c1a05339d2d105b88e95",
+      "5f70ebf1b41da060d400480a",
+      "4481eb26b6b90566f05b2ca0",
+      "6bfb6970155d2e65fcbc5544",
+      "8ab1b9be886c00aad12baa3f",
+      "cc3ad68e9883d1b85f4cc836",
+      "a811c8f815575bc672ee0ea3",
+      "cc1ef28a4672de94e20b73b0",
+      "bbddda768752b8aca4643864",
+      "dc6ca8d7e44bc4afcaa349ae",
+      "e5287459253afa463d9f8738",
+      "ece354c2d5b4b2e4293d4c77",
+      "fad0e4518254f05a485afd14",
+      "bfb5aad7df9b5b59163f8005",
+      "5e1e1c577e6abd085af50f21",
+      "b21c9355f121849ad335b605",
       "9d37434f28652e787d59d238",
-      "3c8b141f972a081582c212c6",
+      "4c110e88b8a085384c21a7ea",
       "d2835190baeb1abc955867e4",
-      "5570df02da555882e144e950",
+      "63148c711f3c7f55de2e8b74",
       "dae4e74cfc83af45735c3043",
-      "e8729fd3d0f385f50a6e4cc8",
+      "c0a8ceb0c6afc21d442e46da",
       "0396c6f72f8eaf75f7d2ac00",
-      "46f0f40503b0655aeda4e31a",
+      "05fce2b76f0a80c08ec26aa9",
       "1b505ed20d2ca14cf10ee0dd",
-      "dc47be85e52e0eab66a58e3b",
+      "19259f137675a637a7492740",
       "3ac8c53c32674de76bd50ca5",
-      "81434215565d76c5755f02be",
+      "245d4dd81e237b33c90c092f",
       "40af18df88db4b1c0fcad099",
-      "c05e3dd77b197e656ed3a6a5",
+      "02bc7c1453c5120481519d87",
       "532edb72f1633c4cb51bba94",
-      "d02ddcbc1fc8d6d40c220288",
+      "63a15c09e140bd9b53addeca",
       "6273f132cee49fb1ed4b832e",
-      "887cd81f52889ac328ddc2dc",
+      "e6547e7f4f3e3423fe96837f",
       "7242169e9cd302fa5e1835e2",
-      "77ebc39d27d3898c79d38b22",
+      "5ac94aa0a3ee298172417450",
       "7d297db064fc52bedc90be71",
-      "aa2edc950610236e3a22e8b3",
+      "5bd4892c6e66f22ae9a657e3",
       "d22889e7199850a8e5fdefd0",
-      "36ec60795c6409e4a1069656",
+      "6ee2bf8332dc9ce393c42e6b",
       "6ba1d3941a82052606fd8b31",
-      "85f8c95baffbace2a367a4d4",
+      "3c8b141f972a081582c212c6",
       "d85d5617f854cc3cf0fa5ae9",
-      "ae62b37ae46f98ae7eafab6e",
+      "5570df02da555882e144e950",
       "0e9003d53bc38f3e0ff9409a",
-      "1ee36789126e51d637fdb60c",
+      "e8729fd3d0f385f50a6e4cc8",
       "6a1f3f10768b9c5b49d83f14",
-      "ca838067b57f64a9b48d5064",
+      "46f0f40503b0655aeda4e31a",
       "83a0639fc238a05a35a33423",
-      "398de5d203c4c494dd673d8d",
+      "dc47be85e52e0eab66a58e3b",
       "ae882584f94d71fc16470157",
-      "664e1fc65562b1fdde5593ea",
+      "81434215565d76c5755f02be",
       "eb06f1eaf541e838ae5586b1",
-      "1b4758decf79566408574871",
+      "c05e3dd77b197e656ed3a6a5",
       "100bdc9c43f9dbd046e24a39",
-      "e94648c474fbb2050041a419",
+      "d02ddcbc1fc8d6d40c220288",
       "3d1f022547121785ee5128ab",
-      "a2d0211b9caefa3bf890e1a2",
+      "887cd81f52889ac328ddc2dc",
       "62df8f7462c5f59a8b674aa4",
-      "7daf1a5df575f319d52b661c",
+      "77ebc39d27d3898c79d38b22",
       "7187aa2ed8c32d8809d46de9",
-      "3efc73a3fc6f73d83a49e811",
+      "aa2edc950610236e3a22e8b3",
       "01121e4776f8aa3e5ead13c9",
-      "6acee3d5ab854ee8937192f2",
+      "36ec60795c6409e4a1069656",
       "04e01ca4dd5ee1771fb6003e",
-      "9ee6127d4a1ea008a7bbd096",
+      "85f8c95baffbace2a367a4d4",
       "2923a8e8c0664da7283b78f6",
-      "260f743ab5c551f386efed44",
+      "ae62b37ae46f98ae7eafab6e",
       "329255139986cfeec54d0c4c",
-      "e81b055cb2fc41740a22e267",
+      "1ee36789126e51d637fdb60c",
       "3f21d544faab346d1b21a415",
-      "f7ce2ea7abe115579636e549",
+      "ca838067b57f64a9b48d5064",
       "c954f79a4742f7e030cad1b1",
-      "075d20f7482594176b03dc5f",
+      "398de5d203c4c494dd673d8d",
       "1ccc061dc89bdd090642df37",
-      "fa5643103e5a1fabe1ee42c6",
+      "664e1fc65562b1fdde5593ea",
       "85f910c09ccfdd465682ef44",
-      "e1818113d9d964cb425f4bd6",
+      "1b4758decf79566408574871",
       "02a0a94fe23cf5f354cb9c89",
-      "c51d658b75ff05ac2d6881f2",
+      "e94648c474fbb2050041a419",
       "774f5fa388580a2ec405d9bb",
-      "8dfee5d822d4885b942d6e29",
-      "0ffc32540d67d4b7bfa4d07d",
-      "22291e9c52fa15aaaa598a26",
-      "11637d023770107469922297",
-      "d6ca45864198be9384b33e4c",
-      "16780aed0c9fc6586acaed6d",
-      "d27f2a076acd4a70e97dca7e",
-      "1e1d895aa41cd296b478791a",
-      "1bc90a08a431f39d9ff70c22",
-      "23839e5c11b1510677911f25",
-      "2052cb0b0d5b430cec22db98",
-      "3c6bf0f5450fecebbd0b1805",
-      "4bcf675e0ad857a03eff5271",
-      "42ddc3c47c16f8b896630744",
-      "422fc8b390d9b4770f27e470",
-      "44e21dd1bbcf4a371e66ac0b",
-      "1832341dee27ebc179a444c6",
-      "4661ca715381b8b2c4f85a27",
-      "3d26a6fa865a4e766a5c67be",
-      "5579b75f15cd625c7aed4bce"
+      "a2d0211b9caefa3bf890e1a2"
     ],
-    "unmatchedDocuments": 287,
+    "unmatchedDocuments": 282,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -53225,7 +54925,7 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 3,
+        "recentDocuments": 4,
         "priorDocuments": 0,
         "momentumPercent": null,
         "status": "Single-owner lead",
@@ -53233,6 +54933,7 @@
           "Announcement / reporting"
         ],
         "documentIds": [
+          "e0ac70003c52f129d3bdbb3f",
           "f12869a7b2c7306c29c38d64",
           "18532b6f41e3869108726c9d",
           "4aed77460fdf1a12037ed8ea"
@@ -53244,7 +54945,33 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "31a85e22a24a7a4fba06c2c6",
+        "phrase": "coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "2b381219e36a593ab4807d43",
+          "ae62b37ae46f98ae7eafab6e"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "53beb385cf69a2c6c9d58738",
@@ -53270,7 +54997,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "bf97fa20a01bdcda8822e9e5",
@@ -53295,7 +55022,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "707beb189fd959123aa30113",
@@ -53320,7 +55047,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "3c41eea57eef8f06bf9d2476",
@@ -53345,57 +55072,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "15ce4bfeb2c4c225b2228ac9",
-        "phrase": "ai generated proteins",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6632e1041a03d71e0285d8ff"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "0aef6f4b72c4e512490d7390",
-        "phrase": "octave separated lasers",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "4e75ac579365e4f09522adbf"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -53420,7 +55097,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "4158a471a36ea5a49bc3d213",
@@ -53445,32 +55122,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "31a85e22a24a7a4fba06c2c6",
-        "phrase": "coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "ae62b37ae46f98ae7eafab6e"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "a76e09cc83495b8ceca587a0",
@@ -53495,7 +55147,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "0207ef61f3989b97c7f10894",
@@ -53520,7 +55172,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "43188ee64bff4831162717bd",
@@ -53545,10 +55197,290 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       }
     ],
     "archive": [
+      {
+        "id": "adb8682d9498bc8bcbb4e1f3",
+        "phrase": "quantum enabled materials",
+        "owners": [
+          "NSF"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "6500912e0fd2dbd695bf35d8"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "e748f8750672ca8b04b242be",
+        "phrase": "ai agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 4,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "e0ac70003c52f129d3bdbb3f",
+          "f12869a7b2c7306c29c38d64",
+          "18532b6f41e3869108726c9d",
+          "4aed77460fdf1a12037ed8ea"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 4,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "53beb385cf69a2c6c9d58738",
+        "phrase": "coding agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "2f000ad0ea4f48c2ff26132e",
+          "d502e8900f5a3b5247fb572d"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 1,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "bf97fa20a01bdcda8822e9e5",
+        "phrase": "hosted personal ai agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "5d23bc50a6063c1d41d1d1a9"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "3c41eea57eef8f06bf9d2476",
+        "phrase": "ai coding agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "2f000ad0ea4f48c2ff26132e"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "4158a471a36ea5a49bc3d213",
+        "phrase": "bandgap semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "8c4c64b404a61832fe0845c9"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "0207ef61f3989b97c7f10894",
+        "phrase": "openclaw agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "c6e214da4c2abdae93d0e0bb"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "43188ee64bff4831162717bd",
+        "phrase": "sensor fusion",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "e19910e859f98ed1f2abfd00"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "707beb189fd959123aa30113",
+        "phrase": "ledger confirms spy chip",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "5c0a2ee32246fd7775236c81"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "31a85e22a24a7a4fba06c2c6",
+        "phrase": "coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "2b381219e36a593ab4807d43",
+          "ae62b37ae46f98ae7eafab6e"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "a76e09cc83495b8ceca587a0",
+        "phrase": "every robot",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "36ec60795c6409e4a1069656"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
       {
         "id": "15ce4bfeb2c4c225b2228ac9",
         "phrase": "ai generated proteins",
@@ -53589,31 +55521,6 @@
         ],
         "documentIds": [
           "4e75ac579365e4f09522adbf"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "adb8682d9498bc8bcbb4e1f3",
-        "phrase": "quantum enabled materials",
-        "owners": [
-          "NSF"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6500912e0fd2dbd695bf35d8"
         ],
         "lanes": [
           "research"
@@ -53665,259 +55572,6 @@
         "lastSeenAt": "2026-10-13"
       },
       {
-        "id": "e748f8750672ca8b04b242be",
-        "phrase": "ai agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "f12869a7b2c7306c29c38d64",
-          "18532b6f41e3869108726c9d",
-          "4aed77460fdf1a12037ed8ea"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 4,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "53beb385cf69a2c6c9d58738",
-        "phrase": "coding agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 2,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "2f000ad0ea4f48c2ff26132e",
-          "d502e8900f5a3b5247fb572d"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 1,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "bf97fa20a01bdcda8822e9e5",
-        "phrase": "hosted personal ai agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "5d23bc50a6063c1d41d1d1a9"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "3c41eea57eef8f06bf9d2476",
-        "phrase": "ai coding agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "2f000ad0ea4f48c2ff26132e"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "4158a471a36ea5a49bc3d213",
-        "phrase": "bandgap semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "8c4c64b404a61832fe0845c9"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "0207ef61f3989b97c7f10894",
-        "phrase": "openclaw agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "c6e214da4c2abdae93d0e0bb"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "43188ee64bff4831162717bd",
-        "phrase": "sensor fusion",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "e19910e859f98ed1f2abfd00"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "707beb189fd959123aa30113",
-        "phrase": "ledger confirms spy chip",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "5c0a2ee32246fd7775236c81"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "31a85e22a24a7a4fba06c2c6",
-        "phrase": "coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "ae62b37ae46f98ae7eafab6e"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "a76e09cc83495b8ceca587a0",
-        "phrase": "every robot",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "36ec60795c6409e4a1069656"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
         "id": "76f5845de1a9015a9e38ce11",
         "phrase": "paper thin robot",
         "owners": [
@@ -53963,9 +55617,9 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 328,
+    "datedDocuments": 363,
     "comparableDays": 1,
-    "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs 28 consecutive collected days with unchanged, healthy sources. Backfill, votes and headlines are not adoption. Older records have left the archive. Counts describe retained records only; momentum is withheld until the comparison window is complete."
+    "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons. Older records have left the archive. Counts describe retained records only; momentum is withheld until the comparison window is complete."
   },
   "coverage": {
     "totalSources": 24,

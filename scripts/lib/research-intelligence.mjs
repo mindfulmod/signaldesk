@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { discoveryHistory, recordDiscoveryDay } from "./discovery-history.mjs";
 const hash = value => createHash("sha256").update(value).digest("hex").slice(0, 24);
 const days = (value, now) => (Date.parse(now) - Date.parse(value)) / 86400000;
 const normal = text => String(text).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ").trim();
@@ -87,16 +88,8 @@ export function topicPhrases(title) {
 }
 export function discoverTopics(documents, themes, previous = {}, now = new Date().toISOString(), sources = [], states = {}, { discoveryTruncated = false } = {}) {
   const sourceIds = sources.map(s => s.id);
-  const coverageKey = hash(JSON.stringify([4, sources.map(s => [s.id, s.url, s.format, s.terms, s.linkPattern]).sort((a, b) => a[0].localeCompare(b[0]))]));
-  const coverage = sources.map(s => {
-    const state = states[s.id], fresh = state?.status === "ok" && days(state.lastSuccessAt, now) >= 0 && days(state.lastSuccessAt, now) <= 1.5;
-    const quiet = Boolean(s.quietAfterDays && (!state?.newestPublicationAt || days(state.newestPublicationAt, now) > s.quietAfterDays || days(state.newestPublicationAt, now) < 0));
-    return { id: s.id, owner: s.owner, lane: s.tier === "community" ? "community" : "research", fresh, quiet, lastSuccessAt: state?.lastSuccessAt || null, newestPublicationAt: state?.newestPublicationAt || null, matchedItems: state?.matchedItems ?? null, datedItems: state?.datedItems ?? null };
-  });
-  // Source-check history can accumulate while an old archive gap ages out.
-  // Counts remain non-comparable until the retained window is complete.
-  const healthy = coverage.length > 0 && coverage.every(s => s.fresh && !s.quiet);
-  const comparableHistory = previous.coverageKey === coverageKey ? previous.history || [] : [];
+  const collection = discoveryHistory(sources, states, previous, now);
+  const { coverageKey, coverage, healthy, collectedToday, completeHistory, historyDays, comparableHistory, legacyHistory } = collection;
   const known = new Set(themes.flatMap(t => [t.name, ...t.aliases]).map(normal));
   const originalDates = new Map();
   const storyKey = d => d.linkedUrl || d.url || d.storyId || d.id;
@@ -120,15 +113,16 @@ export function discoverTopics(documents, themes, previous = {}, now = new Date(
     const group = groups.get(phrase) || { phrase, recent: [], prior: [] };
     group[days(d.publishedAt, now) <= 14 ? "recent" : "prior"].push(d); groups.set(phrase, group);
   }
-  const historyDays = new Set(comparableHistory.filter(s => days(s.date, now) >= 0 && days(s.date, now) <= 29).map(s => s.date));
-  // Each of the preceding 28 UTC collection days must exist. A gap cannot be
-  // disguised by 28 non-contiguous observations or several checks in one day.
-  const completeHistory = Array.from({ length: 28 }, (_, i) => new Date(Date.parse(now) - (i + 1) * 86400000).toISOString().slice(0, 10)).every(date => historyDays.has(date));
+  const observed = new Map();
+  for (const candidate of [...(previous.archive || []), ...(previous.candidates || [])]) {
+    const first = candidate.firstObservedAt;
+    if (first && days(first, now) >= 0 && (!observed.has(candidate.id) || first < observed.get(candidate.id))) observed.set(candidate.id, first);
+  }
   const candidates = [...groups.values()].filter(g => g.recent.length).map(g => {
     const owners = [...new Set(g.recent.map(d => d.owner))];
     const weeks = [...new Set(g.recent.map(d => Math.floor(days(d.publishedAt, now) / 7)))];
     const sustained = owners.length >= 2 && g.recent.length >= 3 && weeks.length >= 2;
-    const comparable = healthy && !discoveryTruncated && completeHistory && g.prior.length > 0;
+    const comparable = collectedToday && !discoveryTruncated && completeHistory && g.prior.length > 0;
     const dates = g.recent.map(d => d.publishedAt).sort();
     return { id: hash(g.phrase), phrase: g.phrase, owners, recentDocuments: g.recent.length, priorDocuments: g.prior.length,
       momentumPercent: comparable ? (g.recent.length / g.prior.length - 1) * 100 : null,
@@ -137,14 +131,13 @@ export function discoverTopics(documents, themes, previous = {}, now = new Date(
       lanes: [...new Set(g.recent.map(d => d.tier === "community" ? "community" : "research"))],
       spanDays: Math.floor((Date.parse(dates.at(-1)) - Date.parse(dates[0])) / 86400000),
       nextCheck: owners.length < 2 ? "Find another reporting owner, then look for customer use." : "Check paying usage, repeat orders or measured deployment—not more headlines.",
-      firstObservedAt: comparableHistory.find(s => s.topics.includes(hash(g.phrase)))?.date || now.slice(0, 10),
+      firstObservedAt: [observed.get(hash(g.phrase)), comparableHistory.find(s => s.topics.includes(hash(g.phrase)))?.date, now.slice(0, 10)].filter(Boolean).sort()[0],
       caveat: "An extracted headline phrase, not a verified technology category or adoption claim." };
   }).sort((a, b) => b.owners.length - a.owners.length || b.recentDocuments - a.recentDocuments || b.phrase.split(" ").length - a.phrase.split(" ").length || a.phrase.localeCompare(b.phrase));
   // Prefer the most informative overlapping phrase for the same story set.
   const selected = [];
   for (const c of candidates) if (!selected.some(s => (s.phrase.includes(c.phrase) || c.phrase.includes(s.phrase)) && s.documentIds.join() === c.documentIds.join())) selected.push(c);
-  const date = now.slice(0, 10), history = comparableHistory.filter(s => s.date !== date && days(s.date, now) <= 90);
-  if (healthy) history.push({ date, topics: selected.slice(0, 30).map(c => c.id), documentCount: unique.length });
+  const date = now.slice(0, 10), history = recordDiscoveryDay(collection, selected.slice(0, 30).map(c => c.id), unique.length);
   const currentCandidates = selected.slice(0, 30).map(c => ({ ...c, lastSeenAt: date }));
   const archive = new Map([...(previous.archive || []), ...(previous.candidates || [])].map(c => [c.id, { ...c, lastSeenAt: c.lastSeenAt || previous.generatedAt?.slice(0, 10) }]));
   currentCandidates.forEach(c => archive.set(c.id, c));
@@ -155,6 +148,6 @@ export function discoverTopics(documents, themes, previous = {}, now = new Date(
   const queues = sources.map(s => unmatched.filter(d => d.sourceId === s.id));
   const openScan = [];
   while (openScan.length < 120 && queues.some(q => q.length)) for (const q of queues) if (q.length && openScan.length < 120) openScan.push(q.shift().id);
-  return { generatedAt: now, coverageKey, history, coverage, healthy, discoveryTruncated, openScan, unmatchedDocuments: unmatched.length, candidates: currentCandidates, archive: [...archive.values()].filter(c => days(c.lastSeenAt, now) <= 90).sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt)).slice(0, 200), datedDocuments: unique.length, comparableDays: historyDays.size,
-    note: `Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs 28 consecutive collected days with unchanged, healthy sources. Backfill, votes and headlines are not adoption.${healthy ? "" : " Coverage is incomplete, quiet or overdue; comparable history is paused."}${discoveryTruncated ? " Older records have left the archive. Counts describe retained records only; momentum is withheld until the comparison window is complete." : ""}` };
+  return { generatedAt: now, historyVersion: 1, calendar: "America/Toronto", coverageKey, history, legacyHistory, coverage, healthy, collectedToday, discoveryTruncated, openScan, unmatchedDocuments: unmatched.length, candidates: currentCandidates, archive: [...archive.values()].filter(c => days(c.lastSeenAt, now) <= 90).sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt)).slice(0, 200), datedDocuments: unique.length, comparableDays: historyDays.size,
+    note: `Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption.${healthy ? "" : " Coverage is incomplete, quiet, undated or overdue; comparable history is paused."}${healthy && !collectedToday ? " Some readable checks are from a previous calendar day; today's history is not yet complete." : ""}${legacyHistory.length ? " Older history without compatible per-source check receipts is retained for audit, not comparisons." : ""}${discoveryTruncated ? " Older records have left the archive. Counts describe retained records only; momentum is withheld until the comparison window is complete." : ""}` };
 }

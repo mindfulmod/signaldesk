@@ -18,6 +18,7 @@ on:
       - "scripts/update-technology.mjs"
       - "scripts/lib/technology-monitor.mjs"
       - "scripts/lib/research-*.mjs"
+      - "scripts/lib/discovery-history.mjs"
       - "scripts/lib/company-intelligence.mjs"
 permissions:
   contents: write
