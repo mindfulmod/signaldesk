@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "4ecb2cb6-64fd-44e9-a7c3-078ce68e2c15",
-  "generatedAt": "2026-10-14T15:27:08.235Z",
-  "sourceCheckedAt": "2026-10-14T15:27:08.235Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38589380488",
+  "collectionId": "e232102a-0533-478b-a68d-00a14909ba8a",
+  "generatedAt": "2026-10-14T20:19:22.092Z",
+  "sourceCheckedAt": "2026-10-14T20:19:22.092Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38631020997",
   "documents": [
     {
       "id": "05d35dc4b39675c10f75631f",
@@ -41676,7 +41676,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-14T15:27:08.235Z",
+    "generatedAt": "2026-10-14T20:19:22.092Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -41738,10 +41738,9 @@
         "date": "2026-10-14",
         "topics": [
           "70511d3302d1f485eb6285b3",
-          "632f25c290d145e71630c9c1",
-          "adb8682d9498bc8bcbb4e1f3"
+          "632f25c290d145e71630c9c1"
         ],
-        "documentCount": 189
+        "documentCount": 188
       }
     ],
     "candidates": [
@@ -41780,26 +41779,6 @@
         ],
         "documentIds": [
           "8c4c64b404a61832fe0845c9"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-14"
-      },
-      {
-        "id": "adb8682d9498bc8bcbb4e1f3",
-        "phrase": "quantum enabled materials",
-        "owners": [
-          "NSF"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6500912e0fd2dbd695bf35d8"
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
@@ -41928,7 +41907,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 189,
+    "datedDocuments": 188,
     "comparableDays": 6,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
