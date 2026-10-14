@@ -1,12 +1,12 @@
 // Co-mention graph — THEME_ENGINE.md Layer 0c. Weekly job over the trailing
 // 90d of events: nodes = tickers, edge weight = co-appearances in the same
-// headline/post. Signals: (i) a new dense cluster forming = theme
-// crystallizing (greedy modularity community detection); (ii) a leader's
-// neighbor set changing = diffusion direction.
+// headline/post. Communities and changing neighbor sets are research leads,
+// not evidence of a crystallizing theme, business diffusion or future returns.
 import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { isoWeekKey } from "./alerts.mjs";
 import { COMMON_WORD_TICKERS } from "./ticker-noise.mjs";
+import identity from "../../company-identity.js";
 
 const ROOT = new URL("../../", import.meta.url);
 export const CO_MENTION_HISTORY_URL = new URL("data/co-mention-history.json", ROOT);
@@ -72,23 +72,44 @@ export async function saveClusters(clusters) {
 export function extractCoMentionPairs(events, excludeTickers = NOISE_TICKERS) {
   const groups = new Map();
   for (const event of events) {
-    if (!event.ticker || !event.url || EXCLUDED_SOURCES.has(event.source)) continue;
+    if (!verifiedEvent(event)) continue;
     if (excludeTickers.has(event.ticker)) continue;
-    if (!groups.has(event.url)) groups.set(event.url, new Set());
-    groups.get(event.url).add(event.ticker);
+    // A reused URL is not proof that two different headlines co-mention issuers.
+    const key = JSON.stringify([event.url, event.source, event.title]);
+    if (!groups.has(key)) groups.set(key, { url: event.url, tickers: new Set() });
+    groups.get(key).tickers.add(event.ticker);
   }
-  const pairCounts = new Map();
-  for (const tickers of groups.values()) {
+  const pairDocuments = new Map();
+  for (const { url, tickers } of groups.values()) {
     if (tickers.size < 2) continue;
     const list = [...tickers].sort();
     for (let i = 0; i < list.length; i += 1) {
       for (let j = i + 1; j < list.length; j += 1) {
         const key = `${list[i]}|${list[j]}`;
-        pairCounts.set(key, (pairCounts.get(key) || 0) + 1);
+        if (!pairDocuments.has(key)) pairDocuments.set(key, new Set());
+        pairDocuments.get(key).add(url);
       }
     }
   }
-  return pairCounts;
+  return new Map([...pairDocuments].map(([pair, urls]) => [pair, urls.size]));
+}
+
+function verifiedEvent(event) {
+  if (!event?.ticker || !event.title || !event.source || EXCLUDED_SOURCES.has(event.source)) return false;
+  try {
+    const url = new URL(event.url);
+    if (url.protocol !== "https:" || url.username || url.password) return false;
+  } catch { return false; }
+  const alias = event.companyMatch?.version === 1 && event.companyMatch.kind === "company-name" ? event.companyMatch.value : "";
+  // Bare abbreviations can mean a forum name (SMG), television (TV) or a
+  // games console (SNES). Graph connections need stronger issuer evidence.
+  return Boolean(identity.match({ ticker: event.ticker, name: event.name, aliases: [alias] }, event.title, { source: event.source, allowBareSymbol: false }));
+}
+
+function documentEvents(record) {
+  return (record.observations || []).flatMap(observation => (observation.issuers || []).map(issuer => ({
+    ...issuer, url: record.url, source: observation.source, title: observation.title, published: observation.published,
+  })));
 }
 
 // Folds this run's pairs into the current ISO week's bucket, then prunes to
@@ -236,27 +257,42 @@ export function topNeighbors(edgeMap, ticker, limit = 8) {
 // this scale to also run every refresh -- no separate weekly gate needed
 // beyond the trailing-window accumulation already being date-keyed.
 export function computeCoMention(history, events, dateStr, leaderTickers = [], prevLeaderNeighbors = {}) {
-  const documents = { ...(history.documents || {}) }, grouped = new Map();
+  // v2 retained only pair counts: no original title or issuer attribution can
+  // be rechecked. Preserve those records for audit, never certify them in place.
+  const documents = history.version === 3 ? { ...(history.documents || {}) } : {};
+  const legacyDocuments = { ...(history.legacyDocuments || {}), ...(history.version === 3 ? {} : history.documents || {}) };
+  const grouped = new Map();
   for (const event of events) {
-    if (!event.url || EXCLUDED_SOURCES.has(event.source)) continue;
+    if (!event.url || !event.title || EXCLUDED_SOURCES.has(event.source)) continue;
     const group = grouped.get(event.url) || []; group.push(event); grouped.set(event.url, group);
   }
   for (const [url, group] of grouped) {
     const id = createHash("sha256").update(url).digest("hex").slice(0, 24), prior = documents[id];
     const published = group.map(e => e.published).filter(d => Number.isFinite(Date.parse(d)) && Date.parse(d) <= Date.parse(dateStr) + 86400000).sort()[0];
     const firstSeen = prior?.firstSeen || dateStr;
-    documents[id] = { firstSeen, published: prior?.published || published || null,
+    const observations = new Map();
+    for (const event of group.filter(verifiedEvent)) {
+      const key = JSON.stringify([event.source, event.title]);
+      const observation = observations.get(key) || { source: event.source, title: event.title, published: event.published || null, issuers: [] };
+      if (!observation.issuers.some(issuer => issuer.ticker === event.ticker)) observation.issuers.push({ ticker: event.ticker, name: event.name || "", companyMatch: event.companyMatch || null });
+      observations.set(key, observation);
+    }
+    documents[id] = { url, firstSeen, published: prior?.published || published || null,
       week: prior?.week || isoWeekKey(new Date(published || firstSeen)),
-      revision: createHash("sha256").update(JSON.stringify(group.map(e => [e.ticker, e.title]).sort())).digest("hex").slice(0, 16),
-      pairs: Object.fromEntries(extractCoMentionPairs(group)) };
+      observations: [...observations.values()] };
   }
   const weeks = {}, cutoff = isoWeekKey(new Date(Date.parse(dateStr) - 12 * 7 * 86400000));
+  const supportingDocuments = [];
   for (const record of Object.values(documents)) {
-    if (record.week < cutoff) continue;
+    if (!record.week || record.week < cutoff || record.week > isoWeekKey(new Date(dateStr))) continue;
+    // Recompute from original text every run, including retained v3 records.
+    const pairs = extractCoMentionPairs(documentEvents(record));
+    if (!pairs.size) continue;
     const week = weeks[record.week] ||= {};
-    for (const [pair, count] of Object.entries(record.pairs)) week[pair] = (week[pair] || 0) + count;
+    for (const [pair, count] of pairs) week[pair] = (week[pair] || 0) + count;
+    supportingDocuments.push({ record, pairs });
   }
-  const nextHistory = { version: 2, weeks, documents, legacyWeeks: history.legacyWeeks || (history.version === 2 ? {} : history.weeks) };
+  const nextHistory = { version: 3, weeks, documents, legacyDocuments, legacyWeeks: history.legacyWeeks || (history.version >= 2 ? {} : history.weeks) };
   const graph = aggregateTrailingGraph(nextHistory);
 
   const rawCommunities = greedyModularityCommunities(graph.nodes, graph.edges);
@@ -266,7 +302,18 @@ export function computeCoMention(history, events, dateStr, leaderTickers = [], p
   // numerically), see file header.
   const communities =
     overallModularity >= MIN_MODULARITY
-      ? rawCommunities.filter((members) => members.length >= MIN_COMMUNITY_SIZE).map((members) => ({ members: members.sort() }))
+      ? rawCommunities.filter((members) => members.length >= MIN_COMMUNITY_SIZE).map((members) => {
+          const memberSet = new Set(members);
+          const supporting = supportingDocuments.filter(({ pairs }) => [...pairs.keys()].some(pair => pair.split("|").every(ticker => memberSet.has(ticker))));
+          const evidence = supporting.map(({ record }) => {
+            const observation = record.observations.find(item => {
+              const matches = documentEvents({ ...record, observations: [item] }).filter(verifiedEvent).filter(event => memberSet.has(event.ticker) && !NOISE_TICKERS.has(event.ticker));
+              return new Set(matches.map(event => event.ticker)).size >= 2;
+            });
+            return { url: record.url, title: observation.title, source: observation.source, published: observation.published, firstSeen: record.firstSeen };
+          }).sort((a, b) => String(b.published || b.firstSeen).localeCompare(String(a.published || a.firstSeen)));
+          return { members: members.sort(), documentCount: supporting.length, evidence: evidence.slice(0, 6) };
+        })
       : [];
 
   const leaderNeighbors = {};
@@ -284,8 +331,10 @@ export function computeCoMention(history, events, dateStr, leaderTickers = [], p
   return {
     nextHistory,
     payload: {
-      integrityVersion: 2,
-      provenanceNote: "One contribution per source document. Legacy counts without document attribution are quarantined, not silently repaired.",
+      integrityVersion: 3,
+      provenanceNote: "One contribution per URL; issuers must match the same original headline. Links may be syndicated or promotional, not independent confirmation or adoption evidence.",
+      verifiedDocuments: supportingDocuments.length,
+      withheldLegacyDocuments: Object.keys(legacyDocuments).length,
       generatedAt: new Date().toISOString(),
       graphNodes: graph.nodes.length,
       graphEdges: graph.edges.size,

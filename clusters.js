@@ -12,7 +12,6 @@
     await loadClusters();
     render();
     bindEvents();
-    patchExistingRender();
   }
 
   async function loadClusters(force = false) {
@@ -44,16 +43,6 @@
     });
   }
 
-  function patchExistingRender() {
-    if (typeof render !== "function" || render.__signaldeskClustersPatched) return;
-    const original = render;
-    render = function patchedRenderWithClusters() {
-      original();
-      renderClusters();
-    };
-    render.__signaldeskClustersPatched = true;
-  }
-
   function render() {
     renderClusters();
   }
@@ -61,31 +50,47 @@
   function renderClusters() {
     const container = document.getElementById("clustersFeed");
     if (!container) return;
-    if (clustersData?.integrityVersion !== 2) {
-      container.innerHTML = '<p class="clusters-empty">Earlier graph weights lacked per-document attribution. Clusters are withheld until the next integrity-checked collection.</p>';
+    const openScan = '<a class="cluster-scan" href="?techView=discovery&amp;scan=open#research">Explore beyond tracked themes →</a>';
+    if (clustersData?.integrityVersion !== 3) {
+      container.innerHTML = '<p class="clusters-empty">Older clusters cannot be checked against their original headlines. They are withheld until the next collection with verified company matches. In the meantime, use Discover → Open scan to find leads outside your tracked topics.</p>' + openScan;
       return;
     }
+    const date = displayDate(clustersData.generatedAt);
+    const status = `<p class="cluster-status">${Number(clustersData.verifiedDocuments) || 0} supporting documents · ${date ? `Checked ${escapeHtml(date)} UTC` : "Check date unavailable"}${clustersData.withheldLegacyDocuments ? ` · ${Number(clustersData.withheldLegacyDocuments)} older records excluded` : ""}</p>`;
     const communities = clustersData?.communities || [];
     if (!communities.length) {
       const nodes = clustersData?.graphNodes || 0;
-      container.innerHTML = `<p class="clusters-empty">${nodes ? `Tracking a ${nodes}-ticker co-mention graph, but nothing dense enough to call a cluster yet.` : "No co-mention graph yet — this builds up as headlines and posts naming multiple tickers accumulate over the trailing ~90 days."}</p>`;
+      container.innerHTML = `${status}<p class="clusters-empty">${nodes ? `Tracking ${nodes} tickers with shared headline evidence; no group meets the experimental cluster rules yet.` : "No eligible shared-headline evidence in the current graph. This does not mean there are no emerging trends."} Next: use Discover → Open scan for technology leads beyond listed companies.</p>${openScan}`;
       return;
     }
-    container.innerHTML = communities.map(clusterRow).join("");
+    container.innerHTML = `${status}${communities.map(clusterRow).join("")}<p class="cluster-note">Links can repeat the same announcement. Counts are not independent confirmation, adoption measurements or price forecasts.</p>${openScan}`;
   }
 
   function clusterRow(community) {
     const members = community.members || [];
     const shown = members.slice(0, 10);
     const extra = members.length - shown.length;
+    const evidence = (community.evidence || []).filter(item => safeUrl(item.url));
+    const documents = Number(community.documentCount) || 0;
     return `
       <div class="cluster-row">
         <div class="cluster-members">
           ${shown.map((t) => `<span>${escapeHtml(t)}</span>`).join("")}
           ${extra > 0 ? `<span class="cluster-member-more">+${extra}</span>` : ""}
         </div>
-        <p class="cluster-note">${members.length} tickers keep appearing together in the same headlines/posts. Worth a look for an emerging theme GICS and the manual override list haven't caught yet.</p>
+        <p class="cluster-note"><strong>${documents} supporting document${documents === 1 ? "" : "s"}</strong> linking ${members.length} tickers${documents === 1 ? " — single-document lead, not a repeated trend" : " — a candidate relationship, not a verified theme"}.</p>
+        <p class="cluster-next">Next check: do these companies share a real product, customer or deployment milestone?</p>
+        <details class="cluster-evidence"><summary>Review headline evidence${documents > evidence.length ? ` (latest ${evidence.length} of ${documents})` : ""}</summary><ul>${evidence.map(item => `<li><a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a><small>${escapeHtml(item.source)} · ${displayDate(item.published) ? `Published ${escapeHtml(displayDate(item.published))}` : `Publication date unknown · first observed ${escapeHtml(displayDate(item.firstSeen) || "date unknown")}`}</small></li>`).join("")}</ul></details>
       </div>`;
+  }
+
+  function safeUrl(value) {
+    try { const url = new URL(value); return url.protocol === "https:" && !url.username && !url.password ? url.href : ""; } catch { return ""; }
+  }
+
+  function displayDate(value) {
+    if (!value || !Number.isFinite(Date.parse(value))) return "";
+    return new Date(value).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
   }
 
   function escapeHtml(value) {
@@ -126,6 +131,16 @@
       }
       .cluster-member-more { color: var(--muted) !important; font-weight: 600 !important; }
       .cluster-note { margin: 0; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+      .cluster-status { margin: 0; color: var(--muted); font-size: 0.75rem; line-height: 1.5; }
+      .cluster-scan { align-self: flex-start; padding: 10px 0; color: var(--accent); font-size: 0.82rem; font-weight: 600; text-underline-offset: 3px; }
+      .cluster-next { margin: 8px 0; color: var(--ink); font-size: 0.82rem; line-height: 1.5; }
+      .cluster-evidence { margin-top: 10px; font-size: 0.8rem; }
+      .cluster-evidence summary { cursor: pointer; padding: 8px 0; color: var(--ink); }
+      .cluster-evidence ul { padding-left: 18px; margin: 8px 0 0; }
+      .cluster-evidence li { margin-bottom: 12px; overflow-wrap: anywhere; line-height: 1.5; }
+      .cluster-evidence a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+      .cluster-evidence small { display: block; color: var(--muted); margin-top: 4px; }
+      .cluster-evidence :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     `;
     document.head.appendChild(style);
   }

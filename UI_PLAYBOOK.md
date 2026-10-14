@@ -7,6 +7,20 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 14 cluster evidence follow-up: `clusters.js` accepts integrity version 3
+only. Co-mention history preserves original headline/source/issuer observations
+and rechecks identity every run. Different headlines at the same URL cannot
+form a pair; a URL contributes at most once per pair. Version 2 pair-only records
+remain in `legacyDocuments` for audit, not graph weights. Cards show document
+counts, dated original links in a native disclosure and a concrete next check.
+One multi-company article is a single-document lead, not repeated attention;
+several links are not necessarily independent reporting or adoption evidence.
+Active proof-quarter leaders recalculate neighbors from the checked graph; the
+hot-monitor protocol is version 3. Never carry old neighbor lists forward.
+The graph deliberately disables bare-symbol matching: TV, SNES and forum SMG
+were real false positives. Require a distinctive company name, cashtag or
+exchange-qualified symbol. This reduces recall and is not a complete market map.
+
 October 14 attention-comparison follow-up: new market signals carry
 `attentionMetricsVersion: 1` and `attentionObservedSources`. A filled source
 catalog with zeros is not proof that a source observed this ticker. Comparisons

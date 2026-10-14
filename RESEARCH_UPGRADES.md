@@ -896,3 +896,39 @@ October 9 source disposition:
    duplicate events. Decide explicitly whether contaminated history needs repair
    or a warning; no silent historical rewrite. Mark items complete only with
    linked test/review evidence and disclose any remaining limitations.
+
+### October 14 — cluster provenance and next-step UI
+
+- Replaced pair-only graph history with recheckable original headline, source,
+  URL and issuer observations. Preserved all 1,443 legacy documents for audit;
+  none can contribute graph weight. Same URL/different text cannot fabricate
+  a pair, and repeat collection cannot inflate its weight.
+- Manual inspection of the fresh collection exposed TV, SNES and forum SMG
+  as false ticker matches. Clusters now require distinctive company names,
+  cashtags or exchange-qualified symbols; bare abbreviations are insufficient.
+  This intentionally reduces recall. Five current documents support ten
+  tickers and five edges; no community qualifies. The prior 13 groups are not
+  evidence of themes disappearing—they used an incompatible matching method.
+- Retained proof-quarter leaders recalculate neighbors from the checked graph;
+  hot-monitor version 3 excludes old neighbor lists. Original historical alerts
+  are preserved. Model thresholds have not been tuned or validated by this fix.
+- Cluster cards show document counts, original headline links, date limitations
+  and a concrete business-relationship check. Empty states link directly to
+  Discover → Open scan. Removed the unsupported Springs claim that a release
+  was a breakout that “historically mattered.”
+- Fresh market collection at 2026-10-14 00:23 UTC produced 75/75 collected
+  quotes and 74/75 complete comparisons. Capitalization remains unverified;
+  attention percentages remain withheld; one ticker's saved news is quarantined.
+  StockTwits returned 403 and GDELT failed. All 81 earlier daily snapshots and
+  all legacy co-mention documents were preserved; JSON/file-mode bundles match.
+- Existing technology intake checks daily, including weekends, with six-hour
+  retry opportunities. The latest technology snapshot has all five discovery
+  feeds readable, but QS returns 403 and two T-Mobile sources are paused.
+  Readability is not accuracy, independence, permission for full-text reuse,
+  exhaustive recall or evidence of adoption. Automatic consumer usage, retention,
+  deployments, repeat orders and product-level revenue series remain gaps.
+- 354 tests pass on Node 20 and Node 24, including replay, legacy quarantine,
+  cross-headline contamination, bare-acronym false positives, inherited neighbor
+  removal, original-link safety and UI guidance. Browser checks cover stock
+  selection from board/radar/map at 1440px and 375px. Not merged or deployed;
+  hosted collection still needs verification after separately approved release.

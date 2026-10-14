@@ -170,14 +170,14 @@ test("H06: ASTS consolidated context and QS share class are accession/period bou
 });
 
 test("H07: graph refresh/replay is idempotent and actual edits replace attribution", () => {
-  const events = ["NVDA","AMD"].map(ticker=>({ticker,source:"4chan",url:"https://boards.4chan.org/biz/thread/62670923",title:"NVDA AMD",published:"2026-09-10"}));
+  const events = ["NVDA","AMD"].map(ticker=>({ticker,source:"4chan",url:"https://boards.4chan.org/biz/thread/62670923",title:"$NVDA $AMD",published:"2026-09-10"}));
   const first = computeCoMention({weeks:{}},events,"2026-09-11").nextHistory;
   const second = computeCoMention(first,events,"2026-09-18").nextHistory;
   assert.deepEqual(second.weeks,first.weeks);
   assert.equal(Object.values(second.weeks)[0]["AMD|NVDA"],1);
-  const edited = computeCoMention(second,[...events,{...events[0],ticker:"TSLA",title:"Now also TSLA"}],"2026-09-18").nextHistory;
+  const edited = computeCoMention(second,[...events,{...events[0],ticker:"TSLA",title:"Now also $TSLA"}],"2026-09-18").nextHistory;
   assert.equal(Object.values(edited.weeks)[0]["AMD|NVDA"],1);
-  assert.equal(Object.values(edited.weeks)[0]["NVDA|TSLA"],1);
+  assert.equal(Object.values(edited.weeks)[0]["NVDA|TSLA"],undefined, "different titles at one thread URL are not a co-mention");
   const collector=readFileSync(new URL("../update-data.mjs",import.meta.url),"utf8");
   assert.match(collector,/thread\.time \? new Date\(thread\.time \* 1000\)/);
 });

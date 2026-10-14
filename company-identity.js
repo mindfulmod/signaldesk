@@ -63,7 +63,7 @@
     const compound = /&|\band\b/i.test(String(name || ""));
     return [...new Set([full, ...(compound ? [] : [lead])])].filter(alias => safeAlias(alias, full === words(ticker) ? ticker : ""));
   }
-  function match(stock, title, { source = "" } = {}) {
+  function match(stock, title, { source = "", allowBareSymbol = true } = {}) {
     const ticker = String(stock?.ticker || "").toUpperCase();
     if (!/^[A-Z][A-Z0-9.-]{0,14}$/.test(ticker)) return null;
     // Aggregator publisher suffixes and GDELT metadata are not headline evidence.
@@ -74,7 +74,7 @@
     if (new RegExp("(^|[^A-Za-z0-9$])\\$" + symbol + end, "i").test(text)) return { version: 1, kind: "cashtag", value: ticker };
     if (new RegExp("\\b(?:NASDAQ|NYSE|AMEX|OTC(?:MKTS)?)\\s*:\\s*" + symbol + end, "i").test(text)) return { version: 1, kind: "exchange-symbol", value: ticker };
     const fund = /\b(etf|fund|trust)\b/i.test(String(stock?.name || ""));
-    if (!fund && ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
+    if (allowBareSymbol && !fund && ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
         && new RegExp("(^|[^A-Za-z0-9.$-])" + symbol + end).test(text)) return { version: 1, kind: "symbol", value: ticker };
     const normalized = " " + words(text) + " ";
     const derived = aliasesFor(stock?.name, ticker);

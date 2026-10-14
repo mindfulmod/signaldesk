@@ -384,7 +384,7 @@ async function main() {
   // happens later, after price/news data exists, and takes effect next run).
   const hotMonitor = await loadHotMonitor();
   const today = new Date().toISOString().slice(0, 10);
-  for (const [ticker, info] of Object.entries(hotMonitor.evidenceVersion === 2 ? hotMonitor.tickers || {} : {})) {
+  for (const [ticker, info] of Object.entries(hotMonitor.evidenceVersion === 3 ? hotMonitor.tickers || {} : {})) {
     if (info.expiresDate && info.expiresDate >= today) {
       registerStock(ticker, ticker, [ticker]);
       activeHotMonitorTickers.add(ticker);
@@ -2044,7 +2044,7 @@ async function computeCoMentionStep(events, failures) {
     const leaders = await loadLeaders();
     const leaderTickers = (leaders.leaders || []).map((l) => l.ticker);
 
-    const { nextHistory, payload } = computeCoMention(history, events, dateStr, leaderTickers, prevClusters.leaderNeighbors || {});
+    const { nextHistory, payload } = computeCoMention(history, events, dateStr, leaderTickers, prevClusters.integrityVersion === 3 ? prevClusters.leaderNeighbors || {} : {});
     await saveCoMentionHistory(nextHistory);
     await saveClusters(payload);
     console.log(`Co-mention: ${payload.graphNodes} nodes, ${payload.graphEdges} edges, ${payload.communities.length} communities (Q=${payload.overallModularity.toFixed(3)})`);
