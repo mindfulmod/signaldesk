@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "e0bb6284-77bc-4920-88ef-984955927ffc",
-  "generatedAt": "2026-10-13T21:31:18.480Z",
+  "collectionId": "73d73367-0bbe-4649-ac9e-125730652c22",
+  "generatedAt": "2026-10-14T01:22:30.162Z",
   "sourceCheckedAt": "2026-10-13T21:31:18.480Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38471203067",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38495340173",
   "documents": [
     {
       "id": "26cd8672208951d741b4ccb8",
@@ -29166,17 +29166,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 4.27,
+        "price": 4.12,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:00.000Z",
+        "asOf": "2026-10-13T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -29237,6 +29237,15 @@
           "price": 4.27,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.12,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -30877,17 +30886,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 2.23,
+        "price": 2.15,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:00.000Z",
+        "asOf": "2026-10-13T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -30948,6 +30957,15 @@
           "price": 2.23,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 2.15,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -32355,17 +32373,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 184.72,
+        "price": 188.71,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:02.000Z",
+        "asOf": "2026-10-13T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -32426,6 +32444,15 @@
           "price": 184.72,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 188.71,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -34182,17 +34209,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 151.87,
+        "price": 153.73,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:00.000Z",
+        "asOf": "2026-10-13T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -34253,6 +34280,15 @@
           "price": 151.87,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 153.73,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -35996,17 +36032,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 51.46,
+        "price": 47.065,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:01.000Z",
+        "asOf": "2026-10-13T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -36067,6 +36103,15 @@
           "price": 51.46,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 47.065,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -37441,17 +37486,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 742.96,
+        "price": 762.5,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:02.000Z",
+        "asOf": "2026-10-13T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -37512,6 +37557,15 @@
           "price": 742.96,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 762.5,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -39335,17 +39389,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 541.15,
+        "price": 543.45,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:01.000Z",
+        "asOf": "2026-10-13T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39406,6 +39460,15 @@
           "price": 541.15,
           "currency": "USD",
           "asOf": "2026-10-12T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 543.45,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -41229,17 +41292,17 @@
       "factsCheckedAt": "2026-10-09T15:18:03.534Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-13T12:08:25.253Z",
+      "quoteAttemptAt": "2026-10-14T01:22:30.162Z",
       "quote": {
-        "price": 352.72,
+        "price": 353.78,
         "currency": "USD",
-        "asOf": "2026-10-12T20:00:02.000Z",
+        "asOf": "2026-10-13T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-13T12:08:25.253Z",
+      "quoteCheckedAt": "2026-10-14T01:22:30.162Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41304,6 +41367,15 @@
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
           "marketCap": null
+        },
+        {
+          "price": 353.78,
+          "currency": "USD",
+          "asOf": "2026-10-13T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
         }
       ],
       "valuation": null,
@@ -41312,7 +41384,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-13T21:31:18.480Z",
+    "generatedAt": "2026-10-14T01:22:30.162Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -41369,30 +41441,19 @@
           "adb8682d9498bc8bcbb4e1f3"
         ],
         "documentCount": 180
+      },
+      {
+        "date": "2026-10-14",
+        "topics": [
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1",
+          "adb8682d9498bc8bcbb4e1f3"
+        ],
+        "documentCount": 180
       }
     ],
     "candidates": [
       {
-        "id": "15ce4bfeb2c4c225b2228ac9",
-        "phrase": "ai generated proteins",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6632e1041a03d71e0285d8ff"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
         "id": "70511d3302d1f485eb6285b3",
         "phrase": "control where semiconductor",
         "owners": [
@@ -41410,7 +41471,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -41430,27 +41491,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "0aef6f4b72c4e512490d7390",
-        "phrase": "octave separated lasers",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "4e75ac579365e4f09522adbf"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
@@ -41470,11 +41511,71 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
+        "lastSeenAt": "2026-10-14"
       }
     ],
     "archive": [
       {
+        "id": "adb8682d9498bc8bcbb4e1f3",
+        "phrase": "quantum enabled materials",
+        "owners": [
+          "NSF"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "6500912e0fd2dbd695bf35d8"
+        ],
+        "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "70511d3302d1f485eb6285b3",
+        "phrase": "control where semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "72c69890e7aa891b149ee721"
+        ],
+        "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
+        "id": "632f25c290d145e71630c9c1",
+        "phrase": "ev bandgap semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "8c4c64b404a61832fe0845c9"
+        ],
+        "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-14"
+      },
+      {
         "id": "15ce4bfeb2c4c225b2228ac9",
         "phrase": "ai generated proteins",
         "owners": [
@@ -41509,66 +41610,6 @@
         ],
         "documentIds": [
           "4e75ac579365e4f09522adbf"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "adb8682d9498bc8bcbb4e1f3",
-        "phrase": "quantum enabled materials",
-        "owners": [
-          "NSF"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6500912e0fd2dbd695bf35d8"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "70511d3302d1f485eb6285b3",
-        "phrase": "control where semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "72c69890e7aa891b149ee721"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-13"
-      },
-      {
-        "id": "632f25c290d145e71630c9c1",
-        "phrase": "ev bandgap semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "8c4c64b404a61832fe0845c9"
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
