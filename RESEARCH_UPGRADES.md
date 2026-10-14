@@ -932,3 +932,50 @@ October 9 source disposition:
   removal, original-link safety and UI guidance. Browser checks cover stock
   selection from board/radar/map at 1440px and 375px. Not merged or deployed;
   hosted collection still needs verification after separately approved release.
+
+#### Broader discovery intake — next source pilot, not enabled
+
+Keep three independent evidence lanes: research novelty, developer/community
+interest, and demonstrated use. Sample unclassified stories as well as popular
+patterns, deduplicate reporting owners, and only compare time windows with
+unchanged source coverage. Promotion to a tracked theme needs an explicit
+adoption metric, dated primary/customer evidence, and a review checkpoint.
+
+- OpenAlex is a candidate for broader research metadata beyond the current
+  institutional feeds. Its [API reference](https://help.openalex.org/api/)
+  supports works/topics and basic keyless access; its
+  [filter documentation](https://help.openalex.org/api/filtering/) supports
+  publication-date windows but reserves updated/created-date synchronization
+  filters for paid plans. No paid access or account was activated.
+- A bounded, three-record keyless probe returned HTTP 200, but its date-sorted
+  sample included journal-title records rather than three unambiguous new
+  papers. A working endpoint is not a validated discovery feed. A pilot must
+  verify record type, original publication dates, DOI/source identity, duplicate
+  editions, language/geography coverage and sampling bias before enabling it.
+  Do not label those returned dates as new breakthroughs or use raw counts as
+  acceleration. Retain metadata only; full-text rights are separate.
+- GitHub's [starring documentation](https://docs.github.com/en/rest/activity/starring)
+  distinguishes stargazers from subscribers; even its `watchers_count` field
+  represents stars. A future developer lane must keep repository attention,
+  release/maintenance activity and actual product usage separate. No GitHub
+  popularity collector or automatic adoption series was added in this pass.
+
+#### Scheduled-data reconciliation before release
+
+The production data commit `2b317766ddfbce499363954f764572a8e0e60cb5`
+arrived during verification and conflicted with the review branch. Reconciled
+the JSON histories by identity/date rather than selecting one whole file:
+82 daily dates, 401 incoming-only ledger rows, 2,301 tracked ledger tickers,
+and 1,651 preserved legacy graph records including conflicting revisions.
+Unchanged-base values accept the other branch's change; competing ledger rows
+retain the repaired branch's version, with both originals recoverable from the
+merge parents. The next real collection rewrote today's ledger rows normally.
+
+Post-reconciliation full collection at 2026-10-14 00:36:42 UTC again passed
+market health: 75 collected quotes, 74 complete comparisons, no unsupported
+highlighted headline matches. The same 81 earlier daily snapshots remain
+unchanged, and all generated JSON/browser bundles match. GDELT now returned
+without an error but had no matched tickers; StockTwits remained forbidden.
+No external push notifications were sent. The graph remains five supporting
+documents / ten tickers / five edges / no qualifying communities. These results
+are branch verification, not a production deployment.
