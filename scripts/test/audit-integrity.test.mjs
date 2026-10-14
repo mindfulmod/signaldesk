@@ -191,7 +191,7 @@ test("H16: brief excludes paused collectors from current coverage", () => {
   const active = config.sources.filter(s => s.accessStatus !== "permission-required").length;
   assert.ok(html.includes(`${active}/${active} active sources readable · 2 paused`));
   const scope = {sources:[{id:"active"},{id:"paused",accessStatus:"permission-required"}],companies:[{ticker:"QS"}]};
-  const health = researchHealth({generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
+  const health = researchHealth({schemaVersion:1,documents:[],reviews:[],sourceCheckedAt:now,generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{schemaVersion:1,events:[],generatedAt:now,sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
   assert.equal(health.ok,true); assert.equal(health.sourceCoverage,"1/1 active"); assert.equal(health.pausedSources,1);
 });
 test("H09: real controller theme scope allows incident, holographic, Nobel and owner search", () => {

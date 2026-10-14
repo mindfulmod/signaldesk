@@ -89,8 +89,8 @@ test("end-to-end topic momentum requires check receipts, not a fabricated list o
   const older = { ...good, coverageKey: "old-contract", candidates: good.candidates.map(c => ({ ...c, firstObservedAt: "2026-10-01" })) };
   assert.equal(discoverTopics(documents, [], older, now, sources, states(now)).candidates[0].firstObservedAt, "2026-10-01", "resetting comparison history must not relabel an old lead as newly observed");
   const scope = { sources: sources.map(s => ({ ...s, discovery: true })), companies: [{ ticker: "TEST" }] };
-  const research = { generatedAt: now, coverage: { totalSources: 2 }, discovery: good, companies: { TEST: { ...companyQuoteFixture("TEST", now), factsCheckedAt: now } } };
-  const monitor = { sources: Object.fromEntries(Object.entries(states(now)).map(([id, state]) => [id, { ...state, id }])) };
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 2 }, discovery: good, companies: { TEST: { ...companyQuoteFixture("TEST", now), factsCheckedAt: now } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: Object.fromEntries(Object.entries(states(now)).map(([id, state]) => [id, { ...state, id }])) };
   assert.equal(researchHealth(research, monitor, Date.parse(now), scope).ok, true);
   const unsupported = { ...research, discovery: { ...good, history: good.history.map(({ sourceChecks, ...row }) => row) } };
   assert.match(researchHealth(unsupported, monitor, Date.parse(now), scope).errors.join(" "), /daily source-check receipts/);

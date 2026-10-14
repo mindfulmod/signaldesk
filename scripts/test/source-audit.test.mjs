@@ -76,11 +76,12 @@ test("health disclosure persists on rerender and stays reachable under empty the
 
 test("scheduled watchdog shares source identity checks and warns on non-discovery content gaps", () => {
   const scope = { sources: [source], companies: [{ ticker: "TEST" }] };
-  const research = { generatedAt: state.lastSuccessAt, coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", state.lastSuccessAt), factsCheckedAt: state.lastSuccessAt } } };
-  const result = researchHealth(research, { sources: { test: { ...state, id: "test", matchedItems: 0 } } }, now, scope);
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: state.lastSuccessAt, generatedAt: state.lastSuccessAt, coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", state.lastSuccessAt), factsCheckedAt: state.lastSuccessAt } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: state.lastSuccessAt, sources: { test: { ...state, id: "test", matchedItems: 0 } } };
+  const result = researchHealth(research, monitor, now, scope);
   assert.equal(result.ok, true); assert.equal(result.contentChecks, 1);
   assert.match(result.warnings.join("\n"), /No matching|no matching/);
-  const wrong = researchHealth(research, { sources: { test: { ...state, id: "test", sourceUrl: "https://example.org/retired" } } }, now, scope);
+  const wrong = researchHealth(research, { ...monitor, sources: { test: { ...state, id: "test", sourceUrl: "https://example.org/retired" } } }, now, scope);
   assert.equal(wrong.ok, false); assert.equal(wrong.sourceCoverage, "0/1 active");
 });
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";

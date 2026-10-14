@@ -115,8 +115,8 @@ test("saved discovery leads remain inspectable after leaving the current window"
   assert.equal(next.archive[0].lastSeenAt, "2026-10-02");
 });
 test("health gates missing publications, incomplete coverage and stale prices", () => {
-  const research = { generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { ...companyQuoteFixture("QS", now) } } };
-  const monitor = { sources: { news: { id: "news", status: "ok", lastSuccessAt: now } } };
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { ...companyQuoteFixture("QS", now) } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { news: { id: "news", status: "ok", lastSuccessAt: now } } };
   assert.equal(researchHealth(research, monitor, Date.parse(now), { sources: [{ id: "news" }], companies: [{ ticker: "QS" }] }).ok, true);
   assert.equal(researchHealth({ ...research, generatedAt: "2026-09-01" }, monitor, Date.parse(now)).ok, false);
   assert.equal(researchHealth(research, { sources: {} }, Date.parse(now)).ok, false);

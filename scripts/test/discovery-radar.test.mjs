@@ -133,11 +133,12 @@ test("even 28 successful checks cannot produce momentum from a clipped archive",
 test("discovery watchdog detects a lost lane even when total source coverage passes", () => {
   const sources = [hn, ...Array.from({ length: 6 }, (_, i) => ({ ...lab, id: `s${i}` }))];
   const states = state(sources); states[hn.id].status = "error";
-  const research = { generatedAt: now, coverage: { totalSources: sources.length }, companies: { QS: { ...companyQuoteFixture("QS", now), factsCheckedAt: now } } };
-  const health = researchHealth(research, { sources: states }, Date.parse(now), { sources, companies: [{ ticker: "QS" }] });
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: sources.length }, companies: { QS: { ...companyQuoteFixture("QS", now), factsCheckedAt: now } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: states };
+  const health = researchHealth(research, monitor, Date.parse(now), { sources, companies: [{ ticker: "QS" }] });
   assert.match(health.errors.join(" "), /community lane/); assert.equal(health.sourceCoverage, "6/7 active");
   states[hn.id].status = "ok"; states[hn.id].newestPublicationAt = "2026-09-01";
-  assert.match(researchHealth(research, { sources: states }, Date.parse(now), { sources, companies: [{ ticker: "QS" }] }).warnings.join(" "), /readable does not mean fresh content/);
+  assert.match(researchHealth(research, monitor, Date.parse(now), { sources, companies: [{ ticker: "QS" }] }).warnings.join(" "), /readable does not mean fresh content/);
 });
 
 const context = { window: { SIGNALDESK_RESEARCH_CONFIG: config, SIGNALDESK_RESEARCH_MODEL: model }, URL, Intl, Date };

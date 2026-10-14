@@ -29,8 +29,8 @@ test("historical quotes remain inspectable but cannot count as current", () => {
 });
 test("watchdog rejects timestamp-only prices and unsupported capitalization", () => {
   const scope = { sources: [{ id: "source" }], companies: [{ ticker: "QS" }] };
-  const research = { generatedAt: now, coverage: { totalSources: 1 }, companies: { QS: row() } };
-  const monitor = { sources: { source: { id: "source", status: "ok", lastSuccessAt: now } } };
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 1 }, companies: { QS: row() } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { source: { id: "source", status: "ok", lastSuccessAt: now } } };
   assert.equal(researchHealth(research, monitor, Date.parse(now), scope).quoteCoverage, "1/1");
   research.companies.QS.quote.price = null;
   const bad = researchHealth(research, monitor, Date.parse(now), scope);

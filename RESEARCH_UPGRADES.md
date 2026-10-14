@@ -1,5 +1,42 @@
 # Research intelligence work plan
 
+## October 14 publication-pair release gate
+
+Branch implementation, not deployed:
+
+- The publication verifier now fetches both public research and source-check
+  files and uses the browser loader's shared compatibility validation. A newer
+  research assembly cannot disguise older source checks. Both must be coherent
+  and at least as recent as the expected collection; a compatible company-only
+  assembly can retain the same source-check generation. Invalid local pairs
+  fail before polling. Failed propagation checks retain the last specific error.
+- The scheduled research watchdog rejects malformed or mismatched publication
+  pairs before calculating coverage, including missing source rows and invalid
+  company records. Such coverage is unavailable, not zero or healthy. Existing
+  fixtures now contain the actual schema and source-check timestamps rather than
+  partial objects that could not be served to the browser.
+- Post-publication research health now checks `--live`, matching the market
+  workflow, instead of rechecking only local generated files. Changes to the
+  shared loader, verifier and health command trigger the research workflow.
+- All 423 tests pass on Node 20 and Node 24. Seven added tests cover partial
+  propagation, malformed/missing files, newer assemblies with older checks,
+  compatible newer pairs, invalid local input, safe watchdog failures and live
+  workflow wiring. Local saved research passes: 21/22 active sources readable,
+  5/5 discovery feeds current, 8/8 valid company quotes; warnings remain visible.
+- Read-only production checks still show the release gap: PR #6 is open and
+  mergeable, not merged; main is `f6743ce2e9203218ac5cf304ec2de5b2f9b49366`.
+  Production lacks the branch's full discovery configuration (2/5 branch-defined
+  feeds current). Its market snapshot dated 2026-10-14T00:24:19.372Z has only
+  31/75 recent collected quotes, unsupported capitalization and highlighted
+  headline identity failures under the repaired contracts. A one-attempt public
+  pair check correctly rejects the older deployed source-check generation.
+  These are observed release/configuration and data-quality gaps, not a claim
+  that merging alone will repair provider access or establish adoption.
+- UI verification remains pending from the prior pass. Rechecked the same
+  browser handles: the stalled tab is still listed, no dialog handle is exposed,
+  and the fresh preview's Open scan click still leaves Patterns selected. No
+  additional UI success is inferred. No new automation or deployment was started.
+
 ## October 14 discovery-to-investigation UI pass
 
 Branch implementation; browser verification is partially complete, not deployed.

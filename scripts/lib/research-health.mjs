@@ -1,8 +1,14 @@
 import model from "../../research-model.js";
 import config from "../../research-config.js";
+import loader from "../../research-loader.js";
 import { discoveryHistory } from "./discovery-history.mjs";
 export function researchHealth(research, monitor, now = Date.now(), scope = config) {
   const errors = [], warnings = [];
+  const pairError = loader.validatePair(research, monitor, now) || (Object.values(research.companies).some(row => !row || typeof row !== "object" || Array.isArray(row)) ? "The company records are incomplete or invalid." : "");
+  if (pairError) return { ok: false, errors: [pairError], warnings,
+    sourceCoverage: "Unavailable: invalid publication pair", contentChecks: null,
+    pausedSources: scope.sources.filter(s => s.accessStatus === "permission-required").length,
+    discoveryCoverage: "Unavailable: invalid publication pair", quoteCoverage: "Unavailable: invalid publication pair" };
   if (model.freshness(research?.generatedAt, now, 36) !== "current") errors.push("Research publication is missing or more than 36 hours old");
   const states = Object.values(monitor?.sources || {}), expected = scope.sources.length;
   if (research?.coverage?.totalSources !== expected || scope.sources.some(s => !monitor?.sources?.[s.id])) errors.push("Published source coverage differs from configured sources");
