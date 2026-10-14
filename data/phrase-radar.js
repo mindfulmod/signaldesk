@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-13T19:57:19.210Z","phrases":[]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-14T00:24:15.743Z","phrases":[{"phrase":"china competition","weekCount":8,"tickers":["SXTC","SKHY","SK","MU"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
