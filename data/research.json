@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "e232102a-0533-478b-a68d-00a14909ba8a",
-  "generatedAt": "2026-10-14T20:19:22.092Z",
+  "collectionId": "6e64dab8-c554-4415-b1fe-3b4329f04a53",
+  "generatedAt": "2026-10-15T00:49:35.489Z",
   "sourceCheckedAt": "2026-10-14T20:19:22.092Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38631020997",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38662191129",
   "documents": [
     {
       "id": "05d35dc4b39675c10f75631f",
@@ -41676,7 +41676,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-14T20:19:22.092Z",
+    "generatedAt": "2026-10-15T00:49:35.489Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -41741,6 +41741,14 @@
           "632f25c290d145e71630c9c1"
         ],
         "documentCount": 188
+      },
+      {
+        "date": "2026-10-15",
+        "topics": [
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1"
+        ],
+        "documentCount": 188
       }
     ],
     "candidates": [
@@ -41762,7 +41770,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-14"
+        "lastSeenAt": "2026-10-15"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -41782,30 +41790,10 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-14"
+        "lastSeenAt": "2026-10-15"
       }
     ],
     "archive": [
-      {
-        "id": "adb8682d9498bc8bcbb4e1f3",
-        "phrase": "quantum enabled materials",
-        "owners": [
-          "NSF"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "6500912e0fd2dbd695bf35d8"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-14"
-      },
       {
         "id": "70511d3302d1f485eb6285b3",
         "phrase": "control where semiconductor",
@@ -41824,7 +41812,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-14"
+        "lastSeenAt": "2026-10-15"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -41841,6 +41829,26 @@
         ],
         "documentIds": [
           "8c4c64b404a61832fe0845c9"
+        ],
+        "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-15"
+      },
+      {
+        "id": "adb8682d9498bc8bcbb4e1f3",
+        "phrase": "quantum enabled materials",
+        "owners": [
+          "NSF"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "6500912e0fd2dbd695bf35d8"
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
