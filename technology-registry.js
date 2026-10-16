@@ -18,7 +18,7 @@
   const themes = [
     {
       id: "solid-state-batteries", name: "Solid-state batteries", sector: "Energy", stage: "pilot", reviewedAt: checkedAt, reviewDue: "2026-10-30",
-      aliases: ["battery", "batteries", "ASSB", "lithium metal", "electrolyte", "QuantumScape", "Solid Power", "Toyota", "QS", "SLDP", "TM"],
+      aliases: ["solid state battery", "solid state batteries", "ASSB", "solid electrolyte", "QuantumScape", "Solid Power", "Toyota", "QS", "SLDP", "TM"],
       thesis: "Better batteries could change EV range, charging and packaging. The decisive transition is from promising cells to repeatable, economical production.",
       headline: "Pilot lines and vehicle tests; volume adoption still needs proof",
       stageReason: "The cited programs demonstrate pilot production preparation and vehicle testing. This is not a claim that no other program has shipped a product.",
@@ -68,7 +68,7 @@
     },
   ];
   const extensions = {
-    "ai-glasses": { sector: "Wearables", stage: "early-use", aliases: ["smart glasses", "wearables", "Meta", "EssilorLuxottica", "META"], scope: "Audio/camera AI glasses and display glasses are different products. Sales do not measure sustained daily use.", unknowns: ["Active daily use", "Return and renewal rates", "Product-level profitability"], companies: [company("Meta", "META", "Product / AI platform", "Co-develops the cited glasses with EssilorLuxottica.", legacyUrl("meta-glasses-launch"), "2026-06-23", "Product adoption need not be material to a diversified platform's earnings.")] },
+    "ai-glasses": { sector: "Wearables", stage: "early-use", aliases: ["AI glasses", "smart glasses", "Meta", "EssilorLuxottica", "META"], scope: "Audio/camera AI glasses and display glasses are different products. Sales do not measure sustained daily use.", unknowns: ["Active daily use", "Return and renewal rates", "Product-level profitability"], companies: [company("Meta", "META", "Product / AI platform", "Co-develops the cited glasses with EssilorLuxottica.", legacyUrl("meta-glasses-launch"), "2026-06-23", "Product adoption need not be material to a diversified platform's earnings.")] },
     "ai-work": { sector: "Software", stage: "scaling", aliases: ["Copilot", "agents", "assistants", "Microsoft", "MSFT"], scope: "Paid assistant seats are not autonomous-agent deployments, active usage or measured productivity.", unknowns: ["Active use per paid seat", "Renewal cohorts", "Cost per successful task"], companies: [company("Microsoft", "MSFT", "Software distribution", "Discloses paid Microsoft 365 Copilot seats.", legacyUrl("msft-q4-2026"), "2026-07-29", "Seat counts alone cannot establish incremental margins or stock value.")] },
     "robotaxis": { sector: "Mobility", stage: "early-use", aliases: ["robotaxi", "autonomous driving", "Waymo", "Alphabet", "GOOGL"], scope: "Completed rides in an operating service are distinct from announced cities, test permits and driver-supervised trips.", unknowns: ["Unit economics by city", "Repeat rider cohorts", "Comparable independent safety measures"], companies: [company("Alphabet / Waymo", "GOOGL", "Service operator", "Waymo operates the ride-hailing program referenced here.", legacyUrl("waymo-sept-2026"), "2026-09-14", "Separate Waymo service growth from Alphabet-wide valuation and profitability.")] },
   };
@@ -81,6 +81,13 @@
       milestones: [{ id: `${item.id}-next-proof`, label: "Next comparable adoption disclosure", kind: "research-check", state: "watch", due: null, window: "Reporting cadence · date not verified", evidenceNeeded: item.nextCheck }],
     });
   }
+  const topicAliases = {
+    "satellite-phones": ["satellite internet", "direct to cell", "direct to device", "satellite phones", "T-Satellite", "non terrestrial network"],
+    "ai-glasses": ["AI glasses", "smart glasses"],
+    "ai-work": ["Copilot", "AI agents", "AI assistants", "agentic AI"],
+    robotaxis: ["robotaxi", "robotaxis", "autonomous driving", "driverless rides"],
+  };
+  for (const theme of themes) if (topicAliases[theme.id]) theme.topicAliases = topicAliases[theme.id];
   // Historical disclosures remain evidence, not the discovery feed.
   return { schemaVersion: 1, updatedAt: checkedAt, themes, sources: research.sources };
 });

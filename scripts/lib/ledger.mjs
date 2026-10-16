@@ -12,6 +12,7 @@
 // detector compute one consistent ratio itself.
 import { readFile, writeFile } from "node:fs/promises";
 import { articleQueries, verifyArticle } from "./wiki-article.mjs";
+import identity from "../../company-identity.js";
 
 const ROOT = new URL("../../", import.meta.url);
 export const LEDGER_URL = new URL("data/ledger.json", ROOT);
@@ -50,7 +51,17 @@ export async function saveLedger(ledger) {
 }
 
 export function upsertRow(ledger, ticker, meta, row) {
-  const entry = ledger.tickers[ticker] || { meta: {}, rows: [] };
+  let entry = ledger.tickers[ticker] || { meta: {}, rows: [] };
+  const changed = meta.issuerIdentity && entry.rows.length &&
+    (entry.meta.issuerIdentity ? entry.meta.issuerIdentity.cik !== meta.issuerIdentity.cik
+      : entry.meta.name && !identity.profileMatches(entry.meta.name, meta.name));
+  if (changed) {
+    // Preserve the old series for audit, outside active computations. No claim
+    // is made that its numbers were wrong; its issuer continuity is unverified.
+    ledger.issuerArchives ||= {};
+    (ledger.issuerArchives[ticker] ||= []).push({ ...structuredClone(entry), archivedAt: row[ROW_DATE], reason: "Issuer identity boundary" });
+    entry = { meta: { firstSeen: row[ROW_DATE], identityBoundaryAt: row[ROW_DATE] }, rows: [] };
+  }
   entry.meta = { ...entry.meta, ...Object.fromEntries(Object.entries(meta).filter(([, v]) => v !== undefined && v !== null && v !== "")) };
   const date = row[ROW_DATE];
   const idx = entry.rows.findIndex((r) => r[ROW_DATE] === date);
@@ -68,6 +79,7 @@ export function mergeBackfillRows(ledger, ticker, backfillRows) {
   const entry = ledger.tickers[ticker] || { meta: {}, rows: [] };
   const byDate = new Map(entry.rows.map((r) => [r[ROW_DATE], r]));
   for (const [date, close, volume] of backfillRows) {
+    if (entry.meta.identityBoundaryAt && date < entry.meta.identityBoundaryAt) continue;
     const existing = byDate.get(date);
     if (existing) {
       const unverifiedPrice = !Number.isFinite(existing[ROW_CLOSE]) || (existing[6] ? existing[6].price !== "observed" : !Number.isFinite(existing[ROW_VOLUME]));

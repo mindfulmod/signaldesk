@@ -43,7 +43,7 @@
 ], "china", "chinese", "america", "americas",
     "canada", "canadian", "europe", "european", "asia", "asian", "japan", "japanese",
     "india", "indian", "australia", "australian", "korea", "korean", "british",
-    "universal", "advanced", "applied", "precision", "new", "north", "south", "east", "west", "space", "strategy", "strategic"]);
+    "universal", "advanced", "applied", "precision", "new", "north", "south", "east", "west", "space", "strategy", "strategic", "compass"]);
   const AMBIGUOUS = new Set(["AI", "ARM", "NET", "T", "F", "ON", "ARE", "CAN", "NOW", "A", "GO", "IT"]);
   const NEWS_SOURCES = new Set(["GDELT News", "Google News", "Bing News", "Yahoo Public News", "CNBC", "MarketWatch", "SEC Filings", "Press Releases", "Financial Media", "Nasdaq"]);
   const escaped = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -74,7 +74,7 @@
     if (new RegExp("(^|[^A-Za-z0-9$])\\$" + symbol + end, "i").test(text)) return { version: 1, kind: "cashtag", value: ticker };
     if (new RegExp("\\b(?:NASDAQ|NYSE|AMEX|OTC(?:MKTS)?)\\s*:\\s*" + symbol + end, "i").test(text)) return { version: 1, kind: "exchange-symbol", value: ticker };
     const fund = /\b(etf|fund|trust)\b/i.test(String(stock?.name || ""));
-    if (allowBareSymbol && !fund && ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
+    if (allowBareSymbol && source !== "SEC Filings" && !fund && ticker.length > 1 && !AMBIGUOUS.has(ticker) && !COMMON_WORD_TICKERS.has(ticker)
         && new RegExp("(^|[^A-Za-z0-9.$-])" + symbol + end).test(text)) return { version: 1, kind: "symbol", value: ticker };
     const normalized = " " + words(text) + " ";
     const derived = aliasesFor(stock?.name, ticker);
@@ -90,6 +90,25 @@
     const recordedAlias = entry?.companyMatch?.version === 1 && entry.companyMatch.kind === "company-name" ? entry.companyMatch.value : "";
     return Boolean(match({ ...stock, aliases: [...(Array.isArray(stock?.aliases) ? stock.aliases : []), recordedAlias] }, entry?.title, { source: entry?.source }));
   }
-  return { COMMON_WORD_TICKERS, NEWS_SOURCES, aliasesFor, match, articleMatches };
+  function profileMatches(name, title) {
+    // A prefix is not identity: Applied Digital Data Systems is not Applied Digital.
+    return Boolean(companyName(name)) && companyName(name) === companyName(String(title || "").replace(/\s*\([^)]*\)\s*$/, ""));
+  }
+  function reconcileIssuer(stock, record, observedAt) {
+    if (!record?.title || !/^\d{1,10}$/.test(String(record.cik)) || !Number.isFinite(Date.parse(observedAt))) return stock;
+    const name = record.title === record.title.toUpperCase() ? record.title.toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()) : record.title;
+    const providerNames = [...new Set([...(stock.providerNames || []), stock.name].filter(n => n && n !== stock.ticker && n !== name))];
+    return { ...stock, name, providerNames, aliases: aliasesFor(name, stock.ticker), issuerIdentity: {
+      version: 1, cik: String(record.cik).padStart(10, "0"), name, observedAt,
+      source: "https://www.sec.gov/files/company_tickers.json",
+    } };
+  }
+  function sameIssuer(a, b) {
+    if (!a || !b || a.ticker !== b.ticker) return false;
+    const x = a.issuerIdentity?.cik, y = b.issuerIdentity?.cik;
+    if (x || y) return Boolean(x && y && x === y);
+    return companyName(a.name) === companyName(b.name);
+  }
+  return { COMMON_WORD_TICKERS, NEWS_SOURCES, aliasesFor, match, articleMatches, profileMatches, reconcileIssuer, sameIssuer };
 });
 

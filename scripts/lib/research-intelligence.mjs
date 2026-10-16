@@ -19,10 +19,11 @@ export function headlineSignal(title) {
 function documentThemes(registry, source, item) {
   const text = normal(`${item.title} ${item.excerpt || ""}`);
   const inferred = registry.themes.filter(t => {
+    if (t.id === "solid-state-batteries") return /\b(?:all )?solid state (?:lithium metal )?(?:batter(?:y|ies)|cells?)\b|\bassbs?\b/i.test(text);
     const issuerNames = (t.companies || []).flatMap(c => [c.name, c.ticker, ...c.name.split(" / ")]).map(normal);
-    return t.aliases.filter(a => a.length > 4 && !issuerNames.includes(normal(a))).some(a => text.includes(normal(a)));
+    return (t.topicAliases || t.aliases).filter(a => a.length > 4 && !issuerNames.includes(normal(a))).some(a => (` ${text} `).includes(` ${normal(a)} `));
   }).map(t => t.id);
-  return [...new Set([...(source.mode === "page" ? source.themes : []), ...inferred])];
+  return inferred;
 }
 export function buildDocumentInventory(registry, state, previous = {}, now = new Date().toISOString(), reviews = previous.reviews || []) {
   // Reclassifying a heuristic does not create a publication or a new version.
@@ -41,6 +42,7 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
     if (d.detectedAt < record.firstSeenAt) record.firstSeenAt = d.detectedAt;
     if (d.detectedAt >= (record.versions[record.latestId] || "")) record.latestId = d.id;
   }
+  const currentIds = new Set();
   for (const source of registry.sources) {
     const saved = state.sources[source.id];
     if (!saved?.lastSuccessAt || saved.status !== "ok") continue;
@@ -48,24 +50,28 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
     for (const item of entries) {
       const fingerprint = hash(JSON.stringify([item.title, item.excerpt || "", item.publishedAt ? new Date(item.publishedAt).toISOString() : "", item.fingerprint || ""]));
       const id = hash(`${source.id}|${item.url}|${fingerprint}`);
+      if (days(saved.lastSuccessAt, now) >= 0 && days(saved.lastSuccessAt, now) <= 1.5) currentIds.add(id);
       const storyId = hash(`${source.id}|${item.url}`), record = documentIndex[storyId];
       const old = documents.get(record?.latestId);
       const originalPublishedAt = [record?.originalPublishedAt, item.publishedAt].filter(Boolean).sort()[0] || null;
       const attention = { linkedUrl: item.linkedUrl || null, dateKind: item.dateKind || "publication", engagement: item.engagement || null };
       if (documents.has(id)) { documents.set(id, { ...documents.get(id), originalPublishedAt, publishedAt: item.publishedAt || null, ...attention }); continue; }
-      if (record?.versions[id]) continue; // Unchanged archived version, not news.
+      const archivedAt = record?.versions[id];
       documents.set(id, { id, sourceId: source.id, url: item.url, title: item.title, excerpt: item.excerpt || null, owner: source.owner, tier: source.tier,
         storyId, originalPublishedAt, ...attention, firstSeenAt: record?.firstSeenAt || saved.lastSuccessAt, announcementAt: item.dateKind === "community-submission" ? null : item.announcementAt || item.publishedAt || null,
         researchPublishedAt: item.researchPublishedAt || null, researchUrl: item.researchUrl || null, metadataOnly: source.mode !== "page" && !item.metadataCheckedAt,
         themes: documentThemes(registry, source, item), associatedThemes: source.themes,
         filingItems: item.filingItems || [], reportDate: item.reportDate || null, acceptedAt: item.acceptedAt || null, exhibitsIndexUrl: item.exhibitsIndexUrl || null,
-        publishedAt: item.publishedAt || null, detectedAt: saved.lastSuccessAt,
-        changeType: record ? "revision" : saved.baselineAt === saved.lastSuccessAt ? "baseline" : "new-document", previousId: record?.latestId || null,
+        publishedAt: item.publishedAt || null, detectedAt: archivedAt || saved.lastSuccessAt,
+        changeType: archivedAt ? "baseline" : record ? "revision" : saved.baselineAt === saved.lastSuccessAt ? "baseline" : "new-document", previousId: archivedAt ? null : record?.latestId || null,
+        ...(archivedAt ? { restoredFromArchive: true } : {}),
         previousExcerpt: old?.excerpt || null, previousTitle: old?.title || null, discovery: Boolean(source.discovery), headlineSignal: headlineSignal(item.title), verification: "unreviewed" });
-      documentIndex[storyId] = { sourceId: source.id, originalPublishedAt, firstSeenAt: record?.firstSeenAt || saved.lastSuccessAt, latestId: id, versions: { ...record?.versions, [id]: saved.lastSuccessAt } };
+      if (!archivedAt) documentIndex[storyId] = { sourceId: source.id, originalPublishedAt, firstSeenAt: record?.firstSeenAt || saved.lastSuccessAt, latestId: id, versions: { ...record?.versions, [id]: saved.lastSuccessAt } };
     }
   }
-  const protectedIds = new Set(reviews.map(r => r.candidateId));
+  // Fresh source snapshots are already bounded by their adapters. Preserve their
+  // text, like reviewed evidence, outside the historical 4,000-version allowance.
+  const protectedIds = new Set([...reviews.map(r => r.candidateId), ...currentIds]);
   const sorted = [...documents.values()].sort((a, b) => b.detectedAt.localeCompare(a.detectedAt) || a.id.localeCompare(b.id));
   const retained = sorted.filter(d => protectedIds.has(d.id));
   retained.push(...sorted.filter(d => !protectedIds.has(d.id) && days(d.detectedAt, now) <= 180).slice(0, Math.max(0, 4000 - retained.length)));

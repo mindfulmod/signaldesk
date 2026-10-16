@@ -7,6 +7,16 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+October 16 Hank residuals: company descriptions require profile protocol 3 plus
+an exact normalized article-title match at display time. Do not trust the old
+version-2 badge or a matching sentence prefix. Current SEC issuer/CIK identity
+owns names; social labels remain metadata. Range aggregation and attention
+comparison must stop at issuer boundaries, never rename old snapshots in place.
+Co-mention evidence distinguishes original publication from the date a revised
+headline was observed; latest-version graph semantics never union different
+headlines. Current healthy research-source text is protected from archive eviction;
+restored unchanged versions retain their original IDs and dates.
+
 Discovery investigation entry: every rendered pattern/story now offers a direct
 Investigate action, including unsaved leads. `adoption.js` keeps an in-memory
 return context (mode, filters, query, result limit and originating lead ID).

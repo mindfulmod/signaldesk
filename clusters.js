@@ -80,7 +80,7 @@
         </div>
         <p class="cluster-note"><strong>${documents} supporting document${documents === 1 ? "" : "s"}</strong> linking ${members.length} tickers${documents === 1 ? " — single-document lead, not a repeated trend" : " — a candidate relationship, not a verified theme"}.</p>
         <p class="cluster-next">Next check: do these companies share a real product, customer or deployment milestone?</p>
-        <details class="cluster-evidence"><summary>Review headline evidence${documents > evidence.length ? ` (latest ${evidence.length} of ${documents})` : ""}</summary><ul>${evidence.map(item => `<li><a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a><small>${escapeHtml(item.source)} · ${displayDate(item.published) ? `Published ${escapeHtml(displayDate(item.published))}` : `Publication date unknown · first observed ${escapeHtml(displayDate(item.firstSeen) || "date unknown")}`}</small></li>`).join("")}</ul></details>
+        <details class="cluster-evidence"><summary>Review headline evidence${documents > evidence.length ? ` (latest ${evidence.length} of ${documents})` : ""}</summary><ul>${evidence.map(item => `<li><a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a><small>${escapeHtml(item.source)} · ${displayDate(item.published) ? `Published ${escapeHtml(displayDate(item.published))}` : `Publication date unknown · first observed ${escapeHtml(displayDate(item.firstSeen) || "date unknown")}`}${item.observedAt && item.observedAt !== item.firstSeen ? ` · This version observed ${escapeHtml(displayDate(item.observedAt) || "date unknown")}` : ""}</small></li>`).join("")}</ul></details>
       </div>`;
   }
 

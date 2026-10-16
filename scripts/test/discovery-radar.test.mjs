@@ -115,8 +115,11 @@ test("an interrupted monitoring window never yields a growth rate", () => {
 test("retention gaps remain flagged after unchanged records are evicted", () => {
   const registry = { sources: [lab], themes: [] };
   const snapshot = { sources: { lab: { status: "ok", lastSuccessAt: now, items: Array.from({ length: 4001 }, (_, i) => ({ title: `Quantum sensor ${i}`, url: `https://example.org/${i}`, publishedAt: "2026-10-10" })) } } };
-  const first = buildDocumentInventory(registry, snapshot, {}, now);
-  const second = buildDocumentInventory(registry, snapshot, first, now);
+  const current = buildDocumentInventory(registry, snapshot, {}, now);
+  assert.equal(current.documents.length, 4001, "fresh adapter output is protected");
+  const unavailable = { sources: { lab: { ...snapshot.sources.lab, status: "error" } } };
+  const first = buildDocumentInventory(registry, unavailable, current, now);
+  const second = buildDocumentInventory(registry, unavailable, first, now);
   assert.equal(first.discoveryTruncated, true); assert.equal(second.discoveryTruncated, true);
   const discovery = discoverTopics(second.documents, [], {}, now, [lab], state([lab]), second);
   assert.equal(discovery.history.length, 1, "successful checks accumulate while old gaps age out");

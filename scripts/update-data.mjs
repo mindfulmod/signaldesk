@@ -1041,12 +1041,18 @@ async function validateDiscoveredTickers(discovery, failures) {
   return events;
 }
 
-export function registerStock(ticker, name, aliases = []) {
+export function registerStock(ticker, name, aliases = [], issuerRecord = null, observedAt = new Date().toISOString()) {
   const normalized = ticker.toUpperCase();
   if (!isPossibleTicker(normalized)) return;
+  issuerRecord ||= secTickerMapCache?.get(normalized);
   const existing = stockRegistry.get(normalized);
   const normalizedAliases = [...new Set([normalized, ...aliases].filter(Boolean).map((value) => String(value).toLowerCase()))];
   if (existing) {
+    if (issuerRecord) { Object.assign(existing, identity.reconcileIssuer(existing, issuerRecord, observedAt)); return; }
+    if (existing.issuerIdentity) {
+      existing.providerNames = [...new Set([...(existing.providerNames || []), name].filter(n => n && n !== existing.name && n !== normalized))];
+      return;
+    }
     existing.aliases = [...new Set([...(existing.aliases || []), ...normalizedAliases])];
     if (name && existing.name === existing.ticker) existing.name = name;
     return;
@@ -1058,6 +1064,7 @@ export function registerStock(ticker, name, aliases = []) {
     seeded: false,
     discoveredMentions: 0,
   });
+  if (issuerRecord) Object.assign(stockRegistry.get(normalized), identity.reconcileIssuer(stockRegistry.get(normalized), issuerRecord, observedAt));
 }
 
 // Derive distinctive headline-matching aliases from a company name so news that
@@ -1075,6 +1082,10 @@ function brandAliasesFor(name) {
 function enrichRegistryName(ticker, name) {
   const entry = stockRegistry.get(String(ticker).toUpperCase());
   if (!entry || !name) return;
+  if (entry.issuerIdentity) {
+    entry.providerNames = [...new Set([...(entry.providerNames || []), name].filter(n => n !== entry.name))];
+    return;
+  }
   if (!entry.name || entry.name === entry.ticker) entry.name = name;
   if (AMBIGUOUS_TICKERS.has(entry.ticker)) return; // symbol-only matching for these
   const merged = new Set([...(entry.aliases || []), ...brandAliasesFor(name)]);
@@ -1096,7 +1107,7 @@ async function enrichRegistryNamesFromSec(failures) {
   for (const entry of stockRegistry.values()) {
     const record = secMap.get(entry.ticker.toUpperCase());
     if (record?.title) {
-      enrichRegistryName(entry.ticker, cleanCompanyName(record.title));
+      Object.assign(entry, identity.reconcileIssuer(entry, record, new Date().toISOString()));
       named += 1;
     }
   }
@@ -1587,9 +1598,12 @@ export function aggregate(events, previous, { failures = [], generatedAt = new D
   for (const event of events) {
     const isMarket = quality.MARKET_SOURCES.includes(event.source);
     const weight = isMarket ? 0 : Math.max(0, Number(event.mentions) || 0);
-    const prior = previousByTicker.get(event.ticker);
+    const canonical = stockRegistry.get(event.ticker)?.issuerIdentity ? stockRegistry.get(event.ticker) : event;
+    const previousRow = previousByTicker.get(event.ticker);
+    const prior = identity.sameIssuer(canonical, previousRow) ? previousRow : null;
     const item = map.get(event.ticker) || {
-      ticker: event.ticker, name: event.name, mentions: 0, weightedSentiment: 0,
+      ticker: event.ticker, name: canonical.name, issuerIdentity: canonical.issuerIdentity || null,
+      providerNames: canonical.providerNames || [], mentions: 0, weightedSentiment: 0,
       aliases: stockRegistry.get(event.ticker)?.aliases || [],
       lastPrice: prior?.lastPrice ?? null, quoteAsOf: prior?.quoteAsOf ?? null, quoteSource: prior?.quoteSource ?? null,
       instrumentType: prior?.instrumentType ?? null,
@@ -1741,8 +1755,12 @@ async function enrichIssuerNames(signals, failures) {
   // Names for every ticker we can match — no extra network calls.
   for (const signal of signals) {
     const record = secMap.get(signal.ticker.toUpperCase());
-    if (record?.title && (!signal.name || signal.name === signal.ticker)) {
-      signal.name = cleanCompanyName(record.title);
+    if (record?.title) {
+      const resolved = identity.reconcileIssuer(signal, record, new Date().toISOString());
+      if (!identity.sameIssuer(signal, resolved) && !signal.sources?.["Price/Volume"]) {
+        Object.assign(resolved, { lastPrice: null, quoteAsOf: null, quoteSource: null });
+      }
+      Object.assign(signal, quality.normalizeSignal(resolved));
     }
   }
 }
@@ -1765,7 +1783,8 @@ async function enrichProfiles(signals, failures) {
       const profile = await fetchCompanyBlurb(signal.name, signal.ticker);
       if (profile?.extract) {
         signal.description = profile.extract;
-        signal.profileIdentityVersion = 2;
+        signal.profileIdentityVersion = 3;
+        signal.profileTitle = profile.title;
         signal.descriptionUrl = profile.url || null;
       }
     } catch (error) {
@@ -1843,7 +1862,7 @@ async function fetchCompanyBlurb(name, ticker) {
     if (!summary?.extract || summary.type === "disambiguation") continue;
     if (!isCompanyMatch(query, summary)) continue;
     const extract = trimToSentences(summary.extract, 2, 280);
-    return { extract, url: summary?.content_urls?.desktop?.page || null };
+    return { extract, title: summary.title, url: summary?.content_urls?.desktop?.page || null };
   }
   return null;
 }
@@ -1852,9 +1871,7 @@ async function fetchCompanyBlurb(name, ticker) {
 // alone cannot distinguish Applied Digital from the unrelated historical ADDS.
 export function isCompanyMatch(query, summary) {
   if (!verifyArticle(query, summary, { minOverlap: 1 }).ok) return false;
-  const name = stripCorporate(query).join(" ");
-  const title = stripCorporate(summary.title.replace(/\s*\([^)]*\)\s*$/, "")).join(" ");
-  return name === title || String(summary.extract || "").toLowerCase().startsWith(String(query).toLowerCase());
+  return identity.profileMatches(query, summary.title);
 }
 
 function trimToSentences(text, maxSentences, maxChars) {
@@ -1941,6 +1958,7 @@ async function updateLedgerFromRun({ events, signals, failures }) {
     const signal = signalByTicker.get(entry.ticker);
     registryMeta.set(entry.ticker, {
       name: signal?.name || entry.name,
+      issuerIdentity: signal?.issuerIdentity || entry.issuerIdentity || undefined,
       sector: signal?.sector || entry.sector || null,
       sub: signal?.industry || entry.industry || null,
       article: articleFromWikipediaUrl(signal?.descriptionUrl) || entry.article || undefined,

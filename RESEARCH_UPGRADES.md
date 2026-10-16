@@ -733,6 +733,69 @@ measured investment returns or conversion improvements.
 
 ## Hank audit follow-up
 
+### October 16 · Residual findings reconciled and repaired on PR #6
+
+This pass uses Hank's October 16 handoff, not a claim that all original H01–H16
+items are production-closed. The following fixes are implemented on the branch:
+
+- Issuer news: generic `compass` no longer identifies CMPS. SEC form tokens
+  (including Pickwick Capital Partners' MA/A) cannot stand in for a ticker.
+  Exact Compass Pathways and Mastercard issuer names still match; the earlier
+  Compass Securities exclusion remains covered.
+- Canonical names: current SEC ticker/CIK observations override social-provider
+  labels before aggregation and later dynamic registration. Original provider
+  names remain metadata. CD/Chaince Digital (CIK 1527762) fixtures cover both
+  browser controllers, detail and CSV. Historical snapshots keep their original
+  names; aggregation, attention comparisons and retained quotes stop at identity
+  boundaries. Ledger identity changes archive the prior rows separately and
+  prevent cross-boundary backfill. This fixes attribution, not a demonstrated
+  historical numeric error; current deployed records still need a new collection.
+- Profiles: prefix matches no longer certify Applied Digital Data Systems as
+  Applied Digital. Profile protocol 3 retains the matched article title and
+  rechecks it at display time. Protocol 2 descriptions are withheld, not
+  retroactively certified; new collection is needed to restore valid blurbs.
+- Co-mentions: each changed same-URL observation keeps a dated revision. The
+  latest version alone contributes in its observation week; unchanged replays
+  do not renew it. Original publication dates remain separate. October 14
+  revisions of both prior-week and July headlines are regression fixtures;
+  corrected headlines never union issuer lists across versions. Evidence views
+  expose the revised-version observation date.
+- Topic relevance: BMW Gen6 battery production remains associated context,
+  not direct solid-state evidence without chemistry-specific wording. AI glasses
+  is an explicit topic phrase. Diversified issuer names alone no longer directly
+  tag their unrelated news. Reclassification preserves document IDs and dates.
+- Retention: bounded, healthy source snapshots checked within 36 hours are
+  protected alongside published reviews. The historical allowance remains
+  4,000 versions / 180 days; protected records may exceed the total cap.
+  Reappearing archived text restores its original ID and detection date, never
+  a new-story event. Legacy restoration is conservatively labeled baseline;
+  it does not reconstruct missing editorial decisions or prior excerpts.
+
+Source refresh: 20/22 active sources readable, 4/5 discovery feeds current,
+8/8 retained company quote records usable under the existing age gate. QS
+returned 403; Nature redirected outside its allowlist. Two T-Mobile sources
+remain permission-paused. Four content-quality checks and missing discovery
+history remain visible; momentum is still withheld. USAspending remains inactive.
+
+Verification: all 432 tests pass on Node 20 and 24, including exact residual
+regressions and both controller/CSV paths. Browser checks: APLD's old description is withheld,
+375px stock selection opens the detail sheet, and a Research-filtered Open scan
+expanded to 48 stories restores its filter, pagination and originating focus
+after Investigate → Back. Table, Research radar and Attention map selections
+opened the expected stock. No console warnings/errors were returned. The native
+unsaved-draft confirmation was not reliably observable through browser automation;
+the Cancel branch remains a release QA gate, not a claimed pass.
+
+Release gates remain open: PR #6 has generated-data conflicts with newer main
+(fetched main `8fbfcba3c5d3861c3ed5dc5fe7398227250adb44`). Reconcile cumulative
+history/ledger/source receipts and preserve both sides before merging; do not
+resolve these files wholesale with ours/theirs. No merge or deployment was
+performed in this pass. Verify current issuer labels, refreshed profiles, hosted
+publication pairing and the first scheduled collection after release.
+
+Primary context: [Chaince Digital's SEC filing](https://www.sec.gov/Archives/edgar/data/1527762/000149315226012943/form10-k.htm)
+and [BMW's separate Gen6 and all-solid-state programs](https://www.press.bmwgroup.com/global/article/detail/T0403470EN?language=en).
+
 ### Scope, evidence and sequencing
 
 This incorporates Hank's supplied October 5–9 audit findings. Most October 8

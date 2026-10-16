@@ -7,6 +7,7 @@ import model from "../../research-model.js";
 import techModel from "../../technology-model.js";
 import config from "../../research-config.js";
 import registry from "../../technology-registry.js";
+import identity from "../../company-identity.js";
 import { aggregate, parseYahooMarket, parseStooqMarket, isCompanyMatch } from "../update-data.mjs";
 import { hotFlags, classifyTicker } from "../lib/coil-detector.mjs";
 import { computeThemeHeat, alignedCloses, relativeReturn } from "../lib/theme-heat.mjs";
@@ -79,6 +80,21 @@ function stockController(enhanced = false) {
   if (enhanced) vm.runInContext(readFileSync(new URL("../../enhancements.js", import.meta.url), "utf8"), context);
   return { context, downloaded: () => downloaded };
 }
+
+for (const enhanced of [false, true]) test(`Hank: canonical reused-ticker identity reaches ${enhanced ? "enhanced" : "fallback"} board, detail and CSV`, async () => {
+  const { context, downloaded } = stockController(enhanced);
+  const row = identity.reconcileIssuer(signal("CD", { name: "Chindata Group Holdings" }), { title: "Chaince Digital Holdings Inc.", cik: "1527762" }, now);
+  context.current = { generatedAt: new Date().toISOString(), signals: [row] };
+  vm.runInContext('snapshot=current; history={snapshots:[]}; tickerHistory=()=>[]; getState=()=>({sources:["ApeWisdom","Price/Volume"],query:"",start:"",end:""});', context);
+  const selected = context.filteredSignals();
+  assert.equal(selected[0].name, "Chaince Digital Holdings Inc.");
+  assert.match(context.detailMarkup(selected[0], 1), /Chaince Digital Holdings/);
+  assert.doesNotMatch(context.detailMarkup(selected[0], 1), /Chindata/);
+  context.exportCsv();
+  const csv = await downloaded().text();
+  assert.match(csv, /Chaince Digital Holdings/);
+  assert.doesNotMatch(csv, /Chindata/);
+});
 
 for (const enhanced of [false, true]) test(`H04/H05/H08: actual ${enhanced ? "enhanced" : "fallback"} controller shares scope, score and CSV selection`, async () => {
   const { context, downloaded } = stockController(enhanced);
@@ -223,7 +239,7 @@ test("H11: capacity/age eviction cannot turn unchanged documents into new events
   const sources=Array.from({length:4},(_,i)=>({id:"s"+i,owner:"Lab",themes:[],mode:"links"}));
   const registry={sources,themes:[]};
   const state={sources:Object.fromEntries(sources.map(s=>[s.id,{status:"ok",lastSuccessAt:now,baselineAt:now,items:Array.from({length:1001},(_,i)=>({url:`https://example.org/${s.id}/${i}`,title:"Original article "+i}))}]))};
-  const first=buildDocumentInventory(registry,state,{},now);assert.equal(first.documents.length,4000);assert.equal(Object.keys(first.documentIndex).length,4004);
+  const first=buildDocumentInventory(registry,state,{},now);assert.equal(first.documents.length,4004);assert.equal(Object.keys(first.documentIndex).length,4004);
   for(const s of Object.values(state.sources))s.lastSuccessAt="2026-10-10T20:00:00Z";
   const next=buildDocumentInventory(registry,state,first,"2026-10-10T20:00:00Z");
   assert.deepEqual(next.documents,first.documents);

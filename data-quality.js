@@ -132,8 +132,8 @@
       momentum: excludedNewsSources.length ? null : number(item.momentum), sentiment: excludedNewsSources.length ? null : number(item.sentiment),
       priceMove: valid ? number(item.priceMove) : null, relativeVolume: valid ? relativeVolume(item.relativeVolume) : null,
       marketQuality: valid ? item.marketQuality || [] : ["Legacy blended market measurements are unverified; awaiting a new collection"],
-      description: item.profileIdentityVersion === 2 ? item.description : null,
-      descriptionUrl: item.profileIdentityVersion === 2 ? item.descriptionUrl : null,
+      description: item.profileIdentityVersion === 3 && identity.profileMatches(item.name, item.profileTitle) ? item.description : null,
+      descriptionUrl: item.profileIdentityVersion === 3 && identity.profileMatches(item.name, item.profileTitle) ? item.descriptionUrl : null,
       latest: (item.latest || []).filter(entry => identity.articleMatches(entry, item)),
       topHeadline: item.topHeadline && identity.articleMatches(item.topHeadline, item) ? item.topHeadline : null };
   }
@@ -166,7 +166,7 @@
     const currentCoverage = attentionWindowCoverage(snapshots, item.ticker);
     const currentTimes = attentionWindowTimes(snapshots), priorTimes = attentionWindowTimes(previousSnapshots);
     const sameSpacing = currentTimes.every((t, i) => !i || Math.round((t-currentTimes[0])/86400000) === Math.round((priorTimes[i]-priorTimes[0])/86400000));
-    const valid = currentTimes.length === snapshots.length && priorTimes.length === previousSnapshots.length &&
+    const valid = [...snapshots, ...previousSnapshots].every(day => identity.sameIssuer(item, (day.signals || []).find(s => s.ticker === item.ticker))) && currentTimes.length === snapshots.length && priorTimes.length === previousSnapshots.length &&
       currentTimes.length > 0 && currentTimes.length === priorTimes.length && priorTimes.at(-1) < currentTimes[0] && sameSpacing;
     const priorRows = previousSnapshots.map(day => (day.signals || []).find(s => s.ticker === item.ticker));
     const prior = priorRows.filter(Boolean).map(normalizeSignal);
@@ -183,13 +183,13 @@
     const observations = ordered.map(day => {
       const raw = (day.signals || []).find(s => s.ticker === ticker), clean = raw ? normalizeSignal(raw) : null;
       return { date: day.date, asOf: day.generatedAt, mentions: clean ? attentionTotal(clean.sources) : null,
-        sources: clean?.sources || {}, coverage: attentionCoverageFor(day, raw) };
+        sources: clean?.sources || {}, issuer: raw, coverage: attentionCoverageFor(day, raw) };
     });
     let sources = observations.at(-1)?.coverage || [], start = observations.length - 1;
     if (sources.length) for (let i = observations.length - 2; i >= 0; i--) {
       const gap = Date.parse(observations[i+1].asOf) - Date.parse(observations[i].asOf);
       const common = sources.filter(s => observations[i].coverage.includes(s));
-      if (!common.length || !(gap > 0 && gap <= 96 * 3600000)) break;
+      if (!common.length || !identity.sameIssuer(observations[i].issuer, observations[i+1].issuer) || !(gap > 0 && gap <= 96 * 3600000)) break;
       sources = common; start = i;
     }
     const series = sources.length ? observations.slice(start).map(row => ({ date: row.date,
@@ -200,7 +200,8 @@
     const map = new Map();
     for (const daily of [...snapshots].sort((a, b) => (a.generatedAt || a.date || "").localeCompare(b.generatedAt || b.date || ""))) {
       for (const raw of daily.signals || []) {
-        const signal = normalizeSignal(raw), old = map.get(signal.ticker);
+        const signal = normalizeSignal(raw), previous = map.get(signal.ticker);
+        const old = identity.sameIssuer(signal, previous) ? previous : null;
         const sources = Object.fromEntries(SOURCES.map(s => [s, (old?.sources[s] || 0) + signal.sources[s]]));
         const latest = [...(old?.latest || []), ...signal.latest];
         // Market observations are latest-in-range, never averaged by attention.

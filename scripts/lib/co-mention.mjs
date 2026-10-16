@@ -277,9 +277,19 @@ export function computeCoMention(history, events, dateStr, leaderTickers = [], p
       if (!observation.issuers.some(issuer => issuer.ticker === event.ticker)) observation.issuers.push({ ticker: event.ticker, name: event.name || "", companyMatch: event.companyMatch || null });
       observations.set(key, observation);
     }
+    const nextObservations = [...observations.values()].map(o => ({ ...o, issuers: o.issuers.sort((a, b) => a.ticker.localeCompare(b.ticker)) }))
+      .sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
+    const signature = rows => JSON.stringify((rows || []).map(o => ({ ...o, issuers: [...o.issuers].sort((a, b) => a.ticker.localeCompare(b.ticker)) }))
+      .sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b))));
+    const changed = prior && signature(prior.observations) !== signature(nextObservations);
+    // Original publication dates never renew. Revised text is a separately dated
+    // observation; only the latest version contributes, never a union of titles.
+    const effectiveAt = changed ? dateStr : prior?.effectiveAt || published || firstSeen;
+    const revisions = [...(prior?.revisions || (prior ? [{ observedAt: prior.firstSeen, effectiveAt: prior.effectiveAt || prior.published || prior.firstSeen, observations: prior.observations }] : []))];
+    if (!prior || changed) revisions.push({ observedAt: dateStr, effectiveAt, observations: nextObservations });
     documents[id] = { url, firstSeen, published: prior?.published || published || null,
-      week: prior?.week || isoWeekKey(new Date(published || firstSeen)),
-      observations: [...observations.values()] };
+      effectiveAt, week: isoWeekKey(new Date(effectiveAt)), revisions,
+      observations: nextObservations };
   }
   const weeks = {}, cutoff = isoWeekKey(new Date(Date.parse(dateStr) - 12 * 7 * 86400000));
   const supportingDocuments = [];
@@ -310,7 +320,8 @@ export function computeCoMention(history, events, dateStr, leaderTickers = [], p
               const matches = documentEvents({ ...record, observations: [item] }).filter(verifiedEvent).filter(event => memberSet.has(event.ticker) && !NOISE_TICKERS.has(event.ticker));
               return new Set(matches.map(event => event.ticker)).size >= 2;
             });
-            return { url: record.url, title: observation.title, source: observation.source, published: observation.published, firstSeen: record.firstSeen };
+            return { url: record.url, title: observation.title, source: observation.source, published: observation.published, firstSeen: record.firstSeen,
+              observedAt: record.revisions?.at(-1)?.observedAt || record.firstSeen, effectiveAt: record.effectiveAt };
           }).sort((a, b) => String(b.published || b.firstSeen).localeCompare(String(a.published || a.firstSeen)));
           return { members: members.sort(), documentCount: supporting.length, evidence: evidence.slice(0, 6) };
         })
