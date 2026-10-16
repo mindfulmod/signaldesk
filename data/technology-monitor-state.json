@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T20:01:19.820Z",
+  "generatedAt": "2026-10-16T09:16:01.839Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-15T20:01:19.820Z",
-      "nextAttemptAt": "2026-10-16T02:01:19.820Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "nextAttemptAt": "2026-10-16T15:16:01.839Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 15
+      "failureStreak": 16
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,24 +200,29 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "536b519e415e24ee46365e7a0ffe44669b31a24b748c4a9a600da72caa71def2",
+      "fingerprint": "82c50a396d8bcbd796f2b880b39af98698d700657a25cc4b43fecf65a5e2da91",
       "items": [
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china",
           "title": "24.09.2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
+        },
+        {
+          "url": "https://www.press.bmwgroup.com/global/article/detail/T0461769EN/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang",
+          "title": "BMW Group begins series production of Gen6 high-voltage batteries in Shenyang"
         }
       ],
       "seenLinks": [
-        "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china"
+        "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china",
+        "https://www.press.bmwgroup.com/global/article/detail/T0461769EN/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang"
       ],
-      "matchedItems": 1,
+      "matchedItems": 2,
       "extractedEntries": 61,
       "newestPublicationAt": null,
       "excerpt": "PressClub Global. Login My.PressClub. Login. Contact World Wide Corporate Brands Technology People Heritage Motor Shows Sports Do you need help? Please contact our support team from 9 to 17 CET via support.pressclub@bmwgroup.com . Welcome t",
@@ -234,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -265,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b79-e9oEaNFWVgsO43A9DIi8kzC27RA\"",
+      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
       "lastModified": null
     },
     "meta-news": {
@@ -273,15 +278,21 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-15T09:23:36.337Z",
+      "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "8a3543d20a8ce95f06e83178d6bf56daf4f4c1b003f2e1b232b63c8b76fce1b4",
+      "fingerprint": "bbb9f3929415619e6525c46a53f137513b7380b050683d3a825ed5b4887608a2",
       "items": [
+        {
+          "url": "https://about.fb.com/news/2026/10/meta-milans-pinacoteca-di-brera-and-essilorluxottica-expand-access-to-art-through-ai-glasses/",
+          "title": "Meta, Milan’s Pinacoteca di Brera, and EssilorLuxottica Expand Access to Art Through AI Glasses",
+          "excerpt": "Today, Meta, Pinacoteca di Brera and EssilorLuxottica are proud to launch “Sensing Art – Discovering Masterpieces Beyond What Meets the Eye.” This pilot aims to explore how AI glasses can make art more accessible for people who are blind or",
+          "publishedAt": "2026-10-14T16:00:57.000Z"
+        },
         {
           "url": "https://about.fb.com/news/2026/10/meta-donates-1000-ai-glasses-to-singapores-disability-community/",
           "title": "Meta Donates 1,000 AI Glasses to Singapore’s Disability Community",
@@ -291,27 +302,28 @@
       ],
       "seenLinks": [
         "https://about.fb.com/news/2026/10/meta-donates-1000-ai-glasses-to-singapores-disability-community/",
-        "https://about.fb.com/news/2026/10/announcing-ranveer-singh-as-brand-ambassador-for-ray-ban-and-ray-ban-meta-in-india-along-with-exciting-new-updates-to-our-ai-glasses/"
+        "https://about.fb.com/news/2026/10/announcing-ranveer-singh-as-brand-ambassador-for-ray-ban-and-ray-ban-meta-in-india-along-with-exciting-new-updates-to-our-ai-glasses/",
+        "https://about.fb.com/news/2026/10/meta-milans-pinacoteca-di-brera-and-essilorluxottica-expand-access-to-art-through-ai-glasses/"
       ],
-      "matchedItems": 1,
+      "matchedItems": 2,
       "extractedEntries": 10,
-      "newestPublicationAt": "2026-10-08T05:49:36.000Z",
+      "newestPublicationAt": "2026-10-14T16:00:57.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"7489b0c3e323e59d87f7a7a70134bdbb\"",
-      "lastModified": "Thu, 15 Oct 2026 01:01:35 GMT"
+      "etag": "W/\"e4fbac585b3e6e78364dc2a559cab1c8\"",
+      "lastModified": "Thu, 15 Oct 2026 10:31:07 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-13T12:08:25.253Z",
       "nextAttemptAt": null,
@@ -361,8 +373,8 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -421,36 +433,23 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-15T09:23:36.337Z",
+      "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "1d603131d6e142bf7c00ec0ff4e644bdaabd54d73306cf59f7984d407e7e6e53",
-      "items": [
-        {
-          "url": "https://www.fcc.gov/edoc/425844",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/425843",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
-          "publishedAt": null
-        }
-      ],
+      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "items": [],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
         "https://www.fcc.gov/edoc/425844",
         "https://www.fcc.gov/edoc/425843"
       ],
-      "matchedItems": 2,
-      "extractedEntries": 26,
+      "matchedItems": 0,
+      "extractedEntries": 8,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -466,8 +465,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-14T09:42:19.686Z",
       "nextAttemptAt": null,
@@ -593,16 +592,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792046784-gzip\"",
-      "lastModified": "Thu, 15 Oct 2026 06:46:24 GMT"
+      "etag": "\"1792133186-gzip\"",
+      "lastModified": "Fri, 16 Oct 2026 06:46:26 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -973,23 +972,59 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792056160\"",
-      "lastModified": "Thu, 15 Oct 2026 09:22:40 GMT"
+      "etag": "\"1792141712\"",
+      "lastModified": "Fri, 16 Oct 2026 09:08:32 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-15T09:23:36.337Z",
+      "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "8b3c196c34f244e5a15f67a6825e20fcb5c9cc04499a9d343e5effccedabc9c2",
+      "fingerprint": "d9670dbc084620b417a751620e84dd8e5db8f8ed65fb99626cb904acaacf399d",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03178-w",
+          "title": "Is AI eroding PhD students’ critical thinking and analysis skills?",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03329-z",
+          "title": "World’s timekeepers upend how they adjust time to avoid catastrophic ‘negative second’",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03238-1",
+          "title": "Orangutan mothers arrange play dates for their babies",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11263-3",
+          "title": "Nearly half of reef-building corals face elevated relative risk of extinction",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03152-6",
+          "title": "Give me the good news: four science stories to brighten your day",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03233-6",
+          "title": "Margaret Hamilton obituary: computer scientist who pioneered software engineering and helped us get to the Moon",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03194-w",
           "title": "ArXiv versus AI slop: will capping preprint submissions work?",
@@ -1077,6 +1112,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03075-2",
           "title": "Large blind test of methane-detecting satellites lends credibility to emissions data",
+          "excerpt": "",
+          "publishedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03322-6",
+          "title": "Daily briefing: China’s extraordinary rise in science",
           "excerpt": "",
           "publishedAt": "2026-10-14"
         },
@@ -1397,48 +1438,6 @@
           "title": "In the AI era, coding means thinking like a systems architect",
           "excerpt": "",
           "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03240-7",
-          "title": "Award-winning microscopy image disqualified over AI use",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11253-5",
-          "title": "Author Correction: Timing and trajectory of BCR::ABL1 -driven chronic myeloid leukaemia",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03225-6",
-          "title": "Keep medical doctors in academia — without them, health-care research will suffer",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03251-4",
-          "title": "Economics Nobel awarded for work on stabilizing economies in crisis",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02970-y",
-          "title": "Beyond the solvent fog: watching molecules dance in the crowd",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03181-1",
-          "title": "What does a PhD pay? Data reveal huge gaps across Europe",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03207-8",
-          "title": "Hidden signals in sleep can predict future health",
-          "excerpt": "",
-          "publishedAt": "2026-10-12"
         }
       ],
       "seenLinks": [
@@ -1600,7 +1599,14 @@
         "https://www.nature.com/articles/s41586-026-11154-7",
         "https://www.nature.com/articles/s41586-026-11126-x",
         "https://www.nature.com/articles/s41586-026-10972-z",
-        "https://www.nature.com/articles/d41586-026-03306-6"
+        "https://www.nature.com/articles/d41586-026-03306-6",
+        "https://www.nature.com/articles/d41586-026-03178-w",
+        "https://www.nature.com/articles/d41586-026-03329-z",
+        "https://www.nature.com/articles/d41586-026-03238-1",
+        "https://www.nature.com/articles/s41586-026-11263-3",
+        "https://www.nature.com/articles/d41586-026-03152-6",
+        "https://www.nature.com/articles/d41586-026-03233-6",
+        "https://www.nature.com/articles/d41586-026-03322-6"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
@@ -1611,7 +1617,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"141cc878f7c2cc2b2a274294fc978e9a\"",
+      "etag": "\"3b4cdc27d4baf5a41bc6ddd0c155b6d7\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1619,8 +1625,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2246,8 +2252,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2888,8 +2894,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3437,8 +3443,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4076,8 +4082,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4763,8 +4769,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5256,8 +5262,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -5888,21 +5894,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-15T09:23:36.337Z",
-      "lastSuccessAt": "2026-10-15T09:23:36.337Z",
+      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
+      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "b8f885c8a80e4fea57167b41d195d886d1c4ad0de1c66be60cf67bcf698e51d3",
+      "fingerprint": "fee91655fcb8e60b910c034076943a31135cd34654baf72679e41b4317cb1e62",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-08-10",
-          "acceptedAt": "2026-08-10T20:10:48.000Z",
+          "acceptedAt": "2026-08-11T00:10:48.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5917,7 +5923,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2026-07-23",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-07-23T01:15:54.000Z",
+          "acceptedAt": "2026-07-23T05:15:54.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/0001652044-26-000071-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5929,7 +5935,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-07-22",
           "reportDate": "2026-07-22",
-          "acceptedAt": "2026-07-22T20:01:36.000Z",
+          "acceptedAt": "2026-07-23T00:01:36.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5944,7 +5950,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-11",
           "reportDate": "2026-06-05",
-          "acceptedAt": "2026-06-11T20:17:04.000Z",
+          "acceptedAt": "2026-06-12T00:17:04.000Z",
           "filingItems": [
             "5.02",
             "5.07",
@@ -5960,7 +5966,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-05",
-          "acceptedAt": "2026-06-05T20:52:38.000Z",
+          "acceptedAt": "2026-06-06T00:52:38.000Z",
           "filingItems": [
             "1.01",
             "3.03",
@@ -5977,7 +5983,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-02",
-          "acceptedAt": "2026-06-05T20:40:20.000Z",
+          "acceptedAt": "2026-06-06T00:40:20.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5991,7 +5997,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-04",
           "reportDate": "2026-06-04",
-          "acceptedAt": "2026-06-04T21:07:39.000Z",
+          "acceptedAt": "2026-06-05T01:07:39.000Z",
           "filingItems": [
             "1.01",
             "7.01",
@@ -6008,7 +6014,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-05-21",
           "reportDate": "2026-05-21",
-          "acceptedAt": "2026-05-21T20:25:10.000Z",
+          "acceptedAt": "2026-05-22T00:25:10.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6023,7 +6029,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-05-11",
-          "acceptedAt": "2026-05-11T20:45:29.000Z",
+          "acceptedAt": "2026-05-12T00:45:29.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6038,7 +6044,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2026-04-30",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-04-30T01:02:11.000Z",
+          "acceptedAt": "2026-04-30T05:02:11.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/0001652044-26-000048-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6050,7 +6056,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-29",
           "reportDate": "2026-04-29",
-          "acceptedAt": "2026-04-29T20:01:35.000Z",
+          "acceptedAt": "2026-04-30T00:01:35.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6065,7 +6071,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-10",
           "reportDate": "2026-04-07",
-          "acceptedAt": "2026-04-10T20:16:53.000Z",
+          "acceptedAt": "2026-04-11T00:16:53.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6079,7 +6085,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-02",
           "reportDate": "2026-03-30",
-          "acceptedAt": "2026-04-02T20:18:28.000Z",
+          "acceptedAt": "2026-04-03T00:18:28.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6093,7 +6099,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-03-06",
           "reportDate": "2026-03-04",
-          "acceptedAt": "2026-03-06T22:21:44.000Z",
+          "acceptedAt": "2026-03-07T03:21:44.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6107,7 +6113,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-02-13",
           "reportDate": "2026-02-13",
-          "acceptedAt": "2026-02-13T21:16:46.000Z",
+          "acceptedAt": "2026-02-14T02:16:46.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6122,7 +6128,7 @@
           "title": "Alphabet · 10-K · 10-K",
           "publishedAt": "2026-02-05",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-02-05T02:56:03.000Z",
+          "acceptedAt": "2026-02-05T07:56:03.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6134,7 +6140,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-02-04",
           "reportDate": "2026-02-04",
-          "acceptedAt": "2026-02-04T21:01:37.000Z",
+          "acceptedAt": "2026-02-05T02:01:37.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6149,7 +6155,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-11-06",
           "reportDate": "2025-11-06",
-          "acceptedAt": "2025-11-06T21:47:26.000Z",
+          "acceptedAt": "2025-11-07T02:47:26.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6164,7 +6170,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-10-30",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-10-30T01:55:01.000Z",
+          "acceptedAt": "2025-10-30T05:55:01.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000091/0001652044-25-000091-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6176,7 +6182,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-29T20:01:48.000Z",
+          "acceptedAt": "2025-10-30T00:01:48.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6191,7 +6197,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-09-05",
           "reportDate": "2025-09-05",
-          "acceptedAt": "2025-09-05T20:53:32.000Z",
+          "acceptedAt": "2025-09-06T00:53:32.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6205,7 +6211,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-09-03",
           "reportDate": "2025-09-02",
-          "acceptedAt": "2025-09-03T20:30:34.000Z",
+          "acceptedAt": "2025-09-04T00:30:34.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6219,7 +6225,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-07-24",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-07-23T23:44:01.000Z",
+          "acceptedAt": "2025-07-24T03:44:01.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000062/0001652044-25-000062-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6231,7 +6237,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-07-23",
           "reportDate": "2025-07-23",
-          "acceptedAt": "2025-07-23T20:01:33.000Z",
+          "acceptedAt": "2025-07-24T00:01:33.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6247,7 +6253,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-07-18",
           "reportDate": "2025-07-08",
-          "acceptedAt": "2025-07-18T20:16:46.000Z",
+          "acceptedAt": "2025-07-19T00:16:46.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6262,7 +6268,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-06-12",
           "reportDate": "2025-06-06",
-          "acceptedAt": "2025-06-12T20:23:59.000Z",
+          "acceptedAt": "2025-06-13T00:23:59.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -6276,7 +6282,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-05-06",
           "reportDate": "2025-05-06",
-          "acceptedAt": "2025-05-06T20:50:04.000Z",
+          "acceptedAt": "2025-05-07T00:50:04.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6291,7 +6297,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-05-01",
           "reportDate": "2025-05-01",
-          "acceptedAt": "2025-05-01T20:28:02.000Z",
+          "acceptedAt": "2025-05-02T00:28:02.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6306,7 +6312,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-04-25",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-04-25T01:05:29.000Z",
+          "acceptedAt": "2025-04-25T05:05:29.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000043/0001652044-25-000043-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6318,7 +6324,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-04-24",
           "reportDate": "2025-04-23",
-          "acceptedAt": "2025-04-24T20:01:26.000Z",
+          "acceptedAt": "2025-04-25T00:01:26.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6334,7 +6340,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-04-18",
           "reportDate": "2025-04-17",
-          "acceptedAt": "2025-04-17T21:49:33.000Z",
+          "acceptedAt": "2025-04-18T01:49:33.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6348,7 +6354,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-03-18",
           "reportDate": "2025-03-18",
-          "acceptedAt": "2025-03-18T12:43:32.000Z",
+          "acceptedAt": "2025-03-18T16:43:32.000Z",
           "filingItems": [
             "7.01",
             "8.01"
@@ -6363,7 +6369,7 @@
           "title": "Alphabet · 10-K · 10-K",
           "publishedAt": "2025-02-05",
           "reportDate": "2024-12-31",
-          "acceptedAt": "2025-02-05T01:41:40.000Z",
+          "acceptedAt": "2025-02-05T06:41:40.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/0001652044-25-000014-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6375,7 +6381,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-02-04",
           "reportDate": "2025-02-04",
-          "acceptedAt": "2025-02-04T21:01:27.000Z",
+          "acceptedAt": "2025-02-05T02:01:27.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6391,7 +6397,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2024-10-30",
           "reportDate": "2024-09-30",
-          "acceptedAt": "2024-10-29T23:33:10.000Z",
+          "acceptedAt": "2024-10-30T03:33:10.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000118/0001652044-24-000118-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6403,7 +6409,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-10-29",
           "reportDate": "2024-10-29",
-          "acceptedAt": "2024-10-29T20:01:46.000Z",
+          "acceptedAt": "2024-10-30T00:01:46.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6419,7 +6425,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-10-17",
           "reportDate": "2024-10-17",
-          "acceptedAt": "2024-10-17T18:20:32.000Z",
+          "acceptedAt": "2024-10-17T22:20:32.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6433,7 +6439,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-09-24",
           "reportDate": "2024-09-24",
-          "acceptedAt": "2024-09-24T12:31:01.000Z",
+          "acceptedAt": "2024-09-24T16:31:01.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6448,7 +6454,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-08-06",
           "reportDate": "2024-08-05",
-          "acceptedAt": "2024-08-06T00:08:50.000Z",
+          "acceptedAt": "2024-08-06T04:08:50.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6462,7 +6468,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2024-07-24",
           "reportDate": "2024-06-30",
-          "acceptedAt": "2024-07-23T23:12:07.000Z",
+          "acceptedAt": "2024-07-24T03:12:07.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/0001652044-24-000079-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6526,6 +6532,118 @@
     }
   },
   "events": [
+    {
+      "id": "eceece90489f1c481637ae38",
+      "sourceId": "bmw-news",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "BMW",
+      "kind": "new-link",
+      "title": "BMW Group begins series production of Gen6 high-voltage batteries in Shenyang",
+      "url": "https://www.press.bmwgroup.com/global/article/detail/T0461769EN/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7dd1e36c8286d9345b2d8d43",
+      "sourceId": "meta-news",
+      "themes": [
+        "ai-glasses"
+      ],
+      "owner": "Meta",
+      "kind": "new-link",
+      "title": "Meta, Milan’s Pinacoteca di Brera, and EssilorLuxottica Expand Access to Art Through AI Glasses",
+      "url": "https://about.fb.com/news/2026/10/meta-milans-pinacoteca-di-brera-and-essilorluxottica-expand-access-to-art-through-ai-glasses/",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-14T16:00:57.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dd4785a3025e1511628c2cec",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Is AI eroding PhD students’ critical thinking and analysis skills?",
+      "url": "https://www.nature.com/articles/d41586-026-03178-w",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8ddf05b67a95246a7f6efd17",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "World’s timekeepers upend how they adjust time to avoid catastrophic ‘negative second’",
+      "url": "https://www.nature.com/articles/d41586-026-03329-z",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "68567fe2f02b3274b1e2b33f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Orangutan mothers arrange play dates for their babies",
+      "url": "https://www.nature.com/articles/d41586-026-03238-1",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e9fd19133ab0b49db8c6c80a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nearly half of reef-building corals face elevated relative risk of extinction",
+      "url": "https://www.nature.com/articles/s41586-026-11263-3",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "493ea7a76a759abb02d05935",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Give me the good news: four science stories to brighten your day",
+      "url": "https://www.nature.com/articles/d41586-026-03152-6",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "049aa3119d077f667e762ebb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Margaret Hamilton obituary: computer scientist who pioneered software engineering and helped us get to the Moon",
+      "url": "https://www.nature.com/articles/d41586-026-03233-6",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a17ef7c16375680b909e9992",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: China’s extraordinary rise in science",
+      "url": "https://www.nature.com/articles/d41586-026-03322-6",
+      "detectedAt": "2026-10-16T09:16:01.839Z",
+      "publishedAt": "2026-10-14",
+      "verification": "unreviewed"
+    },
     {
       "id": "9d7c24d854417e1ef6e4d652",
       "sourceId": "fcc-releases",
