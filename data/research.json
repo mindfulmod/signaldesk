@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "f3deaf81-dec1-4ada-8648-c70b1353d8ce",
-  "generatedAt": "2026-10-16T14:59:19.335Z",
-  "sourceCheckedAt": "2026-10-16T09:16:01.839Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38920185727",
+  "collectionId": "469b6c58-8b7f-48ea-a016-e2deec51f108",
+  "generatedAt": "2026-10-16T19:41:39.139Z",
+  "sourceCheckedAt": "2026-10-16T19:41:39.139Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/38956754805",
   "documents": [
     {
       "id": "4b7a2d0f3e480f43607300f1",
@@ -30475,8 +30475,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-316073"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -32222,8 +32222,8 @@
         "form": "8-K",
         "accession": "0001104659-26-107256"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -33736,8 +33736,8 @@
         "form": "6-K",
         "accession": "0001193125-26-413029"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -35178,7 +35178,7 @@
             "form": "10-Q",
             "tag": "EntityCommonStockSharesOutstanding",
             "accession": "0001283699-25-000117",
-            "stale": false,
+            "stale": true,
             "context": "Share class not established; not a company total",
             "shareClass": null,
             "verified": false,
@@ -35599,8 +35599,8 @@
         "form": "8-K",
         "accession": "0001193125-26-381901"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -37449,8 +37449,8 @@
         "form": "8-K",
         "accession": "0001493152-26-044647"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -38930,8 +38930,8 @@
         "form": "10-Q",
         "accession": "0001628280-26-050705"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -40860,8 +40860,8 @@
         "form": "8-K",
         "accession": "0001193125-26-380280"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -42790,8 +42790,8 @@
         "form": "8-K",
         "accession": "0001193125-26-342390"
       },
-      "factsAttemptAt": "2026-10-09T15:18:03.534Z",
-      "factsCheckedAt": "2026-10-09T15:18:03.534Z",
+      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
+      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
       "quoteAttemptAt": "2026-10-16T14:59:19.335Z",
@@ -42913,7 +42913,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-16T14:59:19.335Z",
+    "generatedAt": "2026-10-16T19:41:39.139Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
