@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T19:41:39.139Z",
+  "generatedAt": "2026-10-17T08:46:58.836Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-16T19:41:39.139Z",
-      "nextAttemptAt": "2026-10-17T01:41:39.139Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "nextAttemptAt": "2026-10-17T14:46:58.836Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 17
+      "failureStreak": 18
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,18 +200,18 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-16T09:16:01.839Z",
+      "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "82c50a396d8bcbd796f2b880b39af98698d700657a25cc4b43fecf65a5e2da91",
+      "fingerprint": "784280c1053ca274ebf85c40ef572c90580099cdf3bee133996f092a12f0f722",
       "items": [
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china",
-          "title": "24.09.2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
+          "title": "Thu Sep 24 12:00:00 CEST 2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
         },
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0461769EN/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang",
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
+      "etag": "W/\"29b79-e9oEaNFWVgsO43A9DIi8kzC27RA\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -322,8 +322,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-13T12:08:25.253Z",
       "nextAttemptAt": null,
@@ -365,23 +365,32 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"0a072518724a484dbfcbec4d0b1fa269\"",
-      "lastModified": "Wed, 14 Oct 2026 22:14:01 GMT"
+      "etag": "W/\"9cfcb9e42f317b0c0bb9224df533f4e9\"",
+      "lastModified": "Fri, 16 Oct 2026 21:42:46 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "d62de9ae16c954535bb17619e43244f9288251e813a9dee0f9a4d9cfeae36981",
+      "fingerprint": "29858dab9d23f91f787d60c1521645399588785aa8f38c34ad710c3d2491c335",
       "items": [
+        {
+          "url": "https://waymo.com/blog/2026/10/waymo-in-toronto",
+          "title": "Read more: Hello Toronto! Waymo is En Route",
+          "publishedAt": "2026-10-16",
+          "announcementAt": "2026-10-16",
+          "excerpt": "Waymo is officially heading to Canada! We’re laying the groundwork for our fully autonomous ride-hailing service in Toronto, investing in local facilities and jobs, with the goal of welcoming our first riders in 2028.",
+          "researchUrl": null,
+          "metadataCheckedAt": "2026-10-17T08:46:58.836Z"
+        },
         {
           "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
           "title": "Read more: Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion",
@@ -399,27 +408,18 @@
           "excerpt": "Alcohol impairment remains a massive, critical crisis on public roads, directly contributing to over 30% of all traffic deaths in the U.S. Eliminating it is a mission we proudly support alongside long-standing partners like Mothers Against Drunk Driving (MADD). But our latest peer-reviewed research highlights a second, equally sobering truth that we cannot ignore: traffic fatalities rarely result ",
           "researchUrl": null,
           "metadataCheckedAt": "2026-10-09T15:18:03.534Z"
-        },
-        {
-          "url": "https://waymo.com/blog/2026/10/incident-management-exercises",
-          "title": "Read more: Preparing for the Unexpected: A New Framework for AV Incident Management Exercises",
-          "publishedAt": "2026-10-07",
-          "announcementAt": "2026-10-07",
-          "excerpt": "Every driver — human or autonomous — can encounter the unexpected. The best time to work out how to respond to an emergency is before it happens.",
-          "researchUrl": "https://arxiv.org/abs/2609.04777",
-          "metadataCheckedAt": "2026-10-09T15:18:03.534Z",
-          "researchPublishedAt": "2026-09-04T00:00:00.000Z"
         }
       ],
       "seenLinks": [
         "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
         "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
-        "https://waymo.com/blog/2026/10/incident-management-exercises"
+        "https://waymo.com/blog/2026/10/incident-management-exercises",
+        "https://waymo.com/blog/2026/10/waymo-in-toronto"
       ],
       "matchedItems": 3,
       "extractedEntries": 3,
-      "newestPublicationAt": "2026-10-08",
-      "excerpt": "Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion Today, Waymo closed a $5 billion term loan, marking our first debt financing and an important step in our evolution into a scaling commercial enterprise. Steve Fieler, ",
+      "newestPublicationAt": "2026-10-16",
+      "excerpt": "Hello Toronto! Waymo is En Route Waymo is officially heading to Canada! We’re laying the groundwork for our fully autonomous ride-hailing service in Toronto, investing in local facilities and jobs, with the goal of welcoming our first rider",
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
@@ -433,23 +433,38 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-16T09:16:01.839Z",
+      "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "items": [],
+      "fingerprint": "8e8e3b4f96c8900f3e57ce9b1259af73535319daef1908d84dbbbf753ba69d58",
+      "items": [
+        {
+          "url": "https://www.fcc.gov/edoc/425903",
+          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/425904",
+          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+          "excerpt": ".",
+          "publishedAt": null
+        }
+      ],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
         "https://www.fcc.gov/edoc/425844",
-        "https://www.fcc.gov/edoc/425843"
+        "https://www.fcc.gov/edoc/425843",
+        "https://www.fcc.gov/edoc/425903",
+        "https://www.fcc.gov/edoc/425904"
       ],
-      "matchedItems": 0,
-      "extractedEntries": 8,
+      "matchedItems": 2,
+      "extractedEntries": 15,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -465,8 +480,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-14T09:42:19.686Z",
       "nextAttemptAt": null,
@@ -592,23 +607,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792133186-gzip\"",
-      "lastModified": "Fri, 16 Oct 2026 06:46:26 GMT"
+      "etag": "\"1792220369-gzip\"",
+      "lastModified": "Sat, 17 Oct 2026 06:59:29 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-15T09:23:36.337Z",
+      "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "fbca230bc52d267424e4b1afbb1a0265634a6af4d75aa345341451d8574835f1",
+      "fingerprint": "69e90afcfa1dd5b803620702fbb776ce744f628d3677f4213554fa28d466c48f",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
+          "title": "Fostering community amid Kendall Square’s innovation",
+          "excerpt": "The 18th annual Kendall Square Association Annual Meeting explored how new technologies could be a force for shared prosperity in society.",
+          "publishedAt": "2026-10-16T16:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
           "title": "Researchers improve weather forecasts looking two to six weeks out",
@@ -902,12 +923,6 @@
           "title": "New method could increase LLM training efficiency",
           "excerpt": "By leveraging idle computing time, researchers can double the speed of model training while preserving accuracy.",
           "publishedAt": "2026-02-26T05:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
-          "title": "Electrifying boilers to decarbonize industry",
-          "excerpt": "AtmosZero, co-founded by Addison Stark SM ’10, PhD ’14, developed a modular heat pump to electrify the centuries-old steam boiler.",
-          "publishedAt": "2026-01-21T05:00:00.000Z"
         }
       ],
       "seenLinks": [
@@ -961,34 +976,77 @@
         "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
         "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
         "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
-        "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014"
+        "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+        "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016"
       ],
       "matchedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-10-14T15:00:00.000Z",
+      "newestPublicationAt": "2026-10-16T16:00:00.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792141712\"",
-      "lastModified": "Fri, 16 Oct 2026 09:08:32 GMT"
+      "etag": "\"1792226356\"",
+      "lastModified": "Sat, 17 Oct 2026 08:39:16 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-16T09:16:01.839Z",
+      "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "d9670dbc084620b417a751620e84dd8e5db8f8ed65fb99626cb904acaacf399d",
+      "fingerprint": "7f9ce27e94707328311a23261cd62888736433fadc85cb1e24b7fca6da66fcfa",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03341-3",
+          "title": "Briefing Chat: An invisible tattoo that appears under UV light – and then disappears",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03112-0",
+          "title": "The pianist who never played",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03308-4",
+          "title": "IceCube just won a Nobel prize. Protect astroparticle physics projects with the same potential",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03303-9",
+          "title": "Memory stays strong in old age when this brain enzyme is active",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03195-9",
+          "title": "Unprecedented atlas explores mitochondria across the tree of life",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03253-2",
+          "title": "PhD students who write dissertation with AI less likely to stay in academia",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03338-y",
+          "title": "History’s long-secret codes are being cracked by amateurs using AI",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03178-w",
           "title": "Is AI eroding PhD students’ critical thinking and analysis skills?",
@@ -1004,6 +1062,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03238-1",
           "title": "Orangutan mothers arrange play dates for their babies",
+          "excerpt": "",
+          "publishedAt": "2026-10-15"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03336-0",
+          "title": "Daily briefing: Bleached corals revived by healthy neighbour’s touch",
           "excerpt": "",
           "publishedAt": "2026-10-15"
         },
@@ -1390,54 +1454,6 @@
           "title": "Diversify Nobel-prize nominations before it’s too late",
           "excerpt": "",
           "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03306-6",
-          "title": "Daily briefing: What makes a happy scientist at work?",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03221-w",
-          "title": "Whistleblowing in universities is ‘extraordinarily risky’: stronger protections are needed",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03226-5",
-          "title": "What’s the secret sauce for happy scientists at work? These eight countries offer some clues",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03252-3",
-          "title": "Can GLP-1s heal the brain? Obesity drugs get a makeover for addiction and depression",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03153-5",
-          "title": "Inundated AI conferences impose submissions caps",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02668-1",
-          "title": "Admire another researcher’s work? Tell them about it",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11246-4",
-          "title": "Author Correction: Parkinson’s disease as a somato-cognitive action network disorder",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02715-x",
-          "title": "In the AI era, coding means thinking like a systems architect",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
         }
       ],
       "seenLinks": [
@@ -1606,18 +1622,26 @@
         "https://www.nature.com/articles/s41586-026-11263-3",
         "https://www.nature.com/articles/d41586-026-03152-6",
         "https://www.nature.com/articles/d41586-026-03233-6",
-        "https://www.nature.com/articles/d41586-026-03322-6"
+        "https://www.nature.com/articles/d41586-026-03322-6",
+        "https://www.nature.com/articles/d41586-026-03341-3",
+        "https://www.nature.com/articles/d41586-026-03112-0",
+        "https://www.nature.com/articles/d41586-026-03308-4",
+        "https://www.nature.com/articles/d41586-026-03303-9",
+        "https://www.nature.com/articles/d41586-026-03195-9",
+        "https://www.nature.com/articles/d41586-026-03253-2",
+        "https://www.nature.com/articles/d41586-026-03338-y",
+        "https://www.nature.com/articles/d41586-026-03336-0"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-15",
+      "newestPublicationAt": "2026-10-16",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"3b4cdc27d4baf5a41bc6ddd0c155b6d7\"",
+      "etag": "\"3a06253cc6a89e94add42b3cdbec9da1\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1625,8 +1649,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2252,8 +2276,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2894,8 +2918,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3443,8 +3467,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4082,8 +4106,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4769,8 +4793,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5262,8 +5286,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -5894,8 +5918,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-16T09:16:01.839Z",
-      "lastSuccessAt": "2026-10-16T09:16:01.839Z",
+      "lastAttemptAt": "2026-10-17T08:46:58.836Z",
+      "lastSuccessAt": "2026-10-17T08:46:58.836Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -6532,6 +6556,156 @@
     }
   },
   "events": [
+    {
+      "id": "c56063bbef7d4cb20a103153",
+      "sourceId": "waymo-news",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Waymo",
+      "kind": "new-link",
+      "title": "Read more: Hello Toronto! Waymo is En Route",
+      "url": "https://waymo.com/blog/2026/10/waymo-in-toronto",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ced982bada61ef6a996e29de",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+      "url": "https://www.fcc.gov/edoc/425903",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a113d7b34cd5317b3a6506c9",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+      "url": "https://www.fcc.gov/edoc/425904",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8db0d5c3c64411785a4efda3",
+      "sourceId": "mit-energy",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "Fostering community amid Kendall Square’s innovation",
+      "url": "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16T16:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ec19054436d38a7d25abe390",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Briefing Chat: An invisible tattoo that appears under UV light – and then disappears",
+      "url": "https://www.nature.com/articles/d41586-026-03341-3",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a081d975e4960842d0a23da0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The pianist who never played",
+      "url": "https://www.nature.com/articles/d41586-026-03112-0",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ef8198f3aaeba95bdbc9dad9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "IceCube just won a Nobel prize. Protect astroparticle physics projects with the same potential",
+      "url": "https://www.nature.com/articles/d41586-026-03308-4",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "71865a1436cb2b6af1f6980c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Memory stays strong in old age when this brain enzyme is active",
+      "url": "https://www.nature.com/articles/d41586-026-03303-9",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cba773df5f63721e34c24d9f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Unprecedented atlas explores mitochondria across the tree of life",
+      "url": "https://www.nature.com/articles/d41586-026-03195-9",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3ebc70b26c738f57b300e918",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "PhD students who write dissertation with AI less likely to stay in academia",
+      "url": "https://www.nature.com/articles/d41586-026-03253-2",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "67a37bf76a5fa740e1e89dac",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "History’s long-secret codes are being cracked by amateurs using AI",
+      "url": "https://www.nature.com/articles/d41586-026-03338-y",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "eafbbf39a003c61655c0072c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: Bleached corals revived by healthy neighbour’s touch",
+      "url": "https://www.nature.com/articles/d41586-026-03336-0",
+      "detectedAt": "2026-10-17T08:46:58.836Z",
+      "publishedAt": "2026-10-15",
+      "verification": "unreviewed"
+    },
     {
       "id": "eceece90489f1c481637ae38",
       "sourceId": "bmw-news",
