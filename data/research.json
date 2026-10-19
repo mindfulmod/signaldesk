@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "4a074827-f83c-49d7-bbaf-0da8d3ee1213",
-  "generatedAt": "2026-10-18T18:53:30.924Z",
+  "collectionId": "e53f9ce9-8755-4919-9108-d61efcb18dbd",
+  "generatedAt": "2026-10-19T00:27:07.131Z",
   "sourceCheckedAt": "2026-10-18T18:53:30.924Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39156219355",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39180809280",
   "documents": [
     {
       "id": "050a94d122dfc2b8ffd0cc75",
@@ -43148,7 +43148,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-18T18:53:30.924Z",
+    "generatedAt": "2026-10-19T00:27:07.131Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -43249,6 +43249,15 @@
           "632f25c290d145e71630c9c1"
         ],
         "documentCount": 239
+      },
+      {
+        "date": "2026-10-19",
+        "topics": [
+          "b9d1dcf6c13212a659fc8340",
+          "70511d3302d1f485eb6285b3",
+          "632f25c290d145e71630c9c1"
+        ],
+        "documentCount": 239
       }
     ],
     "candidates": [
@@ -43270,7 +43279,7 @@
         ],
         "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -43290,7 +43299,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -43310,7 +43319,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       }
     ],
     "archive": [
@@ -43332,7 +43341,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       },
       {
         "id": "632f25c290d145e71630c9c1",
@@ -43352,7 +43361,7 @@
         ],
         "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       },
       {
         "id": "b9d1dcf6c13212a659fc8340",
@@ -43372,7 +43381,7 @@
         ],
         "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-18"
+        "lastSeenAt": "2026-10-19"
       },
       {
         "id": "adb8682d9498bc8bcbb4e1f3",
