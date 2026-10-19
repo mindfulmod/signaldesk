@@ -1,10 +1,41 @@
 {
   "schemaVersion": 1,
-  "collectionId": "e53f9ce9-8755-4919-9108-d61efcb18dbd",
-  "generatedAt": "2026-10-19T00:27:07.131Z",
-  "sourceCheckedAt": "2026-10-18T18:53:30.924Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39180809280",
+  "collectionId": "7c8e5ec8-cad9-4163-b7fd-502cb68e8035",
+  "generatedAt": "2026-10-19T10:15:08.331Z",
+  "sourceCheckedAt": "2026-10-19T10:15:08.331Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39236066506",
   "documents": [
+    {
+      "id": "68f9235bbea9c70cba2fe6da",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03309-3",
+      "title": "How to compare and strengthen research systems",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "6d860e1a83cc21bcaaf00c97",
+      "originalPublishedAt": "2026-10-19",
+      "firstSeenAt": "2026-10-19T10:15:08.331Z",
+      "announcementAt": "2026-10-19",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-19",
+      "detectedAt": "2026-10-19T10:15:08.331Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
     {
       "id": "050a94d122dfc2b8ffd0cc75",
       "sourceId": "fcc-releases",
@@ -22974,29 +23005,6 @@
         "satellite-phones"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "7e40e020595628020bf28110",
-      "sourceId": "sec-meta",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-      "title": "Meta Platforms · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Meta Platforms",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-07-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-glasses"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -29684,6 +29692,15 @@
       "versions": {
         "230ceb686e0abb2cf7edea35": "2026-10-17T08:46:58.836Z"
       }
+    },
+    "6d860e1a83cc21bcaaf00c97": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-19",
+      "firstSeenAt": "2026-10-19T10:15:08.331Z",
+      "latestId": "68f9235bbea9c70cba2fe6da",
+      "versions": {
+        "68f9235bbea9c70cba2fe6da": "2026-10-19T10:15:08.331Z"
+      }
     }
   },
   "reviews": [],
@@ -30714,7 +30731,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 4.01,
         "currency": "USD",
@@ -30724,7 +30741,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -32461,7 +32478,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 2.01,
         "currency": "USD",
@@ -32471,7 +32488,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -33975,7 +33992,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 194.61,
         "currency": "USD",
@@ -33985,7 +34002,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35838,7 +35855,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 159.1,
         "currency": "USD",
@@ -35848,7 +35865,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -37688,7 +37705,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001493152-26-044647",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 40.66,
         "currency": "USD",
@@ -37698,7 +37715,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39169,7 +39186,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 709.325,
         "currency": "USD",
@@ -39179,7 +39196,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41099,7 +41116,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 529.05,
         "currency": "USD",
@@ -41109,7 +41126,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43029,7 +43046,7 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-18T14:08:41.141Z",
+      "quoteAttemptAt": "2026-10-19T10:15:08.331Z",
       "quote": {
         "price": 340.59,
         "currency": "USD",
@@ -43039,7 +43056,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-18T14:08:41.141Z",
+      "quoteCheckedAt": "2026-10-19T10:15:08.331Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43148,7 +43165,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-19T00:27:07.131Z",
+    "generatedAt": "2026-10-19T10:15:08.331Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -43257,7 +43274,7 @@
           "70511d3302d1f485eb6285b3",
           "632f25c290d145e71630c9c1"
         ],
-        "documentCount": 239
+        "documentCount": 240
       }
     ],
     "candidates": [
@@ -43464,8 +43481,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 239,
-    "comparableDays": 10,
+    "datedDocuments": 240,
+    "comparableDays": 11,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
