@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T01:14:21.066Z",
+  "generatedAt": "2026-10-20T09:36:48.568Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-20T01:14:21.066Z",
-      "nextAttemptAt": "2026-10-20T07:14:21.066Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "nextAttemptAt": "2026-10-20T15:36:48.568Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 24
+      "failureStreak": 25
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,18 +200,18 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-19T10:15:08.331Z",
+      "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "784280c1053ca274ebf85c40ef572c90580099cdf3bee133996f092a12f0f722",
+      "fingerprint": "82c50a396d8bcbd796f2b880b39af98698d700657a25cc4b43fecf65a5e2da91",
       "items": [
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0460950EN/bmw-group-receives-prestigious-technology-award-for-gen6-high-voltage-battery-in-china",
-          "title": "Thu Sep 24 12:00:00 CEST 2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
+          "title": "24.09.2026 Press Release BMW Group receives prestigious technology award for Gen6 high-voltage battery in China"
         },
         {
           "url": "https://www.press.bmwgroup.com/global/article/detail/T0461769EN/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang",
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b94-0RKq6k/bFn3E2CJ8sksfBfLPdTw\"",
+      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -322,15 +322,27 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-13T12:08:25.253Z",
+      "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "c5b14e49302792953da51a8fe534d431fb3dfc94d68c0b930f6dedb05cea23b5",
+      "fingerprint": "083b2e49cb355e4df0dd34f5ede32bdce279984f2d6358b7484cd310384699b5",
       "items": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+          "title": "Advancing digital sovereignty with greater control and choice",
+          "excerpt": "Across my conversations with leaders in government, critical infrastructure and regulated industries, one priority consistently rises to the top: putting technology to work on their most important systems while maintaining the control those",
+          "publishedAt": "2026-10-20T08:20:02.000Z"
+        },
+        {
+          "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+          "title": "Securing the agentic insider",
+          "excerpt": "In the last few months, concerns have arisen about AI safety as a growing number of incidents were publicly disclosed. These incidents exposed how powerful models have become and how they represent a significant threat if not handled well. ",
+          "publishedAt": "2026-10-19T13:00:02.000Z"
+        },
         {
           "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
           "title": "Introducing the new Copilot with Home, Code and Autopilot",
@@ -354,27 +366,29 @@
         "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
         "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
         "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
-        "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/"
+        "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+        "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+        "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/"
       ],
-      "matchedItems": 3,
+      "matchedItems": 5,
       "extractedEntries": 10,
-      "newestPublicationAt": "2026-09-25T12:03:50.000Z",
+      "newestPublicationAt": "2026-10-20T08:20:02.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"9cfcb9e42f317b0c0bb9224df533f4e9\"",
-      "lastModified": "Fri, 16 Oct 2026 21:42:46 GMT"
+      "etag": "W/\"a2d275ae4b26c07fd1440141c19e6f4f\"",
+      "lastModified": "Tue, 20 Oct 2026 08:52:30 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
@@ -433,28 +447,15 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-17T08:46:58.836Z",
+      "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "8e8e3b4f96c8900f3e57ce9b1259af73535319daef1908d84dbbbf753ba69d58",
-      "items": [
-        {
-          "url": "https://www.fcc.gov/edoc/425903",
-          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/425904",
-          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-          "excerpt": ".",
-          "publishedAt": null
-        }
-      ],
+      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "items": [],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -463,8 +464,8 @@
         "https://www.fcc.gov/edoc/425903",
         "https://www.fcc.gov/edoc/425904"
       ],
-      "matchedItems": 2,
-      "extractedEntries": 15,
+      "matchedItems": 0,
+      "extractedEntries": 9,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -480,14 +481,14 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-14T09:42:19.686Z",
+      "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "853917e87a0fdf0c4b07097edae8e6425a1f6b77defc34ac7c15ff0bcf5da8be",
+      "fingerprint": "afe93df61d10c7a225b9198c3b39d8a55addbc2a9e2219e9b7186e2958a7908f",
       "items": [
         {
           "url": "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
@@ -504,7 +505,7 @@
         {
           "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
           "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
-          "excerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age and in \" NSF leadership in a new golden age of science",
+          "excerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age...",
           "publishedAt": "2026-10-08T13:45:03.000Z"
         },
         {
@@ -607,16 +608,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792395746-gzip\"",
-      "lastModified": "Mon, 19 Oct 2026 07:42:26 GMT"
+      "etag": "\"1792479388-gzip\"",
+      "lastModified": "Tue, 20 Oct 2026 06:56:28 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
@@ -988,21 +989,21 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792403513\"",
-      "lastModified": "Mon, 19 Oct 2026 09:51:53 GMT"
+      "etag": "\"1792488115\"",
+      "lastModified": "Tue, 20 Oct 2026 09:21:55 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
+      "status": "error",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
       "lastSuccessAt": "2026-10-19T10:15:08.331Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-19T10:15:08.331Z",
-      "nextAttemptAt": null,
-      "failureStreak": 0,
-      "error": null,
+      "nextAttemptAt": "2026-10-20T10:36:48.568Z",
+      "failureStreak": 1,
+      "error": "Source or redirect host is not allowlisted",
       "fingerprint": "a7776e185aa5292f1b4e2932a54bedd3efd649f552098688cfa61ac109a874fe",
       "items": [
         {
@@ -1650,8 +1651,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2277,8 +2278,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2919,8 +2920,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3468,8 +3469,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4107,21 +4108,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "6b9e64295ded6fe8ceedf20d119ec358e59c466218b0aba3030a6967b46672fa",
+      "fingerprint": "03eb94a0da6439d016d643458a535b9e9b801dbb114c78ed367a12e7cac2bbb5",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226044647/form8-k.htm",
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-09-28",
           "reportDate": "2026-09-25",
-          "acceptedAt": "2026-09-28T21:20:14.000Z",
+          "acceptedAt": "2026-09-29T01:20:14.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -4136,7 +4137,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-08-10T20:42:31.000Z",
+          "acceptedAt": "2026-08-11T00:42:31.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526342550/0001193125-26-342550-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4148,7 +4149,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-08-10",
-          "acceptedAt": "2026-08-10T20:38:57.000Z",
+          "acceptedAt": "2026-08-11T00:38:57.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4164,7 +4165,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-07-20",
           "reportDate": "2026-07-15",
-          "acceptedAt": "2026-07-20T20:15:31.000Z",
+          "acceptedAt": "2026-07-21T00:15:31.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4182,7 +4183,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-07-15",
           "reportDate": "2026-07-15",
-          "acceptedAt": "2026-07-15T20:18:33.000Z",
+          "acceptedAt": "2026-07-16T00:18:33.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4199,7 +4200,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-06-15",
           "reportDate": "2026-06-12",
-          "acceptedAt": "2026-06-12T22:07:32.000Z",
+          "acceptedAt": "2026-06-13T02:07:32.000Z",
           "filingItems": [
             "5.07",
             "9.01"
@@ -4214,7 +4215,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-05-11T20:40:22.000Z",
+          "acceptedAt": "2026-05-12T00:40:22.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526216950/0001193125-26-216950-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4226,7 +4227,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-05-11",
-          "acceptedAt": "2026-05-11T20:38:20.000Z",
+          "acceptedAt": "2026-05-12T00:38:20.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4242,7 +4243,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-04-20",
           "reportDate": "2026-04-19",
-          "acceptedAt": "2026-04-20T12:30:23.000Z",
+          "acceptedAt": "2026-04-20T16:30:23.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4258,7 +4259,7 @@
           "title": "AST SpaceMobile · 10-K · 10-K",
           "publishedAt": "2026-03-02",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-03-02T21:39:58.000Z",
+          "acceptedAt": "2026-03-03T02:39:58.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000178031226000006/0001780312-26-000006-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4270,7 +4271,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-03-02",
           "reportDate": "2026-03-02",
-          "acceptedAt": "2026-03-02T21:37:54.000Z",
+          "acceptedAt": "2026-03-03T02:37:54.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4286,7 +4287,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-23",
           "reportDate": "2026-02-20",
-          "acceptedAt": "2026-02-23T22:03:19.000Z",
+          "acceptedAt": "2026-02-24T03:03:19.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -4300,7 +4301,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-20",
           "reportDate": "2026-02-20",
-          "acceptedAt": "2026-02-20T22:13:56.000Z",
+          "acceptedAt": "2026-02-21T03:13:56.000Z",
           "filingItems": [
             "2.03",
             "3.02",
@@ -4317,7 +4318,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-17",
           "reportDate": "2026-02-12",
-          "acceptedAt": "2026-02-17T21:18:39.000Z",
+          "acceptedAt": "2026-02-18T02:18:39.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4335,7 +4336,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-11",
           "reportDate": "2026-02-11",
-          "acceptedAt": "2026-02-11T22:08:27.000Z",
+          "acceptedAt": "2026-02-12T03:08:27.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4352,7 +4353,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-01-16",
           "reportDate": "2026-01-13",
-          "acceptedAt": "2026-01-16T22:00:49.000Z",
+          "acceptedAt": "2026-01-17T03:00:49.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -4367,7 +4368,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-21",
           "reportDate": "2025-11-21",
-          "acceptedAt": "2025-11-21T21:12:24.000Z",
+          "acceptedAt": "2025-11-22T02:12:24.000Z",
           "filingItems": [
             "5.02",
             "5.07",
@@ -4383,7 +4384,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2025-11-10",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-11-10T21:32:53.000Z",
+          "acceptedAt": "2025-11-11T02:32:53.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312525274391/0001193125-25-274391-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4395,7 +4396,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-10",
           "reportDate": "2025-11-10",
-          "acceptedAt": "2025-11-10T21:27:55.000Z",
+          "acceptedAt": "2025-11-11T02:27:55.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4411,7 +4412,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-03",
           "reportDate": "2025-10-31",
-          "acceptedAt": "2025-11-03T22:00:28.000Z",
+          "acceptedAt": "2025-11-04T03:00:28.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4427,7 +4428,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-29T21:19:36.000Z",
+          "acceptedAt": "2025-10-30T01:19:36.000Z",
           "filingItems": [
             "2.03",
             "3.02",
@@ -4444,7 +4445,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-29T13:29:18.000Z",
+          "acceptedAt": "2025-10-29T17:29:18.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4460,7 +4461,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-24",
           "reportDate": "2025-10-21",
-          "acceptedAt": "2025-10-24T20:10:34.000Z",
+          "acceptedAt": "2025-10-25T00:10:34.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4478,7 +4479,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-21",
           "reportDate": "2025-10-21",
-          "acceptedAt": "2025-10-21T20:20:12.000Z",
+          "acceptedAt": "2025-10-22T00:20:12.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -4494,7 +4495,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-07",
           "reportDate": "2025-10-07",
-          "acceptedAt": "2025-10-07T12:28:03.000Z",
+          "acceptedAt": "2025-10-07T16:28:03.000Z",
           "filingItems": [
             "1.01",
             "9.01"
@@ -4509,7 +4510,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-07",
           "reportDate": "2025-10-06",
-          "acceptedAt": "2025-10-06T22:00:44.000Z",
+          "acceptedAt": "2025-10-07T02:00:44.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -4523,7 +4524,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-09-26",
           "reportDate": "2025-09-25",
-          "acceptedAt": "2025-09-26T12:30:44.000Z",
+          "acceptedAt": "2025-09-26T16:30:44.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4538,7 +4539,7 @@
           "title": "AST SpaceMobile · 10-Q/A · 10-Q/A",
           "publishedAt": "2025-09-12",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-09-12T21:14:23.000Z",
+          "acceptedAt": "2025-09-13T01:14:23.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000095017025114605/0000950170-25-114605-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4550,7 +4551,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-09-05",
           "reportDate": "2025-09-04",
-          "acceptedAt": "2025-09-05T12:45:21.000Z",
+          "acceptedAt": "2025-09-05T16:45:21.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4566,7 +4567,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2025-08-11",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-08-11T20:52:30.000Z",
+          "acceptedAt": "2025-08-12T00:52:30.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000095017025106627/0000950170-25-106627-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4578,7 +4579,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-08-11",
           "reportDate": "2025-08-11",
-          "acceptedAt": "2025-08-11T20:41:29.000Z",
+          "acceptedAt": "2025-08-12T00:41:29.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4594,7 +4595,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-08-07",
           "reportDate": "2025-08-05",
-          "acceptedAt": "2025-08-07T11:30:53.000Z",
+          "acceptedAt": "2025-08-07T15:30:53.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4610,7 +4611,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-31",
           "reportDate": "2025-07-31",
-          "acceptedAt": "2025-07-31T21:12:30.000Z",
+          "acceptedAt": "2025-08-01T01:12:30.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4625,7 +4626,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-29",
           "reportDate": "2025-07-24",
-          "acceptedAt": "2025-07-29T21:16:09.000Z",
+          "acceptedAt": "2025-07-30T01:16:09.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4643,7 +4644,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-24",
           "reportDate": "2025-07-24",
-          "acceptedAt": "2025-07-24T20:33:41.000Z",
+          "acceptedAt": "2025-07-25T00:33:41.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -4659,7 +4660,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-18",
           "reportDate": "2025-07-15",
-          "acceptedAt": "2025-07-18T12:00:18.000Z",
+          "acceptedAt": "2025-07-18T16:00:18.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4675,7 +4676,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-03",
           "reportDate": "2025-06-27",
-          "acceptedAt": "2025-07-03T19:43:20.000Z",
+          "acceptedAt": "2025-07-03T23:43:20.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4693,7 +4694,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-01",
           "reportDate": "2025-07-01",
-          "acceptedAt": "2025-07-01T21:20:31.000Z",
+          "acceptedAt": "2025-07-02T01:20:31.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4708,7 +4709,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-06-26",
           "reportDate": "2025-06-23",
-          "acceptedAt": "2025-06-26T11:00:58.000Z",
+          "acceptedAt": "2025-06-26T15:00:58.000Z",
           "filingItems": [
             "1.01",
             "8.01",
@@ -4724,7 +4725,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-06-25",
           "reportDate": "2025-06-25",
-          "acceptedAt": "2025-06-25T11:04:31.000Z",
+          "acceptedAt": "2025-06-25T15:04:31.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4778,7 +4779,7 @@
         "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/form8-k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 628,
+      "extractedEntries": 629,
       "newestPublicationAt": "2026-09-28",
       "excerpt": null,
       "publishedAt": null,
@@ -4794,8 +4795,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5271,7 +5272,7 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000065/meta-20240731.htm"
       ],
       "matchedItems": 31,
-      "extractedEntries": 1000,
+      "extractedEntries": 1001,
       "newestPublicationAt": "2026-07-30",
       "excerpt": null,
       "publishedAt": null,
@@ -5287,8 +5288,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -5919,8 +5920,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-19T10:15:08.331Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
+      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -6557,6 +6558,34 @@
     }
   },
   "events": [
+    {
+      "id": "51d9ccbf584f0a71aad04b78",
+      "sourceId": "microsoft-news",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Advancing digital sovereignty with greater control and choice",
+      "url": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+      "detectedAt": "2026-10-20T09:36:48.568Z",
+      "publishedAt": "2026-10-20T08:20:02.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b71c2433d4668c029b8fc730",
+      "sourceId": "microsoft-news",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Securing the agentic insider",
+      "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+      "detectedAt": "2026-10-20T09:36:48.568Z",
+      "publishedAt": "2026-10-19T13:00:02.000Z",
+      "verification": "unreviewed"
+    },
     {
       "id": "502ee0176bcb509ad2664905",
       "sourceId": "nature-research",

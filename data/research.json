@@ -1,10 +1,107 @@
 {
   "schemaVersion": 1,
-  "collectionId": "b92c098e-fc4b-4818-beff-96e7e1433d50",
-  "generatedAt": "2026-10-20T01:14:21.066Z",
-  "sourceCheckedAt": "2026-10-20T01:14:21.066Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39352284757",
+  "collectionId": "a3ac2a3d-fb88-4121-bb41-4aec9718ad92",
+  "generatedAt": "2026-10-20T09:36:48.568Z",
+  "sourceCheckedAt": "2026-10-20T09:36:48.568Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39401914959",
   "documents": [
+    {
+      "id": "b19fd1a8da6128fa6e0a7a2d",
+      "sourceId": "microsoft-news",
+      "url": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+      "title": "Advancing digital sovereignty with greater control and choice",
+      "excerpt": "Across my conversations with leaders in government, critical infrastructure and regulated industries, one priority consistently rises to the top: putting technology to work on their most important systems while maintaining the control those",
+      "owner": "Microsoft",
+      "tier": "company",
+      "storyId": "3a93bb86dce738f57e9f4403",
+      "originalPublishedAt": "2026-10-20T08:20:02.000Z",
+      "firstSeenAt": "2026-10-20T09:36:48.568Z",
+      "announcementAt": "2026-10-20T08:20:02.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "ai-work"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-20T08:20:02.000Z",
+      "detectedAt": "2026-10-20T09:36:48.568Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e3ab33eea4919e00885a22d9",
+      "sourceId": "microsoft-news",
+      "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+      "title": "Securing the agentic insider",
+      "excerpt": "In the last few months, concerns have arisen about AI safety as a growing number of incidents were publicly disclosed. These incidents exposed how powerful models have become and how they represent a significant threat if not handled well. ",
+      "owner": "Microsoft",
+      "tier": "company",
+      "storyId": "1a856cfb834e8733e5dc20c7",
+      "originalPublishedAt": "2026-10-19T13:00:02.000Z",
+      "firstSeenAt": "2026-10-20T09:36:48.568Z",
+      "announcementAt": "2026-10-19T13:00:02.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "ai-work"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-19T13:00:02.000Z",
+      "detectedAt": "2026-10-20T09:36:48.568Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fa3e1f5f5bb1108d8b6c7bc8",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/nsf-lays-foundation-next-generation-technologies-support",
+      "title": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "excerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age...",
+      "owner": "NSF",
+      "tier": "research",
+      "storyId": "eb39f2a95af40a37bfd415cd",
+      "originalPublishedAt": "2026-10-08T13:45:03.000Z",
+      "firstSeenAt": "2026-10-09T11:29:49.615Z",
+      "announcementAt": "2026-10-08T13:45:03.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-08T13:45:03.000Z",
+      "detectedAt": "2026-10-20T09:36:48.568Z",
+      "changeType": "revision",
+      "previousId": "99133b6e8df5efd633dd79b5",
+      "previousExcerpt": "The U.S. National Science Foundation today announced a series of programs and initiatives to support the ambitious vision articulated in the White House report Science: A New Golden Age and in \" NSF leadership in a new golden age of science",
+      "previousTitle": "NSF lays the foundation for the next generation of technologies and support for American talent",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "68f9235bbea9c70cba2fe6da",
       "sourceId": "nature-research",
@@ -22938,73 +23035,6 @@
         "robotaxis"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "7d51e38f4558c145a1f92553",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/d41586-026-02863-0",
-      "title": "The buck stops with me",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "7d569072f642cad23d7f3bd1",
-      "sourceId": "sec-qs",
-      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024116656/qs-20241023.htm",
-      "title": "QuantumScape · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "QuantumScape",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2024-10-23",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "7e2834b6c7308ed595ade387",
-      "sourceId": "sec-asts",
-      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226044647/form8-k.htm",
-      "title": "AST SpaceMobile · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "AST SpaceMobile",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-09-28",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -23104,10 +23134,11 @@
       "sourceId": "nsf-research",
       "originalPublishedAt": "2026-10-08T13:45:03.000Z",
       "firstSeenAt": "2026-10-09T11:29:49.615Z",
-      "latestId": "99133b6e8df5efd633dd79b5",
+      "latestId": "fa3e1f5f5bb1108d8b6c7bc8",
       "versions": {
         "4e4e27c7ac26e21ebb458e8c": "2026-10-09T11:29:49.615Z",
-        "99133b6e8df5efd633dd79b5": "2026-10-14T09:42:19.686Z"
+        "99133b6e8df5efd633dd79b5": "2026-10-14T09:42:19.686Z",
+        "fa3e1f5f5bb1108d8b6c7bc8": "2026-10-20T09:36:48.568Z"
       }
     },
     "79eb8421cce0cbed75f9d8ac": {
@@ -29700,6 +29731,24 @@
       "latestId": "68f9235bbea9c70cba2fe6da",
       "versions": {
         "68f9235bbea9c70cba2fe6da": "2026-10-19T10:15:08.331Z"
+      }
+    },
+    "3a93bb86dce738f57e9f4403": {
+      "sourceId": "microsoft-news",
+      "originalPublishedAt": "2026-10-20T08:20:02.000Z",
+      "firstSeenAt": "2026-10-20T09:36:48.568Z",
+      "latestId": "b19fd1a8da6128fa6e0a7a2d",
+      "versions": {
+        "b19fd1a8da6128fa6e0a7a2d": "2026-10-20T09:36:48.568Z"
+      }
+    },
+    "1a856cfb834e8733e5dc20c7": {
+      "sourceId": "microsoft-news",
+      "originalPublishedAt": "2026-10-19T13:00:02.000Z",
+      "firstSeenAt": "2026-10-20T09:36:48.568Z",
+      "latestId": "e3ab33eea4919e00885a22d9",
+      "versions": {
+        "e3ab33eea4919e00885a22d9": "2026-10-20T09:36:48.568Z"
       }
     }
   },
@@ -37727,7 +37776,7 @@
         "title": "AST SpaceMobile · 8-K · 8-K",
         "publishedAt": "2026-09-28",
         "reportDate": "2026-09-25",
-        "acceptedAt": "2026-09-28T21:20:14.000Z",
+        "acceptedAt": "2026-09-29T01:20:14.000Z",
         "filingItems": [
           "5.02",
           "9.01"
@@ -43237,7 +43286,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-20T01:14:21.066Z",
+    "generatedAt": "2026-10-20T09:36:48.568Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -43341,15 +43390,6 @@
       },
       {
         "date": "2026-10-19",
-        "topics": [
-          "b9d1dcf6c13212a659fc8340",
-          "70511d3302d1f485eb6285b3",
-          "632f25c290d145e71630c9c1"
-        ],
-        "documentCount": 240
-      },
-      {
-        "date": "2026-10-20",
         "topics": [
           "b9d1dcf6c13212a659fc8340",
           "70511d3302d1f485eb6285b3",
@@ -43562,13 +43602,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 240,
-    "comparableDays": 11,
-    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
+    "datedDocuments": 241,
+    "comparableDays": 12,
+    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history. At least one discovery feed is unavailable or overdue; history accumulation is paused."
   },
   "coverage": {
     "totalSources": 22,
-    "readableSources": 19,
+    "readableSources": 18,
     "companies": 8
   }
 }
