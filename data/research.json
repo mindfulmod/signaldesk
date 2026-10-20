@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "422c4bab-f8f8-4f2a-9022-a1b944c85c36",
-  "generatedAt": "2026-10-20T15:21:19.512Z",
-  "sourceCheckedAt": "2026-10-20T15:21:19.512Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39447567455",
+  "collectionId": "b1a10905-e6e3-45e9-a5a9-39216951b49a",
+  "generatedAt": "2026-10-20T20:07:04.915Z",
+  "sourceCheckedAt": "2026-10-20T20:07:04.915Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39489195616",
   "documents": [
     {
       "id": "0f31a35ca48b716ee520464c",
@@ -43797,7 +43797,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-20T15:21:19.512Z",
+    "generatedAt": "2026-10-20T20:07:04.915Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -44123,7 +44123,7 @@
       }
     ],
     "datedDocuments": 264,
-    "comparableDays": 11,
+    "comparableDays": 12,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
