@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T09:36:48.568Z",
+  "generatedAt": "2026-10-20T15:21:19.512Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -996,19 +996,163 @@
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "error",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-19T10:15:08.331Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-20T15:21:19.512Z",
+      "lastSuccessAt": "2026-10-20T15:21:19.512Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-19T10:15:08.331Z",
-      "nextAttemptAt": "2026-10-20T10:36:48.568Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "a7776e185aa5292f1b4e2932a54bedd3efd649f552098688cfa61ac109a874fe",
+      "lastChangedAt": "2026-10-20T15:21:19.512Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "fda3d356aee644514ad44b13a3873c8f457dbf292f2c0eddb1805ff78fe7ffcb",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02975-7",
+          "title": "Is it ‘moon-stroke’, or a chill?",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03353-z",
+          "title": "Bundle water safeguards into critical-mineral licences",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03351-1",
+          "title": "Nobel-prizewinning breakthroughs can emerge from neglected organisms",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03354-y",
+          "title": "Conservation planning should follow animal clocks",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03352-0",
+          "title": "Europe and the rest of the world must come up with an answer to US science strategy",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03062-7",
+          "title": "Butterfly wing patterns make motion hard to read",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03327-1",
+          "title": "Nature ’s job-satisfaction survey highlights the changing geography of science",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03310-w",
+          "title": "Will this sleep-disorder drug be the next big blockbuster?",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03151-7",
+          "title": "China picks first researchers for 15-year mega grants",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03314-6",
+          "title": "Nepal’s disaster is an urgent wake-up call",
+          "excerpt": "",
+          "publishedAt": "2026-10-20"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03317-3",
+          "title": "Toxic chemicals in fentanyl revealed by speedy technique",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03237-2",
+          "title": "Light and mirrors move large quantum computers closer to reality",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03228-3",
+          "title": "Audio long read: How to stay smart in the age of AI — the science of critical thinking",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03345-z",
+          "title": "US government probe into postdoc visas worries scientists",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03265-y",
+          "title": "Microdosing LSD shows some cognitive benefits — but only for women",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03312-8",
+          "title": "How pregnancy reshapes the brain throughout life",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03275-w",
+          "title": "Climate scientists face deluge of public-records requests about fossil-fuel studies",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03315-5",
+          "title": "‘Fiercely stubborn’: the US scientists continuing their research amid funding cuts",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03339-x",
+          "title": "Experienced researchers ‘disrupt’ less than rookie scientists — but their ideas last",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03313-7",
+          "title": "Three reasons why AI is not conscious and perhaps never will be",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11290-0",
+          "title": "Author Correction: Long-read sequencing reveals pre-meiotic gene conversion in sperm",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03309-3",
           "title": "How to compare and strengthen research systems",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03328-0",
+          "title": "Why failure is a taboo topic in science",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02623-0",
+          "title": "Lessons from Katrina: how to rebuild academia from the ground up",
+          "excerpt": "",
+          "publishedAt": "2026-10-19"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11293-x",
+          "title": "Cortex-wide imaging in naturally behaving mice with 1-gram wireless mesoscopes",
           "excerpt": "",
           "publishedAt": "2026-10-19"
         },
@@ -1021,6 +1165,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03112-0",
           "title": "The pianist who never played",
+          "excerpt": "",
+          "publishedAt": "2026-10-16"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03348-w",
+          "title": "Daily briefing: We’re close to reaching a 30% land-conservation target",
           "excerpt": "",
           "publishedAt": "2026-10-16"
         },
@@ -1044,7 +1194,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03253-2",
-          "title": "PhD students who write dissertation with AI less likely to stay in academia",
+          "title": "PhD students who write dissertations with AI less likely to stay in academia",
           "excerpt": "",
           "publishedAt": "2026-10-16"
         },
@@ -1305,156 +1455,6 @@
           "title": "Evaluating space-based methane detection through a one-year blind test",
           "excerpt": "",
           "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11143-w",
-          "title": "De novo design of cysteine proteases",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11167-2",
-          "title": "Computational design of metalloproteases",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11150-x",
-          "title": "Divergent genomic evolution in astrocytomas and oligodendrogliomas",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11136-9",
-          "title": "Rh 3+ stabilized in KRh@MFI catalyses regioselective hydroformylation",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11174-3",
-          "title": "Targeted stimulation of motor cortex ensembles drives learned movements",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11162-7",
-          "title": "Artificial intelligence-enabled clinical phenotyping of human brown fat",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11158-3",
-          "title": "Early tetrapod neck mobility modelled using an extant analogue",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11141-y",
-          "title": "Intrinsic physicochemical activity at microplastic–water interfaces",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11120-3",
-          "title": "Hidden reaction pathways inform additive engineering for perovskite LEDs",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11109-y",
-          "title": "Clasping folds enable superior elastic strength of graphene films",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11163-6",
-          "title": "Wave coarsening drives time crystallization in mechatronic metamaterials",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11159-2",
-          "title": "Sexual dimorphism in epidermal stem cell dynamics",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11166-3",
-          "title": "Interhemispheric monsoon dynamics over the past 450,000 years",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11119-w",
-          "title": "A microexon regulatory code reveals autism-linked genetic variation",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11154-7",
-          "title": "Educational intervention can rewire village social networks",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11126-x",
-          "title": "Advancing subseasonal forecasting with machine learning",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-10972-z",
-          "title": "Jurassic flightless bird reveals early ecological diversity of avialans",
-          "excerpt": "",
-          "publishedAt": "2026-10-14"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03244-3",
-          "title": "Preserve research data for tomorrow’s AI-enabled integrity checks",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11257-1",
-          "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunneling",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03245-2",
-          "title": "Decentralized AI needs more evidence on energy use",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11255-3",
-          "title": "Selective, Catalytic Oxidation of Polyethylene Surfaces",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03236-3",
-          "title": "Lead-tainted teeth reveal medieval mines’ unequal toll",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03246-1",
-          "title": "When microbes degrade plastic, where does it go?",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02974-8",
-          "title": "A mysterious jelly seems to be left behind by toads",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03234-5",
-          "title": "Why not every global problem can be tackled by an IPCC-like organization",
-          "excerpt": "",
-          "publishedAt": "2026-10-13"
         }
       ],
       "seenLinks": [
@@ -1632,18 +1632,43 @@
         "https://www.nature.com/articles/d41586-026-03253-2",
         "https://www.nature.com/articles/d41586-026-03338-y",
         "https://www.nature.com/articles/d41586-026-03336-0",
-        "https://www.nature.com/articles/d41586-026-03309-3"
+        "https://www.nature.com/articles/d41586-026-03309-3",
+        "https://www.nature.com/articles/d41586-026-02975-7",
+        "https://www.nature.com/articles/d41586-026-03353-z",
+        "https://www.nature.com/articles/d41586-026-03351-1",
+        "https://www.nature.com/articles/d41586-026-03354-y",
+        "https://www.nature.com/articles/d41586-026-03352-0",
+        "https://www.nature.com/articles/d41586-026-03062-7",
+        "https://www.nature.com/articles/d41586-026-03327-1",
+        "https://www.nature.com/articles/d41586-026-03310-w",
+        "https://www.nature.com/articles/d41586-026-03151-7",
+        "https://www.nature.com/articles/d41586-026-03314-6",
+        "https://www.nature.com/articles/d41586-026-03317-3",
+        "https://www.nature.com/articles/d41586-026-03237-2",
+        "https://www.nature.com/articles/d41586-026-03228-3",
+        "https://www.nature.com/articles/d41586-026-03345-z",
+        "https://www.nature.com/articles/d41586-026-03265-y",
+        "https://www.nature.com/articles/d41586-026-03312-8",
+        "https://www.nature.com/articles/d41586-026-03275-w",
+        "https://www.nature.com/articles/d41586-026-03315-5",
+        "https://www.nature.com/articles/d41586-026-03339-x",
+        "https://www.nature.com/articles/d41586-026-03313-7",
+        "https://www.nature.com/articles/s41586-026-11290-0",
+        "https://www.nature.com/articles/d41586-026-03328-0",
+        "https://www.nature.com/articles/d41586-026-02623-0",
+        "https://www.nature.com/articles/s41586-026-11293-x",
+        "https://www.nature.com/articles/d41586-026-03348-w"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-19",
+      "newestPublicationAt": "2026-10-20",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"ca96da8bba8ca74fff6a0c5bbec2a598\"",
+      "etag": "\"1aef45f2f6ef1ad7a197b5bca08a64ce\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -6558,6 +6583,306 @@
     }
   },
   "events": [
+    {
+      "id": "21df896b27051835ea7e05c9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Is it ‘moon-stroke’, or a chill?",
+      "url": "https://www.nature.com/articles/d41586-026-02975-7",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "769ac71444bd26765b3696c9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Bundle water safeguards into critical-mineral licences",
+      "url": "https://www.nature.com/articles/d41586-026-03353-z",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "11db6c3db789be5299a5d1c5",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nobel-prizewinning breakthroughs can emerge from neglected organisms",
+      "url": "https://www.nature.com/articles/d41586-026-03351-1",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c2fc636873b35f522da3f7b4",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Conservation planning should follow animal clocks",
+      "url": "https://www.nature.com/articles/d41586-026-03354-y",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "66d6f04a008c461d957cfd30",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Europe and the rest of the world must come up with an answer to US science strategy",
+      "url": "https://www.nature.com/articles/d41586-026-03352-0",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9b7be1d56ed9869e61bf61df",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Butterfly wing patterns make motion hard to read",
+      "url": "https://www.nature.com/articles/d41586-026-03062-7",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "be69eb9779e05b15963c3416",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nature ’s job-satisfaction survey highlights the changing geography of science",
+      "url": "https://www.nature.com/articles/d41586-026-03327-1",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e9984e3476c83349336c9853",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Will this sleep-disorder drug be the next big blockbuster?",
+      "url": "https://www.nature.com/articles/d41586-026-03310-w",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a568aa39daeebc289f79f15f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "China picks first researchers for 15-year mega grants",
+      "url": "https://www.nature.com/articles/d41586-026-03151-7",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c24ffed9895aa29e76ca7652",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nepal’s disaster is an urgent wake-up call",
+      "url": "https://www.nature.com/articles/d41586-026-03314-6",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "be3ca9d61ddeb796a606ec1c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Toxic chemicals in fentanyl revealed by speedy technique",
+      "url": "https://www.nature.com/articles/d41586-026-03317-3",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a526ecb7c2e630b04a079dca",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Light and mirrors move large quantum computers closer to reality",
+      "url": "https://www.nature.com/articles/d41586-026-03237-2",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "880fa64d1da6d288565c9eeb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Audio long read: How to stay smart in the age of AI — the science of critical thinking",
+      "url": "https://www.nature.com/articles/d41586-026-03228-3",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "630870e8bc254be0b11988cb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "US government probe into postdoc visas worries scientists",
+      "url": "https://www.nature.com/articles/d41586-026-03345-z",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e3230b4d570806affce3d011",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Microdosing LSD shows some cognitive benefits — but only for women",
+      "url": "https://www.nature.com/articles/d41586-026-03265-y",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d11e7950eb0db5a002cf8c09",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How pregnancy reshapes the brain throughout life",
+      "url": "https://www.nature.com/articles/d41586-026-03312-8",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4f7b4f3119aff44b9cf783ad",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Climate scientists face deluge of public-records requests about fossil-fuel studies",
+      "url": "https://www.nature.com/articles/d41586-026-03275-w",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "af36ca237db43313e1e83f2c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "‘Fiercely stubborn’: the US scientists continuing their research amid funding cuts",
+      "url": "https://www.nature.com/articles/d41586-026-03315-5",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7181614aca0035698ee8ca56",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Experienced researchers ‘disrupt’ less than rookie scientists — but their ideas last",
+      "url": "https://www.nature.com/articles/d41586-026-03339-x",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a6b7992102c7cb6021a95edf",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Three reasons why AI is not conscious and perhaps never will be",
+      "url": "https://www.nature.com/articles/d41586-026-03313-7",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "24ff8eca69775306b5583263",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: Long-read sequencing reveals pre-meiotic gene conversion in sperm",
+      "url": "https://www.nature.com/articles/s41586-026-11290-0",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4b91285a40335171972b053b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why failure is a taboo topic in science",
+      "url": "https://www.nature.com/articles/d41586-026-03328-0",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7ac86bd9667954e469a710d3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Lessons from Katrina: how to rebuild academia from the ground up",
+      "url": "https://www.nature.com/articles/d41586-026-02623-0",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0cbc102c55ea0da0aa64517b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Cortex-wide imaging in naturally behaving mice with 1-gram wireless mesoscopes",
+      "url": "https://www.nature.com/articles/s41586-026-11293-x",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-19",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8ae6e737540112e1fbd25c29",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: We’re close to reaching a 30% land-conservation target",
+      "url": "https://www.nature.com/articles/d41586-026-03348-w",
+      "detectedAt": "2026-10-20T15:21:19.512Z",
+      "publishedAt": "2026-10-16",
+      "verification": "unreviewed"
+    },
     {
       "id": "51d9ccbf584f0a71aad04b78",
       "sourceId": "microsoft-news",
