@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "b1a10905-e6e3-45e9-a5a9-39216951b49a",
-  "generatedAt": "2026-10-20T20:07:04.915Z",
+  "collectionId": "60029225-7d26-414e-ba71-99e7f585b958",
+  "generatedAt": "2026-10-21T00:52:45.091Z",
   "sourceCheckedAt": "2026-10-20T20:07:04.915Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39489195616",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39523932789",
   "documents": [
     {
       "id": "0f31a35ca48b716ee520464c",
@@ -43797,7 +43797,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-20T20:07:04.915Z",
+    "generatedAt": "2026-10-21T00:52:45.091Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -43916,6 +43916,13 @@
           "632f25c290d145e71630c9c1"
         ],
         "documentCount": 264
+      },
+      {
+        "date": "2026-10-21",
+        "topics": [
+          "b9d1dcf6c13212a659fc8340"
+        ],
+        "documentCount": 264
       }
     ],
     "candidates": [
@@ -43937,90 +43944,10 @@
         ],
         "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-20"
-      },
-      {
-        "id": "70511d3302d1f485eb6285b3",
-        "phrase": "control where semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "72c69890e7aa891b149ee721"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-20"
-      },
-      {
-        "id": "632f25c290d145e71630c9c1",
-        "phrase": "ev bandgap semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "8c4c64b404a61832fe0845c9"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-20"
+        "lastSeenAt": "2026-10-21"
       }
     ],
     "archive": [
-      {
-        "id": "70511d3302d1f485eb6285b3",
-        "phrase": "control where semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "72c69890e7aa891b149ee721"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-20"
-      },
-      {
-        "id": "632f25c290d145e71630c9c1",
-        "phrase": "ev bandgap semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "8c4c64b404a61832fe0845c9"
-        ],
-        "firstObservedAt": "2026-10-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-20"
-      },
       {
         "id": "b9d1dcf6c13212a659fc8340",
         "phrase": "lithium ion battery electrolytes",
@@ -44038,6 +43965,46 @@
           "15b58757da7bc38939130568"
         ],
         "firstObservedAt": "2026-10-15",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-21"
+      },
+      {
+        "id": "70511d3302d1f485eb6285b3",
+        "phrase": "control where semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "72c69890e7aa891b149ee721"
+        ],
+        "firstObservedAt": "2026-10-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-20"
+      },
+      {
+        "id": "632f25c290d145e71630c9c1",
+        "phrase": "ev bandgap semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "8c4c64b404a61832fe0845c9"
+        ],
+        "firstObservedAt": "2026-10-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-10-20"
       },
