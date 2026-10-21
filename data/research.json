@@ -1,10 +1,109 @@
 {
   "schemaVersion": 1,
-  "collectionId": "60029225-7d26-414e-ba71-99e7f585b958",
-  "generatedAt": "2026-10-21T00:52:45.091Z",
-  "sourceCheckedAt": "2026-10-20T20:07:04.915Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39523932789",
+  "collectionId": "1c759f15-50bf-4394-9603-bdbeda8069cd",
+  "generatedAt": "2026-10-21T09:35:54.392Z",
+  "sourceCheckedAt": "2026-10-21T09:35:54.392Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39578161241",
   "documents": [
+    {
+      "id": "cd6a9aff987029f9bcbdfa0b",
+      "sourceId": "nsf-research",
+      "url": "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe",
+      "title": "Podcast: Can America's most powerful laser unlock the universe?",
+      "excerpt": "U.S. National Science Foundation-supported researcher Louise Willingale discusses the most powerful laser in the United States, the NSF Zettawatt Equivalent Ultrashort Pulse Laser System, how it's being used to advance science, and how it w",
+      "owner": "NSF",
+      "tier": "research",
+      "storyId": "fa56161882ebb1cfdeeb6624",
+      "originalPublishedAt": "2026-10-20T14:53:01.000Z",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "announcementAt": "2026-10-20T14:53:01.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-20T14:53:01.000Z",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "efb29c4360db342a731f78bf",
+      "sourceId": "sec-asts",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm",
+      "title": "AST SpaceMobile · 8-K · 8-K",
+      "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+      "owner": "AST SpaceMobile",
+      "tier": "filing",
+      "storyId": "85d4a825dadc33bf1f704520",
+      "originalPublishedAt": "2026-10-20",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "announcementAt": "2026-10-20",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [
+        "5.02"
+      ],
+      "reportDate": "2026-10-14",
+      "acceptedAt": "2026-10-21T00:30:17.000Z",
+      "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/0001493152-26-047766-index.html",
+      "publishedAt": "2026-10-20",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f73b317091a9c95286b81d63",
+      "sourceId": "waymo-news",
+      "url": "https://waymo.com/blog/2026/10/waymo-in-madrid-region",
+      "title": "Read more: ¡Llegamos a Madrid! Waymo is coming to Spain",
+      "excerpt": "Today, we are excited to announce that Waymo is laying the groundwork for our fully autonomous ride-hailing service in Spain, beginning with the Region of Madrid.",
+      "owner": "Waymo",
+      "tier": "company",
+      "storyId": "9bf20e5965a5df168880cc89",
+      "originalPublishedAt": "2026-10-20",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "announcementAt": "2026-10-20",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": false,
+      "themes": [],
+      "associatedThemes": [
+        "robotaxis"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-20",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "0f31a35ca48b716ee520464c",
       "sourceId": "nature-research",
@@ -23182,72 +23281,6 @@
         "satellite-phones"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "68cd593826e4c68a502f5d13",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11088-0",
-      "title": "GPCR antagonism via rewiring of receptor trafficking and degradation",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "6984b6d68dce34a4a294a1c4",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915",
-      "title": "MIT makes progress on campus climate goals",
-      "excerpt": "Innovative strategies, technologies, and collaborations are helping MIT advance solutions on campus and beyond.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-15T19:55:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-09-15T19:55:00.000Z"
-    },
-    {
-      "id": "69bba1a631df059f1f3ad923",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000067/goog-20250902.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-09-03",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -30189,6 +30222,33 @@
       "versions": {
         "4e9f2955c4ed13b66ec99cf2": "2026-10-20T15:21:19.512Z"
       }
+    },
+    "9bf20e5965a5df168880cc89": {
+      "sourceId": "waymo-news",
+      "originalPublishedAt": "2026-10-20",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "latestId": "f73b317091a9c95286b81d63",
+      "versions": {
+        "f73b317091a9c95286b81d63": "2026-10-21T09:35:54.392Z"
+      }
+    },
+    "fa56161882ebb1cfdeeb6624": {
+      "sourceId": "nsf-research",
+      "originalPublishedAt": "2026-10-20T14:53:01.000Z",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "latestId": "cd6a9aff987029f9bcbdfa0b",
+      "versions": {
+        "cd6a9aff987029f9bcbdfa0b": "2026-10-21T09:35:54.392Z"
+      }
+    },
+    "85d4a825dadc33bf1f704520": {
+      "sourceId": "sec-asts",
+      "originalPublishedAt": "2026-10-20",
+      "firstSeenAt": "2026-10-21T09:35:54.392Z",
+      "latestId": "efb29c4360db342a731f78bf",
+      "versions": {
+        "efb29c4360db342a731f78bf": "2026-10-21T09:35:54.392Z"
+      }
     }
   },
   "reviews": [],
@@ -31219,17 +31279,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-316073",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 4,
+        "price": 3.98,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:16.000Z",
+        "asOf": "2026-10-20T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -31341,9 +31401,9 @@
           "marketCap": null
         },
         {
-          "price": 4,
+          "price": 3.98,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:16.000Z",
+          "asOf": "2026-10-20T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -32984,17 +33044,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 1.98,
+        "price": 2.02,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:16.000Z",
+        "asOf": "2026-10-20T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -33106,9 +33166,9 @@
           "marketCap": null
         },
         {
-          "price": 1.98,
+          "price": 2.02,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:16.000Z",
+          "asOf": "2026-10-20T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -34516,17 +34576,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 196.999,
+        "price": 196.53,
         "currency": "USD",
-        "asOf": "2026-10-20T15:19:57.000Z",
+        "asOf": "2026-10-20T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -34638,9 +34698,9 @@
           "marketCap": null
         },
         {
-          "price": 196.999,
+          "price": 196.53,
           "currency": "USD",
-          "asOf": "2026-10-20T15:19:57.000Z",
+          "asOf": "2026-10-20T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -36397,17 +36457,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 159.34,
+        "price": 157.75,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:12.000Z",
+        "asOf": "2026-10-20T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -36519,9 +36579,9 @@
           "marketCap": null
         },
         {
-          "price": 159.34,
+          "price": 157.75,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:12.000Z",
+          "asOf": "2026-10-20T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -38247,35 +38307,34 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226044647/form8-k.htm",
+        "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm",
         "title": "AST SpaceMobile · 8-K · 8-K",
-        "publishedAt": "2026-09-28",
-        "reportDate": "2026-09-25",
-        "acceptedAt": "2026-09-29T01:20:14.000Z",
+        "publishedAt": "2026-10-20",
+        "reportDate": "2026-10-14",
+        "acceptedAt": "2026-10-21T00:30:17.000Z",
         "filingItems": [
-          "5.02",
-          "9.01"
+          "5.02"
         ],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226044647/0001493152-26-044647-index.html",
-        "excerpt": "Company-filed disclosure; reported items 5.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/0001493152-26-047766-index.html",
+        "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
         "form": "8-K",
-        "accession": "0001493152-26-044647"
+        "accession": "0001493152-26-047766"
       },
-      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
-      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
-      "factsAccession": "0001493152-26-044647",
+      "factsAttemptAt": "2026-10-21T09:35:54.392Z",
+      "factsCheckedAt": "2026-10-21T09:35:54.392Z",
+      "factsAccession": "0001493152-26-047766",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 41.99,
+        "price": 41.13,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:18.000Z",
+        "asOf": "2026-10-20T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -38387,9 +38446,9 @@
           "marketCap": null
         },
         {
-          "price": 41.99,
+          "price": 41.13,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:18.000Z",
+          "asOf": "2026-10-20T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -39764,17 +39823,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001628280-26-050705",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 692.76,
+        "price": 694.25,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:13.000Z",
+        "asOf": "2026-10-20T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39886,9 +39945,9 @@
           "marketCap": null
         },
         {
-          "price": 692.76,
+          "price": 694.25,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:13.000Z",
+          "asOf": "2026-10-20T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -41712,17 +41771,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 530.89,
+        "price": 531.87,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:12.000Z",
+        "asOf": "2026-10-20T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41834,9 +41893,9 @@
           "marketCap": null
         },
         {
-          "price": 530.89,
+          "price": 531.87,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:12.000Z",
+          "asOf": "2026-10-20T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -43660,17 +43719,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-20T15:21:19.512Z",
+      "quoteAttemptAt": "2026-10-21T09:35:54.392Z",
       "quote": {
-        "price": 342.09,
+        "price": 340.275,
         "currency": "USD",
-        "asOf": "2026-10-20T15:21:19.000Z",
+        "asOf": "2026-10-20T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-20T15:21:19.512Z",
+      "quoteCheckedAt": "2026-10-21T09:35:54.392Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43782,9 +43841,9 @@
           "marketCap": null
         },
         {
-          "price": 342.09,
+          "price": 340.275,
           "currency": "USD",
-          "asOf": "2026-10-20T15:21:19.000Z",
+          "asOf": "2026-10-20T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
@@ -43797,7 +43856,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-21T00:52:45.091Z",
+    "generatedAt": "2026-10-21T09:35:54.392Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -43916,16 +43975,29 @@
           "632f25c290d145e71630c9c1"
         ],
         "documentCount": 264
-      },
-      {
-        "date": "2026-10-21",
-        "topics": [
-          "b9d1dcf6c13212a659fc8340"
-        ],
-        "documentCount": 264
       }
     ],
     "candidates": [
+      {
+        "id": "d08ada4bb3c49858bec50b10",
+        "phrase": "americas most powerful laser",
+        "owners": [
+          "NSF"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "cd6a9aff987029f9bcbdfa0b"
+        ],
+        "firstObservedAt": "2026-10-21",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-21"
+      },
       {
         "id": "b9d1dcf6c13212a659fc8340",
         "phrase": "lithium ion battery electrolytes",
@@ -43965,6 +44037,26 @@
           "15b58757da7bc38939130568"
         ],
         "firstObservedAt": "2026-10-15",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-21"
+      },
+      {
+        "id": "d08ada4bb3c49858bec50b10",
+        "phrase": "americas most powerful laser",
+        "owners": [
+          "NSF"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "cd6a9aff987029f9bcbdfa0b"
+        ],
+        "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-10-21"
       },
@@ -44090,12 +44182,12 @@
       }
     ],
     "datedDocuments": 264,
-    "comparableDays": 12,
-    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
+    "comparableDays": 13,
+    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history. At least one discovery feed is unavailable or overdue; history accumulation is paused."
   },
   "coverage": {
     "totalSources": 22,
-    "readableSources": 19,
+    "readableSources": 18,
     "companies": 8
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T20:07:04.915Z",
+  "generatedAt": "2026-10-21T09:35:54.392Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-20T20:07:04.915Z",
-      "nextAttemptAt": "2026-10-21T02:07:04.915Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "nextAttemptAt": "2026-10-21T15:35:54.392Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 26
+      "failureStreak": 27
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
+      "etag": "W/\"29b94-0RKq6k/bFn3E2CJ8sksfBfLPdTw\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -322,8 +322,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -379,22 +379,22 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"a2d275ae4b26c07fd1440141c19e6f4f\"",
-      "lastModified": "Tue, 20 Oct 2026 08:52:30 GMT"
+      "etag": "W/\"547bac22236c607a0693897a023a3c7c\"",
+      "lastModified": "Tue, 20 Oct 2026 22:32:32 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-17T08:46:58.836Z",
+      "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "29858dab9d23f91f787d60c1521645399588785aa8f38c34ad710c3d2491c335",
+      "fingerprint": "ffe7be90ae170ae764c6434deeefa9dca18a6cb20a7bed3831294491e7a4a57b",
       "items": [
         {
           "url": "https://waymo.com/blog/2026/10/waymo-in-toronto",
@@ -406,20 +406,20 @@
           "metadataCheckedAt": "2026-10-17T08:46:58.836Z"
         },
         {
+          "url": "https://waymo.com/blog/2026/10/waymo-in-madrid-region",
+          "title": "Read more: ¡Llegamos a Madrid! Waymo is coming to Spain",
+          "publishedAt": "2026-10-20",
+          "announcementAt": "2026-10-20",
+          "excerpt": "Today, we are excited to announce that Waymo is laying the groundwork for our fully autonomous ride-hailing service in Spain, beginning with the Region of Madrid.",
+          "researchUrl": null,
+          "metadataCheckedAt": "2026-10-21T09:35:54.392Z"
+        },
+        {
           "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
           "title": "Read more: Waymo Closes $5 Billion Debt Financing to Accelerate Business Expansion",
           "publishedAt": "2026-10-08",
           "announcementAt": "2026-10-08",
           "excerpt": "Today, Waymo closed a $5 billion term loan, marking our first debt financing and an important step in our evolution into a scaling commercial enterprise.",
-          "researchUrl": null,
-          "metadataCheckedAt": "2026-10-09T15:18:03.534Z"
-        },
-        {
-          "url": "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
-          "title": "Read more: Sober Drivers Still Face Nearly 4x Nighttime Risk: Why Road Safety Demands a Safe System Approach",
-          "publishedAt": "2026-10-08",
-          "announcementAt": "2026-10-08",
-          "excerpt": "Alcohol impairment remains a massive, critical crisis on public roads, directly contributing to over 30% of all traffic deaths in the U.S. Eliminating it is a mission we proudly support alongside long-standing partners like Mothers Against Drunk Driving (MADD). But our latest peer-reviewed research highlights a second, equally sobering truth that we cannot ignore: traffic fatalities rarely result ",
           "researchUrl": null,
           "metadataCheckedAt": "2026-10-09T15:18:03.534Z"
         }
@@ -428,12 +428,13 @@
         "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
         "https://waymo.com/blog/2026/10/sober-driving-benchmarks",
         "https://waymo.com/blog/2026/10/incident-management-exercises",
-        "https://waymo.com/blog/2026/10/waymo-in-toronto"
+        "https://waymo.com/blog/2026/10/waymo-in-toronto",
+        "https://waymo.com/blog/2026/10/waymo-in-madrid-region"
       ],
       "matchedItems": 3,
       "extractedEntries": 3,
-      "newestPublicationAt": "2026-10-16",
-      "excerpt": "Hello Toronto! Waymo is En Route Waymo is officially heading to Canada! We’re laying the groundwork for our fully autonomous ride-hailing service in Toronto, investing in local facilities and jobs, with the goal of welcoming our first rider",
+      "newestPublicationAt": "2026-10-20",
+      "excerpt": "¡Llegamos a Madrid! Waymo is coming to Spain Today, we are excited to announce that Waymo is laying the groundwork for our fully autonomous ride-hailing service in Spain, beginning with the Region of Madrid. The Waymo Team October 20, 2026 ",
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
@@ -447,8 +448,8 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -465,7 +466,7 @@
         "https://www.fcc.gov/edoc/425904"
       ],
       "matchedItems": 0,
-      "extractedEntries": 9,
+      "extractedEntries": 10,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -481,15 +482,21 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-20T09:36:48.568Z",
+      "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "afe93df61d10c7a225b9198c3b39d8a55addbc2a9e2219e9b7186e2958a7908f",
+      "fingerprint": "8a4098ba8ca1efbdaaafe3981d6e86efae940fa24afe12b6b1b892ca592ec134",
       "items": [
+        {
+          "url": "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe",
+          "title": "Podcast: Can America's most powerful laser unlock the universe?",
+          "excerpt": "U.S. National Science Foundation-supported researcher Louise Willingale discusses the most powerful laser in the United States, the NSF Zettawatt Equivalent Ultrashort Pulse Laser System, how it's being used to advance science, and how it w",
+          "publishedAt": "2026-10-20T14:53:01.000Z"
+        },
         {
           "url": "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
           "title": "Podcast: The hidden DNA code that controls your genes",
@@ -539,16 +546,16 @@
           "publishedAt": "2026-09-16T17:13:07.000Z"
         },
         {
-          "url": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
-          "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
-          "excerpt": "The U.S. National Science Foundation today announced a $20 million investment to launch a two-year pilot supporting small businesses in commercializing their deep-technology ventures. The pilot aims to address a persistent gap separating fe",
-          "publishedAt": "2026-09-14T14:00:32.000Z"
-        },
-        {
           "url": "https://www.nsf.gov/news/podcast-creating-thermal-cloaking-new-structures",
           "title": "Podcast: Creating thermal cloaking and new structures",
           "excerpt": "Shelly Zhang, an NSF-supported researcher, discusses her work using additive manufacturing and topology optimization to create new structures, including a 3D thermal cloaking device...",
           "publishedAt": "2026-09-14T21:28:01.000Z"
+        },
+        {
+          "url": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
+          "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
+          "excerpt": "The U.S. National Science Foundation today announced a $20 million investment to launch a two-year pilot supporting small businesses in commercializing their deep-technology ventures. The pilot aims to address a persistent gap separating fe",
+          "publishedAt": "2026-09-14T14:00:32.000Z"
         },
         {
           "url": "https://www.nsf.gov/news/nsf-leadership-new-golden-age-science",
@@ -573,12 +580,6 @@
           "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
           "excerpt": "The U.S. National Science Foundation is investing $90 million over five years to support three new NSF Science and Technology Centers (NSF STC). These centers will advance American leadership in science and technology, strengthen the nation",
           "publishedAt": "2026-08-26T16:09:28.000Z"
-        },
-        {
-          "url": "https://www.nsf.gov/news/podcast-educator-wins-presidential-ai-challenge",
-          "title": "Podcast: Educator wins Presidential AI Challenge",
-          "excerpt": "U.S. National Science Foundation-supported researchers are behind an educational effort to introduce artificial intelligence techniques to elementary school children...",
-          "publishedAt": "2026-08-25T17:32:13.000Z"
         }
       ],
       "seenLinks": [
@@ -597,27 +598,28 @@
         "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
         "https://www.nsf.gov/news/podcast-educator-wins-presidential-ai-challenge",
         "https://www.nsf.gov/news/podcast-researchers-bring-ai-elementary-schoolers",
-        "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes"
+        "https://www.nsf.gov/news/podcast-hidden-dna-code-controls-your-genes",
+        "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe"
       ],
       "matchedItems": 15,
       "extractedEntries": 15,
-      "newestPublicationAt": "2026-10-13T19:57:51.000Z",
+      "newestPublicationAt": "2026-10-20T14:53:01.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792479388-gzip\"",
-      "lastModified": "Tue, 20 Oct 2026 06:56:28 GMT"
+      "etag": "\"1792564107-gzip\"",
+      "lastModified": "Wed, 21 Oct 2026 06:28:27 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-17T08:46:58.836Z",
       "nextAttemptAt": null,
@@ -989,21 +991,21 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792488115\"",
-      "lastModified": "Tue, 20 Oct 2026 09:21:55 GMT"
+      "etag": "\"1792573605\"",
+      "lastModified": "Wed, 21 Oct 2026 09:06:45 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "ok",
-      "lastAttemptAt": "2026-10-20T15:21:19.512Z",
+      "status": "error",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
       "lastSuccessAt": "2026-10-20T15:21:19.512Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T15:21:19.512Z",
-      "nextAttemptAt": null,
-      "failureStreak": 0,
-      "error": null,
+      "nextAttemptAt": "2026-10-21T10:35:54.392Z",
+      "failureStreak": 1,
+      "error": "Source or redirect host is not allowlisted",
       "fingerprint": "fda3d356aee644514ad44b13a3873c8f457dbf292f2c0eddb1805ff78fe7ffcb",
       "items": [
         {
@@ -1676,8 +1678,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2303,8 +2305,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2945,8 +2947,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3494,8 +3496,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4133,15 +4135,29 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-20T09:36:48.568Z",
+      "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "03eb94a0da6439d016d643458a535b9e9b801dbb114c78ed367a12e7cac2bbb5",
+      "fingerprint": "6841e5b97468949f1fb19dd061721816d6368c13586ec222ba77b2084108711e",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm",
+          "title": "AST SpaceMobile · 8-K · 8-K",
+          "publishedAt": "2026-10-20",
+          "reportDate": "2026-10-14",
+          "acceptedAt": "2026-10-21T00:30:17.000Z",
+          "filingItems": [
+            "5.02"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/0001493152-26-047766-index.html",
+          "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001493152-26-047766"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226044647/form8-k.htm",
           "title": "AST SpaceMobile · 8-K · 8-K",
@@ -4744,21 +4760,6 @@
           "excerpt": "Company-filed disclosure; reported items 1.01, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "8-K",
           "accession": "0001641172-25-016581"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/form8-k.htm",
-          "title": "AST SpaceMobile · 8-K · 8-K",
-          "publishedAt": "2025-06-25",
-          "reportDate": "2025-06-25",
-          "acceptedAt": "2025-06-25T15:04:31.000Z",
-          "filingItems": [
-            "8.01",
-            "9.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/0001641172-25-016369-index.html",
-          "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0001641172-25-016369"
         }
       ],
       "seenLinks": [
@@ -4801,11 +4802,12 @@
         "https://www.sec.gov/Archives/edgar/data/1780312/000164117225017777/form8-k.htm",
         "https://www.sec.gov/Archives/edgar/data/1780312/000164117225017400/form8-k.htm",
         "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016581/form8-k.htm",
-        "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/form8-k.htm"
+        "https://www.sec.gov/Archives/edgar/data/1780312/000164117225016369/form8-k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 629,
-      "newestPublicationAt": "2026-09-28",
+      "extractedEntries": 630,
+      "newestPublicationAt": "2026-10-20",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -4820,8 +4822,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -5313,8 +5315,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -5945,8 +5947,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-20T09:36:48.568Z",
-      "lastSuccessAt": "2026-10-20T09:36:48.568Z",
+      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
+      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -6583,6 +6585,46 @@
     }
   },
   "events": [
+    {
+      "id": "07b629cc25337bb65159fd68",
+      "sourceId": "waymo-news",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Waymo",
+      "kind": "new-link",
+      "title": "Read more: ¡Llegamos a Madrid! Waymo is coming to Spain",
+      "url": "https://waymo.com/blog/2026/10/waymo-in-madrid-region",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e10e1b8239b997e2c5b2a0b7",
+      "sourceId": "nsf-research",
+      "themes": [],
+      "owner": "NSF",
+      "kind": "new-link",
+      "title": "Podcast: Can America's most powerful laser unlock the universe?",
+      "url": "https://www.nsf.gov/news/podcast-can-americas-most-powerful-laser-unlock-universe",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "publishedAt": "2026-10-20T14:53:01.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0bd98302839153baa3a370bf",
+      "sourceId": "sec-asts",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "AST SpaceMobile",
+      "kind": "new-link",
+      "title": "AST SpaceMobile · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm",
+      "detectedAt": "2026-10-21T09:35:54.392Z",
+      "publishedAt": "2026-10-20",
+      "verification": "unreviewed"
+    },
     {
       "id": "21df896b27051835ea7e05c9",
       "sourceId": "nature-research",
