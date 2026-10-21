@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-21T18:07:25.224Z","phrases":[]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-21T22:25:41.132Z","phrases":[{"phrase":"after spacex","weekCount":7,"tickers":["SPCX","TSLA","META","ASTS"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
