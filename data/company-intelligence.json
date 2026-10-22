@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T00:52:16.037Z",
+  "generatedAt": "2026-10-22T09:36:15.329Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1014,20 +1014,23 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/qs-20260630.htm",
-        "title": "QuantumScape · 10-Q · 10-Q",
-        "publishedAt": "2026-07-24",
-        "reportDate": "2026-06-30",
-        "acceptedAt": "2026-07-25T00:06:44.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001193125-26-316073"
+        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
+        "title": "QuantumScape · 8-K · 8-K",
+        "publishedAt": "2026-10-21",
+        "reportDate": "2026-10-21",
+        "acceptedAt": "2026-10-22T00:18:34.000Z",
+        "filingItems": [
+          "2.02",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/0001193125-26-427862-index.html",
+        "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001193125-26-427862"
       },
-      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
-      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
-      "factsAccession": "0001193125-26-316073",
+      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
+      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
+      "factsAccession": "0001193125-26-427862",
       "factsError": null,
       "quoteAttemptAt": "2026-10-22T00:52:16.037Z",
       "quote": {
@@ -9603,20 +9606,25 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-        "title": "Meta Platforms · 10-Q · 10-Q",
-        "publishedAt": "2026-07-30",
-        "reportDate": "2026-06-30",
-        "acceptedAt": "2026-07-30T02:58:51.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001628280-26-050705"
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+        "title": "Meta Platforms · 8-K · 8-K",
+        "publishedAt": "2026-10-21",
+        "reportDate": "2026-10-19",
+        "acceptedAt": "2026-10-22T00:03:35.000Z",
+        "filingItems": [
+          "1.01",
+          "2.02",
+          "8.01",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
+        "excerpt": "Company-filed disclosure; reported items 1.01, 2.02, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001628280-26-066700"
       },
-      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
-      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
-      "factsAccession": "0001628280-26-050705",
+      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
+      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
+      "factsAccession": "0001628280-26-066700",
       "factsError": null,
       "quoteAttemptAt": "2026-10-22T00:52:16.037Z",
       "quote": {

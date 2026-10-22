@@ -1,10 +1,340 @@
 {
   "schemaVersion": 1,
-  "collectionId": "014a531f-1054-4751-bfd1-ed15e11a0f1b",
-  "generatedAt": "2026-10-22T00:52:16.037Z",
-  "sourceCheckedAt": "2026-10-21T20:20:51.304Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39702260879",
+  "collectionId": "b4de0c45-cc4e-423d-b8d0-5bce5bbb1643",
+  "generatedAt": "2026-10-22T09:36:15.329Z",
+  "sourceCheckedAt": "2026-10-22T09:36:15.329Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/39756667020",
   "documents": [
+    {
+      "id": "35a15afaf8a59390051d98f7",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426088",
+      "title": "Satellite Communications Services - SES",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "2509a67e6524ebaa51fea770",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "49b6f84b45e870b96da5f7cc",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426095",
+      "title": "Application of Starlink Spectrum Holdings, LLC, Tristar License Group, LLC, and TLG Unpaired Holdings, LLC For Consent to Transfer Control of Licenses",
+      "excerpt": "Order granting the SpaceX-Tristar transfer of control application.",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "0e0dfc6d7c0f47d054db2ef3",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [
+        "satellite-phones"
+      ],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6c7218fcf920c34090783b42",
+      "sourceId": "mit-energy",
+      "url": "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
+      "title": "Startup plans to rejuvenate the nuclear power industry with a new manufacturing approach",
+      "excerpt": "Founded by Jake Jurewicz ’14, SM ’15, Blue Energy manufactures giant pieces of nuclear reactors at shipyards and ships them on barges for final assembly, to lower costs.",
+      "owner": "MIT",
+      "tier": "research",
+      "storyId": "bf4c894b46d5663c0c00363f",
+      "originalPublishedAt": "2026-10-22T04:00:00.000Z",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-22T04:00:00.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-22T04:00:00.000Z",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a1d847c0e1cba720d8adb21c",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03319-1",
+      "title": "Surprise! White dwarf stars come in a rainbow of colours",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "7b76fee0368b10675d6a217a",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a765a799a72b8b0f98813fd2",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03342-2",
+      "title": "A single antimatter particle in a cage opens door to ‘revolutionary’ physics",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e6a3699cd9f8689f145ae458",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-21T15:34:55.284Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "revision",
+      "previousId": "427e76c219c0c2e4baae5bc8",
+      "previousExcerpt": null,
+      "previousTitle": "A single antimatter particle in a cage opens door to 'revolutionary' physics",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b1cd336386da86e983268fd2",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426087",
+      "title": "Satellite Communications Services - SES",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "47425f9c6ae3392978678a37",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d35d8b14130c52b2afc05471",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03357-9",
+      "title": "Teen depression and anxiety predicted by childhood brain development",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "86561710b78890a43b004367",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e82ce5f0d73c5be0849d1fc6",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03161-5",
+      "title": "To heal sick cities, scientists and residents must work together",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e230f0e22074047ac0f68954",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e8f514f2a59b2b82460c3c9e",
+      "sourceId": "sec-meta",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+      "title": "Meta Platforms · 8-K · 8-K",
+      "excerpt": "Company-filed disclosure; reported items 1.01, 2.02, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+      "owner": "Meta Platforms",
+      "tier": "filing",
+      "storyId": "a4169206a218f53e2970327c",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "ai-glasses"
+      ],
+      "filingItems": [
+        "1.01",
+        "2.02",
+        "8.01",
+        "9.01"
+      ],
+      "reportDate": "2026-10-19",
+      "acceptedAt": "2026-10-22T00:03:35.000Z",
+      "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f32af94b8aa7b636a429826c",
+      "sourceId": "sec-qs",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
+      "title": "QuantumScape · 8-K · 8-K",
+      "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+      "owner": "QuantumScape",
+      "tier": "filing",
+      "storyId": "c678b9297dbbc9ab0cf6a12d",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "solid-state-batteries"
+      ],
+      "filingItems": [
+        "2.02",
+        "9.01"
+      ],
+      "reportDate": "2026-10-21",
+      "acceptedAt": "2026-10-22T00:18:34.000Z",
+      "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/0001193125-26-427862-index.html",
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "01d23f5e302344f56ff36a83",
       "sourceId": "nature-research",
@@ -23427,231 +23757,6 @@
       "verification": "unreviewed",
       "associatedThemes": [],
       "metadataOnly": true
-    },
-    {
-      "id": "4d595b0ca8957f814f437d31",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000034/goog-20260407.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-04-10",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "4d818ed84ed13794da772a64",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/new-way-watch-heat-move-through-electronics-0806",
-      "title": "A new way to watch heat move through electronics",
-      "excerpt": "MIT researchers can now precisely measure how heat moves through multilayered materials like computer chips.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-08-06T04:00:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-08-06T04:00:00.000Z"
-    },
-    {
-      "id": "4e75ac579365e4f09522adbf",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11086-2",
-      "title": "Self-aligned optical microcomb emerging between octave-separated lasers",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "4e7dcb308d15b76e58888bd0",
-      "sourceId": "sec-sldp",
-      "url": "https://www.sec.gov/Archives/edgar/data/1844862/000110465925115026/tm2531865d1_8k.htm",
-      "title": "Solid Power · 8-K · FORM 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Solid Power",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-11-21",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "4ed1a6d40335aa8c5b9bc7af",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/goog-20260429.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-04-29",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "4f1600b80056d2154a8ef67e",
-      "sourceId": "sec-tmus",
-      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525195398/d907284d8k.htm",
-      "title": "T-Mobile US · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "T-Mobile US",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-09-04",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "4f22cccd08681b59947343e8",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/msft-20250930.htm",
-      "title": "Microsoft · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-10-29",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "516ce8aea3eea0e4eb405816",
-      "sourceId": "sec-tm",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525230842/d825247d6k.htm",
-      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Toyota",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-10-06",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "518052ba3554feb3f88ccc6a",
-      "sourceId": "sec-meta",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm",
-      "title": "Meta Platforms · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Meta Platforms",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-10-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-glasses"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "529c2d5b4fc7b75291483619",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/d41586-026-03126-8",
-      "title": "Stunning fossil shows dinosaurs’ distinctive path to flight",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-10-02",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -30751,9 +30856,10 @@
       "sourceId": "nature-research",
       "originalPublishedAt": "2026-10-21",
       "firstSeenAt": "2026-10-21T15:34:55.284Z",
-      "latestId": "427e76c219c0c2e4baae5bc8",
+      "latestId": "a765a799a72b8b0f98813fd2",
       "versions": {
-        "427e76c219c0c2e4baae5bc8": "2026-10-21T15:34:55.284Z"
+        "427e76c219c0c2e4baae5bc8": "2026-10-21T15:34:55.284Z",
+        "a765a799a72b8b0f98813fd2": "2026-10-22T09:36:15.329Z"
       }
     },
     "9de958fbbd403e54d7ac04f8": {
@@ -31015,6 +31121,87 @@
       "latestId": "39c10fc26f7a21080b372c4a",
       "versions": {
         "39c10fc26f7a21080b372c4a": "2026-10-21T15:34:55.284Z"
+      }
+    },
+    "2509a67e6524ebaa51fea770": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "35a15afaf8a59390051d98f7",
+      "versions": {
+        "35a15afaf8a59390051d98f7": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "47425f9c6ae3392978678a37": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "b1cd336386da86e983268fd2",
+      "versions": {
+        "b1cd336386da86e983268fd2": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "0e0dfc6d7c0f47d054db2ef3": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "49b6f84b45e870b96da5f7cc",
+      "versions": {
+        "49b6f84b45e870b96da5f7cc": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "bf4c894b46d5663c0c00363f": {
+      "sourceId": "mit-energy",
+      "originalPublishedAt": "2026-10-22T04:00:00.000Z",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "6c7218fcf920c34090783b42",
+      "versions": {
+        "6c7218fcf920c34090783b42": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "7b76fee0368b10675d6a217a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "a1d847c0e1cba720d8adb21c",
+      "versions": {
+        "a1d847c0e1cba720d8adb21c": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "e230f0e22074047ac0f68954": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "e82ce5f0d73c5be0849d1fc6",
+      "versions": {
+        "e82ce5f0d73c5be0849d1fc6": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "86561710b78890a43b004367": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "d35d8b14130c52b2afc05471",
+      "versions": {
+        "d35d8b14130c52b2afc05471": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "c678b9297dbbc9ab0cf6a12d": {
+      "sourceId": "sec-qs",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "f32af94b8aa7b636a429826c",
+      "versions": {
+        "f32af94b8aa7b636a429826c": "2026-10-22T09:36:15.329Z"
+      }
+    },
+    "a4169206a218f53e2970327c": {
+      "sourceId": "sec-meta",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-22T09:36:15.329Z",
+      "latestId": "e8f514f2a59b2b82460c3c9e",
+      "versions": {
+        "e8f514f2a59b2b82460c3c9e": "2026-10-22T09:36:15.329Z"
       }
     }
   },
@@ -32031,20 +32218,23 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/qs-20260630.htm",
-        "title": "QuantumScape · 10-Q · 10-Q",
-        "publishedAt": "2026-07-24",
-        "reportDate": "2026-06-30",
-        "acceptedAt": "2026-07-25T00:06:44.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001193125-26-316073"
+        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
+        "title": "QuantumScape · 8-K · 8-K",
+        "publishedAt": "2026-10-21",
+        "reportDate": "2026-10-21",
+        "acceptedAt": "2026-10-22T00:18:34.000Z",
+        "filingItems": [
+          "2.02",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/0001193125-26-427862-index.html",
+        "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001193125-26-427862"
       },
-      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
-      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
-      "factsAccession": "0001193125-26-316073",
+      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
+      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
+      "factsAccession": "0001193125-26-427862",
       "factsError": null,
       "quoteAttemptAt": "2026-10-22T00:52:16.037Z",
       "quote": {
@@ -40620,20 +40810,25 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-        "title": "Meta Platforms · 10-Q · 10-Q",
-        "publishedAt": "2026-07-30",
-        "reportDate": "2026-06-30",
-        "acceptedAt": "2026-07-30T02:58:51.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001628280-26-050705"
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+        "title": "Meta Platforms · 8-K · 8-K",
+        "publishedAt": "2026-10-21",
+        "reportDate": "2026-10-19",
+        "acceptedAt": "2026-10-22T00:03:35.000Z",
+        "filingItems": [
+          "1.01",
+          "2.02",
+          "8.01",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
+        "excerpt": "Company-filed disclosure; reported items 1.01, 2.02, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001628280-26-066700"
       },
-      "factsAttemptAt": "2026-10-16T19:41:39.139Z",
-      "factsCheckedAt": "2026-10-16T19:41:39.139Z",
-      "factsAccession": "0001628280-26-050705",
+      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
+      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
+      "factsAccession": "0001628280-26-066700",
       "factsError": null,
       "quoteAttemptAt": "2026-10-22T00:52:16.037Z",
       "quote": {
@@ -44695,7 +44890,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-22T00:52:16.037Z",
+    "generatedAt": "2026-10-22T09:36:15.329Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -44831,7 +45026,7 @@
           "b9d1dcf6c13212a659fc8340",
           "3e2d4d56ee7e63fef142f78d"
         ],
-        "documentCount": 300
+        "documentCount": 302
       }
     ],
     "candidates": [
@@ -45078,8 +45273,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 300,
-    "comparableDays": 13,
+    "datedDocuments": 302,
+    "comparableDays": 14,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {

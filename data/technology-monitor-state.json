@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T20:20:51.304Z",
+  "generatedAt": "2026-10-22T09:36:15.329Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -155,26 +155,26 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Investors - AST SpaceMobile",
-      "etag": "\"-1768344825\"",
+      "etag": "\"1764651157\"",
       "lastModified": null
     },
     "qs-news": {
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-21T20:20:51.304Z",
-      "nextAttemptAt": "2026-10-22T02:20:51.304Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "nextAttemptAt": "2026-10-22T15:36:15.329Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 28
+      "failureStreak": 29
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b94-0RKq6k/bFn3E2CJ8sksfBfLPdTw\"",
+      "etag": "W/\"29b79-e9oEaNFWVgsO43A9DIi8kzC27RA\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -322,8 +322,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -387,8 +387,8 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -448,25 +448,47 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-20T09:36:48.568Z",
+      "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "items": [],
+      "fingerprint": "ef122564985ac53ba62b86aa109e504eecb11f2ea6f9d232480e8fdf4cfbc23c",
+      "items": [
+        {
+          "url": "https://www.fcc.gov/edoc/426088",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/426087",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/426095",
+          "title": "Application of Starlink Spectrum Holdings, LLC, Tristar License Group, LLC, and TLG Unpaired Holdings, LLC For Consent to Transfer Control of Licenses",
+          "excerpt": "Order granting the SpaceX-Tristar transfer of control application.",
+          "publishedAt": null
+        }
+      ],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
         "https://www.fcc.gov/edoc/425844",
         "https://www.fcc.gov/edoc/425843",
         "https://www.fcc.gov/edoc/425903",
-        "https://www.fcc.gov/edoc/425904"
+        "https://www.fcc.gov/edoc/425904",
+        "https://www.fcc.gov/edoc/426088",
+        "https://www.fcc.gov/edoc/426087",
+        "https://www.fcc.gov/edoc/426095"
       ],
-      "matchedItems": 0,
-      "extractedEntries": 10,
+      "matchedItems": 3,
+      "extractedEntries": 29,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -482,8 +504,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -610,23 +632,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792564107-gzip\"",
-      "lastModified": "Wed, 21 Oct 2026 06:28:27 GMT"
+      "etag": "\"1792661297-gzip\"",
+      "lastModified": "Thu, 22 Oct 2026 09:28:17 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-17T08:46:58.836Z",
+      "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "69e90afcfa1dd5b803620702fbb776ce744f628d3677f4213554fa28d466c48f",
+      "fingerprint": "53f69d0502c48f87b69445a6ce16669d118a9d59b730649f05d0dc3c58d314d7",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
+          "title": "Startup plans to rejuvenate the nuclear power industry with a new manufacturing approach",
+          "excerpt": "Founded by Jake Jurewicz ’14, SM ’15, Blue Energy manufactures giant pieces of nuclear reactors at shipyards and ships them on barges for final assembly, to lower costs.",
+          "publishedAt": "2026-10-22T04:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
           "title": "Fostering community amid Kendall Square’s innovation",
@@ -916,12 +944,6 @@
           "publishedAt": "2026-03-18T04:00:00.000Z"
         },
         {
-          "url": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
-          "title": "Next-generation geothermal energy: Promise, progress, and challenges",
-          "excerpt": "Geothermal innovators at MIT and elsewhere are seeking deeper and hotter rocks to generate electricity at scale.",
-          "publishedAt": "2026-03-13T18:55:00.000Z"
-        },
-        {
           "url": "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
           "title": "New method could increase LLM training efficiency",
           "excerpt": "By leveraging idle computing time, researchers can double the speed of model training while preserving accuracy.",
@@ -980,33 +1002,34 @@
         "https://news.mit.edu/2026/atmoszero-electrifies-boilers-to-decarbonize-industry-0121",
         "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
         "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
-        "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016"
+        "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
+        "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022"
       ],
       "matchedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-10-16T16:00:00.000Z",
+      "newestPublicationAt": "2026-10-22T04:00:00.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792573605\"",
-      "lastModified": "Wed, 21 Oct 2026 09:06:45 GMT"
+      "etag": "\"1792659341\"",
+      "lastModified": "Thu, 22 Oct 2026 08:55:41 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T15:34:55.284Z",
-      "lastSuccessAt": "2026-10-21T15:34:55.284Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-21T15:34:55.284Z",
+      "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "b50a0ef678daa863c0ff6ad98c309059ad07cff82d5fcc57a5c283d1cd9f7241",
+      "fingerprint": "e8d8e9f70174b08ceabb22f0194860ae8ee479fa567c90a2f056a7520743e672",
       "items": [
         {
           "url": "https://www.nature.com/articles/s41586-026-11317-6",
@@ -1027,8 +1050,26 @@
           "publishedAt": "2026-10-21"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03319-1",
+          "title": "Surprise! White dwarf stars come in a rainbow of colours",
+          "excerpt": "",
+          "publishedAt": "2026-10-21"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03161-5",
+          "title": "To heal sick cities, scientists and residents must work together",
+          "excerpt": "",
+          "publishedAt": "2026-10-21"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03077-0",
           "title": "An AI tool improves weather forecasts up to a month ahead",
+          "excerpt": "",
+          "publishedAt": "2026-10-21"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03357-9",
+          "title": "Teen depression and anxiety predicted by childhood brain development",
           "excerpt": "",
           "publishedAt": "2026-10-21"
         },
@@ -1094,7 +1135,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03342-2",
-          "title": "A single antimatter particle in a cage opens door to 'revolutionary' physics",
+          "title": "A single antimatter particle in a cage opens door to ‘revolutionary’ physics",
           "excerpt": "",
           "publishedAt": "2026-10-21"
         },
@@ -1439,24 +1480,6 @@
           "title": "Daily briefing: We’re close to reaching a 30% land-conservation target",
           "excerpt": "",
           "publishedAt": "2026-10-16"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03308-4",
-          "title": "IceCube just won a Nobel prize. Protect astroparticle physics projects with the same potential",
-          "excerpt": "",
-          "publishedAt": "2026-10-16"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03303-9",
-          "title": "Memory stays strong in old age when this brain enzyme is active",
-          "excerpt": "",
-          "publishedAt": "2026-10-16"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03195-9",
-          "title": "Unprecedented atlas explores mitochondria across the tree of life",
-          "excerpt": "",
-          "publishedAt": "2026-10-16"
         }
       ],
       "seenLinks": [
@@ -1703,7 +1726,10 @@
         "https://www.nature.com/articles/d41586-026-03358-8",
         "https://www.nature.com/articles/d41586-026-03200-1",
         "https://www.nature.com/articles/d41586-026-03316-4",
-        "https://www.nature.com/articles/d41586-026-03359-7"
+        "https://www.nature.com/articles/d41586-026-03359-7",
+        "https://www.nature.com/articles/d41586-026-03319-1",
+        "https://www.nature.com/articles/d41586-026-03161-5",
+        "https://www.nature.com/articles/d41586-026-03357-9"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
@@ -1714,7 +1740,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"9a8dd92bb88db63d3cde7b4fd47ee4a4\"",
+      "etag": "\"aa4908f2ce2a1ff1f8ea348cd67b0f19\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1722,15 +1748,30 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "edd9340b1e2607785009e92be1cc6b5e58d4d7ff9cd0c3b7b894cf1532f73521",
+      "fingerprint": "151911561bca82a029fd3b1a658ff4756b2f1a30913b4da89cc25560e1006656",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
+          "title": "QuantumScape · 8-K · 8-K",
+          "publishedAt": "2026-10-21",
+          "reportDate": "2026-10-21",
+          "acceptedAt": "2026-10-22T00:18:34.000Z",
+          "filingItems": [
+            "2.02",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/0001193125-26-427862-index.html",
+          "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001193125-26-427862"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/qs-20260630.htm",
           "title": "QuantumScape · 10-Q · 10-Q",
@@ -2273,21 +2314,6 @@
           "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "8-K",
           "accession": "0000950170-23-055202"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/qs-20230803.htm",
-          "title": "QuantumScape · 8-K · 8-K",
-          "publishedAt": "2023-08-08",
-          "reportDate": "2023-08-03",
-          "acceptedAt": "2023-08-09T00:10:53.000Z",
-          "filingItems": [
-            "8.01",
-            "9.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/0000950170-23-039810-index.html",
-          "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0000950170-23-039810"
         }
       ],
       "seenLinks": [
@@ -2330,11 +2356,12 @@
         "https://www.sec.gov/Archives/edgar/data/1811414/000095017024015241/qs-20240214.htm",
         "https://www.sec.gov/Archives/edgar/data/1811414/000095017023055982/qs-20230930.htm",
         "https://www.sec.gov/Archives/edgar/data/1811414/000095017023055202/qs-20231025.htm",
-        "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/qs-20230803.htm"
+        "https://www.sec.gov/Archives/edgar/data/1811414/000095017023039810/qs-20230803.htm",
+        "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 992,
-      "newestPublicationAt": "2026-07-24",
+      "extractedEntries": 993,
+      "newestPublicationAt": "2026-10-21",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -2349,8 +2376,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2991,8 +3018,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3540,8 +3567,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4179,8 +4206,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -4866,15 +4893,32 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "97a7a9689f8f5933a87a1bb85c00f0c7c9651e3030a16cfdc96904bb9cb93260",
+      "fingerprint": "1cad44e9bb3a97f5b6f1c6cc88ef2ff446220231eac21c7d3bbc22f05286bd6e",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+          "title": "Meta Platforms · 8-K · 8-K",
+          "publishedAt": "2026-10-21",
+          "reportDate": "2026-10-19",
+          "acceptedAt": "2026-10-22T00:03:35.000Z",
+          "filingItems": [
+            "1.01",
+            "2.02",
+            "8.01",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
+          "excerpt": "Company-filed disclosure; reported items 1.01, 2.02, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001628280-26-066700"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
           "title": "Meta Platforms · 10-Q · 10-Q",
@@ -5340,11 +5384,12 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000072/meta-20240905.htm",
         "https://www.sec.gov/Archives/edgar/data/1326801/000119312524197873/d876862d8k.htm",
         "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/meta-20240630.htm",
-        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000065/meta-20240731.htm"
+        "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000065/meta-20240731.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm"
       ],
-      "matchedItems": 31,
-      "extractedEntries": 1001,
-      "newestPublicationAt": "2026-07-30",
+      "matchedItems": 32,
+      "extractedEntries": 1004,
+      "newestPublicationAt": "2026-10-21",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -5359,8 +5404,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-15T09:23:36.337Z",
       "nextAttemptAt": null,
@@ -5975,7 +6020,7 @@
         "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 1000,
+      "extractedEntries": 1002,
       "newestPublicationAt": "2026-09-02",
       "excerpt": null,
       "publishedAt": null,
@@ -5991,8 +6036,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-21T09:35:54.392Z",
-      "lastSuccessAt": "2026-10-21T09:35:54.392Z",
+      "lastAttemptAt": "2026-10-22T09:36:15.329Z",
+      "lastSuccessAt": "2026-10-22T09:36:15.329Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-16T09:16:01.839Z",
       "nextAttemptAt": null,
@@ -6629,6 +6674,124 @@
     }
   },
   "events": [
+    {
+      "id": "4ab730b63cc35ba75982aabe",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426088",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d68b5116c3108f38a0b47c7b",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426087",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cbb5ead4a6eb369b09413650",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Application of Starlink Spectrum Holdings, LLC, Tristar License Group, LLC, and TLG Unpaired Holdings, LLC For Consent to Transfer Control of Licenses",
+      "url": "https://www.fcc.gov/edoc/426095",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ec52afc5868eee8926d48930",
+      "sourceId": "mit-energy",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "Startup plans to rejuvenate the nuclear power industry with a new manufacturing approach",
+      "url": "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-22T04:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8096791b4c742a464031a128",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Surprise! White dwarf stars come in a rainbow of colours",
+      "url": "https://www.nature.com/articles/d41586-026-03319-1",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "73f5dff19f15d8ba48be0b62",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "To heal sick cities, scientists and residents must work together",
+      "url": "https://www.nature.com/articles/d41586-026-03161-5",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "60afb891da13e5936982d406",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Teen depression and anxiety predicted by childhood brain development",
+      "url": "https://www.nature.com/articles/d41586-026-03357-9",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4788f3571516ff76d476fd37",
+      "sourceId": "sec-qs",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "QuantumScape",
+      "kind": "new-link",
+      "title": "QuantumScape · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c1dda6347692fb30ea61edb2",
+      "sourceId": "sec-meta",
+      "themes": [
+        "ai-glasses"
+      ],
+      "owner": "Meta Platforms",
+      "kind": "new-link",
+      "title": "Meta Platforms · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+      "detectedAt": "2026-10-22T09:36:15.329Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
     {
       "id": "1544485079cffd2874b61456",
       "sourceId": "nature-research",
