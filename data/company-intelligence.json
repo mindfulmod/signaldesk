@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T00:54:45.102Z",
+  "generatedAt": "2026-10-23T09:32:27.598Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1032,17 +1032,17 @@
       "factsCheckedAt": "2026-10-22T09:36:15.329Z",
       "factsAccession": "0001193125-26-427862",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 4.055,
+        "price": 4.15,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:05.000Z",
+        "asOf": "2026-10-22T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -1172,9 +1172,9 @@
           "marketCap": null
         },
         {
-          "price": 4.055,
+          "price": 4.15,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:05.000Z",
+          "asOf": "2026-10-22T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -2815,17 +2815,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 2.06,
+        "price": 2.02,
         "currency": "USD",
-        "asOf": "2026-10-22T15:36:53.000Z",
+        "asOf": "2026-10-22T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -2955,9 +2955,9 @@
           "marketCap": null
         },
         {
-          "price": 2.06,
+          "price": 2.02,
           "currency": "USD",
-          "asOf": "2026-10-22T15:36:53.000Z",
+          "asOf": "2026-10-22T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -4365,17 +4365,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 197.93,
+        "price": 198.22,
         "currency": "USD",
-        "asOf": "2026-10-22T15:36:06.000Z",
+        "asOf": "2026-10-22T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -4505,9 +4505,9 @@
           "marketCap": null
         },
         {
-          "price": 197.93,
+          "price": 198.22,
           "currency": "USD",
-          "asOf": "2026-10-22T15:36:06.000Z",
+          "asOf": "2026-10-22T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -6264,17 +6264,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 156.805,
+        "price": 158.79,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:06.000Z",
+        "asOf": "2026-10-22T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -6404,9 +6404,9 @@
           "marketCap": null
         },
         {
-          "price": 156.805,
+          "price": 158.79,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:06.000Z",
+          "asOf": "2026-10-22T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -8149,17 +8149,17 @@
       "factsCheckedAt": "2026-10-21T09:35:54.392Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 38.84,
+        "price": 38.77,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:03.000Z",
+        "asOf": "2026-10-22T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -8289,9 +8289,9 @@
           "marketCap": null
         },
         {
-          "price": 38.84,
+          "price": 38.77,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:03.000Z",
+          "asOf": "2026-10-22T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -8310,110 +8310,144 @@
       ],
       "financials": {
         "cash": {
-          "value": 15462000000,
+          "value": 11222000000,
           "unit": "USD",
           "start": null,
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
           "tag": "CashAndCashEquivalentsAtCarryingValue",
-          "accession": "0001628280-26-050705",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         },
         "revenue": {
-          "value": 60801000000,
+          "value": 64601000000,
           "unit": "USD",
-          "start": "2026-04-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
           "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-          "accession": "0001628280-26-050705",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         },
         "operatingCashFlow": {
-          "value": 64088000000,
+          "value": 96873000000,
           "unit": "USD",
           "start": "2026-01-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
           "tag": "NetCashProvidedByUsedInOperatingActivities",
-          "accession": "0001628280-26-050705",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         },
         "capex": {
-          "value": 49113000000,
+          "value": 83055000000,
           "unit": "USD",
           "start": "2026-01-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-          "accession": "0001628280-26-050705",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         },
         "netIncome": {
-          "value": 15848000000,
+          "value": 9860000000,
           "unit": "USD",
-          "start": "2026-04-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
           "tag": "NetIncomeLoss",
-          "accession": "0001628280-26-050705",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         },
-        "debtNoncurrent": {
-          "value": 83664000000,
+        "debtCurrent": {
+          "value": 2747000000,
           "unit": "USD",
           "start": null,
-          "end": "2026-06-30",
-          "filed": "2026-07-30",
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
           "form": "10-Q",
-          "tag": "LongTermDebtNoncurrent",
-          "accession": "0001628280-26-050705",
+          "tag": "LongTermDebtCurrent",
+          "accession": "0001628280-26-066773",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+        },
+        "debtNoncurrent": {
+          "value": 80922000000,
+          "unit": "USD",
+          "start": null,
+          "end": "2026-09-30",
+          "filed": "2026-10-22",
+          "form": "10-Q",
+          "tag": "LongTermDebtNoncurrent",
+          "accession": "0001628280-26-066773",
+          "stale": false,
+          "context": "Company-facts taxonomy; inspect filing context",
+          "shareClass": null,
+          "verified": false,
+          "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+          "alternatives": [],
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
         }
       },
       "histories": {
         "cash": [
+          {
+            "value": 11222000000,
+            "unit": "USD",
+            "start": null,
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
+            "form": "10-Q",
+            "tag": "CashAndCashEquivalentsAtCarryingValue",
+            "accession": "0001628280-26-066773",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 15462000000,
             "unit": "USD",
@@ -8453,34 +8487,34 @@
             "unit": "USD",
             "start": null,
             "end": "2025-12-31",
-            "filed": "2026-07-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0001628280-26-050705",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 10187000000,
             "unit": "USD",
             "start": null,
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 12005000000,
@@ -8600,26 +8634,43 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html"
-          },
+          }
+        ],
+        "revenue": [
           {
-            "value": 36890000000,
+            "value": 64601000000,
             "unit": "USD",
-            "start": null,
-            "end": "2023-09-30",
-            "filed": "2024-10-31",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
-            "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0001326801-24-000081",
-            "stale": true,
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession": "0001628280-26-066773",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/0001326801-24-000081-index.html"
-          }
-        ],
-        "revenue": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
+          {
+            "value": 181712000000,
+            "unit": "USD",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
+            "form": "10-Q",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession": "0001628280-26-066773",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 60801000000,
             "unit": "USD",
@@ -8693,34 +8744,34 @@
             "unit": "USD",
             "start": "2025-07-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 141073000000,
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 47516000000,
@@ -8789,43 +8840,26 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html"
-          },
-          {
-            "value": 40589000000,
-            "unit": "USD",
-            "start": "2024-07-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-30",
-            "form": "10-Q",
-            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "accession": "0001628280-25-047240",
-            "stale": true,
-            "context": "Company-facts taxonomy; inspect filing context",
-            "shareClass": null,
-            "verified": false,
-            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
-            "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
-          },
-          {
-            "value": 116116000000,
-            "unit": "USD",
-            "start": "2024-01-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-30",
-            "form": "10-Q",
-            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-            "accession": "0001628280-25-047240",
-            "stale": true,
-            "context": "Company-facts taxonomy; inspect filing context",
-            "shareClass": null,
-            "verified": false,
-            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
-            "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
           }
         ],
         "operatingCashFlow": [
+          {
+            "value": 96873000000,
+            "unit": "USD",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
+            "form": "10-Q",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "accession": "0001628280-26-066773",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 64088000000,
             "unit": "USD",
@@ -8882,17 +8916,17 @@
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 49587000000,
@@ -9012,26 +9046,26 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html"
-          },
+          }
+        ],
+        "capex": [
           {
-            "value": 51709000000,
+            "value": 83055000000,
             "unit": "USD",
-            "start": "2023-01-01",
-            "end": "2023-09-30",
-            "filed": "2024-10-31",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
-            "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "accession": "0001326801-24-000081",
-            "stale": true,
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession": "0001628280-26-066773",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/0001326801-24-000081-index.html"
-          }
-        ],
-        "capex": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 49113000000,
             "unit": "USD",
@@ -9088,17 +9122,17 @@
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 29479000000,
@@ -9218,26 +9252,43 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html"
-          },
+          }
+        ],
+        "netIncome": [
           {
-            "value": 19453000000,
+            "value": 9860000000,
             "unit": "USD",
-            "start": "2023-01-01",
-            "end": "2023-09-30",
-            "filed": "2024-10-31",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
-            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-            "accession": "0001326801-24-000081",
-            "stale": true,
+            "tag": "NetIncomeLoss",
+            "accession": "0001628280-26-066773",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/0001326801-24-000081-index.html"
-          }
-        ],
-        "netIncome": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
+          {
+            "value": 52481000000,
+            "unit": "USD",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
+            "form": "10-Q",
+            "tag": "NetIncomeLoss",
+            "accession": "0001628280-26-066773",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 15848000000,
             "unit": "USD",
@@ -9311,34 +9362,34 @@
             "unit": "USD",
             "start": "2025-07-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "NetIncomeLoss",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 37690000000,
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "NetIncomeLoss",
-            "accession": "0001628280-25-047240",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 18337000000,
@@ -9407,43 +9458,62 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html"
-          },
+          }
+        ],
+        "debtCurrent": [
           {
-            "value": 15688000000,
+            "value": 2747000000,
             "unit": "USD",
-            "start": "2024-07-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-30",
+            "start": null,
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
-            "tag": "NetIncomeLoss",
-            "accession": "0001628280-25-047240",
-            "stale": true,
+            "tag": "LongTermDebtCurrent",
+            "accession": "0001628280-26-066773",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
-            "value": 41522000000,
+            "value": 0,
             "unit": "USD",
-            "start": "2024-01-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-30",
+            "start": null,
+            "end": "2025-12-31",
+            "filed": "2026-10-22",
             "form": "10-Q",
-            "tag": "NetIncomeLoss",
-            "accession": "0001628280-25-047240",
-            "stale": true,
+            "tag": "LongTermDebtCurrent",
+            "accession": "0001628280-26-066773",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           }
         ],
         "debtNoncurrent": [
+          {
+            "value": 80922000000,
+            "unit": "USD",
+            "start": null,
+            "end": "2026-09-30",
+            "filed": "2026-10-22",
+            "form": "10-Q",
+            "tag": "LongTermDebtNoncurrent",
+            "accession": "0001628280-26-066773",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
+          },
           {
             "value": 83664000000,
             "unit": "USD",
@@ -9483,17 +9553,17 @@
             "unit": "USD",
             "start": null,
             "end": "2025-12-31",
-            "filed": "2026-07-30",
+            "filed": "2026-10-22",
             "form": "10-Q",
             "tag": "LongTermDebtNoncurrent",
-            "accession": "0001628280-26-050705",
+            "accession": "0001628280-26-066773",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html"
           },
           {
             "value": 28834000000,
@@ -9630,58 +9700,36 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/0001326801-25-000017-index.html"
-          },
-          {
-            "value": 18383000000,
-            "unit": "USD",
-            "start": null,
-            "end": "2023-09-30",
-            "filed": "2023-10-26",
-            "form": "10-Q",
-            "tag": "LongTermDebtNoncurrent",
-            "accession": "0001326801-23-000103",
-            "stale": true,
-            "context": "Company-facts taxonomy; inspect filing context",
-            "shareClass": null,
-            "verified": false,
-            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
-            "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000103/0001326801-23-000103-index.html"
           }
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
-        "title": "Meta Platforms · 8-K · 8-K",
-        "publishedAt": "2026-10-21",
-        "reportDate": "2026-10-19",
-        "acceptedAt": "2026-10-22T00:03:35.000Z",
-        "filingItems": [
-          "1.01",
-          "2.02",
-          "8.01",
-          "9.01"
-        ],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.html",
-        "excerpt": "Company-filed disclosure; reported items 1.01, 2.02, 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "8-K",
-        "accession": "0001628280-26-066700"
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
+        "title": "Meta Platforms · 10-Q · 10-Q",
+        "publishedAt": "2026-10-22",
+        "reportDate": "2026-09-30",
+        "acceptedAt": "2026-10-22T04:00:08.000Z",
+        "filingItems": [],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
+        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "10-Q",
+        "accession": "0001628280-26-066773"
       },
-      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
-      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
-      "factsAccession": "0001628280-26-066700",
+      "factsAttemptAt": "2026-10-23T09:32:27.598Z",
+      "factsCheckedAt": "2026-10-23T09:32:27.598Z",
+      "factsAccession": "0001628280-26-066773",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 656.895,
+        "price": 648.85,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:09.000Z",
+        "asOf": "2026-10-22T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -9811,9 +9859,9 @@
           "marketCap": null
         },
         {
-          "price": 656.895,
+          "price": 648.85,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:09.000Z",
+          "asOf": "2026-10-22T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -11637,17 +11685,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 524.74,
+        "price": 521.08,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:03.000Z",
+        "asOf": "2026-10-22T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -11777,9 +11825,9 @@
           "marketCap": null
         },
         {
-          "price": 524.74,
+          "price": 521.08,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:03.000Z",
+          "asOf": "2026-10-22T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -13603,17 +13651,17 @@
       "factsCheckedAt": "2026-10-16T19:41:39.139Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-22T15:37:09.506Z",
+      "quoteAttemptAt": "2026-10-23T09:32:27.598Z",
       "quote": {
-        "price": 327.865,
+        "price": 324.22,
         "currency": "USD",
-        "asOf": "2026-10-22T15:37:10.000Z",
+        "asOf": "2026-10-22T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-22T15:37:09.506Z",
+      "quoteCheckedAt": "2026-10-23T09:32:27.598Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -13743,9 +13791,9 @@
           "marketCap": null
         },
         {
-          "price": 327.865,
+          "price": 324.22,
           "currency": "USD",
-          "asOf": "2026-10-22T15:37:10.000Z",
+          "asOf": "2026-10-22T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
