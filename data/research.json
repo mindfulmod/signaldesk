@@ -1,10 +1,76 @@
 {
   "schemaVersion": 1,
-  "collectionId": "39893cfc-8bda-4751-8ee6-906436ece9df",
-  "generatedAt": "2026-10-24T01:01:31.612Z",
-  "sourceCheckedAt": "2026-10-23T20:04:22.393Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40047832088",
+  "collectionId": "a7e39ce9-dbd6-4951-b334-5ce5c90ef3c7",
+  "generatedAt": "2026-10-24T09:05:30.304Z",
+  "sourceCheckedAt": "2026-10-24T09:05:30.304Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40080560394",
   "documents": [
+    {
+      "id": "b8656b521cbb700d8a800e88",
+      "sourceId": "sec-qs",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/qs-20260930.htm",
+      "title": "QuantumScape · 10-Q · 10-Q",
+      "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+      "owner": "QuantumScape",
+      "tier": "filing",
+      "storyId": "a13985e895dad2596575a267",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T09:05:30.304Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "solid-state-batteries"
+      ],
+      "filingItems": [],
+      "reportDate": "2026-09-30",
+      "acceptedAt": "2026-10-23T20:07:45.000Z",
+      "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html",
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T09:05:30.304Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e1695136fcd24961a7d20f26",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426146",
+      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "e901ceb923ece59ffff807b9",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-24T09:05:30.304Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-10-24T09:05:30.304Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "07378dfd2f902bc62d64374d",
       "sourceId": "sec-meta",
@@ -23791,52 +23857,6 @@
         "satellite-phones"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "462a1872363a227dc10c2bd4",
-      "sourceId": "sec-googl",
-      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526234488/d144566d8k.htm",
-      "title": "Alphabet · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Alphabet",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-05-21",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "485ca03b16e5a8b726adeaaa",
-      "sourceId": "sec-tm",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525133718/d62410d6k.htm",
-      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Toyota",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-06-03",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -31348,6 +31368,24 @@
       "versions": {
         "07378dfd2f902bc62d64374d": "2026-10-23T09:32:27.598Z"
       }
+    },
+    "e901ceb923ece59ffff807b9": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-10-24T09:05:30.304Z",
+      "latestId": "e1695136fcd24961a7d20f26",
+      "versions": {
+        "e1695136fcd24961a7d20f26": "2026-10-24T09:05:30.304Z"
+      }
+    },
+    "a13985e895dad2596575a267": {
+      "sourceId": "sec-qs",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T09:05:30.304Z",
+      "latestId": "b8656b521cbb700d8a800e88",
+      "versions": {
+        "b8656b521cbb700d8a800e88": "2026-10-24T09:05:30.304Z"
+      }
     }
   },
   "reviews": [],
@@ -31361,72 +31399,72 @@
       ],
       "financials": {
         "cash": {
-          "value": 132872000,
+          "value": 75599000,
           "unit": "USD",
           "start": null,
-          "end": "2026-06-30",
-          "filed": "2026-07-24",
+          "end": "2026-09-30",
+          "filed": "2026-10-23",
           "form": "10-Q",
           "tag": "CashAndCashEquivalentsAtCarryingValue",
-          "accession": "0001193125-26-316073",
+          "accession": "0001193125-26-430428",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
         },
         "operatingCashFlow": {
-          "value": -116259000,
+          "value": -171319000,
           "unit": "USD",
           "start": "2026-01-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-24",
+          "end": "2026-09-30",
+          "filed": "2026-10-23",
           "form": "10-Q",
           "tag": "NetCashProvidedByUsedInOperatingActivities",
-          "accession": "0001193125-26-316073",
+          "accession": "0001193125-26-430428",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
         },
         "capex": {
-          "value": 14598000,
+          "value": 19047000,
           "unit": "USD",
           "start": "2026-01-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-24",
+          "end": "2026-09-30",
+          "filed": "2026-10-23",
           "form": "10-Q",
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-          "accession": "0001193125-26-316073",
+          "accession": "0001193125-26-430428",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
         },
         "netIncome": {
-          "value": -98240000,
+          "value": -84477000,
           "unit": "USD",
-          "start": "2026-04-01",
-          "end": "2026-06-30",
-          "filed": "2026-07-24",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "filed": "2026-10-23",
           "form": "10-Q",
           "tag": "NetIncomeLoss",
-          "accession": "0001193125-26-316073",
+          "accession": "0001193125-26-430428",
           "stale": false,
           "context": "Company-facts taxonomy; inspect filing context",
           "shareClass": null,
           "verified": false,
           "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
           "alternatives": [],
-          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html"
+          "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
         },
         "shares": {
           "value": 95449946,
@@ -31450,6 +31488,23 @@
       },
       "histories": {
         "cash": [
+          {
+            "value": 75599000,
+            "unit": "USD",
+            "start": null,
+            "end": "2026-09-30",
+            "filed": "2026-10-23",
+            "form": "10-Q",
+            "tag": "CashAndCashEquivalentsAtCarryingValue",
+            "accession": "0001193125-26-430428",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
+          },
           {
             "value": 132872000,
             "unit": "USD",
@@ -31489,34 +31544,34 @@
             "unit": "USD",
             "start": null,
             "end": "2025-12-31",
-            "filed": "2026-07-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0001193125-26-316073",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": 225826000,
             "unit": "USD",
             "start": null,
             "end": "2025-09-30",
-            "filed": "2025-10-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0001193125-25-249971",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": 172451000,
@@ -31636,26 +31691,26 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526071556/0001193125-26-071556-index.html"
-          },
+          }
+        ],
+        "operatingCashFlow": [
           {
-            "value": 250824000,
+            "value": -171319000,
             "unit": "USD",
-            "start": null,
-            "end": "2023-09-30",
-            "filed": "2024-10-25",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-23",
             "form": "10-Q",
-            "tag": "CashAndCashEquivalentsAtCarryingValue",
-            "accession": "0000950170-24-117409",
-            "stale": true,
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "accession": "0001193125-26-430428",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024117409/0000950170-24-117409-index.html"
-          }
-        ],
-        "operatingCashFlow": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
+          },
           {
             "value": -116259000,
             "unit": "USD",
@@ -31712,17 +31767,17 @@
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "accession": "0001193125-25-249971",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": -122589000,
@@ -31842,26 +31897,26 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526071556/0001193125-26-071556-index.html"
-          },
+          }
+        ],
+        "capex": [
           {
-            "value": -182551000,
+            "value": 19047000,
             "unit": "USD",
-            "start": "2023-01-01",
-            "end": "2023-09-30",
-            "filed": "2024-10-25",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-23",
             "form": "10-Q",
-            "tag": "NetCashProvidedByUsedInOperatingActivities",
-            "accession": "0000950170-24-117409",
-            "stale": true,
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession": "0001193125-26-430428",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024117409/0000950170-24-117409-index.html"
-          }
-        ],
-        "capex": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
+          },
           {
             "value": 14598000,
             "unit": "USD",
@@ -31918,17 +31973,17 @@
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-            "accession": "0001193125-25-249971",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": 14421000,
@@ -32048,26 +32103,43 @@
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
             "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526071556/0001193125-26-071556-index.html"
-          },
+          }
+        ],
+        "netIncome": [
           {
-            "value": 70708000,
+            "value": -84477000,
             "unit": "USD",
-            "start": "2023-01-01",
-            "end": "2023-09-30",
-            "filed": "2024-10-25",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-23",
             "form": "10-Q",
-            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
-            "accession": "0000950170-24-117409",
-            "stale": true,
+            "tag": "NetIncomeLoss",
+            "accession": "0001193125-26-430428",
+            "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024117409/0000950170-24-117409-index.html"
-          }
-        ],
-        "netIncome": [
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
+          },
+          {
+            "value": -283516000,
+            "unit": "USD",
+            "start": "2026-01-01",
+            "end": "2026-09-30",
+            "filed": "2026-10-23",
+            "form": "10-Q",
+            "tag": "NetIncomeLoss",
+            "accession": "0001193125-26-430428",
+            "stale": false,
+            "context": "Company-facts taxonomy; inspect filing context",
+            "shareClass": null,
+            "verified": false,
+            "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
+            "alternatives": [],
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
+          },
           {
             "value": -98240000,
             "unit": "USD",
@@ -32141,34 +32213,34 @@
             "unit": "USD",
             "start": "2025-07-01",
             "end": "2025-09-30",
-            "filed": "2025-10-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "NetIncomeLoss",
-            "accession": "0001193125-25-249971",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": -334945000,
             "unit": "USD",
             "start": "2025-01-01",
             "end": "2025-09-30",
-            "filed": "2025-10-24",
+            "filed": "2026-10-23",
             "form": "10-Q",
             "tag": "NetIncomeLoss",
-            "accession": "0001193125-25-249971",
+            "accession": "0001193125-26-430428",
             "stale": false,
             "context": "Company-facts taxonomy; inspect filing context",
             "shareClass": null,
             "verified": false,
             "selectionBasis": "Latest reported period/accession; no conflicting supported facts",
             "alternatives": [],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
+            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html"
           },
           {
             "value": -114698000,
@@ -32248,62 +32320,6 @@
               }
             ],
             "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526071556/0001193125-26-071556-index.html"
-          },
-          {
-            "value": null,
-            "unit": "USD",
-            "start": "2024-07-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-24",
-            "form": "10-Q",
-            "tag": "NetIncomeLoss",
-            "accession": "0001193125-25-249971",
-            "stale": true,
-            "context": "Company-facts taxonomy; inspect filing context",
-            "shareClass": null,
-            "verified": false,
-            "selectionBasis": "Conflicting same-period facts withheld pending filing-context review",
-            "alternatives": [
-              {
-                "value": -119572000,
-                "tag": "NetIncomeLoss",
-                "accession": "0001193125-25-249971"
-              },
-              {
-                "value": -119699000,
-                "tag": "ProfitLoss",
-                "accession": "0001193125-25-249971"
-              }
-            ],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
-          },
-          {
-            "value": null,
-            "unit": "USD",
-            "start": "2024-01-01",
-            "end": "2024-09-30",
-            "filed": "2025-10-24",
-            "form": "10-Q",
-            "tag": "NetIncomeLoss",
-            "accession": "0001193125-25-249971",
-            "stale": true,
-            "context": "Company-facts taxonomy; inspect filing context",
-            "shareClass": null,
-            "verified": false,
-            "selectionBasis": "Conflicting same-period facts withheld pending filing-context review",
-            "alternatives": [
-              {
-                "value": -363195000,
-                "tag": "NetIncomeLoss",
-                "accession": "0001193125-25-249971"
-              },
-              {
-                "value": -363280000,
-                "tag": "ProfitLoss",
-                "accession": "0001193125-25-249971"
-              }
-            ],
-            "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html"
           }
         ],
         "shares": [
@@ -32363,23 +32379,20 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm",
-        "title": "QuantumScape · 8-K · 8-K",
-        "publishedAt": "2026-10-21",
-        "reportDate": "2026-10-21",
-        "acceptedAt": "2026-10-22T00:18:34.000Z",
-        "filingItems": [
-          "2.02",
-          "9.01"
-        ],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/0001193125-26-427862-index.html",
-        "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "8-K",
-        "accession": "0001193125-26-427862"
+        "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/qs-20260930.htm",
+        "title": "QuantumScape · 10-Q · 10-Q",
+        "publishedAt": "2026-10-23",
+        "reportDate": "2026-09-30",
+        "acceptedAt": "2026-10-23T20:07:45.000Z",
+        "filingItems": [],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/0001193125-26-430428-index.html",
+        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "10-Q",
+        "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-10-22T09:36:15.329Z",
-      "factsCheckedAt": "2026-10-22T09:36:15.329Z",
-      "factsAccession": "0001193125-26-427862",
+      "factsAttemptAt": "2026-10-24T09:05:30.304Z",
+      "factsCheckedAt": "2026-10-24T09:05:30.304Z",
+      "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
       "quote": {
@@ -45227,7 +45240,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-24T01:01:31.612Z",
+    "generatedAt": "2026-10-24T09:05:30.304Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45367,15 +45380,6 @@
       },
       {
         "date": "2026-10-23",
-        "topics": [
-          "d08ada4bb3c49858bec50b10",
-          "b9d1dcf6c13212a659fc8340",
-          "3e2d4d56ee7e63fef142f78d"
-        ],
-        "documentCount": 307
-      },
-      {
-        "date": "2026-10-24",
         "topics": [
           "d08ada4bb3c49858bec50b10",
           "b9d1dcf6c13212a659fc8340",
@@ -45629,12 +45633,12 @@
       }
     ],
     "datedDocuments": 307,
-    "comparableDays": 15,
-    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
+    "comparableDays": 16,
+    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history. At least one discovery feed is unavailable or overdue; history accumulation is paused."
   },
   "coverage": {
     "totalSources": 22,
-    "readableSources": 19,
+    "readableSources": 18,
     "companies": 8
   }
 }
