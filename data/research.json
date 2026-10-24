@@ -1,10 +1,351 @@
 {
   "schemaVersion": 1,
-  "collectionId": "a7e39ce9-dbd6-4951-b334-5ce5c90ef3c7",
-  "generatedAt": "2026-10-24T09:05:30.304Z",
-  "sourceCheckedAt": "2026-10-24T09:05:30.304Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40080560394",
+  "collectionId": "653cb96f-1e19-4586-810a-d8533a45a105",
+  "generatedAt": "2026-10-24T14:06:32.727Z",
+  "sourceCheckedAt": "2026-10-24T14:06:32.727Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40101008829",
   "documents": [
+    {
+      "id": "2b5e3f09ec87d994488635e4",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-02582-6",
+      "title": "I’m expected to work excessive hours in the lab. Should I speak up about my disability?",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3f8ca005341bbb0f9a6b3db3",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5a08c752d658050376baeba3",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11303-y",
+      "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "f8ecd36468d302e91af76d34",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6a8024a0dd996295b93ccaeb",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03400-9",
+      "title": "Daily briefing: How tech billionaires are changing science funding",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "874e6e031e1396fb9a27de90",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-21",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-21",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "71eb24cfcc09df96ab2de7d5",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03417-0",
+      "title": "Moderna mRNA vaccine almost halves the risk of skin cancer returning",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3ef629b4fc2bab0f4283e9ee",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Risk / setback language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7f2789a9830ff0bc9c016818",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03438-9",
+      "title": "Daily briefing: The tell-tale features of a Denisovan",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "957587fcd8e03e4f21b5d605",
+      "originalPublishedAt": "2026-10-22",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-22",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-22",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a67dd86f5b2f0c23ea2391aa",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03318-2",
+      "title": "Sleep declines in rural communities after electricity arrives",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "441fa592ba7d14898cf4b24f",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "aa7ec1c2c5a6abc72fab6618",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03108-w",
+      "title": "Rebody",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "df2c057bd304a3b02110a40f",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b4f150bc1f692435d893a257",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03416-1",
+      "title": "First person infected with rare Shamonda virus: what we know",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "189bf0ce67dc3121ad0a4ba4",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c99deb1b0c34cbea2fb2020a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03395-3",
+      "title": "Elusive snow leopards and evasive particles: Books in brief",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "29cb1c2c960edd18a2f3e5ab",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d341d2532dd3e90b9d634b2d",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03418-z",
+      "title": "Briefing Chat: How physicists successfully trapped the electron's antimatter equivalent",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "440490205d7e525958c428f8",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e94ee96077812dc8ba286a6a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03383-7",
+      "title": "Elizabeth Holmes film enthralls — but her legacy haunts science",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "6d10b7acf82ae981f2c3304a",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "b8656b521cbb700d8a800e88",
       "sourceId": "sec-qs",
@@ -23611,252 +23952,6 @@
         "ai-work"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "3fdd39e8fb61f8be1f804a92",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
-      "title": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
-      "excerpt": "The MBA student and entrepreneur is learning to lead a more resilient future with her renewable energy company.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-05-26T20:10:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-05-26T20:10:00.000Z"
-    },
-    {
-      "id": "3feb2f03d1794390b205295f",
-      "sourceId": "sec-tm",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526273360/d153396d6k.htm",
-      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Toyota",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-06-17",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "405a0d6b3665a95607c8b354",
-      "sourceId": "sec-tmus",
-      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000078/tmus-20250424.htm",
-      "title": "T-Mobile US · 8-K · TMUS FORM 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "T-Mobile US",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-04-24",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "41066e6c684aa87d869a8ca9",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11113-2",
-      "title": "Human genetics implicates a BACH2–NRF2 axis in fetal haemoglobin activation",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "41bb142126d6e9be56213190",
-      "sourceId": "sec-asts",
-      "url": "https://www.sec.gov/Archives/edgar/data/1780312/000178031226000006/asts-20251231.htm",
-      "title": "AST SpaceMobile · 10-K · 10-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "AST SpaceMobile",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-03-02",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "42782e8f5cc069d277d06bc3",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312523271376/d566386d8k.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2023-11-06",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "42dc7a450efa5cc065620454",
-      "sourceId": "mit-energy",
-      "url": "https://news.mit.edu/2026/sustaining-diplomacy-amid-us-china-competition-0318",
-      "title": "Sustaining diplomacy amid competition in US-China relations",
-      "excerpt": "At MIT, former U.S. ambassador to China Nicholas Burns highlights climate change as an area for diplomatic engagement, while exploring areas including China's emphasis on STEM education.",
-      "owner": "MIT",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-03-18T04:00:00.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-03-18T04:00:00.000Z"
-    },
-    {
-      "id": "430b7feaa30da928e0f84a89",
-      "sourceId": "sec-meta",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
-      "title": "Meta Platforms · 10-Q · 10-Q",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Meta Platforms",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-04-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-glasses"
-      ],
-      "metadataOnly": true
-    },
-    {
-      "id": "430e505426e464ca6f2dc4b7",
-      "sourceId": "nsf-research",
-      "url": "https://www.nsf.gov/news/podcast-ai-wearable-devices",
-      "title": "Podcast: AI and wearable devices",
-      "excerpt": "Mark Hersam an NSF-supported researcher, discusses nanoelectronic materials and how a cerebellum-inspired approach may transform how AI performs in wearable devices...",
-      "owner": "NSF",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-08T18:51:45.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-09-08T18:51:45.000Z"
-    },
-    {
-      "id": "43999d11969847db00f0ccf5",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11090-6",
-      "title": "Evolution of terrestrial anatomy revealed by a derived stem tetrapod",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "44d0e1dd969fdb6038a4d7ca",
-      "sourceId": "sec-tmus",
-      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000010/tmus-20251231.htm",
-      "title": "T-Mobile US · 10-K · TMUS FORM 10-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "T-Mobile US",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2026-02-11",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "satellite-phones"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -31386,6 +31481,105 @@
       "versions": {
         "b8656b521cbb700d8a800e88": "2026-10-24T09:05:30.304Z"
       }
+    },
+    "f8ecd36468d302e91af76d34": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "5a08c752d658050376baeba3",
+      "versions": {
+        "5a08c752d658050376baeba3": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "29cb1c2c960edd18a2f3e5ab": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "c99deb1b0c34cbea2fb2020a",
+      "versions": {
+        "c99deb1b0c34cbea2fb2020a": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "441fa592ba7d14898cf4b24f": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "a67dd86f5b2f0c23ea2391aa",
+      "versions": {
+        "a67dd86f5b2f0c23ea2391aa": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "440490205d7e525958c428f8": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "d341d2532dd3e90b9d634b2d",
+      "versions": {
+        "d341d2532dd3e90b9d634b2d": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "189bf0ce67dc3121ad0a4ba4": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "b4f150bc1f692435d893a257",
+      "versions": {
+        "b4f150bc1f692435d893a257": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "6d10b7acf82ae981f2c3304a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "e94ee96077812dc8ba286a6a",
+      "versions": {
+        "e94ee96077812dc8ba286a6a": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "df2c057bd304a3b02110a40f": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "aa7ec1c2c5a6abc72fab6618",
+      "versions": {
+        "aa7ec1c2c5a6abc72fab6618": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "3ef629b4fc2bab0f4283e9ee": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "71eb24cfcc09df96ab2de7d5",
+      "versions": {
+        "71eb24cfcc09df96ab2de7d5": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "3f8ca005341bbb0f9a6b3db3": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "2b5e3f09ec87d994488635e4",
+      "versions": {
+        "2b5e3f09ec87d994488635e4": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "957587fcd8e03e4f21b5d605": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-22",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "7f2789a9830ff0bc9c016818",
+      "versions": {
+        "7f2789a9830ff0bc9c016818": "2026-10-24T14:06:32.727Z"
+      }
+    },
+    "874e6e031e1396fb9a27de90": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-21",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "latestId": "6a8024a0dd996295b93ccaeb",
+      "versions": {
+        "6a8024a0dd996295b93ccaeb": "2026-10-24T14:06:32.727Z"
+      }
     }
   },
   "reviews": [],
@@ -32394,7 +32588,7 @@
       "factsCheckedAt": "2026-10-24T09:05:30.304Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 4.03,
         "currency": "USD",
@@ -32404,7 +32598,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -34186,7 +34380,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 1.98,
         "currency": "USD",
@@ -34196,7 +34390,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35745,7 +35939,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 196.79,
         "currency": "USD",
@@ -35755,7 +35949,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -37653,7 +37847,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 146.54,
         "currency": "USD",
@@ -37663,7 +37857,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39547,7 +39741,7 @@
       "factsCheckedAt": "2026-10-21T09:35:54.392Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 39.79,
         "currency": "USD",
@@ -39557,7 +39751,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41126,7 +41320,7 @@
       "factsCheckedAt": "2026-10-23T09:32:27.598Z",
       "factsAccession": "0001628280-26-066773",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 642.62,
         "currency": "USD",
@@ -41136,7 +41330,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43101,7 +43295,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 524.51,
         "currency": "USD",
@@ -43111,7 +43305,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -45076,7 +45270,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T01:01:31.612Z",
+      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
       "quote": {
         "price": 320.21,
         "currency": "USD",
@@ -45086,7 +45280,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T01:01:31.612Z",
+      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -45240,7 +45434,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-24T09:05:30.304Z",
+    "generatedAt": "2026-10-24T14:06:32.727Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45386,6 +45580,15 @@
           "3e2d4d56ee7e63fef142f78d"
         ],
         "documentCount": 307
+      },
+      {
+        "date": "2026-10-24",
+        "topics": [
+          "d08ada4bb3c49858bec50b10",
+          "b9d1dcf6c13212a659fc8340",
+          "3e2d4d56ee7e63fef142f78d"
+        ],
+        "documentCount": 316
       }
     ],
     "candidates": [
@@ -45632,13 +45835,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 307,
-    "comparableDays": 16,
-    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history. At least one discovery feed is unavailable or overdue; history accumulation is paused."
+    "datedDocuments": 316,
+    "comparableDays": 15,
+    "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
     "totalSources": 22,
-    "readableSources": 18,
+    "readableSources": 19,
     "companies": 8
   }
 }

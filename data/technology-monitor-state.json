@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T09:05:30.304Z",
+  "generatedAt": "2026-10-24T14:06:32.727Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -1004,16 +1004,70 @@
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "error",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-23T09:32:27.598Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-24T14:06:32.727Z",
+      "lastSuccessAt": "2026-10-24T14:06:32.727Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-23T09:32:27.598Z",
-      "nextAttemptAt": "2026-10-24T10:05:30.304Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "38ab26a1f3b64e672182ad513ac4cf398dfaca304a0e5f4166b4cb4ab978e762",
+      "lastChangedAt": "2026-10-24T14:06:32.727Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "02646e220f6b81cd1440c82b4a59adc1a9a75d974ccd13d722de8dff721f404a",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11303-y",
+          "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03395-3",
+          "title": "Elusive snow leopards and evasive particles: Books in brief",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03318-2",
+          "title": "Sleep declines in rural communities after electricity arrives",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03418-z",
+          "title": "Briefing Chat: How physicists successfully trapped the electron's antimatter equivalent",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03416-1",
+          "title": "First person infected with rare Shamonda virus: what we know",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03383-7",
+          "title": "Elizabeth Holmes film enthralls — but her legacy haunts science",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03108-w",
+          "title": "Rebody",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03417-0",
+          "title": "Moderna mRNA vaccine almost halves the risk of skin cancer returning",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02582-6",
+          "title": "I’m expected to work excessive hours in the lab. Should I speak up about my disability?",
+          "excerpt": "",
+          "publishedAt": "2026-10-23"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03414-3",
           "title": "Can a 'lullaby' save coral reefs from extinction?",
@@ -1035,6 +1089,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03389-1",
           "title": "Can maths survive AI? Fields medallist Terence Tao calls for a ‘Maths 2.0’ world",
+          "excerpt": "",
+          "publishedAt": "2026-10-22"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03438-9",
+          "title": "Daily briefing: The tell-tale features of a Denisovan",
           "excerpt": "",
           "publishedAt": "2026-10-22"
         },
@@ -1131,6 +1191,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03066-3",
           "title": "Worms live longer in cool conditions thanks to a muscle-derived molecule",
+          "excerpt": "",
+          "publishedAt": "2026-10-21"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03400-9",
+          "title": "Daily briefing: How tech billionaires are changing science funding",
           "excerpt": "",
           "publishedAt": "2026-10-21"
         },
@@ -1397,72 +1463,6 @@
           "title": "Toxic chemicals in fentanyl revealed by speedy technique",
           "excerpt": "",
           "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03237-2",
-          "title": "Light and mirrors move large quantum computers closer to reality",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03228-3",
-          "title": "Audio long read: How to stay smart in the age of AI — the science of critical thinking",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03345-z",
-          "title": "US government probe into postdoc visas worries scientists",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03265-y",
-          "title": "Microdosing LSD shows some cognitive benefits — but only for women",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03312-8",
-          "title": "How pregnancy reshapes the brain throughout life",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03275-w",
-          "title": "Climate scientists face deluge of public-records requests about fossil-fuel studies",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03315-5",
-          "title": "‘Fiercely stubborn’: the US scientists continuing their research amid funding cuts",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03339-x",
-          "title": "Experienced researchers ‘disrupt’ less than rookie scientists — but their ideas last",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03313-7",
-          "title": "Three reasons why AI is not conscious and perhaps never will be",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11290-0",
-          "title": "Author Correction: Long-read sequencing reveals pre-meiotic gene conversion in sperm",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03309-3",
-          "title": "How to compare and strengthen research systems",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
         }
       ],
       "seenLinks": [
@@ -1718,18 +1718,29 @@
         "https://www.nature.com/articles/d41586-026-03389-1",
         "https://www.nature.com/articles/s41586-026-11312-x",
         "https://www.nature.com/articles/d41586-026-03320-8",
-        "https://www.nature.com/articles/d41586-026-03374-8"
+        "https://www.nature.com/articles/d41586-026-03374-8",
+        "https://www.nature.com/articles/s41586-026-11303-y",
+        "https://www.nature.com/articles/d41586-026-03395-3",
+        "https://www.nature.com/articles/d41586-026-03318-2",
+        "https://www.nature.com/articles/d41586-026-03418-z",
+        "https://www.nature.com/articles/d41586-026-03416-1",
+        "https://www.nature.com/articles/d41586-026-03383-7",
+        "https://www.nature.com/articles/d41586-026-03108-w",
+        "https://www.nature.com/articles/d41586-026-03417-0",
+        "https://www.nature.com/articles/d41586-026-02582-6",
+        "https://www.nature.com/articles/d41586-026-03438-9",
+        "https://www.nature.com/articles/d41586-026-03400-9"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-22",
+      "newestPublicationAt": "2026-10-23",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"bb59754fc123caa7116338d0069f0edf\"",
+      "etag": "\"5f7f315f3b9ffb5560bad50b06c7d658\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -6674,6 +6685,138 @@
     }
   },
   "events": [
+    {
+      "id": "c98e9982dd812b79395b916f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+      "url": "https://www.nature.com/articles/s41586-026-11303-y",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "52033c15de040b0467e2c803",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Elusive snow leopards and evasive particles: Books in brief",
+      "url": "https://www.nature.com/articles/d41586-026-03395-3",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7b5d42b74c1f4beb3cee2972",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Sleep declines in rural communities after electricity arrives",
+      "url": "https://www.nature.com/articles/d41586-026-03318-2",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a6227ce9dfab942f062a2aac",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Briefing Chat: How physicists successfully trapped the electron's antimatter equivalent",
+      "url": "https://www.nature.com/articles/d41586-026-03418-z",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "67cb5495954fe37bca3f95a8",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "First person infected with rare Shamonda virus: what we know",
+      "url": "https://www.nature.com/articles/d41586-026-03416-1",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5f9f05f9adb75fa260ba2f04",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Elizabeth Holmes film enthralls — but her legacy haunts science",
+      "url": "https://www.nature.com/articles/d41586-026-03383-7",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4fb9cc016bf1446f720d372b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Rebody",
+      "url": "https://www.nature.com/articles/d41586-026-03108-w",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b3dd7304fb93ddcd9f929171",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Moderna mRNA vaccine almost halves the risk of skin cancer returning",
+      "url": "https://www.nature.com/articles/d41586-026-03417-0",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2fd1f291fc09e982bd56f7bc",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "I’m expected to work excessive hours in the lab. Should I speak up about my disability?",
+      "url": "https://www.nature.com/articles/d41586-026-02582-6",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-23",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d46d161b96028c4de2c22541",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: The tell-tale features of a Denisovan",
+      "url": "https://www.nature.com/articles/d41586-026-03438-9",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-22",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e956d81893fb29aa2d8d42d9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: How tech billionaires are changing science funding",
+      "url": "https://www.nature.com/articles/d41586-026-03400-9",
+      "detectedAt": "2026-10-24T14:06:32.727Z",
+      "publishedAt": "2026-10-21",
+      "verification": "unreviewed"
+    },
     {
       "id": "01815b0be895bf7aac7de9e1",
       "sourceId": "fcc-releases",
