@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "8d569560-8030-41aa-ae70-9b1027db8730",
-  "generatedAt": "2026-10-25T09:22:36.839Z",
+  "collectionId": "ccca35ba-f0b8-4608-a407-ff254086c9dc",
+  "generatedAt": "2026-10-25T14:33:05.379Z",
   "sourceCheckedAt": "2026-10-25T09:22:36.839Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40180364586",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40202745092",
   "documents": [
     {
       "id": "ffde42e57a362a5025e7acc2",
@@ -45451,7 +45451,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-25T09:22:36.839Z",
+    "generatedAt": "2026-10-25T14:33:05.379Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
