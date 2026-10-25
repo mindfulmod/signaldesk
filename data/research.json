@@ -1,10 +1,41 @@
 {
   "schemaVersion": 1,
-  "collectionId": "df495e9c-bef9-45d6-a867-22117f90c03a",
-  "generatedAt": "2026-10-25T00:30:12.765Z",
-  "sourceCheckedAt": "2026-10-24T18:58:33.834Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40146919133",
+  "collectionId": "8d569560-8030-41aa-ae70-9b1027db8730",
+  "generatedAt": "2026-10-25T09:22:36.839Z",
+  "sourceCheckedAt": "2026-10-25T09:22:36.839Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40180364586",
   "documents": [
+    {
+      "id": "ffde42e57a362a5025e7acc2",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11328-3",
+      "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "7ca2fc8eb27502ba670d970b",
+      "originalPublishedAt": "2026-10-25",
+      "firstSeenAt": "2026-10-25T09:22:36.839Z",
+      "announcementAt": "2026-10-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-25",
+      "detectedAt": "2026-10-25T09:22:36.839Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "2b5e3f09ec87d994488635e4",
       "sourceId": "nature-research",
@@ -23929,29 +23960,6 @@
         "solid-state-batteries"
       ],
       "metadataOnly": true
-    },
-    {
-      "id": "3fbc10815a454d8e99f83a02",
-      "sourceId": "sec-msft",
-      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312524011295/d708866d8k.htm",
-      "title": "Microsoft · 8-K · 8-K",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Microsoft",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2024-01-19",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "ai-work"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -31580,6 +31588,15 @@
       "versions": {
         "6a8024a0dd996295b93ccaeb": "2026-10-24T14:06:32.727Z"
       }
+    },
+    "7ca2fc8eb27502ba670d970b": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-10-25",
+      "firstSeenAt": "2026-10-25T09:22:36.839Z",
+      "latestId": "ffde42e57a362a5025e7acc2",
+      "versions": {
+        "ffde42e57a362a5025e7acc2": "2026-10-25T09:22:36.839Z"
+      }
     }
   },
   "reviews": [],
@@ -32588,7 +32605,7 @@
       "factsCheckedAt": "2026-10-24T09:05:30.304Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 4.03,
         "currency": "USD",
@@ -32598,7 +32615,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -34380,7 +34397,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 1.98,
         "currency": "USD",
@@ -34390,7 +34407,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -35928,7 +35945,7 @@
         "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
         "publishedAt": "2026-10-05",
         "reportDate": "2026-10-05",
-        "acceptedAt": "2026-10-05T14:01:00.000Z",
+        "acceptedAt": "2026-10-05T10:01:00.000Z",
         "filingItems": [],
         "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/0001193125-26-413029-index.html",
         "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -35939,7 +35956,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 196.79,
         "currency": "USD",
@@ -35949,7 +35966,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -37847,7 +37864,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 146.54,
         "currency": "USD",
@@ -37857,7 +37874,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -39728,7 +39745,7 @@
         "title": "AST SpaceMobile · 8-K · 8-K",
         "publishedAt": "2026-10-20",
         "reportDate": "2026-10-14",
-        "acceptedAt": "2026-10-21T00:30:17.000Z",
+        "acceptedAt": "2026-10-20T20:30:17.000Z",
         "filingItems": [
           "5.02"
         ],
@@ -39741,7 +39758,7 @@
       "factsCheckedAt": "2026-10-21T09:35:54.392Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 39.79,
         "currency": "USD",
@@ -39751,7 +39768,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41309,7 +41326,7 @@
         "title": "Meta Platforms · 10-Q · 10-Q",
         "publishedAt": "2026-10-22",
         "reportDate": "2026-09-30",
-        "acceptedAt": "2026-10-22T04:00:08.000Z",
+        "acceptedAt": "2026-10-22T00:00:08.000Z",
         "filingItems": [],
         "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
         "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -41320,7 +41337,7 @@
       "factsCheckedAt": "2026-10-23T09:32:27.598Z",
       "factsAccession": "0001628280-26-066773",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 642.62,
         "currency": "USD",
@@ -41330,7 +41347,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43281,7 +43298,7 @@
         "title": "Microsoft · 8-K · 8-K",
         "publishedAt": "2026-09-02",
         "reportDate": "2026-09-02",
-        "acceptedAt": "2026-09-03T00:30:24.000Z",
+        "acceptedAt": "2026-09-02T20:30:24.000Z",
         "filingItems": [
           "7.01",
           "9.01"
@@ -43295,7 +43312,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 524.51,
         "currency": "USD",
@@ -43305,7 +43322,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -45256,7 +45273,7 @@
         "title": "Alphabet · 8-K · 8-K",
         "publishedAt": "2026-08-10",
         "reportDate": "2026-08-10",
-        "acceptedAt": "2026-08-11T00:10:48.000Z",
+        "acceptedAt": "2026-08-10T20:10:48.000Z",
         "filingItems": [
           "8.01",
           "9.01"
@@ -45270,7 +45287,7 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-24T14:06:32.727Z",
+      "quoteAttemptAt": "2026-10-25T09:22:36.839Z",
       "quote": {
         "price": 320.21,
         "currency": "USD",
@@ -45280,7 +45297,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-24T14:06:32.727Z",
+      "quoteCheckedAt": "2026-10-25T09:22:36.839Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -45434,7 +45451,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-25T00:30:12.765Z",
+    "generatedAt": "2026-10-25T09:22:36.839Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45597,7 +45614,7 @@
           "b9d1dcf6c13212a659fc8340",
           "3e2d4d56ee7e63fef142f78d"
         ],
-        "documentCount": 316
+        "documentCount": 317
       }
     ],
     "candidates": [
@@ -45844,8 +45861,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 316,
-    "comparableDays": 16,
+    "datedDocuments": 317,
+    "comparableDays": 17,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {

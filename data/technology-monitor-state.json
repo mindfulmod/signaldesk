@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T18:58:33.834Z",
+  "generatedAt": "2026-10-25T09:22:36.839Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-24T18:58:33.834Z",
-      "nextAttemptAt": "2026-10-25T00:58:33.834Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "nextAttemptAt": "2026-10-25T15:22:36.839Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 35
+      "failureStreak": 36
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b9f-3+ji0qLRPK9RSZHE8p5OdhOk1Vo\"",
+      "etag": "W/\"29b8e-9KiQQMxO2MMbrV3MNpQuYj9lNXY\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-24T09:05:30.304Z",
       "nextAttemptAt": null,
@@ -316,8 +316,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -381,8 +381,8 @@
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -442,8 +442,8 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-24T09:05:30.304Z",
       "nextAttemptAt": null,
@@ -487,8 +487,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -615,16 +615,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1792812509-gzip\"",
-      "lastModified": "Sat, 24 Oct 2026 03:28:29 GMT"
+      "etag": "\"1792898931-gzip\"",
+      "lastModified": "Sun, 25 Oct 2026 03:28:51 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-22T09:36:15.329Z",
       "nextAttemptAt": null,
@@ -997,23 +997,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1792831142\"",
-      "lastModified": "Sat, 24 Oct 2026 08:39:02 GMT"
+      "etag": "\"1792919175\"",
+      "lastModified": "Sun, 25 Oct 2026 09:06:15 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T14:06:32.727Z",
-      "lastSuccessAt": "2026-10-24T14:06:32.727Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-24T14:06:32.727Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "02646e220f6b81cd1440c82b4a59adc1a9a75d974ccd13d722de8dff721f404a",
+      "fingerprint": "bf0269ba70ecebddb941df261458022ad7c0fb61c1fc84407c20c75a12fb8c3a",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11328-3",
+          "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
+          "excerpt": "",
+          "publishedAt": "2026-10-25"
+        },
         {
           "url": "https://www.nature.com/articles/s41586-026-11303-y",
           "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
@@ -1457,12 +1463,6 @@
           "title": "Nepal’s disaster is an urgent wake-up call",
           "excerpt": "",
           "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03317-3",
-          "title": "Toxic chemicals in fentanyl revealed by speedy technique",
-          "excerpt": "",
-          "publishedAt": "2026-10-19"
         }
       ],
       "seenLinks": [
@@ -1729,18 +1729,19 @@
         "https://www.nature.com/articles/d41586-026-03417-0",
         "https://www.nature.com/articles/d41586-026-02582-6",
         "https://www.nature.com/articles/d41586-026-03438-9",
-        "https://www.nature.com/articles/d41586-026-03400-9"
+        "https://www.nature.com/articles/d41586-026-03400-9",
+        "https://www.nature.com/articles/s41586-026-11328-3"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-23",
+      "newestPublicationAt": "2026-10-25",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"5f7f315f3b9ffb5560bad50b06c7d658\"",
+      "etag": "\"06efa9da428887dd2183c0cfcfb4a01e\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1748,14 +1749,14 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-24T09:05:30.304Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "bb525f0e52eca3038ec2c4068a80fd5815d3ac0002189ed726e43918a52e65b6",
+      "fingerprint": "076ae23fd4c67be7703f45fea4493c196d1a271d6044b46afb87c98d8e3249de",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/qs-20260930.htm",
@@ -1774,7 +1775,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-10-21",
           "reportDate": "2026-10-21",
-          "acceptedAt": "2026-10-22T00:18:34.000Z",
+          "acceptedAt": "2026-10-21T20:18:34.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -1789,7 +1790,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2026-07-24",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-07-25T00:06:44.000Z",
+          "acceptedAt": "2026-07-24T20:06:44.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526316073/0001193125-26-316073-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -1801,7 +1802,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-07-22",
           "reportDate": "2026-07-22",
-          "acceptedAt": "2026-07-23T00:18:31.000Z",
+          "acceptedAt": "2026-07-22T20:18:31.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -1816,7 +1817,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-07-22",
           "reportDate": "2026-07-16",
-          "acceptedAt": "2026-07-23T00:02:55.000Z",
+          "acceptedAt": "2026-07-22T20:02:55.000Z",
           "filingItems": [
             "1.01",
             "1.02"
@@ -1831,7 +1832,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-03",
-          "acceptedAt": "2026-06-06T00:18:57.000Z",
+          "acceptedAt": "2026-06-05T20:18:57.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -1845,7 +1846,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2026-04-24",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-04-25T00:07:22.000Z",
+          "acceptedAt": "2026-04-24T20:07:22.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526177161/0001193125-26-177161-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -1857,7 +1858,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-04-22",
           "reportDate": "2026-04-22",
-          "acceptedAt": "2026-04-23T00:22:24.000Z",
+          "acceptedAt": "2026-04-22T20:22:24.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -1872,7 +1873,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-03-05",
           "reportDate": "2026-03-04",
-          "acceptedAt": "2026-03-05T19:00:28.000Z",
+          "acceptedAt": "2026-03-05T14:00:28.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -1886,7 +1887,7 @@
           "title": "QuantumScape · 10-K · 10-K",
           "publishedAt": "2026-02-25",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-02-26T02:11:00.000Z",
+          "acceptedAt": "2026-02-25T21:11:00.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526071556/0001193125-26-071556-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -1898,7 +1899,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-02-11",
           "reportDate": "2026-02-11",
-          "acceptedAt": "2026-02-12T02:21:50.000Z",
+          "acceptedAt": "2026-02-11T21:21:50.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -1913,7 +1914,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-02-10",
           "reportDate": "2026-02-04",
-          "acceptedAt": "2026-02-11T02:30:27.000Z",
+          "acceptedAt": "2026-02-10T21:30:27.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -1927,7 +1928,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2026-01-30",
           "reportDate": "2026-01-29",
-          "acceptedAt": "2026-01-30T16:09:09.000Z",
+          "acceptedAt": "2026-01-30T11:09:09.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -1941,7 +1942,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-12-10",
           "reportDate": "2025-12-10",
-          "acceptedAt": "2025-12-10T16:56:34.000Z",
+          "acceptedAt": "2025-12-10T11:56:34.000Z",
           "filingItems": [
             "3.01",
             "7.01",
@@ -1957,7 +1958,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-12-08",
           "reportDate": "2025-12-03",
-          "acceptedAt": "2025-12-09T02:55:43.000Z",
+          "acceptedAt": "2025-12-08T21:55:43.000Z",
           "filingItems": [
             "1.01"
           ],
@@ -1971,7 +1972,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2025-10-24",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-10-25T00:10:02.000Z",
+          "acceptedAt": "2025-10-24T20:10:02.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000119312525249971/0001193125-25-249971-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -1983,7 +1984,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-10-22",
           "reportDate": "2025-10-22",
-          "acceptedAt": "2025-10-23T00:17:41.000Z",
+          "acceptedAt": "2025-10-22T20:17:41.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -1998,7 +1999,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2025-07-25",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-07-26T00:06:42.000Z",
+          "acceptedAt": "2025-07-25T20:06:42.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017025098777/0000950170-25-098777-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2010,7 +2011,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-07-23",
           "reportDate": "2025-07-23",
-          "acceptedAt": "2025-07-24T00:21:52.000Z",
+          "acceptedAt": "2025-07-23T20:21:52.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2025,7 +2026,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-07-23",
           "reportDate": "2025-07-17",
-          "acceptedAt": "2025-07-24T00:15:38.000Z",
+          "acceptedAt": "2025-07-23T20:15:38.000Z",
           "filingItems": [
             "1.01",
             "9.01"
@@ -2040,7 +2041,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-07-09",
           "reportDate": "2025-07-08",
-          "acceptedAt": "2025-07-10T00:21:18.000Z",
+          "acceptedAt": "2025-07-09T20:21:18.000Z",
           "filingItems": [
             "1.02"
           ],
@@ -2054,7 +2055,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-06-06",
           "reportDate": "2025-06-04",
-          "acceptedAt": "2025-06-07T01:12:36.000Z",
+          "acceptedAt": "2025-06-06T21:12:36.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -2068,7 +2069,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-05-07",
           "reportDate": "2025-05-07",
-          "acceptedAt": "2025-05-08T00:21:25.000Z",
+          "acceptedAt": "2025-05-07T20:21:25.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -2082,7 +2083,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2025-04-25",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-04-26T00:06:58.000Z",
+          "acceptedAt": "2025-04-25T20:06:58.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017025058706/0000950170-25-058706-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2094,7 +2095,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-04-23",
           "reportDate": "2025-04-23",
-          "acceptedAt": "2025-04-24T00:20:20.000Z",
+          "acceptedAt": "2025-04-23T20:20:20.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2109,7 +2110,7 @@
           "title": "QuantumScape · 10-K · 10-K",
           "publishedAt": "2025-02-26",
           "reportDate": "2024-12-31",
-          "acceptedAt": "2025-02-26T16:06:35.000Z",
+          "acceptedAt": "2025-02-26T11:06:35.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017025027308/0000950170-25-027308-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2121,7 +2122,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2025-02-12",
           "reportDate": "2025-02-12",
-          "acceptedAt": "2025-02-13T02:18:55.000Z",
+          "acceptedAt": "2025-02-12T21:18:55.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2136,7 +2137,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2024-10-25",
           "reportDate": "2024-09-30",
-          "acceptedAt": "2024-10-26T00:06:16.000Z",
+          "acceptedAt": "2024-10-25T20:06:16.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024117409/0000950170-24-117409-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2148,7 +2149,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-10-23",
           "reportDate": "2024-10-17",
-          "acceptedAt": "2024-10-24T01:12:19.000Z",
+          "acceptedAt": "2024-10-23T21:12:19.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -2162,7 +2163,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-10-23",
           "reportDate": "2024-10-23",
-          "acceptedAt": "2024-10-24T00:18:03.000Z",
+          "acceptedAt": "2024-10-23T20:18:03.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2177,7 +2178,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2024-07-26",
           "reportDate": "2024-06-30",
-          "acceptedAt": "2024-07-27T00:05:57.000Z",
+          "acceptedAt": "2024-07-26T20:05:57.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024086884/0000950170-24-086884-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2189,7 +2190,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-07-24",
           "reportDate": "2024-07-24",
-          "acceptedAt": "2024-07-25T00:19:10.000Z",
+          "acceptedAt": "2024-07-24T20:19:10.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2204,7 +2205,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-07-11",
           "reportDate": "2024-07-05",
-          "acceptedAt": "2024-07-11T14:49:26.000Z",
+          "acceptedAt": "2024-07-11T10:49:26.000Z",
           "filingItems": [
             "1.01",
             "1.02",
@@ -2221,7 +2222,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-06-13",
           "reportDate": "2024-06-11",
-          "acceptedAt": "2024-06-14T00:53:45.000Z",
+          "acceptedAt": "2024-06-13T20:53:45.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -2235,7 +2236,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2024-04-26",
           "reportDate": "2024-03-31",
-          "acceptedAt": "2024-04-27T00:05:34.000Z",
+          "acceptedAt": "2024-04-26T20:05:34.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024049080/0000950170-24-049080-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2247,7 +2248,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-04-24",
           "reportDate": "2024-04-24",
-          "acceptedAt": "2024-04-25T00:18:43.000Z",
+          "acceptedAt": "2024-04-24T20:18:43.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2262,7 +2263,7 @@
           "title": "QuantumScape · 10-K · 10-K",
           "publishedAt": "2024-02-27",
           "reportDate": "2023-12-31",
-          "acceptedAt": "2024-02-28T02:05:50.000Z",
+          "acceptedAt": "2024-02-27T21:05:50.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017024021100/0000950170-24-021100-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2274,7 +2275,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-02-14",
           "reportDate": "2024-02-08",
-          "acceptedAt": "2024-02-15T02:31:40.000Z",
+          "acceptedAt": "2024-02-14T21:31:40.000Z",
           "filingItems": [
             "5.02",
             "8.01",
@@ -2290,7 +2291,7 @@
           "title": "QuantumScape · 8-K · 8-K",
           "publishedAt": "2024-02-14",
           "reportDate": "2024-02-14",
-          "acceptedAt": "2024-02-15T02:18:17.000Z",
+          "acceptedAt": "2024-02-14T21:18:17.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -2305,7 +2306,7 @@
           "title": "QuantumScape · 10-Q · 10-Q",
           "publishedAt": "2023-10-27",
           "reportDate": "2023-09-30",
-          "acceptedAt": "2023-10-28T00:06:21.000Z",
+          "acceptedAt": "2023-10-27T20:06:21.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1811414/000095017023055982/0000950170-23-055982-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -2374,8 +2375,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3016,21 +3017,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "06f5f6285d09782ac935ed4b06e70cac8a6007def22aa46c4e1800b9da2d27ac",
+      "fingerprint": "16f5577da99423d378816ab005e66410c89243e5a2faa47e258d3b418881c8f5",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm",
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-10-05",
           "reportDate": "2026-10-05",
-          "acceptedAt": "2026-10-05T14:01:00.000Z",
+          "acceptedAt": "2026-10-05T10:01:00.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/0001193125-26-413029-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3042,7 +3043,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-09-03",
           "reportDate": "2026-09-03",
-          "acceptedAt": "2026-09-03T14:00:18.000Z",
+          "acceptedAt": "2026-09-03T10:00:18.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526380869/0001193125-26-380869-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3054,7 +3055,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-08-07",
           "reportDate": "2026-08-07",
-          "acceptedAt": "2026-08-07T14:02:04.000Z",
+          "acceptedAt": "2026-08-07T10:02:04.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526339003/0001193125-26-339003-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3066,7 +3067,7 @@
           "title": "Toyota · 6-K/A · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-08-07",
           "reportDate": "2026-08-07",
-          "acceptedAt": "2026-08-07T14:01:39.000Z",
+          "acceptedAt": "2026-08-07T10:01:39.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526339000/0001193125-26-339000-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3078,7 +3079,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-08-04",
           "reportDate": "2026-08-04",
-          "acceptedAt": "2026-08-04T14:03:15.000Z",
+          "acceptedAt": "2026-08-04T10:03:15.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526331392/0001193125-26-331392-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3090,7 +3091,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-08-04",
           "reportDate": "2026-08-04",
-          "acceptedAt": "2026-08-04T14:01:32.000Z",
+          "acceptedAt": "2026-08-04T10:01:32.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526331382/0001193125-26-331382-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3102,7 +3103,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-18",
           "reportDate": "2026-06-18",
-          "acceptedAt": "2026-06-18T14:03:17.000Z",
+          "acceptedAt": "2026-06-18T10:03:17.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526274879/0001193125-26-274879-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3114,7 +3115,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-18",
           "reportDate": "2026-06-18",
-          "acceptedAt": "2026-06-18T14:02:36.000Z",
+          "acceptedAt": "2026-06-18T10:02:36.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526274877/0001193125-26-274877-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3126,7 +3127,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-17",
           "reportDate": "2026-06-17",
-          "acceptedAt": "2026-06-17T14:46:54.000Z",
+          "acceptedAt": "2026-06-17T10:46:54.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526273360/0001193125-26-273360-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3138,7 +3139,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-17",
           "reportDate": "2026-06-17",
-          "acceptedAt": "2026-06-17T14:03:11.000Z",
+          "acceptedAt": "2026-06-17T10:03:11.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526273320/0001193125-26-273320-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3150,7 +3151,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-15",
           "reportDate": "2026-06-15",
-          "acceptedAt": "2026-06-15T14:03:23.000Z",
+          "acceptedAt": "2026-06-15T10:03:23.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526270230/0001193125-26-270230-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3162,7 +3163,7 @@
           "title": "Toyota · 20-F · ANNUAL REPORT",
           "publishedAt": "2026-06-10",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-06-10T14:02:59.000Z",
+          "acceptedAt": "2026-06-10T10:02:59.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526264811/0001193125-26-264811-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3174,7 +3175,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-06-10",
           "reportDate": "2026-06-10",
-          "acceptedAt": "2026-06-10T14:00:19.000Z",
+          "acceptedAt": "2026-06-10T10:00:19.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526264802/0001193125-26-264802-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3186,7 +3187,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-05-28",
           "reportDate": "2026-05-28",
-          "acceptedAt": "2026-05-28T17:55:57.000Z",
+          "acceptedAt": "2026-05-28T13:55:57.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526243215/0001193125-26-243215-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3198,7 +3199,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-05-20",
           "reportDate": "2026-05-20",
-          "acceptedAt": "2026-05-21T00:59:19.000Z",
+          "acceptedAt": "2026-05-20T20:59:19.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526232785/0001193125-26-232785-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3210,7 +3211,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-05-13",
           "reportDate": "2026-05-13",
-          "acceptedAt": "2026-05-13T14:07:00.000Z",
+          "acceptedAt": "2026-05-13T10:07:00.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526220511/0001193125-26-220511-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3222,7 +3223,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-05-08",
           "reportDate": "2026-05-08",
-          "acceptedAt": "2026-05-08T15:52:00.000Z",
+          "acceptedAt": "2026-05-08T11:52:00.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526213363/0001193125-26-213363-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3234,7 +3235,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-04-28",
           "reportDate": "2026-04-28",
-          "acceptedAt": "2026-04-28T14:04:21.000Z",
+          "acceptedAt": "2026-04-28T10:04:21.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526183369/0001193125-26-183369-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3246,7 +3247,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-03-30",
           "reportDate": "2026-03-30",
-          "acceptedAt": "2026-03-30T14:01:17.000Z",
+          "acceptedAt": "2026-03-30T10:01:17.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526130284/0001193125-26-130284-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3258,7 +3259,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-03-06",
           "reportDate": "2026-03-06",
-          "acceptedAt": "2026-03-06T17:34:02.000Z",
+          "acceptedAt": "2026-03-06T12:34:02.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526094985/0001193125-26-094985-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3270,7 +3271,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-03-05",
           "reportDate": "2026-03-05",
-          "acceptedAt": "2026-03-05T16:03:03.000Z",
+          "acceptedAt": "2026-03-05T11:03:03.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526092421/0001193125-26-092421-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3282,7 +3283,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-02-25",
           "reportDate": "2026-02-25",
-          "acceptedAt": "2026-02-25T16:01:56.000Z",
+          "acceptedAt": "2026-02-25T11:01:56.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526068358/0001193125-26-068358-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3294,7 +3295,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-02-06",
           "reportDate": "2026-02-06",
-          "acceptedAt": "2026-02-06T16:02:54.000Z",
+          "acceptedAt": "2026-02-06T11:02:54.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526040201/0001193125-26-040201-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3306,7 +3307,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-02-06",
           "reportDate": "2026-02-06",
-          "acceptedAt": "2026-02-06T16:02:14.000Z",
+          "acceptedAt": "2026-02-06T11:02:14.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526040198/0001193125-26-040198-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3318,7 +3319,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2026-01-14",
           "reportDate": "2026-01-14",
-          "acceptedAt": "2026-01-14T16:02:50.000Z",
+          "acceptedAt": "2026-01-14T11:02:50.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526012217/0001193125-26-012217-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3330,7 +3331,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-11-28",
           "reportDate": "2025-11-28",
-          "acceptedAt": "2025-11-28T16:01:51.000Z",
+          "acceptedAt": "2025-11-28T11:01:51.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525301152/0001193125-25-301152-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3342,7 +3343,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-11-05",
           "reportDate": "2025-11-05",
-          "acceptedAt": "2025-11-05T16:02:42.000Z",
+          "acceptedAt": "2025-11-05T11:02:42.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525265584/0001193125-25-265584-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3354,7 +3355,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-10-06",
           "reportDate": "2025-10-06",
-          "acceptedAt": "2025-10-06T14:03:49.000Z",
+          "acceptedAt": "2025-10-06T10:03:49.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525230842/0001193125-25-230842-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3366,7 +3367,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-09-09",
           "reportDate": "2025-09-09",
-          "acceptedAt": "2025-09-09T14:15:28.000Z",
+          "acceptedAt": "2025-09-09T10:15:28.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525198750/0001193125-25-198750-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3378,7 +3379,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-08-07",
           "reportDate": "2025-08-07",
-          "acceptedAt": "2025-08-07T14:04:55.000Z",
+          "acceptedAt": "2025-08-07T10:04:55.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525174901/0001193125-25-174901-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3390,7 +3391,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-08-07",
           "reportDate": "2025-08-07",
-          "acceptedAt": "2025-08-07T14:04:13.000Z",
+          "acceptedAt": "2025-08-07T10:04:13.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525174896/0001193125-25-174896-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3402,7 +3403,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-30",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-06-30T20:44:04.000Z",
+          "acceptedAt": "2025-06-30T16:44:04.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525152384/0001193125-25-152384-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3414,7 +3415,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-18",
           "reportDate": "2025-06-18",
-          "acceptedAt": "2025-06-18T17:38:13.000Z",
+          "acceptedAt": "2025-06-18T13:38:13.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525142461/0001193125-25-142461-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3426,7 +3427,7 @@
           "title": "Toyota · 20-F · ANNUAL REPORT",
           "publishedAt": "2025-06-18",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-06-18T14:11:05.000Z",
+          "acceptedAt": "2025-06-18T10:11:05.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525142326/0001193125-25-142326-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3438,7 +3439,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-18",
           "reportDate": "2025-06-18",
-          "acceptedAt": "2025-06-18T14:02:41.000Z",
+          "acceptedAt": "2025-06-18T10:02:41.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525142314/0001193125-25-142314-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3450,7 +3451,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-13",
           "reportDate": "2025-06-13",
-          "acceptedAt": "2025-06-13T14:07:44.000Z",
+          "acceptedAt": "2025-06-13T10:07:44.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525140286/0001193125-25-140286-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3462,7 +3463,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-12",
           "reportDate": "2025-06-12",
-          "acceptedAt": "2025-06-12T14:03:25.000Z",
+          "acceptedAt": "2025-06-12T10:03:25.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525139513/0001193125-25-139513-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3474,7 +3475,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-10",
           "reportDate": "2025-06-10",
-          "acceptedAt": "2025-06-10T14:02:58.000Z",
+          "acceptedAt": "2025-06-10T10:02:58.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525138136/0001193125-25-138136-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3486,7 +3487,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-06-03",
           "reportDate": "2025-06-03",
-          "acceptedAt": "2025-06-03T14:04:49.000Z",
+          "acceptedAt": "2025-06-03T10:04:49.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525133718/0001193125-25-133718-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3498,7 +3499,7 @@
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
           "publishedAt": "2025-05-30",
           "reportDate": "2025-05-30",
-          "acceptedAt": "2025-05-30T14:11:31.000Z",
+          "acceptedAt": "2025-05-30T10:11:31.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525131083/0001193125-25-131083-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -3565,8 +3566,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4204,21 +4205,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-21T09:35:54.392Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "6841e5b97468949f1fb19dd061721816d6368c13586ec222ba77b2084108711e",
+      "fingerprint": "49c4ec22bf894d58ad70fdde5fe153831062c40fdbb0d2d9abc7e343884a2bfe",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm",
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-10-20",
           "reportDate": "2026-10-14",
-          "acceptedAt": "2026-10-21T00:30:17.000Z",
+          "acceptedAt": "2026-10-20T20:30:17.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -4232,7 +4233,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-09-28",
           "reportDate": "2026-09-25",
-          "acceptedAt": "2026-09-29T01:20:14.000Z",
+          "acceptedAt": "2026-09-28T21:20:14.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -4247,7 +4248,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-08-11T00:42:31.000Z",
+          "acceptedAt": "2026-08-10T20:42:31.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526342550/0001193125-26-342550-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4259,7 +4260,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-08-10",
-          "acceptedAt": "2026-08-11T00:38:57.000Z",
+          "acceptedAt": "2026-08-10T20:38:57.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4275,7 +4276,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-07-20",
           "reportDate": "2026-07-15",
-          "acceptedAt": "2026-07-21T00:15:31.000Z",
+          "acceptedAt": "2026-07-20T20:15:31.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4293,7 +4294,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-07-15",
           "reportDate": "2026-07-15",
-          "acceptedAt": "2026-07-16T00:18:33.000Z",
+          "acceptedAt": "2026-07-15T20:18:33.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4310,7 +4311,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-06-15",
           "reportDate": "2026-06-12",
-          "acceptedAt": "2026-06-13T02:07:32.000Z",
+          "acceptedAt": "2026-06-12T22:07:32.000Z",
           "filingItems": [
             "5.07",
             "9.01"
@@ -4325,7 +4326,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-05-12T00:40:22.000Z",
+          "acceptedAt": "2026-05-11T20:40:22.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526216950/0001193125-26-216950-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4337,7 +4338,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-05-11",
-          "acceptedAt": "2026-05-12T00:38:20.000Z",
+          "acceptedAt": "2026-05-11T20:38:20.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4353,7 +4354,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-04-20",
           "reportDate": "2026-04-19",
-          "acceptedAt": "2026-04-20T16:30:23.000Z",
+          "acceptedAt": "2026-04-20T12:30:23.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4369,7 +4370,7 @@
           "title": "AST SpaceMobile · 10-K · 10-K",
           "publishedAt": "2026-03-02",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-03-03T02:39:58.000Z",
+          "acceptedAt": "2026-03-02T21:39:58.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000178031226000006/0001780312-26-000006-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4381,7 +4382,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-03-02",
           "reportDate": "2026-03-02",
-          "acceptedAt": "2026-03-03T02:37:54.000Z",
+          "acceptedAt": "2026-03-02T21:37:54.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4397,7 +4398,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-23",
           "reportDate": "2026-02-20",
-          "acceptedAt": "2026-02-24T03:03:19.000Z",
+          "acceptedAt": "2026-02-23T22:03:19.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -4411,7 +4412,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-20",
           "reportDate": "2026-02-20",
-          "acceptedAt": "2026-02-21T03:13:56.000Z",
+          "acceptedAt": "2026-02-20T22:13:56.000Z",
           "filingItems": [
             "2.03",
             "3.02",
@@ -4428,7 +4429,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-17",
           "reportDate": "2026-02-12",
-          "acceptedAt": "2026-02-18T02:18:39.000Z",
+          "acceptedAt": "2026-02-17T21:18:39.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4446,7 +4447,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-02-11",
           "reportDate": "2026-02-11",
-          "acceptedAt": "2026-02-12T03:08:27.000Z",
+          "acceptedAt": "2026-02-11T22:08:27.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4463,7 +4464,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2026-01-16",
           "reportDate": "2026-01-13",
-          "acceptedAt": "2026-01-17T03:00:49.000Z",
+          "acceptedAt": "2026-01-16T22:00:49.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -4478,7 +4479,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-21",
           "reportDate": "2025-11-21",
-          "acceptedAt": "2025-11-22T02:12:24.000Z",
+          "acceptedAt": "2025-11-21T21:12:24.000Z",
           "filingItems": [
             "5.02",
             "5.07",
@@ -4494,7 +4495,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2025-11-10",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-11-11T02:32:53.000Z",
+          "acceptedAt": "2025-11-10T21:32:53.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312525274391/0001193125-25-274391-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4506,7 +4507,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-10",
           "reportDate": "2025-11-10",
-          "acceptedAt": "2025-11-11T02:27:55.000Z",
+          "acceptedAt": "2025-11-10T21:27:55.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4522,7 +4523,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-11-03",
           "reportDate": "2025-10-31",
-          "acceptedAt": "2025-11-04T03:00:28.000Z",
+          "acceptedAt": "2025-11-03T22:00:28.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4538,7 +4539,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-30T01:19:36.000Z",
+          "acceptedAt": "2025-10-29T21:19:36.000Z",
           "filingItems": [
             "2.03",
             "3.02",
@@ -4555,7 +4556,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-29T17:29:18.000Z",
+          "acceptedAt": "2025-10-29T13:29:18.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4571,7 +4572,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-24",
           "reportDate": "2025-10-21",
-          "acceptedAt": "2025-10-25T00:10:34.000Z",
+          "acceptedAt": "2025-10-24T20:10:34.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4589,7 +4590,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-21",
           "reportDate": "2025-10-21",
-          "acceptedAt": "2025-10-22T00:20:12.000Z",
+          "acceptedAt": "2025-10-21T20:20:12.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -4605,7 +4606,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-07",
           "reportDate": "2025-10-07",
-          "acceptedAt": "2025-10-07T16:28:03.000Z",
+          "acceptedAt": "2025-10-07T12:28:03.000Z",
           "filingItems": [
             "1.01",
             "9.01"
@@ -4620,7 +4621,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-10-07",
           "reportDate": "2025-10-06",
-          "acceptedAt": "2025-10-07T02:00:44.000Z",
+          "acceptedAt": "2025-10-06T22:00:44.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -4634,7 +4635,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-09-26",
           "reportDate": "2025-09-25",
-          "acceptedAt": "2025-09-26T16:30:44.000Z",
+          "acceptedAt": "2025-09-26T12:30:44.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4649,7 +4650,7 @@
           "title": "AST SpaceMobile · 10-Q/A · 10-Q/A",
           "publishedAt": "2025-09-12",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-09-13T01:14:23.000Z",
+          "acceptedAt": "2025-09-12T21:14:23.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000095017025114605/0000950170-25-114605-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4661,7 +4662,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-09-05",
           "reportDate": "2025-09-04",
-          "acceptedAt": "2025-09-05T16:45:21.000Z",
+          "acceptedAt": "2025-09-05T12:45:21.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4677,7 +4678,7 @@
           "title": "AST SpaceMobile · 10-Q · 10-Q",
           "publishedAt": "2025-08-11",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-08-12T00:52:30.000Z",
+          "acceptedAt": "2025-08-11T20:52:30.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000095017025106627/0000950170-25-106627-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4689,7 +4690,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-08-11",
           "reportDate": "2025-08-11",
-          "acceptedAt": "2025-08-12T00:41:29.000Z",
+          "acceptedAt": "2025-08-11T20:41:29.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -4705,7 +4706,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-08-07",
           "reportDate": "2025-08-05",
-          "acceptedAt": "2025-08-07T15:30:53.000Z",
+          "acceptedAt": "2025-08-07T11:30:53.000Z",
           "filingItems": [
             "7.01",
             "8.01",
@@ -4721,7 +4722,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-31",
           "reportDate": "2025-07-31",
-          "acceptedAt": "2025-08-01T01:12:30.000Z",
+          "acceptedAt": "2025-07-31T21:12:30.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4736,7 +4737,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-29",
           "reportDate": "2025-07-24",
-          "acceptedAt": "2025-07-30T01:16:09.000Z",
+          "acceptedAt": "2025-07-29T21:16:09.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4754,7 +4755,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-24",
           "reportDate": "2025-07-24",
-          "acceptedAt": "2025-07-25T00:33:41.000Z",
+          "acceptedAt": "2025-07-24T20:33:41.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -4770,7 +4771,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-18",
           "reportDate": "2025-07-15",
-          "acceptedAt": "2025-07-18T16:00:18.000Z",
+          "acceptedAt": "2025-07-18T12:00:18.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4786,7 +4787,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-03",
           "reportDate": "2025-06-27",
-          "acceptedAt": "2025-07-03T23:43:20.000Z",
+          "acceptedAt": "2025-07-03T19:43:20.000Z",
           "filingItems": [
             "1.01",
             "2.03",
@@ -4804,7 +4805,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-07-01",
           "reportDate": "2025-07-01",
-          "acceptedAt": "2025-07-02T01:20:31.000Z",
+          "acceptedAt": "2025-07-01T21:20:31.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4819,7 +4820,7 @@
           "title": "AST SpaceMobile · 8-K · 8-K",
           "publishedAt": "2025-06-26",
           "reportDate": "2025-06-23",
-          "acceptedAt": "2025-06-26T15:00:58.000Z",
+          "acceptedAt": "2025-06-26T11:00:58.000Z",
           "filingItems": [
             "1.01",
             "8.01",
@@ -4891,21 +4892,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-23T09:32:27.598Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "8d8074a88ade3bde0a6f3beaf8831171208c744e411670692ed7a01647a8f3c3",
+      "fingerprint": "ea74a015bada4a483732cd8d7d0328545ba62a2ec5c2ba7dc36004feb908d1b3",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2026-10-22",
           "reportDate": "2026-09-30",
-          "acceptedAt": "2026-10-22T04:00:08.000Z",
+          "acceptedAt": "2026-10-22T00:00:08.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4917,7 +4918,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-10-21",
           "reportDate": "2026-10-19",
-          "acceptedAt": "2026-10-22T00:03:35.000Z",
+          "acceptedAt": "2026-10-21T20:03:35.000Z",
           "filingItems": [
             "1.01",
             "2.02",
@@ -4934,7 +4935,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2026-07-30",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-07-30T02:58:51.000Z",
+          "acceptedAt": "2026-07-29T22:58:51.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/0001628280-26-050705-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -4946,7 +4947,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-07-29",
           "reportDate": "2026-07-29",
-          "acceptedAt": "2026-07-30T00:03:23.000Z",
+          "acceptedAt": "2026-07-29T20:03:23.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -4961,7 +4962,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-05-29",
           "reportDate": "2026-05-27",
-          "acceptedAt": "2026-05-30T00:16:13.000Z",
+          "acceptedAt": "2026-05-29T20:16:13.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -4975,7 +4976,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-05-04",
           "reportDate": "2026-04-30",
-          "acceptedAt": "2026-05-05T00:36:02.000Z",
+          "acceptedAt": "2026-05-04T20:36:02.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -4990,7 +4991,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2026-04-30",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-04-30T03:54:11.000Z",
+          "acceptedAt": "2026-04-29T23:54:11.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/0001628280-26-028526-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5002,7 +5003,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-04-29",
           "reportDate": "2026-04-29",
-          "acceptedAt": "2026-04-30T00:05:41.000Z",
+          "acceptedAt": "2026-04-29T20:05:41.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5017,7 +5018,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-04-14",
           "reportDate": "2026-04-08",
-          "acceptedAt": "2026-04-15T01:01:31.000Z",
+          "acceptedAt": "2026-04-14T21:01:31.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5031,7 +5032,7 @@
           "title": "Meta Platforms · 10-K · 10-K",
           "publishedAt": "2026-01-29",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-01-29T05:13:46.000Z",
+          "acceptedAt": "2026-01-29T00:13:46.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5043,7 +5044,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-01-28",
           "reportDate": "2026-01-28",
-          "acceptedAt": "2026-01-29T02:04:20.000Z",
+          "acceptedAt": "2026-01-28T21:04:20.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5058,7 +5059,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2026-01-16",
           "reportDate": "2026-01-12",
-          "acceptedAt": "2026-01-17T02:56:58.000Z",
+          "acceptedAt": "2026-01-16T21:56:58.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5072,7 +5073,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-12-19",
           "reportDate": "2025-12-19",
-          "acceptedAt": "2025-12-20T03:00:37.000Z",
+          "acceptedAt": "2025-12-19T22:00:37.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5086,7 +5087,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-12-12",
           "reportDate": "2025-12-05",
-          "acceptedAt": "2025-12-13T02:14:29.000Z",
+          "acceptedAt": "2025-12-12T21:14:29.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5101,7 +5102,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-11-03",
           "reportDate": "2025-10-30",
-          "acceptedAt": "2025-11-04T02:18:13.000Z",
+          "acceptedAt": "2025-11-03T21:18:13.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5116,7 +5117,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2025-10-30",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-10-30T02:50:26.000Z",
+          "acceptedAt": "2025-10-29T22:50:26.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/0001628280-25-047240-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5128,7 +5129,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-30T00:08:34.000Z",
+          "acceptedAt": "2025-10-29T20:08:34.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5143,7 +5144,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2025-07-31",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-07-31T04:02:12.000Z",
+          "acceptedAt": "2025-07-31T00:02:12.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828025036791/0001628280-25-036791-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5155,7 +5156,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-07-30",
           "reportDate": "2025-07-30",
-          "acceptedAt": "2025-07-31T00:13:01.000Z",
+          "acceptedAt": "2025-07-30T20:13:01.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5170,7 +5171,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-05-30",
           "reportDate": "2025-05-28",
-          "acceptedAt": "2025-05-31T00:22:05.000Z",
+          "acceptedAt": "2025-05-30T20:22:05.000Z",
           "filingItems": [
             "5.07",
             "9.01"
@@ -5185,7 +5186,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2025-05-01",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-05-01T04:03:18.000Z",
+          "acceptedAt": "2025-05-01T00:03:18.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000054/0001326801-25-000054-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5197,7 +5198,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-04-30",
           "reportDate": "2025-04-30",
-          "acceptedAt": "2025-05-01T00:16:00.000Z",
+          "acceptedAt": "2025-04-30T20:16:00.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5212,7 +5213,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-04-11",
           "reportDate": "2025-04-11",
-          "acceptedAt": "2025-04-12T01:04:06.000Z",
+          "acceptedAt": "2025-04-11T21:04:06.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -5227,7 +5228,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-02-20",
           "reportDate": "2025-02-13",
-          "acceptedAt": "2025-02-21T02:33:09.000Z",
+          "acceptedAt": "2025-02-20T21:33:09.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5241,7 +5242,7 @@
           "title": "Meta Platforms · 10-K · 10-K",
           "publishedAt": "2025-01-30",
           "reportDate": "2024-12-31",
-          "acceptedAt": "2025-01-30T06:00:50.000Z",
+          "acceptedAt": "2025-01-30T01:00:50.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/0001326801-25-000017-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5253,7 +5254,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-01-29",
           "reportDate": "2025-01-29",
-          "acceptedAt": "2025-01-30T02:47:14.000Z",
+          "acceptedAt": "2025-01-29T21:47:14.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5268,7 +5269,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2025-01-06",
           "reportDate": "2024-12-30",
-          "acceptedAt": "2025-01-07T02:40:45.000Z",
+          "acceptedAt": "2025-01-06T21:40:45.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -5283,7 +5284,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2024-10-31",
           "reportDate": "2024-09-30",
-          "acceptedAt": "2024-10-31T03:54:51.000Z",
+          "acceptedAt": "2024-10-30T23:54:51.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000081/0001326801-24-000081-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5295,7 +5296,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2024-10-30",
           "reportDate": "2024-10-30",
-          "acceptedAt": "2024-10-31T00:08:12.000Z",
+          "acceptedAt": "2024-10-30T20:08:12.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5310,7 +5311,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2024-09-10",
           "reportDate": "2024-09-05",
-          "acceptedAt": "2024-09-11T00:53:12.000Z",
+          "acceptedAt": "2024-09-10T20:53:12.000Z",
           "filingItems": [
             "5.03",
             "9.01"
@@ -5325,7 +5326,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2024-08-09",
           "reportDate": "2024-08-07",
-          "acceptedAt": "2024-08-10T00:30:30.000Z",
+          "acceptedAt": "2024-08-09T20:30:30.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5340,7 +5341,7 @@
           "title": "Meta Platforms · 10-Q · 10-Q",
           "publishedAt": "2024-08-01",
           "reportDate": "2024-06-30",
-          "acceptedAt": "2024-08-01T04:14:40.000Z",
+          "acceptedAt": "2024-08-01T00:14:40.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000069/0001326801-24-000069-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5352,7 +5353,7 @@
           "title": "Meta Platforms · 8-K · 8-K",
           "publishedAt": "2024-07-31",
           "reportDate": "2024-07-31",
-          "acceptedAt": "2024-08-01T00:11:20.000Z",
+          "acceptedAt": "2024-07-31T20:11:20.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5415,21 +5416,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-15T09:23:36.337Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "46120b19b5ba9f376762a4dee4f8305050157ac9a87541bde8b4ed001ba0307d",
+      "fingerprint": "459869a2adfd72a20e7cfaed91e36a99b4d5a6afe881a28520c3760a5d3d12ec",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-09-02",
           "reportDate": "2026-09-02",
-          "acceptedAt": "2026-09-03T00:30:24.000Z",
+          "acceptedAt": "2026-09-02T20:30:24.000Z",
           "filingItems": [
             "7.01",
             "9.01"
@@ -5444,7 +5445,7 @@
           "title": "Microsoft · 10-K · 10-K",
           "publishedAt": "2026-07-29",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-07-30T00:08:01.000Z",
+          "acceptedAt": "2026-07-29T20:08:01.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5456,7 +5457,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-07-29",
           "reportDate": "2026-07-29",
-          "acceptedAt": "2026-07-30T00:04:53.000Z",
+          "acceptedAt": "2026-07-29T20:04:53.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5471,7 +5472,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-02",
-          "acceptedAt": "2026-06-05T18:36:56.000Z",
+          "acceptedAt": "2026-06-05T14:36:56.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5485,7 +5486,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-05-14",
           "reportDate": "2026-05-13",
-          "acceptedAt": "2026-05-15T00:28:48.000Z",
+          "acceptedAt": "2026-05-14T20:28:48.000Z",
           "filingItems": [
             "5.02",
             "9.01"
@@ -5500,7 +5501,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2026-04-29",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-04-30T00:06:24.000Z",
+          "acceptedAt": "2026-04-29T20:06:24.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/0001193125-26-191507-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5512,7 +5513,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-04-29",
           "reportDate": "2026-04-29",
-          "acceptedAt": "2026-04-30T00:03:31.000Z",
+          "acceptedAt": "2026-04-29T20:03:31.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5527,7 +5528,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2026-01-28",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-01-29T02:07:34.000Z",
+          "acceptedAt": "2026-01-28T21:07:34.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/0001193125-26-027207-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5539,7 +5540,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2026-01-28",
           "reportDate": "2026-01-28",
-          "acceptedAt": "2026-01-29T02:04:38.000Z",
+          "acceptedAt": "2026-01-28T21:04:38.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5554,7 +5555,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-12-08",
           "reportDate": "2025-12-05",
-          "acceptedAt": "2025-12-09T02:00:35.000Z",
+          "acceptedAt": "2025-12-08T21:00:35.000Z",
           "filingItems": [
             "5.02",
             "5.07"
@@ -5569,7 +5570,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-10-30T00:10:48.000Z",
+          "acceptedAt": "2025-10-29T20:10:48.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/0001193125-25-256321-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5581,7 +5582,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-28",
-          "acceptedAt": "2025-10-30T00:07:42.000Z",
+          "acceptedAt": "2025-10-29T20:07:42.000Z",
           "filingItems": [
             "2.02",
             "7.01",
@@ -5597,7 +5598,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-09-30",
           "reportDate": "2025-09-24",
-          "acceptedAt": "2025-10-01T00:37:10.000Z",
+          "acceptedAt": "2025-09-30T20:37:10.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5611,7 +5612,7 @@
           "title": "Microsoft · 10-K · 10-K",
           "publishedAt": "2025-07-30",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-07-31T00:11:40.000Z",
+          "acceptedAt": "2025-07-30T20:11:40.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5623,7 +5624,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-07-30",
           "reportDate": "2025-07-30",
-          "acceptedAt": "2025-07-31T00:08:53.000Z",
+          "acceptedAt": "2025-07-30T20:08:53.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5638,7 +5639,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-07-01",
           "reportDate": "2025-07-01",
-          "acceptedAt": "2025-07-02T01:00:47.000Z",
+          "acceptedAt": "2025-07-01T21:00:47.000Z",
           "filingItems": [
             "5.03",
             "9.01"
@@ -5653,7 +5654,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2025-04-30",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-05-01T00:08:52.000Z",
+          "acceptedAt": "2025-04-30T20:08:52.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017025061046/0000950170-25-061046-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5665,7 +5666,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-04-30",
           "reportDate": "2025-04-30",
-          "acceptedAt": "2025-05-01T00:06:03.000Z",
+          "acceptedAt": "2025-04-30T20:06:03.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5680,7 +5681,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2025-01-29",
           "reportDate": "2024-12-31",
-          "acceptedAt": "2025-01-30T02:11:54.000Z",
+          "acceptedAt": "2025-01-29T21:11:54.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017025010491/0000950170-25-010491-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5692,7 +5693,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-01-29",
           "reportDate": "2025-01-29",
-          "acceptedAt": "2025-01-30T02:08:56.000Z",
+          "acceptedAt": "2025-01-29T21:08:56.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5707,7 +5708,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2025-01-22",
           "reportDate": "2025-01-22",
-          "acceptedAt": "2025-01-23T03:15:39.000Z",
+          "acceptedAt": "2025-01-22T22:15:39.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -5721,7 +5722,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-12-11",
           "reportDate": "2024-12-10",
-          "acceptedAt": "2024-12-12T02:01:27.000Z",
+          "acceptedAt": "2024-12-11T21:01:27.000Z",
           "filingItems": [
             "5.07",
             "7.01"
@@ -5736,7 +5737,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-12-03",
           "reportDate": "2024-12-03",
-          "acceptedAt": "2024-12-04T02:00:37.000Z",
+          "acceptedAt": "2024-12-03T21:00:37.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5751,7 +5752,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2024-10-30",
           "reportDate": "2024-09-30",
-          "acceptedAt": "2024-10-31T00:07:17.000Z",
+          "acceptedAt": "2024-10-30T20:07:17.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017024118967/0000950170-24-118967-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5763,7 +5764,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-10-30",
           "reportDate": "2024-10-30",
-          "acceptedAt": "2024-10-31T00:04:07.000Z",
+          "acceptedAt": "2024-10-30T20:04:07.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5778,7 +5779,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-08-21",
           "reportDate": "2024-08-21",
-          "acceptedAt": "2024-08-22T00:08:55.000Z",
+          "acceptedAt": "2024-08-21T20:08:55.000Z",
           "filingItems": [
             "7.01",
             "9.01"
@@ -5793,7 +5794,7 @@
           "title": "Microsoft · 10-K · 10-K",
           "publishedAt": "2024-07-30",
           "reportDate": "2024-06-30",
-          "acceptedAt": "2024-07-31T00:06:22.000Z",
+          "acceptedAt": "2024-07-30T20:06:22.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/0000950170-24-087843-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5805,7 +5806,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-07-30",
           "reportDate": "2024-07-30",
-          "acceptedAt": "2024-07-31T00:03:22.000Z",
+          "acceptedAt": "2024-07-30T20:03:22.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5820,7 +5821,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2024-04-25",
           "reportDate": "2024-03-31",
-          "acceptedAt": "2024-04-26T00:06:24.000Z",
+          "acceptedAt": "2024-04-25T20:06:24.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/0000950170-24-048288-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5832,7 +5833,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-04-25",
           "reportDate": "2024-04-25",
-          "acceptedAt": "2024-04-26T00:03:19.000Z",
+          "acceptedAt": "2024-04-25T20:03:19.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5847,7 +5848,7 @@
           "title": "Microsoft · 8-K/A · 8-K/A",
           "publishedAt": "2024-03-08",
           "reportDate": "2024-01-17",
-          "acceptedAt": "2024-03-08T18:58:04.000Z",
+          "acceptedAt": "2024-03-08T13:58:04.000Z",
           "filingItems": [
             "1.05",
             "7.01",
@@ -5863,7 +5864,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2024-01-30",
           "reportDate": "2023-12-31",
-          "acceptedAt": "2024-01-31T02:05:46.000Z",
+          "acceptedAt": "2024-01-30T21:05:46.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017024008814/0000950170-24-008814-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5875,7 +5876,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-01-30",
           "reportDate": "2024-01-30",
-          "acceptedAt": "2024-01-31T02:03:17.000Z",
+          "acceptedAt": "2024-01-30T21:03:17.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5890,7 +5891,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2024-01-19",
           "reportDate": "2024-01-17",
-          "acceptedAt": "2024-01-20T02:39:35.000Z",
+          "acceptedAt": "2024-01-19T21:39:35.000Z",
           "filingItems": [
             "1.05",
             "7.01",
@@ -5906,7 +5907,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2023-12-08",
           "reportDate": "2023-12-07",
-          "acceptedAt": "2023-12-09T02:31:05.000Z",
+          "acceptedAt": "2023-12-08T21:31:05.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -5920,7 +5921,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2023-11-06",
           "reportDate": "2023-11-06",
-          "acceptedAt": "2023-11-07T02:14:08.000Z",
+          "acceptedAt": "2023-11-06T21:14:08.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5935,7 +5936,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2023-10-30",
           "reportDate": "2023-10-27",
-          "acceptedAt": "2023-10-30T14:04:32.000Z",
+          "acceptedAt": "2023-10-30T10:04:32.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -5950,7 +5951,7 @@
           "title": "Microsoft · 10-Q · 10-Q",
           "publishedAt": "2023-10-24",
           "reportDate": "2023-09-30",
-          "acceptedAt": "2023-10-25T00:07:40.000Z",
+          "acceptedAt": "2023-10-24T20:07:40.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017023054855/0000950170-23-054855-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -5962,7 +5963,7 @@
           "title": "Microsoft · 8-K · 8-K",
           "publishedAt": "2023-10-24",
           "reportDate": "2023-10-24",
-          "acceptedAt": "2023-10-25T00:03:29.000Z",
+          "acceptedAt": "2023-10-24T20:03:29.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -5977,7 +5978,7 @@
           "title": "Microsoft · 8-K · FORM 8-K",
           "publishedAt": "2023-10-16",
           "reportDate": "2023-10-16",
-          "acceptedAt": "2023-10-17T01:30:10.000Z",
+          "acceptedAt": "2023-10-16T21:30:10.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6047,21 +6048,21 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-24T09:05:30.304Z",
-      "lastSuccessAt": "2026-10-24T09:05:30.304Z",
+      "lastAttemptAt": "2026-10-25T09:22:36.839Z",
+      "lastSuccessAt": "2026-10-25T09:22:36.839Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-16T09:16:01.839Z",
+      "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "fee91655fcb8e60b910c034076943a31135cd34654baf72679e41b4317cb1e62",
+      "fingerprint": "b8f885c8a80e4fea57167b41d195d886d1c4ad0de1c66be60cf67bcf698e51d3",
       "items": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-08-10",
           "reportDate": "2026-08-10",
-          "acceptedAt": "2026-08-11T00:10:48.000Z",
+          "acceptedAt": "2026-08-10T20:10:48.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6076,7 +6077,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2026-07-23",
           "reportDate": "2026-06-30",
-          "acceptedAt": "2026-07-23T05:15:54.000Z",
+          "acceptedAt": "2026-07-23T01:15:54.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/0001652044-26-000071-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6088,7 +6089,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-07-22",
           "reportDate": "2026-07-22",
-          "acceptedAt": "2026-07-23T00:01:36.000Z",
+          "acceptedAt": "2026-07-22T20:01:36.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6103,7 +6104,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-11",
           "reportDate": "2026-06-05",
-          "acceptedAt": "2026-06-12T00:17:04.000Z",
+          "acceptedAt": "2026-06-11T20:17:04.000Z",
           "filingItems": [
             "5.02",
             "5.07",
@@ -6119,7 +6120,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-05",
-          "acceptedAt": "2026-06-06T00:52:38.000Z",
+          "acceptedAt": "2026-06-05T20:52:38.000Z",
           "filingItems": [
             "1.01",
             "3.03",
@@ -6136,7 +6137,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-05",
           "reportDate": "2026-06-02",
-          "acceptedAt": "2026-06-06T00:40:20.000Z",
+          "acceptedAt": "2026-06-05T20:40:20.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6150,7 +6151,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-06-04",
           "reportDate": "2026-06-04",
-          "acceptedAt": "2026-06-05T01:07:39.000Z",
+          "acceptedAt": "2026-06-04T21:07:39.000Z",
           "filingItems": [
             "1.01",
             "7.01",
@@ -6167,7 +6168,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-05-21",
           "reportDate": "2026-05-21",
-          "acceptedAt": "2026-05-22T00:25:10.000Z",
+          "acceptedAt": "2026-05-21T20:25:10.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6182,7 +6183,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-05-11",
           "reportDate": "2026-05-11",
-          "acceptedAt": "2026-05-12T00:45:29.000Z",
+          "acceptedAt": "2026-05-11T20:45:29.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6197,7 +6198,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2026-04-30",
           "reportDate": "2026-03-31",
-          "acceptedAt": "2026-04-30T05:02:11.000Z",
+          "acceptedAt": "2026-04-30T01:02:11.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/0001652044-26-000048-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6209,7 +6210,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-29",
           "reportDate": "2026-04-29",
-          "acceptedAt": "2026-04-30T00:01:35.000Z",
+          "acceptedAt": "2026-04-29T20:01:35.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6224,7 +6225,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-10",
           "reportDate": "2026-04-07",
-          "acceptedAt": "2026-04-11T00:16:53.000Z",
+          "acceptedAt": "2026-04-10T20:16:53.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6238,7 +6239,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-04-02",
           "reportDate": "2026-03-30",
-          "acceptedAt": "2026-04-03T00:18:28.000Z",
+          "acceptedAt": "2026-04-02T20:18:28.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6252,7 +6253,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-03-06",
           "reportDate": "2026-03-04",
-          "acceptedAt": "2026-03-07T03:21:44.000Z",
+          "acceptedAt": "2026-03-06T22:21:44.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6266,7 +6267,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-02-13",
           "reportDate": "2026-02-13",
-          "acceptedAt": "2026-02-14T02:16:46.000Z",
+          "acceptedAt": "2026-02-13T21:16:46.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6281,7 +6282,7 @@
           "title": "Alphabet · 10-K · 10-K",
           "publishedAt": "2026-02-05",
           "reportDate": "2025-12-31",
-          "acceptedAt": "2026-02-05T07:56:03.000Z",
+          "acceptedAt": "2026-02-05T02:56:03.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6293,7 +6294,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2026-02-04",
           "reportDate": "2026-02-04",
-          "acceptedAt": "2026-02-05T02:01:37.000Z",
+          "acceptedAt": "2026-02-04T21:01:37.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6308,7 +6309,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-11-06",
           "reportDate": "2025-11-06",
-          "acceptedAt": "2025-11-07T02:47:26.000Z",
+          "acceptedAt": "2025-11-06T21:47:26.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6323,7 +6324,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-10-30",
           "reportDate": "2025-09-30",
-          "acceptedAt": "2025-10-30T05:55:01.000Z",
+          "acceptedAt": "2025-10-30T01:55:01.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000091/0001652044-25-000091-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6335,7 +6336,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-10-29",
           "reportDate": "2025-10-29",
-          "acceptedAt": "2025-10-30T00:01:48.000Z",
+          "acceptedAt": "2025-10-29T20:01:48.000Z",
           "filingItems": [
             "2.02",
             "9.01"
@@ -6350,7 +6351,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-09-05",
           "reportDate": "2025-09-05",
-          "acceptedAt": "2025-09-06T00:53:32.000Z",
+          "acceptedAt": "2025-09-05T20:53:32.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6364,7 +6365,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-09-03",
           "reportDate": "2025-09-02",
-          "acceptedAt": "2025-09-04T00:30:34.000Z",
+          "acceptedAt": "2025-09-03T20:30:34.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6378,7 +6379,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-07-24",
           "reportDate": "2025-06-30",
-          "acceptedAt": "2025-07-24T03:44:01.000Z",
+          "acceptedAt": "2025-07-23T23:44:01.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000062/0001652044-25-000062-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6390,7 +6391,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-07-23",
           "reportDate": "2025-07-23",
-          "acceptedAt": "2025-07-24T00:01:33.000Z",
+          "acceptedAt": "2025-07-23T20:01:33.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6406,7 +6407,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-07-18",
           "reportDate": "2025-07-08",
-          "acceptedAt": "2025-07-19T00:16:46.000Z",
+          "acceptedAt": "2025-07-18T20:16:46.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6421,7 +6422,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-06-12",
           "reportDate": "2025-06-06",
-          "acceptedAt": "2025-06-13T00:23:59.000Z",
+          "acceptedAt": "2025-06-12T20:23:59.000Z",
           "filingItems": [
             "5.07"
           ],
@@ -6435,7 +6436,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-05-06",
           "reportDate": "2025-05-06",
-          "acceptedAt": "2025-05-07T00:50:04.000Z",
+          "acceptedAt": "2025-05-06T20:50:04.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6450,7 +6451,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-05-01",
           "reportDate": "2025-05-01",
-          "acceptedAt": "2025-05-02T00:28:02.000Z",
+          "acceptedAt": "2025-05-01T20:28:02.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6465,7 +6466,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2025-04-25",
           "reportDate": "2025-03-31",
-          "acceptedAt": "2025-04-25T05:05:29.000Z",
+          "acceptedAt": "2025-04-25T01:05:29.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000043/0001652044-25-000043-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6477,7 +6478,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-04-24",
           "reportDate": "2025-04-23",
-          "acceptedAt": "2025-04-25T00:01:26.000Z",
+          "acceptedAt": "2025-04-24T20:01:26.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6493,7 +6494,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-04-18",
           "reportDate": "2025-04-17",
-          "acceptedAt": "2025-04-18T01:49:33.000Z",
+          "acceptedAt": "2025-04-17T21:49:33.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6507,7 +6508,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-03-18",
           "reportDate": "2025-03-18",
-          "acceptedAt": "2025-03-18T16:43:32.000Z",
+          "acceptedAt": "2025-03-18T12:43:32.000Z",
           "filingItems": [
             "7.01",
             "8.01"
@@ -6522,7 +6523,7 @@
           "title": "Alphabet · 10-K · 10-K",
           "publishedAt": "2025-02-05",
           "reportDate": "2024-12-31",
-          "acceptedAt": "2025-02-05T06:41:40.000Z",
+          "acceptedAt": "2025-02-05T01:41:40.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/0001652044-25-000014-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6534,7 +6535,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2025-02-04",
           "reportDate": "2025-02-04",
-          "acceptedAt": "2025-02-05T02:01:27.000Z",
+          "acceptedAt": "2025-02-04T21:01:27.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6550,7 +6551,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2024-10-30",
           "reportDate": "2024-09-30",
-          "acceptedAt": "2024-10-30T03:33:10.000Z",
+          "acceptedAt": "2024-10-29T23:33:10.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000118/0001652044-24-000118-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6562,7 +6563,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-10-29",
           "reportDate": "2024-10-29",
-          "acceptedAt": "2024-10-30T00:01:46.000Z",
+          "acceptedAt": "2024-10-29T20:01:46.000Z",
           "filingItems": [
             "2.02",
             "8.01",
@@ -6578,7 +6579,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-10-17",
           "reportDate": "2024-10-17",
-          "acceptedAt": "2024-10-17T22:20:32.000Z",
+          "acceptedAt": "2024-10-17T18:20:32.000Z",
           "filingItems": [
             "5.02"
           ],
@@ -6592,7 +6593,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-09-24",
           "reportDate": "2024-09-24",
-          "acceptedAt": "2024-09-24T16:31:01.000Z",
+          "acceptedAt": "2024-09-24T12:31:01.000Z",
           "filingItems": [
             "8.01",
             "9.01"
@@ -6607,7 +6608,7 @@
           "title": "Alphabet · 8-K · 8-K",
           "publishedAt": "2024-08-06",
           "reportDate": "2024-08-05",
-          "acceptedAt": "2024-08-06T04:08:50.000Z",
+          "acceptedAt": "2024-08-06T00:08:50.000Z",
           "filingItems": [
             "8.01"
           ],
@@ -6621,7 +6622,7 @@
           "title": "Alphabet · 10-Q · 10-Q",
           "publishedAt": "2024-07-24",
           "reportDate": "2024-06-30",
-          "acceptedAt": "2024-07-24T03:12:07.000Z",
+          "acceptedAt": "2024-07-23T23:12:07.000Z",
           "filingItems": [],
           "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/0001652044-24-000079-index.html",
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
@@ -6685,6 +6686,18 @@
     }
   },
   "events": [
+    {
+      "id": "46e1670542cb23cc25ca70eb",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
+      "url": "https://www.nature.com/articles/s41586-026-11328-3",
+      "detectedAt": "2026-10-25T09:22:36.839Z",
+      "publishedAt": "2026-10-25",
+      "verification": "unreviewed"
+    },
     {
       "id": "c98e9982dd812b79395b916f",
       "sourceId": "nature-research",
