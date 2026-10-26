@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T10:28:54.130Z",
+  "generatedAt": "2026-10-26T16:58:06.696Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -66,11 +66,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "nextAttemptAt": "2026-10-26T16:28:54.130Z",
+      "lastAttemptAt": "2026-10-26T16:58:06.696Z",
+      "nextAttemptAt": "2026-10-26T22:58:06.696Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 38
+      "failureStreak": 39
     },
     "toyota-news": {
       "id": "toyota-news",
