@@ -1,10 +1,41 @@
 {
   "schemaVersion": 1,
-  "collectionId": "037fd373-eae6-4ab5-8948-9a231706701e",
-  "generatedAt": "2026-10-26T00:42:27.621Z",
-  "sourceCheckedAt": "2026-10-25T19:14:27.336Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40250624950",
+  "collectionId": "15db37b7-f714-4f54-8ed9-559b35988dc8",
+  "generatedAt": "2026-10-26T10:28:54.130Z",
+  "sourceCheckedAt": "2026-10-26T10:28:54.130Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40307698232",
   "documents": [
+    {
+      "id": "556e40e874fd3a4437b68428",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03383-7",
+      "title": "Elizabeth Holmes film enthrals — but her legacy haunts science",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "6d10b7acf82ae981f2c3304a",
+      "originalPublishedAt": "2026-10-23",
+      "firstSeenAt": "2026-10-24T14:06:32.727Z",
+      "announcementAt": "2026-10-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-23",
+      "detectedAt": "2026-10-26T10:28:54.130Z",
+      "changeType": "revision",
+      "previousId": "e94ee96077812dc8ba286a6a",
+      "previousExcerpt": null,
+      "previousTitle": "Elizabeth Holmes film enthralls — but her legacy haunts science",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "ffde42e57a362a5025e7acc2",
       "sourceId": "nature-research",
@@ -23937,29 +23968,6 @@
       "associatedThemes": [],
       "metadataOnly": true,
       "originalPublishedAt": "2026-06-30T17:00:00.000Z"
-    },
-    {
-      "id": "3f34d842aa602d17ce932e43",
-      "sourceId": "sec-tm",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525142326/d925022d20f.htm",
-      "title": "Toyota · 20-F · ANNUAL REPORT",
-      "excerpt": "Company-filed disclosure. Review the filing and exhibits; filing type alone does not establish an adoption milestone.",
-      "owner": "Toyota",
-      "tier": "filing",
-      "themes": [],
-      "publishedAt": "2025-06-18",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "solid-state-batteries"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -31539,9 +31547,10 @@
       "sourceId": "nature-research",
       "originalPublishedAt": "2026-10-23",
       "firstSeenAt": "2026-10-24T14:06:32.727Z",
-      "latestId": "e94ee96077812dc8ba286a6a",
+      "latestId": "556e40e874fd3a4437b68428",
       "versions": {
-        "e94ee96077812dc8ba286a6a": "2026-10-24T14:06:32.727Z"
+        "e94ee96077812dc8ba286a6a": "2026-10-24T14:06:32.727Z",
+        "556e40e874fd3a4437b68428": "2026-10-26T10:28:54.130Z"
       }
     },
     "df2c057bd304a3b02110a40f": {
@@ -45451,7 +45460,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-26T00:42:27.621Z",
+    "generatedAt": "2026-10-26T10:28:54.130Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45871,7 +45880,7 @@
       }
     ],
     "datedDocuments": 317,
-    "comparableDays": 17,
+    "comparableDays": 18,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {
