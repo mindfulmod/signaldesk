@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-27T00:31:28.777Z","phrases":[{"phrase":"billion stock offering","weekCount":10,"tickers":["META","AMD","AVGO","NVDA"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-27T18:45:50.474Z","phrases":[{"phrase":"raises full-year guidance","weekCount":2,"tickers":["UPS","SOFI"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
