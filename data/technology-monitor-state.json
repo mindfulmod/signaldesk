@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T01:36:41.809Z",
+  "generatedAt": "2026-10-27T10:01:31.494Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -155,26 +155,26 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Investors - AST SpaceMobile",
-      "etag": "\"1764651157\"",
+      "etag": "\"1222325497\"",
       "lastModified": null
     },
     "qs-news": {
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-27T01:36:41.809Z",
-      "nextAttemptAt": "2026-10-27T07:36:41.809Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "nextAttemptAt": "2026-10-27T16:01:31.494Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 40
+      "failureStreak": 41
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -200,8 +200,8 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29b9f-3+ji0qLRPK9RSZHE8p5OdhOk1Vo\"",
+      "etag": "W/\"29b79-/ZPOmCYXvqzZBCTm7yXaw7EYcLo\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-24T09:05:30.304Z",
       "nextAttemptAt": null,
@@ -316,8 +316,8 @@
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
       "nextAttemptAt": null,
@@ -373,16 +373,16 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"47b9267df1915d7c8603f9c9413d0289\"",
-      "lastModified": "Fri, 23 Oct 2026 20:53:41 GMT"
+      "etag": "W/\"26ea9d4a6f19e35e4786a158ca79406c\"",
+      "lastModified": "Mon, 26 Oct 2026 15:33:56 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -442,22 +442,15 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-24T09:05:30.304Z",
+      "lastChangedAt": "2026-10-27T10:01:31.494Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "3e0d6f30fdb76150e6d0b26a74057af03f8533438bf5ad279ef22036bd10d2f6",
-      "items": [
-        {
-          "url": "https://www.fcc.gov/edoc/426146",
-          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-          "excerpt": ".",
-          "publishedAt": null
-        }
-      ],
+      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "items": [],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -470,8 +463,8 @@
         "https://www.fcc.gov/edoc/426095",
         "https://www.fcc.gov/edoc/426146"
       ],
-      "matchedItems": 1,
-      "extractedEntries": 14,
+      "matchedItems": 0,
+      "extractedEntries": 5,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -487,8 +480,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -615,27 +608,33 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1793006947-gzip\"",
-      "lastModified": "Mon, 26 Oct 2026 09:29:07 GMT"
+      "etag": "\"1793093358-gzip\"",
+      "lastModified": "Tue, 27 Oct 2026 09:29:18 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-22T09:36:15.329Z",
+      "lastChangedAt": "2026-10-27T10:01:31.494Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "53f69d0502c48f87b69445a6ce16669d118a9d59b730649f05d0dc3c58d314d7",
+      "fingerprint": "33d0807a0f9febf9c218116b4a725562961b7c218f344170c5604c8881b99937",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026",
+          "title": "At New York Climate Week 2026, MIT connects with a global network",
+          "excerpt": "A cross-section of the MIT community convened discussions on topics ranging from data centers and super pollutants to agriculture and education.",
+          "publishedAt": "2026-10-26T19:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
           "title": "Startup plans to rejuvenate the nuclear power industry with a new manufacturing approach",
-          "excerpt": "Founded by Jake Jurewicz ’14, SM ’15, Blue Energy manufactures giant pieces of nuclear reactors at shipyards and ships them on barges for final assembly, to lower costs.",
+          "excerpt": "Founded by Jake Jurewicz ’14, SM ’15, Blue Energy aims to manufacture giant pieces of nuclear reactors at shipyards and ship them on barges for final assembly.",
           "publishedAt": "2026-10-22T04:00:00.000Z"
         },
         {
@@ -921,12 +920,6 @@
           "publishedAt": "2026-03-18T04:00:00.000Z"
         },
         {
-          "url": "https://news.mit.edu/2026/sustaining-diplomacy-amid-us-china-competition-0318",
-          "title": "Sustaining diplomacy amid competition in US-China relations",
-          "excerpt": "At MIT, former U.S. ambassador to China Nicholas Burns highlights climate change as an area for diplomatic engagement, while exploring areas including China's emphasis on STEM education.",
-          "publishedAt": "2026-03-18T04:00:00.000Z"
-        },
-        {
           "url": "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
           "title": "New method could increase LLM training efficiency",
           "excerpt": "By leveraging idle computing time, researchers can double the speed of model training while preserving accuracy.",
@@ -986,34 +979,89 @@
         "https://news.mit.edu/2026/3-questions-how-ai-could-optimize-power-grid-0109",
         "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
         "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
-        "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022"
+        "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
+        "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026"
       ],
       "matchedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-10-22T04:00:00.000Z",
+      "newestPublicationAt": "2026-10-26T19:00:00.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1793009194\"",
-      "lastModified": "Mon, 26 Oct 2026 10:06:34 GMT"
+      "etag": "\"1793094695\"",
+      "lastModified": "Tue, 27 Oct 2026 09:51:35 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-26T10:28:54.130Z",
+      "lastChangedAt": "2026-10-27T10:01:31.494Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "d71f12f42e676afd11eb204d42ab9e139bcf2707bdf0708210ee6bc222b4ed25",
+      "fingerprint": "51995b46de59992961beb4c593609deb69790b4302fa7ddcefc685b533cb7418",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03258-x",
+          "title": "Nerve activity initiates autoimmune hair loss",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03392-6",
+          "title": "Women might have invented language — but not alone",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03398-0",
+          "title": "Are salaries getting worse? Many scientists think so",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03447-8",
+          "title": "Can science make your dog live longer? Longevity craze comes to pets",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03259-w",
+          "title": "Glimpsing archaeal microbes on the move",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03440-1",
+          "title": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03393-5",
+          "title": "The Selfish Gene , 50 years on — it’s time for an update",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03410-7",
+          "title": "Mentoring a lab colleague? Share your ‘CV of failures’ with them",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03446-9",
+          "title": "Brazil election: many scientists relieved as Lula wins surprise victory",
+          "excerpt": "",
+          "publishedAt": "2026-10-26"
+        },
         {
           "url": "https://www.nature.com/articles/s41586-026-11328-3",
           "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
@@ -1409,60 +1457,6 @@
           "title": "Butterfly wing patterns make motion hard to read",
           "excerpt": "",
           "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03327-1",
-          "title": "Nature ’s job-satisfaction survey highlights the changing geography of science",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03310-w",
-          "title": "Will this sleep-disorder drug be the next big blockbuster?",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03374-8",
-          "title": "Daily Briefing: Tiny doses of LSD seem to boost cognition",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03358-8",
-          "title": "Can a human survive in a whale’s belly? The science behind the thriller Whalefall",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03200-1",
-          "title": "It’s time to teach peer review as a core research skill",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03316-4",
-          "title": "Vast new fossil record challenges story of Earth’s ‘big five’ mass extinctions",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03151-7",
-          "title": "China picks first researchers for 15-year mega grants",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03359-7",
-          "title": "Body-clock disruptions contribute to one in four cases of depression, suggests large study",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03314-6",
-          "title": "Nepal’s disaster is an urgent wake-up call",
-          "excerpt": "",
-          "publishedAt": "2026-10-20"
         }
       ],
       "seenLinks": [
@@ -1730,18 +1724,27 @@
         "https://www.nature.com/articles/d41586-026-02582-6",
         "https://www.nature.com/articles/d41586-026-03438-9",
         "https://www.nature.com/articles/d41586-026-03400-9",
-        "https://www.nature.com/articles/s41586-026-11328-3"
+        "https://www.nature.com/articles/s41586-026-11328-3",
+        "https://www.nature.com/articles/d41586-026-03258-x",
+        "https://www.nature.com/articles/d41586-026-03392-6",
+        "https://www.nature.com/articles/d41586-026-03398-0",
+        "https://www.nature.com/articles/d41586-026-03447-8",
+        "https://www.nature.com/articles/d41586-026-03259-w",
+        "https://www.nature.com/articles/d41586-026-03440-1",
+        "https://www.nature.com/articles/d41586-026-03393-5",
+        "https://www.nature.com/articles/d41586-026-03410-7",
+        "https://www.nature.com/articles/d41586-026-03446-9"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-25",
+      "newestPublicationAt": "2026-10-26",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"60d5feebd0bc44825e3157d2fc571861\"",
+      "etag": "\"6f804842ce56c5b11c5ffc3759d992b1\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1749,8 +1752,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -2375,8 +2378,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3017,8 +3020,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -3566,8 +3569,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4205,8 +4208,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -4892,8 +4895,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -5400,7 +5403,7 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm"
       ],
       "matchedItems": 33,
-      "extractedEntries": 1005,
+      "extractedEntries": 1011,
       "newestPublicationAt": "2026-10-22",
       "excerpt": null,
       "publishedAt": null,
@@ -5416,8 +5419,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -6032,7 +6035,7 @@
         "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 1002,
+      "extractedEntries": 1003,
       "newestPublicationAt": "2026-09-02",
       "excerpt": null,
       "publishedAt": null,
@@ -6048,8 +6051,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-26T10:28:54.130Z",
-      "lastSuccessAt": "2026-10-26T10:28:54.130Z",
+      "lastAttemptAt": "2026-10-27T10:01:31.494Z",
+      "lastSuccessAt": "2026-10-27T10:01:31.494Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -6686,6 +6689,126 @@
     }
   },
   "events": [
+    {
+      "id": "e0ba28d80ed156a498c5d174",
+      "sourceId": "mit-energy",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "At New York Climate Week 2026, MIT connects with a global network",
+      "url": "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26T19:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d130262db02f0722e5fd2758",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Nerve activity initiates autoimmune hair loss",
+      "url": "https://www.nature.com/articles/d41586-026-03258-x",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2f37b6a88a5d5e1647394468",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Women might have invented language — but not alone",
+      "url": "https://www.nature.com/articles/d41586-026-03392-6",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d10f8f8914c3756a19895310",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Are salaries getting worse? Many scientists think so",
+      "url": "https://www.nature.com/articles/d41586-026-03398-0",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4991c0878cca25beb34c53d8",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Can science make your dog live longer? Longevity craze comes to pets",
+      "url": "https://www.nature.com/articles/d41586-026-03447-8",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a7768126936e09d573c8cd9d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Glimpsing archaeal microbes on the move",
+      "url": "https://www.nature.com/articles/d41586-026-03259-w",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "78a8a1cfa52a11018ff60619",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas",
+      "url": "https://www.nature.com/articles/d41586-026-03440-1",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bf53e68feb9712a91a567d3b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The Selfish Gene , 50 years on — it’s time for an update",
+      "url": "https://www.nature.com/articles/d41586-026-03393-5",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7fba7ca02a047d7c52ca02a1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Mentoring a lab colleague? Share your ‘CV of failures’ with them",
+      "url": "https://www.nature.com/articles/d41586-026-03410-7",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9edad2a4a78c2b6880ea381d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Brazil election: many scientists relieved as Lula wins surprise victory",
+      "url": "https://www.nature.com/articles/d41586-026-03446-9",
+      "detectedAt": "2026-10-27T10:01:31.494Z",
+      "publishedAt": "2026-10-26",
+      "verification": "unreviewed"
+    },
     {
       "id": "46e1670542cb23cc25ca70eb",
       "sourceId": "nature-research",
