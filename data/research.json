@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "4c65ed63-fc60-499f-b8b0-4cef0362daf7",
-  "generatedAt": "2026-10-26T16:58:06.696Z",
-  "sourceCheckedAt": "2026-10-26T16:58:06.696Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40364120315",
+  "collectionId": "4ea26dbc-eb79-49f4-9e30-2358a3cc1bf0",
+  "generatedAt": "2026-10-27T01:36:41.809Z",
+  "sourceCheckedAt": "2026-10-27T01:36:41.809Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40433565509",
   "documents": [
     {
       "id": "556e40e874fd3a4437b68428",
@@ -45532,7 +45532,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-26T16:58:06.696Z",
+    "generatedAt": "2026-10-27T01:36:41.809Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45705,6 +45705,15 @@
           "3e2d4d56ee7e63fef142f78d"
         ],
         "documentCount": 317
+      },
+      {
+        "date": "2026-10-27",
+        "topics": [
+          "d08ada4bb3c49858bec50b10",
+          "b9d1dcf6c13212a659fc8340",
+          "3e2d4d56ee7e63fef142f78d"
+        ],
+        "documentCount": 316
       }
     ],
     "candidates": [
@@ -45726,7 +45735,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       },
       {
         "id": "b9d1dcf6c13212a659fc8340",
@@ -45746,7 +45755,7 @@
         ],
         "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       },
       {
         "id": "3e2d4d56ee7e63fef142f78d",
@@ -45766,7 +45775,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       }
     ],
     "archive": [
@@ -45788,7 +45797,7 @@
         ],
         "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       },
       {
         "id": "d08ada4bb3c49858bec50b10",
@@ -45808,7 +45817,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       },
       {
         "id": "3e2d4d56ee7e63fef142f78d",
@@ -45828,7 +45837,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-26"
+        "lastSeenAt": "2026-10-27"
       },
       {
         "id": "70511d3302d1f485eb6285b3",
@@ -45951,7 +45960,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 317,
+    "datedDocuments": 316,
     "comparableDays": 18,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
