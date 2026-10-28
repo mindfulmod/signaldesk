@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T01:40:16.413Z",
+  "generatedAt": "2026-10-28T10:47:39.257Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -8228,8 +8228,8 @@
         "form": "8-K",
         "accession": "0001493152-26-047766"
       },
-      "factsAttemptAt": "2026-10-21T09:35:54.392Z",
-      "factsCheckedAt": "2026-10-21T09:35:54.392Z",
+      "factsAttemptAt": "2026-10-28T10:47:39.257Z",
+      "factsCheckedAt": "2026-10-28T10:47:39.257Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
       "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
