@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "09bb608e-5d09-4fa5-9547-1e32a6009502",
-  "generatedAt": "2026-10-27T20:56:29.518Z",
+  "collectionId": "e34b9ec8-bbc6-492d-9565-fa6b582d7964",
+  "generatedAt": "2026-10-28T01:40:16.413Z",
   "sourceCheckedAt": "2026-10-27T20:56:29.518Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40582424961",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40616387772",
   "documents": [
     {
       "id": "22484f6a5e160ed65d4e924c",
@@ -32801,17 +32801,17 @@
       "factsCheckedAt": "2026-10-24T09:05:30.304Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 3.9,
+        "price": 4.18,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:01.000Z",
+        "asOf": "2026-10-27T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -32962,6 +32962,15 @@
           "price": 3.9,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.18,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -34602,17 +34611,17 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 1.99,
+        "price": 2.02,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:00.000Z",
+        "asOf": "2026-10-27T20:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -34763,6 +34772,15 @@
           "price": 1.99,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 2.02,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -36170,17 +36188,17 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 197.64,
+        "price": 196.56,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:02.000Z",
+        "asOf": "2026-10-27T20:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -36331,6 +36349,15 @@
           "price": 197.64,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 196.56,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -38087,17 +38114,17 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-381901",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 146.93,
+        "price": 146.83,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:00.000Z",
+        "asOf": "2026-10-27T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -38248,6 +38275,15 @@
           "price": 146.93,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 146.83,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -39990,17 +40026,17 @@
       "factsCheckedAt": "2026-10-21T09:35:54.392Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 39.45,
+        "price": 41.96,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:01.000Z",
+        "asOf": "2026-10-27T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -40151,6 +40187,15 @@
           "price": 39.45,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 41.96,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -41578,17 +41623,17 @@
       "factsCheckedAt": "2026-10-23T09:32:27.598Z",
       "factsAccession": "0001628280-26-066773",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 630.56,
+        "price": 620.19,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:01.000Z",
+        "asOf": "2026-10-27T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -41739,6 +41784,15 @@
           "price": 630.56,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 620.19,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -43562,17 +43616,17 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-380280",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 532.6,
+        "price": 531.33,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:01.000Z",
+        "asOf": "2026-10-27T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -43723,6 +43777,15 @@
           "price": 532.6,
           "currency": "USD",
           "asOf": "2026-10-26T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 531.33,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -45546,17 +45609,17 @@
       "factsCheckedAt": "2026-10-23T20:04:22.393Z",
       "factsAccession": "0001193125-26-342390",
       "factsError": null,
-      "quoteAttemptAt": "2026-10-27T10:01:31.494Z",
+      "quoteAttemptAt": "2026-10-28T01:40:16.413Z",
       "quote": {
-        "price": 316.8,
+        "price": 320.58,
         "currency": "USD",
-        "asOf": "2026-10-26T20:00:01.000Z",
+        "asOf": "2026-10-27T20:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-10-27T10:01:31.494Z",
+      "quoteCheckedAt": "2026-10-28T01:40:16.413Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -45711,6 +45774,15 @@
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
           "marketCap": null
+        },
+        {
+          "price": 320.58,
+          "currency": "USD",
+          "asOf": "2026-10-27T20:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
         }
       ],
       "valuation": null,
@@ -45719,7 +45791,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-27T20:56:29.518Z",
+    "generatedAt": "2026-10-28T01:40:16.413Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -45901,6 +45973,14 @@
           "3e2d4d56ee7e63fef142f78d"
         ],
         "documentCount": 324
+      },
+      {
+        "date": "2026-10-28",
+        "topics": [
+          "d08ada4bb3c49858bec50b10",
+          "3e2d4d56ee7e63fef142f78d"
+        ],
+        "documentCount": 309
       }
     ],
     "candidates": [
@@ -45922,27 +46002,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-27"
-      },
-      {
-        "id": "b9d1dcf6c13212a659fc8340",
-        "phrase": "lithium ion battery electrolytes",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "15b58757da7bc38939130568"
-        ],
-        "firstObservedAt": "2026-10-15",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-27"
+        "lastSeenAt": "2026-10-28"
       },
       {
         "id": "3e2d4d56ee7e63fef142f78d",
@@ -45962,30 +46022,10 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-27"
+        "lastSeenAt": "2026-10-28"
       }
     ],
     "archive": [
-      {
-        "id": "b9d1dcf6c13212a659fc8340",
-        "phrase": "lithium ion battery electrolytes",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "15b58757da7bc38939130568"
-        ],
-        "firstObservedAt": "2026-10-15",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-27"
-      },
       {
         "id": "d08ada4bb3c49858bec50b10",
         "phrase": "americas most powerful laser",
@@ -46004,7 +46044,7 @@
         ],
         "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-10-27"
+        "lastSeenAt": "2026-10-28"
       },
       {
         "id": "3e2d4d56ee7e63fef142f78d",
@@ -46023,6 +46063,26 @@
           "8c2b921c452186dfb23c1d0c"
         ],
         "firstObservedAt": "2026-10-21",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-10-28"
+      },
+      {
+        "id": "b9d1dcf6c13212a659fc8340",
+        "phrase": "lithium ion battery electrolytes",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "15b58757da7bc38939130568"
+        ],
+        "firstObservedAt": "2026-10-15",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-10-27"
       },
@@ -46147,7 +46207,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 324,
+    "datedDocuments": 309,
     "comparableDays": 19,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
