@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T11:04:27.313Z",
+  "generatedAt": "2026-10-29T21:24:41.306Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -162,11 +162,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
-      "nextAttemptAt": "2026-10-29T17:04:27.313Z",
+      "lastAttemptAt": "2026-10-29T21:24:41.306Z",
+      "nextAttemptAt": "2026-10-30T03:24:41.306Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 45
+      "failureStreak": 46
     },
     "toyota-news": {
       "id": "toyota-news",
@@ -200,12 +200,12 @@
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
       "status": "error",
-      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastAttemptAt": "2026-10-29T21:24:41.306Z",
       "lastSuccessAt": "2026-10-28T10:47:39.257Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
-      "nextAttemptAt": "2026-10-29T12:04:27.313Z",
-      "failureStreak": 1,
+      "nextAttemptAt": "2026-10-29T23:24:41.306Z",
+      "failureStreak": 2,
       "error": "Source or redirect host is not allowlisted",
       "fingerprint": "82c50a396d8bcbd796f2b880b39af98698d700657a25cc4b43fecf65a5e2da91",
       "items": [
@@ -1017,19 +1017,97 @@
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "error",
-      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-10-29T21:24:41.306Z",
+      "lastSuccessAt": "2026-10-29T21:24:41.306Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-28T10:47:39.257Z",
-      "nextAttemptAt": "2026-10-29T12:04:27.313Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "f39e153653742ab9152a17dd303623accf0e936b27951f9b1063e9f511f7025f",
+      "lastChangedAt": "2026-10-29T21:24:41.306Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "d99657f6abf162ba65a2a21dd7f2f17b653dad0f3a0e7938b5decf7af6be819e",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03386-4",
+          "title": "Even stupendous black holes can’t explain dark matter",
+          "excerpt": "",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03479-0",
+          "title": "How the US mid-term elections could shake up science",
+          "excerpt": "",
+          "publishedAt": "2026-10-29"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11348-z",
+          "title": "Switchable Chlorine Atom Transfer Radical Reactions",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11335-4",
+          "title": "Back-to-monomer depolymerization of silicones by deoxygenative chlorination",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03486-1",
+          "title": "Why did ancient humans avoid this lush paradise",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03484-3",
+          "title": "This Arabian desert was once a lush paradise. Why did ancient humans avoid it?",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03260-3",
+          "title": "Accounting of Africa’s water reveals a management gap",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03444-x",
+          "title": "The brain liquidates billions of mutant neurons around the time we’re born",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03531-z",
+          "title": "Daily briefing: The big push to personalize psychiatry",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03263-0",
+          "title": "Tethered to stone: how rock and water availability shaped early desert occupation",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02202-3",
+          "title": "What students think about my teaching doesn’t matter. Am I wrong?",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03402-7",
           "title": "How personalization and psychedelics are revitalizing psychiatry",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03261-2",
+          "title": "Lactate takes a shortcut into mitochondria to power the heart",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03294-7",
+          "title": "Clues about complex life come from freshly cultivated archaea",
           "excerpt": "",
           "publishedAt": "2026-10-28"
         },
@@ -1040,8 +1118,224 @@
           "publishedAt": "2026-10-28"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03325-3",
+          "title": "These three red flags could unmask dodgy journals",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03476-3",
+          "title": "Is research funding now a lottery? Elite funder ERC swamped by applications",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03488-z",
+          "title": "Dengue comes back even in vaccinated people — new clues",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03391-7",
           "title": "The grand plan to transform psychiatry — by personalizing mental-health care",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03415-2",
+          "title": "Could a giant sunshade in space ‘solve global warming’? Scientists are taking the idea seriously",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03288-5",
+          "title": "An unexpected function of a cell-cycle enzyme might explain the toxic effects of its inhibitors",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03262-1",
+          "title": "Meta-study sparks questions about what it means to be good at regulating emotions",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03248-z",
+          "title": "How the pandemic changed trust in science — in four charts",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03067-2",
+          "title": "Genetic variants that alter gene regulation in specific cell types are closely tied to disease",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03298-3",
+          "title": "Ribbon made of carbon pentagons and heptagons has metallic properties",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03107-x",
+          "title": "Where have all the saucers flown?",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-02670-7",
+          "title": "The shifting sands of research independence: why mid-career scientists crave security",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11180-5",
+          "title": "Stone and water governed early human settlement of the desert",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11211-1",
+          "title": "Clostridium perfringens Delta toxin targets CD9 to drive NEC and brain injury",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-10438-2",
+          "title": "Tandem repeat variation shapes immune cell type-specific gene expression",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11223-x",
+          "title": "Delayed electron–hole recombination in a pseudo-direct semiconductor",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11190-3",
+          "title": "Perinatal elimination of genetically aberrant human cortical neurons",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11195-y",
+          "title": "Connectome simulations identify a central pattern generator for fly walking",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11202-2",
+          "title": "Narrow carbon pentaheptite nanoribbon as a covalent metal",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-10966-x",
+          "title": "Molecular underpinnings of rheumatic diseases and emerging therapeutic concepts",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11214-y",
+          "title": "Subcycle videography of Landau–Zener–Majorana transitions in graphene",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11181-4",
+          "title": "Diet at disease onset determines tissue inflammatory memory",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11219-7",
+          "title": "T and B cells recognize splicing-derived neutrophil neoantigens in lupus",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-10721-2",
+          "title": "Rare and common genetic variants shape single-cell immune gene expression",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11203-1",
+          "title": "Emotion regulation capacity lacks a shared neural signature",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11208-w",
+          "title": "Tumour assembloids recapitulate tumour–CAF–T cell crosstalk in renal cancer",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11182-3",
+          "title": "MCT1-dependent mitochondrial lactate import sustains cardiac metabolism",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11170-7",
+          "title": "Eukaryotes’ closest relatives are internally simple syntrophic peptidotrophic archaea",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11222-y",
+          "title": "Monolithically and in situ integrated PbS infrared imagers",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11227-7",
+          "title": "Time-reversal-symmetry-breaking spin injection from a compensated magnet",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11147-6",
+          "title": "A single-molecule spin–photon interface",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11201-3",
+          "title": "Presynaptic homeostasis mediated by exocytosis of a SNARE protein",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11199-8",
+          "title": "Spatial and sectoral water demand assessment for the African continent",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11206-y",
+          "title": "Alzheimer’s disease genetics converges on microglial and neuronal dysregulation",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11173-4",
+          "title": "Genetic variants shape single-cell chromatin accessibility and disease risk",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11178-z",
+          "title": "Pharmacological inhibition of METTL1 as a therapy against solid and blood cancers",
+          "excerpt": "",
+          "publishedAt": "2026-10-28"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11197-w",
+          "title": "SWI/SNF complexes shape 3D chromatin architecture through CTCF and cohesin",
           "excerpt": "",
           "publishedAt": "2026-10-28"
         },
@@ -1102,6 +1396,12 @@
         {
           "url": "https://www.nature.com/articles/d41586-026-03449-6",
           "title": "Gene therapy that led to boy’s death had limited efficacy",
+          "excerpt": "",
+          "publishedAt": "2026-10-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03482-5",
+          "title": "Daily briefing: The future of psychedelics",
           "excerpt": "",
           "publishedAt": "2026-10-27"
         },
@@ -1176,306 +1476,6 @@
           "title": "Glimpsing archaeal microbes on the move",
           "excerpt": "",
           "publishedAt": "2026-10-26"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03440-1",
-          "title": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas",
-          "excerpt": "",
-          "publishedAt": "2026-10-26"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03393-5",
-          "title": "The Selfish Gene , 50 years on — it’s time for an update",
-          "excerpt": "",
-          "publishedAt": "2026-10-26"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03410-7",
-          "title": "Mentoring a lab colleague? Share your ‘CV of failures’ with them",
-          "excerpt": "",
-          "publishedAt": "2026-10-26"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03446-9",
-          "title": "Brazil election: many scientists relieved as Lula wins surprise victory",
-          "excerpt": "",
-          "publishedAt": "2026-10-26"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11328-3",
-          "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
-          "excerpt": "",
-          "publishedAt": "2026-10-25"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11303-y",
-          "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03395-3",
-          "title": "Elusive snow leopards and evasive particles: Books in brief",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03318-2",
-          "title": "Sleep declines in rural communities after electricity arrives",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03418-z",
-          "title": "Briefing Chat: How physicists successfully trapped the electron's antimatter equivalent",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03416-1",
-          "title": "First person infected with rare Shamonda virus: what we know",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03383-7",
-          "title": "Elizabeth Holmes film enthrals — but her legacy haunts science",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03108-w",
-          "title": "Rebody",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03417-0",
-          "title": "Moderna mRNA vaccine almost halves the risk of skin cancer returning",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02582-6",
-          "title": "I’m expected to work excessive hours in the lab. Should I speak up about my disability?",
-          "excerpt": "",
-          "publishedAt": "2026-10-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03414-3",
-          "title": "Can a 'lullaby' save coral reefs from extinction?",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03371-x",
-          "title": "A first for CRISPR: powerful prime editing alters DNA directly in the human body",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03357-9",
-          "title": "Teen depression and anxiety predicted by childhood brain development",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03389-1",
-          "title": "Can maths survive AI? Fields medallist Terence Tao calls for a ‘Maths 2.0’ world",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03438-9",
-          "title": "Daily briefing: The tell-tale features of a Denisovan",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11312-x",
-          "title": "Current-Driven Molecular Machine with Rotation-Enhanced Conductance",
-          "excerpt": "",
-          "publishedAt": "2026-10-22"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11317-6",
-          "title": "De novo design of enantioselective artificial metalloenzyme photocatalysts",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03376-6",
-          "title": "Scientists put a salt marsh in a giant wave-machine: here's what they learned",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11252-6",
-          "title": "Author Correction: Catalyst-free, microdroplet-mediated waste plastic conversion to diacids",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03320-8",
-          "title": "AI doctors’ orders come with a sky-high bill",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03319-1",
-          "title": "Surprise! White dwarf stars come in a rainbow of colours",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03161-5",
-          "title": "To heal sick cities, scientists and residents must work together",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03077-0",
-          "title": "An AI tool improves weather forecasts up to a month ahead",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03065-4",
-          "title": "Using AI to offer personalized health advice",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03355-x",
-          "title": "Global emissions slow — but world hurtles towards 2 °C of warming",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03334-2",
-          "title": "Huge mapping study reveals how your brain tracks what your body is feeling",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03282-x",
-          "title": "Plastics embedded with enzymes degrade readily in the sea",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03110-2",
-          "title": "The Bursar",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03360-0",
-          "title": "This is what the mysterious Denisovans looked like",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03063-6",
-          "title": "Can plants defend coasts against storms?",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03066-3",
-          "title": "Worms live longer in cool conditions thanks to a muscle-derived molecule",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03400-9",
-          "title": "Daily briefing: How tech billionaires are changing science funding",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03285-8",
-          "title": "Cave stalagmites document global patterns in monsoon rainfall over the past 450,000 years",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03257-y",
-          "title": "Large-scale single crystals printed layer by layer",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03342-2",
-          "title": "A single antimatter particle in a cage opens door to ‘revolutionary’ physics",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03375-7",
-          "title": "Robert Williamson obituary: geneticist who mapped genes for muscular dystrophy and cystic fibrosis",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03064-5",
-          "title": "Fabric user interface can be worn on your sleeve — and machine-washed",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03311-9",
-          "title": "How tech billionaires are disrupting biomedical science",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03326-2",
-          "title": "How a new wave of science philanthropists can have the greatest impact",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11096-0",
-          "title": "Multimodal precision diagnostics in clinical xenotransplantation",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11145-8",
-          "title": "The contribution of salt marshes to wave attenuation during extreme storms",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11183-2",
-          "title": "Zeolite-catalysed olefin carbonylation based on tuning spatial confinement",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11152-9",
-          "title": "Cold activates a BH2 metabolic network promoting longevity and proteostasis",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11188-x",
-          "title": "WEE1 opposes APC/C CDH1 activity to promote S phase entry",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11207-x",
-          "title": "A single archaeon couples long-chain fatty acid oxidation to methanogenesis",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11179-y",
-          "title": "An environmentally regulated dichotomy in cell lineages of the root",
-          "excerpt": "",
-          "publishedAt": "2026-10-21"
         }
       ],
       "seenLinks": [
@@ -1772,18 +1772,68 @@
         "https://www.nature.com/articles/d41586-026-03384-6",
         "https://www.nature.com/articles/d41586-026-03403-6",
         "https://www.nature.com/articles/d41586-026-03394-4",
-        "https://www.nature.com/articles/d41586-026-03463-8"
+        "https://www.nature.com/articles/d41586-026-03463-8",
+        "https://www.nature.com/articles/d41586-026-03386-4",
+        "https://www.nature.com/articles/d41586-026-03479-0",
+        "https://www.nature.com/articles/s41586-026-11348-z",
+        "https://www.nature.com/articles/s41586-026-11335-4",
+        "https://www.nature.com/articles/d41586-026-03486-1",
+        "https://www.nature.com/articles/d41586-026-03484-3",
+        "https://www.nature.com/articles/d41586-026-03260-3",
+        "https://www.nature.com/articles/d41586-026-03444-x",
+        "https://www.nature.com/articles/d41586-026-03531-z",
+        "https://www.nature.com/articles/d41586-026-03263-0",
+        "https://www.nature.com/articles/d41586-026-02202-3",
+        "https://www.nature.com/articles/d41586-026-03261-2",
+        "https://www.nature.com/articles/d41586-026-03294-7",
+        "https://www.nature.com/articles/d41586-026-03325-3",
+        "https://www.nature.com/articles/d41586-026-03476-3",
+        "https://www.nature.com/articles/d41586-026-03488-z",
+        "https://www.nature.com/articles/d41586-026-03415-2",
+        "https://www.nature.com/articles/d41586-026-03288-5",
+        "https://www.nature.com/articles/d41586-026-03262-1",
+        "https://www.nature.com/articles/d41586-026-03248-z",
+        "https://www.nature.com/articles/d41586-026-03067-2",
+        "https://www.nature.com/articles/d41586-026-03298-3",
+        "https://www.nature.com/articles/d41586-026-03107-x",
+        "https://www.nature.com/articles/d41586-026-02670-7",
+        "https://www.nature.com/articles/s41586-026-11180-5",
+        "https://www.nature.com/articles/s41586-026-11211-1",
+        "https://www.nature.com/articles/s41586-026-10438-2",
+        "https://www.nature.com/articles/s41586-026-11223-x",
+        "https://www.nature.com/articles/s41586-026-11190-3",
+        "https://www.nature.com/articles/s41586-026-11195-y",
+        "https://www.nature.com/articles/s41586-026-11202-2",
+        "https://www.nature.com/articles/s41586-026-10966-x",
+        "https://www.nature.com/articles/s41586-026-11214-y",
+        "https://www.nature.com/articles/s41586-026-11181-4",
+        "https://www.nature.com/articles/s41586-026-11219-7",
+        "https://www.nature.com/articles/s41586-026-10721-2",
+        "https://www.nature.com/articles/s41586-026-11203-1",
+        "https://www.nature.com/articles/s41586-026-11208-w",
+        "https://www.nature.com/articles/s41586-026-11182-3",
+        "https://www.nature.com/articles/s41586-026-11170-7",
+        "https://www.nature.com/articles/s41586-026-11222-y",
+        "https://www.nature.com/articles/s41586-026-11227-7",
+        "https://www.nature.com/articles/s41586-026-11147-6",
+        "https://www.nature.com/articles/s41586-026-11201-3",
+        "https://www.nature.com/articles/s41586-026-11199-8",
+        "https://www.nature.com/articles/s41586-026-11206-y",
+        "https://www.nature.com/articles/s41586-026-11173-4",
+        "https://www.nature.com/articles/s41586-026-11178-z",
+        "https://www.nature.com/articles/s41586-026-11197-w",
+        "https://www.nature.com/articles/d41586-026-03482-5"
       ],
       "matchedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-10-28",
+      "newestPublicationAt": "2026-10-29",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"6aa8b6aa619d4c655425254152d39c5d\"",
+      "etag": "\"a9d4671013a185a526766c020a0cbe38\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -6738,6 +6788,606 @@
   },
   "events": [
     {
+      "id": "108aa83d9e6c4719e229f90f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Even stupendous black holes can’t explain dark matter",
+      "url": "https://www.nature.com/articles/d41586-026-03386-4",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-29",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "070975d71a3512321c43af59",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How the US mid-term elections could shake up science",
+      "url": "https://www.nature.com/articles/d41586-026-03479-0",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-29",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "522ff23f0c78b62237fa7a97",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Switchable Chlorine Atom Transfer Radical Reactions",
+      "url": "https://www.nature.com/articles/s41586-026-11348-z",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "81752919a00801fdfcf585dc",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Back-to-monomer depolymerization of silicones by deoxygenative chlorination",
+      "url": "https://www.nature.com/articles/s41586-026-11335-4",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ab058cbd956978d35dda4d5c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why did ancient humans avoid this lush paradise",
+      "url": "https://www.nature.com/articles/d41586-026-03486-1",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e061b74d7f33a0763e61e8c7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "This Arabian desert was once a lush paradise. Why did ancient humans avoid it?",
+      "url": "https://www.nature.com/articles/d41586-026-03484-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d4984069faf6576f9da999c1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Accounting of Africa’s water reveals a management gap",
+      "url": "https://www.nature.com/articles/d41586-026-03260-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "07a5ba8331b5cdaf426d6384",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The brain liquidates billions of mutant neurons around the time we’re born",
+      "url": "https://www.nature.com/articles/d41586-026-03444-x",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "42e0b7baceaef437913188f3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: The big push to personalize psychiatry",
+      "url": "https://www.nature.com/articles/d41586-026-03531-z",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d4843dde07106f87b4f1f830",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Tethered to stone: how rock and water availability shaped early desert occupation",
+      "url": "https://www.nature.com/articles/d41586-026-03263-0",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "61b329e67b458bb1116f440d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "What students think about my teaching doesn’t matter. Am I wrong?",
+      "url": "https://www.nature.com/articles/d41586-026-02202-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "26cc25fe1999af02e2223009",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Lactate takes a shortcut into mitochondria to power the heart",
+      "url": "https://www.nature.com/articles/d41586-026-03261-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ed53ea586a966af0dd45c97f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Clues about complex life come from freshly cultivated archaea",
+      "url": "https://www.nature.com/articles/d41586-026-03294-7",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bf0f80500c493118e62d153a",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "These three red flags could unmask dodgy journals",
+      "url": "https://www.nature.com/articles/d41586-026-03325-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "95454d1ee10a57c81a8492f6",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Is research funding now a lottery? Elite funder ERC swamped by applications",
+      "url": "https://www.nature.com/articles/d41586-026-03476-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "efb85304ca29d54af2fbf2bf",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Dengue comes back even in vaccinated people — new clues",
+      "url": "https://www.nature.com/articles/d41586-026-03488-z",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c32d1168ec1e54a66f007099",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Could a giant sunshade in space ‘solve global warming’? Scientists are taking the idea seriously",
+      "url": "https://www.nature.com/articles/d41586-026-03415-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0f047bc9cb67a7279437cf52",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "An unexpected function of a cell-cycle enzyme might explain the toxic effects of its inhibitors",
+      "url": "https://www.nature.com/articles/d41586-026-03288-5",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ec5e56dd4b04125f0b0b59d7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Meta-study sparks questions about what it means to be good at regulating emotions",
+      "url": "https://www.nature.com/articles/d41586-026-03262-1",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2719c09658a6608dfc3fe63b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How the pandemic changed trust in science — in four charts",
+      "url": "https://www.nature.com/articles/d41586-026-03248-z",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f069e4bf79d135ddaffef59f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Genetic variants that alter gene regulation in specific cell types are closely tied to disease",
+      "url": "https://www.nature.com/articles/d41586-026-03067-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "41b6a3ac946a409d84b83f3f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Ribbon made of carbon pentagons and heptagons has metallic properties",
+      "url": "https://www.nature.com/articles/d41586-026-03298-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "94234afb84ff434857a23dac",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Where have all the saucers flown?",
+      "url": "https://www.nature.com/articles/d41586-026-03107-x",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "32170a4df78775e759b3aafd",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The shifting sands of research independence: why mid-career scientists crave security",
+      "url": "https://www.nature.com/articles/d41586-026-02670-7",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "927db85f00dbdc484d6d2d95",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Stone and water governed early human settlement of the desert",
+      "url": "https://www.nature.com/articles/s41586-026-11180-5",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fe7db16f10b85669a0908700",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Clostridium perfringens Delta toxin targets CD9 to drive NEC and brain injury",
+      "url": "https://www.nature.com/articles/s41586-026-11211-1",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "461466c1ea3d47ccd906cae7",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Tandem repeat variation shapes immune cell type-specific gene expression",
+      "url": "https://www.nature.com/articles/s41586-026-10438-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b6cca404f423f31329db1745",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Delayed electron–hole recombination in a pseudo-direct semiconductor",
+      "url": "https://www.nature.com/articles/s41586-026-11223-x",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c0d117356e2f8865776ca90e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Perinatal elimination of genetically aberrant human cortical neurons",
+      "url": "https://www.nature.com/articles/s41586-026-11190-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f184c9f60c990b43347cc00f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Connectome simulations identify a central pattern generator for fly walking",
+      "url": "https://www.nature.com/articles/s41586-026-11195-y",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ea61b5d6c940b41a7d8266d9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Narrow carbon pentaheptite nanoribbon as a covalent metal",
+      "url": "https://www.nature.com/articles/s41586-026-11202-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "cf0df4c1da7c981c103004a8",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Molecular underpinnings of rheumatic diseases and emerging therapeutic concepts",
+      "url": "https://www.nature.com/articles/s41586-026-10966-x",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0e887d05dd123f6339d7bf93",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Subcycle videography of Landau–Zener–Majorana transitions in graphene",
+      "url": "https://www.nature.com/articles/s41586-026-11214-y",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9124f97d2194fc231aa58786",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Diet at disease onset determines tissue inflammatory memory",
+      "url": "https://www.nature.com/articles/s41586-026-11181-4",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b8825ba0f8272f2710d7e42e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "T and B cells recognize splicing-derived neutrophil neoantigens in lupus",
+      "url": "https://www.nature.com/articles/s41586-026-11219-7",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "086e256dcc876abc76c45b6c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Rare and common genetic variants shape single-cell immune gene expression",
+      "url": "https://www.nature.com/articles/s41586-026-10721-2",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b8771a4a64cac96cd25172d2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Emotion regulation capacity lacks a shared neural signature",
+      "url": "https://www.nature.com/articles/s41586-026-11203-1",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "709eeb1e7564c1b018b9c8c1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Tumour assembloids recapitulate tumour–CAF–T cell crosstalk in renal cancer",
+      "url": "https://www.nature.com/articles/s41586-026-11208-w",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5239b977632bdd8cb3e1a171",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "MCT1-dependent mitochondrial lactate import sustains cardiac metabolism",
+      "url": "https://www.nature.com/articles/s41586-026-11182-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b57daf92490a3cfc5785df26",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Eukaryotes’ closest relatives are internally simple syntrophic peptidotrophic archaea",
+      "url": "https://www.nature.com/articles/s41586-026-11170-7",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5ce4e44dd144d8e9be21bd40",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Monolithically and in situ integrated PbS infrared imagers",
+      "url": "https://www.nature.com/articles/s41586-026-11222-y",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e9f6697164a8e713af907fe0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Time-reversal-symmetry-breaking spin injection from a compensated magnet",
+      "url": "https://www.nature.com/articles/s41586-026-11227-7",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4b06c8f65b9f5b461604496d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A single-molecule spin–photon interface",
+      "url": "https://www.nature.com/articles/s41586-026-11147-6",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6da3f881743abd984aa3f079",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Presynaptic homeostasis mediated by exocytosis of a SNARE protein",
+      "url": "https://www.nature.com/articles/s41586-026-11201-3",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4ead157317877ba8f62af7c0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Spatial and sectoral water demand assessment for the African continent",
+      "url": "https://www.nature.com/articles/s41586-026-11199-8",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c36562f0f114308b3a42ec3f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Alzheimer’s disease genetics converges on microglial and neuronal dysregulation",
+      "url": "https://www.nature.com/articles/s41586-026-11206-y",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1c3bc4837dd24df3f871059b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Genetic variants shape single-cell chromatin accessibility and disease risk",
+      "url": "https://www.nature.com/articles/s41586-026-11173-4",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ed987867a774573ffc009af2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Pharmacological inhibition of METTL1 as a therapy against solid and blood cancers",
+      "url": "https://www.nature.com/articles/s41586-026-11178-z",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2aa452fdbb1d03dac85ea159",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "SWI/SNF complexes shape 3D chromatin architecture through CTCF and cohesin",
+      "url": "https://www.nature.com/articles/s41586-026-11197-w",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "643cb51d7e790124913df245",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: The future of psychedelics",
+      "url": "https://www.nature.com/articles/d41586-026-03482-5",
+      "detectedAt": "2026-10-29T21:24:41.306Z",
+      "publishedAt": "2026-10-27",
+      "verification": "unreviewed"
+    },
+    {
       "id": "a4c3c2154c46f854c270176e",
       "sourceId": "microsoft-news",
       "themes": [
@@ -11023,176 +11673,6 @@
       "url": "https://www.nature.com/articles/d41586-026-03136-6",
       "detectedAt": "2026-10-06T21:12:49.339Z",
       "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "2d22f1b54a3509085cc15a32",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Circular DNA exposes a weakness in cancer cells",
-      "url": "https://www.nature.com/articles/d41586-026-02966-8",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5c50ef257a545c728baa00c3",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Flu season could kick off ‘incredibly’ early — what scientists are watching",
-      "url": "https://www.nature.com/articles/d41586-026-03150-8",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1dcbe1cb0e6a42dc7f9e4ce2",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Nobel physics prize awarded for detection of cosmic neutrinos",
-      "url": "https://www.nature.com/articles/d41586-026-03092-1",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "87eb8880634d8cac0b772417",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Brain organoids grafted into cortex-free mice will advance human brain research",
-      "url": "https://www.nature.com/articles/d41586-026-02967-7",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "0f5c9ec41a405262ddd5c5c9",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "How to mobilize the agile science needed in a crisis",
-      "url": "https://www.nature.com/articles/d41586-026-03130-y",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-06",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "f6f38b14f8a757debe56fa55",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "‘What took them so long?’ This year’s medicine Nobel winner is overdue",
-      "url": "https://www.nature.com/articles/d41586-026-03094-z",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "29e26dbaadef50e6c5db86b7",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "The top cancer success stories of the past 50 years, by the numbers",
-      "url": "https://www.nature.com/articles/d41586-026-03157-1",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "627abe5a4392bac1d8416e9c",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Daily briefing: Medicine Nobel prize goes to optogenetics",
-      "url": "https://www.nature.com/articles/d41586-026-03185-x",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1f2ca50af23a2d8406dc0ca7",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "How big tech is building a military–industrial complex in the age of AI",
-      "url": "https://www.nature.com/articles/d41586-026-03134-8",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "3204c46c8295757bdfbc169c",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Daily briefing: Can you name every female Nobel laureate?",
-      "url": "https://www.nature.com/articles/d41586-026-03164-2",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-02",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "94845414c04cdf4c37fda7fd",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Daily briefing: The sky as you’ve never seen it — the month’s best science images",
-      "url": "https://www.nature.com/articles/d41586-026-03141-9",
-      "detectedAt": "2026-10-06T21:12:49.339Z",
-      "publishedAt": "2026-10-01",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d5a0b107c2af070311efcaeb",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light: live updates",
-      "url": "https://www.nature.com/articles/d41586-026-03091-2",
-      "detectedAt": "2026-10-05T11:49:09.276Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "309addcd6120a24a4cc5343a",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "AI biohazard hype must not divert attention from the real risks we face now",
-      "url": "https://www.nature.com/articles/d41586-026-03135-7",
-      "detectedAt": "2026-10-05T11:49:09.276Z",
-      "publishedAt": "2026-10-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "718af5bee4b5b215c5201724",
-      "sourceId": "sec-tm",
-      "themes": [
-        "solid-state-batteries"
-      ],
-      "owner": "Toyota",
-      "kind": "new-link",
-      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526413029/d147797d6k.htm",
-      "detectedAt": "2026-10-05T11:49:09.276Z",
-      "publishedAt": "2026-10-05",
       "verification": "unreviewed"
     }
   ]
