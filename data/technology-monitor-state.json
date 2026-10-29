@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T21:18:27.478Z",
+  "generatedAt": "2026-10-29T11:04:27.313Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -74,8 +74,8 @@
       "sourceUrl": "https://investors.ast-science.com/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -162,19 +162,19 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-10-28T21:18:27.478Z",
-      "nextAttemptAt": "2026-10-29T03:18:27.478Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "nextAttemptAt": "2026-10-29T17:04:27.313Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 44
+      "failureStreak": 45
     },
     "toyota-news": {
       "id": "toyota-news",
       "sourceUrl": "https://global.toyota/en/newsroom/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -199,14 +199,14 @@
       "id": "bmw-news",
       "sourceUrl": "https://www.press.bmwgroup.com/global",
       "extractorVersion": 4,
-      "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
+      "status": "error",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
       "lastSuccessAt": "2026-10-28T10:47:39.257Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-20T09:36:48.568Z",
-      "nextAttemptAt": null,
-      "failureStreak": 0,
-      "error": null,
+      "nextAttemptAt": "2026-10-29T12:04:27.313Z",
+      "failureStreak": 1,
+      "error": "Source or redirect host is not allowlisted",
       "fingerprint": "82c50a396d8bcbd796f2b880b39af98698d700657a25cc4b43fecf65a5e2da91",
       "items": [
         {
@@ -239,8 +239,8 @@
       "sourceUrl": "https://www.rogers.com/mobility/satellite",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -270,7 +270,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29c5f-AFt1HrBPd54whK9tA3VCV42/wlI\"",
+      "etag": "W/\"29c5c-GCSwNKRnowvvkRAH/p9TTl6PTNw\"",
       "lastModified": null
     },
     "meta-news": {
@@ -278,8 +278,8 @@
       "sourceUrl": "https://about.fb.com/news/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-24T09:05:30.304Z",
       "nextAttemptAt": null,
@@ -308,23 +308,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"92d003ee1ad3337b80c06cc76058cef3\"",
-      "lastModified": "Wed, 28 Oct 2026 00:29:07 GMT"
+      "etag": "W/\"7bd08a5ca68162e2c7203dabd4d46fdc\"",
+      "lastModified": "Wed, 28 Oct 2026 18:12:08 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
       "sourceUrl": "https://blogs.microsoft.com/feed/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-20T09:36:48.568Z",
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "083b2e49cb355e4df0dd34f5ede32bdce279984f2d6358b7484cd310384699b5",
+      "fingerprint": "5332fdf438deacd60b4c85ef754c26fbda2e56af8fa4dabd37264c1a6486496b",
       "items": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/",
+          "title": "Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work",
+          "excerpt": "If you want to compete, you need to be multi-model. And if you want to take advantage of everything that different AI models have to offer, you need a great harness. But building one that works seamlessly across multiple models and surfaces",
+          "publishedAt": "2026-10-28T16:51:35.000Z"
+        },
         {
           "url": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
           "title": "Advancing digital sovereignty with greater control and choice",
@@ -348,12 +354,6 @@
           "title": "What we’ve learned from Microsoft’s own AI transformation",
           "excerpt": "AI is reshaping work faster than any organization has fully mastered. Across industries, the conversation has shifted from what AI can do to how companies can use AI to create business value and expand what people are able to achieve. At Mi",
           "publishedAt": "2026-09-17T14:00:05.000Z"
-        },
-        {
-          "url": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
-          "title": "Microsoft’s commitment for AI in education: Protecting students, strengthening learning",
-          "excerpt": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have lear",
-          "publishedAt": "2026-09-16T18:59:58.000Z"
         }
       ],
       "seenLinks": [
@@ -362,27 +362,28 @@
         "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
         "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
         "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
-        "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/"
+        "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+        "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/"
       ],
       "matchedItems": 5,
       "extractedEntries": 10,
-      "newestPublicationAt": "2026-10-20T08:20:02.000Z",
+      "newestPublicationAt": "2026-10-28T16:51:35.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Microsoft company blog",
-      "etag": "W/\"9a2de60d055c2e4f3779b795fde858d3\"",
-      "lastModified": "Wed, 28 Oct 2026 00:17:58 GMT"
+      "etag": "W/\"1fb76bd16992e0b6f62ad58403e21548\"",
+      "lastModified": "Wed, 28 Oct 2026 17:57:05 GMT"
     },
     "waymo-news": {
       "id": "waymo-news",
       "sourceUrl": "https://waymo.com/blog/",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-21T09:35:54.392Z",
       "nextAttemptAt": null,
@@ -442,15 +443,28 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-27T10:01:31.494Z",
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "items": [],
+      "fingerprint": "68a4504cd4aadd80777a80a7b53f9ed2415d401a7753a08a2eb6bad951b979e5",
+      "items": [
+        {
+          "url": "https://www.fcc.gov/edoc/426243",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/426244",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        }
+      ],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -461,10 +475,12 @@
         "https://www.fcc.gov/edoc/426088",
         "https://www.fcc.gov/edoc/426087",
         "https://www.fcc.gov/edoc/426095",
-        "https://www.fcc.gov/edoc/426146"
+        "https://www.fcc.gov/edoc/426146",
+        "https://www.fcc.gov/edoc/426243",
+        "https://www.fcc.gov/edoc/426244"
       ],
-      "matchedItems": 0,
-      "extractedEntries": 11,
+      "matchedItems": 2,
+      "extractedEntries": 34,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -480,8 +496,8 @@
       "sourceUrl": "https://www.nsf.gov/rss/rss_www_news.xml",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-28T10:47:39.257Z",
       "nextAttemptAt": null,
@@ -610,23 +626,29 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1793179824-gzip\"",
-      "lastModified": "Wed, 28 Oct 2026 09:30:24 GMT"
+      "etag": "\"1793266229-gzip\"",
+      "lastModified": "Thu, 29 Oct 2026 09:30:29 GMT"
     },
     "mit-energy": {
       "id": "mit-energy",
       "sourceUrl": "https://news.mit.edu/rss/topic/energy",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-27T10:01:31.494Z",
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "33d0807a0f9febf9c218116b4a725562961b7c218f344170c5604c8881b99937",
+      "fingerprint": "b8d21a8cd852ebb5ca479f7734406db19060c22fd26b261be2163d17ba6b50fd",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/3-questions-why-infrastructure-is-entering-defining-era-1028",
+          "title": "3 Questions: Why infrastructure is entering a defining era",
+          "excerpt": "Professor Ali Jadbabaie describes how AI, digital transformation, climate change, and complex geopolitics are forcing engineers and policymakers to rethink how infrastructure is designed, built, and managed.",
+          "publishedAt": "2026-10-28T16:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026",
           "title": "At New York Climate Week 2026, MIT connects with a global network",
@@ -920,12 +942,6 @@
           "title": "Turning extreme heat into large-scale energy storage",
           "excerpt": "Fourth Power, founded by Professor Asegun Henry, is developing thermal batteries for efficiently storing excess electricity from utility grids and power producers.",
           "publishedAt": "2026-03-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
-          "title": "New method could increase LLM training efficiency",
-          "excerpt": "By leveraging idle computing time, researchers can double the speed of model training while preserving accuracy.",
-          "publishedAt": "2026-02-26T05:00:00.000Z"
         }
       ],
       "seenLinks": [
@@ -982,32 +998,33 @@
         "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
         "https://news.mit.edu/2026/fostering-community-amid-kendall-square-innovation-1016",
         "https://news.mit.edu/2026/startup-rejuvenates-nuclear-power-industry-new-manufacturing-approach-1022",
-        "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026"
+        "https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026",
+        "https://news.mit.edu/2026/3-questions-why-infrastructure-is-entering-defining-era-1028"
       ],
       "matchedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-10-26T19:00:00.000Z",
+      "newestPublicationAt": "2026-10-28T16:00:00.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT energy research",
-      "etag": "\"1793182969\"",
-      "lastModified": "Wed, 28 Oct 2026 10:22:49 GMT"
+      "etag": "\"1793269563\"",
+      "lastModified": "Thu, 29 Oct 2026 10:26:03 GMT"
     },
     "nature-research": {
       "id": "nature-research",
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 4,
-      "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
+      "status": "error",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
       "lastSuccessAt": "2026-10-28T10:47:39.257Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-28T10:47:39.257Z",
-      "nextAttemptAt": null,
-      "failureStreak": 0,
-      "error": null,
+      "nextAttemptAt": "2026-10-29T12:04:27.313Z",
+      "failureStreak": 1,
+      "error": "Source or redirect host is not allowlisted",
       "fingerprint": "f39e153653742ab9152a17dd303623accf0e936b27951f9b1063e9f511f7025f",
       "items": [
         {
@@ -1774,8 +1791,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001811414.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -2400,8 +2417,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001844862.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -3042,8 +3059,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001094517.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -3591,15 +3608,56 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001283699.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": null,
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "6ba2641d165aee2a352b73eb02285a9b995234fb094d97fef25255b8274479b9",
+      "fingerprint": "f84da390affc18c1d17ca6024062426fdc24bb7d26e26cca5385cf5390a72698",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000129/tmus-20260930.htm",
+          "title": "T-Mobile US · 10-Q · TMUS FORM 10-Q",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-09-30",
+          "acceptedAt": "2026-10-28T20:05:54.000Z",
+          "filingItems": [],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000129/0001283699-26-000129-index.html",
+          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "10-Q",
+          "accession": "0001283699-26-000129"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000128/tmus-20261028.htm",
+          "title": "T-Mobile US · 8-K · TMUS FORM 8-K",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-10-28",
+          "acceptedAt": "2026-10-28T20:02:56.000Z",
+          "filingItems": [
+            "2.02",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000128/0001283699-26-000128-index.html",
+          "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001283699-26-000128"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526435233/d130644d8k.htm",
+          "title": "T-Mobile US · 8-K · 8-K",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-10-26",
+          "acceptedAt": "2026-10-28T12:55:14.000Z",
+          "filingItems": [
+            "5.02"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526435233/0001193125-26-435233-index.html",
+          "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001193125-26-435233"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526381901/d155079d8k.htm",
           "title": "T-Mobile US · 8-K · 8-K",
@@ -4128,47 +4186,6 @@
           "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "8-K",
           "accession": "0001193125-25-060233"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525032029/d910063d8k.htm",
-          "title": "T-Mobile US · 8-K · 8-K",
-          "publishedAt": "2025-02-21",
-          "reportDate": "2025-02-18",
-          "acceptedAt": "2025-02-21T21:30:19.000Z",
-          "filingItems": [
-            "5.02"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525032029/0001193125-25-032029-index.html",
-          "excerpt": "Company-filed disclosure; reported items 5.02. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0001193125-25-032029"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525024359/d183092d8k.htm",
-          "title": "T-Mobile US · 8-K · 8-K",
-          "publishedAt": "2025-02-11",
-          "reportDate": "2025-02-11",
-          "acceptedAt": "2025-02-11T21:47:31.000Z",
-          "filingItems": [
-            "8.01",
-            "9.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525024359/0001193125-25-024359-index.html",
-          "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0001193125-25-024359"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000012/tmus-20241231.htm",
-          "title": "T-Mobile US · 10-K · TMUS FORM 10-K",
-          "publishedAt": "2025-01-31",
-          "reportDate": "2024-12-31",
-          "acceptedAt": "2025-01-31T21:04:31.000Z",
-          "filingItems": [],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000012/0001283699-25-000012-index.html",
-          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "10-K",
-          "accession": "0001283699-25-000012"
         }
       ],
       "seenLinks": [
@@ -4211,11 +4228,14 @@
         "https://www.sec.gov/Archives/edgar/data/1283699/000119312525060233/d842844d8k.htm",
         "https://www.sec.gov/Archives/edgar/data/1283699/000119312525032029/d910063d8k.htm",
         "https://www.sec.gov/Archives/edgar/data/1283699/000119312525024359/d183092d8k.htm",
-        "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000012/tmus-20241231.htm"
+        "https://www.sec.gov/Archives/edgar/data/1283699/000128369925000012/tmus-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000129/tmus-20260930.htm",
+        "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000128/tmus-20261028.htm",
+        "https://www.sec.gov/Archives/edgar/data/1283699/000119312526435233/d130644d8k.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 1002,
-      "newestPublicationAt": "2026-09-03",
+      "extractedEntries": 1006,
+      "newestPublicationAt": "2026-10-28",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -4230,8 +4250,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001780312.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -4917,8 +4937,8 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
       "lastChangedAt": "2026-10-25T09:22:36.839Z",
       "nextAttemptAt": null,
@@ -5425,7 +5445,7 @@
         "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm"
       ],
       "matchedItems": 33,
-      "extractedEntries": 1012,
+      "extractedEntries": 1001,
       "newestPublicationAt": "2026-10-22",
       "excerpt": null,
       "publishedAt": null,
@@ -5441,15 +5461,57 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-25T09:22:36.839Z",
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "459869a2adfd72a20e7cfaed91e36a99b4d5a6afe881a28520c3760a5d3d12ec",
+      "fingerprint": "c4e827e7f8655fc09a485b5673f7bb808f7eb3c4fe8f93b9e6c10633f28168ac",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm",
+          "title": "Microsoft · 8-K · 8-K",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-10-28",
+          "acceptedAt": "2026-10-28T20:11:03.000Z",
+          "filingItems": [
+            "8.01",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/0001193125-26-436149-index.html",
+          "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001193125-26-436149"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+          "title": "Microsoft · 10-Q · 10-Q",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-09-30",
+          "acceptedAt": "2026-10-28T20:07:39.000Z",
+          "filingItems": [],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.html",
+          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "10-Q",
+          "accession": "0001193125-26-436133"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm",
+          "title": "Microsoft · 8-K · 8-K",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-10-28",
+          "acceptedAt": "2026-10-28T20:04:44.000Z",
+          "filingItems": [
+            "2.02",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/0001193125-26-436122-index.html",
+          "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001193125-26-436122"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
           "title": "Microsoft · 8-K · 8-K",
@@ -5970,48 +6032,6 @@
           "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "8-K",
           "accession": "0001193125-23-265616"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017023054855/msft-20230930.htm",
-          "title": "Microsoft · 10-Q · 10-Q",
-          "publishedAt": "2023-10-24",
-          "reportDate": "2023-09-30",
-          "acceptedAt": "2023-10-24T20:07:40.000Z",
-          "filingItems": [],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017023054855/0000950170-23-054855-index.html",
-          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "10-Q",
-          "accession": "0000950170-23-054855"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017023054848/msft-20231024.htm",
-          "title": "Microsoft · 8-K · 8-K",
-          "publishedAt": "2023-10-24",
-          "reportDate": "2023-10-24",
-          "acceptedAt": "2023-10-24T20:03:29.000Z",
-          "filingItems": [
-            "2.02",
-            "9.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017023054848/0000950170-23-054848-index.html",
-          "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0000950170-23-054848"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm",
-          "title": "Microsoft · 8-K · FORM 8-K",
-          "publishedAt": "2023-10-16",
-          "reportDate": "2023-10-16",
-          "acceptedAt": "2023-10-16T21:30:10.000Z",
-          "filingItems": [
-            "8.01",
-            "9.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/0001104659-23-109428-index.html",
-          "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0001104659-23-109428"
         }
       ],
       "seenLinks": [
@@ -6054,11 +6074,14 @@
         "https://www.sec.gov/Archives/edgar/data/789019/000119312523265616/d572684d8k.htm",
         "https://www.sec.gov/Archives/edgar/data/789019/000095017023054855/msft-20230930.htm",
         "https://www.sec.gov/Archives/edgar/data/789019/000095017023054848/msft-20231024.htm",
-        "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm"
+        "https://www.sec.gov/Archives/edgar/data/789019/000110465923109428/tm2328507d1_8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm",
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm"
       ],
       "matchedItems": 40,
-      "extractedEntries": 1004,
-      "newestPublicationAt": "2026-09-02",
+      "extractedEntries": 1000,
+      "newestPublicationAt": "2026-10-28",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -6073,15 +6096,42 @@
       "sourceUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
       "extractorVersion": 4,
       "status": "ok",
-      "lastAttemptAt": "2026-10-28T10:47:39.257Z",
-      "lastSuccessAt": "2026-10-28T10:47:39.257Z",
+      "lastAttemptAt": "2026-10-29T11:04:27.313Z",
+      "lastSuccessAt": "2026-10-29T11:04:27.313Z",
       "baselineAt": "2026-10-09T15:18:03.534Z",
-      "lastChangedAt": "2026-10-25T09:22:36.839Z",
+      "lastChangedAt": "2026-10-29T11:04:27.313Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "b8f885c8a80e4fea57167b41d195d886d1c4ad0de1c66be60cf67bcf698e51d3",
+      "fingerprint": "7e73b0a98481f9971b4821617b844ab27e7f3d6a0dc8b3ecbce3822b09410cbf",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+          "title": "Alphabet · 10-Q · 10-Q",
+          "publishedAt": "2026-10-29",
+          "reportDate": "2026-09-30",
+          "acceptedAt": "2026-10-29T00:29:06.000Z",
+          "filingItems": [],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.html",
+          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "10-Q",
+          "accession": "0001652044-26-000084"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm",
+          "title": "Alphabet · 8-K · 8-K",
+          "publishedAt": "2026-10-28",
+          "reportDate": "2026-10-28",
+          "acceptedAt": "2026-10-28T20:01:33.000Z",
+          "filingItems": [
+            "2.02",
+            "9.01"
+          ],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/0001652044-26-000080-index.html",
+          "excerpt": "Company-filed disclosure; reported items 2.02, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "8-K",
+          "accession": "0001652044-26-000080"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
           "title": "Alphabet · 8-K · 8-K",
@@ -6627,32 +6677,6 @@
           "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "8-K",
           "accession": "0001652044-24-000097"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000085/goog-20240805.htm",
-          "title": "Alphabet · 8-K · 8-K",
-          "publishedAt": "2024-08-06",
-          "reportDate": "2024-08-05",
-          "acceptedAt": "2024-08-06T00:08:50.000Z",
-          "filingItems": [
-            "8.01"
-          ],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000085/0001652044-24-000085-index.html",
-          "excerpt": "Company-filed disclosure; reported items 8.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "8-K",
-          "accession": "0001652044-24-000085"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/goog-20240630.htm",
-          "title": "Alphabet · 10-Q · 10-Q",
-          "publishedAt": "2024-07-24",
-          "reportDate": "2024-06-30",
-          "acceptedAt": "2024-07-23T23:12:07.000Z",
-          "filingItems": [],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/0001652044-24-000079-index.html",
-          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "10-Q",
-          "accession": "0001652044-24-000079"
         }
       ],
       "seenLinks": [
@@ -6695,11 +6719,13 @@
         "https://www.sec.gov/Archives/edgar/data/1652044/000119312524238769/d627891d8k.htm",
         "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000097/goog-20240924.htm",
         "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000085/goog-20240805.htm",
-        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/goog-20240630.htm"
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000079/goog-20240630.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm"
       ],
       "matchedItems": 40,
       "extractedEntries": 1001,
-      "newestPublicationAt": "2026-08-10",
+      "newestPublicationAt": "2026-10-29",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -6711,6 +6737,172 @@
     }
   },
   "events": [
+    {
+      "id": "a4c3c2154c46f854c270176e",
+      "sourceId": "microsoft-news",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work",
+      "url": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28T16:51:35.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "17d543e1ea5cc0fe3c1c2cf4",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426243",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6057e85ad592157b5ad4772f",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426244",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dbc9b9f2320ac8988498ceaf",
+      "sourceId": "mit-energy",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "3 Questions: Why infrastructure is entering a defining era",
+      "url": "https://news.mit.edu/2026/3-questions-why-infrastructure-is-entering-defining-era-1028",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28T16:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "eb1748242e0b52b753d1738d",
+      "sourceId": "sec-tmus",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "T-Mobile US",
+      "kind": "new-link",
+      "title": "T-Mobile US · 10-Q · TMUS FORM 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000129/tmus-20260930.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "76d20473c7d1c6405c39068e",
+      "sourceId": "sec-tmus",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "T-Mobile US",
+      "kind": "new-link",
+      "title": "T-Mobile US · 8-K · TMUS FORM 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000128/tmus-20261028.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2a80fb159f3ee0c88dc359d1",
+      "sourceId": "sec-tmus",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "T-Mobile US",
+      "kind": "new-link",
+      "title": "T-Mobile US · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312526435233/d130644d8k.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b8dc1a66cb1eac818813bd74",
+      "sourceId": "sec-msft",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Microsoft · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dfcc05df216c62d38b729aaa",
+      "sourceId": "sec-msft",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Microsoft · 10-Q · 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d548cf4895499c139b1cb866",
+      "sourceId": "sec-msft",
+      "themes": [
+        "ai-work"
+      ],
+      "owner": "Microsoft",
+      "kind": "new-link",
+      "title": "Microsoft · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c2fd2d3dcb87d1cf8fa36454",
+      "sourceId": "sec-googl",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Alphabet",
+      "kind": "new-link",
+      "title": "Alphabet · 10-Q · 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-29",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "365c7384793b9bf338ad6725",
+      "sourceId": "sec-googl",
+      "themes": [
+        "robotaxis"
+      ],
+      "owner": "Alphabet",
+      "kind": "new-link",
+      "title": "Alphabet · 8-K · 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm",
+      "detectedAt": "2026-10-29T11:04:27.313Z",
+      "publishedAt": "2026-10-28",
+      "verification": "unreviewed"
+    },
     {
       "id": "ee5e45013b995747634b5e70",
       "sourceId": "nsf-research",
