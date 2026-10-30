@@ -1,10 +1,116 @@
 {
   "schemaVersion": 1,
-  "collectionId": "fed8785a-6abe-4393-be45-2b47c1ba595f",
-  "generatedAt": "2026-10-30T02:07:46.939Z",
-  "sourceCheckedAt": "2026-10-30T02:07:46.939Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/40989843053",
+  "collectionId": "7ddf496c-88d6-4716-b21d-8cddfe68fd3f",
+  "generatedAt": "2026-10-30T11:00:09.215Z",
+  "sourceCheckedAt": "2026-10-30T11:00:09.215Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41044810035",
   "documents": [
+    {
+      "id": "289f79357e2203fc82f0d5a6",
+      "sourceId": "meta-news",
+      "url": "https://about.fb.com/news/2026/10/the-future-is-for-everyone-meta-and-cnib-partner-to-support-canadians-who-are-blind-deafblind-or-have-low-vision/",
+      "title": "The Future Is for Everyone: Meta and CNIB Partner to Support Canadians Who Are Blind, Deafblind or Have Low Vision",
+      "excerpt": "We believe the future is for everyone. That’s why Meta is partnering with CNIB – a non-profit founded in 1918 that empowers Canadians impacted by blindness to live their dreams – to help bring the benefit of AI glasses to more Canadians who",
+      "owner": "Meta",
+      "tier": "company",
+      "storyId": "674f0cccaee12c15fbce50e2",
+      "originalPublishedAt": "2026-10-29T17:00:36.000Z",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "announcementAt": "2026-10-29T17:00:36.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "ai-glasses"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-29T17:00:36.000Z",
+      "detectedAt": "2026-10-30T11:00:09.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b39796b1a644e5dc10b7f8fe",
+      "sourceId": "waymo-news",
+      "url": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership",
+      "title": "Read more: Toyota and Waymo Advance Autonomous Driving Collaboration for Safer Streets and Freedom of Movement for All",
+      "excerpt": "Toyota and Waymo to begin scaling fleet of Toyota bZ4X autonomous vehicles in Japan in 2027, paving the way for the country’s first domestically manufactured fully autonomous ride-hailing service.",
+      "owner": "Waymo",
+      "tier": "company",
+      "storyId": "00c8e65344ca355f9e2636d8",
+      "originalPublishedAt": "2026-10-30",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "announcementAt": "2026-10-30",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": false,
+      "themes": [
+        "robotaxis"
+      ],
+      "associatedThemes": [
+        "robotaxis"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-30",
+      "detectedAt": "2026-10-30T11:00:09.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c23fa962eb72ae1a2d0ec534",
+      "sourceId": "sec-meta",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
+      "title": "Meta Platforms · 8-K · 8-K",
+      "excerpt": "Company-filed disclosure; reported items 1.01, 3.03, 5.03, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+      "owner": "Meta Platforms",
+      "tier": "filing",
+      "storyId": "965cc1d27da4e47d1545c46c",
+      "originalPublishedAt": "2026-10-29",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "announcementAt": "2026-10-29",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "ai-glasses"
+      ],
+      "filingItems": [
+        "1.01",
+        "3.03",
+        "5.03",
+        "9.01"
+      ],
+      "reportDate": "2026-10-26",
+      "acceptedAt": "2026-10-29T21:08:00.000Z",
+      "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/0001193125-26-438017-index.html",
+      "publishedAt": "2026-10-29",
+      "detectedAt": "2026-10-30T11:00:09.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "00eb5f53c1e74574cd7738af",
       "sourceId": "nature-research",
@@ -24749,72 +24855,6 @@
       "verification": "unreviewed",
       "associatedThemes": [],
       "metadataOnly": true
-    },
-    {
-      "id": "09f315c0e2f18c8051f1467b",
-      "sourceId": "nsf-research",
-      "url": "https://www.nsf.gov/news/podcast-lasers-materials-future",
-      "title": "Podcast: Lasers and materials of the future",
-      "excerpt": "Chunlei Guo, an NSF-supported researcher, discusses his work using femtosecond lasers to design materials with highly functionalized purposes...",
-      "owner": "NSF",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-08-31T19:02:25.000Z",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true,
-      "originalPublishedAt": "2026-08-31T19:02:25.000Z"
-    },
-    {
-      "id": "0ab1743031030ebf8e7b63c0",
-      "sourceId": "nature-research",
-      "url": "https://www.nature.com/articles/s41586-026-11064-8",
-      "title": "Spatiotemporal clonal architecture of the newborn mouse forebrain",
-      "excerpt": null,
-      "owner": "Nature",
-      "tier": "research",
-      "themes": [],
-      "publishedAt": "2026-09-30",
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": true,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [],
-      "metadataOnly": true
-    },
-    {
-      "id": "0b1651be8cedd6c50bc20312",
-      "sourceId": "waymo-news",
-      "url": "https://waymo.com/blog/2026/09/waymo-in-singapore",
-      "title": "Read more: Singapore, Next Stop: Bringing Scalable, Safe Autonomous Mobility to the Lion City",
-      "excerpt": null,
-      "owner": "Waymo",
-      "tier": "company",
-      "themes": [],
-      "publishedAt": null,
-      "detectedAt": "2026-10-03T01:14:00.102Z",
-      "changeType": "baseline",
-      "previousId": null,
-      "previousExcerpt": null,
-      "previousTitle": null,
-      "discovery": false,
-      "headlineSignal": "Announcement / reporting",
-      "verification": "unreviewed",
-      "associatedThemes": [
-        "robotaxis"
-      ],
-      "metadataOnly": true
     }
   ],
   "documentIndex": {
@@ -33299,6 +33339,33 @@
       "latestId": "8fd387bae0120a3a81b213c8",
       "versions": {
         "8fd387bae0120a3a81b213c8": "2026-10-29T21:24:41.306Z"
+      }
+    },
+    "674f0cccaee12c15fbce50e2": {
+      "sourceId": "meta-news",
+      "originalPublishedAt": "2026-10-29T17:00:36.000Z",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "latestId": "289f79357e2203fc82f0d5a6",
+      "versions": {
+        "289f79357e2203fc82f0d5a6": "2026-10-30T11:00:09.215Z"
+      }
+    },
+    "00c8e65344ca355f9e2636d8": {
+      "sourceId": "waymo-news",
+      "originalPublishedAt": "2026-10-30",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "latestId": "b39796b1a644e5dc10b7f8fe",
+      "versions": {
+        "b39796b1a644e5dc10b7f8fe": "2026-10-30T11:00:09.215Z"
+      }
+    },
+    "965cc1d27da4e47d1545c46c": {
+      "sourceId": "sec-meta",
+      "originalPublishedAt": "2026-10-29",
+      "firstSeenAt": "2026-10-30T11:00:09.215Z",
+      "latestId": "c23fa962eb72ae1a2d0ec534",
+      "versions": {
+        "c23fa962eb72ae1a2d0ec534": "2026-10-30T11:00:09.215Z"
       }
     }
   },
@@ -43201,20 +43268,25 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
-        "title": "Meta Platforms · 10-Q · 10-Q",
-        "publishedAt": "2026-10-22",
-        "reportDate": "2026-09-30",
-        "acceptedAt": "2026-10-22T00:00:08.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001628280-26-066773"
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
+        "title": "Meta Platforms · 8-K · 8-K",
+        "publishedAt": "2026-10-29",
+        "reportDate": "2026-10-26",
+        "acceptedAt": "2026-10-29T21:08:00.000Z",
+        "filingItems": [
+          "1.01",
+          "3.03",
+          "5.03",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/0001193125-26-438017-index.html",
+        "excerpt": "Company-filed disclosure; reported items 1.01, 3.03, 5.03, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001193125-26-438017"
       },
-      "factsAttemptAt": "2026-10-23T09:32:27.598Z",
-      "factsCheckedAt": "2026-10-23T09:32:27.598Z",
-      "factsAccession": "0001628280-26-066773",
+      "factsAttemptAt": "2026-10-30T11:00:09.215Z",
+      "factsCheckedAt": "2026-10-30T11:00:09.215Z",
+      "factsAccession": "0001193125-26-438017",
       "factsError": null,
       "quoteAttemptAt": "2026-10-30T02:07:46.939Z",
       "quote": {
@@ -47435,7 +47507,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-10-30T02:07:46.939Z",
+    "generatedAt": "2026-10-30T11:00:09.215Z",
     "coverageKey": "0beb5b54e63c2a5290945e9b",
     "history": [
       {
@@ -47910,7 +47982,7 @@
       }
     ],
     "datedDocuments": 375,
-    "comparableDays": 21,
+    "comparableDays": 22,
     "note": "28-day sample of configured research feeds. Momentum needs 28 collected days with unchanged, healthy source coverage; publication backfill alone is not monitoring history."
   },
   "coverage": {

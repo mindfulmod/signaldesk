@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T02:07:46.939Z",
+  "generatedAt": "2026-10-30T11:00:09.215Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -9900,20 +9900,25 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm",
-        "title": "Meta Platforms · 10-Q · 10-Q",
-        "publishedAt": "2026-10-22",
-        "reportDate": "2026-09-30",
-        "acceptedAt": "2026-10-22T00:00:08.000Z",
-        "filingItems": [],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.html",
-        "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-        "form": "10-Q",
-        "accession": "0001628280-26-066773"
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
+        "title": "Meta Platforms · 8-K · 8-K",
+        "publishedAt": "2026-10-29",
+        "reportDate": "2026-10-26",
+        "acceptedAt": "2026-10-29T21:08:00.000Z",
+        "filingItems": [
+          "1.01",
+          "3.03",
+          "5.03",
+          "9.01"
+        ],
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/0001193125-26-438017-index.html",
+        "excerpt": "Company-filed disclosure; reported items 1.01, 3.03, 5.03, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+        "form": "8-K",
+        "accession": "0001193125-26-438017"
       },
-      "factsAttemptAt": "2026-10-23T09:32:27.598Z",
-      "factsCheckedAt": "2026-10-23T09:32:27.598Z",
-      "factsAccession": "0001628280-26-066773",
+      "factsAttemptAt": "2026-10-30T11:00:09.215Z",
+      "factsCheckedAt": "2026-10-30T11:00:09.215Z",
+      "factsAccession": "0001193125-26-438017",
       "factsError": null,
       "quoteAttemptAt": "2026-10-30T02:07:46.939Z",
       "quote": {
