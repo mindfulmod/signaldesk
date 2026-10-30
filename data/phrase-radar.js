@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-30T18:43:04.899Z","phrases":[]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-10-30T23:04:18.025Z","phrases":[{"phrase":"binance hack","weekCount":3,"tickers":["CAT","COIN"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
