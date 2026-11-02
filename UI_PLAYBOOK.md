@@ -7,6 +7,18 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 source-cache integrity: `research-model.js.sourceContract` is the
+shared extraction/provenance identity. URL equality alone cannot validate a
+cached filtered feed. The collector must fetch without conditional validators
+after contract changes, then establish a baseline without false fresh-news alerts.
+Only successful extraction writes a new receipt. Failed migrations retain the
+old evidence and contract, respect backoff, and remain non-current. Source health,
+Discover coverage, document ingestion and comparable-day receipts share this
+check. Legacy records remain inspectable but unconfirmed until recollected;
+never add contract receipts to generated data without real collection. Bump the
+shared extractor version when parser semantics change. Old discovery comparison
+days move to legacy history, not the new comparable window.
+
 November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
 of adoption/operating tracker values and comparable growth; show its separate
 count in the ledger. Reviewed cards show caveats and a next check, not only a

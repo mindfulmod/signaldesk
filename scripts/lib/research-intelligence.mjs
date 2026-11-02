@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { discoveryHistory, recordDiscoveryDay } from "./discovery-history.mjs";
+import researchModel from "../../research-model.js";
 const hash = value => createHash("sha256").update(value).digest("hex").slice(0, 24);
 const days = (value, now) => (Date.parse(now) - Date.parse(value)) / 86400000;
 const normal = text => String(text).toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, " ").trim();
@@ -45,7 +46,7 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
   const currentIds = new Set();
   for (const source of registry.sources) {
     const saved = state.sources[source.id];
-    if (!saved?.lastSuccessAt || saved.status !== "ok") continue;
+    if (!saved?.lastSuccessAt || saved.status !== "ok" || !researchModel.sourceCompatible(source, saved)) continue;
     const entries = source.mode === "page" ? [{ ...saved, url: source.url, title: saved.title || source.name, excerpt: saved.excerpt || "", fingerprint: saved.fingerprint }] : saved.items || [];
     for (const item of entries) {
       const fingerprint = hash(JSON.stringify([item.title, item.excerpt || "", item.publishedAt ? new Date(item.publishedAt).toISOString() : "", item.fingerprint || ""]));

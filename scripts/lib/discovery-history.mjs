@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { calendarDay } from "./technology-monitor.mjs";
+import researchModel from "../../research-model.js";
 
 const hash = value => createHash("sha256").update(JSON.stringify(value)).digest("hex").slice(0, 24);
 const dayMs = 86400000;
@@ -11,11 +12,11 @@ const dateAge = (date, today) => /^\d{4}-\d{2}-\d{2}$/.test(date || "") && valid
 export function discoveryHistory(sources, states, previous, now) {
   if (!validTime(now)) throw new Error("Discovery requires a valid collection time");
   const today = calendarDay(now);
-  const coverageKey = hash([5, "America/Toronto", sources.map(s => [s.id, s.url, s.format, s.terms, s.linkPattern, s.owner, s.tier, s.mode, s.quietAfterDays, s.freshnessHours, s.accessStatus, states[s.id]?.extractorVersion]).sort((a, b) => a[0].localeCompare(b[0]))]);
+  const coverageKey = hash([6, "America/Toronto", sources.map(s => [s.id, researchModel.sourceContract(s), s.quietAfterDays, s.freshnessHours, s.accessStatus]).sort((a, b) => a[0].localeCompare(b[0]))]);
   const coverage = sources.map(s => {
     const state = states[s.id] || {}, age = validTime(state.lastSuccessAt) ? (Date.parse(now) - Date.parse(state.lastSuccessAt)) / dayMs : NaN;
     const publicationAge = validTime(state.newestPublicationAt) ? (Date.parse(now) - Date.parse(state.newestPublicationAt)) / dayMs : NaN;
-    const fresh = s.accessStatus !== "permission-required" && state.status === "ok" && state.sourceUrl === s.url && age >= 0 && age <= (s.freshnessHours || 36) / 24;
+    const fresh = s.accessStatus !== "permission-required" && state.status === "ok" && researchModel.sourceCompatible(s, state) && age >= 0 && age <= (s.freshnessHours || 36) / 24;
     const quiet = !Number.isFinite(publicationAge) || publicationAge < 0 || Boolean(s.quietAfterDays && publicationAge > s.quietAfterDays);
     const sampleUsable = Number.isInteger(state.matchedItems) && state.matchedItems > 0 && Number.isInteger(state.datedItems) && state.datedItems > 0 && state.datedItems <= state.matchedItems;
     return { id: s.id, owner: s.owner, lane: s.tier === "community" ? "community" : "research", fresh, quiet, sampleUsable,

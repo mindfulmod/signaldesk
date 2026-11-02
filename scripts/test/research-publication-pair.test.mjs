@@ -4,12 +4,13 @@ import { readFileSync } from "node:fs";
 import { verifyResearchPublication } from "../verify-publication.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-10-14T02:00:00Z", older = "2026-10-14T01:00:00Z";
 const scope = { sources: [{ id: "test" }], companies: [{ ticker: "TEST" }] };
 const pair = (sourceAt = now, generatedAt = now) => ({
   research: { schemaVersion: 1, generatedAt, sourceCheckedAt: sourceAt, documents: [], reviews: [], coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", now), factsCheckedAt: now } } },
-  monitor: { schemaVersion: 1, generatedAt: sourceAt, events: [], sources: { test: { id: "test", status: "ok", lastSuccessAt: sourceAt } } }
+  monitor: { schemaVersion: 1, generatedAt: sourceAt, events: [], sources: { test: { ...sourceReceipt(scope.sources[0]), id: "test", status: "ok", lastSuccessAt: sourceAt } } }
 });
 const options = { clock: () => Date.parse(now), attempts: 2, sleep: async () => {} };
 
