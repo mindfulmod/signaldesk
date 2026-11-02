@@ -71,6 +71,26 @@ test("legacy receipts remain historical until actually re-collected; no syntheti
   assert.equal(next.events.length, 0);
 });
 
+test("the publication-date parser migration cannot renew an old Atom cache with a 304", async () => {
+  const prior = baseline();
+  prior.extractorVersion = 4;
+  const oldContract = JSON.parse(prior.sourceContract);
+  oldContract[1] = 4; prior.sourceContract = JSON.stringify(oldContract);
+  const original = structuredClone(prior);
+  const atom = '<feed><entry><title>Battery pilot</title><link href="https://example.org/battery"/><updated>2026-11-02T11:00:00Z</updated></entry></feed>';
+  const next = await collectTechnology({ sources: [source] }, { sources: { lab: prior } }, { now: later, fetchImpl: async (_, options) => {
+    assert.equal(options.headers["If-None-Match"], undefined);
+    assert.equal(options.headers["If-Modified-Since"], undefined);
+    return new Response(atom, { headers: { "content-type": "application/atom+xml" } });
+  } });
+  assert.equal(model.sourceCompatible(source, next.sources.lab), true);
+  assert.equal(next.sources.lab.items[0].publishedAt, null);
+  assert.equal(next.sources.lab.items[0].sourceModifiedAt, "2026-11-02T11:00:00.000Z");
+  assert.equal(next.sources.lab.datedItems, 0);
+  assert.deepEqual(next.events, []);
+  assert.deepEqual(prior, original, "the old receipt remains an unchanged historical record");
+});
+
 test("incompatible source data cannot enter current inventory or create a daily discovery receipt", () => {
   const prior = baseline(), changed = { ...source, terms: ["satellite"] };
   const registry = { sources: [source], themes: [] };
