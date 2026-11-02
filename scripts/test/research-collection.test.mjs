@@ -122,12 +122,12 @@ test("health gates missing publications, incomplete coverage and stale prices", 
   assert.equal(researchHealth(research, { sources: {} }, Date.parse(now)).ok, false);
   assert.equal(researchHealth({ ...research, companies: { QS: {} } }, monitor, Date.parse(now)).ok, false);
 });
-test("publication verification waits for the exact or newer public snapshot", async () => {
+test("publication verification waits for the exact public snapshot", async () => {
   const expected = { collectionId: "b", generatedAt: now }; let count = 0;
   assert.equal(await verifyPublication(expected, async () => ++count === 1 ? { collectionId: "a", generatedAt: now } : expected, { sleep: async () => {} }), true);
   assert.equal(count, 2);
   await assert.rejects(verifyPublication(expected, async () => ({ generatedAt: "2026-09-01" }), { attempts: 2, sleep: async () => {} }), /did not reach/);
-  let clock = 0;
+  let clock = Date.parse(now);
   await assert.rejects(verifyPublication(expected, async () => { clock += 250000; throw new Error("offline"); }, { clock: () => clock, sleep: async () => {} }), /did not reach/);
 });
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
