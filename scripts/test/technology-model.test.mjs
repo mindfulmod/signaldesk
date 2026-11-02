@@ -34,6 +34,14 @@ test("targets do not become adoption observations and one owner is not two confi
   assert.equal(battery.targets, 1); assert.equal(battery.observations, 2);
   assert.equal(model.evidenceSummary(registry.themes[1]).owners, 1);
 });
+test("execution risks stay visible without inflating progress, targets or comparable growth", () => {
+  const theme = registry.themes[0], before = model.evidenceSummary(theme);
+  const risk = { ...theme.evidence[0], id: "risk-test", kind: "risk", value: 2, qualifier: "exact", publishedAt: "2026-11-01" };
+  const after = model.evidenceSummary({ ...theme, evidence: [...theme.evidence, risk] });
+  assert.equal(after.risks, 1);
+  for (const key of ["observations", "targets", "owners", "latest"]) assert.equal(after[key], before[key]);
+  assert.equal(model.comparableChange(risk, { ...risk, value: 4, publishedAt: "2026-11-02" }), null);
+});
 test("undated availability checks preserve publication unknown instead of inventing today", () => {
   const e = registry.themes[1].evidence.find(e => e.id === "tmobile-availability-2026");
   assert.equal(e.publishedAt, null); assert.equal(e.checkedAt, "2026-10-02");

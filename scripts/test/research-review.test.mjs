@@ -16,6 +16,26 @@ test("review validation requires provenance, named reviewer and bounded evidence
   assert.deepEqual(model.validateReview(review, options), []);
   for (const change of [{ owner: "Other company" }, { url: "javascript:alert(1)" }, { sourceId: "other" }, { reason: "ok" }, { reviewer: "" }, { caveat: "" }, { value: NaN }, { qualifier: "exact", value: null }]) assert.ok(model.validateReview({ ...review, ...change }, options).length);
 });
+test("execution risks are valid evidence but cannot populate numeric adoption trackers", () => {
+  const risk = { ...review, kind: "risk" };
+  assert.deepEqual(model.validateReview(risk, options), []);
+  assert.ok(model.validateReview({ ...risk, entityId: "program:qs-eagle", metricKey: "yield", unit: "%", value: 90 }, options).some(e => /Execution risks/.test(e)));
+});
+test("supporting exhibits stay within the saved SEC issuer and accession", () => {
+  const url = "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-20261021.htm";
+  const supportingUrl = url.replace("qs-20261021.htm", "qs-ex99_1.htm");
+  const doc = { ...document, sourceId: "sec-qs", url };
+  const sec = { ...review, sourceId: doc.sourceId, url, supportingUrl };
+  const opts = { ...options, documents: [doc] };
+  assert.deepEqual(model.validateReview(sec, opts), []);
+  assert.equal(model.supportingSource(sec), supportingUrl);
+  for (const bad of [url, supportingUrl.replace("1811414", "1283699"), supportingUrl.replace("427862", "430428"), supportingUrl.replace("www.sec.gov", "example.org"), supportingUrl.replace("https:", "http:"), supportingUrl.replace("www.sec.gov", "user@www.sec.gov"), supportingUrl.replace("www.sec.gov", "www.sec.gov:444"), supportingUrl + "?redirect=x", supportingUrl + "#fake", "javascript:alert(1)"]) {
+    assert.equal(model.supportingSource({ ...sec, supportingUrl: bad }), "", bad);
+    assert.ok(model.validateReview({ ...sec, supportingUrl: bad }, opts).length, bad);
+  }
+  assert.equal(model.supportingSource({ ...sec, sourceId: "qs-news" }), "");
+  assert.ok(model.validateReview({ ...sec, url: url.replace("427862", "430428") }, opts).some(e => /provenance/.test(e)));
+});
 test("targets retain their type and numeric lower bounds cannot become exact claims", () => {
   assert.ok(model.validateReview({ ...review, kind: "target" }, options).length);
   assert.ok(model.validateReview({ ...review, qualifier: "target" }, options).length);
@@ -64,6 +84,49 @@ test("brief follows the selected theme scope and flags future or stale snapshots
 const context = { window: { SIGNALDESK_RESEARCH_CONFIG: config, SIGNALDESK_RESEARCH_MODEL: model }, URL, Intl, Date };
 vm.runInNewContext(readFileSync(new URL("../../research-views.js", import.meta.url), "utf8"), context);
 const views = context.window.SIGNALDESK_RESEARCH_VIEWS;
+test("reviewed claims expose limits, original dates and AI attribution, without claiming human review", () => {
+  const reviews = JSON.parse(readFileSync(new URL("../../research-reviews.json", import.meta.url))).reviews;
+  const html = views.companies(registry.themes, { reviews }, "QS");
+  assert.match(html, /Execution risk/);
+  assert.match(html, /PowerCo milestone payments are paused/);
+  assert.match(html, /not GAAP revenue/);
+  assert.match(html, /Company target/);
+  assert.match(html, /Reviewed exhibit/);
+  assert.match(html, /AI source review/);
+  assert.ok(!html.includes("Human-reviewed"));
+  assert.ok(!html.includes("T-Mobile’s September"));
+  const battery = views.trackers("batteries", { reviews }, { compare: [], batteryStage: "all" });
+  assert.match(battery, /PowerCo milestone payments are paused/);
+  assert.equal((battery.match(/<td><span class="intel-unknown">Not established/g) || []).length, 15);
+});
+test("published source reviews validate against retained candidates without rewriting old evidence", () => {
+  const reviews = JSON.parse(readFileSync(new URL("../../research-reviews.json", import.meta.url))).reviews;
+  const research = JSON.parse(readFileSync(new URL("../../data/research.json", import.meta.url)));
+  assert.equal(reviews.length, 5);
+  assert.deepEqual(appendReviews({ reviews: [] }, reviews, research.documents).reviews, reviews);
+  const enriched = model.reviewedThemes(registry.themes, reviews);
+  for (const theme of registry.themes) {
+    const updated = enriched.find(t => t.id === theme.id);
+    assert.equal(updated.reviewedAt, theme.reviewedAt);
+    assert.equal(updated.reviewDue, theme.reviewDue);
+    for (const old of theme.evidence) assert.deepEqual(updated.evidence.find(e => e.id === old.id), old);
+  }
+  assert.ok(!enriched.flatMap(t => t.evidence).some(e => e.id === "asts-employment-rejected-20261102"));
+  const brief = model.buildBrief({ themes: registry.themes, research: { ...research, reviews }, now: Date.parse("2026-11-02T18:00:00Z") });
+  assert.equal(brief.reviews[0].kind, "risk");
+  assert.equal(brief.reviews.length, 4);
+});
+test("review queue theme filters include bounded SEC reviews without retagging raw candidates", () => {
+  const reviews = JSON.parse(readFileSync(new URL("../../research-reviews.json", import.meta.url))).reviews;
+  const research = JSON.parse(readFileSync(new URL("../../data/research.json", import.meta.url)));
+  const state = { drafts: [], reviewFilter: "reviewed", dismissed: [], showDismissed: false, queueLimit: 24, restrictThemes: true, query: "solid-state" };
+  const battery = views.reviewQueue(registry.themes.filter(t => t.id === "solid-state-batteries"), { ...research, reviews }, state);
+  assert.match(battery, /QuantumScape/);
+  assert.ok(!battery.includes("T-Mobile US"));
+  assert.match(battery, /Collected metadata only · see the bounded review decision below/);
+  assert.ok(!battery.includes("Metadata only · original claim and scope not verified"));
+  assert.deepEqual(research.documents.find(d => d.id === reviews[0].candidateId).themes, []);
+});
 test("company views work without data and never manufacture a zero quote", () => {
   const html = views.companies(registry.themes, null, "QS");
   assert.match(html, /Quote unavailable/); assert.match(html, /Not disclosed \/ unavailable/);
