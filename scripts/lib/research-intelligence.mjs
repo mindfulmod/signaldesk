@@ -45,7 +45,7 @@ export function buildDocumentInventory(registry, state, previous = {}, now = new
   const currentIds = new Set();
   for (const source of registry.sources) {
     const saved = state.sources[source.id];
-    if (!saved?.lastSuccessAt || saved.status !== "ok") continue;
+    if (source.accessStatus === "permission-required" || !saved?.lastSuccessAt || saved.status !== "ok") continue;
     const entries = source.mode === "page" ? [{ ...saved, url: source.url, title: saved.title || source.name, excerpt: saved.excerpt || "", fingerprint: saved.fingerprint }] : saved.items || [];
     for (const item of entries) {
       const fingerprint = hash(JSON.stringify([item.title, item.excerpt || "", item.publishedAt ? new Date(item.publishedAt).toISOString() : "", item.fingerprint || ""]));

@@ -1,5 +1,46 @@
 # Research intelligence work plan
 
+## November 2 · AST website access review candidate
+
+Not deployed. Live watchdog checks passed at this audit, but green operational
+coverage does not establish source permissions or complete evidence.
+
+- AST's [Terms of Service](https://ast-science.com/terms-of-service/), revised
+  September 15, 2022 and inspected November 2, 2026, expressly include subdomains
+  in their website scope. Section 1.2(f) restricts automated collection absent
+  the stated exceptions/permission. Pause `ast-investor` pending permission
+  review; do not activate its embedded third-party feed as a workaround.
+  This is an operational access decision, not a legal opinion about enforceability.
+- Keep the independently configured SEC submissions source (`sec-asts`), company
+  coverage, quotes and existing historical records. Source health must show three
+  paused website sources, separate from the active-source denominator. A newly
+  published pause must not renew its last attempted/successful source-check time.
+- Enforce the pause both in normal/forced collection and at the direct fetch
+  adapter boundary. Inventory assembly also checks configuration, so a cached
+  monitor still marked `ok` cannot introduce new documents from a paused source.
+- The pre-decision AST probe found only undated quarterly-result links in the
+  existing extractor; page build dates and earnings-event dates are not source
+  publication dates. No such date was substituted, and no feed was activated.
+- A bounded FCC RSS probe returned nine usable entries with no satellite-topic
+  matches. Its fresh channel-level date is a feed date, not an individual document
+  publication date. Keep item dates unknown; add a regression for that distinction.
+- Re-enable the AST website only after recording an applicable permission/access
+  decision and validating a dated, metadata-only collection contract. SEC filing
+  metadata does not itself establish service adoption; claims still need review.
+
+No generated files or historical observations are changed by this patch. After
+approved deployment, the next research collection should persist the paused state
+while retaining original source receipts. Existing archive retention limits remain.
+
+Verification: all 479 tests pass on Node 20 and Node 24 on this source-only branch;
+research publication preflight and JSON/file-mode parity pass. Tests cover zero
+requests for paused direct/forced collection, preservation of source receipts and
+events, stale-monitor inventory rejection, continued SEC configuration and FCC
+channel-vs-item dates. Local 1440px light/375px dark checks show 20/21 active
+sources, three paused sources and AST's original check dates/permission note.
+Table, radar and attention-map stock selection pass at both widths with no console
+errors. The PR has no dependency on the separately pending research-finder UI.
+
 ## November 2 · Counterevidence and filing review candidate
 
 Branch implementation, stacked on the Public R&D candidate; not deployed.
