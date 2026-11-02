@@ -25,7 +25,8 @@
   const MARKET_SOURCES = ["FINRA Short Volume", "Price/Volume"];
   const WINDOW_KEY = "signaldesk-data-window";
 
-  let dataWindowMode = localStorage.getItem(WINDOW_KEY) || "latest";
+  let dataWindowMode = "latest";
+  try { if (localStorage.getItem(WINDOW_KEY) === "history") dataWindowMode = "history"; } catch { /* optional preference */ }
 
   const safeClamp = (min, max, value) => Math.min(max, Math.max(min, value));
   const safeRelVol = (value) => {
@@ -97,7 +98,7 @@
     if (typeof selectedRangeSnapshots === "function") {
       const originalSelectedRangeSnapshots = selectedRangeSnapshots;
       selectedRangeSnapshots = function enhancedSelectedRangeSnapshots() {
-        if (dataWindowMode === "history") {
+        if (dataWindowMode === "history" && history) {
           const snapshots = historySnapshots();
           return snapshots.length ? snapshots : originalSelectedRangeSnapshots();
         }
@@ -108,7 +109,7 @@
     if (typeof previousRangeSnapshots === "function") {
       const originalPreviousRangeSnapshots = previousRangeSnapshots;
       previousRangeSnapshots = function enhancedPreviousRangeSnapshots() {
-        if (dataWindowMode === "history") return [];
+        if (dataWindowMode === "history" && history) return [];
         return originalPreviousRangeSnapshots();
       };
     }
@@ -144,7 +145,8 @@
     select.value = dataWindowMode;
     select.addEventListener("change", () => {
       dataWindowMode = select.value;
-      localStorage.setItem(WINDOW_KEY, dataWindowMode);
+      try { localStorage.setItem(WINDOW_KEY, dataWindowMode); } catch { /* optional preference */ }
+      if (dataWindowMode === "history") void loadHistory();
       if (typeof render === "function") render();
       else refreshEnhancements();
     });
@@ -183,6 +185,10 @@
     const stale = Number.isFinite(latestTime) && latestTime > 0 && Date.now() - latestTime > 36 * 60 * 60 * 1000;
     note.classList.toggle("range-note-warn", stale);
     if (dataWindowMode === "history") {
+      if (!history) {
+        note.textContent = `Full history is not available yet. ${historyStatusText()}`;
+        return;
+      }
       note.textContent =
         snapshots.length > 1
           ? `Full saved history is aggregating ${snapshots.length} daily snapshots.`

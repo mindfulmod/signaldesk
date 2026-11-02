@@ -237,3 +237,8 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .desk-primary-action { min-height: 60px; }
   .desk-back-to-list { min-height: 44px; }
 }
+/* History loads independently of the usable latest stock snapshot. */
+.stock-history-status { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.stock-history-status .coverage-status { flex: 1; min-width: 140px; margin: 0; }
+.stock-history-status button { flex: 0 0 auto; font-size: .75rem; }
+.stock-history-status button[aria-disabled="true"] { opacity: .65; cursor: progress; }

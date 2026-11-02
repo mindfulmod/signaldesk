@@ -98,6 +98,9 @@ function pickTopHeadline(rankedItems) {
 
 let snapshot = null;
 let history = null;
+let historyLoader = null;
+let historyState = "idle";
+let deskInitialized = false;
 let selectedTicker = "";
 let rankMode = "signal";
 let capFilter = "all"; // "all" | "large" (≥$500M) | "small" (<$500M) | "unknown"
@@ -200,17 +203,14 @@ async function loadSnapshot(force = false) {
       const response = await fetch(`data/signals.json?ts=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) throw new Error("No real data snapshot found.");
       snapshot = await response.json();
-      await loadHistory(force);
       return snapshot?.dataMode === "real-public-no-key";
     } catch {
       snapshot = null;
-      history = null;
     }
   }
 
   if (window.SIGNALDESK_DATA?.dataMode === "real-public-no-key") {
     snapshot = window.SIGNALDESK_DATA;
-    await loadHistory(force);
     return true;
   }
 
@@ -218,26 +218,63 @@ async function loadSnapshot(force = false) {
 }
 
 async function loadHistory(force = false) {
-  const canFetchJson = location.protocol === "http:" || location.protocol === "https:";
-  if (canFetchJson || force) {
-    try {
-      const response = await fetch(`data/history.json?ts=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) throw new Error("No history found.");
-      const data = await response.json();
-      history = data?.dataMode === "real-public-no-key-history" ? data : null;
-      return Boolean(history);
-    } catch {
-      history = null;
-    }
-  }
-
-  if (window.SIGNALDESK_HISTORY?.dataMode === "real-public-no-key-history") {
-    history = window.SIGNALDESK_HISTORY;
-    return true;
-  }
-
-  return false;
+  if (!deskInitialized) return false;
+  historyLoader ||= window.SIGNALDESK_HISTORY_LOADER.create({
+    read: async signal => {
+      if (location.protocol === "file:") return window.SIGNALDESK_HISTORY;
+      const response = await fetch(`data/history.json?ts=${Date.now()}`, { cache: "no-store", signal });
+      if (!response.ok) throw Error("Saved stock history could not be downloaded.");
+      return response.json();
+    },
+    onChange: state => {
+      history = state.data;
+      historyState = state.status;
+      updateHistoryStatus();
+      renderAfterHistoryChange();
+    },
+  });
+  return (await historyLoader.load(force)).status === "ready";
 }
+
+function historyStatusText() {
+  if (historyState === "loading") return history ? "Updating saved stock history; the previously loaded archive remains visible." : "Loading saved stock history. Historical comparisons are not ready yet.";
+  if (historyState === "error") return history ? "History update failed. Previously loaded history is retained; retry to check for a newer archive." : "Stock history could not be loaded. Historical comparisons are unavailable; retry history.";
+  if (historyState === "idle") return "Stock history loads when you open the Desk or stock research tools.";
+  return `History ready · ${history.snapshots.length} saved daily snapshots.`;
+}
+
+function updateHistoryStatus() {
+  const message = byId("stockHistoryMessage"), button = byId("retryStockHistory");
+  if (message) message.textContent = historyStatusText();
+  if (button) {
+    // Keep a focused retry control mounted when its request finishes.
+    button.textContent = historyState === "loading" ? "Loading history…" : historyState === "error" ? "Retry history" : "Reload history";
+    button.setAttribute("aria-disabled", String(historyState === "loading"));
+  }
+}
+
+function renderAfterHistoryChange() {
+  // Only the stock surfaces rerender. Preserve the focused control by its DOM
+  // path if a table/detail replacement detached it; never refocus a live editor.
+  const active = document.activeElement;
+  const root = active?.closest("#rankingBody, #detailPanel, #detailSheetContent, #buyCandidates, #moversBoard");
+  const path = [];
+  for (let node = active; root && node !== root; node = node.parentElement) path.unshift([...node.parentElement.children].indexOf(node));
+  const ticker = active?.closest("[data-ticker]")?.dataset.ticker;
+  const identity = element => element?.getAttribute("aria-label") || element?.getAttribute("href") || element?.textContent;
+  const label = identity(active);
+  render();
+  if (root && !active.isConnected) {
+    let target = root;
+    for (const index of path) target = target?.children[index];
+    const matches = element => element?.tagName === active.tagName && identity(element) === label && (!ticker || element.closest("[data-ticker]")?.dataset.ticker === ticker);
+    if (!matches(target)) target = [...root.querySelectorAll("a, button, summary, [tabindex], input, select")].find(matches);
+    if (target) target.focus({ preventScroll: true });
+    else (root.querySelector("[data-detail-heading]") || document.querySelector('[role="tab"][aria-selected="true"]'))?.focus({ preventScroll: true });
+  }
+}
+
+window.SIGNALDESK_LOAD_HISTORY = () => { if (historyState === "idle") void loadHistory(); };
 
 function currentSnapshotEntry() {
   if (!snapshot?.signals?.length) return null;
@@ -331,6 +368,7 @@ function rankBadge(ticker, currentRank, prevRanks) {
 }
 
 function detailTrendMarkup(item) {
+  if (!history && historyState !== "ready") return `<div class="detail-section trend-section"><h3>Attention history</h3><p class="muted-note">${escapeHtml(historyStatusText())}</p></div>`;
   const hist = tickerHistory(item.ticker), observations = hist.observations || [], series = hist.series || [];
   const saved = observations.length ? `<details class="desk-disclosure" data-detail-section="observations"><summary>Saved observations <span>Last ${observations.length} snapshots</span></summary><p class="data-caveat">All-source weighted totals after known exclusions, not post counts. Missing tickers are not zero; these totals may not be comparable.</p><ul>${observations.map(row => `<li>${escapeHtml(row.date || "Undated")}: ${row.mentions === null ? "Not captured" : `${shortFmt.format(row.mentions)} saved weight`}</li>`).join("")}</ul></details>` : "";
   if (series.length < 2) return `<div class="detail-section trend-section"><h3>Attention history</h3><p class="muted-note">No comparable trend yet. At least two successive snapshots need the same observed sources, healthy collection and valid company matching. Missing or excluded coverage is not zero.</p>${saved}</div>`;
@@ -1427,7 +1465,9 @@ function bindEvents() {
   byId("refreshData").addEventListener("click", async () => {
     await loadSnapshot(true);
     render();
+    if (historyState !== "idle") void loadHistory(true);
   });
+  byId("retryStockHistory")?.addEventListener("click", () => { if (historyState !== "loading") void loadHistory(true); });
   byId("retrySnapshot").addEventListener("click", () => byId("refreshData").click());
   byId("exportCsv").addEventListener("click", exportCsv);
   byId("togglePanel").addEventListener("click", toggleDetailPanel);
@@ -1653,6 +1693,8 @@ async function init() {
   }
   if (loaded) render();
   else renderEmptyState();
+  deskInitialized = true;
+  if (document.querySelector(".app-shell")?.dataset.activeTab === "desk" || document.querySelector(".market-research-tools")?.open) void loadHistory();
 }
 
 init();
