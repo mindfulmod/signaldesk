@@ -1,10 +1,46 @@
 {
   "schemaVersion": 1,
-  "collectionId": "83fc8cb7-9d37-4e2c-aef0-88a644a6c8f5",
-  "generatedAt": "2026-11-02T16:43:47.838Z",
-  "sourceCheckedAt": "2026-11-02T16:02:06.303Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41483198853",
+  "collectionId": "ee5fd9c1-ff55-4982-9ec5-eb830133bf11",
+  "generatedAt": "2026-11-02T16:53:00.446Z",
+  "sourceCheckedAt": "2026-11-02T16:53:00.446Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41484588128",
   "documents": [
+    {
+      "id": "1d2978ee7bcce479876fe83c",
+      "sourceId": "bmw-news",
+      "url": "https://newsroom.bmwgroup.com/global/bmw-group-begins-series-production-of-gen6-high-voltage-batteries-in-shenyang/",
+      "title": "BMW GROUP BEGINS SERIES PRODUCTION OF GEN6 HIGH-VOLTAGE BATTERIES IN SHENYANG",
+      "excerpt": null,
+      "owner": "BMW",
+      "tier": "customer",
+      "storyId": "68d2837b76bc2f304ace08f7",
+      "originalPublishedAt": "2026-10-15T06:00:00.000Z",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-02T16:53:00.446Z",
+      "announcementAt": "2026-10-15T06:00:00.000Z",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "solid-state-batteries"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-10-15T06:00:00.000Z",
+      "detectedAt": "2026-11-02T16:53:00.446Z",
+      "changeType": "baseline",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Deployment language",
+      "verification": "unreviewed"
+    },
     {
       "id": "00afdd364cfd025a23834a05",
       "sourceId": "mit-research",
@@ -60081,6 +60117,15 @@
       "versions": {
         "223bb6d36d590d94b45662ce": "2026-11-02T16:02:06.303Z"
       }
+    },
+    "68d2837b76bc2f304ace08f7": {
+      "sourceId": "bmw-news",
+      "originalPublishedAt": "2026-10-15T06:00:00.000Z",
+      "firstSeenAt": "2026-11-02T16:53:00.446Z",
+      "latestId": "1d2978ee7bcce479876fe83c",
+      "versions": {
+        "1d2978ee7bcce479876fe83c": "2026-11-02T16:53:00.446Z"
+      }
     }
   },
   "reviews": [],
@@ -74293,7 +74338,7 @@
   },
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "discovery": {
-    "generatedAt": "2026-11-02T16:43:47.838Z",
+    "generatedAt": "2026-11-02T16:53:00.446Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "2a0e2ecbf5438da871796863",
@@ -75623,7 +75668,7 @@
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 20,
+    "readableSources": 21,
     "companies": 8
   }
 }
