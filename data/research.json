@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "collectionId": "b93a303b-9216-499f-be25-eb4913325f55",
-  "generatedAt": "2026-11-02T17:50:22.638Z",
+  "collectionId": "03ec0871-94fc-432d-af73-4b271710f52e",
+  "generatedAt": "2026-11-02T18:11:46.271Z",
   "sourceCheckedAt": "2026-11-02T16:53:00.446Z",
   "runUrl": null,
   "documents": [
@@ -79870,7 +79870,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-02T17:50:22.638Z",
+    "generatedAt": "2026-11-02T18:11:46.271Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "2a0e2ecbf5438da871796863",
