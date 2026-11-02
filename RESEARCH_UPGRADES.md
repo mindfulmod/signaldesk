@@ -1,5 +1,47 @@
 # Research intelligence work plan
 
+## November 2 · Counterevidence and filing review candidate
+
+Branch implementation, stacked on the Public R&D candidate; not deployed.
+
+- Add an explicit `risk` evidence kind. Execution setbacks remain visible in the
+  ledger and program context but do not inflate observation/target counts,
+  percentage-growth comparisons or operating/adoption tracker values.
+- Append five AI-attributed decisions against four retained SEC candidates:
+  QS PowerCo execution risk, QS pilot sampling, QS planned capacity, T-Mobile's
+  intended satellite capacity benefit, and rejection of an unrelated AST
+  employment filing as adoption evidence. Original records/IDs/dates stay intact.
+- The brief and company profile use compact progress/risk cards with visible
+  limitations, original publication dates, reviewer identity and a concrete next
+  evidence check. The QS tracker is refreshed; other programs and theme-wide
+  review dates are not silently renewed. This is not a complete sector review.
+- SEC supporting exhibits are optional, same-issuer/same-accession links. They
+  cannot replace the saved candidate's URL/owner/source identity. The source
+  reviewer still must inspect the exhibit and its link from the filing; URL
+  validation does not prove its contents. The collector rechecks provenance
+  against the retained inventory before any output is written.
+- Reviewed SEC documents participate in technology filters through their review
+  context, without promoting issuer-only raw candidates to adoption records.
+- Automated collection continues daily; these judgments are editorial reviews,
+  not automatically regenerated conclusions. Next: recheck revised PowerCo terms,
+  customer qualification/output, and carrier service/usage evidence. Also improve
+  company liquidity presentation so cash-only coverage is not mistaken for total
+  funding runway; no new liquidity figure is inferred in this change.
+
+Source anchors: [QS Q3 10-Q](https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/qs-20260930.htm),
+[QS furnished shareholder letter](https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-ex99_1.htm),
+[T-Mobile Q3 10-Q](https://www.sec.gov/Archives/edgar/data/1283699/000128369926000129/tmus-20260930.htm),
+[AST employment 8-K](https://www.sec.gov/Archives/edgar/data/1780312/000149315226047766/form8-k.htm).
+
+Local browser checks: 1440px light and 375px dark evidence layouts, no horizontal
+overflow or console errors; brief → evidence → tracker → company routes;
+exhibit/next-check/correction fields preserved in the editor without saving a QA
+draft; table, radar and attention-map stock routes work at both widths. Publication
+gate passes with existing source-access and bounded-coverage warnings retained.
+All 474 deterministic tests pass on Node 20 and 24; changed JavaScript syntax
+and whitespace checks pass. CI, release approval and production verification are
+still separate requirements.
+
 ## November 2 · Public R&D discovery activation candidate
 
 Branch implementation; release approval and production verification still needed.

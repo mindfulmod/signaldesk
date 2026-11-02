@@ -4,7 +4,7 @@
   else root.SIGNALDESK_TECH_MODEL = api;
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   const stages = { research: "Research", pilot: "Pilot validation", "early-use": "Early commercial", scaling: "Reported scale" };
-  const kinds = { research: "Research result", pilot: "Pilot / test", rollout: "Available capability", adoption: "Reported adoption", target: "Company target" };
+  const kinds = { research: "Research result", pilot: "Pilot / test", rollout: "Available capability", adoption: "Reported adoption", target: "Company target", risk: "Execution risk" };
   const day = value => Date.parse(`${String(value || "").slice(0, 10)}T00:00:00Z`);
   function isOverdue(date, now = new Date()) { return Number.isFinite(day(date)) && day(now.toISOString()) > day(date); }
   function filterThemes(themes, { query = "", sector = "all", stage = "all", followedOnly = false, followed = [] } = {}) {
@@ -15,12 +15,12 @@
     });
   }
   function evidenceSummary(theme) {
-    const observed = theme.evidence.filter(e => e.kind !== "target");
-    return { observations: observed.length, targets: theme.evidence.length - observed.length, owners: new Set(observed.map(e => e.owner)).size,
+    const observed = theme.evidence.filter(e => !["target", "risk"].includes(e.kind));
+    return { observations: observed.length, targets: theme.evidence.filter(e => e.kind === "target").length, risks: theme.evidence.filter(e => e.kind === "risk").length, owners: new Set(observed.map(e => e.owner)).size,
       latest: observed.map(e => e.publishedAt).filter(Boolean).sort().at(-1) || null };
   }
   function comparableChange(a, b) {
-    if (!a || !b || a.kind === "target" || b.kind === "target") return null;
+    if (!a || !b || ["target", "risk"].includes(a.kind) || ["target", "risk"].includes(b.kind)) return null;
     if (["metric", "unit", "owner", "geography", "definition"].some(k => (a[k] || "") !== (b[k] || ""))) return null;
     if (a.qualifier !== "exact" || b.qualifier !== "exact" || !Number.isFinite(a.value) || !Number.isFinite(b.value) || a.value <= 0 || b.value < 0 || !(day(a.publishedAt) < day(b.publishedAt))) return null;
     return (b.value / a.value - 1) * 100;

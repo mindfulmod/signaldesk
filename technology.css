@@ -85,7 +85,7 @@
 .tech-evidence, .tech-timeline { list-style: none; padding: 0; margin: 0; }
 .tech-evidence li { border-bottom: 1px solid var(--line); padding: 0 0 22px; margin-bottom: 22px; }
 .tech-kind { color: var(--blue); font-size: .67rem; letter-spacing: .035em; }
-.kind-target { color: var(--amber); }
+.kind-target, .kind-risk { color: var(--amber); }
 .tech-evidence h5 { font-size: 1rem; margin: 7px 0; }
 .tech-evidence p { font-size: .79rem; color: var(--muted); line-height: 1.6; margin: 7px 0; }
 .tech-evidence a, .tech-milestone a, .tech-company a { font-size: .77rem; }

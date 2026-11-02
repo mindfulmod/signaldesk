@@ -41,6 +41,13 @@ export async function main(args = process.argv.slice(2)) {
   const state = await collectTechnology(registry, previous, { now, force: args.includes("--force"), retryErrors: args.includes("--retry-errors") });
   const data = publicMonitor(state);
   const { documents, documentIndex, discoveryTruncated } = buildDocumentInventory(registry, state, previousResearch, now, reviews.reviews);
+  // Re-check source identity against the actual retained inventory before writing.
+  // Import validation alone is insufficient after rebases or source reconciliation.
+  for (const review of reviews.reviews) {
+    const problems = reviewModel.validateReview(review, { themeIds: registry.themes.map(t => t.id), knownIds: known, documents, config });
+    if (!documents.some(d => d.id === review.candidateId)) problems.push("Reviewed candidate missing from retained inventory");
+    if (problems.length) throw new Error(`Review provenance failed ${review.id}: ${problems.join("; ")}`);
+  }
   const companies = args.includes("--sources-only") ? previousCompanies : await collectCompanies(config, state, previousCompanies, { now, apiKey: process.env.SIGNALDESK_QUOTE_API_KEY || "" });
   const procurement = await collectProcurement(previousProcurement, { now });
   const research = { schemaVersion: 1, collectionId: randomUUID(), generatedAt: now, sourceCheckedAt: data.generatedAt,

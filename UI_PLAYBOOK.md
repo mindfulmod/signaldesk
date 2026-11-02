@@ -7,6 +7,15 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
+of adoption/operating tracker values and comparable growth; show its separate
+count in the ledger. Reviewed cards show caveats and a next check, not only a
+positive headline. Reviewer attribution is literal; never label all reviews as
+human-authored. `supportingUrl` can only point to an SEC exhibit in the saved
+filing's issuer/accession directory, while `url` retains original provenance.
+Review context participates in queue theme filters without changing raw source
+tags. A review of one company must not refresh an entire theme's review date.
+
 November 2 Public R&D: `procurement-views.js` renders a separate Discover mode
 (`scan=spending`), using `research.procurement` from the coherent research bundle.
 The full immutable journal is `data/procurement-state.json`, not a browser
