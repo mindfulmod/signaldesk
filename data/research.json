@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "8eedb0f3-e5c7-4384-88d6-94cae4f70553",
-  "generatedAt": "2026-11-02T20:45:38.312Z",
+  "collectionId": "cdc9df46-4207-4dc2-a8c1-55edd1dd6ed1",
+  "generatedAt": "2026-11-02T21:01:19.892Z",
   "sourceCheckedAt": "2026-11-02T20:45:38.312Z",
-  "runUrl": null,
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41523480588",
   "documents": [
     {
       "id": "08735cb790b2ae31ac515aaf",
@@ -82249,7 +82249,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-02T20:45:38.312Z",
+    "generatedAt": "2026-11-02T21:01:19.892Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -83687,7 +83687,7 @@
       }
     ],
     "datedDocuments": 711,
-    "comparableDays": 0,
+    "comparableDays": 1,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
