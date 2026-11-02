@@ -26,6 +26,27 @@ test("Atom selects article links instead of the self link; RDF dates are retaine
   const rdf = '<rdf:RDF><item><title>Quantum computing</title><link>https://example.org/article</link><dc:date>2026-10-01</dc:date></item></rdf:RDF>';
   assert.equal(extractFeed(rdf, source).items[0].publishedAt, "2026-10-01");
 });
+test("Atom modification times cannot stand in for publication or make undated content a fresh discovery", () => {
+  const atom = (publication = "", modified = now) => `<feed><entry><title>Quantum error correction</title><link href="https://example.org/article"/>${publication}<updated>${modified}</updated></entry></feed>`;
+  const result = extractFeed(atom(), source);
+  assert.equal(result.items[0].publishedAt, null);
+  assert.equal(result.items[0].sourceModifiedAt, now);
+  const saved = updateSource(source, null, result, now).state;
+  assert.equal(saved.datedItems, 0);
+  assert.equal(saved.newestPublicationAt, null);
+  const documents = buildDocuments({ sources: [source], themes: [] }, { sources: { news: saved } }, {}, now);
+  assert.equal(documents[0].publishedAt, null);
+  assert.equal(documents[0].announcementAt, null);
+  const discovery = discoverTopics(documents, [], {}, now, [source], { news: saved });
+  assert.equal(discovery.candidates.length, 0);
+  assert.equal(discovery.datedDocuments, 0);
+  assert.equal(discovery.healthy, false);
+  const both = extractFeed(atom("<published>2020-01-01</published>"), source).items[0];
+  assert.equal(both.publishedAt, "2020-01-01");
+  assert.equal(both.sourceModifiedAt, now);
+  assert.equal(extractFeed(atom("<published>invalid</published>"), source).items[0].publishedAt, null);
+  assert.equal(extractFeed(atom("", "invalid"), source).items[0].sourceModifiedAt, undefined);
+});
 test("broken feeds fail while a valid feed with no relevant topic is a readable zero", () => {
   for (const input of ["<html>Error</html>", "<rss></rss>", rss('<item><title>Hi</title><link>javascript:alert(1)</link></item>')]) assert.throws(() => extractFeed(input, source));
   assert.equal(extractFeed(rss(item("General research")), { ...source, terms: ["satellite"] }).items.length, 0);
