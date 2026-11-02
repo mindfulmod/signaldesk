@@ -5,10 +5,11 @@ import { buildDocuments, discoverTopics, topicPhrases } from "../lib/research-in
 import { boundedJson } from "../lib/research-fetch.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
 import { verifyPublication } from "../verify-publication.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-10-02T16:00:00.000Z";
 const source = { id: "news", name: "News", owner: "Lab", tier: "research", url: "https://example.org/feed", allowedHosts: ["example.org"], mode: "links", format: "rss", terms: [], themes: [], discovery: true, cadence: "daily" };
-const discoveryState = { status: "ok", sourceUrl: source.url, extractorVersion: 4, lastSuccessAt: now, newestPublicationAt: now, matchedItems: 3, datedItems: 3 };
+const discoveryState = { ...sourceReceipt(source), status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 3, datedItems: 3 };
 const item = (title, url = "/article", date = "2026-10-01") => '<item><title><![CDATA[' + title + ']]></title><link>https://example.org' + url + '</link><description><![CDATA[<p>A measured result &amp; its limitations</p>]]></description><pubDate>' + date + '</pubDate></item>';
 const rss = content => "<rss><channel>" + content + "</channel></rss>";
 const feedResponse = body => new Response(body, { headers: { "content-type": "application/rss+xml" } });
@@ -137,7 +138,7 @@ test("saved discovery leads remain inspectable after leaving the current window"
 });
 test("health gates missing publications, incomplete coverage and stale prices", () => {
   const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { ...companyQuoteFixture("QS", now) } } };
-  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { news: { id: "news", status: "ok", lastSuccessAt: now } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { news: { ...sourceReceipt({ id: "news" }), id: "news", status: "ok", lastSuccessAt: now } } };
   assert.equal(researchHealth(research, monitor, Date.parse(now), { sources: [{ id: "news" }], companies: [{ ticker: "QS" }] }).ok, true);
   assert.equal(researchHealth({ ...research, generatedAt: "2026-09-01" }, monitor, Date.parse(now)).ok, false);
   assert.equal(researchHealth(research, { sources: {} }, Date.parse(now)).ok, false);

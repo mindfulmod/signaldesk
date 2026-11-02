@@ -1065,6 +1065,30 @@ does not authorize implementation, collection changes or deployment.
 
 ## Update cadence and operating limits
 
+### Source-contract rollout prerequisite (November 2, not yet deployed)
+
+The source-contract branch closes a reproduced same-URL cache defect: changing
+keywords could keep the old filtered items after a 304 response while renewing
+their successful-check time. Collection receipts now bind filtering, extraction,
+allowlisted hosts, enrichment, metadata-only handling and provenance settings.
+Unchanged contracts still use conditional requests; changed settings require a
+new response and a no-alert baseline. Failed migration keeps the old records and
+timestamps, without certifying them under the new contract. Discovery comparisons
+restart under the new contract while old daily receipts remain in legacy history.
+
+Release order matters: merge the AST access pause (#15) first, reconcile this
+branch with current main, then obtain deployment approval and run one ordinary
+research collection. Do not force paused sources or fabricate receipts in saved
+files. Existing bundles have no new receipts, so the stricter health gate will
+intentionally report them unconfirmed until collection succeeds. Verify candidate
+health, immutable review links, Pages publication and the public health check
+before considering this migration deployed. The queue repair (#12) is also
+recommended before scheduling this release. Coordinate the feed-date repair
+(#13) with the shared extractor version; parser changes must invalidate existing
+receipts. No scheduled collection or generated snapshot was changed. A bounded,
+in-memory BMW feed check produced one dated, metadata-only item, a matching new
+contract and no false new-link events; the original saved state stayed untouched.
+
 | Data | Cadence | Limit |
 | --- | --- | --- |
 | Source inventory | Daily, seven days; later retries for failed checks | Readable does not mean newly published or true |

@@ -9,13 +9,14 @@ import { communityItem, communityLink, fetchCommunity } from "../lib/research-co
 import { buildDocumentInventory, discoverTopics, topicPhrases } from "../lib/research-intelligence.mjs";
 import { collectTechnology, extractFeed, calendarDay } from "../lib/technology-monitor.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-10-11T02:00:00Z";
 const hn = config.sources.find(s => s.id === "hn-discovery");
 const lab = { id: "lab", owner: "Lab", name: "Lab feed", tier: "research", url: "https://example.org/feed", mode: "links", format: "rss", themes: [], terms: [], discovery: true, intervalHours: 24 };
 const row = (id, extra = {}) => ({ id, type: "story", title: "New technical work", time: Date.parse("2026-10-10T12:00:00Z") / 1000, score: 42, descendants: 8, url: "https://example.org/story", ...extra });
 const json = value => new Response(JSON.stringify(value), { headers: { "content-type": "application/json" } });
-const state = sources => Object.fromEntries(sources.map(s => [s.id, { id: s.id, sourceUrl: s.url, extractorVersion: 4, status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 10, datedItems: 10 }]));
+const state = sources => Object.fromEntries(sources.map(s => [s.id, { ...sourceReceipt(s), id: s.id, status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 10, datedItems: 10 }]));
 const historyDay = offset => { const date = new Date(Date.parse(calendarDay(now)) - offset * 86400000).toISOString().slice(0, 10); return { date, topics: [], sourceChecks: [{ id: lab.id, checkedAt: `${date}T12:00:00Z` }] }; };
 const doc = (id, title, source = lab, extra = {}) => ({ id, title, owner: source.owner, tier: source.tier, sourceId: source.id, discovery: true, themes: [], url: `https://example.org/${id}`, publishedAt: "2026-10-10", detectedAt: now, ...extra });
 
@@ -80,7 +81,7 @@ test("partial community failures cannot masquerade as complete coverage", async 
 });
 test("engagement changes update the existing record without creating a revision", () => {
   const item = communityItem(row(42), 42, now), registry = { sources: [hn], themes: [] };
-  const snapshot = { sources: { [hn.id]: { status: "ok", lastSuccessAt: now, baselineAt: now, items: [item] } } };
+  const snapshot = { sources: { [hn.id]: { ...sourceReceipt(hn), status: "ok", lastSuccessAt: now, baselineAt: now, items: [item] } } };
   const first = buildDocumentInventory(registry, snapshot, {}, now);
   snapshot.sources[hn.id].items[0].engagement.points = 99;
   const second = buildDocumentInventory(registry, snapshot, first, now);
@@ -114,7 +115,7 @@ test("an interrupted monitoring window never yields a growth rate", () => {
 });
 test("retention gaps remain flagged after unchanged records are evicted", () => {
   const registry = { sources: [lab], themes: [] };
-  const snapshot = { sources: { lab: { status: "ok", lastSuccessAt: now, items: Array.from({ length: 4001 }, (_, i) => ({ title: `Quantum sensor ${i}`, url: `https://example.org/${i}`, publishedAt: "2026-10-10" })) } } };
+  const snapshot = { sources: { lab: { ...sourceReceipt(lab), status: "ok", lastSuccessAt: now, items: Array.from({ length: 4001 }, (_, i) => ({ title: `Quantum sensor ${i}`, url: `https://example.org/${i}`, publishedAt: "2026-10-10" })) } } };
   const current = buildDocumentInventory(registry, snapshot, {}, now);
   assert.equal(current.documents.length, 4001, "fresh adapter output is protected");
   const unavailable = { sources: { lab: { ...snapshot.sources.lab, status: "error" } } };

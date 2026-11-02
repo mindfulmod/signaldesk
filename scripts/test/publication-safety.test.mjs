@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { PUBLICATIONS, publicationFiles, parseBundle, validatePublication } from "../lib/publication-safety.mjs";
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
 import { publicProcurement } from "../lib/procurement-discovery.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const at = "2026-11-02T16:00:00.000Z", now = Date.parse(at);
 const scope = { sources: [{ id: "lab" }], companies: [{ ticker: "TEST" }] };
@@ -16,7 +17,7 @@ function fixture(kind) {
   } : {
     research: { schemaVersion: 1, generatedAt: at, sourceCheckedAt: at, documents: [], reviews: [],
       coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", at), factsCheckedAt: at } } },
-    "technology-monitor": { schemaVersion: 1, generatedAt: at, events: [], sources: { lab: { id: "lab", status: "ok", lastSuccessAt: at } } },
+    "technology-monitor": { schemaVersion: 1, generatedAt: at, events: [], sources: { lab: { ...sourceReceipt(scope.sources[0]), id: "lab", status: "ok", lastSuccessAt: at } } },
   };
   const files = {};
   if (kind === "research") {

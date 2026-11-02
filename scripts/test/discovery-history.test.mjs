@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import { discoveryHistory, recordDiscoveryDay } from "../lib/discovery-history.mjs";
 import { discoverTopics } from "../lib/research-intelligence.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
-const sources = ["lab", "community"].map(id => ({ id, url: `https://example.org/${id}`, owner: id, format: "rss", tier: id === "lab" ? "research" : "community", mode: "links", quietAfterDays: 7 }));
-const states = checkedAt => Object.fromEntries(sources.map(s => [s.id, { status: "ok", sourceUrl: s.url, extractorVersion: 4, lastSuccessAt: checkedAt, newestPublicationAt: checkedAt, matchedItems: 5, datedItems: 5 }]));
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
+const sources = ["lab", "community"].map(id => ({ id, url: `https://example.org/${id}`, owner: id, format: "rss", tier: id === "lab" ? "research" : "community", mode: "links", quietAfterDays: 7, discovery: true }));
+const states = checkedAt => Object.fromEntries(sources.map(s => [s.id, { ...sourceReceipt(s), status: "ok", lastSuccessAt: checkedAt, newestPublicationAt: checkedAt, matchedItems: 5, datedItems: 5 }]));
 const now = "2026-10-14T12:00:00Z";
 const start = (checks = states(now), previous = {}, time = now, scope = sources) => discoveryHistory(scope, checks, previous, time);
 const save = audit => ({ ...audit, history: recordDiscoveryDay(audit, ["topic"], 10) });
@@ -51,8 +52,8 @@ test("history contract includes publisher, lane, extractor and sample-health pol
     const result = start(states(now), first, now, [{ ...sources[0], ...patch }, sources[1]]);
     assert.notEqual(result.coverageKey, first.coverageKey); assert.equal(result.completeHistory, false);
   }
-  const checks = states(now); checks.lab.extractorVersion = 5;
-  assert.notEqual(start(checks, first).coverageKey, first.coverageKey);
+  const checks = states(now); checks.lab.extractorVersion++;
+  assert.equal(start(checks, first).healthy, false, "a mismatched collector cannot mint a receipt under the expected protocol");
 });
 test("future, invalid, conflicting duplicate days and extra source receipts cannot count", () => {
   const first = save(start()), row = first.history[0];

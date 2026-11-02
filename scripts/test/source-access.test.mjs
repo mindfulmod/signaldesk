@@ -5,6 +5,7 @@ import registry from "../../technology-registry.js";
 import model from "../../research-model.js";
 import { collectTechnology, fetchSource, extractFeed } from "../lib/technology-monitor.mjs";
 import { buildDocumentInventory } from "../lib/research-intelligence.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-11-02T18:50:00.000Z", before = "2026-11-02T13:49:21.571Z";
 const ast = config.sources.find(s => s.id === "ast-investor");
@@ -50,7 +51,7 @@ test("forced collection preserves historical source receipts and events without 
 
 test("paused configuration blocks new documents even if an older monitor still says ok", () => {
   const active = { ...ast }; delete active.accessStatus;
-  const state = { sources: { [ast.id]: { status: "ok", lastSuccessAt: before, baselineAt: before,
+  const state = { sources: { [ast.id]: { ...sourceReceipt(active), status: "ok", lastSuccessAt: before, baselineAt: before,
     items: [{ url: "https://investors.ast-science.com/historical", title: "Historical satellite test" }] } } };
   const seed = buildDocumentInventory({ ...registry, sources: [active] }, state, {}, before);
   assert.equal(seed.documents.length, 1);

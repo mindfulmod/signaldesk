@@ -21,7 +21,7 @@ export function researchHealth(research, monitor, now = Date.now(), scope = conf
   const audit = model.sourceAudit(scope.sources, monitor, now);
   const current = audit.rows.filter(row => row.readable).map(row => row.state);
   if (!active.length || states.length !== expected || current.length < Math.ceil(active.length * .8)) errors.push(`Only ${current.length}/${active.length} active sources passed a check in the last 36 hours (target: at least 80%)`);
-  for (const s of states.filter(s => activeIds.has(s.id) && !current.includes(s))) warnings.push(`${s.id}: ${s.error || "Source check overdue"}`);
+  for (const row of audit.rows.filter(row => row.issue === "collection")) warnings.push(`${row.source.id}: ${row.state.error || row.label}; ${row.next}`);
   for (const s of scope.sources.filter(s => !activeIds.has(s.id))) warnings.push(`${s.id}: intentionally paused pending permission review; retained records are historical`);
   for (const row of audit.rows.filter(row => row.issue === "content" && !row.source.discovery)) warnings.push(`${row.source.id}: ${row.label.toLowerCase()}; ${row.next}`);
   const discovery = active.filter(s => s.discovery), discoveryCurrent = discovery.filter(s => current.some(row => row.id === s.id));

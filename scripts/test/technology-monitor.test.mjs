@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 import { canonicalUrl, extractSource, updateSource, collectTechnology, fetchSource, publicMonitor, textOnly } from "../lib/technology-monitor.mjs";
 
 const source = { id: "test", url: "https://research.example/news", allowedHosts: ["research.example"], themes: ["battery"], owner: "Test company", name: "Test page", mode: "links", terms: ["battery"], intervalHours: 24 };
@@ -74,7 +75,7 @@ test("one unavailable source does not stop the other checks or erase existing ev
 });
 test("304 conditional fetches preserve baseline and validate redirect hosts", async () => {
   let headers;
-  const result = await fetchSource(source, { fingerprint: "x", etag: '"test"' }, { fetchImpl: async (_, options) => { headers = options.headers; return new Response(null, { status: 304 }); } });
+  const result = await fetchSource(source, { ...sourceReceipt(source), fingerprint: "x", etag: '"test"' }, { fetchImpl: async (_, options) => { headers = options.headers; return new Response(null, { status: 304 }); } });
   assert.equal(result.notModified, true); assert.equal(headers["If-None-Match"], '"test"');
   let calls = 0;
   await assert.rejects(fetchSource(source, {}, { fetchImpl: async () => { calls++; return new Response(null, { status: 302, headers: { Location: "http://127.0.0.1/private" } }); } }), /allowlisted/);

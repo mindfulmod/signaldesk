@@ -6,6 +6,7 @@ import registry from "../../technology-registry.js";
 import { aggregate, registerStock, isCompanyMatch } from "../update-data.mjs";
 import { computeCoMention, isoWeekKey } from "../lib/co-mention.mjs";
 import { buildDocumentInventory } from "../lib/research-intelligence.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 import { upsertRow, mergeBackfillRows } from "../lib/ledger.mjs";
 
 const now = "2026-10-16T12:00:00.000Z";
@@ -79,7 +80,7 @@ test("Hank: revised URL evidence uses its observation week, preserving original 
 
 const source = { id: "bmw", owner: "BMW", mode: "links", themes: ["solid-state-batteries"], discovery: true };
 const scope = { sources: [source], themes: registry.themes };
-const state = (title, extra = {}) => ({ sources: { bmw: { status: "ok", lastSuccessAt: now, items: [{ title, url: "https://example.org/story", publishedAt: "2026-10-15", ...extra }] } } });
+const state = (title, extra = {}) => ({ sources: { bmw: { ...sourceReceipt(source), status: "ok", lastSuccessAt: now, items: [{ title, url: "https://example.org/story", publishedAt: "2026-10-15", ...extra }] } } });
 test("Hank: BMW Gen6 is related context, not direct solid-state evidence; AI glasses is discoverable", () => {
   const title = "BMW Group starts Gen6 high-voltage battery series production";
   const first = buildDocumentInventory(scope, state(title), {}, now);

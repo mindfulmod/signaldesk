@@ -137,7 +137,7 @@
     if (spending) return root.SIGNALDESK_PROCUREMENT_VIEWS.render(research?.procurement, query, { lane, limit, toolbar: `<div class="intel-discovery-toolbar">${modes}<label>Action type<select id="discoveryLane">${[["all", "All actions"], ["increase", "Commitment increases"], ["decrease", "Commitment reductions"], ["no-change", "No dollar change"]].map(([id, label]) => `<option value="${id}"${lane === id ? " selected" : ""}>${label}</option>`).join("")}</select></label></div>` });
     const q = query.toLowerCase().trim(), feeds = cfg.sources.filter(s => s.discovery);
     const sources = feeds.map(s => {
-      const state = monitor?.sources?.[s.id], fresh = state?.status === "ok" && model.freshness(state.lastSuccessAt, Date.now(), 36) === "current";
+      const state = monitor?.sources?.[s.id], fresh = state?.status === "ok" && model.sourceCompatible(s, state) && model.freshness(state.lastSuccessAt, Date.now(), 36) === "current";
       const quiet = s.quietAfterDays && model.freshness(state?.newestPublicationAt, Date.now(), s.quietAfterDays * 24) !== "current";
       return { ...s, state, fresh, quiet };
     });

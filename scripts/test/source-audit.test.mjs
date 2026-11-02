@@ -5,11 +5,12 @@ import vm from "node:vm";
 import model from "../../research-model.js";
 import config from "../../research-config.js";
 import { researchHealth } from "../lib/research-health.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = Date.parse("2026-10-14T02:00:00Z");
 const source = { id: "test", name: "Test source", mode: "links", url: "https://example.org/feed", intervalHours: 24, freshnessHours: 36, expectedCadence: "Irregular" };
 const state = { status: "ok", sourceUrl: source.url, lastSuccessAt: new Date(now).toISOString(), lastAttemptAt: new Date(now).toISOString(), matchedItems: 3, newestPublicationAt: "2026-10-01" };
-const audit = (patch = {}, sourcePatch = {}) => model.sourceAudit([{ ...source, ...sourcePatch }], { sources: { test: { ...state, ...patch } } }, now);
+const audit = (patch = {}, sourcePatch = {}) => model.sourceAudit([{ ...source, ...sourcePatch }], { sources: { test: { ...state, ...sourceReceipt({ ...source, ...sourcePatch }), ...patch } } }, now);
 const context = { window: { SIGNALDESK_RESEARCH_MODEL: model, SIGNALDESK_RESEARCH_CONFIG: config }, URL, Date, Intl };
 vm.runInNewContext(readFileSync(new URL("../../research-views.js", import.meta.url), "utf8"), context);
 const views = context.window.SIGNALDESK_RESEARCH_VIEWS;
@@ -48,7 +49,7 @@ test("empty and missing monitor states remain unknown, not healthy zero samples"
 
 test("source triage sorts collection problems first and keeps all sources exactly once", () => {
   const sources = [source, { ...source, id: "failed", name: "Failed" }, { ...source, id: "paused" }, { ...source, id: "ok" }];
-  const result = model.sourceAudit(sources, { sources: { test: { ...state, matchedItems: 0 }, failed: { ...state, status: "error" }, paused: { ...state, status: "paused" }, ok: state } }, now);
+  const result = model.sourceAudit(sources, { sources: { test: { ...state, ...sourceReceipt(sources[0]), matchedItems: 0 }, failed: { ...state, ...sourceReceipt(sources[1]), status: "error" }, paused: { ...state, status: "paused" }, ok: { ...state, ...sourceReceipt(sources[3]) } } }, now);
   assert.equal(result.groups.attention[0].source.id, "failed");
   assert.equal(result.active, 3); assert.equal(result.readable, 2);
   assert.equal(Object.values(result.groups).flat().length, 4);
@@ -77,7 +78,7 @@ test("health disclosure persists on rerender and stays reachable under empty the
 test("scheduled watchdog shares source identity checks and warns on non-discovery content gaps", () => {
   const scope = { sources: [source], companies: [{ ticker: "TEST" }] };
   const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: state.lastSuccessAt, generatedAt: state.lastSuccessAt, coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", state.lastSuccessAt), factsCheckedAt: state.lastSuccessAt } } };
-  const monitor = { schemaVersion: 1, events: [], generatedAt: state.lastSuccessAt, sources: { test: { ...state, id: "test", matchedItems: 0 } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: state.lastSuccessAt, sources: { test: { ...state, ...sourceReceipt(source), id: "test", matchedItems: 0 } } };
   const result = researchHealth(research, monitor, now, scope);
   assert.equal(result.ok, true); assert.equal(result.contentChecks, 1);
   assert.match(result.warnings.join("\n"), /No matching|no matching/);

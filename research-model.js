@@ -18,6 +18,18 @@
   }
   function ageHours(value, now = Date.now()) { const time = date(value); return time === null ? null : (Number(now) - time) / 3600000; }
   function freshness(value, now = Date.now(), hours = 36) { const age = ageHours(value, now); return age === null ? "missing" : age < -.1 ? "invalid" : age > hours ? "overdue" : "current"; }
+  // Invalidate filtered caches when extraction/provenance settings change.
+  const SOURCE_EXTRACTOR_VERSION = 5;
+  function sourceContract(source) {
+    const set = values => [...new Set(values || [])].sort();
+    return JSON.stringify([1, SOURCE_EXTRACTOR_VERSION, source.id, source.url, source.format || "html", source.mode || "links",
+      set(source.allowedHosts), set((source.terms || []).map(term => term.toLowerCase())), source.linkPattern || null,
+      source.cik || null, Boolean(source.enrichArticles), Boolean(source.metadataOnly), source.owner || null,
+      source.name || null, set(source.themes), source.tier || null, Boolean(source.discovery)]);
+  }
+  function sourceCompatible(source, state) {
+    return state?.extractorVersion === SOURCE_EXTRACTOR_VERSION && state.sourceUrl === source.url && state.sourceContract === sourceContract(source);
+  }
   function companyQuote(row, ticker, now = Date.now()) {
     const q = row?.quote;
     if (!q) return { state: "missing", usable: false, current: false, reason: "No saved quote. Check the original quote source." };
@@ -40,14 +52,14 @@
     const rows = sources.map(source => {
       const state = monitor?.sources?.[source.id] || {};
       const paused = source.accessStatus === "permission-required" || state.status === "paused";
-      const compatible = !state.sourceUrl || state.sourceUrl === source.url;
+      const compatible = sourceCompatible(source, state);
       const checked = freshness(state.lastSuccessAt, now, source.freshnessHours || source.intervalHours * 2 || 36);
       const readable = !paused && compatible && state.status === "ok" && checked === "current";
       const publication = freshness(state.newestPublicationAt, now, source.quietAfterDays ? source.quietAfterDays * 24 : Infinity);
       let issue = "", label = "Readable", next = "Inspect the original before accepting a claim; collection does not verify adoption.";
       if (paused) { issue = "paused"; label = "Paused"; next = "Resolve access permission or choose an authorized replacement. Retained records are historical."; }
-      else if (!compatible) { issue = "collection"; label = "Source changed"; next = "Collect the configured endpoint before using its previous check as current coverage."; }
       else if (state.status === "error") { issue = "collection"; label = "Check failed"; next = /403|401/.test(state.error || "") ? "Review source access or use another authorized source. Do not bypass the refusal." : "Wait for the scheduled retry; use dated original evidence in the meantime."; }
+      else if (!compatible && state.lastSuccessAt) { issue = "collection"; label = state.sourceContract ? "Source settings changed" : "Collection contract unconfirmed"; next = "A successful collection with the current source settings is required. Retained evidence keeps its original dates; reload does not run collection."; }
       else if (!readable) { issue = "collection"; label = checked === "overdue" ? "Check overdue" : "Check unconfirmed"; next = "Inspect the scheduled collection. Reload only retrieves the saved snapshot."; }
       else if (source.mode === "links" && state.matchedItems === 0) { issue = "content"; label = "No matching items"; next = "Inspect the feed and keyword filter. An empty sample is not proof that development stopped."; }
       else if (source.mode === "links" && (!Number.isInteger(state.matchedItems) || state.matchedItems < 0)) { issue = "content"; label = "Sample count unknown"; next = "Check the extraction contract before interpreting this source's coverage."; }
@@ -56,7 +68,7 @@
       return { source, state, readable, issue, label, next };
     });
     const groups = { attention: rows.filter(r => r.issue && r.issue !== "paused"), readable: rows.filter(r => !r.issue), paused: rows.filter(r => r.issue === "paused") };
-    groups.attention.sort((a, b) => Number(b.issue === "collection") - Number(a.issue === "collection") || a.source.name.localeCompare(b.source.name));
+    groups.attention.sort((a, b) => Number(b.issue === "collection") - Number(a.issue === "collection") || String(a.source.name || a.source.id).localeCompare(String(b.source.name || b.source.id)));
     return { rows, groups, active: rows.length - groups.paused.length, readable: rows.filter(r => r.readable).length,
       collectionIssues: rows.filter(r => r.issue === "collection").length, contentIssues: rows.filter(r => r.issue === "content").length };
   }
@@ -169,5 +181,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, supportingSource, ageHours, freshness, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, fundingContext, financialDisplay, buildBrief };
+  return { safeUrl, supportingSource, ageHours, freshness, SOURCE_EXTRACTOR_VERSION, sourceContract, sourceCompatible, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, fundingContext, financialDisplay, buildBrief };
 });
