@@ -112,11 +112,13 @@
     const copy = legacy ? { label: "Legacy match · unverified", className: "other" } : TYPE_COPY[entry.type] || { label: entry.type, className: "other" };
     const when = relativeTime(entry.date);
     const subject = entry.ticker || entry.theme || "";
+    // Old archived copy is not evidence for an investment-performance claim.
+    const message = String(entry.message || "").replace(/Released coils have historically won[^]*$/, "Historical performance claim withheld: not independently validated.");
     return `
       <div class="whatchanged-row" data-type="${escapeHtml(copy.className)}">
         <span class="wc-badge wc-${escapeHtml(copy.className)}">${escapeHtml(copy.label)}</span>
         <div class="wc-body">
-          <p class="wc-message">${subject ? `<strong>${escapeHtml(subject)}</strong> — ` : ""}${escapeHtml(legacy ? entry.message.replace(/proof quarter:/g, "legacy headline match:") : entry.message)}</p>
+          <p class="wc-message">${subject ? `<strong>${escapeHtml(subject)}</strong> — ` : ""}${escapeHtml(legacy ? message.replace(/proof quarter:/g, "legacy headline match:") : message)}</p>
           <p class="wc-meta">${when}</p>
         </div>
       </div>`;

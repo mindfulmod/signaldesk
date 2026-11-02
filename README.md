@@ -41,10 +41,26 @@ stock attention. Technology keeps the `#research` URL for compatibility, with
 older theme machinery inside a collapsed **Market research tools** section.
 New visitors start on Technology; explicit stock links still open the Desk.
 
-Technology includes five curated categories, 22 source contracts and eight
+Technology includes five curated categories, 24 source contracts and eight
 permanently covered companies. Source changes are unverified review candidates,
 not automatically confirmed facts. Follows, dismissals and review drafts are
 browser-local, not push alerts.
+
+**Discover** has two lanes: extracted headline patterns and an **Open scan** of
+unmapped stories with no technology-keyword gate. Five broad feeds (NSF, MIT
+research, Nature, NIST and the official Hacker News API) are sampled daily.
+Community votes are attention, never adoption; reporting owners are not
+automatically independent confirmations. Coverage details expose collection
+dates, content dates, source limitations and gaps. See the October 10 discovery
+pass in [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md) for the operating contract.
+
+Saved discoveries can become **personal investigations**: define a hypothesis,
+one scoped adoption metric and a review checkpoint, then record dated source-backed
+observations. Targets and lower bounds stay labeled; corrections retain withdrawn
+records. Investigations are browser-local and manually entered—not automatically
+collected or published. Export/import backups move them between browsers without
+silently overwriting conflicting versions. Up to 25 investigations and 40 records
+per investigation are supported.
 
 Panel status below is as of **2026-08-29** and is meant to be kept honest. A
 panel with nothing in it says what it is waiting for rather than rendering a
@@ -99,6 +115,24 @@ with daily source checks and six-hour retry opportunities. Prices are attempted
 twice daily; SEC financial facts refresh weekly or on a new filing. Claims still
 require human review. A separate public-site watchdog checks freshness twice
 a day. GitHub scheduling is best-effort, not guaranteed delivery.
+
+The public watchdog also checks market coverage independently of research.
+`node scripts/check-market-health.mjs --live` measures quotes actually collected
+in the snapshot separately from carried-forward prices and usable comparisons.
+Operational targets: at least 50 tickers and recent collected quotes for 75% of
+the universe; warn after 36 hours, fail after 96 hours (weekend tolerance, not a
+live-feed guarantee). Degraded data remains visible with warnings, but the job
+fails after publication rather than reporting a healthy collection. These checks
+do not certify provider licensing, market completeness or investment quality.
+
+Company/news matching is shared between collection and display. Generic aliases
+such as a country name and partial ticker matches are rejected. Unsupported
+saved headlines remain inspectable as quarantined evidence; affected source
+totals are excluded rather than guessed from an incomplete article archive.
+These are lexical checks, not proof that an article caused a market move.
+The published health check also fails when highlighted headlines or market-news
+rows lack that company match, even if quote coverage passes. Quarantined records
+remain warnings, not promoted evidence; malformed news payloads fail explicitly.
 
 The workflow at `.github/workflows/refresh-data.yml` runs on weekdays at 9:17 AM, 12:17 PM, 3:17 PM, and 5:17 PM in America/Toronto.
 

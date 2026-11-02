@@ -12,6 +12,20 @@ const views = context.window.SIGNALDESK_RESEARCH_VIEWS;
 const state = { compare: [], batteryStage: "all", country: "all", serviceStatus: "all" };
 const snapshot = () => ({ generatedAt: new Date().toISOString(), documents: [], reviews: [], companies: {}, coverage: { readableSources: 0 } });
 
+test("discovery keeps guidance available without competing with leads and preserves coverage warnings", () => {
+  const html = views.discovery(snapshot(), "", [], false);
+  assert.match(html, /<details class="intel-discovery-help" data-disclosure="discovery-guide">/);
+  assert.match(html, /aria-label="From attention to adoption"/);
+  assert.match(html, /choose Investigate to define a measurable test/);
+  assert.match(html, /not automatic monitoring/);
+  assert.match(html, /Discovery coverage needs attention/);
+  assert.match(html, /Coverage &amp; collection method/);
+  const source = readFileSync(new URL("../../adoption.js", import.meta.url), "utf8");
+  assert.match(source, /if \(view === "discovery" && !notebookEditing\) \{/);
+  assert.match(source, /discoveryLimit = origin.limit; byId\("techSearch"\).value = origin.query/);
+  assert.match(source, /if \(!closeNotebookEditor\(\)\) return;/);
+});
+
 test("brief art is decorative, dimensioned, labeled as conceptual and locally served", () => {
   const html = views.brief(registry.themes, snapshot(), null, [], "ready");
   for (const name of ["battery-cell", "satellite-phone"]) {

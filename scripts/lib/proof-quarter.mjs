@@ -125,7 +125,8 @@ export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEd
 
   // Legacy matches lacked a publication-date check and used generic move
   // words. Keep the historical alerts, but do not use them to expand coverage.
-  const activeLeaders = (prevLeaders.leaders || []).filter((l) => l.evidenceVersion === 2 && !isExpired(l, dateStr));
+  const activeLeaders = (prevLeaders.leaders || []).filter((l) => l.evidenceVersion === 2 && !isExpired(l, dateStr))
+    .map(leader => ({ ...leader, coMentionNeighbors: topNeighbors(coMentionEdges, leader.ticker, MAX_CO_MENTION_NEIGHBORS) }));
   const activeTickers = new Set(activeLeaders.map((l) => l.ticker));
   const newLeaders = [];
 
@@ -182,7 +183,7 @@ export function computeProofQuarters({ events, ledger, gicsByTicker, coMentionEd
 
   return {
     leadersPayload: { generatedAt: new Date().toISOString(), leaders },
-    hotMonitorPayload: { generatedAt: new Date().toISOString(), evidenceVersion: 2, tickers: hotMonitorTickers },
+    hotMonitorPayload: { generatedAt: new Date().toISOString(), evidenceVersion: 3, tickers: hotMonitorTickers },
     newLeaders,
   };
 }

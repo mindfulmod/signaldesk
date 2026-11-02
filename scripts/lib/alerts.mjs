@@ -69,7 +69,7 @@ export function detectSpringEvents(prevSpringStates, currentSprings, hotThemeTic
         type: "release",
         priority: "high",
         ticker: spring.ticker,
-        message: `${spring.ticker} released: closed above its 60-day high on a volume surge (coiled ${spring.regimeStart} to ${spring.regimeEnd}). Released coils have historically won 65% of the time, +12.6% median at 12mo -- a base rate, not a guarantee.`,
+        message: `${spring.ticker} released: closed above its 60-day high on a volume surge (coiled ${spring.regimeStart} to ${spring.regimeEnd}). This is a research signal, not a validated return forecast.`,
       });
     } else if (spring.state === "coiled" && hotThemeTickers.has(spring.ticker)) {
       events.push({

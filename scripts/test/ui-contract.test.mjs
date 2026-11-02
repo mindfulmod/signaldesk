@@ -11,7 +11,7 @@ const source = await readFile(new URL("../../script.js", import.meta.url), "utf8
 // the network-backed browser app or introducing a DOM runtime dependency.
 function presentationHelpers() {
   const context = vm.createContext({ Intl, Date, window: { SIGNALDESK_QUALITY: quality }, shortFmt: new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }) });
-  for (const name of ["formatPrice", "capTierFor", "capLabelFor", "formatShortDateTime", "escapeHtml", "formatQuoteCell", "rankBadge", "matchesStockQuery"]) {
+  for (const name of ["formatPrice", "capTierName", "capValueText", "capLabelFor", "formatShortDateTime", "escapeHtml", "formatQuoteCell", "rankBadge", "matchesStockQuery"]) {
     const start = source.indexOf(`function ${name}(`);
     assert.ok(start >= 0, `${name} must exist`);
     const end = source.indexOf("\nfunction ", start + 1);
@@ -26,7 +26,7 @@ test("compact quotes retain stale and undated warnings without throwing", () => 
   assert.match(formatQuoteCell({ lastPrice: 10, quoteAsOf: "invalid" }), /Undated/);
   assert.match(formatQuoteCell({ lastPrice: 10, quoteAsOf: "2020-01-01T12:00:00Z" }), /Stale quote/);
   const fresh = formatQuoteCell({ lastPrice: 10, quoteAsOf: new Date().toISOString(), quoteSource: "Public chart", marketCap: 4_100_000, capTier: "small" });
-  assert.match(fresh, /\$4\.1M cap/);
+  assert.doesNotMatch(fresh, /\$4\.1M cap/, "unattributed legacy estimates must not appear as verified caps");
   assert.match(fresh, /title="Public chart/);
   assert.doesNotMatch(fresh, /Stale quote/);
 });

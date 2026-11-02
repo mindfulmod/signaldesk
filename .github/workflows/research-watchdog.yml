@@ -1,4 +1,4 @@
-name: Research freshness watchdog
+name: Published data health watchdog
 on:
   schedule:
     - cron: "11 10,22 * * *"
@@ -17,3 +17,6 @@ jobs:
           node-version: "20"
       - name: Check actual published data, independently of collection success
         run: node scripts/check-research-health.mjs --live
+      - name: Check published market quote coverage even if research is degraded
+        if: ${{ !cancelled() }}
+        run: node scripts/check-market-health.mjs --live

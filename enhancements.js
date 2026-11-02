@@ -212,9 +212,10 @@
   // price move (the pipeline already filtered to news + a notable move and ranked by
   // impact). The frontend just reads, cleans, and renders it.
   function marketNewsFeed(limit) {
-    const data = typeof window !== "undefined" ? window.SIGNALDESK_DATA : null;
+    const data = typeof snapshot !== "undefined" && snapshot?.signals ? snapshot : window.SIGNALDESK_DATA;
     const feed = Array.isArray(data?.marketNews) ? data.marketNews : [];
     const published = feed
+      .filter(entry => window.SIGNALDESK_QUALITY.articleMatches(entry, entry))
       .filter((entry) => entry && entry.marketMetricsVersion === 2 && entry.title && !isClassActionSpam(entry.title) && Number.isFinite(entry.priceMove))
       .filter(entry => window.SIGNALDESK_QUALITY.usableNews(entry) && window.SIGNALDESK_QUALITY.quoteState(entry.quoteAsOf ? entry : (data.signals || []).find(item => item.ticker === entry.ticker)) === "current")
       .slice(0, limit)
@@ -235,12 +236,12 @@
     // Older snapshots predate the standalone marketNews field. Derive the same
     // evidence-first view client-side so a deploy remains useful until the next
     // scheduled updater run publishes the new field.
-    const items = typeof filteredSignals === "function" ? filteredSignals() : [];
+    const items = data?.signals ? window.SIGNALDESK_QUALITY.aggregateSignals([data]) : [];
     return items
       .filter((item) => marketEvidenceCurrent(item) && Number.isFinite(Number(item.priceMove)) && Math.abs(Number(item.priceMove)) >= 1.5)
       .map((item) => {
         const stories = (item.latest || [])
-          .filter((entry) => NEWS_SOURCES.includes(entry.source) && window.SIGNALDESK_QUALITY.usableNews(entry) && !isClassActionSpam(entry.title))
+          .filter((entry) => NEWS_SOURCES.includes(entry.source) && window.SIGNALDESK_QUALITY.articleMatches(entry, item) && window.SIGNALDESK_QUALITY.usableNews(entry) && !isClassActionSpam(entry.title))
           .sort((a, b) => new Date(b.published || 0) - new Date(a.published || 0));
         return { item, stories };
       })

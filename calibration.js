@@ -70,6 +70,12 @@
   function renderCalibration() {
     const container = document.getElementById("calibrationSummary");
     if (!container) return;
+    // Legacy grades include carried-forward observations and cannot be certified
+    // by a fresh generatedAt. Keep raw records inspectable, not investment stats.
+    if (calibrationData?.validation?.status !== "verified") {
+      container.innerHTML = `<p class="calibration-empty">Performance estimates withheld. The historical event and price observations have not completed a reproducible validation. Missing prices and legacy grades must not look like zero returns. <a href="data/calibration-log.json">Inspect the original event log</a>.</p>`;
+      return;
+    }
     const summary = calibrationData?.summary || {};
     const keys = Object.keys(summary);
     if (!keys.length) {

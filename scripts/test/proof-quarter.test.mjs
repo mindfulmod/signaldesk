@@ -65,3 +65,13 @@ test("stale quotes cannot trigger; legacy leaders no longer expand coverage", ()
   assert.equal(result.leadersPayload.leaders.length, 0);
   assert.deepEqual(result.hotMonitorPayload.tickers, {});
 });
+
+test("retained leaders cannot carry unverified legacy co-mention neighbors forward", () => {
+  const input = fixture();
+  const prior = computeProofQuarters(input).leadersPayload;
+  prior.leaders[0].coMentionNeighbors = ["FAKE"];
+  const result = computeProofQuarters({ ...input, prevLeaders: prior, coMentionEdges: new Map() });
+  assert.deepEqual(result.leadersPayload.leaders[0].coMentionNeighbors, []);
+  assert.equal(result.hotMonitorPayload.tickers.FAKE, undefined);
+  assert.ok(result.hotMonitorPayload.tickers.AMD);
+});

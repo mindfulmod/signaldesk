@@ -136,6 +136,20 @@ Purpose: surface candidate themes **before** the wave, from language and proof e
   have zero social chatter).
 
 ### 0c. Co-mention graph
+
+October 14 implementation correction: version 3 rechecks issuer identity against
+retained original headlines on every run. Pair-only version 2 documents are
+preserved in `legacyDocuments` but excluded. A pair must share the same headline
+and source observation, not merely a URL reused for different text. Each URL
+contributes at most once per pair. Community cards include document counts and
+original links; one article can create a group and is explicitly a single-document
+lead. Different URLs can still syndicate one announcement, so document count is
+not independent-owner count, adoption traction, or a calibrated prediction.
+Proof-quarter leaders recalculate neighbors from this checked graph each run;
+hot-monitor version 3 prevents legacy neighbor lists from expanding coverage.
+Bare symbols are insufficient in this graph: company names, cashtags or
+exchange-qualified symbols are required. This deliberately favors fewer false
+connections over exhaustive ticker recall (TV/SNES/forum-SMG regression).
 - Weekly job over the trailing 90d of events: nodes = tickers, edge weight = co-appearances.
 - Signals: (i) a new dense cluster forming (community detection — greedy modularity is enough at
   this scale) = theme crystallizing; (ii) the neighbor set of a leader changing (who is news

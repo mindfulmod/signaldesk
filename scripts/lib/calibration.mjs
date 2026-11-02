@@ -253,5 +253,6 @@ export function aggregateCalibration(log) {
   const horizonLabels = Object.keys(GRADING_HORIZONS);
   const pending = log.entries.filter((e) => !horizonLabels.every((label) => Number.isFinite(e.graded[label]))).length;
 
-  return { generatedAt: new Date().toISOString(), totalEvents: log.entries.length, pending, summary };
+  return { generatedAt: new Date().toISOString(), totalEvents: log.entries.length, pending, summary,
+    validation: { status: "unverified", reason: "Historical event/baseline/target observations lack a complete reproducible integrity audit. Raw grades are diagnostic only, not validated investment-performance estimates." } };
 }

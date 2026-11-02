@@ -8,6 +8,7 @@ import {
   computeModularity,
   topNeighbors,
   CO_MENTION_TRAILING_WEEKS,
+  computeCoMention,
 } from "../lib/co-mention.mjs";
 
 test("extractCoMentionPairs: two tickers sharing a headline produce a pair; excluded sources and singles do not", () => {
@@ -18,7 +19,7 @@ test("extractCoMentionPairs: two tickers sharing a headline produce a pair; excl
     { ticker: "SOFI", url: "https://finance.yahoo.com/quote/SOFI", source: "Price/Volume" },
     { ticker: "AMD", url: "https://finance.yahoo.com/quote/SOFI", source: "Price/Volume" }, // excluded source
   ];
-  const pairs = extractCoMentionPairs(events);
+  const pairs = extractCoMentionPairs(events.map(event => ({ ...event, title: "$NVDA $AMD $AAPL $SOFI" })));
   assert.equal(pairs.size, 1);
   assert.equal(pairs.get("AMD|NVDA"), 1);
 });
@@ -29,7 +30,7 @@ test("extractCoMentionPairs: three co-mentioned tickers produce all three pairs"
     { ticker: "AMD", url: "u1", source: "Reddit Finance" },
     { ticker: "AVGO", url: "u1", source: "Reddit Finance" },
   ];
-  const pairs = extractCoMentionPairs(events);
+  const pairs = extractCoMentionPairs(events.map(event => ({ ...event, url: "https://example.com/1", title: "$NVDA $AMD $AVGO" })));
   assert.equal(pairs.size, 3);
   assert.equal(pairs.get("AMD|AVGO"), 1);
   assert.equal(pairs.get("AMD|NVDA"), 1);
@@ -45,7 +46,7 @@ test("extractCoMentionPairs: excludes noise tickers that are also common English
     { ticker: "IT", url: "u1", source: "GDELT News" },
     { ticker: "ALL", url: "u1", source: "GDELT News" },
   ];
-  const pairs = extractCoMentionPairs(events);
+  const pairs = extractCoMentionPairs(events.map(event => ({ ...event, url: "https://example.com/1", title: "$NVDA $IT $ALL" })));
   assert.equal(pairs.size, 0, "no pairs should form when the only co-mentioned tickers are noise words");
 });
 
@@ -104,4 +105,49 @@ test("topNeighbors: ranks by edge weight, respects the limit", () => {
     ["NVDA|MU", 2],
   ]);
   assert.deepEqual(topNeighbors(edges, "NVDA", 2), ["AVGO", "AMD"]);
+});
+
+const headline = (tickers, title = tickers.map(t => `$${t}`).join(" "), url = "https://example.com/story") => tickers.map(ticker => ({ ticker, title, url, source: "CNBC", published: "2026-10-13T12:00:00Z" }));
+
+test("identity is rechecked and different headlines at one URL never fabricate a pair", () => {
+  assert.equal(extractCoMentionPairs([...headline(["NVDA"], "$NVDA earnings"), ...headline(["AMD"], "$AMD earnings")]).size, 0);
+  assert.equal(extractCoMentionPairs(headline(["NVDA", "AMD"], "$NVDA earnings")).size, 0);
+  assert.equal(extractCoMentionPairs(headline(["NVDA", "AMD"], "$NVDA $AMD", "https://user:secret@example.com")).size, 0);
+  assert.equal(extractCoMentionPairs(headline(["NVDA", "AMD"], "$NVDA $AMD", "javascript:alert(1)")).size, 0);
+  const events = headline(["NVDA", "AMD"]);
+  assert.equal(extractCoMentionPairs([...events, ...events.map(event => ({ ...event, source: "Financial Media" }))]).get("AMD|NVDA"), 1);
+});
+
+test("v2 pairs remain auditable but cannot contribute or seed neighbor drift", () => {
+  const legacy = { version: 2, weeks: { "2026-W42": { "FAKE|NVDA": 20 } }, documents: { old: { week: "2026-W42", pairs: { "FAKE|NVDA": 20 } } }, legacyWeeks: { "2026-W01": { "BAD|OLD": 4 } } };
+  const { nextHistory, payload } = computeCoMention(legacy, headline(["NVDA", "AMD"]), "2026-10-14", ["NVDA"]);
+  assert.equal(nextHistory.version, 3);
+  assert.deepEqual(nextHistory.legacyDocuments, legacy.documents);
+  assert.deepEqual(nextHistory.legacyWeeks, legacy.legacyWeeks);
+  assert.deepEqual(payload.leaderNeighbors.NVDA, ["AMD"]);
+  assert.equal(payload.withheldLegacyDocuments, 1);
+  assert.equal(payload.integrityVersion, 3);
+  const replay = computeCoMention(nextHistory, [], "2026-10-15");
+  assert.deepEqual(replay.nextHistory.weeks, nextHistory.weeks);
+  const record = Object.values(nextHistory.documents)[0];
+  record.observations[0].title = "No company identities remain";
+  assert.equal(computeCoMention(nextHistory, [], "2026-10-15").payload.graphEdges, 0);
+});
+
+test("communities expose real document counts and originals, with no repeated-support claim", () => {
+  const events = [...headline(["NVDA", "AMD", "AVGO"]), ...headline(["AAPL", "MSFT", "META"], "$AAPL $MSFT $META", "https://example.com/other")];
+  const { payload, nextHistory } = computeCoMention({ weeks: {} }, events, "2026-10-14");
+  assert.equal(payload.communities.length, 2);
+  assert.equal(payload.communities[0].documentCount, 1);
+  assert.equal(payload.communities[0].evidence.length, 1);
+  assert.ok(payload.communities[0].evidence[0].title);
+  assert.equal(computeCoMention(nextHistory, [], "2027-02-01").payload.graphEdges, 0);
+});
+
+test("forum names, TV and console acronyms cannot masquerade as issuers", () => {
+  assert.equal(extractCoMentionPairs(headline(["SMG", "TV", "SNES"], "/SMG/ stock market general — Financial TV Streams — SNES Edition")).size, 0);
+  const events = headline(["NVDA", "AMD"], "NVDA and AMD: Nvidia and Advanced Micro Devices announce products");
+  events[0].name = "Nvidia Corp";
+  events[1].name = "Advanced Micro Devices";
+  assert.equal(extractCoMentionPairs(events).get("AMD|NVDA"), 1, "full company evidence still works when bare symbols are also present");
 });
