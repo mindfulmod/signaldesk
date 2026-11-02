@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.svg?v=20260925-2" type="image/svg+xml" sizes="any" />
     <link rel="stylesheet" href="styles.css?v=20261002-3" />
     <link rel="stylesheet" href="tabs.css?v=20261002-2" />
-    <link rel="stylesheet" href="desk-cleanup.css?v=20261009-2" />
+    <link rel="stylesheet" href="desk-cleanup.css?v=20261102-1" />
     <link rel="stylesheet" href="technology.css?v=20261102-1" />
     <link rel="stylesheet" href="research.css?v=20261102-3" />
     <link rel="stylesheet" href="appearance.css?v=20261002-2" />
@@ -333,6 +333,10 @@
               </div>
             </div>
             <p id="boardGuide" class="board-guide">Choose a stock to see the evidence and your next research steps.</p>
+            <div class="stock-history-status">
+              <p id="stockHistoryMessage" class="coverage-status" role="status" tabindex="-1">Stock history loads when you open the Desk.</p>
+              <button id="retryStockHistory" class="appbar-btn" type="button">Load history</button>
+            </div>
             <div id="boardCoverage" class="board-coverage" role="status" hidden></div>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Discovery stock list" aria-describedby="boardGuide">
               <table aria-label="Stocks ranked for research">
@@ -435,8 +439,9 @@
     <script src="discovery-notebook-views.js?v=20261014-1"></script>
     <script src="procurement-views.js?v=20261102-1"></script>
     <script src="research-views.js?v=20261102-3"></script>
-  <script src="script.js?v=20261014-2"></script>
-  <script src="enhancements.js?v=20261013-1"></script>
+    <script src="stock-history-loader.js?v=20261102-1"></script>
+  <script src="script.js?v=20261102-4"></script>
+  <script src="enhancements.js?v=20261102-1"></script>
     <script src="notebook-confirm.js?v=20261102-1"></script>
     <script src="adoption.js?v=20261102-3"></script>
     <script src="springs.js?v=20261009-1"></script>
@@ -447,6 +452,6 @@
     <script src="alerts.js?v=20261102-1"></script>
     <script src="layout-fix.js?v=20261013-1"></script>
     <script src="declutter.js?v=20260925-1"></script>
-    <script src="tabs.js?v=20261002-1"></script>
+    <script src="tabs.js?v=20261102-1"></script>
   </body>
 </html>
