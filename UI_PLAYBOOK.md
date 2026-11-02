@@ -7,6 +7,20 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 follow-up: `notebook-confirm.js` owns a single pending discard choice
+in the native `#notebookDiscardDialog`, outside the rerendered workspace. Keep
+editing is the default; Escape/close cancel and restore the initiating control.
+All notebook-replacing routes share the gate; same-plan resume retains edits.
+Repeated requests must never inherit another action's consent. Missing modal
+support fails closed. Browser-unload and session-only storage protection remain.
+Do not put an animation delay between confirmation and navigation.
+
+Calibration estimates are withheld unless the snapshot explicitly declares
+completed validation. Current collector output is `validation.status: unverified`:
+legacy zero grades and fresh assembly dates do not certify historical price
+integrity. Archived alerts retain their raw original messages, but the UI removes
+the unsupported 65% / 12.6% claim; new alerts must not generate it either.
+
 October 16 Hank residuals: company descriptions require profile protocol 3 plus
 an exact normalized article-title match at display time. Do not trust the old
 version-2 badge or a matching sentence prefix. Current SEC issuer/CIK identity

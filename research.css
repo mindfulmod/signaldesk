@@ -355,3 +355,13 @@
   .intel-source-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .intel-focus-card { transition: none; } }
+
+/* Immediate, keyboard-safe draft confirmation; no motion delays the choice. */
+.intel-confirm { width: min(440px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); box-sizing: border-box; padding: 24px; border: 1px solid var(--line-2); border-radius: 16px; background: var(--panel); color: var(--ink); box-shadow: var(--shadow); }
+.intel-confirm::backdrop { background: var(--backdrop); }
+.intel-confirm h2 { margin: 0 0 12px; font-size: 1.25rem; }
+.intel-confirm p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.intel-confirm-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.intel-confirm-actions button { flex: 1; min-height: 44px; }
+.intel-confirm-discard { color: var(--down); border-color: var(--danger-line); }
+.intel-confirm button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

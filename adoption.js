@@ -9,6 +9,7 @@
   const root = document.querySelector(".technology-panel"), content = document.getElementById("techContent");
   if (!data || !model || !root || !content) return;
   const byId = id => document.getElementById(id);
+  const notebookConfirmation = window.SIGNALDESK_NOTEBOOK_CONFIRM?.create(byId("notebookDiscardDialog"));
   const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const link = (url, label) => model.safeUrl(url) ? `<a href="${esc(model.safeUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>` : `<span>${esc(label)} · link unavailable</span>`;
   const followKey = "signaldesk-adoption-followed-v1", dismissedKey = "signaldesk-tech-dismissed-v1";
@@ -158,7 +159,6 @@
   }
   function notebookNotice(message) { const notice = byId("notebookNotice"); if (notice) { notice.textContent = message; notice.tabIndex = -1; notice.focus({ preventScroll: true }); } }
   function closeNotebookEditor() {
-    if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return false;
     notebookEditing = null; notebookFields = null; observationFields = null; notebookDirty = false; notebookReturn = null; return true;
   }
   function exportNotebook() {
@@ -291,12 +291,18 @@
     byId("adoptionFollowStatus").textContent = "Review draft saved locally. Export it for repository review; no public evidence was changed.";
     root.querySelector("[data-export-reviews]")?.focus();
   });
-  root.addEventListener("click", event => {
+  root.addEventListener("click", async event => {
     const button = event.target.closest("button"); if (!button) return;
+    if (notebookConfirmation?.pending) return;
+    const replacesNotebook = (button.dataset.notebookOpen && notebookEditing?.id !== button.dataset.notebookOpen)
+      || ["data-notebook-shelf", "data-notebook-back", "data-notebook-series", "data-open-discovery-scan"].some(name => button.hasAttribute(name));
+    if (notebookDirty && replacesNotebook) {
+      if (!notebookConfirmation) { notebookNotice("Save your edits before leaving; the confirmation control could not load."); return; }
+      if (!await notebookConfirmation.request(button)) return;
+    }
     if (button.dataset.notebookOpen) {
       // Returning from the brief to the same investigation resumes pending edits.
       if (notebookEditing?.id === button.dataset.notebookOpen) { view = "discovery"; selectedId = null; selectedCompany = null; reviewingId = null; setUrl(); render(); if (notebookFields) byId("notebookPlanForm").closest("details").open = true; if (observationFields) byId("notebookObservationForm").closest("details").open = true; byId("notebookTitle")?.focus(); content.scrollIntoView({ block: "start" }); return; }
-      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
       const plan = notebookPlans.find(p => p.id === button.dataset.notebookOpen) || notebookModel.seed(button.dataset.notebookOpen, research);
       if (!plan) { byId("adoptionFollowStatus").textContent = "The original source record is no longer available. Open a retained source to start an investigation."; return; }
       notebookReturn = view === "discovery" && !notebookEditing ? { mode: discoveryMode, savedOnly: discoverySavedOnly, lane: discoveryLane, limit: discoveryLimit, query: byId("techSearch").value, id: button.dataset.notebookOpen } : null;
@@ -314,7 +320,6 @@
     }
     if (button.hasAttribute("data-notebook-export")) { exportNotebook(); return; }
     if (button.hasAttribute("data-notebook-series")) {
-      if (notebookDirty && !window.confirm("Discard unsaved investigation edits? Saved research will be kept.")) return;
       const now = new Date().toISOString(); notebookEditing = { ...notebookEditing, id: `investigation-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, metric: "", unit: "", scope: "", observations: [], createdAt: now, updatedAt: now }; notebookFields = null; observationFields = null; notebookDirty = false; render(); const form = byId("notebookPlanForm"); form.closest("details").open = true; form.elements.metric.focus(); return;
     }
     if (button.dataset.notebookWithdraw) {

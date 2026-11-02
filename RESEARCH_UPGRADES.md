@@ -1,5 +1,44 @@
 # Research intelligence work plan
 
+## November 2 · Hank follow-up and release reconciliation
+
+Implemented on the release branch; deployment verification is a separate gate:
+
+- Reconciled main `8869545` with the repaired branch by data identity, preserving
+  all 94 input market dates, ticker/date ledger rows, and 1,428 research versions.
+  Conflicting same-session measurements are never added or averaged. The merge
+  parents retain the original observations; the normal subsequent collector's
+  documented retention/pruning still applies. `scripts/reconcile-branch-data.mjs`
+  provides an offline, audited path for future generated-data conflicts.
+- Fixed the sector parser's shifted columns (company names were treated as
+  sectors). Header-based parsing and whole-baseline validation produce 503
+  classifications. Failures retain the original success date, never fake a fresh
+  check; malformed legacy caches cannot feed current theme membership.
+- Refreshed both collection pipelines. Local market health passes: 73/75 recent
+  collected quotes and complete price/volume comparisons, 2 stale quotes, no
+  highlighted issuer mismatches or unsupported displayed capitalization. All
+  75 records use the corrected attention protocol; no comparable percentage
+  history exists yet. There are 95 daily market snapshots after collection.
+- Research health passes: 20/22 active sources readable, all 5 discovery feeds
+  current, 8/8 retained company quotes usable. QS returns 403, BMW redirects
+  outside its allowlist; both remain visible failures. Two T-Mobile collectors
+  stay permission-paused. Undated/empty content warnings remain. Source refresh
+  is not proof of customer adoption or uninterrupted future access.
+- Replaced the browser's blocking draft confirmation with an accessible in-app
+  dialog. Keep editing, Escape and Discard were verified at 1440px light and
+  375px dark; cancellation preserves entered text and restores the trigger,
+  discard restores the discovery list and origin action. Table, radar and map
+  stock selection passed; no horizontal overflow or console warnings/errors.
+- Closed an additional H15 residual: archived and newly generated release alerts
+  no longer present unsupported win-rate claims. Legacy calibration estimates
+  are withheld rather than showing an unvalidated 0% win / 0% median. Raw logs
+  remain intact and inspectable; the generated summary is explicitly unverified.
+  This is honest quarantine, not a completed historical repair or model audit.
+
+Release acceptance still requires successful CI, hosted asset/data checks and a
+scheduled collection under the new contracts. No paid data provider or paused
+source has been activated. Investment-performance validation remains open.
+
 ## October 14 publication-pair release gate
 
 Branch implementation, not deployed:
