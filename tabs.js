@@ -241,6 +241,7 @@
 
     // Panels that lay out from measured widths were hidden until now.
     window.dispatchEvent(new Event("resize"));
+    if (tab.id === "desk") window.SIGNALDESK_LOAD_HISTORY?.();
   }
 
   function start() {
@@ -251,6 +252,9 @@
       if (missing && attempts++ < 40) setTimeout(tick, 200);
     };
     tick();
+    document.querySelector(".market-research-tools")?.addEventListener("toggle", event => {
+      if (event.currentTarget.open) window.SIGNALDESK_LOAD_HISTORY?.();
+    });
     try {
       select(readInitialTab());
     } catch (error) {

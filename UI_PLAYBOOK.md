@@ -31,6 +31,18 @@ search input; cancellation restores the trigger and selection focuses the
 destination. Tab wraps within the dialog, arrow keys move among results and
 composition input is not hijacked. This frequent action has no motion delay.
 
+November 2 deferred stock history: `stock-history-loader.js` owns a single bounded
+archive download. `script.js` initializes the latest snapshot without waiting for
+history; `tabs.js` requests history on Desk entry or expansion of Market research
+tools. Full-history preferences take effect only after an archive is loaded.
+Loading/error states must leave the latest snapshot usable and must not
+claim insufficient historical evidence. Keep `#stockHistoryMessage` and its retry
+control outside replaced table/detail contents. Failed reloads retain the old
+archive; delayed responses must not overwrite a completed retry. Preserve focus,
+search, filters, disclosures and stock selection when history arrives. Technology
+editors must never be rebuilt by this stock-only update. File mode reuses its
+already loaded bundle; HTTP must not download the JavaScript archive twin.
+
 November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
 of adoption/operating tracker values and comparable growth; show its separate
 count in the ledger. Reviewed cards show caveats and a next check, not only a
