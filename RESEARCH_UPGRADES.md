@@ -1,5 +1,31 @@
 # Research intelligence work plan
 
+## November 2 · BMW newsroom migration
+
+The old `https://www.press.bmwgroup.com/global` now returns a 301 to
+`https://newsroom.bmwgroup.com/global/`. Its article URLs have also changed from
+`/article/detail/…` to named paths, so extending the redirect allowlist alone
+would not repair collection. The new [official latest-news page](https://newsroom.bmwgroup.com/global/?h=1&match=1&t=focus_news)
+links a [Focus News RSS feed](https://newsroom.bmwgroup.com/global/tagfeed/en/tags/focus_news).
+
+The replacement contract uses that feed with the existing battery-related filter,
+only the exact newsroom host, and metadata-only storage. A bounded adapter probe
+read 14 safe entries and matched one battery story with an original publication
+timestamp. The generic HTML landing-page probe returned 503; the linked RSS
+request succeeded with the ordinary identified collector and no challenge bypass.
+
+This is selected Focus News coverage, not a complete BMW archive. The October 15
+Gen6 production story remains associated battery context, not direct solid-state
+evidence. Migration is a baseline, not a fresh breakthrough event. Historical
+document IDs/dates and reviewed links remain intact; the new URL is not asserted
+to be independent corroboration of the old story.
+
+Regressions cover the RSS date and metadata contract, term filtering, baseline
+migration, historical document retention, Gen6 topic handling, and rejection of
+unrelated redirect hosts/access failures. Existing source cadence and bounded
+requests are unchanged. Production refresh must verify the new contract after
+the repair's reviewed deployment.
+
 ## November 2 · Pre-publication safety follow-up
 
 The first automated post-merge research and market runs succeeded, including
