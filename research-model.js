@@ -136,18 +136,26 @@
       ...r, display: r.claim, publisher: r.owner, checkedAt: r.reviewedAt.slice(0, 10), editorialReview: true,
     }))] }));
   }
-  function financialContext(company) {
-    const f = company?.financials || {}, cash = f.cash, flow = f.operatingCashFlow;
-    let runwayMonths = null;
-    const duration = flow?.start && flow?.end ? (date(flow.end) - date(flow.start)) / 86400000 + 1 : 0;
-    if (!cash?.stale && !flow?.stale && Number.isFinite(cash?.value) && Number.isFinite(flow?.value) && cash.value >= 0 && flow.value < 0 && cash.unit === flow.unit && cash.end === flow.end && duration >= 80 && duration <= 400) runwayMonths = cash.value / -flow.value * duration / 30.4375;
-    return { runwayMonths, runwayCaveat: "Cash and equivalents only, divided by historical operating burn. Excludes marketable securities, other liquidity, capital expenditure, financing and future changes. This is not the company's total cash runway or a forecast." };
+  const investmentKeys = ["marketableSecuritiesCurrent", "marketableSecuritiesNoncurrent", "shortTermInvestments"];
+  function fundingContext(company) {
+    const f = company?.financials || {};
+    const reported = company?.factsVersion === 4 ? investmentKeys.filter(key => f[key]) : [];
+    const balanceDate = f.cash?.end || reported.map(key => f[key].end).filter(Boolean).sort().at(-1);
+    const current = reported.filter(key => !f[key].stale && f[key].end === balanceDate);
+    const historical = reported.filter(key => !current.includes(key));
+    return { investmentKeys: current, historicalInvestmentKeys: historical,
+      coverage: company?.factsVersion !== 4 ? "Investment coverage has not been collected under the current protocol. Cash is not total liquidity."
+        : current.length ? `Reported investment lines are shown separately. Categories can overlap; amounts are not summed.${historical.length ? " Older balances stay in history below." : ""}`
+        : historical.length ? "Only older investment observations are retained. Current holdings are not established; missing coverage is not zero."
+        : "No supported investment line was found in the collected taxonomy. This does not mean investment holdings are zero.",
+      caveat: "No runway forecast is calculated. Securities may have restrictions or valuation risk. Operating cash flow excludes capital expenditure and financing; past spending is not a forecast.",
+      nextCheck: "Check investment maturities and restrictions, debt repayments, planned capital spending and financing commitments in the latest filing." };
   }
   function financialDisplay(company) {
-    if (company?.factsVersion === 3) return company;
-    const filter = rows => Object.fromEntries(Object.entries(rows || {}).filter(([key]) => !["revenue", "shares"].includes(key)));
+    if (company?.factsVersion === 4) return company;
+    const filter = rows => Object.fromEntries(Object.entries(rows || {}).filter(([key]) => ![...investmentKeys, ...(company?.factsVersion === 3 ? [] : ["revenue", "shares"])].includes(key)));
     return { ...company, financials: filter(company?.financials), histories: filter(company?.histories),
-      factsError: [company?.factsError, "Legacy revenue/share selection withheld pending context-aware refresh"].filter(Boolean).join("; ") };
+      factsError: [company?.factsError, company?.factsVersion === 3 ? "" : "Legacy revenue/share selection withheld pending context-aware refresh"].filter(Boolean).join("; ") };
   }
   function buildBrief({ themes = [], research, monitor, followed = [], now = Date.now() }) {
     const followedIds = new Set(followed);
@@ -161,5 +169,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, supportingSource, ageHours, freshness, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
+  return { safeUrl, supportingSource, ageHours, freshness, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, fundingContext, financialDisplay, buildBrief };
 });

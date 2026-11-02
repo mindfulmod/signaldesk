@@ -124,9 +124,58 @@ whitespace checks pass. Both updated verifier commands also succeeded against
 the current live primary snapshots from main `84bf452`; this establishes their
 current content identity, not deployment of this new verifier. No data was changed.
 
+## November 2 · Company funding evidence candidate
+
+Separate branch implementation following the deployed progress/risk update;
+not deployed.
+This replaces the old cash-only months-of-burn presentation with a funding and
+spending view; no total-liquidity or runway forecast is calculated.
+
+- Financial protocol 4 collects `MarketableSecuritiesCurrent`,
+  `MarketableSecuritiesNoncurrent` and `ShortTermInvestments` as separate lines.
+  Generic marketable-security, restricted-cash and cash-plus-investment totals
+  are not aliases. Do not double-count overlapping lines or imply all investments
+  are immediately available. Preserve units, original balance dates, accessions,
+  accounting tags and conflicts. Invalid investment dates, duration contexts,
+  negative balances and malformed accessions are rejected; reported zero is valid.
+- Current funding cards use investment dates matching the cash balance and exclude
+  stale observations. Older periods remain in a clearly labeled disclosure, not
+  in the main funding figures. Missing taxonomy coverage remains unknown.
+- Cash, investment balances, operating cash flow and capital spending are visible
+  together. Accounting details, shares and debt use expandable sections to reduce
+  reading load. These supported debt tags are not a complete debt reconciliation.
+- Facts become eligible after 24 hours or on a new filing (previously weekly),
+  with at least six hours between failed retries and a 200ms SEC pacing interval.
+  Failures retain prior values and successful dates. Existing scheduled research
+  jobs provide the opportunities; this is not a promise of new daily filings.
+  Source-health warnings now flag financial checks after 36 hours.
+- Bounded live refresh at 2026-11-02T17:50:22.638Z succeeded for all eight companies.
+  QS has $75.599M cash and $744.184M current marketable securities at September 30;
+  those are separate reported lines, not a generated total. Actual data comparison
+  found no changed pre-existing financial values or lost historical observations.
+  Very old T-Mobile and AST investment entries stay historical.
+- Verification: 480 tests passed on Node 20 and 24; the real seven-file research
+  publication preflight passed. Browser checks at 1440px light and 375px dark
+  covered source disclosures, separate dated balances, historical investments,
+  and stock selection through the table, research radar and attention map.
+  No horizontal overflow or console errors in the checked views. No test review,
+  investigation or watchlist entry was saved. File-mode parity is tested, but
+  browser file:// testing remains policy-blocked and is not claimed.
+
+Source contract: [SEC Company Facts API documentation](https://www.sec.gov/search-filings/edgar-application-programming-interfaces).
+The API omits custom concepts and may not establish a complete funding picture.
+Cash/investment classification, restrictions, debt maturities, customer economics,
+capitalization coverage and a validated performance record still need work.
+
 ## November 2 · Counterevidence and filing review candidate
 
-Branch implementation, stacked on the Public R&D candidate; not deployed.
+Merged as #10 after #9 with user approval on November 2. Post-merge checks and
+Pages deployment passed. Live Public R&D and progress/risk views were verified.
+The initially queued research runs were cancelled by the shared writer queue.
+User-dispatched run 41497506484 passed collection, both publication gates,
+publication (84bf452), public research/monitor verification and the live health
+check at 18:08 UTC. Coverage was 21/22 active research sources, 5/5 discovery
+sources and 8/8 quotes; two intentionally paused sources and content gaps remain.
 
 - Add an explicit `risk` evidence kind. Execution setbacks remain visible in the
   ledger and program context but do not inflate observation/target counts,
@@ -968,8 +1017,9 @@ unreviewed inventory. Initial backfills are labeled as such, not breaking news.
    Story momentum requires 28 collected days with unchanged, healthy coverage.
 8. **Economics:** SEC facts and history with native units, periods, accounting
    tags and filing provenance; company exposure, dilution research and risks.
-   Cash-only burn coverage excludes securities/other liquidity and is not total
-   runway. No ADR or share-class assumptions fabricate market capitalization.
+   Cash-only burn coverage was replaced in the November 2 funding candidate with
+   separately dated cash/investment/spending evidence and no runway forecast.
+   No ADR or share-class assumptions fabricate market capitalization.
 9. **Daily brief:** unreviewed changes, published reviews, next checkpoints,
    collection gaps and direct links to the two priority trackers. Follows
    personalize it. Light/dark/system and the existing Desk remain.

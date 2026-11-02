@@ -10,6 +10,9 @@ function checkedQuote(quote, ticker, now) {
 }
 const METRICS = {
   cash: ["CashAndCashEquivalentsAtCarryingValue", "CashAndCashEquivalents"],
+  marketableSecuritiesCurrent: ["MarketableSecuritiesCurrent"],
+  marketableSecuritiesNoncurrent: ["MarketableSecuritiesNoncurrent"],
+  shortTermInvestments: ["ShortTermInvestments"],
   revenue: ["RevenueFromContractWithCustomerIncludingAssessedTax", "RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "Revenue", "SalesRevenueNet"],
   operatingCashFlow: ["NetCashProvidedByUsedInOperatingActivities", "CashFlowsFromUsedInOperatingActivities"],
   capex: ["PaymentsToAcquirePropertyPlantAndEquipment", "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities"],
@@ -18,6 +21,8 @@ const METRICS = {
   debtCurrent: ["LongTermDebtCurrent"],
   debtNoncurrent: ["LongTermDebtNoncurrent"],
 };
+const INVESTMENTS = new Set(["marketableSecuritiesCurrent", "marketableSecuritiesNoncurrent", "shortTermInvestments"]);
+const validDay = value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 // Narrow, filing-backed context adjudications. Never extrapolate to other
 // accessions, periods, tags or values. All other conflicts remain unknown.
 export function verifiedFactContext(company, point) {
@@ -40,7 +45,7 @@ export function financialFacts(data, company, now = new Date().toISOString()) {
       const facts = [data.facts["us-gaap"]?.[tag], data.facts["ifrs-full"]?.[tag], data.facts.dei?.[tag]].filter(Boolean);
       const points = facts.flatMap(fact => Object.entries(fact.units || {}).flatMap(([unit, values]) => values.map(v => ({ ...v, unit, tag }))));
       const valid = points.filter(p => Number.isFinite(p.val) && p.end && p.filed && p.end <= day(now) && p.filed <= day(now) && /^(10-K|10-Q|20-F|6-K)(\/A)?$/.test(p.form) && /^[\d-]+$/.test(p.accn || "") && (metric === "shares" ? p.unit === "shares" : /^[A-Z]{3}$/.test(p.unit)));
-      chosen.push(...valid.filter(p => metric === "shares" || !company.reportingCurrency || p.unit === company.reportingCurrency));
+      chosen.push(...valid.filter(p => (metric === "shares" || !company.reportingCurrency || p.unit === company.reportingCurrency) && (!INVESTMENTS.has(metric) || (!p.start && p.val >= 0 && validDay(p.end) && validDay(p.filed) && p.filed >= p.end && /^\d{10}-\d{2}-\d{6}$/.test(p.accn)))));
     }
     chosen.sort((a, b) => b.end.localeCompare(a.end) || b.filed.localeCompare(a.filed) || (b.start || "").localeCompare(a.start || "") || tags.indexOf(a.tag) - tags.indexOf(b.tag));
     const groups = new Map();
@@ -85,14 +90,16 @@ export async function collectCompanies(config, monitor, previous = {}, { now = n
     const row = { ...prior, ticker: c.ticker, name: c.name, cik: c.cik, themes: c.themes, financials: prior.financials || {}, histories: prior.histories || {} };
     const filing = monitor.sources?.[`sec-${c.ticker.toLowerCase()}`]?.items?.[0];
     row.latestFiling = filing || prior.latestFiling || null;
-    if (prior.factsVersion !== 3 || age(prior.factsCheckedAt) >= (prior.factsError ? 6 : 168) || (filing && filing.accession !== prior.factsAccession)) {
+    const factsDue = prior.factsVersion !== 4 || age(prior.factsCheckedAt) >= 24 || (filing && filing.accession !== prior.factsAccession);
+    if (factsDue && (!prior.factsError || age(prior.factsAttemptAt) >= 6)) {
       row.factsAttemptAt = now;
       try {
         const facts = await boundedJson(`https://data.sec.gov/api/xbrl/companyfacts/CIK${c.cik}.json`, { fetchImpl, headers: SEC_HEADERS });
         const parsed = financialFacts(facts, c, now);
         if (!Object.keys(parsed.financials).length) throw new Error("No supported financial facts in filing taxonomy");
-        Object.assign(row, parsed, { factsVersion: 3, factsCheckedAt: now, factsAccession: filing?.accession || null, factsError: null });
+        Object.assign(row, parsed, { factsVersion: 4, factsCheckedAt: now, factsAccession: filing?.accession || null, factsError: null });
       } catch (e) { row.factsError = `Financial facts: ${e.message}`; errors.push(`${c.ticker}: ${row.factsError}`); }
+      await sleep(200); // Bound SEC request cadence even when quotes are cached.
     }
     // Two quote opportunities a day. Never replace a valid quote with null on failure.
     if (age(prior.quoteAttemptAt) >= 12 || !prior.quote) {
