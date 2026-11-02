@@ -28,8 +28,11 @@ export function extractFeed(xml, source) {
     if (!url || !title) continue;
     usableEntries++;
     if (!relevant(`${title} ${excerpt}`, source)) continue;
-    const publishedAt = timestamp(textOnly(xmlText(block, "pubDate") || xmlText(block, "published") || xmlText(block, "dc:date") || xmlText(block, "updated")));
-    items.set(url, { url, title, excerpt: source.metadataOnly ? "" : excerpt, publishedAt });
+    // Atom updated is a modification timestamp, not first publication (RFC 4287).
+    // An updated-only entry stays undated for discovery/publication comparisons.
+    const publishedAt = timestamp(textOnly(xmlText(block, "pubDate") || xmlText(block, "published") || xmlText(block, "dc:date")));
+    const sourceModifiedAt = timestamp(textOnly(xmlText(block, "updated")));
+    items.set(url, { url, title, excerpt: source.metadataOnly ? "" : excerpt, publishedAt, ...(sourceModifiedAt ? { sourceModifiedAt } : {}) });
   }
   if (!usableEntries) throw new Error("Feed has no safe article URLs; collection contract needs review");
   return inventory([...items.values()].slice(0, 100), source.name, { extractedEntries: usableEntries });

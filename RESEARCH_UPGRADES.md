@@ -64,6 +64,32 @@ sources, three paused sources and AST's original check dates/permission note.
 Table, radar and attention-map stock selection pass at both widths with no console
 errors. The PR has no dependency on the separately pending research-finder UI.
 
+## November 2 · Feed date semantics audit candidate
+
+Separate parser safeguard; not deployed. `extractFeed` previously fell back from
+publication fields to Atom `updated`, which RFC 4287 defines as a modification
+time. It now leaves publication unknown when only `updated` exists and retains
+the timestamp separately as `sourceModifiedAt` in the source item. This field is
+not an adoption metric, a publication date or a new-document event. Original
+publication fields continue to control discovery date windows and dated counts.
+
+Bounded read-only probes on November 2: BMW 1/1, Meta 2/2, Microsoft 5/5, NSF
+15/15, MIT 50/50, Nature 75/75 and NIST 40/40 matched items had publication dates.
+These seven responses were RSS/RDF, not Atom. FCC returned nine undated entries
+with zero satellite-term matches; keep its dates unknown. These are bounded
+samples, not complete archives or independent validation of publisher metadata.
+The probes did not write generated data or advance published source-check times.
+
+Tests cover updated-only content through extraction, source health counts,
+document construction and discovery exclusion, plus distinct published/updated
+dates and malformed dates. All 475 tests pass on Node 24. Existing historical
+records are unchanged: this does not certify earlier date provenance or repair
+an unobserved historical Atom response. Before enabling an Atom discovery source,
+its publication-date contract and retained-history migration must be reviewed.
+No source is activated or otherwise expanded by this patch.
+
+Reference: [Atom published and updated semantics, RFC 4287](https://www.rfc-editor.org/rfc/rfc4287).
+
 ## November 2 · Counterevidence and filing review candidate
 
 Branch implementation, stacked on the Public R&D candidate; not deployed.
