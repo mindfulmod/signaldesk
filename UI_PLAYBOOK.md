@@ -18,6 +18,19 @@ Financial collection is eligible every 24 hours or on a new filing, with six-hou
 failed retries; the watchdog warns after 36 hours. Collection freshness does not
 make an old reporting period current.
 
+November 2 research finder: `research-search.js` indexes the loaded technology
+profiles, permanent companies, latest document version per source/URL and source
+websites. It is not full-text, whole-market, notebook or Public R&D action search.
+Documents sort by original publication date (unknown last), never collection
+time; show the URL path to distinguish same-titled filings/releases. Keep the
+trigger outside the visually hidden `.tech-workspace-title`, and the native
+dialog outside `#techContent` so rerenders cannot erase typing. Search never
+resets filters or notebook fields; profile navigation is disabled during an
+open evidence review. Escape closes on its first press even from a populated
+search input; cancellation restores the trigger and selection focuses the
+destination. Tab wraps within the dialog, arrow keys move among results and
+composition input is not hijacked. This frequent action has no motion delay.
+
 November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
 of adoption/operating tracker values and comparable growth; show its separate
 count in the ledger. Reviewed cards show caveats and a next check, not only a
