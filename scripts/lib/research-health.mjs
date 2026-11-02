@@ -2,8 +2,13 @@ import model from "../../research-model.js";
 import config from "../../research-config.js";
 import loader from "../../research-loader.js";
 import { discoveryHistory } from "./discovery-history.mjs";
+import { procurementHealth } from "./procurement-discovery.mjs";
 export function researchHealth(research, monitor, now = Date.now(), scope = config) {
   const errors = [], warnings = [];
+  if (research?.procurement) {
+    const procurement = procurementHealth(research.procurement, now);
+    errors.push(...procurement.errors); warnings.push(...procurement.warnings);
+  }
   const pairError = loader.validatePair(research, monitor, now) || (Object.values(research.companies).some(row => !row || typeof row !== "object" || Array.isArray(row)) ? "The company records are incomplete or invalid." : "");
   if (pairError) return { ok: false, errors: [pairError], warnings,
     sourceCoverage: "Unavailable: invalid publication pair", contentChecks: null,

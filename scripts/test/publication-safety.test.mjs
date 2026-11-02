@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { PUBLICATIONS, publicationFiles, parseBundle, validatePublication } from "../lib/publication-safety.mjs";
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
+import { publicProcurement } from "../lib/procurement-discovery.mjs";
 
 const at = "2026-11-02T16:00:00.000Z", now = Date.parse(at);
 const scope = { sources: [{ id: "lab" }], companies: [{ ticker: "TEST" }] };
@@ -18,6 +19,10 @@ function fixture(kind) {
     "technology-monitor": { schemaVersion: 1, generatedAt: at, events: [], sources: { lab: { id: "lab", status: "ok", lastSuccessAt: at } } },
   };
   const files = {};
+  if (kind === "research") {
+    inputs["procurement-state"] = { schemaVersion: 1, lanes: { recent: {}, delayed: {} } };
+    inputs.research.procurement = publicProcurement(inputs["procurement-state"]);
+  }
   const put = (name, data) => {
     files[`data/${name}.json`] = JSON.stringify(data);
     if (PUBLICATIONS[kind][name]) files[`data/${name}.js`] = `window.${PUBLICATIONS[kind][name]} = ${JSON.stringify(data, null, 2)};\n`;
@@ -45,6 +50,14 @@ test("degraded market coverage holds the candidate, preserving missingness", asy
   const before = { ...f.files }, report = await f.check();
   assert.equal(report.ok, false); assert.equal(report.decision, "hold-publication");
   assert.match(report.errors.join(" "), /31\/75/); assert.deepEqual(f.files, before);
+});
+
+test("public R&D display must match its preserved collection journal", async () => {
+  const f = fixture("research");
+  f.inputs.research.procurement.lanes.recent.lastSuccessAt = at;
+  f.put("research", f.inputs.research);
+  const report = await f.check();
+  assert.equal(report.ok, false); assert.match(report.errors.join(), /journal/);
 });
 
 test("mixed research generations and unreadable sources hold publication", async () => {

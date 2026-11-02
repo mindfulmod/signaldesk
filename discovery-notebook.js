@@ -46,6 +46,12 @@
     return [...new Set(errors)];
   }
   function seed(leadId, research, now = new Date().toISOString()) {
+    if (leadId.startsWith("procurement:")) {
+      const row = Object.values(research?.procurement?.lanes || {}).sort((a, b) => (b.lastSuccessAt || "").localeCompare(a.lastSuccessAt || "")).flatMap(s => s.snapshot?.records || []).find(r => r.id === leadId.slice(12));
+      if (!row || !url(row.url)) return null;
+      return { id: leadId, title: `${row.recipient} · R&D investigation`.slice(0, 220), hypothesis: "", metric: "", unit: "", scope: "", nextCheck: "Check the award purpose, actual delivery milestones, and evidence of repeat use. Government obligations are not revenue or consumer adoption.", reviewOn: "", status: "watching", createdAt: now, updatedAt: now,
+        origins: [{ id: leadId, title: `Award ${row.awardId} · modification ${row.modification} · action ${row.actionDate}`.slice(0, 500), owner: "USAspending / US Treasury", url: row.url, publishedAt: null }], observations: [] };
+    }
     const topic = [...(research?.discovery?.candidates || []), ...(research?.discovery?.archive || [])].find(c => c.id === leadId);
     const ids = leadId.startsWith("story:") ? [leadId.slice(6)] : topic?.documentIds || [];
     const origins = ids.map(id => research?.documents?.find(d => d.id === id)).filter(d => d && url(d.url)).slice(0, 6).map(d => ({ id: d.id, title: d.title, owner: d.owner, url: d.url, publishedAt: d.publishedAt || null }));

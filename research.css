@@ -365,3 +365,26 @@
 .intel-confirm-actions button { flex: 1; min-height: 44px; }
 .intel-confirm-discard { color: var(--down); border-color: var(--danger-line); }
 .intel-confirm button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Spending discovery: a compact amount rail, with purpose and next action first. */
+.intel-spending-boundary { padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--panel-2); font-size: .82rem; line-height: 1.6; color: var(--muted); }
+.intel-spending-samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.intel-spending-samples article { padding: 16px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+.intel-spending-samples h4 { margin: 0; font-size: .85rem; }
+.intel-spending-samples p { margin: 9px 0 0; font-size: .76rem; line-height: 1.5; }
+.intel-spending-samples .intel-block-head { flex-wrap: wrap; }
+.intel-spending-card { display: grid; grid-template-columns: minmax(150px, 190px) minmax(0, 1fr); gap: 28px; padding: 22px 0; border-top: 1px solid var(--line); }
+.intel-spending-value { display: flex; flex-direction: column; gap: 8px; padding-top: 3px; }
+.intel-spending-value span, .intel-spending-value small { color: var(--muted); font-size: .72rem; }
+.intel-spending-value strong { color: var(--ink); font-size: 1.35rem; font-weight: 550; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.intel-spending-body { min-width: 0; }
+.intel-spending-body h4 { margin: 5px 0 10px; font-size: .95rem; line-height: 1.45; overflow-wrap: anywhere; }
+.intel-spending-body > p { font-size: .82rem; line-height: 1.65; margin: 0 0 8px; overflow-wrap: anywhere; }
+.intel-spending-body .intel-form-actions { margin-top: 10px; }
+.intel-spending-body .intel-disclosure { margin-top: 12px; }
+@media (max-width: 680px) {
+  .intel-spending-samples { grid-template-columns: 1fr; }
+  .intel-spending-card { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; }
+  .intel-spending-value { padding: 0; gap: 5px; }
+  .intel-spending-value strong { font-size: 1.3rem; }
+}

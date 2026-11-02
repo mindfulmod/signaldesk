@@ -46,13 +46,22 @@ permanently covered companies. Source changes are unverified review candidates,
 not automatically confirmed facts. Follows, dismissals and review drafts are
 browser-local, not push alerts.
 
-**Discover** has two lanes: extracted headline patterns and an **Open scan** of
+**Discover** includes extracted headline patterns and an **Open scan** of
 unmapped stories with no technology-keyword gate. Five broad feeds (NSF, MIT
 research, Nature, NIST and the official Hacker News API) are sampled daily.
 Community votes are attention, never adoption; reporting owners are not
 automatically independent confirmations. Coverage details expose collection
 dates, content dates, source limitations and gaps. See the October 10 discovery
 pass in [RESEARCH_UPGRADES.md](RESEARCH_UPGRADES.md) for the operating contract.
+
+**Public R&D** adds a distinct, keyword-free USAspending contract-action lane.
+Two bounded samples are checked daily: recent scientific R&D actions and an
+older window for delayed reporting. Search recipients, agencies and purposes;
+filter increases, reductions or zero-dollar changes; then open an award or start
+an investigation. Commitments are not payments, company revenue or adoption.
+Both samples can be capped and overlap; their totals must not be added together.
+Failed checks retain dated evidence. The watchdog flags checks over 36 hours old.
+See the November 2 operating contract in the work plan before changing coverage.
 
 Saved discoveries can become **personal investigations**: define a hypothesis,
 one scoped adoption metric and a review checkpoint, then record dated source-backed
