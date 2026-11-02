@@ -205,7 +205,7 @@ test("H16: brief excludes paused collectors from current coverage", () => {
   const monitor = {sources: Object.fromEntries(config.sources.map(s => [s.id,{status:"ok", lastSuccessAt: new Date().toISOString()}]))};
   const html = views.brief(registry.themes, {generatedAt:new Date().toISOString(), documents:[], reviews:[], coverage:{readableSources:22}}, monitor, [], "ready");
   const active = config.sources.filter(s => s.accessStatus !== "permission-required").length;
-  assert.ok(html.includes(`${active}/${active} active sources readable · 2 paused`));
+  assert.ok(html.includes(`${active}/${active} active sources readable · ${config.sources.length - active} paused`));
   const scope = {sources:[{id:"active"},{id:"paused",accessStatus:"permission-required"}],companies:[{ticker:"QS"}]};
   const health = researchHealth({schemaVersion:1,documents:[],reviews:[],sourceCheckedAt:now,generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{schemaVersion:1,events:[],generatedAt:now,sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
   assert.equal(health.ok,true); assert.equal(health.sourceCoverage,"1/1 active"); assert.equal(health.pausedSources,1);
@@ -278,7 +278,7 @@ test("H15: unrelated articles have no accept/technology/kind defaults", () => {
 
 test("H16: permission-paused sources cannot fetch even when forced", async () => {
   let calls=0;const sources=config.sources.filter(s=>s.accessStatus==="permission-required");
-  assert.equal(sources.length,2);
+  assert.deepEqual(sources.map(s => s.id).sort(), ["ast-investor", "tmobile-network", "tmobile-service"]);
   const result=await collectTechnology({sources},{},{now,force:true,fetchImpl:async()=>{calls++;throw Error("must not fetch");}});
   assert.equal(calls,0);assert.ok(Object.values(result.sources).every(s=>s.status==="paused"));
 });

@@ -131,6 +131,7 @@ export function updateSource(source, previous, result, now) {
     title, etag: result.etag || null, lastModified: result.lastModified || null }, events };
 }
 export async function fetchSource(source, previous, { fetchImpl = fetch, timeoutMs = 15000, maxBytes = 1500000 } = {}) {
+  if (source.accessStatus === "permission-required") throw new Error("Source collection paused pending permission review");
   if (source.format === "hn") return fetchCommunity(source, { fetchImpl, timeoutMs });
   const signal = AbortSignal.timeout(timeoutMs);
   const headers = { "User-Agent": source.format === "sec" ? "SignalDesk/2.0 (m.aali9@gmail.com)" : "SignalDesk/2.0 (+https://mindfulmod.github.io/signaldesk/; m.aali9@gmail.com)", Accept: source.format === "sec" ? "application/json" : source.format === "rss" ? "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.1" : "text/html,application/xhtml+xml" };
