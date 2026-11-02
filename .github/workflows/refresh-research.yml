@@ -31,6 +31,8 @@ permissions:
 concurrency:
   group: signaldesk-data-writer
   cancel-in-progress: false
+  # Share the writer lock, but retain waiting runs from both refresh workflows.
+  queue: max
 jobs:
   refresh:
     runs-on: ubuntu-latest

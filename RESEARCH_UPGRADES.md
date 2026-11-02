@@ -1,5 +1,28 @@
 # Research intelligence work plan
 
+## November 2 · Refresh queue reliability candidate
+
+Not deployed. Production research runs 41495966944 and 41496056320 were cancelled
+before any job began: market and research share one writer lock, but the default
+GitHub queue retains only one pending run. User-dispatched run 41497506484 then
+passed collection, both publication gates, push (84bf452), public snapshot
+verification and live health checks. The market run 41495966587 also passed.
+
+Both writers now request `queue: max`, retaining up to 100 pending runs while
+still allowing only one active writer. `cancel-in-progress: false`, current-main
+checkout, timeouts, rebase, publication gates and source request limits remain.
+No schedule, permission or source-collection frequency change. This prevents the
+observed pending-slot replacement within queue capacity; it does not guarantee
+GitHub scheduler delivery or exact start times. Queue-full cancellation remains
+possible, and job order follows entry into the queue rather than dispatch time.
+
+Contract: [GitHub concurrency documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).
+The regression test checks both actual workflow configurations, not a simulated
+GitHub scheduler. After approval/merge, verify both push-triggered writers finish
+and their public snapshots pass; multiple-pending runtime behavior is not claimed
+from a local configuration test. Avoid artificial collection bursts just to fill
+the queue. The independent published-data watchdog remains in place.
+
 ## November 2 · Counterevidence and filing review candidate
 
 Branch implementation, stacked on the Public R&D candidate; not deployed.

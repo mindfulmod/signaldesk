@@ -113,3 +113,18 @@ test("workflow writers are gated, revalidate after rebase and retain diagnostics
     assert.ok(!workflow.includes("continue-on-error"), "candidate failure must fail the job");
   }
 });
+
+test("both publication writers retain queued runs under one non-cancelling lock", () => {
+  for (const filename of ["refresh-data.yml", "refresh-research.yml"]) {
+    const workflow = readFileSync(new URL(`../../.github/workflows/${filename}`, import.meta.url), "utf8");
+    const block = workflow.match(/^concurrency:\n((?:[ \t]+[^\n]*\n)+)/m)?.[1];
+    assert.ok(block, `${filename}: workflow-level writer lock required`);
+    assert.match(block, /^  group: signaldesk-data-writer$/m);
+    assert.match(block, /^  cancel-in-progress: false$/m);
+    assert.match(block, /^  queue: max$/m, `${filename}: a single pending slot drops the other writer`);
+    assert.equal((workflow.match(/^\s*concurrency:/gm) || []).length, 1, "no nested lock can deadlock or replace this queue");
+    assert.match(workflow, /ref: main/, "queued jobs must read current main when they start");
+    assert.match(workflow, /timeout-minutes: (?:20|35)/, "writers remain time-bounded");
+    assert.match(workflow, /git pull --rebase origin main/);
+  }
+});
