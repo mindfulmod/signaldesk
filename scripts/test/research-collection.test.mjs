@@ -5,10 +5,11 @@ import { buildDocuments, discoverTopics, topicPhrases } from "../lib/research-in
 import { boundedJson } from "../lib/research-fetch.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
 import { verifyPublication } from "../verify-publication.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-10-02T16:00:00.000Z";
 const source = { id: "news", name: "News", owner: "Lab", tier: "research", url: "https://example.org/feed", allowedHosts: ["example.org"], mode: "links", format: "rss", terms: [], themes: [], discovery: true, cadence: "daily" };
-const discoveryState = { status: "ok", sourceUrl: source.url, extractorVersion: 4, lastSuccessAt: now, newestPublicationAt: now, matchedItems: 3, datedItems: 3 };
+const discoveryState = { ...sourceReceipt(source), status: "ok", lastSuccessAt: now, newestPublicationAt: now, matchedItems: 3, datedItems: 3 };
 const item = (title, url = "/article", date = "2026-10-01") => '<item><title><![CDATA[' + title + ']]></title><link>https://example.org' + url + '</link><description><![CDATA[<p>A measured result &amp; its limitations</p>]]></description><pubDate>' + date + '</pubDate></item>';
 const rss = content => "<rss><channel>" + content + "</channel></rss>";
 const feedResponse = body => new Response(body, { headers: { "content-type": "application/rss+xml" } });
@@ -25,6 +26,27 @@ test("Atom selects article links instead of the self link; RDF dates are retaine
   assert.equal(extractFeed(atom, source).items[0].url, "https://example.org/article");
   const rdf = '<rdf:RDF><item><title>Quantum computing</title><link>https://example.org/article</link><dc:date>2026-10-01</dc:date></item></rdf:RDF>';
   assert.equal(extractFeed(rdf, source).items[0].publishedAt, "2026-10-01");
+});
+test("Atom modification times cannot stand in for publication or make undated content a fresh discovery", () => {
+  const atom = (publication = "", modified = now) => `<feed><entry><title>Quantum error correction</title><link href="https://example.org/article"/>${publication}<updated>${modified}</updated></entry></feed>`;
+  const result = extractFeed(atom(), source);
+  assert.equal(result.items[0].publishedAt, null);
+  assert.equal(result.items[0].sourceModifiedAt, now);
+  const saved = updateSource(source, null, result, now).state;
+  assert.equal(saved.datedItems, 0);
+  assert.equal(saved.newestPublicationAt, null);
+  const documents = buildDocuments({ sources: [source], themes: [] }, { sources: { news: saved } }, {}, now);
+  assert.equal(documents[0].publishedAt, null);
+  assert.equal(documents[0].announcementAt, null);
+  const discovery = discoverTopics(documents, [], {}, now, [source], { news: saved });
+  assert.equal(discovery.candidates.length, 0);
+  assert.equal(discovery.datedDocuments, 0);
+  assert.equal(discovery.healthy, false);
+  const both = extractFeed(atom("<published>2020-01-01</published>"), source).items[0];
+  assert.equal(both.publishedAt, "2020-01-01");
+  assert.equal(both.sourceModifiedAt, now);
+  assert.equal(extractFeed(atom("<published>invalid</published>"), source).items[0].publishedAt, null);
+  assert.equal(extractFeed(atom("", "invalid"), source).items[0].sourceModifiedAt, undefined);
 });
 test("broken feeds fail while a valid feed with no relevant topic is a readable zero", () => {
   for (const input of ["<html>Error</html>", "<rss></rss>", rss('<item><title>Hi</title><link>javascript:alert(1)</link></item>')]) assert.throws(() => extractFeed(input, source));
@@ -116,18 +138,18 @@ test("saved discovery leads remain inspectable after leaving the current window"
 });
 test("health gates missing publications, incomplete coverage and stale prices", () => {
   const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 1, companies: 1 }, companies: { QS: { ...companyQuoteFixture("QS", now) } } };
-  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { news: { id: "news", status: "ok", lastSuccessAt: now } } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { news: { ...sourceReceipt({ id: "news" }), id: "news", status: "ok", lastSuccessAt: now } } };
   assert.equal(researchHealth(research, monitor, Date.parse(now), { sources: [{ id: "news" }], companies: [{ ticker: "QS" }] }).ok, true);
   assert.equal(researchHealth({ ...research, generatedAt: "2026-09-01" }, monitor, Date.parse(now)).ok, false);
   assert.equal(researchHealth(research, { sources: {} }, Date.parse(now)).ok, false);
   assert.equal(researchHealth({ ...research, companies: { QS: {} } }, monitor, Date.parse(now)).ok, false);
 });
-test("publication verification waits for the exact or newer public snapshot", async () => {
+test("publication verification waits for the exact public snapshot", async () => {
   const expected = { collectionId: "b", generatedAt: now }; let count = 0;
   assert.equal(await verifyPublication(expected, async () => ++count === 1 ? { collectionId: "a", generatedAt: now } : expected, { sleep: async () => {} }), true);
   assert.equal(count, 2);
   await assert.rejects(verifyPublication(expected, async () => ({ generatedAt: "2026-09-01" }), { attempts: 2, sleep: async () => {} }), /did not reach/);
-  let clock = 0;
+  let clock = Date.parse(now);
   await assert.rejects(verifyPublication(expected, async () => { clock += 250000; throw new Error("offline"); }, { clock: () => clock, sleep: async () => {} }), /did not reach/);
 });
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";

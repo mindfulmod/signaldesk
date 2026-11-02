@@ -1,8 +1,265 @@
 # Research intelligence work plan
 
+## November 2 · Integrated release candidate
+
+Not deployed. `codex/release-candidate` integrates #11–#16 and #18, with #17
+already merged and verified on production (`c3a77ba`). The separate feature PRs
+remain open; this candidate is the combined review/deployment path, not approval
+to merge them individually. It resolves shared model exports, source-access and
+contract guards, frontend cache keys, and the Atom parser protocol bump to 5.
+
+An ordinary, non-forced collection at 20:45:38 UTC was run in an isolated folder
+seeded with all four saved research inputs. Its generated files were promoted
+into this branch only after publication validation passed. No receipts or dates
+were stamped by hand. Result: 20/21 active sources readable, 3 paused, 5/5
+discovery feeds current, 8/8 usable saved company quotes. QuantumScape newsroom
+403, empty Toyota/FCC samples and both capped Public R&D lanes remain warnings.
+These checks establish operational eligibility, not accuracy or adoption.
+
+Migration audit: all 1,516 old document versions retain their IDs, source IDs,
+URLs, titles, excerpts, publication and detection dates. The candidate contains
+1,567 versions. Published reviews and all retained source events are unchanged;
+there were zero new-link alerts during rebaselining. AST and both T-Mobile
+website records keep their original items and check times, with collection
+paused. The Public R&D journal is unchanged. Twenty-seven old discovery days
+remain in legacy history; one new-contract day is not a momentum series.
+Historical Atom date provenance is still uncertified; no new Atom source was
+enabled, and this migration does not retroactively verify old dates.
+
+Integrated QA found and fixed a cross-surface date-label issue: finder results,
+review queue and editor now distinguish community submission from publication.
+Community dates no longer prefill the claim publication field; existing drafts
+are preserved. Search orders revised articles by their original publication
+date rather than promoting a later version date.
+
+Verification: 528 tests pass on Node 20 and 24; JavaScript syntax, workflow YAML
+and diff checks pass. At 1440px/light and 375px/dark, table/radar/map routes all
+open the correct stock, phone sheets restore initiating focus, and no horizontal
+overflow or browser errors were observed. Finder navigation opens company
+funding context; populated Escape closes once and returns focus; open review
+navigation is disabled and typed content survives. An unsaved notebook survives
+company navigation and returns with its fields intact. QA-only text was removed
+without saving. HTTP and generated file-mode parity pass; an interactive file://
+browser test remains unavailable in this environment.
+
+Before deployment: obtain approval for the combined change, confirm GitHub
+checks, and reconcile any newer published data without overwriting history.
+After merge: verify Pages, both queued writers, exact public snapshot contents
+and source freshness. Do not call the queue reliable from local tests alone.
+
+Next product work: reduce awkward auto-extracted pattern names (observed examples
+include “engine built around agent” and vendor/promotion fragments), improve
+independent-owner corroboration without manufacturing adoption evidence, and
+resolve empty/blocked coverage using authorized sources. Editorial review dates,
+measured consumer traction and historical market-model validation remain open.
+
+## November 2 · Refresh queue reliability candidate
+
+Not deployed. Production research runs 41495966944 and 41496056320 were cancelled
+before any job began: market and research share one writer lock, but the default
+GitHub queue retains only one pending run. User-dispatched run 41497506484 then
+passed collection, both publication gates, push (84bf452), public snapshot
+verification and live health checks. The market run 41495966587 also passed.
+
+Both writers now request `queue: max`, retaining up to 100 pending runs while
+still allowing only one active writer. `cancel-in-progress: false`, current-main
+checkout, timeouts, rebase, publication gates and source request limits remain.
+No schedule, permission or source-collection frequency change. This prevents the
+observed pending-slot replacement within queue capacity; it does not guarantee
+GitHub scheduler delivery or exact start times. Queue-full cancellation remains
+possible, and job order follows entry into the queue rather than dispatch time.
+
+Contract: [GitHub concurrency documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).
+The regression test checks both actual workflow configurations, not a simulated
+GitHub scheduler. After approval/merge, verify both push-triggered writers finish
+and their public snapshots pass; multiple-pending runtime behavior is not claimed
+from a local configuration test. Avoid artificial collection bursts just to fill
+the queue. The independent published-data watchdog remains in place.
+
+## November 2 · AST website access review candidate
+
+Not deployed. Live watchdog checks passed at this audit, but green operational
+coverage does not establish source permissions or complete evidence.
+
+- AST's [Terms of Service](https://ast-science.com/terms-of-service/), revised
+  September 15, 2022 and inspected November 2, 2026, expressly include subdomains
+  in their website scope. Section 1.2(f) restricts automated collection absent
+  the stated exceptions/permission. Pause `ast-investor` pending permission
+  review; do not activate its embedded third-party feed as a workaround.
+  This is an operational access decision, not a legal opinion about enforceability.
+- Keep the independently configured SEC submissions source (`sec-asts`), company
+  coverage, quotes and existing historical records. Source health must show three
+  paused website sources, separate from the active-source denominator. A newly
+  published pause must not renew its last attempted/successful source-check time.
+- Enforce the pause both in normal/forced collection and at the direct fetch
+  adapter boundary. Inventory assembly also checks configuration, so a cached
+  monitor still marked `ok` cannot introduce new documents from a paused source.
+- The pre-decision AST probe found only undated quarterly-result links in the
+  existing extractor; page build dates and earnings-event dates are not source
+  publication dates. No such date was substituted, and no feed was activated.
+- A bounded FCC RSS probe returned nine usable entries with no satellite-topic
+  matches. Its fresh channel-level date is a feed date, not an individual document
+  publication date. Keep item dates unknown; add a regression for that distinction.
+- Re-enable the AST website only after recording an applicable permission/access
+  decision and validating a dated, metadata-only collection contract. SEC filing
+  metadata does not itself establish service adoption; claims still need review.
+
+No generated files or historical observations are changed by this patch. After
+approved deployment, the next research collection should persist the paused state
+while retaining original source receipts. Existing archive retention limits remain.
+
+Verification: all 479 tests pass on Node 20 and Node 24 on this source-only branch;
+research publication preflight and JSON/file-mode parity pass. Tests cover zero
+requests for paused direct/forced collection, preservation of source receipts and
+events, stale-monitor inventory rejection, continued SEC configuration and FCC
+channel-vs-item dates. Local 1440px light/375px dark checks show 20/21 active
+sources, three paused sources and AST's original check dates/permission note.
+Table, radar and attention-map stock selection pass at both widths with no console
+errors. The PR has no dependency on the separately pending research-finder UI.
+
+## November 2 · Feed date semantics audit candidate
+
+Separate parser safeguard; not deployed. `extractFeed` previously fell back from
+publication fields to Atom `updated`, which RFC 4287 defines as a modification
+time. It now leaves publication unknown when only `updated` exists and retains
+the timestamp separately as `sourceModifiedAt` in the source item. This field is
+not an adoption metric, a publication date or a new-document event. Original
+publication fields continue to control discovery date windows and dated counts.
+
+Bounded read-only probes on November 2: BMW 1/1, Meta 2/2, Microsoft 5/5, NSF
+15/15, MIT 50/50, Nature 75/75 and NIST 40/40 matched items had publication dates.
+These seven responses were RSS/RDF, not Atom. FCC returned nine undated entries
+with zero satellite-term matches; keep its dates unknown. These are bounded
+samples, not complete archives or independent validation of publisher metadata.
+The probes did not write generated data or advance published source-check times.
+
+Tests cover updated-only content through extraction, source health counts,
+document construction and discovery exclusion, plus distinct published/updated
+dates and malformed dates. All 475 tests pass on Node 24. Existing historical
+records are unchanged: this does not certify earlier date provenance or repair
+an unobserved historical Atom response. Before enabling an Atom discovery source,
+its publication-date contract and retained-history migration must be reviewed.
+No source is activated or otherwise expanded by this patch.
+
+Reference: [Atom published and updated semantics, RFC 4287](https://www.rfc-editor.org/rfc/rfc4287).
+
+## November 2 · Exact publication verification candidate
+
+Not deployed. Reproduced on current main: the market verifier accepted an empty
+signal list with the expected timestamp/collection ID, and accepted a payload
+with an arbitrary future timestamp. Research validated the pair's structure and
+dates but did not require the intended document or source-check contents.
+These are verifier defects reproduced with synthetic responses, not evidence
+that the production snapshots were corrupted.
+
+- Require equality of parsed snapshot contents, not timestamp/ID equality alone.
+  JSON formatting and object-key order may differ; values, arrays, inventories
+  and metadata must match. Invalid local dates fail before requesting the site.
+- Research must match both the intended research snapshot and source-check file.
+  Empty inventories and altered source states cannot pass with copied timestamps.
+- Preserve the bounded polling window so partial/stale CDN responses can recover.
+  The existing writer lock covers publication and verification. A different/newer
+  snapshot is not silently accepted as proof of this job; investigate an outside
+  publication if it supersedes the expected snapshot during verification.
+- Both writer workflows trigger on verifier changes. They still run independent
+  live health checks: content identity is not a substitute for evidence quality,
+  freshness, coverage, provenance or source access validation.
+
+Scope: verifies the primary market snapshot and research/source-check pair.
+Other generated archives and file-mode twins retain pre-publication parsing and
+parity checks; this change does not claim a byte-for-byte CDN audit of every
+archive or certify that providers' underlying financial data are correct.
+
+Verification: 482 tests pass on Node 20 and Node 24, including copied IDs/times,
+missing/changed rows, invalid/future dates, mismatched monitor contents, stale-CDN
+recovery and harmless JSON property-order differences. Syntax, workflow YAML and
+whitespace checks pass. Both updated verifier commands also succeeded against
+the current live primary snapshots from main `84bf452`; this establishes their
+current content identity, not deployment of this new verifier. No data was changed.
+
+## November 2 · Company funding evidence candidate
+
+Separate branch implementation following the deployed progress/risk update;
+not deployed.
+This replaces the old cash-only months-of-burn presentation with a funding and
+spending view; no total-liquidity or runway forecast is calculated.
+
+- Financial protocol 4 collects `MarketableSecuritiesCurrent`,
+  `MarketableSecuritiesNoncurrent` and `ShortTermInvestments` as separate lines.
+  Generic marketable-security, restricted-cash and cash-plus-investment totals
+  are not aliases. Do not double-count overlapping lines or imply all investments
+  are immediately available. Preserve units, original balance dates, accessions,
+  accounting tags and conflicts. Invalid investment dates, duration contexts,
+  negative balances and malformed accessions are rejected; reported zero is valid.
+- Current funding cards use investment dates matching the cash balance and exclude
+  stale observations. Older periods remain in a clearly labeled disclosure, not
+  in the main funding figures. Missing taxonomy coverage remains unknown.
+- Cash, investment balances, operating cash flow and capital spending are visible
+  together. Accounting details, shares and debt use expandable sections to reduce
+  reading load. These supported debt tags are not a complete debt reconciliation.
+- Facts become eligible after 24 hours or on a new filing (previously weekly),
+  with at least six hours between failed retries and a 200ms SEC pacing interval.
+  Failures retain prior values and successful dates. Existing scheduled research
+  jobs provide the opportunities; this is not a promise of new daily filings.
+  Source-health warnings now flag financial checks after 36 hours.
+- Bounded live refresh at 2026-11-02T17:50:22.638Z succeeded for all eight companies.
+  QS has $75.599M cash and $744.184M current marketable securities at September 30;
+  those are separate reported lines, not a generated total. Actual data comparison
+  found no changed pre-existing financial values or lost historical observations.
+  Very old T-Mobile and AST investment entries stay historical.
+- Verification: 480 tests passed on Node 20 and 24; the real seven-file research
+  publication preflight passed. Browser checks at 1440px light and 375px dark
+  covered source disclosures, separate dated balances, historical investments,
+  and stock selection through the table, research radar and attention map.
+  No horizontal overflow or console errors in the checked views. No test review,
+  investigation or watchlist entry was saved. File-mode parity is tested, but
+  browser file:// testing remains policy-blocked and is not claimed.
+
+Source contract: [SEC Company Facts API documentation](https://www.sec.gov/search-filings/edgar-application-programming-interfaces).
+The API omits custom concepts and may not establish a complete funding picture.
+Cash/investment classification, restrictions, debt maturities, customer economics,
+capitalization coverage and a validated performance record still need work.
+
+## November 2 · Research finder candidate
+
+Branch implementation; not deployed. A persistent Search research action joins
+technology profiles, permanent companies, saved source-document titles and source
+websites in one keyboard-accessible panel. This is loaded-snapshot search, not
+live-web/whole-market search; notebook contents and Public R&D actions retain
+their own workflows. It makes no change to collection schedules or source health.
+
+- Latest retained document version per source/URL is indexed without rewriting
+  history. Original publication dates order documents; missing or malformed dates
+  stay unknown. The date a page was checked never becomes its publication date.
+- Distinct same-titled documents retain separate URLs, displayed for context.
+  Results are bounded with refinement guidance; short symbols match whole tokens.
+  Paused sources remain explicitly labeled, not silently represented as healthy.
+- Native modal semantics, immediate feedback, first-press Escape, keyboard result
+  navigation and focus return. Search preserves filters and unsaved notebooks;
+  switching profiles is blocked while an evidence-review form is open. External
+  sources open separately and do not replace the editor.
+- Browser verification: 1440px light and 375px dark, scrollable bounded results,
+  no horizontal overflow, source-link attributes, no-results messaging, company
+  and technology routes, cancellation, focus wrap, unsaved review preservation
+  and notebook navigation/resumption. No QA draft was saved. Table, radar and
+  attention-map stock selection passed at both widths with no console errors.
+- No animation is introduced, so reduced-motion users receive the same immediate
+  behavior. Browser file-mode validation remains unavailable; this feature uses
+  the same already-loaded research object in both transport modes.
+
+Pending releases remain separate: funding/spending evidence (#11), retained
+refresh queue (#12), and draft feed-date integrity guard (#13). Approval/checks
+and live deployment verification are still required before calling these live.
+
 ## November 2 · Counterevidence and filing review candidate
 
-Branch implementation, stacked on the Public R&D candidate; not deployed.
+Merged as #10 after #9 with user approval on November 2. Post-merge checks and
+Pages deployment passed. Live Public R&D and progress/risk views were verified.
+The initially queued research runs were cancelled by the shared writer queue.
+User-dispatched run 41497506484 passed collection, both publication gates,
+publication (84bf452), public research/monitor verification and the live health
+check at 18:08 UTC. Coverage was 21/22 active research sources, 5/5 discovery
+sources and 8/8 quotes; two intentionally paused sources and content gaps remain.
 
 - Add an explicit `risk` evidence kind. Execution setbacks remain visible in the
   ledger and program context but do not inflate observation/target counts,
@@ -844,8 +1101,9 @@ unreviewed inventory. Initial backfills are labeled as such, not breaking news.
    Story momentum requires 28 collected days with unchanged, healthy coverage.
 8. **Economics:** SEC facts and history with native units, periods, accounting
    tags and filing provenance; company exposure, dilution research and risks.
-   Cash-only burn coverage excludes securities/other liquidity and is not total
-   runway. No ADR or share-class assumptions fabricate market capitalization.
+   Cash-only burn coverage was replaced in the November 2 funding candidate with
+   separately dated cash/investment/spending evidence and no runway forecast.
+   No ADR or share-class assumptions fabricate market capitalization.
 9. **Daily brief:** unreviewed changes, published reviews, next checkpoints,
    collection gaps and direct links to the two priority trackers. Follows
    personalize it. Light/dark/system and the existing Desk remain.
@@ -859,6 +1117,30 @@ proof of data correctness. All follow-up items are pending; adding this plan
 does not authorize implementation, collection changes or deployment.
 
 ## Update cadence and operating limits
+
+### Source-contract rollout prerequisite (November 2, not yet deployed)
+
+The source-contract branch closes a reproduced same-URL cache defect: changing
+keywords could keep the old filtered items after a 304 response while renewing
+their successful-check time. Collection receipts now bind filtering, extraction,
+allowlisted hosts, enrichment, metadata-only handling and provenance settings.
+Unchanged contracts still use conditional requests; changed settings require a
+new response and a no-alert baseline. Failed migration keeps the old records and
+timestamps, without certifying them under the new contract. Discovery comparisons
+restart under the new contract while old daily receipts remain in legacy history.
+
+Release order matters: merge the AST access pause (#15) first, reconcile this
+branch with current main, then obtain deployment approval and run one ordinary
+research collection. Do not force paused sources or fabricate receipts in saved
+files. Existing bundles have no new receipts, so the stricter health gate will
+intentionally report them unconfirmed until collection succeeds. Verify candidate
+health, immutable review links, Pages publication and the public health check
+before considering this migration deployed. The queue repair (#12) is also
+recommended before scheduling this release. Coordinate the feed-date repair
+(#13) with the shared extractor version; parser changes must invalidate existing
+receipts. No scheduled collection or generated snapshot was changed. A bounded,
+in-memory BMW feed check produced one dated, metadata-only item, a matching new
+contract and no false new-link events; the original saved state stayed untouched.
 
 | Data | Cadence | Limit |
 | --- | --- | --- |

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="tabs.css?v=20261002-2" />
     <link rel="stylesheet" href="desk-cleanup.css?v=20261102-1" />
     <link rel="stylesheet" href="technology.css?v=20261102-1" />
-    <link rel="stylesheet" href="research.css?v=20261102-3" />
+    <link rel="stylesheet" href="research.css?v=20261102-release1" />
     <link rel="stylesheet" href="appearance.css?v=20261002-2" />
   </head>
   <body>
@@ -192,7 +192,7 @@
           <div class="section-head compact tech-workspace-title"><div>
             <h2 id="adoption-heading">Technology intelligence</h2>
           </div><p id="techRegistryStatus" class="tech-meta"></p></div>
-          <nav class="tech-views" aria-label="Technology views">
+          <div class="intel-research-nav"><nav class="tech-views" aria-label="Technology views">
             <button type="button" data-tech-view="brief" aria-pressed="true">Daily brief</button>
             <button type="button" data-tech-view="radar" aria-pressed="false">Radar</button>
             <button type="button" data-tech-view="trackers" aria-pressed="false">Trackers</button>
@@ -200,7 +200,7 @@
             <button type="button" data-tech-view="discovery" aria-pressed="false">Discover</button>
             <button type="button" data-tech-view="inbox" aria-pressed="false">Review</button>
             <button type="button" data-tech-view="milestones" aria-pressed="false">Milestones</button>
-          </nav>
+          </nav><button type="button" id="researchFindButton" class="tech-button" aria-haspopup="dialog">Search research</button></div>
           <details id="techScope" class="tech-scope">
             <summary id="techFilterLabel">Filter technologies</summary>
             <div class="tech-controls">
@@ -217,6 +217,14 @@
             <p id="techRefreshMessage" class="tech-meta" role="status" aria-live="polite">Loading published research…</p>
             <button type="button" class="tech-text-button" data-refresh-monitor disabled>Reload saved research</button>
           </div>
+          <dialog id="researchFindDialog" class="intel-find" aria-labelledby="researchFindTitle" aria-describedby="researchFindContext">
+            <div class="intel-block-head"><h2 id="researchFindTitle">Find research</h2><button type="button" class="tech-text-button" data-find-close aria-label="Close research search">Close</button></div>
+            <p id="researchFindContext" class="tech-meta" data-find-context></p>
+            <label for="researchFindInput">Technology, company, ticker or document</label>
+            <input id="researchFindInput" type="search" maxlength="120" autocomplete="off" placeholder="Try satellite, QS or quantum…" aria-controls="researchFindResults" />
+            <p class="tech-meta" role="status" aria-live="polite" data-find-status></p>
+            <div id="researchFindResults" data-find-results></div>
+          </dialog>
           <div id="techContent"></div>
           <p id="adoptionFollowStatus" class="adoption-note" role="status">Following and inbox dismissals are saved on this browser, not a notification subscription.</p>
           <details class="tech-method"><summary>How to read this radar</summary><p>Stages are editorial assessments of the cited programs, not probabilities or a ranking of future stock returns. A pilot is not a shipped product; a shipped product is not proof of mass adoption. Multiple pages from one company count as one reporting owner, not independent confirmation.</p><p>Source checks detect page changes, not verified facts. A human must review a disclosure before it becomes an observation. Older disclosures keep their original dates. An overdue review does not erase historical evidence.</p></details>
@@ -430,20 +438,21 @@
     <script src="company-identity.js?v=20261016-1"></script>
   <script src="data-quality.js?v=20261016-1"></script>
     <script src="adoption-watchlist.js?v=20260925-1"></script>
-    <script src="research-config.js?v=20261102-3"></script>
+    <script src="research-config.js?v=20261102-4"></script>
     <script src="technology-registry.js?v=20261016-1"></script>
     <script src="technology-model.js?v=20261102-1"></script>
-    <script src="research-model.js?v=20261102-1"></script>
+    <script src="research-model.js?v=20261102-release1"></script>
     <script src="research-loader.js?v=20261014-1"></script>
     <script src="discovery-notebook.js?v=20261102-1"></script>
     <script src="discovery-notebook-views.js?v=20261014-1"></script>
     <script src="procurement-views.js?v=20261102-1"></script>
-    <script src="research-views.js?v=20261102-3"></script>
+    <script src="research-views.js?v=20261102-release1"></script>
     <script src="stock-history-loader.js?v=20261102-1"></script>
   <script src="script.js?v=20261102-4"></script>
   <script src="enhancements.js?v=20261102-1"></script>
     <script src="notebook-confirm.js?v=20261102-1"></script>
-    <script src="adoption.js?v=20261102-3"></script>
+    <script src="research-search.js?v=20261102-release1"></script>
+    <script src="adoption.js?v=20261102-4"></script>
     <script src="springs.js?v=20261009-1"></script>
     <script src="themes.js?v=20261009-1"></script>
     <script src="phrase-radar.js?v=20261002-2"></script>

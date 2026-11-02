@@ -121,8 +121,10 @@ patience.
 
 Research has its own seven-day workflow, `.github/workflows/refresh-research.yml`,
 with daily source checks and six-hour retry opportunities. Prices are attempted
-twice daily; SEC financial facts refresh weekly or on a new filing. Claims still
-require human review. A separate public-site watchdog checks freshness twice
+twice daily; SEC financial facts are eligible for refresh every 24 hours or on a
+new filing, with failed retries spaced at least six hours apart. Claims still
+require an attributed source review and explicit publication; collection alone
+does not validate them. A separate public-site watchdog checks freshness twice
 a day. GitHub scheduling is best-effort, not guaranteed delivery.
 
 The public watchdog also checks market coverage independently of research.

@@ -14,6 +14,7 @@ on:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
       - "scripts/validate-publication.mjs"
+      - "scripts/verify-publication.mjs"
       - "scripts/lib/**"
       - "data/theme-overrides.json"
       - "script.js"
@@ -41,6 +42,8 @@ permissions:
 concurrency:
   group: signaldesk-data-writer
   cancel-in-progress: false
+  # Keep waiting research/market runs instead of replacing the one pending slot.
+  queue: max
 
 jobs:
   refresh-data:

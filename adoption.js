@@ -29,6 +29,12 @@
   if (params.get("tracker") === "satellite") trackerType = "satellite";
   if (["open", "spending"].includes(params.get("scan"))) discoveryMode = params.get("scan");
   let followedOnly = false, storageWorking = true;
+  const researchFinder = window.SIGNALDESK_RESEARCH_SEARCH?.create({
+    dialog: byId("researchFindDialog"), trigger: byId("researchFindButton"),
+    snapshot: () => ({ themes: data.themes, companies: config.companies, sources: config.sources, research }),
+    canNavigate: () => !reviewingId,
+    notice: message => { byId("adoptionFollowStatus").textContent = message; },
+  });
   let refreshFocusTarget = null;
   function save(key, values) { try { localStorage.setItem(key, JSON.stringify([...values])); } catch { storageWorking = false; } }
   function setUrl() {
@@ -294,6 +300,10 @@
   });
   root.addEventListener("click", async event => {
     const button = event.target.closest("button"); if (!button) return;
+    if (button.closest("#researchFindDialog") && (button.dataset.openTech || button.dataset.openCompany)) {
+      if (reviewingId) return; // Never discard unsaved review-form fields via search.
+      researchFinder?.close(false);
+    }
     if (notebookConfirmation?.pending) return;
     const replacesNotebook = (button.dataset.notebookOpen && notebookEditing?.id !== button.dataset.notebookOpen)
       || ["data-notebook-shelf", "data-notebook-back", "data-notebook-series", "data-open-discovery-scan"].some(name => button.hasAttribute(name));

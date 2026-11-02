@@ -1,8 +1,9 @@
 import { createHash } from "node:crypto";
 import { fetchCommunity } from "./research-community.mjs";
+import researchModel from "../../research-model.js";
 
 const hash = value => createHash("sha256").update(value).digest("hex");
-const EXTRACTOR_VERSION = 4;
+const EXTRACTOR_VERSION = researchModel.SOURCE_EXTRACTOR_VERSION;
 const decode = text => text.replace(/&#(x[\da-f]+|\d+);/gi, (_, n) => { const v = n[0].toLowerCase() === "x" ? parseInt(n.slice(1), 16) : Number(n); return v > 0 && v <= 0x10ffff ? String.fromCodePoint(v) : " "; })
   .replace(/&(?:amp|quot|apos|lt|gt|nbsp|ndash|mdash|rsquo);/g, v => ({ "&amp;": "&", "&quot;": '"', "&apos;": "'", "&lt;": "<", "&gt;": ">", "&nbsp;": " ", "&ndash;": "–", "&mdash;": "—", "&rsquo;": "’" }[v]));
 export function textOnly(html) {
@@ -28,8 +29,11 @@ export function extractFeed(xml, source) {
     if (!url || !title) continue;
     usableEntries++;
     if (!relevant(`${title} ${excerpt}`, source)) continue;
-    const publishedAt = timestamp(textOnly(xmlText(block, "pubDate") || xmlText(block, "published") || xmlText(block, "dc:date") || xmlText(block, "updated")));
-    items.set(url, { url, title, excerpt: source.metadataOnly ? "" : excerpt, publishedAt });
+    // Atom updated is a modification timestamp, not first publication (RFC 4287).
+    // An updated-only entry stays undated for discovery/publication comparisons.
+    const publishedAt = timestamp(textOnly(xmlText(block, "pubDate") || xmlText(block, "published") || xmlText(block, "dc:date")));
+    const sourceModifiedAt = timestamp(textOnly(xmlText(block, "updated")));
+    items.set(url, { url, title, excerpt: source.metadataOnly ? "" : excerpt, publishedAt, ...(sourceModifiedAt ? { sourceModifiedAt } : {}) });
   }
   if (!usableEntries) throw new Error("Feed has no safe article URLs; collection contract needs review");
   return inventory([...items.values()].slice(0, 100), source.name, { extractedEntries: usableEntries });
@@ -110,32 +114,40 @@ export function extractSource(html, source) {
   return { fingerprint: hash(source.mode === "links" ? JSON.stringify(items) : text), items, title: title.slice(0, 180), textLength: text.length, extractedEntries, ...metadata, excerpt: metadata.excerpt || text.slice(0, 240) };
 }
 export function updateSource(source, previous, result, now) {
-  const base = previous?.extractorVersion === EXTRACTOR_VERSION && previous.sourceUrl === source.url ? previous : {};
-  if (result.error) return { state: { ...base, id: source.id, sourceUrl: source.url, extractorVersion: EXTRACTOR_VERSION, lastAttemptAt: now, nextAttemptAt: new Date(Date.parse(now) + Math.min(6, 2 ** (base.failureStreak || 0)) * 3600000).toISOString(), status: "error", error: result.error.slice(0, 180), failureStreak: (base.failureStreak || 0) + 1 }, events: [] };
+  const base = researchModel.sourceCompatible(source, previous) ? previous : {};
+  if (result.error) {
+    const retained = previous || {};
+    const streak = previous?.attemptContract === researchModel.sourceContract(source) ? previous.failureStreak || 0 : 0;
+    return { state: { ...retained, id: source.id, attemptContract: researchModel.sourceContract(source), lastAttemptAt: now,
+      nextAttemptAt: new Date(Date.parse(now) + Math.min(6, 2 ** streak) * 3600000).toISOString(), status: "error", error: result.error.slice(0, 180), failureStreak: streak + 1 }, events: [] };
+  }
   if (result.notModified) {
     if (!base.fingerprint) return updateSource(source, previous, { error: "304 without a saved baseline" }, now);
     return { state: { ...base, lastAttemptAt: now, lastSuccessAt: now, nextAttemptAt: null, status: "ok", error: null, failureStreak: 0 }, events: [] };
   }
   const { fingerprint, items, title } = result;
   const changed = Boolean(base.fingerprint && base.fingerprint !== fingerprint);
-  const seen = new Set(base.seenLinks || base.items?.map(item => item.url) || []);
+  // A new extraction baseline does not make an already-seen URL new again.
+  const seen = new Set(previous?.seenLinks || previous?.items?.map(item => item.url) || []);
   const candidates = base.fingerprint && source.mode === "links" ? items.filter(item => !seen.has(item.url)) : [];
   const event = (kind, url, label, publishedAt = null) => ({ id: hash(`${source.id}|${kind}|${url}|${kind === "page-change" ? fingerprint : ""}`).slice(0, 24), sourceId: source.id, themes: source.themes, owner: source.owner, kind, title: label, url, detectedAt: now, publishedAt, verification: "unreviewed" });
   const events = candidates.map(item => event("new-link", item.url, item.title, item.publishedAt));
   if (changed && source.mode === "page") events.push(event("page-change", source.url, `${source.name}: page content changed`));
   items.forEach(item => seen.add(item.url));
-  return { state: { id: source.id, sourceUrl: source.url, extractorVersion: EXTRACTOR_VERSION, status: "ok", lastAttemptAt: now, lastSuccessAt: now, baselineAt: base.baselineAt || now,
+  return { state: { id: source.id, sourceUrl: source.url, extractorVersion: EXTRACTOR_VERSION, sourceContract: researchModel.sourceContract(source), status: "ok", lastAttemptAt: now, lastSuccessAt: now, baselineAt: base.baselineAt || now,
     lastChangedAt: changed ? now : base.lastChangedAt || null, nextAttemptAt: null, failureStreak: 0, error: null, fingerprint, items,
     seenLinks: [...seen].slice(-3000), matchedItems: items.length, datedItems: items.filter(i => i.publishedAt).length, extractedEntries: result.extractedEntries ?? items.length, newestPublicationAt: items.map(i => i.publishedAt).filter(Boolean).sort().at(-1) || null, excerpt: result.excerpt || null,
     publishedAt: result.publishedAt || null, announcementAt: result.announcementAt || null, researchUrl: result.researchUrl || null, researchPublishedAt: result.researchPublishedAt || null,
     title, etag: result.etag || null, lastModified: result.lastModified || null }, events };
 }
 export async function fetchSource(source, previous, { fetchImpl = fetch, timeoutMs = 15000, maxBytes = 1500000 } = {}) {
+  if (source.accessStatus === "permission-required") throw new Error("Source collection paused pending permission review");
   if (source.format === "hn") return fetchCommunity(source, { fetchImpl, timeoutMs });
   const signal = AbortSignal.timeout(timeoutMs);
   const headers = { "User-Agent": source.format === "sec" ? "SignalDesk/2.0 (m.aali9@gmail.com)" : "SignalDesk/2.0 (+https://mindfulmod.github.io/signaldesk/; m.aali9@gmail.com)", Accept: source.format === "sec" ? "application/json" : source.format === "rss" ? "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.1" : "text/html,application/xhtml+xml" };
-  if (previous?.fingerprint && previous.etag) headers["If-None-Match"] = previous.etag;
-  if (previous?.fingerprint && previous.lastModified) headers["If-Modified-Since"] = previous.lastModified;
+  const compatible = researchModel.sourceCompatible(source, previous);
+  if (compatible && previous?.fingerprint && previous.etag) headers["If-None-Match"] = previous.etag;
+  if (compatible && previous?.fingerprint && previous.lastModified) headers["If-Modified-Since"] = previous.lastModified;
   let url = source.url;
   for (let redirects = 0; redirects <= 3; redirects++) {
     if (!canonicalUrl(url, source.url, source.allowedHosts)) throw new Error("Source or redirect host is not allowlisted");
@@ -161,7 +173,12 @@ export async function fetchSource(source, previous, { fetchImpl = fetch, timeout
 }
 export const calendarDay = value => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Toronto", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(value));
 export function sourceDue(source, prior, now, force = false) {
-  if (force || prior?.extractorVersion !== EXTRACTOR_VERSION || prior.sourceUrl !== source.url) return true;
+  if (force) return true;
+  if (prior?.status === "paused") return true;
+  // An unsuccessful new contract is not a baseline, but still gets backoff.
+  if (prior?.status === "error" && prior.attemptContract === researchModel.sourceContract(source)) return !prior.nextAttemptAt || Date.parse(now) >= Date.parse(prior.nextAttemptAt);
+  if (prior?.status === "error" && prior.attemptContract) return true;
+  if (!researchModel.sourceCompatible(source, prior)) return true;
   if (prior.status === "error") return !prior.nextAttemptAt || Date.parse(now) >= Date.parse(prior.nextAttemptAt);
   if (source.cadence === "daily" && prior.lastSuccessAt) return calendarDay(now) !== calendarDay(prior.lastSuccessAt);
   return !prior.lastAttemptAt || Date.parse(now) - Date.parse(prior.lastAttemptAt) >= source.intervalHours * 3600000;
@@ -179,7 +196,7 @@ export async function collectTechnology(registry, previous = {}, { now = new Dat
       if (prior?.status !== "paused") checked++;
       continue;
     }
-    const compatible = prior?.extractorVersion === EXTRACTOR_VERSION && prior.sourceUrl === source.url;
+    const compatible = researchModel.sourceCompatible(source, prior);
     if (!sourceDue(source, prior, now, force || (retryErrors && prior?.status === "error"))) continue;
     let result;
     try { result = await fetchSource(source, compatible ? prior : {}, { fetchImpl, timeoutMs }); }
@@ -194,7 +211,7 @@ export async function collectTechnology(registry, previous = {}, { now = new Dat
     if (source.enrichArticles && result.items) {
       let enriched = 0;
       result.items = await Promise.all([...result.items].sort((a, b) => b.url.localeCompare(a.url)).map(async item => {
-        const old = prior?.items?.find(p => p.url === item.url && p.title === item.title);
+        const old = compatible && prior?.items?.find(p => p.url === item.url && p.title === item.title);
         if (old?.metadataCheckedAt) return { ...old, ...item };
         if (enriched >= 3) return item;
         enriched++;

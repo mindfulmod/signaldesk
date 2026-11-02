@@ -45,14 +45,26 @@ test("quote adapters reject impossible dates and do not turn price metadata into
   assert.throws(() => alphaQuote({ "Global Quote": { "01. symbol": "QS", "05. price": "5", "07. latest trading day": "2026-02-30" } }, "QS", now), /date/);
   assert.throws(() => stooqQuote("QS.US,2026-02-30,22:00,1,2,1,5,20", "QS", now), /date/);
 });
+test("daily financial-source warnings distinguish collection freshness from reporting dates", () => {
+  const scope = { sources: [{ id: "source" }], companies: [{ ticker: "QS" }] };
+  const company = { ...row(), factsVersion: 4, factsCheckedAt: now, financials: { cash: { value: 100, end: "2023-12-31", stale: true } } };
+  const research = { schemaVersion: 1, documents: [], reviews: [], sourceCheckedAt: now, generatedAt: now, coverage: { totalSources: 1 }, companies: { QS: company } };
+  const monitor = { schemaVersion: 1, events: [], generatedAt: now, sources: { source: { id: "source", status: "ok", lastSuccessAt: now } } };
+  assert.ok(!researchHealth(research, monitor, Date.parse(now), scope).warnings.some(w => /financial source/.test(w)));
+  for (const patch of [{ factsVersion: 3 }, { factsCheckedAt: "2026-10-12T00:00:00Z" }, { factsError: "HTTP 503" }]) {
+    const result = researchHealth({ ...research, companies: { QS: { ...company, ...patch } } }, monitor, Date.parse(now), scope);
+    assert.match(result.warnings.join(" "), /financial source check.*36-hour/);
+  }
+});
 test("collection removes legacy valuation even when quotes use the cache", async () => {
-  const previous = { companies: { QS: { ...row(), quoteAttemptAt: now, factsVersion: 3, factsCheckedAt: now, valuation: { marketCap: 999, asOf: now } } } };
+  const previous = { companies: { QS: { ...row(), quoteAttemptAt: now, factsVersion: 4, factsCheckedAt: now, valuation: { marketCap: 999, asOf: now } } } };
   const result = await collectCompanies({ companies: [{ ticker: "QS" }] }, {}, previous, { now, fetchImpl: async () => { throw Error("must use cache"); }, sleep: async () => {} });
   assert.equal(result.companies.QS.valuation, null);
+  assert.equal(result.companies.QS.factsAttemptAt, undefined);
 });
 test("a valid refresh repairs an invalid retained quote instead of preserving its future timestamp", async () => {
   const broken = row(); broken.quote.asOf = "2027-01-01T00:00:00Z";
-  const previous = { companies: { QS: { ...broken, quoteAttemptAt: "2026-10-01T00:00:00Z", factsVersion: 3, factsCheckedAt: now } } };
+  const previous = { companies: { QS: { ...broken, quoteAttemptAt: "2026-10-01T00:00:00Z", factsVersion: 4, factsCheckedAt: now } } };
   const result = await collectCompanies({ companies: [{ ticker: "QS" }] }, {}, previous, { now, sleep: async () => {}, fetchImpl: async () => new Response(JSON.stringify({ chart: { result: [{ meta: { symbol: "QS", regularMarketPrice: 7, regularMarketTime: Date.parse(now) / 1000, currency: "USD" } }] } }), { headers: { "content-type": "application/json" } }) });
   assert.equal(result.companies.QS.quote.price, 7);
   assert.equal(model.companyQuote(result.companies.QS, "QS", Date.parse(now)).current, true);

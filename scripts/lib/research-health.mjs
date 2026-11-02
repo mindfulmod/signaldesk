@@ -21,7 +21,7 @@ export function researchHealth(research, monitor, now = Date.now(), scope = conf
   const audit = model.sourceAudit(scope.sources, monitor, now);
   const current = audit.rows.filter(row => row.readable).map(row => row.state);
   if (!active.length || states.length !== expected || current.length < Math.ceil(active.length * .8)) errors.push(`Only ${current.length}/${active.length} active sources passed a check in the last 36 hours (target: at least 80%)`);
-  for (const s of states.filter(s => activeIds.has(s.id) && !current.includes(s))) warnings.push(`${s.id}: ${s.error || "Source check overdue"}`);
+  for (const row of audit.rows.filter(row => row.issue === "collection")) warnings.push(`${row.source.id}: ${row.state.error || row.label}; ${row.next}`);
   for (const s of scope.sources.filter(s => !activeIds.has(s.id))) warnings.push(`${s.id}: intentionally paused pending permission review; retained records are historical`);
   for (const row of audit.rows.filter(row => row.issue === "content" && !row.source.discovery)) warnings.push(`${row.source.id}: ${row.label.toLowerCase()}; ${row.next}`);
   const discovery = active.filter(s => s.discovery), discoveryCurrent = discovery.filter(s => current.some(row => row.id === s.id));
@@ -48,7 +48,7 @@ export function researchHealth(research, monitor, now = Date.now(), scope = conf
   for (const quote of quotes.filter(q => !q.current)) warnings.push(`${quote.ticker}: ${quote.reason}`);
   for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.valuation) errors.push(`${ticker}: unsupported capitalization; quote timestamps do not establish capitalization dates`);
   if (!companies.length || companies.length !== scope.companies.length || scope.companies.some(c => !research?.companies?.[c.ticker])) errors.push("Permanent company universe is incomplete");
-  for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.factsError || model.freshness(company.factsCheckedAt, now, 192) !== "current") warnings.push(ticker + ": financial source check unavailable or older than eight days; inspect original reporting periods");
+  for (const [ticker, company] of Object.entries(research?.companies || {})) if (company.factsError || company.factsVersion !== 4 || model.freshness(company.factsCheckedAt, now, 36) !== "current") warnings.push(ticker + ": financial source check failed, incomplete or overdue (36-hour limit); retained figures keep their original reporting periods");
   if (covered.length < scope.companies.length) warnings.push(`Usable recent prices: ${covered.length}/${scope.companies.length}; missing, invalid and stale prices must remain labeled`);
   if (scope.companies.length && covered.length < Math.ceil(scope.companies.length * .75)) errors.push("Fewer than 75% of tracked companies have a valid sourced quote within 96 hours");
   return { ok: !errors.length, errors, warnings, sourceCoverage: `${current.length}/${active.length} active`, contentChecks: audit.contentIssues, pausedSources: expected - active.length, discoveryCoverage: `${discoveryCurrent.length}/${discovery.length} current`, quoteCoverage: `${covered.length}/${scope.companies.length}` };

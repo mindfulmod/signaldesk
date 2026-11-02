@@ -4,12 +4,13 @@ import { readFileSync } from "node:fs";
 import { verifyResearchPublication } from "../verify-publication.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const now = "2026-10-14T02:00:00Z", older = "2026-10-14T01:00:00Z";
 const scope = { sources: [{ id: "test" }], companies: [{ ticker: "TEST" }] };
 const pair = (sourceAt = now, generatedAt = now) => ({
   research: { schemaVersion: 1, generatedAt, sourceCheckedAt: sourceAt, documents: [], reviews: [], coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", now), factsCheckedAt: now } } },
-  monitor: { schemaVersion: 1, generatedAt: sourceAt, events: [], sources: { test: { id: "test", status: "ok", lastSuccessAt: sourceAt } } }
+  monitor: { schemaVersion: 1, generatedAt: sourceAt, events: [], sources: { test: { ...sourceReceipt(scope.sources[0]), id: "test", status: "ok", lastSuccessAt: sourceAt } } }
 });
 const options = { clock: () => Date.parse(now), attempts: 2, sleep: async () => {} };
 
@@ -31,9 +32,9 @@ test("publication rejects persistent mismatches, missing files and invalid schem
   ]) await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => actual, options), /Last check: .*different updates|Last check: .*incomplete or invalid/);
   await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => { throw Error("Source-check HTTP 503"); }, options), /Last check: Source-check HTTP 503/);
 });
-test("a newer assembly cannot disguise older source checks, but a coherent newer collection is accepted", async () => {
+test("a newer assembly cannot disguise older source checks or substitute a different collection", async () => {
   const expected = pair(older, older);
-  assert.equal(await verifyResearchPublication(expected.research, expected.monitor, async () => pair(), options), true);
+  await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => pair(), options), /source-check contents do not match/);
   const current = pair();
   await assert.rejects(verifyResearchPublication(current.research, current.monitor, async () => pair(older), options), /older than the expected collection/);
   const companyRefresh = pair(older);

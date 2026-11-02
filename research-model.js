@@ -18,6 +18,18 @@
   }
   function ageHours(value, now = Date.now()) { const time = date(value); return time === null ? null : (Number(now) - time) / 3600000; }
   function freshness(value, now = Date.now(), hours = 36) { const age = ageHours(value, now); return age === null ? "missing" : age < -.1 ? "invalid" : age > hours ? "overdue" : "current"; }
+  // Invalidate filtered caches when extraction/provenance settings change.
+  const SOURCE_EXTRACTOR_VERSION = 5;
+  function sourceContract(source) {
+    const set = values => [...new Set(values || [])].sort();
+    return JSON.stringify([1, SOURCE_EXTRACTOR_VERSION, source.id, source.url, source.format || "html", source.mode || "links",
+      set(source.allowedHosts), set((source.terms || []).map(term => term.toLowerCase())), source.linkPattern || null,
+      source.cik || null, Boolean(source.enrichArticles), Boolean(source.metadataOnly), source.owner || null,
+      source.name || null, set(source.themes), source.tier || null, Boolean(source.discovery)]);
+  }
+  function sourceCompatible(source, state) {
+    return state?.extractorVersion === SOURCE_EXTRACTOR_VERSION && state.sourceUrl === source.url && state.sourceContract === sourceContract(source);
+  }
   function companyQuote(row, ticker, now = Date.now()) {
     const q = row?.quote;
     if (!q) return { state: "missing", usable: false, current: false, reason: "No saved quote. Check the original quote source." };
@@ -40,14 +52,14 @@
     const rows = sources.map(source => {
       const state = monitor?.sources?.[source.id] || {};
       const paused = source.accessStatus === "permission-required" || state.status === "paused";
-      const compatible = !state.sourceUrl || state.sourceUrl === source.url;
+      const compatible = sourceCompatible(source, state);
       const checked = freshness(state.lastSuccessAt, now, source.freshnessHours || source.intervalHours * 2 || 36);
       const readable = !paused && compatible && state.status === "ok" && checked === "current";
       const publication = freshness(state.newestPublicationAt, now, source.quietAfterDays ? source.quietAfterDays * 24 : Infinity);
       let issue = "", label = "Readable", next = "Inspect the original before accepting a claim; collection does not verify adoption.";
       if (paused) { issue = "paused"; label = "Paused"; next = "Resolve access permission or choose an authorized replacement. Retained records are historical."; }
-      else if (!compatible) { issue = "collection"; label = "Source changed"; next = "Collect the configured endpoint before using its previous check as current coverage."; }
       else if (state.status === "error") { issue = "collection"; label = "Check failed"; next = /403|401/.test(state.error || "") ? "Review source access or use another authorized source. Do not bypass the refusal." : "Wait for the scheduled retry; use dated original evidence in the meantime."; }
+      else if (!compatible && state.lastSuccessAt) { issue = "collection"; label = state.sourceContract ? "Source settings changed" : "Collection contract unconfirmed"; next = "A successful collection with the current source settings is required. Retained evidence keeps its original dates; reload does not run collection."; }
       else if (!readable) { issue = "collection"; label = checked === "overdue" ? "Check overdue" : "Check unconfirmed"; next = "Inspect the scheduled collection. Reload only retrieves the saved snapshot."; }
       else if (source.mode === "links" && state.matchedItems === 0) { issue = "content"; label = "No matching items"; next = "Inspect the feed and keyword filter. An empty sample is not proof that development stopped."; }
       else if (source.mode === "links" && (!Number.isInteger(state.matchedItems) || state.matchedItems < 0)) { issue = "content"; label = "Sample count unknown"; next = "Check the extraction contract before interpreting this source's coverage."; }
@@ -56,7 +68,7 @@
       return { source, state, readable, issue, label, next };
     });
     const groups = { attention: rows.filter(r => r.issue && r.issue !== "paused"), readable: rows.filter(r => !r.issue), paused: rows.filter(r => r.issue === "paused") };
-    groups.attention.sort((a, b) => Number(b.issue === "collection") - Number(a.issue === "collection") || a.source.name.localeCompare(b.source.name));
+    groups.attention.sort((a, b) => Number(b.issue === "collection") - Number(a.issue === "collection") || String(a.source.name || a.source.id).localeCompare(String(b.source.name || b.source.id)));
     return { rows, groups, active: rows.length - groups.paused.length, readable: rows.filter(r => r.readable).length,
       collectionIssues: rows.filter(r => r.issue === "collection").length, contentIssues: rows.filter(r => r.issue === "content").length };
   }
@@ -136,18 +148,26 @@
       ...r, display: r.claim, publisher: r.owner, checkedAt: r.reviewedAt.slice(0, 10), editorialReview: true,
     }))] }));
   }
-  function financialContext(company) {
-    const f = company?.financials || {}, cash = f.cash, flow = f.operatingCashFlow;
-    let runwayMonths = null;
-    const duration = flow?.start && flow?.end ? (date(flow.end) - date(flow.start)) / 86400000 + 1 : 0;
-    if (!cash?.stale && !flow?.stale && Number.isFinite(cash?.value) && Number.isFinite(flow?.value) && cash.value >= 0 && flow.value < 0 && cash.unit === flow.unit && cash.end === flow.end && duration >= 80 && duration <= 400) runwayMonths = cash.value / -flow.value * duration / 30.4375;
-    return { runwayMonths, runwayCaveat: "Cash and equivalents only, divided by historical operating burn. Excludes marketable securities, other liquidity, capital expenditure, financing and future changes. This is not the company's total cash runway or a forecast." };
+  const investmentKeys = ["marketableSecuritiesCurrent", "marketableSecuritiesNoncurrent", "shortTermInvestments"];
+  function fundingContext(company) {
+    const f = company?.financials || {};
+    const reported = company?.factsVersion === 4 ? investmentKeys.filter(key => f[key]) : [];
+    const balanceDate = f.cash?.end || reported.map(key => f[key].end).filter(Boolean).sort().at(-1);
+    const current = reported.filter(key => !f[key].stale && f[key].end === balanceDate);
+    const historical = reported.filter(key => !current.includes(key));
+    return { investmentKeys: current, historicalInvestmentKeys: historical,
+      coverage: company?.factsVersion !== 4 ? "Investment coverage has not been collected under the current protocol. Cash is not total liquidity."
+        : current.length ? `Reported investment lines are shown separately. Categories can overlap; amounts are not summed.${historical.length ? " Older balances stay in history below." : ""}`
+        : historical.length ? "Only older investment observations are retained. Current holdings are not established; missing coverage is not zero."
+        : "No supported investment line was found in the collected taxonomy. This does not mean investment holdings are zero.",
+      caveat: "No runway forecast is calculated. Securities may have restrictions or valuation risk. Operating cash flow excludes capital expenditure and financing; past spending is not a forecast.",
+      nextCheck: "Check investment maturities and restrictions, debt repayments, planned capital spending and financing commitments in the latest filing." };
   }
   function financialDisplay(company) {
-    if (company?.factsVersion === 3) return company;
-    const filter = rows => Object.fromEntries(Object.entries(rows || {}).filter(([key]) => !["revenue", "shares"].includes(key)));
+    if (company?.factsVersion === 4) return company;
+    const filter = rows => Object.fromEntries(Object.entries(rows || {}).filter(([key]) => ![...investmentKeys, ...(company?.factsVersion === 3 ? [] : ["revenue", "shares"])].includes(key)));
     return { ...company, financials: filter(company?.financials), histories: filter(company?.histories),
-      factsError: [company?.factsError, "Legacy revenue/share selection withheld pending context-aware refresh"].filter(Boolean).join("; ") };
+      factsError: [company?.factsError, company?.factsVersion === 3 ? "" : "Legacy revenue/share selection withheld pending context-aware refresh"].filter(Boolean).join("; ") };
   }
   function buildBrief({ themes = [], research, monitor, followed = [], now = Date.now() }) {
     const followedIds = new Set(followed);
@@ -161,5 +181,5 @@
       checkpoints: selected.map(t => ({ id: t.id, name: t.name, check: t.nextCheck, due: t.reviewDue, overdue: date(t.reviewDue) < Number(now) - 86400000 })),
       unknowns: selected.map(t => ({ id: t.id, name: t.name, unknown: t.unknowns[0], risk: t.risk })) };
   }
-  return { safeUrl, supportingSource, ageHours, freshness, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, financialContext, financialDisplay, buildBrief };
+  return { safeUrl, supportingSource, ageHours, freshness, SOURCE_EXTRACTOR_VERSION, sourceContract, sourceCompatible, companyQuote, sourceAudit, validateReview, activeReviews, correctionDraft, reconcileDrafts, reviewedThemes, fundingContext, financialDisplay, buildBrief };
 });

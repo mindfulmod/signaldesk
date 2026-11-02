@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { PUBLICATIONS, publicationFiles, parseBundle, validatePublication } from "../lib/publication-safety.mjs";
 import { companyQuoteFixture } from "./helpers/company-quote.mjs";
 import { publicProcurement } from "../lib/procurement-discovery.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 
 const at = "2026-11-02T16:00:00.000Z", now = Date.parse(at);
 const scope = { sources: [{ id: "lab" }], companies: [{ ticker: "TEST" }] };
@@ -16,7 +17,7 @@ function fixture(kind) {
   } : {
     research: { schemaVersion: 1, generatedAt: at, sourceCheckedAt: at, documents: [], reviews: [],
       coverage: { totalSources: 1 }, companies: { TEST: { ...companyQuoteFixture("TEST", at), factsCheckedAt: at } } },
-    "technology-monitor": { schemaVersion: 1, generatedAt: at, events: [], sources: { lab: { id: "lab", status: "ok", lastSuccessAt: at } } },
+    "technology-monitor": { schemaVersion: 1, generatedAt: at, events: [], sources: { lab: { ...sourceReceipt(scope.sources[0]), id: "lab", status: "ok", lastSuccessAt: at } } },
   };
   const files = {};
   if (kind === "research") {
@@ -111,5 +112,20 @@ test("workflow writers are gated, revalidate after rebase and retain diagnostics
     assert.match(workflow, /github\.run_attempt/);
     assert.match(workflow, /scripts\/check-(?:market|research)-health\.mjs --live/);
     assert.ok(!workflow.includes("continue-on-error"), "candidate failure must fail the job");
+  }
+});
+
+test("both publication writers retain queued runs under one non-cancelling lock", () => {
+  for (const filename of ["refresh-data.yml", "refresh-research.yml"]) {
+    const workflow = readFileSync(new URL(`../../.github/workflows/${filename}`, import.meta.url), "utf8");
+    const block = workflow.match(/^concurrency:\n((?:[ \t]+[^\n]*\n)+)/m)?.[1];
+    assert.ok(block, `${filename}: workflow-level writer lock required`);
+    assert.match(block, /^  group: signaldesk-data-writer$/m);
+    assert.match(block, /^  cancel-in-progress: false$/m);
+    assert.match(block, /^  queue: max$/m, `${filename}: a single pending slot drops the other writer`);
+    assert.equal((workflow.match(/^\s*concurrency:/gm) || []).length, 1, "no nested lock can deadlock or replace this queue");
+    assert.match(workflow, /ref: main/, "queued jobs must read current main when they start");
+    assert.match(workflow, /timeout-minutes: (?:20|35)/, "writers remain time-bounded");
+    assert.match(workflow, /git pull --rebase origin main/);
   }
 });

@@ -7,6 +7,32 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 company funding: financial protocol 4 adds separate current/noncurrent
+marketable securities and short-term investments. Never sum these automatically:
+taxonomy categories can overlap. Investment dates must match the cash balance
+and not be stale to appear in the current cards; older observations stay in an
+explicit history disclosure. Unknown is not zero. Cash-only months-of-burn has
+been removed; do not restore it as a runway headline. The funding view keeps
+original dates and source links visible, with accounting tags in disclosures.
+Financial collection is eligible every 24 hours or on a new filing, with six-hour
+failed retries; the watchdog warns after 36 hours. Collection freshness does not
+make an old reporting period current.
+
+November 2 research finder: `research-search.js` indexes the loaded technology
+profiles, permanent companies, latest document version per source/URL and source
+websites. It is not full-text, whole-market, notebook or Public R&D action search.
+Documents sort by original publication/submission date (unknown last), never
+collection time. Community submissions must be labeled Submitted, not Published;
+they do not establish the linked article's publication date. Show the URL path
+to distinguish same-titled filings/releases. Keep the
+trigger outside the visually hidden `.tech-workspace-title`, and the native
+dialog outside `#techContent` so rerenders cannot erase typing. Search never
+resets filters or notebook fields; profile navigation is disabled during an
+open evidence review. Escape closes on its first press even from a populated
+search input; cancellation restores the trigger and selection focuses the
+destination. Tab wraps within the dialog, arrow keys move among results and
+composition input is not hijacked. This frequent action has no motion delay.
+
 November 2 deferred stock history: `stock-history-loader.js` owns a single bounded
 archive download. `script.js` initializes the latest snapshot without waiting for
 history; `tabs.js` requests history on Desk entry or expansion of Market research
@@ -18,6 +44,18 @@ archive; delayed responses must not overwrite a completed retry. Preserve focus,
 search, filters, disclosures and stock selection when history arrives. Technology
 editors must never be rebuilt by this stock-only update. File mode reuses its
 already loaded bundle; HTTP must not download the JavaScript archive twin.
+
+November 2 source-cache integrity: `research-model.js.sourceContract` is the
+shared extraction/provenance identity. URL equality alone cannot validate a
+cached filtered feed. The collector must fetch without conditional validators
+after contract changes, then establish a baseline without false fresh-news alerts.
+Only successful extraction writes a new receipt. Failed migrations retain the
+old evidence and contract, respect backoff, and remain non-current. Source health,
+Discover coverage, document ingestion and comparable-day receipts share this
+check. Legacy records remain inspectable but unconfirmed until recollected;
+never add contract receipts to generated data without real collection. Bump the
+shared extractor version when parser semantics change. Old discovery comparison
+days move to legacy history, not the new comparable window.
 
 November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
 of adoption/operating tracker values and comparable growth; show its separate

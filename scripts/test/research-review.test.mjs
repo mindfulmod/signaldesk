@@ -133,6 +133,26 @@ test("company views work without data and never manufacture a zero quote", () =>
   assert.match(html, /Price alone cannot establish/);
   assert.ok(!html.includes("0 USD"));
 });
+test("company funding views expose separate balances, periods and source details without runway or summed liquidity", () => {
+  const fact = { value: 75599000, unit: "USD", end: "2026-09-30", filed: "2026-10-23", form: "10-Q", tag: "CashAndCashEquivalentsAtCarryingValue", context: "Inspect filing context", url: "https://www.sec.gov/Archives/edgar/data/1811414/000119312526430428/qs-20260930.htm" };
+  const company = { factsVersion: 4, financials: { cash: fact, marketableSecuritiesCurrent: { ...fact, value: 744184000, tag: "MarketableSecuritiesCurrent" }, shortTermInvestments: { ...fact, value: 744184000, end: "2026-06-30", tag: "ShortTermInvestments" }, operatingCashFlow: { ...fact, value: -171319000, start: "2026-01-01" } } };
+  const html = views.companies(registry.themes, { companies: { QS: company } }, "QS");
+  assert.match(html, /Funding &amp; spending/);
+  assert.match(html, /75\.6M USD/);
+  assert.match(html, /744\.18M USD/);
+  assert.match(html, /2026-06-30/);
+  assert.match(html, /2026-01-01 → 2026-09-30/);
+  assert.match(html, /Categories can overlap/);
+  assert.match(html, /No runway forecast is calculated/);
+  assert.ok(!/819\.78|3\.96|months of|Cash-only burn coverage/.test(html));
+  assert.match(html, /<summary>Source &amp; accounting context<\/summary>/);
+  assert.match(html, /<summary>Shares &amp; debt details<\/summary>/);
+  const legacy = views.companies(registry.themes, { companies: { QS: { ...company, factsVersion: 3 } } }, "QS");
+  assert.match(legacy, /Investment coverage has not been collected/);
+  assert.ok(!legacy.includes("744.18M"));
+  const missing = views.companies(registry.themes, { companies: { QS: { factsVersion: 4 } } }, "QS");
+  assert.match(missing, /does not mean investment holdings are zero/);
+});
 test("tracker comparisons retain unknowns, source dates and product limitations", () => {
   const state = { compare: [], batteryStage: "all", country: "all", serviceStatus: "all" };
   const battery = views.trackers("batteries", null, state), satellite = views.trackers("satellite", null, state);
@@ -147,6 +167,19 @@ test("untrusted source and review text is escaped in queues and editors", () => 
   const editor = views.reviewEditor(malicious, registry.themes, [], { reviewer: '" autofocus onfocus="alert(1)' });
   assert.ok(!queue.includes("<img")); assert.ok(!queue.includes("<script>")); assert.match(queue, /&lt;img/);
   assert.ok(!editor.includes('value="" autofocus')); assert.match(editor, /&quot;/);
+});
+test("community submission dates stay distinct in the queue and do not prefill claim publication", () => {
+  const submitted = { ...document, dateKind: "community-submission", publishedAt: "2026-11-02T10:00:00Z" };
+  const state = { drafts: [], reviewFilter: "pending", dismissed: [], showDismissed: false, queueLimit: 24 };
+  const queue = views.reviewQueue(registry.themes, { documents: [submitted], reviews: [] }, state);
+  const editor = views.reviewEditor(submitted, registry.themes, []);
+  assert.match(queue, /Submitted 2026-11-02 UTC/);
+  assert.match(editor, /community submission, not the linked article/);
+  assert.match(editor, /name="publishedAt" value=""/);
+  const explicit = views.reviewEditor(submitted, registry.themes, [], { publishedAt: "2026-10-30" });
+  assert.match(explicit, /name="publishedAt" value="2026-10-30"/);
+  const article = views.reviewEditor({ ...document, publishedAt: "2026-10-30" }, registry.themes, []);
+  assert.match(article, /name="publishedAt" value="2026-10-30"/);
 });
 test("all research scripts load in dependency order and HTTP does not preload large JS twins", () => {
   const html = readFileSync(new URL("../../index.html", import.meta.url), "utf8");

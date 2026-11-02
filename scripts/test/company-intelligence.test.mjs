@@ -47,20 +47,88 @@ test("permanent company coverage survives provider failures without erasing old 
   assert.equal(collected.companies.QS.quoteCheckedAt, undefined);
 });
 test("cached prices respect a 12-hour cadence while companies remain present", async () => {
-  const quote = yahooQuote(quoteData, "QS", now), previous = { companies: { QS: { factsVersion: 3, factsCheckedAt: now, quoteAttemptAt: now, quote, quoteCheckedAt: now } } };
+  const quote = yahooQuote(quoteData, "QS", now), previous = { companies: { QS: { factsVersion: 4, factsCheckedAt: now, quoteAttemptAt: now, quote, quoteCheckedAt: now } } };
   let calls = 0;
   const result = await collectCompanies({ companies: [company] }, {}, previous, { now, sleep: async () => {}, fetchImpl: async () => { calls++; throw new Error("must not fetch"); } });
   assert.equal(calls, 0); assert.equal(result.companies.QS.quote, quote);
 });
-test("a new filing refreshes company facts before the weekly cache expires", async () => {
+test("a new filing refreshes company facts before the daily cache expires", async () => {
   let calls = 0;
-  const previous = { companies: { QS: { factsVersion: 3, factsCheckedAt: now, factsAccession: "old", quoteAttemptAt: now, quote: yahooQuote(quoteData, "QS", now) } } };
+  const previous = { companies: { QS: { factsVersion: 4, factsCheckedAt: now, factsAccession: "old", quoteAttemptAt: now, quote: yahooQuote(quoteData, "QS", now) } } };
   const result = await collectCompanies({ companies: [company] }, { sources: { "sec-qs": { items: [{ accession: "new" }] } } }, previous, { now, sleep: async () => {}, fetchImpl: async () => { calls++; return json({ facts: { "us-gaap": { CashAndCashEquivalentsAtCarryingValue: fact([point("2026-06-30", 300)]) } } }); } });
   assert.equal(calls, 1); assert.equal(result.companies.QS.factsAccession, "new");
 });
-test("cash-only coverage is absent for incompatible periods, currencies, stale or positive flows", () => {
-  const cash = { value: 100, unit: "USD", end: "2026-06-30" }, operatingCashFlow = { value: -50, unit: "USD", start: "2026-01-01", end: "2026-06-30" };
-  assert.ok(model.financialContext({ financials: { cash, operatingCashFlow } }).runwayMonths > 11);
-  for (const patch of [{ unit: "JPY" }, { end: "2026-03-31" }, { value: 50 }, { stale: true }, { start: "2026-06-01" }]) assert.equal(model.financialContext({ financials: { cash, operatingCashFlow: { ...operatingCashFlow, ...patch } } }).runwayMonths, null);
-  assert.match(model.financialContext({}).runwayCaveat, /Excludes marketable securities/);
+test("funding context distinguishes missing investment coverage without calculating runway", () => {
+  const financials = { cash: { value: 100, end: "2026-06-30" }, marketableSecuritiesCurrent: { value: 200, end: "2026-06-30" }, shortTermInvestments: { value: 200, end: "2026-06-30" } };
+  const context = model.fundingContext({ factsVersion: 4, financials });
+  assert.deepEqual(context.investmentKeys, ["marketableSecuritiesCurrent", "shortTermInvestments"]);
+  assert.match(context.coverage, /overlap/);
+  assert.match(context.caveat, /No runway forecast/);
+  assert.equal(context.runwayMonths, undefined);
+  assert.equal(context.totalLiquidity, undefined);
+  assert.match(model.fundingContext({ factsVersion: 4 }).coverage, /does not mean.*zero/);
+  const legacy = model.financialDisplay({ factsVersion: 3, financials });
+  assert.deepEqual(legacy.financials, { cash: { value: 100, end: "2026-06-30" } });
+  assert.match(model.fundingContext(legacy).coverage, /not been collected/);
+});
+test("older investment balances remain inspectable without becoming current funding", () => {
+  const financials = { cash: { value: 100, end: "2026-09-30" }, marketableSecuritiesCurrent: { value: 200, end: "2026-06-30" }, marketableSecuritiesNoncurrent: { value: 30, end: "2011-03-31", stale: true } };
+  const context = model.fundingContext({ factsVersion: 4, financials });
+  assert.deepEqual(context.investmentKeys, []);
+  assert.deepEqual(context.historicalInvestmentKeys, ["marketableSecuritiesCurrent", "marketableSecuritiesNoncurrent"]);
+  assert.match(context.coverage, /Current holdings are not established/);
+});
+test("investment lines remain distinct and exclude generic, restricted, duration and invalid facts", () => {
+  const data = { facts: { "us-gaap": {
+    MarketableSecuritiesCurrent: fact([point("2026-06-30", 200)]),
+    MarketableSecuritiesNoncurrent: fact([point("2026-03-31", 30)]),
+    ShortTermInvestments: fact([point("2026-06-30", 200)]),
+    MarketableSecurities: fact([point("2026-06-30", 999)]),
+    RestrictedCashAndCashEquivalentsCurrent: fact([point("2026-06-30", 500)]),
+  } } };
+  const result = financialFacts(data, company, now);
+  assert.equal(result.financials.marketableSecuritiesCurrent.value, 200);
+  assert.equal(result.financials.marketableSecuritiesNoncurrent.end, "2026-03-31");
+  assert.equal(result.financials.shortTermInvestments.value, 200);
+  assert.equal(Object.keys(result.financials).length, 3);
+  assert.equal(result.financials.cash, undefined);
+  for (const patch of [{ start: "2026-01-01" }, { val: -1 }, { end: "2026-06-99" }, { filed: "2026-02-30" }, { filed: "2026-01-01" }, { accn: "123-4" }]) {
+    const bad = financialFacts({ facts: { "us-gaap": { MarketableSecuritiesCurrent: fact([point("2026-06-30", 200, patch)]) } } }, company, now);
+    assert.equal(bad.financials.marketableSecuritiesCurrent, undefined, JSON.stringify(patch));
+  }
+  const zero = financialFacts({ facts: { "us-gaap": { MarketableSecuritiesCurrent: fact([point("2026-06-30", 0)]) } } }, company, now);
+  assert.equal(zero.financials.marketableSecuritiesCurrent.value, 0);
+});
+test("conflicting investment facts are withheld, with provenance and alternatives retained", () => {
+  const result = financialFacts({ facts: { "us-gaap": { MarketableSecuritiesCurrent: fact([point("2026-06-30", 200), point("2026-06-30", 300)]) } } }, company, now);
+  const current = result.financials.marketableSecuritiesCurrent;
+  assert.equal(current.value, null);
+  assert.equal(current.alternatives.length, 2);
+  assert.equal(current.tag, "MarketableSecuritiesCurrent");
+  assert.match(current.selectionBasis, /Conflicting/);
+});
+test("financial coverage upgrades once, refreshes daily and bounds failed retries", async () => {
+  const quote = yahooQuote(quoteData, "QS", now);
+  const prior = { factsVersion: 3, factsCheckedAt: now, quoteAttemptAt: now, quote, quoteCheckedAt: now };
+  let calls = 0, pauses = [];
+  const good = async () => { calls++; return json({ facts: { "us-gaap": { CashAndCashEquivalentsAtCarryingValue: fact([point("2026-06-30", 100)]), MarketableSecuritiesCurrent: fact([point("2026-06-30", 200)]) } } }); };
+  const options = { now, fetchImpl: good, sleep: async ms => pauses.push(ms) };
+  const upgraded = await collectCompanies({ companies: [company] }, {}, { companies: { QS: prior } }, options);
+  assert.equal(calls, 1); assert.equal(upgraded.companies.QS.factsVersion, 4);
+  assert.deepEqual(pauses, [200]);
+  const fresh = await collectCompanies({ companies: [company] }, {}, upgraded, options);
+  assert.equal(calls, 1);
+  const tomorrow = "2026-10-03T21:00:00Z";
+  fresh.companies.QS.quoteAttemptAt = tomorrow;
+  await collectCompanies({ companies: [company] }, {}, fresh, { ...options, now: tomorrow });
+  assert.equal(calls, 2);
+  const failed = await collectCompanies({ companies: [company] }, {}, fresh, { ...options, now: tomorrow, fetchImpl: async () => { calls++; throw Error("temporary source failure"); } });
+  assert.equal(failed.companies.QS.financials.marketableSecuritiesCurrent.value, 200);
+  assert.equal(failed.companies.QS.factsCheckedAt, now);
+  const attempted = calls;
+  await collectCompanies({ companies: [company] }, {}, failed, { ...options, now: "2026-10-03T23:00:00Z" });
+  assert.equal(calls, attempted);
+  failed.companies.QS.quoteAttemptAt = "2026-10-04T03:00:00Z";
+  await collectCompanies({ companies: [company] }, {}, failed, { ...options, now: "2026-10-04T03:00:00Z" });
+  assert.equal(calls, attempted + 1);
 });

@@ -17,6 +17,7 @@ import { financialFacts } from "../lib/company-intelligence.mjs";
 import { buildDocumentInventory, discoverTopics, headlineSignal } from "../lib/research-intelligence.mjs";
 import { articleMetadata, collectTechnology, extractFilings } from "../lib/technology-monitor.mjs";
 import { researchHealth } from "../lib/research-health.mjs";
+import { sourceReceipt } from "./helpers/source-receipt.mjs";
 import { buildLogEntries, updateCalibrationLog, themeRelativeReturn, findCloseNear } from "../lib/calibration.mjs";
 
 const now = "2026-10-09T20:00:00Z", priorDay = "2026-10-08T20:00:00Z";
@@ -202,12 +203,12 @@ const viewsContext={window:{SIGNALDESK_RESEARCH_CONFIG:config,SIGNALDESK_RESEARC
 vm.runInNewContext(readFileSync(new URL("../../research-views.js",import.meta.url),"utf8"),viewsContext);
 const views=viewsContext.window.SIGNALDESK_RESEARCH_VIEWS;
 test("H16: brief excludes paused collectors from current coverage", () => {
-  const monitor = {sources: Object.fromEntries(config.sources.map(s => [s.id,{status:"ok", lastSuccessAt: new Date().toISOString()}]))};
+  const monitor = {sources: Object.fromEntries(config.sources.map(s => [s.id,{...sourceReceipt(s), status:"ok", lastSuccessAt: new Date().toISOString()}]))};
   const html = views.brief(registry.themes, {generatedAt:new Date().toISOString(), documents:[], reviews:[], coverage:{readableSources:22}}, monitor, [], "ready");
   const active = config.sources.filter(s => s.accessStatus !== "permission-required").length;
-  assert.ok(html.includes(`${active}/${active} active sources readable · 2 paused`));
+  assert.ok(html.includes(`${active}/${active} active sources readable · ${config.sources.length - active} paused`));
   const scope = {sources:[{id:"active"},{id:"paused",accessStatus:"permission-required"}],companies:[{ticker:"QS"}]};
-  const health = researchHealth({schemaVersion:1,documents:[],reviews:[],sourceCheckedAt:now,generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{schemaVersion:1,events:[],generatedAt:now,sources:{active:{id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
+  const health = researchHealth({schemaVersion:1,documents:[],reviews:[],sourceCheckedAt:now,generatedAt:now,coverage:{totalSources:2},companies:{QS:{...companyQuoteFixture("QS",now),factsCheckedAt:now}}},{schemaVersion:1,events:[],generatedAt:now,sources:{active:{...sourceReceipt(scope.sources[0]),id:"active",status:"ok",lastSuccessAt:now},paused:{id:"paused",status:"paused"}}},Date.parse(now),scope);
   assert.equal(health.ok,true); assert.equal(health.sourceCoverage,"1/1 active"); assert.equal(health.pausedSources,1);
 });
 test("H09: real controller theme scope allows incident, holographic, Nobel and owner search", () => {
@@ -238,7 +239,7 @@ test("H10: published drafts reconcile, edits preserve content and corrections ge
 test("H11: capacity/age eviction cannot turn unchanged documents into new events; review refs survive", () => {
   const sources=Array.from({length:4},(_,i)=>({id:"s"+i,owner:"Lab",themes:[],mode:"links"}));
   const registry={sources,themes:[]};
-  const state={sources:Object.fromEntries(sources.map(s=>[s.id,{status:"ok",lastSuccessAt:now,baselineAt:now,items:Array.from({length:1001},(_,i)=>({url:`https://example.org/${s.id}/${i}`,title:"Original article "+i}))}]))};
+  const state={sources:Object.fromEntries(sources.map(s=>[s.id,{...sourceReceipt(s),status:"ok",lastSuccessAt:now,baselineAt:now,items:Array.from({length:1001},(_,i)=>({url:`https://example.org/${s.id}/${i}`,title:"Original article "+i}))}]))};
   const first=buildDocumentInventory(registry,state,{},now);assert.equal(first.documents.length,4004);assert.equal(Object.keys(first.documentIndex).length,4004);
   for(const s of Object.values(state.sources))s.lastSuccessAt="2026-10-10T20:00:00Z";
   const next=buildDocumentInventory(registry,state,first,"2026-10-10T20:00:00Z");
@@ -272,13 +273,13 @@ test("H15: unrelated articles have no accept/technology/kind defaults", () => {
   assert.match(html,/Choose a decision/);assert.match(html,/Choose a technology/);assert.match(html,/Choose an evidence kind/);
   assert.doesNotMatch(html,/<option value="accepted" selected/);assert.match(html,/name="relevance"/);
   const toyota=registry.sources.find(s=>s.id==="sec-tm");
-  const result=buildDocumentInventory(registry,{sources:{[toyota.id]:{status:"ok",lastSuccessAt:now,items:[{url:"https://example.org/buyback",title:"Toyota announces a share buyback"}]}}},{},now);
+  const result=buildDocumentInventory(registry,{sources:{[toyota.id]:{...sourceReceipt(toyota),status:"ok",lastSuccessAt:now,items:[{url:"https://example.org/buyback",title:"Toyota announces a share buyback"}]}}},{},now);
   assert.deepEqual(result.documents[0].themes,[]);
 });
 
 test("H16: permission-paused sources cannot fetch even when forced", async () => {
   let calls=0;const sources=config.sources.filter(s=>s.accessStatus==="permission-required");
-  assert.equal(sources.length,2);
+  assert.deepEqual(sources.map(s => s.id).sort(), ["ast-investor", "tmobile-network", "tmobile-service"]);
   const result=await collectTechnology({sources},{},{now,force:true,fetchImpl:async()=>{calls++;throw Error("must not fetch");}});
   assert.equal(calls,0);assert.ok(Object.values(result.sources).every(s=>s.status==="paused"));
 });
