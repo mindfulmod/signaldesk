@@ -18,6 +18,8 @@ on:
       - "technology-model.js"
       - "scripts/update-technology.mjs"
       - "scripts/verify-publication.mjs"
+      - "scripts/validate-publication.mjs"
+      - "scripts/lib/publication-safety.mjs"
       - "scripts/check-research-health.mjs"
       - "scripts/lib/technology-monitor.mjs"
       - "scripts/lib/research-*.mjs"
@@ -44,13 +46,19 @@ jobs:
           for f in *.js scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
           node --test scripts/test/*.test.mjs
       - name: Collect source changes and company evidence
+        id: collect
         timeout-minutes: 12
         env:
           # Optional server-side Alpha Vantage key. Use only with appropriate
           # display/redistribution rights; never put a key in browser code.
           SIGNALDESK_QUOTE_API_KEY: ${{ secrets.SIGNALDESK_QUOTE_API_KEY }}
         run: node scripts/update-technology.mjs
+      - name: Validate research candidate before publication
+        id: preflight
+        run: node scripts/validate-publication.mjs research "$RUNNER_TEMP/research-publication.json"
       - name: Publish saved research
+        id: publish
+        if: ${{ !cancelled() && steps.collect.outcome == 'success' && steps.preflight.outcome == 'success' }}
         run: |
           FILES="data/technology-monitor-state.json data/technology-monitor.json data/technology-monitor.js data/company-intelligence.json data/research.json data/research.js"
           git config user.name "github-actions[bot]"
@@ -59,10 +67,27 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Refresh technology research and permanent company coverage"
           git pull --rebase origin main
+          node scripts/validate-publication.mjs research "$RUNNER_TEMP/research-publication.json"
           git push
       - name: Verify the public deployment
+        if: ${{ !cancelled() && steps.publish.outcome == 'success' }}
         timeout-minutes: 5
         run: node scripts/verify-publication.mjs research
       - name: Enforce source and price freshness targets
         if: ${{ !cancelled() }}
         run: node scripts/check-research-health.mjs --live
+      - name: Retain failed collection diagnostics
+        if: ${{ failure() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/research-publication.json
+            data/technology-monitor-state.json
+            data/technology-monitor.json
+            data/technology-monitor.js
+            data/company-intelligence.json
+            data/research.json
+            data/research.js

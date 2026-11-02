@@ -1,9 +1,9 @@
 import quality from "../../data-quality.js";
 import identity from "../../company-identity.js";
 
-// Operational release targets, not investment-model parameters. Keep degraded
-// snapshots available with warnings; fail the job after publication so an outage
-// cannot look like a healthy collection merely because some news was fetched.
+// Operational release targets, not investment-model parameters. Run before
+// publication to hold invalid candidates, and against the live site afterward.
+// Failed candidates belong in diagnostics, never a silently refreshed snapshot.
 export const MARKET_HEALTH_TARGETS = { minTickers: 50, minQuoteFraction: .75, maxSnapshotHours: 96, warnSnapshotHours: 36 };
 export function marketHealth(snapshot, now = Date.now(), targets = MARKET_HEALTH_TARGETS) {
   targets = { ...MARKET_HEALTH_TARGETS, ...targets };

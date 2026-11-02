@@ -13,6 +13,7 @@ on:
     paths:
       - ".github/workflows/refresh-data.yml"
       - "scripts/update-data.mjs"
+      - "scripts/validate-publication.mjs"
       - "scripts/lib/**"
       - "data/theme-overrides.json"
       - "script.js"
@@ -102,8 +103,14 @@ jobs:
           SIGNALDESK_NTFY_TOPIC: ${{ vars.SIGNALDESK_NTFY_TOPIC }}
         run: node scripts/update-data.mjs
 
-      - name: Commit refreshed data
+      - name: Validate market candidate before publication
+        id: preflight
         if: ${{ !cancelled() && steps.stocks.outcome == 'success' }}
+        run: node scripts/validate-publication.mjs market "$RUNNER_TEMP/market-publication.json"
+
+      - name: Commit refreshed data
+        id: publish
+        if: ${{ !cancelled() && steps.stocks.outcome == 'success' && steps.preflight.outcome == 'success' }}
         run: |
           FILES="data/signals.json data/signals.js data/history.json data/history.js data/ledger.json data/ledger.js data/theme-registry.json data/theme-registry.js data/springs.json data/springs.js data/themes.json data/themes.js data/diffusion-map.json data/diffusion-map.js data/diffusion-state.json data/co-mention-history.json data/clusters.json data/clusters.js data/leaders.json data/leaders.js data/hot-monitor.json data/hot-monitor.js data/phrase-history.json data/phrase-radar.json data/phrase-radar.js data/calibration-log.json data/calibration.json data/calibration.js data/alerts-log.json data/alerts-log.js data/alerts-state.json"
           if git diff --quiet -- $FILES && [ -z "$(git ls-files --others --exclude-standard -- $FILES)" ]; then
@@ -116,13 +123,26 @@ jobs:
           git add $FILES
           git commit -m "Refresh public stock signal data"
           git pull --rebase origin main
+          node scripts/validate-publication.mjs market "$RUNNER_TEMP/market-publication.json"
           git push
 
       - name: Verify public stock snapshot
-        if: ${{ !cancelled() && steps.stocks.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.publish.outcome == 'success' }}
         timeout-minutes: 5
         run: node scripts/verify-publication.mjs signals
 
       - name: Enforce published market coverage targets
-        if: ${{ !cancelled() && steps.stocks.outcome == 'success' }}
+        if: ${{ !cancelled() }}
         run: node scripts/check-market-health.mjs --live
+
+      - name: Retain failed collection diagnostics
+        if: ${{ failure() && (steps.stocks.outcome == 'success' || steps.stocks.outcome == 'failure') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/market-publication.json
+            data/*.json
+            data/*.js
