@@ -1,5 +1,58 @@
 # Research intelligence work plan
 
+## November 2 · Integrated release candidate
+
+Not deployed. `codex/release-candidate` integrates #11–#16 and #18, with #17
+already merged and verified on production (`c3a77ba`). The separate feature PRs
+remain open; this candidate is the combined review/deployment path, not approval
+to merge them individually. It resolves shared model exports, source-access and
+contract guards, frontend cache keys, and the Atom parser protocol bump to 5.
+
+An ordinary, non-forced collection at 20:45:38 UTC was run in an isolated folder
+seeded with all four saved research inputs. Its generated files were promoted
+into this branch only after publication validation passed. No receipts or dates
+were stamped by hand. Result: 20/21 active sources readable, 3 paused, 5/5
+discovery feeds current, 8/8 usable saved company quotes. QuantumScape newsroom
+403, empty Toyota/FCC samples and both capped Public R&D lanes remain warnings.
+These checks establish operational eligibility, not accuracy or adoption.
+
+Migration audit: all 1,516 old document versions retain their IDs, source IDs,
+URLs, titles, excerpts, publication and detection dates. The candidate contains
+1,567 versions. Published reviews and all retained source events are unchanged;
+there were zero new-link alerts during rebaselining. AST and both T-Mobile
+website records keep their original items and check times, with collection
+paused. The Public R&D journal is unchanged. Twenty-seven old discovery days
+remain in legacy history; one new-contract day is not a momentum series.
+Historical Atom date provenance is still uncertified; no new Atom source was
+enabled, and this migration does not retroactively verify old dates.
+
+Integrated QA found and fixed a cross-surface date-label issue: finder results,
+review queue and editor now distinguish community submission from publication.
+Community dates no longer prefill the claim publication field; existing drafts
+are preserved. Search orders revised articles by their original publication
+date rather than promoting a later version date.
+
+Verification: 528 tests pass on Node 20 and 24; JavaScript syntax, workflow YAML
+and diff checks pass. At 1440px/light and 375px/dark, table/radar/map routes all
+open the correct stock, phone sheets restore initiating focus, and no horizontal
+overflow or browser errors were observed. Finder navigation opens company
+funding context; populated Escape closes once and returns focus; open review
+navigation is disabled and typed content survives. An unsaved notebook survives
+company navigation and returns with its fields intact. QA-only text was removed
+without saving. HTTP and generated file-mode parity pass; an interactive file://
+browser test remains unavailable in this environment.
+
+Before deployment: obtain approval for the combined change, confirm GitHub
+checks, and reconcile any newer published data without overwriting history.
+After merge: verify Pages, both queued writers, exact public snapshot contents
+and source freshness. Do not call the queue reliable from local tests alone.
+
+Next product work: reduce awkward auto-extracted pattern names (observed examples
+include “engine built around agent” and vendor/promotion fragments), improve
+independent-owner corroboration without manufacturing adoption evidence, and
+resolve empty/blocked coverage using authorized sources. Editorial review dates,
+measured consumer traction and historical market-model validation remain open.
+
 ## November 2 · Refresh queue reliability candidate
 
 Not deployed. Production research runs 41495966944 and 41496056320 were cancelled

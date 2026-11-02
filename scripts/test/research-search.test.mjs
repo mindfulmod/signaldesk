@@ -99,9 +99,23 @@ test("documents sort by original publication and distinguish same-titled source 
   ] } });
   const result = search.search(rows, "satellite");
   assert.deepEqual(result.groups[0].rows.map(r => r.id), ["newer", "older", "unknown"]);
-  assert.match(search.markup(result), /newest published first; undated last/);
+  assert.match(search.markup(result), /newest dated first; undated last/);
   assert.match(search.markup(result), /example.org\/222/);
   assert.equal(search.search(rows, "222").total, 1);
+});
+
+test("finder distinguishes community submission dates and never promotes a revised article's date", () => {
+  const rows = search.index({ research: { documents: [
+    { id: "revised", title: "Satellite article", url: "https://example.org/article", publishedAt: "2026-11-02", originalPublishedAt: "2026-10-01" },
+    { id: "submission", title: "Satellite discussion", url: "https://news.ycombinator.com/item?id=123", dateKind: "community-submission", publishedAt: "2026-10-15" },
+    { id: "unknown", title: "Satellite discussion", url: "https://news.ycombinator.com/item?id=456", dateKind: "community-submission", detectedAt: "2026-11-02" },
+  ] } });
+  const result = search.search(rows, "satellite");
+  assert.deepEqual(result.groups[0].rows.map(r => r.id), ["submission", "revised", "unknown"]);
+  assert.match(rows.find(r => r.id === "submission").meta, /Submitted 2026-10-15.*not article publication/);
+  assert.match(rows.find(r => r.id === "revised").meta, /Published 2026-10-01/);
+  assert.match(rows.find(r => r.id === "unknown").meta, /Submission date unknown/);
+  assert.doesNotMatch(search.markup(result), /2026-11-02/);
 });
 
 test("arrow navigation wraps results, ignores composition, and leaves Tab native", () => {

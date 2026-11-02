@@ -168,6 +168,19 @@ test("untrusted source and review text is escaped in queues and editors", () => 
   assert.ok(!queue.includes("<img")); assert.ok(!queue.includes("<script>")); assert.match(queue, /&lt;img/);
   assert.ok(!editor.includes('value="" autofocus')); assert.match(editor, /&quot;/);
 });
+test("community submission dates stay distinct in the queue and do not prefill claim publication", () => {
+  const submitted = { ...document, dateKind: "community-submission", publishedAt: "2026-11-02T10:00:00Z" };
+  const state = { drafts: [], reviewFilter: "pending", dismissed: [], showDismissed: false, queueLimit: 24 };
+  const queue = views.reviewQueue(registry.themes, { documents: [submitted], reviews: [] }, state);
+  const editor = views.reviewEditor(submitted, registry.themes, []);
+  assert.match(queue, /Submitted 2026-11-02 UTC/);
+  assert.match(editor, /community submission, not the linked article/);
+  assert.match(editor, /name="publishedAt" value=""/);
+  const explicit = views.reviewEditor(submitted, registry.themes, [], { publishedAt: "2026-10-30" });
+  assert.match(explicit, /name="publishedAt" value="2026-10-30"/);
+  const article = views.reviewEditor({ ...document, publishedAt: "2026-10-30" }, registry.themes, []);
+  assert.match(article, /name="publishedAt" value="2026-10-30"/);
+});
 test("all research scripts load in dependency order and HTTP does not preload large JS twins", () => {
   const html = readFileSync(new URL("../../index.html", import.meta.url), "utf8");
   const scripts = ["research-config.js", "technology-registry.js", "research-model.js", "research-views.js", "adoption.js"];

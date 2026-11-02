@@ -21,8 +21,10 @@ make an old reporting period current.
 November 2 research finder: `research-search.js` indexes the loaded technology
 profiles, permanent companies, latest document version per source/URL and source
 websites. It is not full-text, whole-market, notebook or Public R&D action search.
-Documents sort by original publication date (unknown last), never collection
-time; show the URL path to distinguish same-titled filings/releases. Keep the
+Documents sort by original publication/submission date (unknown last), never
+collection time. Community submissions must be labeled Submitted, not Published;
+they do not establish the linked article's publication date. Show the URL path
+to distinguish same-titled filings/releases. Keep the
 trigger outside the visually hidden `.tech-workspace-title`, and the native
 dialog outside `#techContent` so rerenders cannot erase typing. Search never
 resets filters or notebook fields; profile navigation is disabled during an

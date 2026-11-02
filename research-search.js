@@ -25,9 +25,11 @@
       if (!old || String(d.detectedAt || "") > String(old.detectedAt || "")) latest.set(key, d);
     }
     for (const d of latest.values()) {
-      const published = publicationDate(d.publishedAt);
+      const published = publicationDate(d.originalPublishedAt || d.publishedAt);
+      const community = d.dateKind === "community-submission";
+      const dateLabel = published ? `${community ? "Submitted" : "Published"} ${published}` : `${community ? "Submission" : "Publication"} date unknown`;
       const url = safeUrl(d.url), location = new URL(url);
-      add({ type: "Document", id: d.id, title: d.title, url, published, location: `${location.hostname}${location.pathname}${location.search}`, meta: `${d.owner || "Source owner unknown"} · ${published ? `Published ${published}` : "Publication date unknown"}`, keywords: `${d.owner || ""} ${d.sourceId || ""} ${location.pathname}` });
+      add({ type: "Document", id: d.id, title: d.title, url, published, location: `${location.hostname}${location.pathname}${location.search}`, meta: `${d.owner || "Source owner unknown"} · ${dateLabel}${community ? " · community attention, not article publication" : ""}`, keywords: `${d.owner || ""} ${d.sourceId || ""} ${location.pathname}` });
     }
     return rows;
   }
@@ -44,7 +46,7 @@
   }
   function markup(result, { canNavigate = true } = {}) {
     const plural = { Technology: "Technologies", Company: "Companies", Document: "Documents", Source: "Sources" };
-    return result.groups.map(group => `<section><h3>${result.suggested ? "Explore technologies" : `${esc(group.total === 1 ? group.type : plural[group.type])} · ${group.total}`}${group.type === "Document" ? " · newest published first; undated last" : ""}</h3>${group.rows.map(r => {
+    return result.groups.map(group => `<section><h3>${result.suggested ? "Explore technologies" : `${esc(group.total === 1 ? group.type : plural[group.type])} · ${group.total}`}${group.type === "Document" ? " · newest dated first; undated last" : ""}</h3>${group.rows.map(r => {
       const inner = `<strong>${esc(r.title)}</strong><span>${esc(r.meta)}${r.url ? " · opens a new tab ↗" : ""}</span>${r.location ? `<span class="intel-find-location">${esc(r.location)}</span>` : ""}`;
       if (r.url) return `<a class="intel-find-result" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`;
       return `<button type="button" class="intel-find-result" data-${r.type === "Company" ? "open-company" : "open-tech"}="${esc(r.id)}"${canNavigate ? "" : " disabled"}>${inner}</button>`;
