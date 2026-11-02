@@ -121,9 +121,36 @@ The public watchdog also checks market coverage independently of research.
 in the snapshot separately from carried-forward prices and usable comparisons.
 Operational targets: at least 50 tickers and recent collected quotes for 75% of
 the universe; warn after 36 hours, fail after 96 hours (weekend tolerance, not a
-live-feed guarantee). Degraded data remains visible with warnings, but the job
-fails after publication rather than reporting a healthy collection. These checks
+live-feed guarantee). Missing data and coverage warnings remain explicit. A
+candidate below these thresholds is held before publication, not labeled healthy.
+These checks
 do not certify provider licensing, market completeness or investment quality.
+
+Both writers run `scripts/validate-publication.mjs market|research` before
+committing and again after rebasing, before pushing. It checks every generated
+file in the writer's manifest, parses JavaScript bundles without executing them,
+requires each file-mode payload to match its JSON twin, and applies the shared
+market/research health contracts. Research and source checks must be a coherent
+pair. Warnings do not block an otherwise valid candidate; integrity and minimum
+coverage errors do. Public deployment verification and live health checks remain
+separate, afterward.
+
+On rejection, the site retains its previous files and original timestamps. This
+does **not** renew their freshness; an outage can still make them stale, which
+the independent watchdog reports. Failed collection/publication attempts upload
+their candidate data and available hash/health report as a run-specific GitHub
+Actions artifact for **seven days**. This is temporary diagnostic recovery, not
+a permanent evidence archive or an approved replacement snapshot. A collector
+that fails partway through can leave mixed-generation files: never restore an
+artifact wholesale. Inspect the error, reconcile valid observations by identity,
+rerun the complete collector and validation, then publish through review.
+
+Local preflight (does not publish, refresh sources, or modify generated data):
+
+```sh
+node scripts/validate-publication.mjs market /tmp/market-publication.json
+node scripts/validate-publication.mjs research /tmp/research-publication.json
+```
 
 Company/news matching is shared between collection and display. Generic aliases
 such as a country name and partial ticker matches are rejected. Unsupported

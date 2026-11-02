@@ -1,5 +1,38 @@
 # Research intelligence work plan
 
+## November 2 · Pre-publication safety follow-up
+
+The first automated post-merge research and market runs succeeded, including
+their public deployment and live-health checks. Market run `41480139855` published
+`98bd7a3`: 72/75 collected quotes, one retained recent quote, two stale quotes,
+and one ticker with quarantined headlines. These categories remain distinct.
+Research run `41480139619` published `a7c2d24`; all five discovery feeds are current.
+These are push-triggered runs, not evidence that every future cron run will work.
+
+The workflow audit found a separate release gap: quality checks ran only after
+publication. The follow-up adds a fail-closed preflight before either writer can
+commit, and repeats it after rebase before push. The complete 31-file market and
+6-file research publication manifests are checked for readable JSON, correct
+file-mode assignment and equal payloads, plus the shared health contracts.
+Generated bundles are parsed, never executed. Reports record exact file hashes.
+
+Failed candidates preserve the last public files and dates, not a falsely fresh
+timestamp. Live health still runs independently when a candidate is held.
+Run-specific diagnostic artifacts retain candidate files and available reports
+for seven days; partially written candidates are not safe to restore wholesale.
+This bounded retention is not permanent history repair. The failure gate does
+not claim that accepted provider data is independently correct or licensed.
+
+Verification: 457 tests pass on Node 20 and 24. Real local preflights pass for both
+publication sets. Regressions cover degraded coverage, mixed research generations,
+missing/malformed/wrong-global/different bundles, non-execution of arbitrary
+JavaScript, manifest completeness, explicit writer gating and rebase revalidation.
+Workflow YAML parses. Production activation requires the follow-up PR's checks
+and authorized merge; user approval to merge after checks has been received.
+
+Workflow semantics follow GitHub's [status-check expression documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions).
+Diagnostic retention uses the official [upload-artifact action](https://github.com/actions/upload-artifact).
+
 ## November 2 · Hank follow-up and release reconciliation
 
 Implemented on the release branch; deployment verification is a separate gate:
