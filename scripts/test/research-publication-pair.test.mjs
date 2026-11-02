@@ -31,9 +31,9 @@ test("publication rejects persistent mismatches, missing files and invalid schem
   ]) await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => actual, options), /Last check: .*different updates|Last check: .*incomplete or invalid/);
   await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => { throw Error("Source-check HTTP 503"); }, options), /Last check: Source-check HTTP 503/);
 });
-test("a newer assembly cannot disguise older source checks, but a coherent newer collection is accepted", async () => {
+test("a newer assembly cannot disguise older source checks or substitute a different collection", async () => {
   const expected = pair(older, older);
-  assert.equal(await verifyResearchPublication(expected.research, expected.monitor, async () => pair(), options), true);
+  await assert.rejects(verifyResearchPublication(expected.research, expected.monitor, async () => pair(), options), /source-check contents do not match/);
   const current = pair();
   await assert.rejects(verifyResearchPublication(current.research, current.monitor, async () => pair(older), options), /older than the expected collection/);
   const companyRefresh = pair(older);

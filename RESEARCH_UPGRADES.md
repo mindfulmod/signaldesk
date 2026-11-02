@@ -90,6 +90,40 @@ No source is activated or otherwise expanded by this patch.
 
 Reference: [Atom published and updated semantics, RFC 4287](https://www.rfc-editor.org/rfc/rfc4287).
 
+## November 2 · Exact publication verification candidate
+
+Not deployed. Reproduced on current main: the market verifier accepted an empty
+signal list with the expected timestamp/collection ID, and accepted a payload
+with an arbitrary future timestamp. Research validated the pair's structure and
+dates but did not require the intended document or source-check contents.
+These are verifier defects reproduced with synthetic responses, not evidence
+that the production snapshots were corrupted.
+
+- Require equality of parsed snapshot contents, not timestamp/ID equality alone.
+  JSON formatting and object-key order may differ; values, arrays, inventories
+  and metadata must match. Invalid local dates fail before requesting the site.
+- Research must match both the intended research snapshot and source-check file.
+  Empty inventories and altered source states cannot pass with copied timestamps.
+- Preserve the bounded polling window so partial/stale CDN responses can recover.
+  The existing writer lock covers publication and verification. A different/newer
+  snapshot is not silently accepted as proof of this job; investigate an outside
+  publication if it supersedes the expected snapshot during verification.
+- Both writer workflows trigger on verifier changes. They still run independent
+  live health checks: content identity is not a substitute for evidence quality,
+  freshness, coverage, provenance or source access validation.
+
+Scope: verifies the primary market snapshot and research/source-check pair.
+Other generated archives and file-mode twins retain pre-publication parsing and
+parity checks; this change does not claim a byte-for-byte CDN audit of every
+archive or certify that providers' underlying financial data are correct.
+
+Verification: 482 tests pass on Node 20 and Node 24, including copied IDs/times,
+missing/changed rows, invalid/future dates, mismatched monitor contents, stale-CDN
+recovery and harmless JSON property-order differences. Syntax, workflow YAML and
+whitespace checks pass. Both updated verifier commands also succeeded against
+the current live primary snapshots from main `84bf452`; this establishes their
+current content identity, not deployment of this new verifier. No data was changed.
+
 ## November 2 · Counterevidence and filing review candidate
 
 Branch implementation, stacked on the Public R&D candidate; not deployed.
