@@ -7,6 +7,17 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 company funding: financial protocol 4 adds separate current/noncurrent
+marketable securities and short-term investments. Never sum these automatically:
+taxonomy categories can overlap. Investment dates must match the cash balance
+and not be stale to appear in the current cards; older observations stay in an
+explicit history disclosure. Unknown is not zero. Cash-only months-of-burn has
+been removed; do not restore it as a runway headline. The funding view keeps
+original dates and source links visible, with accounting tags in disclosures.
+Financial collection is eligible every 24 hours or on a new filing, with six-hour
+failed retries; the watchdog warns after 36 hours. Collection freshness does not
+make an old reporting period current.
+
 November 2 evidence review: `risk` is counterevidence, not progress. Keep it out
 of adoption/operating tracker values and comparable growth; show its separate
 count in the ledger. Reviewed cards show caveats and a next check, not only a

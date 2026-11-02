@@ -171,6 +171,14 @@
 .intel-discovery-stats dt { font-size: .72rem; color: var(--muted); }
 .intel-price { color: var(--ink); font-size: 1.45rem; font-family: var(--mono); letter-spacing: -.04em; font-weight: 500; }
 .intel-economics { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, .8fr); gap: 32px; margin-top: 30px; }
+.intel-funding { border-top: 1px solid var(--line); padding-top: 22px; margin-top: 28px; }
+.intel-funding > p { font-size: .8rem; line-height: 1.6; }
+.intel-funding .intel-financial-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.intel-financial-fact .intel-disclosure { margin: 0; padding-top: 8px; }
+.intel-financial-fact .intel-disclosure p { overflow-wrap: anywhere; font-size: .75rem; line-height: 1.6; }
+.intel-financial-fact .intel-disclosure summary { font-size: .74rem; }
+@media (max-width: 980px) { .intel-funding .intel-financial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .intel-funding .intel-financial-grid { grid-template-columns: 1fr; } }
 .intel-financial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); border-radius: 8px; overflow: hidden; }
 .intel-financial-grid article { padding: 18px; display: grid; gap: 10px; background: var(--panel); min-width: 0; }
 .intel-financial-grid span { font-size: .74rem; color: var(--muted); }
