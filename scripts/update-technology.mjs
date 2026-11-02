@@ -9,6 +9,7 @@ import reviewModel from "../research-model.js";
 import { collectTechnology, publicMonitor } from "./lib/technology-monitor.mjs";
 import { buildDocumentInventory, discoverTopics } from "./lib/research-intelligence.mjs";
 import { collectCompanies } from "./lib/company-intelligence.mjs";
+import { collectProcurement, publicProcurement } from "./lib/procurement-discovery.mjs";
 
 async function saved(path, fallback = {}) {
   try { return JSON.parse(await readFile(path, "utf8")); }
@@ -22,9 +23,10 @@ export async function main(args = process.argv.slice(2)) {
   if (outputArg >= 0 && !args[outputArg + 1]) throw new Error("--output requires a directory");
   const output = resolve(outputArg >= 0 ? args[outputArg + 1] : new URL("../data/", import.meta.url).pathname);
   const statePath = resolve(output, "technology-monitor-state.json");
-  const [previous, previousResearch, previousCompanies, reviews] = await Promise.all([
+  const [previous, previousResearch, previousCompanies, reviews, previousProcurement] = await Promise.all([
     saved(statePath), saved(resolve(output, "research.json")), saved(resolve(output, "company-intelligence.json")),
     saved(new URL("../research-reviews.json", import.meta.url), { schemaVersion: 1, reviews: [] }),
+    saved(resolve(output, "procurement-state.json"), null),
   ]);
   const known = registry.themes.flatMap(t => t.evidence.map(e => e.id));
   const evidence = registry.themes.flatMap(t => t.evidence.map(e => ({ ...e, themeId: t.id })));
@@ -40,13 +42,15 @@ export async function main(args = process.argv.slice(2)) {
   const data = publicMonitor(state);
   const { documents, documentIndex, discoveryTruncated } = buildDocumentInventory(registry, state, previousResearch, now, reviews.reviews);
   const companies = args.includes("--sources-only") ? previousCompanies : await collectCompanies(config, state, previousCompanies, { now, apiKey: process.env.SIGNALDESK_QUOTE_API_KEY || "" });
+  const procurement = await collectProcurement(previousProcurement, { now });
   const research = { schemaVersion: 1, collectionId: randomUUID(), generatedAt: now, sourceCheckedAt: data.generatedAt,
     runUrl: process.env.GITHUB_RUN_ID ? `https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}` : null,
-    documents, documentIndex, reviews: reviews.reviews, companies: companies.companies || {}, providerMode: companies.providerMode || "Not collected",
+    documents, documentIndex, reviews: reviews.reviews, companies: companies.companies || {}, providerMode: companies.providerMode || "Not collected", procurement: publicProcurement(procurement),
     discovery: discoverTopics(documents, registry.themes, previousResearch.discovery, now, config.sources.filter(s => s.discovery), state.sources, { discoveryTruncated }),
     coverage: { totalSources: config.sources.length, readableSources: Object.values(data.sources).filter(s => s.status === "ok").length, companies: config.companies.length },
   };
   for (const [name, content] of [
+    ["procurement-state.json", JSON.stringify(procurement) + "\n"],
     ["technology-monitor-state.json", JSON.stringify(state, null, 2) + "\n"],
     ["technology-monitor.json", JSON.stringify(data, null, 2) + "\n"],
     ["technology-monitor.js", `window.SIGNALDESK_TECH_MONITOR = ${JSON.stringify(data)};\n`],

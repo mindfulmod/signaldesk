@@ -7,6 +7,18 @@ before touching frontend code.
 
 ## Architecture map (who owns what)
 
+November 2 Public R&D: `procurement-views.js` renders a separate Discover mode
+(`scan=spending`), using `research.procurement` from the coherent research bundle.
+The full immutable journal is `data/procurement-state.json`, not a browser
+payload. Amounts preserve signed cents; overlapping action identities are shown
+once and conflicting versions withhold the amount. Native coverage disclosures
+start collapsed; failed/overdue checks also have a visible warning. Never add
+these counts or action dates to headline momentum, adoption metrics or stock
+scores. `procurement:` notebook seeds preserve the award/modification/action date
+as origin metadata, leave publication unknown, and add no numeric observation.
+Return restores the query, action filter, pagination and initiating button.
+When switching discovery modes or Saved, reset incompatible lane filters.
+
 November 2 follow-up: `notebook-confirm.js` owns a single pending discard choice
 in the native `#notebookDiscardDialog`, outside the rerendered workspace. Keep
 editing is the default; Escape/close cancel and restore the initiating control.

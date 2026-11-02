@@ -27,7 +27,7 @@
   if (["brief", "radar", "milestones", "inbox", "companies", "trackers", "discovery"].includes(params.get("techView"))) view = params.get("techView");
   if (config.companies.some(c => c.ticker === params.get("company"))) { selectedCompany = params.get("company"); view = "companies"; }
   if (params.get("tracker") === "satellite") trackerType = "satellite";
-  if (params.get("scan") === "open") discoveryMode = "open";
+  if (["open", "spending"].includes(params.get("scan"))) discoveryMode = params.get("scan");
   let followedOnly = false, storageWorking = true;
   let refreshFocusTarget = null;
   function save(key, values) { try { localStorage.setItem(key, JSON.stringify([...values])); } catch { storageWorking = false; } }
@@ -38,7 +38,7 @@
       if (view !== "brief") url.searchParams.set("techView", view); else url.searchParams.delete("techView");
       if (selectedCompany) url.searchParams.set("company", selectedCompany); else url.searchParams.delete("company");
       if (view === "trackers") url.searchParams.set("tracker", trackerType); else url.searchParams.delete("tracker");
-      if (view === "discovery" && discoveryMode === "open" && !discoverySavedOnly) url.searchParams.set("scan", "open"); else url.searchParams.delete("scan");
+      if (view === "discovery" && ["open", "spending"].includes(discoveryMode) && !discoverySavedOnly) url.searchParams.set("scan", discoveryMode); else url.searchParams.delete("scan");
       window.history.replaceState(null, "", url);
     } catch { /* optional deep links */ }
   }
@@ -99,6 +99,7 @@
     byId("techSearch").closest("label").hidden = Boolean(selectedCompany || selected || reviewingId || (view === "discovery" && notebookEditing) || view === "trackers");
     byId("techScope").hidden = byId("techSearch").closest("label").hidden && byId("techFilterDisclosure").hidden;
     byId("techSearch").closest("label").querySelector("span").textContent = view === "inbox" ? "Search documents, owners & titles" : view === "discovery" ? "Find a discovery lead" : "Find a technology";
+    byId("techSearch").placeholder = view === "discovery" && discoveryMode === "spending" && !discoverySavedOnly ? "Recipient, agency, research purpose…" : "Battery, satellite, company…";
     root.querySelectorAll("[data-tech-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.techView === view)));
     byId("techFollowedOnly").setAttribute("aria-pressed", String(followedOnly));
     const activeFilters = Number(byId("techSector").value !== "all") + Number(byId("techStage").value !== "all") + Number(followedOnly);
@@ -342,8 +343,8 @@
     else if (button.hasAttribute("data-company-back")) { selectedCompany = null; setUrl(); render(); }
     else if (button.dataset.tracker) { trackerType = button.dataset.tracker; selectedId = null; selectedCompany = null; reviewingId = null; view = "trackers"; setUrl(); render(); }
     else if (button.hasAttribute("data-clear-comparison")) { trackerState.compare = []; render(); }
-    else if (button.dataset.discoveryMode) { discoveryMode = button.dataset.discoveryMode; discoverySavedOnly = false; discoveryLimit = 24; setUrl(); render(); root.querySelector(`[data-discovery-mode="${discoveryMode}"]`)?.focus({ preventScroll: true }); }
-    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; discoveryLimit = 24; setUrl(); render(); root.querySelector("[data-saved-discovery]")?.focus({ preventScroll: true }); }
+    else if (button.dataset.discoveryMode) { discoveryMode = button.dataset.discoveryMode; discoveryLane = "all"; discoverySavedOnly = false; discoveryLimit = 24; setUrl(); render(); root.querySelector(`[data-discovery-mode="${discoveryMode}"]`)?.focus({ preventScroll: true }); }
+    else if (button.hasAttribute("data-saved-discovery")) { discoverySavedOnly = !discoverySavedOnly; discoveryLane = "all"; discoveryLimit = 24; setUrl(); render(); root.querySelector("[data-saved-discovery]")?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-clear-discovery")) { byId("techSearch").value = ""; discoveryLane = "all"; discoveryLimit = 24; render(); byId("discoveryLane")?.focus({ preventScroll: true }); }
     else if (button.hasAttribute("data-more-discovery")) { const previousLimit = discoveryLimit; discoveryLimit += 24; render(); root.querySelectorAll("[data-discovery-item]")[previousLimit]?.focus(); }
     else if (button.dataset.review) { reviewingId = button.dataset.review; view = "inbox"; selectedId = null; selectedCompany = null; setUrl(); render(); content.scrollIntoView({ block: "start" }); root.querySelector('[name="reviewer"]')?.focus({ preventScroll: true }); }

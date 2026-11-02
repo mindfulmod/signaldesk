@@ -1,5 +1,67 @@
 # Research intelligence work plan
 
+## November 2 · Public R&D discovery activation candidate
+
+Branch implementation; release approval and production verification still needed.
+This carries the October 14 pilot into a usable, separately labeled Discover lane.
+It is evidence of reported federal commitments/adjustments, not measured use.
+
+- Source/access decision: use the [official public USAspending API](https://api.usaspending.gov/)
+  and its factual contract-action metadata, short purpose description, canonical
+  award link and original action date. The [Treasury source documentation](https://www.usaspending.gov/data/data-sources-download.pdf)
+  describes public API/download access and exclusions for proprietary recipient
+  documents. No linked reports, profiles, personal addresses or credentials are
+  collected. This bounded metadata use does not assert reuse rights over every
+  linked third-party document. Retain only the selected factual records and
+  observation receipts, not entire upstream responses.
+- Sampling contract: NAICS 5417, contract types A/B/C/D, no theme keywords,
+  newest action dates first, one page of at most 100 results per window. The
+  recent window is today minus 119 days through today. A second, separately
+  versioned window covers 90–119 days ago. This gives delayed DoD/USACE reports
+  another sampling opportunity; it does **not** establish complete delayed-record
+  reconciliation. Both windows can clip records and corrections. They overlap,
+  so neither counts nor amounts are additive. No growth comparison is enabled.
+- Cadence: once per Toronto calendar day, including weekends, via the existing
+  six-hour research workflow. Failed attempts have at least six hours between
+  opportunities. Two requests at most per opportunity, separated by one second;
+  20-second timeouts, 750 KB responses, no pagination, redirects or access bypass.
+- History: one journal per protocol preserves immutable checked observations and
+  content-addressed revisions. Protocol swaps/corruption reject collection.
+  Failure retains the original successful snapshot and time. Limits remain 400
+  observations, 30,000 versions and 40 MB **per lane**. Reaching a limit stops
+  that lane with an explicit archive-review error; no automatic deletion. Plan
+  permanent archive rotation before these limits are approached.
+- Publication: the seven-file research manifest now includes the journal, and
+  pre-publication/post-rebase gates require its exact public projection to match
+  `research.procurement`. The browser receives only the two bounded snapshots,
+  not all historical versions. Source failures are visible and may publish as
+  retained/error states; the live health checker fails if either lane lacks a
+  successful check within 36 hours. This keeps other research updates moving
+  while the existing watchdog exposes an overdue lane.
+- Interface: Discover → Public R&D has search, signed-amount type filters,
+  duplicate removal, 24-row pagination, source links and a direct investigation
+  action. Collection windows and methodology use native disclosures. Conflicting
+  overlapping versions withhold the amount. Notebook entry preserves provenance
+  but does not seed an adoption value; returns restore filters, page depth and
+  focus. Both appearance modes use the existing palette.
+- Live bounded collection at 2026-11-02T17:05:01.926Z: 100 recent actions across
+  97 awards and 100 older-window actions across 100 awards. Both reported more
+  results, so both are explicitly capped. Latest action dates were October 31
+  and August 4 respectively. The observation date is not a publication date.
+
+Still required for broader traction: independently scoped usage/delivery series,
+consumer and international sources, coverage back-testing, and archive rotation.
+Public R&D does not solve these gaps or establish stock upside.
+
+Browser verification: 1440px light and 375px dark layouts, no horizontal overflow
+or console errors; action filtering, keyword search, 24→48 pagination/focus,
+award→notebook origin metadata, discard confirmation, and return to the same
+filtered results/initiating control. Existing table, radar and attention-map
+stock routes were checked at both widths. No QA investigation was saved.
+All 468 tests pass on Node 20 and 24; syntax, workflow YAML, diff checks and the
+real seven-file publication gate pass. CI and live post-merge refresh remain
+release checks, not claimed complete by local validation.
+
 ## November 2 · BMW newsroom migration
 
 The old `https://www.press.bmwgroup.com/global` now returns a 301 to

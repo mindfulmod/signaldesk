@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { isDeepStrictEqual } from "node:util";
 import { marketHealth } from "./market-health.mjs";
 import { researchHealth } from "./research-health.mjs";
+import { publicProcurement } from "./procurement-discovery.mjs";
 
 // Exactly the generated files each writer publishes. Null means no file-mode twin.
 export const PUBLICATIONS = {
@@ -15,7 +16,7 @@ export const PUBLICATIONS = {
   },
   research: {
     "technology-monitor-state": null, "technology-monitor": "SIGNALDESK_TECH_MONITOR",
-    "company-intelligence": null, research: "SIGNALDESK_RESEARCH",
+    "company-intelligence": null, "procurement-state": null, research: "SIGNALDESK_RESEARCH",
   },
 };
 export function publicationFiles(kind) {
@@ -41,7 +42,7 @@ export async function validatePublication(kind, { read, now = Date.now(), scope 
     try {
       const json = JSON.parse(await inspectedRead(`data/${name}.json`));
       if (!json || typeof json !== "object" || Array.isArray(json)) throw Error("Expected a JSON object");
-      if (["signals", "research", "technology-monitor"].includes(name)) inputs[name] = json;
+      if (["signals", "research", "technology-monitor", "procurement-state"].includes(name)) inputs[name] = json;
       if (binding) {
         const bundle = parseBundle(await inspectedRead(`data/${name}.js`), binding);
         if (!isDeepStrictEqual(json, bundle)) throw Error("JSON and file-mode payloads disagree");
@@ -50,6 +51,7 @@ export async function validatePublication(kind, { read, now = Date.now(), scope 
   }
   let health;
   try {
+    if (kind === "research" && !isDeepStrictEqual(publicProcurement(inputs["procurement-state"]), inputs.research?.procurement)) throw Error("Public R&D snapshot disagrees with its retained collection journal");
     health = kind === "market" ? marketHealth(inputs.signals, now)
       : researchHealth(inputs.research, inputs["technology-monitor"], now, scope);
     errors.push(...health.errors);

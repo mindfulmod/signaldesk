@@ -1,9 +1,11 @@
 import { createHash } from "node:crypto";
 import { boundedJson } from "./research-fetch.mjs";
 
-// Review-stage intake only: not wired into scheduled collection or story momentum.
+// Shared bounded intake. The standalone pilot remains outside published data;
+// procurement-discovery owns scheduled use, never story momentum.
 export const PROCUREMENT_ENDPOINT = "https://api.usaspending.gov/api/v2/search/spending_by_transaction/";
 export const PROCUREMENT_PROTOCOL = "usaspending-rd-actions-v1";
+export const DELAYED_PROCUREMENT_PROTOCOL = "usaspending-rd-actions-delayed-v1";
 const LIMIT = 100, DAYS = 120;
 const day = value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 const text = (value, max, name) => {
@@ -22,11 +24,11 @@ export function obligationAmount(value) {
   const abs = cents < 0n ? -cents : cents;
   return { obligationChangeUsd: `${cents < 0n ? "-" : ""}${abs / 100n}.${String(abs % 100n).padStart(2, "0")}`, direction: cents > 0n ? "increase" : cents < 0n ? "decrease" : "no-change" };
 }
-export function procurementRequest(now = new Date().toISOString()) {
+export function procurementRequest(now = new Date().toISOString(), { delayed = false } = {}) {
   if (typeof now !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(now) || !Number.isFinite(Date.parse(now)) || new Date(now).toISOString() !== now.replace(/(?<!\.\d{3})Z$/, ".000Z")) throw new Error("Invalid procurement observation time");
-  const end = now.slice(0, 10);
+  const end = delayed ? new Date(Date.parse(now.slice(0, 10)) - 90 * 86400000).toISOString().slice(0, 10) : now.slice(0, 10);
   if (!day(end)) throw new Error("Invalid procurement observation date");
-  const start = new Date(Date.parse(end) - (DAYS - 1) * 86400000).toISOString().slice(0, 10);
+  const start = new Date(Date.parse(end) - ((delayed ? 30 : DAYS) - 1) * 86400000).toISOString().slice(0, 10);
   return { filters: { award_type_codes: ["A", "B", "C", "D"], time_period: [{ start_date: start, end_date: end }], naics_codes: { require: ["5417"] } },
     fields: ["Award ID", "Recipient Name", "Transaction Description", "Action Date", "Transaction Amount", "Awarding Agency", "Award Type", "Mod", "generated_internal_id", "NAICS"],
     page: 1, limit: LIMIT, sort: "Action Date", order: "desc" };
@@ -46,8 +48,8 @@ export function procurementRecord(row, window) {
     actionDate, publishedAt: null, ...obligationAmount(row["Transaction Amount"]),
     url: `https://www.usaspending.gov/award/${encodeURIComponent(awardKey)}` };
 }
-export function procurementSample(payload, now = new Date().toISOString()) {
-  const request = procurementRequest(now), window = request.filters.time_period[0];
+export function procurementSample(payload, now = new Date().toISOString(), options = {}) {
+  const request = procurementRequest(now, options), window = request.filters.time_period[0];
   if (!payload || !Array.isArray(payload.results) || payload.results.length > LIMIT || payload.limit !== LIMIT || payload.page_metadata?.page !== 1 || typeof payload.page_metadata.hasNext !== "boolean") throw new Error("Procurement response contract changed");
   const records = new Map();
   for (const raw of payload.results) {
@@ -56,18 +58,18 @@ export function procurementSample(payload, now = new Date().toISOString()) {
     records.set(row.id, row);
   }
   const rows = [...records.values()].sort((a, b) => b.actionDate.localeCompare(a.actionDate) || a.id.localeCompare(b.id));
-  return { schemaVersion: 1, protocol: PROCUREMENT_PROTOCOL, observedAt: now, sourceUrl: PROCUREMENT_ENDPOINT,
+  return { schemaVersion: 1, protocol: options.delayed ? DELAYED_PROCUREMENT_PROTOCOL : PROCUREMENT_PROTOCOL, observedAt: now, sourceUrl: PROCUREMENT_ENDPOINT,
     request, window, records: rows, coverage: { returnedRows: payload.results.length, distinctActions: rows.length,
       distinctAwards: new Set(rows.map(r => r.awardKey)).size, hasMore: payload.page_metadata.hasNext, capped: payload.results.length === LIMIT || payload.page_metadata.hasNext,
       completeCensus: false, newestActionDate: rows[0]?.actionDate || null },
     note: "Bounded sample of federal contract actions classified as scientific R&D (NAICS 5417), not all technology spending. Action dates are not publication dates; delayed and revised records can be missed. Obligation changes are commitments or adjustments, not payments, recipient revenue, delivered products or consumer adoption. Multiple modifications do not establish repeat customers." };
 }
-export async function fetchProcurement({ fetchImpl = fetch, now = new Date().toISOString(), timeoutMs = 20000 } = {}) {
-  const request = procurementRequest(now);
+export async function fetchProcurement({ fetchImpl = fetch, now = new Date().toISOString(), timeoutMs = 20000, delayed = false } = {}) {
+  const request = procurementRequest(now, { delayed });
   const payload = await boundedJson(PROCUREMENT_ENDPOINT, { maxBytes: 750000, timeoutMs,
     headers: { Accept: "application/json", "Content-Type": "application/json", "User-Agent": "SignalDesk/2.0 (+https://mindfulmod.github.io/signaldesk/)" },
     fetchImpl: (url, init) => fetchImpl(url, { ...init, method: "POST", redirect: "error", body: JSON.stringify(request) }) });
-  return procurementSample(payload, now);
+  return procurementSample(payload, now, { delayed });
 }
 export async function refreshProcurement(previous = {}, options = {}) {
   const now = options.now || new Date().toISOString();
