@@ -17,6 +17,8 @@ export const OVERRIDES_URL = new URL("data/theme-overrides.json", ROOT);
 export const GICS_REFRESH_DAYS = 30;
 const WIKI_UA = "SignalDeskDaily/1.0 (m.aali9@gmail.com) gics-baseline";
 const SP500_URL = "https://en.wikipedia.org/w/index.php?title=List_of_S%26P_500_companies&action=raw";
+export const GICS_SECTORS = new Set(["Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials", "Health Care", "Industrials", "Information Technology", "Materials", "Real Estate", "Utilities"]);
+const validClassification = info => GICS_SECTORS.has(info?.sector) && typeof info.sub === "string" && info.sub.length > 2 && !GICS_SECTORS.has(info.sub);
 
 export async function loadThemeOverrides() {
   const raw = await readFile(OVERRIDES_URL, "utf8");
@@ -49,20 +51,26 @@ export function parseGicsWikitext(wikitext) {
   if (startIdx === -1) return new Map();
   const endIdx = wikitext.indexOf("\n|}", startIdx);
   const table = wikitext.slice(startIdx, endIdx === -1 ? undefined : endIdx);
-  const rows = table.split(/\n\|-\n/).slice(1);
+  const rows = table.split(/\n\|-[^\n]*\n/).slice(1);
+  const header = rows.find(row => /^\s*!/.test(row));
+  if (!header) throw new Error("GICS constituent header missing");
+  const labels = header.trim().replace(/^!+/, "").split(/!!|\n!+/).map(cleanWikitext);
+  const columns = ["Symbol", "Security", "GICS Sector", "GICS Sub-Industry", "CIK"].map(label => labels.indexOf(label));
+  if (columns.some(i => i < 0) || new Set(columns).size !== columns.length) throw new Error("GICS constituent columns changed");
   const map = new Map();
 
   for (const row of rows) {
-    const lines = row.split("\n").filter(Boolean);
-    if (!lines.length) continue;
-    const symbolMatch = lines[0].match(/Symbol\|([A-Z.\-]+)/);
-    if (!symbolMatch) continue;
+    if (/^\s*!/.test(row)) continue;
+    // A leading || is a cell delimiter, not an empty first column. Newline
+    // cells and same-line cells must retain the exact header-defined order.
+    const rawCells = row.trim().replace(/^\|{1,2}\s*/, "").split(/\|\||\n\|{1,2}/);
+    const symbolMatch = rawCells[columns[0]]?.match(/(?:Symbol|BZX link)\|([A-Z.\-]+)/);
+    if (!symbolMatch) { if (row.trim()) throw new Error("Unrecognized GICS constituent symbol"); continue; }
     const ticker = symbolMatch[1].replace(/\./g, "-"); // BRK.B -> BRK-B (Yahoo/most feeds' convention)
-    const rest = lines.slice(1).join(" ");
-    const cells = rest.split("||").map((cell) => cleanWikitext(cell.replace(/^\|/, "")));
-    const [name, sector, sub, , , cik] = cells;
-    if (!sector || !sub) continue;
-    map.set(ticker, { name: name || ticker, sector, sub, cik: cik || null });
+    const cells = rawCells.map(cleanWikitext);
+    const [, name, sector, sub, cik] = columns.map(i => cells[i]);
+    if (!name || !validClassification({ sector, sub }) || !/^\d{1,10}$/.test(cik || "") || map.has(ticker)) throw new Error(`Invalid GICS constituent row: ${ticker}`);
+    map.set(ticker, { name, sector, sub, cik: cik.padStart(10, "0") });
   }
   return map;
 }
@@ -73,14 +81,23 @@ function cleanWikitext(value) {
     .replace(/\[\[([^\]]+)\]\]/g, "$1")
     .replace(/\{\{[^}]*\}\}/g, "")
     .replace(/'''/g, "")
+    .replace(/<ref\b[^>]*>[\s\S]*?<\/ref>|<ref\b[^>]*\/\s*>/gi, "")
+    .replace(/&amp;/g, "&").replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
-export async function fetchGicsBaseline() {
-  const response = await fetch(SP500_URL, { headers: { "User-Agent": WIKI_UA, Accept: "text/plain" } });
+export function validateGicsBaseline(baseline) {
+  if (!(baseline instanceof Map) || baseline.size < 400 || baseline.size > 600 || [...baseline.values()].some(info => !validClassification(info)) || new Set([...baseline.values()].map(info => info.sector)).size < 10) throw new Error("Incomplete or invalid GICS constituent coverage");
+  return baseline;
+}
+
+export async function fetchGicsBaseline({ fetchImpl = fetch } = {}) {
+  const response = await fetchImpl(SP500_URL, { headers: { "User-Agent": WIKI_UA, Accept: "text/plain" }, signal: AbortSignal.timeout(15000) });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  const wikitext = await response.text();
-  return parseGicsWikitext(wikitext);
+  const chunks = []; let bytes = 0;
+  for await (const chunk of response.body) { bytes += chunk.byteLength; if (bytes > 2000000) throw new Error("GICS response size limit"); chunks.push(chunk); }
+  return validateGicsBaseline(parseGicsWikitext(Buffer.concat(chunks).toString("utf8")));
 }
 
 function daysSince(dateStr, now = new Date()) {
@@ -94,6 +111,7 @@ function daysSince(dateStr, now = new Date()) {
 // the registry shape. `clusters` is `[{ id, name, members: [ticker,...] }]`
 // and defaults to [] (P2 stub — see THEME_ENGINE.md build order items 6/8).
 export function buildThemeRegistry(gicsBaseline, overrideThemes, clusters = []) {
+  gicsBaseline = new Map([...gicsBaseline].filter(([, info]) => validClassification(info)));
   const themes = overrideThemes.map((theme) => {
     const membersMap = new Map();
     const addSrc = (ticker, src) => {
@@ -128,24 +146,32 @@ export function buildThemeRegistry(gicsBaseline, overrideThemes, clusters = []) 
 // or older than GICS_REFRESH_DAYS (spec: "Static seed, refreshed monthly"),
 // otherwise reuses the cached baseline and just re-merges overrides so a
 // same-day edit to theme-overrides.json still takes effect every run.
-export async function refreshThemeRegistry({ failures, clusters = [] } = {}) {
-  const existing = await loadThemeRegistry();
-  const overrideThemes = await loadThemeOverrides();
-  const stale = daysSince(existing.gicsRefreshedAt) >= GICS_REFRESH_DAYS || !existing.gics || !Object.keys(existing.gics).length;
+export async function refreshThemeRegistry({ failures, clusters = [], loadRegistry = loadThemeRegistry, loadOverrides = loadThemeOverrides, fetchBaseline = fetchGicsBaseline, now = new Date().toISOString() } = {}) {
+  const existing = await loadRegistry();
+  const overrideThemes = await loadOverrides();
+  let cached = new Map(Object.entries(existing.gics || {}));
+  try { validateGicsBaseline(cached); } catch { cached = new Map(); }
+  const stale = existing.gicsParserVersion !== 2 || daysSince(existing.gicsRefreshedAt, new Date(now)) >= GICS_REFRESH_DAYS || !cached.size;
 
   let gicsBaseline;
+  let refreshed = false, errorMessage = null;
   if (stale) {
     try {
-      gicsBaseline = await fetchGicsBaseline();
+      gicsBaseline = validateGicsBaseline(await fetchBaseline()); refreshed = true;
     } catch (error) {
       failures?.push(`GICS baseline: ${error.message}`);
-      gicsBaseline = new Map(Object.entries(existing.gics || {}).map(([t, info]) => [t, { ...info, name: t, cik: null }]));
+      errorMessage = error.message; gicsBaseline = cached;
     }
   } else {
-    gicsBaseline = new Map(Object.entries(existing.gics || {}).map(([t, info]) => [t, { ...info, name: t, cik: null }]));
+    gicsBaseline = cached;
   }
 
   const registry = buildThemeRegistry(gicsBaseline, overrideThemes, clusters);
-  if (!stale) registry.gicsRefreshedAt = existing.gicsRefreshedAt;
+  registry.generatedAt = now;
+  registry.gicsRefreshedAt = refreshed ? now : cached.size ? existing.gicsRefreshedAt : null;
+  registry.gicsParserVersion = refreshed || existing.gicsParserVersion === 2 ? 2 : null;
+  registry.gicsStatus = refreshed || !stale ? "current" : cached.size ? "retained" : "unavailable";
+  registry.gicsError = errorMessage;
+  registry.gicsSource = SP500_URL;
   return registry;
 }
