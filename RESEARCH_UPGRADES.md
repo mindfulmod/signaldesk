@@ -1,5 +1,36 @@
 # Research intelligence work plan
 
+## November 2 · Research finder candidate
+
+Branch implementation; not deployed. A persistent Search research action joins
+technology profiles, permanent companies, saved source-document titles and source
+websites in one keyboard-accessible panel. This is loaded-snapshot search, not
+live-web/whole-market search; notebook contents and Public R&D actions retain
+their own workflows. It makes no change to collection schedules or source health.
+
+- Latest retained document version per source/URL is indexed without rewriting
+  history. Original publication dates order documents; missing or malformed dates
+  stay unknown. The date a page was checked never becomes its publication date.
+- Distinct same-titled documents retain separate URLs, displayed for context.
+  Results are bounded with refinement guidance; short symbols match whole tokens.
+  Paused sources remain explicitly labeled, not silently represented as healthy.
+- Native modal semantics, immediate feedback, first-press Escape, keyboard result
+  navigation and focus return. Search preserves filters and unsaved notebooks;
+  switching profiles is blocked while an evidence-review form is open. External
+  sources open separately and do not replace the editor.
+- Browser verification: 1440px light and 375px dark, scrollable bounded results,
+  no horizontal overflow, source-link attributes, no-results messaging, company
+  and technology routes, cancellation, focus wrap, unsaved review preservation
+  and notebook navigation/resumption. No QA draft was saved. Table, radar and
+  attention-map stock selection passed at both widths with no console errors.
+- No animation is introduced, so reduced-motion users receive the same immediate
+  behavior. Browser file-mode validation remains unavailable; this feature uses
+  the same already-loaded research object in both transport modes.
+
+Pending releases remain separate: funding/spending evidence (#11), retained
+refresh queue (#12), and draft feed-date integrity guard (#13). Approval/checks
+and live deployment verification are still required before calling these live.
+
 ## November 2 · Counterevidence and filing review candidate
 
 Branch implementation, stacked on the Public R&D candidate; not deployed.
