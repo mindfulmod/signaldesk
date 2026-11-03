@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T12:58:59.937Z",
+  "generatedAt": "2026-11-03T22:30:03.042Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1226,8 +1226,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -3365,8 +3365,8 @@
         "form": "8-K",
         "accession": "0001104659-26-107256"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -4978,8 +4978,8 @@
         "form": "6-K",
         "accession": "0001193125-26-413029"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -7246,8 +7246,8 @@
         "form": "10-Q",
         "accession": "0001283699-26-000129"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -9555,8 +9555,8 @@
         "form": "8-K",
         "accession": "0001493152-26-047766"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -11416,8 +11416,8 @@
         "form": "8-K",
         "accession": "0001193125-26-438017"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-438017",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -13668,8 +13668,8 @@
         "form": "8-K",
         "accession": "0001193125-26-436149"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-436149",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -16123,8 +16123,8 @@
         "form": "10-Q",
         "accession": "0001652044-26-000084"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001652044-26-000084",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",

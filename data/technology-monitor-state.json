@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T12:58:59.937Z",
+  "generatedAt": "2026-11-03T22:30:03.042Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -163,11 +163,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-11-03T12:58:59.937Z",
-      "nextAttemptAt": "2026-11-03T16:58:59.937Z",
+      "lastAttemptAt": "2026-11-03T22:30:03.042Z",
+      "nextAttemptAt": "2026-11-04T04:30:03.042Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 3,
+      "failureStreak": 4,
       "attemptContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]"
     },
     "toyota-news": {

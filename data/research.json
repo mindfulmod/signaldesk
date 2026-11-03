@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "9b8bf8cf-d8b9-4b95-99a3-c8646ae83426",
-  "generatedAt": "2026-11-03T12:58:59.937Z",
-  "sourceCheckedAt": "2026-11-03T12:58:59.937Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41640232719",
+  "collectionId": "f57f9751-4eaf-4cd8-9c16-b3d208f4a6fd",
+  "generatedAt": "2026-11-03T22:30:03.042Z",
+  "sourceCheckedAt": "2026-11-03T22:30:03.042Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/41731255813",
   "documents": [
     {
       "id": "040d602e972aa631c201ab2e",
@@ -66376,8 +66376,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -68515,8 +68515,8 @@
         "form": "8-K",
         "accession": "0001104659-26-107256"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001104659-26-107256",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -70128,8 +70128,8 @@
         "form": "6-K",
         "accession": "0001193125-26-413029"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-413029",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -72396,8 +72396,8 @@
         "form": "10-Q",
         "accession": "0001283699-26-000129"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -74705,8 +74705,8 @@
         "form": "8-K",
         "accession": "0001493152-26-047766"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001493152-26-047766",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -76566,8 +76566,8 @@
         "form": "8-K",
         "accession": "0001193125-26-438017"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-438017",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -78818,8 +78818,8 @@
         "form": "8-K",
         "accession": "0001193125-26-436149"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001193125-26-436149",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -81273,8 +81273,8 @@
         "form": "10-Q",
         "accession": "0001652044-26-000084"
       },
-      "factsAttemptAt": "2026-11-02T17:50:22.638Z",
-      "factsCheckedAt": "2026-11-02T17:50:22.638Z",
+      "factsAttemptAt": "2026-11-03T22:30:03.042Z",
+      "factsCheckedAt": "2026-11-03T22:30:03.042Z",
       "factsAccession": "0001652044-26-000084",
       "factsError": null,
       "quoteAttemptAt": "2026-11-03T12:58:59.937Z",
@@ -84850,7 +84850,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-03T12:58:59.937Z",
+    "generatedAt": "2026-11-03T22:30:03.042Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -84899,7 +84899,6 @@
           "ee662f0a4316976d226a3faf",
           "e748f8750672ca8b04b242be",
           "caa8b85b5c131de2033176a3",
-          "d08ada4bb3c49858bec50b10",
           "eb23bb7873c6720d3bfe96d4",
           "665158ad1a9def9e48419fd1",
           "48636da5ecfb0b5518ad1d4f",
@@ -84912,7 +84911,7 @@
           "396f6337ec96d52d903af640",
           "31964c16935f6fceba59cbf2"
         ],
-        "documentCount": 744,
+        "documentCount": 740,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -85350,7 +85349,6 @@
       "a9f7108ed9170d2eaabb2258",
       "5d901006948a987b370dbc38",
       "35a7f96bea58e183b5f5d483",
-      "cd6a9aff987029f9bcbdfa0b",
       "a6c04315f2a9bb0b34340531",
       "7d08b3616029127e3558e9d2",
       "058febc5f95cd3b843213031",
@@ -85393,7 +85391,6 @@
       "ede5fe4a5a570fe932ec7211",
       "715e80b3297426801fe097ca",
       "ade4bf25e468fd6e17c2912f",
-      "00afdd364cfd025a23834a05",
       "935be8febc4a243c61d6f85f",
       "28f172c16f3a0402fb1be18a",
       "b3641d40801fdd36cf9f6b71",
@@ -85455,9 +85452,11 @@
       "629325cc4be202e82399d78d",
       "ac4bb8f224f0f03ff787d5bb",
       "62cc58aab0a9dd740738fa04",
-      "7eb0b31a39bc2b2856e3ebea"
+      "7eb0b31a39bc2b2856e3ebea",
+      "6c0e0453a78faac6a3a1c2fa",
+      "77d22e03b9f0c4c30019c92d"
     ],
-    "unmatchedDocuments": 335,
+    "unmatchedDocuments": 333,
     "candidates": [
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -85533,31 +85532,6 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-03"
-      },
-      {
-        "id": "d08ada4bb3c49858bec50b10",
-        "phrase": "americas most powerful laser",
-        "owners": [
-          "NSF"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "cd6a9aff987029f9bcbdfa0b"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-03"
       },
@@ -86582,8 +86556,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 744,
-    "comparableDays": 1,
+    "datedDocuments": 740,
+    "comparableDays": 2,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
