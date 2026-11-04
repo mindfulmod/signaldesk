@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-11-04T02:24:41.224Z","phrases":[]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-11-04T20:54:13.580Z","phrases":[{"phrase":"in october","weekCount":5,"tickers":["ADP","MU"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false},{"phrase":"election results","weekCount":2,"tickers":["AAPL","MU"],"domains":2,"gdelt":null,"edgar":null,"gdeltChecked":false,"edgarChecked":false,"confirmed":false}]};
