@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "8775826f-b464-4cb6-9e34-b93929cbcd9d",
-  "generatedAt": "2026-11-05T13:28:11.396Z",
-  "sourceCheckedAt": "2026-11-05T13:28:11.396Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42035966688",
+  "collectionId": "7635b380-f4e2-43ab-a5ac-ed78c9b7d694",
+  "generatedAt": "2026-11-05T22:49:11.210Z",
+  "sourceCheckedAt": "2026-11-05T22:49:11.210Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42124624909",
   "documents": [
     {
       "id": "001f5aaa42fdd94b1182358d",
@@ -93747,7 +93747,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-05T13:28:11.396Z",
+    "generatedAt": "2026-11-05T22:49:11.210Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -93901,7 +93901,7 @@
           "396f6337ec96d52d903af640",
           "31964c16935f6fceba59cbf2"
         ],
-        "documentCount": 859,
+        "documentCount": 855,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -94387,7 +94387,6 @@
       "38bca43137cce33572e4c542",
       "4964040e53676c7dccd0e768",
       "1a8e6c087f27c517e3365a2f",
-      "ede5fe4a5a570fe932ec7211",
       "4a16128065d342f916a2d82a",
       "001f5aaa42fdd94b1182358d",
       "4aed2b8ade771a9e5b4f8dbd",
@@ -94444,9 +94443,10 @@
       "d9e5c67e0463b279162d8842",
       "d382701d69c257e824b7f4a1",
       "12d814e2f5e587794c3371be",
-      "da16e466f62329b18ff0e941"
+      "da16e466f62329b18ff0e941",
+      "d4dd2d01325a21df959fd295"
     ],
-    "unmatchedDocuments": 468,
+    "unmatchedDocuments": 467,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -95911,13 +95911,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 859,
-    "comparableDays": 3,
+    "datedDocuments": 855,
+    "comparableDays": 4,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 19,
+    "readableSources": 20,
     "companies": 8
   }
 }
