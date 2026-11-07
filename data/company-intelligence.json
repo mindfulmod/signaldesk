@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T11:54:54.931Z",
+  "generatedAt": "2026-11-07T21:03:56.627Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -11570,8 +11570,8 @@
         "form": "8-K",
         "accession": "0001193125-26-450074"
       },
-      "factsAttemptAt": "2026-11-06T13:12:36.745Z",
-      "factsCheckedAt": "2026-11-06T13:12:36.745Z",
+      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
+      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
       "factsAccession": "0001193125-26-450074",
       "factsError": null,
       "quoteAttemptAt": "2026-11-07T11:54:54.931Z",
@@ -16351,8 +16351,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-06T13:12:36.745Z",
-      "factsCheckedAt": "2026-11-06T13:12:36.745Z",
+      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
+      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-07T11:54:54.931Z",

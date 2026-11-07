@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "68556662-a4e6-4806-a81a-798179d8e370",
-  "generatedAt": "2026-11-07T11:54:54.931Z",
-  "sourceCheckedAt": "2026-11-07T11:54:54.931Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42370148544",
+  "collectionId": "088d5f55-4165-45b7-8edc-5305e98cd74b",
+  "generatedAt": "2026-11-07T21:03:56.627Z",
+  "sourceCheckedAt": "2026-11-07T21:03:56.627Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42414016055",
   "documents": [
     {
       "id": "025d51471f7ee9338245c130",
@@ -91878,8 +91878,8 @@
         "form": "8-K",
         "accession": "0001193125-26-450074"
       },
-      "factsAttemptAt": "2026-11-06T13:12:36.745Z",
-      "factsCheckedAt": "2026-11-06T13:12:36.745Z",
+      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
+      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
       "factsAccession": "0001193125-26-450074",
       "factsError": null,
       "quoteAttemptAt": "2026-11-07T11:54:54.931Z",
@@ -96659,8 +96659,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-06T13:12:36.745Z",
-      "factsCheckedAt": "2026-11-06T13:12:36.745Z",
+      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
+      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-07T11:54:54.931Z",
@@ -98597,7 +98597,7 @@
       },
       "delayed": {
         "status": "error",
-        "lastAttemptAt": "2026-11-07T11:54:54.931Z",
+        "lastAttemptAt": "2026-11-07T21:03:56.627Z",
         "lastSuccessAt": "2026-11-05T13:28:11.396Z",
         "error": "Conflicting procurement records share an award/modification identity",
         "snapshot": {
@@ -100272,7 +100272,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-07T11:54:54.931Z",
+    "generatedAt": "2026-11-07T21:03:56.627Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -100533,7 +100533,7 @@
           "5525a3062e6932d11448acd0",
           "31964c16935f6fceba59cbf2"
         ],
-        "documentCount": 956,
+        "documentCount": 949,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -102851,8 +102851,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 956,
-    "comparableDays": 5,
+    "datedDocuments": 949,
+    "comparableDays": 6,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
