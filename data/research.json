@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "ea40575d-a46f-4df7-bab6-ac0b1d0f8d77",
-  "generatedAt": "2026-11-06T22:21:33.392Z",
+  "collectionId": "07d1b246-5134-4b28-8fef-30d00bbaff17",
+  "generatedAt": "2026-11-07T03:10:58.934Z",
   "sourceCheckedAt": "2026-11-06T22:21:33.392Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42304044402",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42332763757",
   "documents": [
     {
       "id": "0010f7ab20cb1072d6012254",
@@ -97171,7 +97171,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-06T22:21:33.392Z",
+    "generatedAt": "2026-11-07T03:10:58.934Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -97377,7 +97377,7 @@
           "9d96229a515743e2e2214ed0",
           "31964c16935f6fceba59cbf2"
         ],
-        "documentCount": 901,
+        "documentCount": 898,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -97952,7 +97952,7 @@
         "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -97980,7 +97980,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "5c85686c3d7033acd170ffca",
@@ -98007,7 +98007,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -98033,7 +98033,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "caa8b85b5c131de2033176a3",
@@ -98058,7 +98058,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "eb23bb7873c6720d3bfe96d4",
@@ -98083,7 +98083,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "665158ad1a9def9e48419fd1",
@@ -98108,7 +98108,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "48636da5ecfb0b5518ad1d4f",
@@ -98133,7 +98133,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "4cb70d9c8049bc8b0048eaeb",
@@ -98158,7 +98158,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -98183,7 +98183,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "a695157969fbfe7e45facb18",
@@ -98208,7 +98208,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "ea6f5928073fea53f0f4afa9",
@@ -98233,7 +98233,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "b872d0ab96f21eb34c11ac1f",
@@ -98258,7 +98258,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "fd850c04c33d3665c8e9b800",
@@ -98283,7 +98283,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "db6955132d18cafd0709bf68",
@@ -98308,7 +98308,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-29",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "612129b62d51be9ce6cf0057",
@@ -98333,7 +98333,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "399a194a693f2fcc5e67a50b",
@@ -98358,7 +98358,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "da3552d273a93c1fbf7deb87",
@@ -98383,7 +98383,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "15aed0775ca9a3f31e577836",
@@ -98408,7 +98408,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "4a49429fd75bc69dcc6f51e2",
@@ -98433,7 +98433,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "53beb385cf69a2c6c9d58738",
@@ -98458,7 +98458,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "396f6337ec96d52d903af640",
@@ -98483,7 +98483,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "9d96229a515743e2e2214ed0",
@@ -98508,7 +98508,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "31964c16935f6fceba59cbf2",
@@ -98533,7 +98533,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       }
     ],
     "archive": [
@@ -98560,7 +98560,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-29",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "e748f8750672ca8b04b242be",
@@ -98590,7 +98590,7 @@
         "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "caa8b85b5c131de2033176a3",
@@ -98615,7 +98615,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "665158ad1a9def9e48419fd1",
@@ -98640,7 +98640,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -98666,7 +98666,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "31964c16935f6fceba59cbf2",
@@ -98691,7 +98691,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "53beb385cf69a2c6c9d58738",
@@ -98716,7 +98716,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "4cb70d9c8049bc8b0048eaeb",
@@ -98741,7 +98741,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "eb23bb7873c6720d3bfe96d4",
@@ -98766,7 +98766,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "48636da5ecfb0b5518ad1d4f",
@@ -98791,7 +98791,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "b872d0ab96f21eb34c11ac1f",
@@ -98816,7 +98816,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "15aed0775ca9a3f31e577836",
@@ -98841,7 +98841,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "396f6337ec96d52d903af640",
@@ -98866,7 +98866,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -98894,7 +98894,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "5c85686c3d7033acd170ffca",
@@ -98921,7 +98921,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "a695157969fbfe7e45facb18",
@@ -98946,7 +98946,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "ea6f5928073fea53f0f4afa9",
@@ -98971,7 +98971,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "fd850c04c33d3665c8e9b800",
@@ -98996,7 +98996,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "612129b62d51be9ce6cf0057",
@@ -99021,7 +99021,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "399a194a693f2fcc5e67a50b",
@@ -99046,7 +99046,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "da3552d273a93c1fbf7deb87",
@@ -99071,7 +99071,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -99096,7 +99096,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "4a49429fd75bc69dcc6f51e2",
@@ -99121,7 +99121,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "9d96229a515743e2e2214ed0",
@@ -99146,7 +99146,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-06"
+        "lastSeenAt": "2026-11-07"
       },
       {
         "id": "d08ada4bb3c49858bec50b10",
@@ -99539,7 +99539,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 901,
+    "datedDocuments": 898,
     "comparableDays": 5,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
