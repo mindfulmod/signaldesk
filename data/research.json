@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "8243f779-845d-43d8-b531-4ab6b6d2ca9d",
-  "generatedAt": "2026-11-08T12:10:20.725Z",
-  "sourceCheckedAt": "2026-11-08T12:10:20.725Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42478950469",
+  "collectionId": "dae8c334-5d60-4750-bca0-b0e07586e7e1",
+  "generatedAt": "2026-11-08T21:21:09.899Z",
+  "sourceCheckedAt": "2026-11-08T21:21:09.899Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42524737714",
   "documents": [
     {
       "id": "0bcbd7ad7cfcb1ad9d2991dd",
@@ -84076,7 +84076,7 @@
       "factsCheckedAt": "2026-11-08T12:10:20.725Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 4.28,
         "currency": "USD",
@@ -84086,7 +84086,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -86226,7 +86226,7 @@
       "factsCheckedAt": "2026-11-08T02:40:52.494Z",
       "factsAccession": "0001104659-26-122310",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 1.985,
         "currency": "USD",
@@ -86236,7 +86236,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -87875,7 +87875,7 @@
       "factsCheckedAt": "2026-11-08T02:40:52.494Z",
       "factsAccession": "0001193125-26-448368",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 216.19,
         "currency": "USD",
@@ -87885,7 +87885,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -90179,7 +90179,7 @@
       "factsCheckedAt": "2026-11-08T12:10:20.725Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 162.01,
         "currency": "USD",
@@ -90189,7 +90189,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -92525,7 +92525,7 @@
       "factsCheckedAt": "2026-11-08T12:10:20.725Z",
       "factsAccession": "0001493152-26-050513",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 32.33,
         "currency": "USD",
@@ -92535,7 +92535,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -94416,11 +94416,11 @@
         "form": "8-K",
         "accession": "0001193125-26-450074"
       },
-      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
-      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
+      "factsAttemptAt": "2026-11-08T21:21:09.899Z",
+      "factsCheckedAt": "2026-11-08T21:21:09.899Z",
       "factsAccession": "0001193125-26-450074",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 610.15,
         "currency": "USD",
@@ -94430,7 +94430,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -96707,7 +96707,7 @@
       "factsCheckedAt": "2026-11-08T02:40:52.494Z",
       "factsAccession": "0001193125-26-448357",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 530.61,
         "currency": "USD",
@@ -96717,7 +96717,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -99197,11 +99197,11 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-07T21:03:56.627Z",
-      "factsCheckedAt": "2026-11-07T21:03:56.627Z",
+      "factsAttemptAt": "2026-11-08T21:21:09.899Z",
+      "factsCheckedAt": "2026-11-08T21:21:09.899Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-08T02:40:52.494Z",
+      "quoteAttemptAt": "2026-11-08T21:21:09.899Z",
       "quote": {
         "price": 284.78,
         "currency": "USD",
@@ -99211,7 +99211,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-08T02:40:52.494Z",
+      "quoteCheckedAt": "2026-11-08T21:21:09.899Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -101135,7 +101135,7 @@
       },
       "delayed": {
         "status": "error",
-        "lastAttemptAt": "2026-11-08T12:10:20.725Z",
+        "lastAttemptAt": "2026-11-08T21:21:09.899Z",
         "lastSuccessAt": "2026-11-05T13:28:11.396Z",
         "error": "Conflicting procurement records share an award/modification identity",
         "snapshot": {
@@ -102810,7 +102810,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-08T12:10:20.725Z",
+    "generatedAt": "2026-11-08T21:21:09.899Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -105445,7 +105445,7 @@
       }
     ],
     "datedDocuments": 977,
-    "comparableDays": 6,
+    "comparableDays": 7,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
