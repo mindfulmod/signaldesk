@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T14:18:39.630Z",
+  "generatedAt": "2026-11-10T00:50:56.663Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -163,11 +163,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-11-09T14:18:39.630Z",
-      "nextAttemptAt": "2026-11-09T20:18:39.630Z",
+      "lastAttemptAt": "2026-11-10T00:50:56.663Z",
+      "nextAttemptAt": "2026-11-10T06:50:56.663Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 15,
+      "failureStreak": 16,
       "attemptContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]"
     },
     "toyota-news": {
@@ -465,29 +465,16 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"fcc-releases\",\"https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss\",\"rss\",\"links\",[\"api2.fcc.gov\",\"docs.fcc.gov\",\"www.fcc.gov\"],[\"satellite\",\"spacemobile\",\"spacex\",\"supplemental coverage\"],null,null,false,false,\"FCC\",\"FCC releases\",[\"satellite-phones\"],\"regulator\",false]",
-      "status": "error",
-      "lastAttemptAt": "2026-11-09T14:18:39.630Z",
-      "lastSuccessAt": "2026-11-08T12:10:20.725Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-11-10T00:50:56.663Z",
+      "lastSuccessAt": "2026-11-10T00:50:56.663Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-07T11:54:54.931Z",
-      "nextAttemptAt": "2026-11-09T15:18:39.630Z",
-      "failureStreak": 1,
-      "error": "Unexpected rss response content type",
-      "fingerprint": "fe5a377080141c2cd837f300fa99a2595bb39188ff67444b71b9787b73d2952a",
-      "items": [
-        {
-          "url": "https://www.fcc.gov/edoc/426542",
-          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/426541",
-          "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-          "excerpt": ".",
-          "publishedAt": null
-        }
-      ],
+      "lastChangedAt": "2026-11-10T00:50:56.663Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "items": [],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -507,9 +494,9 @@
         "https://www.fcc.gov/edoc/426542",
         "https://www.fcc.gov/edoc/426541"
       ],
-      "matchedItems": 2,
+      "matchedItems": 0,
       "datedItems": 0,
-      "extractedEntries": 11,
+      "extractedEntries": 8,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -518,8 +505,7 @@
       "researchPublishedAt": null,
       "title": "FCC releases",
       "etag": null,
-      "lastModified": null,
-      "attemptContract": "[1,5,\"fcc-releases\",\"https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss\",\"rss\",\"links\",[\"api2.fcc.gov\",\"docs.fcc.gov\",\"www.fcc.gov\"],[\"satellite\",\"spacemobile\",\"spacex\",\"supplemental coverage\"],null,null,false,false,\"FCC\",\"FCC releases\",[\"satellite-phones\"],\"regulator\",false]"
+      "lastModified": null
     },
     "nsf-research": {
       "id": "nsf-research",
