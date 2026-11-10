@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T13:44:30.063Z",
+  "generatedAt": "2026-11-10T22:31:14.810Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -163,11 +163,11 @@
       "id": "qs-news",
       "sourceUrl": "https://ir.quantumscape.com/news-events/news-releases",
       "extractorVersion": 4,
-      "lastAttemptAt": "2026-11-10T13:44:30.063Z",
-      "nextAttemptAt": "2026-11-10T19:44:30.063Z",
+      "lastAttemptAt": "2026-11-10T22:31:14.810Z",
+      "nextAttemptAt": "2026-11-11T04:31:14.810Z",
       "status": "error",
       "error": "HTTP 403",
-      "failureStreak": 17,
+      "failureStreak": 18,
       "attemptContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]"
     },
     "toyota-news": {
@@ -466,16 +466,35 @@
       "sourceUrl": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss",
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"fcc-releases\",\"https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss\",\"rss\",\"links\",[\"api2.fcc.gov\",\"docs.fcc.gov\",\"www.fcc.gov\"],[\"satellite\",\"spacemobile\",\"spacex\",\"supplemental coverage\"],null,null,false,false,\"FCC\",\"FCC releases\",[\"satellite-phones\"],\"regulator\",false]",
-      "status": "error",
-      "lastAttemptAt": "2026-11-10T13:44:30.063Z",
-      "lastSuccessAt": "2026-11-10T00:50:56.663Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-11-10T22:31:14.810Z",
+      "lastSuccessAt": "2026-11-10T22:31:14.810Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-10T00:50:56.663Z",
-      "nextAttemptAt": "2026-11-10T14:44:30.063Z",
-      "failureStreak": 1,
-      "error": "Unexpected rss response content type",
-      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "items": [],
+      "lastChangedAt": "2026-11-10T22:31:14.810Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "fa3cd79ad35bdafc8bb09c3ec83daa857f6dcd3611a380ef71cb14177174df14",
+      "items": [
+        {
+          "url": "https://www.fcc.gov/edoc/426688",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/426689",
+          "title": "Satellite Communications Services - SES",
+          "excerpt": ".",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.fcc.gov/edoc/426723",
+          "title": "Wireless Telecommunications Bureau Accepts for Filing Starlink Spectrum Holdings, LLC, Space Exploration Technologies Corp., NewLevel IV, L.P., Prism License Co. 1 LLC, and Prism License Co. 2 LCC Transfer of Control App",
+          "excerpt": "Public Notice announcing that the SpaceX-Grain Transfer of Control Applications have been found to be acceptable for filing",
+          "publishedAt": null
+        }
+      ],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -493,11 +512,14 @@
         "https://www.fcc.gov/edoc/426333",
         "https://www.fcc.gov/edoc/426356",
         "https://www.fcc.gov/edoc/426542",
-        "https://www.fcc.gov/edoc/426541"
+        "https://www.fcc.gov/edoc/426541",
+        "https://www.fcc.gov/edoc/426688",
+        "https://www.fcc.gov/edoc/426689",
+        "https://www.fcc.gov/edoc/426723"
       ],
-      "matchedItems": 0,
+      "matchedItems": 3,
       "datedItems": 0,
-      "extractedEntries": 8,
+      "extractedEntries": 18,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -506,8 +528,7 @@
       "researchPublishedAt": null,
       "title": "FCC releases",
       "etag": null,
-      "lastModified": null,
-      "attemptContract": "[1,5,\"fcc-releases\",\"https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss\",\"rss\",\"links\",[\"api2.fcc.gov\",\"docs.fcc.gov\",\"www.fcc.gov\"],[\"satellite\",\"spacemobile\",\"spacex\",\"supplemental coverage\"],null,null,false,false,\"FCC\",\"FCC releases\",[\"satellite-phones\"],\"regulator\",false]"
+      "lastModified": null
     },
     "nsf-research": {
       "id": "nsf-research",
@@ -8845,6 +8866,48 @@
   },
   "events": [
     {
+      "id": "2b187ba87c87eae245a5a67f",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426688",
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1c3dd2a112432dfd443961b7",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Satellite Communications Services - SES",
+      "url": "https://www.fcc.gov/edoc/426689",
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0a337e59a3e9775275dae7b1",
+      "sourceId": "fcc-releases",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "FCC",
+      "kind": "new-link",
+      "title": "Wireless Telecommunications Bureau Accepts for Filing Starlink Spectrum Holdings, LLC, Space Exploration Technologies Corp., NewLevel IV, L.P., Prism License Co. 1 LLC, and Prism License Co. 2 LCC Transfer of Control App",
+      "url": "https://www.fcc.gov/edoc/426723",
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
       "id": "b13421b482ffeffec7da7d3f",
       "sourceId": "waymo-news",
       "themes": [
@@ -13632,42 +13695,6 @@
       "url": "https://news.ycombinator.com/item?id=50378792",
       "detectedAt": "2026-11-05T13:28:11.396Z",
       "publishedAt": "2026-11-05T13:23:40.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8071f8d88387991424d81775",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "The Limits of Test-Time Compute for Self-Evaluation",
-      "url": "https://news.ycombinator.com/item?id=50378788",
-      "detectedAt": "2026-11-05T13:28:11.396Z",
-      "publishedAt": "2026-11-05T13:23:29.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "471229ccb180718800f0041e",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Exceptions to 1.1.1: When the Alt Text Isn't the Answer",
-      "url": "https://news.ycombinator.com/item?id=50378778",
-      "detectedAt": "2026-11-05T13:28:11.396Z",
-      "publishedAt": "2026-11-05T13:21:56.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "940042a7c3b6a8a906086546",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "AI Broke Cybersecurity. Visual Programming Can Fix It",
-      "url": "https://news.ycombinator.com/item?id=50378760",
-      "detectedAt": "2026-11-05T13:28:11.396Z",
-      "publishedAt": "2026-11-05T13:20:10.000Z",
       "verification": "unreviewed"
     }
   ]

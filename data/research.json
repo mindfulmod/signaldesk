@@ -1,10 +1,118 @@
 {
   "schemaVersion": 1,
-  "collectionId": "50292e78-1e42-4486-9b8d-57b3cdea0e3a",
-  "generatedAt": "2026-11-10T13:44:30.063Z",
-  "sourceCheckedAt": "2026-11-10T13:44:30.063Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42827224620",
+  "collectionId": "7b274d7f-7a55-48fc-98cb-78d8503f67b2",
+  "generatedAt": "2026-11-10T22:31:14.810Z",
+  "sourceCheckedAt": "2026-11-10T22:31:14.810Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42915246346",
   "documents": [
+    {
+      "id": "1b4adf0a0f091c795b708545",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426689",
+      "title": "Satellite Communications Services - SES",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "ec35ae98027445066b8ee13b",
+      "originalPublishedAt": null,
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7f8c426ebd5c3b6b217f54b4",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426688",
+      "title": "Satellite Communications Services - SES",
+      "excerpt": ".",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "dbfa0768652262b5c08ac759",
+      "originalPublishedAt": null,
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f645ce2dc22c3ea6ee1e3137",
+      "sourceId": "fcc-releases",
+      "url": "https://www.fcc.gov/edoc/426723",
+      "title": "Wireless Telecommunications Bureau Accepts for Filing Starlink Spectrum Holdings, LLC, Space Exploration Technologies Corp., NewLevel IV, L.P., Prism License Co. 1 LLC, and Prism License Co. 2 LCC Transfer of Control App",
+      "excerpt": "Public Notice announcing that the SpaceX-Grain Transfer of Control Applications have been found to be acceptable for filing",
+      "owner": "FCC",
+      "tier": "regulator",
+      "storyId": "1933c8a5628c0da69d09c228",
+      "originalPublishedAt": null,
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "announcementAt": null,
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [
+        "satellite-phones"
+      ],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": null,
+      "detectedAt": "2026-11-10T22:31:14.810Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": false,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "08f9fd1ae427126dfc2d442f",
       "sourceId": "nature-research",
@@ -89254,6 +89362,33 @@
       "versions": {
         "12e0dc0848225e26060b103c": "2026-11-10T13:44:30.063Z"
       }
+    },
+    "dbfa0768652262b5c08ac759": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "latestId": "7f8c426ebd5c3b6b217f54b4",
+      "versions": {
+        "7f8c426ebd5c3b6b217f54b4": "2026-11-10T22:31:14.810Z"
+      }
+    },
+    "ec35ae98027445066b8ee13b": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "latestId": "1b4adf0a0f091c795b708545",
+      "versions": {
+        "1b4adf0a0f091c795b708545": "2026-11-10T22:31:14.810Z"
+      }
+    },
+    "1933c8a5628c0da69d09c228": {
+      "sourceId": "fcc-releases",
+      "originalPublishedAt": null,
+      "firstSeenAt": "2026-11-10T22:31:14.810Z",
+      "latestId": "f645ce2dc22c3ea6ee1e3137",
+      "versions": {
+        "f645ce2dc22c3ea6ee1e3137": "2026-11-10T22:31:14.810Z"
+      }
     }
   },
   "reviews": [
@@ -90596,8 +90731,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-11-09T14:18:39.630Z",
-      "factsCheckedAt": "2026-11-09T14:18:39.630Z",
+      "factsAttemptAt": "2026-11-10T22:31:14.810Z",
+      "factsCheckedAt": "2026-11-10T22:31:14.810Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
@@ -96726,8 +96861,8 @@
         "form": "10-Q",
         "accession": "0001283699-26-000129"
       },
-      "factsAttemptAt": "2026-11-09T14:18:39.630Z",
-      "factsCheckedAt": "2026-11-09T14:18:39.630Z",
+      "factsAttemptAt": "2026-11-10T22:31:14.810Z",
+      "factsCheckedAt": "2026-11-10T22:31:14.810Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
       "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
@@ -109406,7 +109541,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-10T13:44:30.063Z",
+    "generatedAt": "2026-11-10T22:31:14.810Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -109837,7 +109972,7 @@
           "9d96229a515743e2e2214ed0",
           "5525a3062e6932d11448acd0"
         ],
-        "documentCount": 1062,
+        "documentCount": 1027,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -110266,11 +110401,9 @@
       "08f9fd1ae427126dfc2d442f",
       "87b9bbbd3bdbfeb2b80f3ff1",
       "23692f191d2515dbbda05dc3",
-      "26c77de31c47511c7000141e",
       "e5166bbfc1a6c61f7319c440",
       "1f17416c758588b617bfded4",
       "ef4959cc03cf809a03233baf",
-      "4c56f51dfcb4e1261540617e",
       "0e7b3972a2f346d44a7c89aa",
       "3a29b83837586b7bc56808f1",
       "20c7f67e637978cc97a76011",
@@ -110380,9 +110513,11 @@
       "c61335766414792e5980358e",
       "3b86bf1beef9922b8a560003",
       "af2eefa1e5d5e418ee7320cb",
-      "3c343184acafdfc4ff348025"
+      "3c343184acafdfc4ff348025",
+      "380fc07b1ea579eee538fc49",
+      "3e38dec9556c7cbbbf54172c"
     ],
-    "unmatchedDocuments": 737,
+    "unmatchedDocuments": 735,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -110392,7 +110527,7 @@
           "Hacker News"
         ],
         "recentDocuments": 7,
-        "priorDocuments": 3,
+        "priorDocuments": 2,
         "momentumPercent": null,
         "status": "Repeated across sources",
         "evidenceTypes": [
@@ -110452,7 +110587,7 @@
           "Hacker News"
         ],
         "recentDocuments": 3,
-        "priorDocuments": 2,
+        "priorDocuments": 1,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -111188,7 +111323,7 @@
           "Hacker News"
         ],
         "recentDocuments": 7,
-        "priorDocuments": 3,
+        "priorDocuments": 2,
         "momentumPercent": null,
         "status": "Repeated across sources",
         "evidenceTypes": [
@@ -111501,7 +111636,7 @@
           "Hacker News"
         ],
         "recentDocuments": 3,
-        "priorDocuments": 2,
+        "priorDocuments": 1,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -112365,13 +112500,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1062,
-    "comparableDays": 8,
+    "datedDocuments": 1027,
+    "comparableDays": 9,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 19,
+    "readableSources": 20,
     "companies": 8
   }
 }
