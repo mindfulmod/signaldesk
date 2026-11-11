@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "7b274d7f-7a55-48fc-98cb-78d8503f67b2",
-  "generatedAt": "2026-11-10T22:31:14.810Z",
+  "collectionId": "d49623f8-3dc7-4bb3-89a1-0867a184707e",
+  "generatedAt": "2026-11-11T02:58:49.914Z",
   "sourceCheckedAt": "2026-11-10T22:31:14.810Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42915246346",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/42949598140",
   "documents": [
     {
       "id": "1b4adf0a0f091c795b708545",
@@ -90735,17 +90735,17 @@
       "factsCheckedAt": "2026-11-10T22:31:14.810Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 4.57,
+        "price": 4.45,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:00.000Z",
+        "asOf": "2026-11-10T21:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -90986,6 +90986,15 @@
           "price": 4.57,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/QS/",
+          "marketCap": null
+        },
+        {
+          "price": 4.45,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/QS/",
@@ -92894,17 +92903,17 @@
       "factsCheckedAt": "2026-11-10T13:44:30.063Z",
       "factsAccession": "0001104659-26-122310",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 1.93,
+        "price": 1.89,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:00.000Z",
+        "asOf": "2026-11-10T21:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -93145,6 +93154,15 @@
           "price": 1.93,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/SLDP/",
+          "marketCap": null
+        },
+        {
+          "price": 1.89,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/SLDP/",
@@ -94552,17 +94570,17 @@
       "factsCheckedAt": "2026-11-10T13:44:30.063Z",
       "factsAccession": "0001193125-26-448368",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 218.51,
+        "price": 214.78,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:02.000Z",
+        "asOf": "2026-11-10T21:00:02.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -94803,6 +94821,15 @@
           "price": 218.51,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:02.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TM/",
+          "marketCap": null
+        },
+        {
+          "price": 214.78,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:02.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TM/",
@@ -96865,17 +96892,17 @@
       "factsCheckedAt": "2026-11-10T22:31:14.810Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 168.71,
+        "price": 169.08,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:00.000Z",
+        "asOf": "2026-11-10T21:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -97116,6 +97143,15 @@
           "price": 168.71,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/TMUS/",
+          "marketCap": null
+        },
+        {
+          "price": 169.08,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/TMUS/",
@@ -99220,17 +99256,17 @@
       "factsCheckedAt": "2026-11-10T13:44:30.063Z",
       "factsAccession": "0001493152-26-050865",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 36.89,
+        "price": 33.69,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:00.000Z",
+        "asOf": "2026-11-10T21:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -99471,6 +99507,15 @@
           "price": 36.89,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:00.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/ASTS/",
+          "marketCap": null
+        },
+        {
+          "price": 33.69,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/ASTS/",
@@ -101120,21 +101165,21 @@
         "form": "8-K",
         "accession": "0001193125-26-450074"
       },
-      "factsAttemptAt": "2026-11-10T00:50:56.663Z",
-      "factsCheckedAt": "2026-11-10T00:50:56.663Z",
+      "factsAttemptAt": "2026-11-11T02:58:49.914Z",
+      "factsCheckedAt": "2026-11-11T02:58:49.914Z",
       "factsAccession": "0001193125-26-450074",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 641.37,
+        "price": 641.39,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:01.000Z",
+        "asOf": "2026-11-10T21:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -101375,6 +101420,15 @@
           "price": 641.37,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/META/",
+          "marketCap": null
+        },
+        {
+          "price": 641.39,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/META/",
@@ -103420,17 +103474,17 @@
       "factsCheckedAt": "2026-11-10T13:44:30.063Z",
       "factsAccession": "0001193125-26-448357",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 545.18,
+        "price": 533.16,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:01.000Z",
+        "asOf": "2026-11-10T21:00:01.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -103671,6 +103725,15 @@
           "price": 545.18,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/MSFT/",
+          "marketCap": null
+        },
+        {
+          "price": 533.16,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:01.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/MSFT/",
@@ -105919,21 +105982,21 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-10T00:50:56.663Z",
-      "factsCheckedAt": "2026-11-10T00:50:56.663Z",
+      "factsAttemptAt": "2026-11-11T02:58:49.914Z",
+      "factsCheckedAt": "2026-11-11T02:58:49.914Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-10T13:44:30.063Z",
+      "quoteAttemptAt": "2026-11-11T02:58:49.914Z",
       "quote": {
-        "price": 288.15,
+        "price": 287.38,
         "currency": "USD",
-        "asOf": "2026-11-09T21:00:01.000Z",
+        "asOf": "2026-11-10T21:00:00.000Z",
         "precision": "time",
         "provider": "Yahoo public chart",
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-10T13:44:30.063Z",
+      "quoteCheckedAt": "2026-11-11T02:58:49.914Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -106174,6 +106237,15 @@
           "price": 288.15,
           "currency": "USD",
           "asOf": "2026-11-09T21:00:01.000Z",
+          "precision": "time",
+          "provider": "Yahoo public chart",
+          "url": "https://finance.yahoo.com/quote/GOOGL/",
+          "marketCap": null
+        },
+        {
+          "price": 287.38,
+          "currency": "USD",
+          "asOf": "2026-11-10T21:00:00.000Z",
           "precision": "time",
           "provider": "Yahoo public chart",
           "url": "https://finance.yahoo.com/quote/GOOGL/",
@@ -109541,7 +109613,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-10T22:31:14.810Z",
+    "generatedAt": "2026-11-11T02:58:49.914Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -109959,7 +110031,6 @@
           "ea6f5928073fea53f0f4afa9",
           "b872d0ab96f21eb34c11ac1f",
           "fd850c04c33d3665c8e9b800",
-          "db6955132d18cafd0709bf68",
           "612129b62d51be9ce6cf0057",
           "0785ad2630f741e7e1efbdeb",
           "399a194a693f2fcc5e67a50b",
@@ -109970,9 +110041,10 @@
           "f18ff6e2ab9ade358ec450f2",
           "396f6337ec96d52d903af640",
           "9d96229a515743e2e2214ed0",
-          "5525a3062e6932d11448acd0"
+          "5525a3062e6932d11448acd0",
+          "31964c16935f6fceba59cbf2"
         ],
-        "documentCount": 1027,
+        "documentCount": 945,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -110517,7 +110589,7 @@
       "380fc07b1ea579eee538fc49",
       "3e38dec9556c7cbbbf54172c"
     ],
-    "unmatchedDocuments": 735,
+    "unmatchedDocuments": 685,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -110527,7 +110599,7 @@
           "Hacker News"
         ],
         "recentDocuments": 7,
-        "priorDocuments": 2,
+        "priorDocuments": 1,
         "momentumPercent": null,
         "status": "Repeated across sources",
         "evidenceTypes": [
@@ -110550,7 +110622,7 @@
         "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -110578,7 +110650,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -110587,7 +110659,7 @@
           "Hacker News"
         ],
         "recentDocuments": 3,
-        "priorDocuments": 1,
+        "priorDocuments": 0,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -110606,7 +110678,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "53beb385cf69a2c6c9d58738",
@@ -110634,7 +110706,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "5c85686c3d7033acd170ffca",
@@ -110661,7 +110733,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "caa8b85b5c131de2033176a3",
@@ -110686,7 +110758,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "eb23bb7873c6720d3bfe96d4",
@@ -110711,7 +110783,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "665158ad1a9def9e48419fd1",
@@ -110736,7 +110808,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "48636da5ecfb0b5518ad1d4f",
@@ -110761,7 +110833,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "4cb70d9c8049bc8b0048eaeb",
@@ -110786,7 +110858,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "a2dcd4c0786f567eb710925d",
@@ -110811,7 +110883,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -110836,7 +110908,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "a695157969fbfe7e45facb18",
@@ -110861,7 +110933,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "4bbf79b05b608ecf77e57055",
@@ -110886,7 +110958,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "a5d8dfba2d4fe0316349d240",
@@ -110911,7 +110983,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "ea6f5928073fea53f0f4afa9",
@@ -110936,7 +111008,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "b872d0ab96f21eb34c11ac1f",
@@ -110961,7 +111033,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "fd850c04c33d3665c8e9b800",
@@ -110986,32 +111058,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      },
-      {
-        "id": "db6955132d18cafd0709bf68",
-        "phrase": "pseudo direct semiconductor",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Risk / setback language"
-        ],
-        "documentIds": [
-          "e89ae33167c4749d8ddde9ce"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-29",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "612129b62d51be9ce6cf0057",
@@ -111036,7 +111083,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "0785ad2630f741e7e1efbdeb",
@@ -111061,7 +111108,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "399a194a693f2fcc5e67a50b",
@@ -111086,7 +111133,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "da3552d273a93c1fbf7deb87",
@@ -111111,7 +111158,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "15aed0775ca9a3f31e577836",
@@ -111136,7 +111183,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "4a49429fd75bc69dcc6f51e2",
@@ -111161,7 +111208,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "038eb8b917707f28b8e99178",
@@ -111186,7 +111233,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "f18ff6e2ab9ade358ec450f2",
@@ -111211,7 +111258,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "396f6337ec96d52d903af640",
@@ -111236,7 +111283,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "9d96229a515743e2e2214ed0",
@@ -111261,7 +111308,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "5525a3062e6932d11448acd0",
@@ -111286,35 +111333,35 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      }
-    ],
-    "archive": [
+        "lastSeenAt": "2026-11-11"
+      },
       {
-        "id": "db6955132d18cafd0709bf68",
-        "phrase": "pseudo direct semiconductor",
+        "id": "31964c16935f6fceba59cbf2",
+        "phrase": "soft robot",
         "owners": [
-          "Nature"
+          "MIT"
         ],
         "recentDocuments": 1,
         "priorDocuments": 0,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
-          "Risk / setback language"
+          "Research / test language"
         ],
         "documentIds": [
-          "e89ae33167c4749d8ddde9ce"
+          "9dffd900b41d8d06dcbe73ac"
         ],
         "lanes": [
           "research"
         ],
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-29",
+        "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      },
+        "lastSeenAt": "2026-11-11"
+      }
+    ],
+    "archive": [
       {
         "id": "e748f8750672ca8b04b242be",
         "phrase": "ai agents",
@@ -111323,7 +111370,7 @@
           "Hacker News"
         ],
         "recentDocuments": 7,
-        "priorDocuments": 2,
+        "priorDocuments": 1,
         "momentumPercent": null,
         "status": "Repeated across sources",
         "evidenceTypes": [
@@ -111346,7 +111393,7 @@
         "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "caa8b85b5c131de2033176a3",
@@ -111371,7 +111418,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "665158ad1a9def9e48419fd1",
@@ -111396,7 +111443,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -111424,7 +111471,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "31964c16935f6fceba59cbf2",
@@ -111449,7 +111496,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "53beb385cf69a2c6c9d58738",
@@ -111477,7 +111524,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "4cb70d9c8049bc8b0048eaeb",
@@ -111502,7 +111549,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "eb23bb7873c6720d3bfe96d4",
@@ -111527,7 +111574,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "48636da5ecfb0b5518ad1d4f",
@@ -111552,7 +111599,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "b872d0ab96f21eb34c11ac1f",
@@ -111577,7 +111624,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "15aed0775ca9a3f31e577836",
@@ -111602,7 +111649,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "396f6337ec96d52d903af640",
@@ -111627,7 +111674,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -111636,7 +111683,7 @@
           "Hacker News"
         ],
         "recentDocuments": 3,
-        "priorDocuments": 1,
+        "priorDocuments": 0,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -111655,7 +111702,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "5c85686c3d7033acd170ffca",
@@ -111682,7 +111729,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "a695157969fbfe7e45facb18",
@@ -111707,7 +111754,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "ea6f5928073fea53f0f4afa9",
@@ -111732,7 +111779,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "fd850c04c33d3665c8e9b800",
@@ -111757,7 +111804,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "612129b62d51be9ce6cf0057",
@@ -111782,7 +111829,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "399a194a693f2fcc5e67a50b",
@@ -111807,7 +111854,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "da3552d273a93c1fbf7deb87",
@@ -111832,7 +111879,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -111857,7 +111904,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "4a49429fd75bc69dcc6f51e2",
@@ -111882,7 +111929,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "9d96229a515743e2e2214ed0",
@@ -111907,7 +111954,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "0785ad2630f741e7e1efbdeb",
@@ -111932,7 +111979,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "f18ff6e2ab9ade358ec450f2",
@@ -111957,7 +112004,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "5525a3062e6932d11448acd0",
@@ -111982,7 +112029,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
+        "lastSeenAt": "2026-11-11"
       },
       {
         "id": "038eb8b917707f28b8e99178",
@@ -112006,6 +112053,106 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-11"
+      },
+      {
+        "id": "a2dcd4c0786f567eb710925d",
+        "phrase": "open source ai agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "57638837b70054aee29a07fb"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-10",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-11"
+      },
+      {
+        "id": "4bbf79b05b608ecf77e57055",
+        "phrase": "show hn every satellite",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "380fc07b1ea579eee538fc49"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-10",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-11"
+      },
+      {
+        "id": "a5d8dfba2d4fe0316349d240",
+        "phrase": "source ai support engine",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "aff4a70dba6159cb546da164"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-10",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-11"
+      },
+      {
+        "id": "db6955132d18cafd0709bf68",
+        "phrase": "pseudo direct semiconductor",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Risk / setback language"
+        ],
+        "documentIds": [
+          "e89ae33167c4749d8ddde9ce"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-29",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-10"
       },
@@ -112031,81 +112178,6 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      },
-      {
-        "id": "a2dcd4c0786f567eb710925d",
-        "phrase": "open source ai agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "57638837b70054aee29a07fb"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-10",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      },
-      {
-        "id": "4bbf79b05b608ecf77e57055",
-        "phrase": "show hn every satellite",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "380fc07b1ea579eee538fc49"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-10",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-10"
-      },
-      {
-        "id": "a5d8dfba2d4fe0316349d240",
-        "phrase": "source ai support engine",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "aff4a70dba6159cb546da164"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-10"
       },
@@ -112500,7 +112572,7 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1027,
+    "datedDocuments": 945,
     "comparableDays": 9,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
