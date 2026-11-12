@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "f598edba-f5cd-4932-9085-80b65b8025d5",
-  "generatedAt": "2026-11-12T13:58:01.157Z",
-  "sourceCheckedAt": "2026-11-12T13:58:01.157Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43232303227",
+  "collectionId": "406d43f0-04de-4b67-b4a9-7748ccaf5c4d",
+  "generatedAt": "2026-11-12T22:51:02.453Z",
+  "sourceCheckedAt": "2026-11-12T22:51:02.453Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43323612433",
   "documents": [
     {
       "id": "003ba16446a0dc3b65493c31",
@@ -117425,7 +117425,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-12T13:58:01.157Z",
+    "generatedAt": "2026-11-12T22:51:02.453Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -117972,7 +117972,7 @@
           "038eb8b917707f28b8e99178",
           "f18ff6e2ab9ade358ec450f2"
         ],
-        "documentCount": 1102,
+        "documentCount": 1099,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -118517,7 +118517,7 @@
       "e9837bcc3ebf5e832dd76d82",
       "eda2b908b1fffdea882c03e0"
     ],
-    "unmatchedDocuments": 840,
+    "unmatchedDocuments": 839,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -120618,8 +120618,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1102,
-    "comparableDays": 10,
+    "datedDocuments": 1099,
+    "comparableDays": 11,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
