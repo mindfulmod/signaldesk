@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T03:34:03.159Z",
+  "generatedAt": "2026-11-13T13:24:50.482Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -11736,23 +11736,23 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm",
         "title": "Meta Platforms · 8-K · 8-K",
-        "publishedAt": "2026-11-05",
-        "reportDate": "2026-11-03",
-        "acceptedAt": "2026-11-05T21:58:46.000Z",
+        "publishedAt": "2026-11-12",
+        "reportDate": "2026-11-12",
+        "acceptedAt": "2026-11-12T21:27:49.000Z",
         "filingItems": [
           "8.01",
           "9.01"
         ],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/0001193125-26-450074-index.html",
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/0001193125-26-458525-index.html",
         "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
         "form": "8-K",
-        "accession": "0001193125-26-450074"
+        "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-12T04:14:18.536Z",
-      "factsCheckedAt": "2026-11-12T04:14:18.536Z",
-      "factsAccession": "0001193125-26-450074",
+      "factsAttemptAt": "2026-11-13T13:24:50.482Z",
+      "factsCheckedAt": "2026-11-13T13:24:50.482Z",
+      "factsAccession": "0001193125-26-458525",
       "factsError": null,
       "quoteAttemptAt": "2026-11-13T03:34:03.159Z",
       "quote": {
@@ -16603,8 +16603,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-12T04:14:18.536Z",
-      "factsCheckedAt": "2026-11-12T04:14:18.536Z",
+      "factsAttemptAt": "2026-11-13T13:24:50.482Z",
+      "factsCheckedAt": "2026-11-13T13:24:50.482Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-13T03:34:03.159Z",
