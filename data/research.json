@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "2cc95777-5315-4a30-b64c-0b1f7b16e3ab",
-  "generatedAt": "2026-11-14T12:28:59.325Z",
-  "sourceCheckedAt": "2026-11-14T12:28:59.325Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43595005676",
+  "collectionId": "405f1e12-640e-4787-ac0f-ea497729f94e",
+  "generatedAt": "2026-11-14T21:40:13.978Z",
+  "sourceCheckedAt": "2026-11-14T21:40:13.978Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43643999999",
   "documents": [
     {
       "id": "028acb27d8b09537db048832",
@@ -115057,8 +115057,8 @@
         "form": "8-K",
         "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-13T13:24:50.482Z",
-      "factsCheckedAt": "2026-11-13T13:24:50.482Z",
+      "factsAttemptAt": "2026-11-14T21:40:13.978Z",
+      "factsCheckedAt": "2026-11-14T21:40:13.978Z",
       "factsAccession": "0001193125-26-458525",
       "factsError": null,
       "quoteAttemptAt": "2026-11-14T12:28:59.325Z",
@@ -119928,8 +119928,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-13T13:24:50.482Z",
-      "factsCheckedAt": "2026-11-13T13:24:50.482Z",
+      "factsAttemptAt": "2026-11-14T21:40:13.978Z",
+      "factsCheckedAt": "2026-11-14T21:40:13.978Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-14T12:28:59.325Z",
@@ -123586,7 +123586,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-14T12:28:59.325Z",
+    "generatedAt": "2026-11-14T21:40:13.978Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -124794,7 +124794,7 @@
       "0ef6201877a823e4ae426c98",
       "a1bc9128b677fe48e39bb33f"
     ],
-    "unmatchedDocuments": 944,
+    "unmatchedDocuments": 943,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -127004,7 +127004,7 @@
       }
     ],
     "datedDocuments": 1164,
-    "comparableDays": 12,
+    "comparableDays": 13,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
