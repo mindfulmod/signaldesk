@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T12:56:36.411Z",
+  "generatedAt": "2026-11-15T22:03:18.872Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1230,7 +1230,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 3.68,
         "currency": "USD",
@@ -1240,7 +1240,7 @@
         "url": "https://finance.yahoo.com/quote/QS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -3425,7 +3425,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001104659-26-122310",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 1.76,
         "currency": "USD",
@@ -3435,7 +3435,7 @@
         "url": "https://finance.yahoo.com/quote/SLDP/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -5119,7 +5119,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001193125-26-448368",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 212.43,
         "currency": "USD",
@@ -5129,7 +5129,7 @@
         "url": "https://finance.yahoo.com/quote/TM/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -7468,7 +7468,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 169.95,
         "currency": "USD",
@@ -7478,7 +7478,7 @@
         "url": "https://finance.yahoo.com/quote/TMUS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -9859,7 +9859,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001493152-26-050865",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 32.6,
         "currency": "USD",
@@ -9869,7 +9869,7 @@
         "url": "https://finance.yahoo.com/quote/ASTS/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -11795,11 +11795,11 @@
         "form": "8-K",
         "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-14T21:40:13.978Z",
-      "factsCheckedAt": "2026-11-14T21:40:13.978Z",
+      "factsAttemptAt": "2026-11-15T22:03:18.872Z",
+      "factsCheckedAt": "2026-11-15T22:03:18.872Z",
       "factsAccession": "0001193125-26-458525",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 641.69,
         "currency": "USD",
@@ -11809,7 +11809,7 @@
         "url": "https://finance.yahoo.com/quote/META/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -14131,7 +14131,7 @@
       "factsCheckedAt": "2026-11-15T12:56:36.411Z",
       "factsAccession": "0001193125-26-448357",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 523.88,
         "currency": "USD",
@@ -14141,7 +14141,7 @@
         "url": "https://finance.yahoo.com/quote/MSFT/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
@@ -16666,11 +16666,11 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-14T21:40:13.978Z",
-      "factsCheckedAt": "2026-11-14T21:40:13.978Z",
+      "factsAttemptAt": "2026-11-15T22:03:18.872Z",
+      "factsCheckedAt": "2026-11-15T22:03:18.872Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
-      "quoteAttemptAt": "2026-11-15T03:02:08.560Z",
+      "quoteAttemptAt": "2026-11-15T22:03:18.872Z",
       "quote": {
         "price": 295.77,
         "currency": "USD",
@@ -16680,7 +16680,7 @@
         "url": "https://finance.yahoo.com/quote/GOOGL/",
         "marketCap": null
       },
-      "quoteCheckedAt": "2026-11-15T03:02:08.560Z",
+      "quoteCheckedAt": "2026-11-15T22:03:18.872Z",
       "quoteError": null,
       "quoteHistory": [
         {
