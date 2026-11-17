@@ -1,1 +1,1 @@
-window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-11-16T23:29:58.410Z","phrases":[{"phrase":"system outage","weekCount":2,"tickers":["UAL"],"domains":2,"gdelt":null,"edgar":{"ratio":null,"confirmed":false,"basis":null},"gdeltChecked":false,"edgarChecked":true,"confirmed":false}]};
+window.SIGNALDESK_PHRASE_RADAR = {"generatedAt":"2026-11-17T22:28:52.106Z","phrases":[]};
