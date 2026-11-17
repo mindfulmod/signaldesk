@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "d80e8df5-3bb6-4f97-8a28-f9020cdb5ad1",
-  "generatedAt": "2026-11-17T14:52:09.692Z",
+  "collectionId": "801770a3-89bc-4763-916d-9c539f474d0c",
+  "generatedAt": "2026-11-17T23:56:42.847Z",
   "sourceCheckedAt": "2026-11-17T14:52:09.692Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44107730609",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44203637091",
   "documents": [
     {
       "id": "00399cfe8341ee7e93a7d9e4",
@@ -132925,7 +132925,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-17T14:52:09.692Z",
+    "generatedAt": "2026-11-17T23:56:42.847Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -133748,7 +133748,6 @@
           "38d3eea6566bb060dbfd46b1",
           "25ce80b2ac32f4764ad2dbc7",
           "1e8e42e20346f11bddb0bdfe",
-          "a695157969fbfe7e45facb18",
           "60add2dd25cc9d372b6c3968",
           "3e45a7760d7f4125aabf77b6",
           "f469c7b3455eed49f1057662",
@@ -133760,9 +133759,10 @@
           "3a070f5aecbf3f0f2c0a0b5a",
           "fd850c04c33d3665c8e9b800",
           "203e5271b1128f99f8e2669d",
-          "612129b62d51be9ce6cf0057"
+          "612129b62d51be9ce6cf0057",
+          "0785ad2630f741e7e1efbdeb"
         ],
-        "documentCount": 1324,
+        "documentCount": 1322,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -134231,7 +134231,6 @@
       "44a80cb83f0c8035f20ccb2c",
       "d88a45d87b08b32c790eb4dc",
       "3c9a4e9ab7c580a4d852f848",
-      "63ae06d894f1337eee60f403",
       "ede75afc371aaade1346a614",
       "f1a82965ebb64cb82a5fc334",
       "fa2a34d154f12b50050e46e2",
@@ -134305,9 +134304,10 @@
       "48e3b6ca31821bc779bf083e",
       "03ffbecc94d99b0379d3f3aa",
       "491c97fb1eef4aae366a7c86",
-      "3b7f570927138f240386f8a9"
+      "3b7f570927138f240386f8a9",
+      "4e325353dd3b9c006d493a55"
     ],
-    "unmatchedDocuments": 958,
+    "unmatchedDocuments": 944,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -134766,31 +134766,6 @@
         "lastSeenAt": "2026-11-17"
       },
       {
-        "id": "a695157969fbfe7e45facb18",
-        "phrase": "room scale gripper robot",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "f0b2278c96eed6687b6ff000"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-04",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-17"
-      },
-      {
         "id": "60add2dd25cc9d372b6c3968",
         "phrase": "scopedb accesses object storage",
         "owners": [
@@ -135087,6 +135062,31 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "0785ad2630f741e7e1efbdeb",
+        "phrase": "show hn agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "8e2c8a64e106029c91bf9d19"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-17"
       }
@@ -136714,8 +136714,8 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1324,
-    "comparableDays": 15,
+    "datedDocuments": 1322,
+    "comparableDays": 16,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
