@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "d41f9c2c-ec61-4915-9749-166d085efad5",
-  "generatedAt": "2026-11-16T13:57:55.508Z",
-  "sourceCheckedAt": "2026-11-16T13:57:55.508Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43880824326",
+  "collectionId": "8d378bf9-8470-4636-aba9-00edc60c041e",
+  "generatedAt": "2026-11-17T01:02:24.232Z",
+  "sourceCheckedAt": "2026-11-17T01:02:24.232Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/43992384245",
   "documents": [
     {
       "id": "01c395057a6c4081a11ba801",
@@ -120707,8 +120707,8 @@
         "form": "8-K",
         "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-15T22:03:18.872Z",
-      "factsCheckedAt": "2026-11-15T22:03:18.872Z",
+      "factsAttemptAt": "2026-11-17T01:02:24.232Z",
+      "factsCheckedAt": "2026-11-17T01:02:24.232Z",
       "factsAccession": "0001193125-26-458525",
       "factsError": null,
       "quoteAttemptAt": "2026-11-16T13:57:55.508Z",
@@ -125578,8 +125578,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-15T22:03:18.872Z",
-      "factsCheckedAt": "2026-11-15T22:03:18.872Z",
+      "factsAttemptAt": "2026-11-17T01:02:24.232Z",
+      "factsCheckedAt": "2026-11-17T01:02:24.232Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-16T13:57:55.508Z",
@@ -129236,7 +129236,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-16T13:57:55.508Z",
+    "generatedAt": "2026-11-17T01:02:24.232Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -129988,15 +129988,12 @@
           "31a85e22a24a7a4fba06c2c6",
           "ee662f0a4316976d226a3faf",
           "5c85686c3d7033acd170ffca",
-          "53beb385cf69a2c6c9d58738",
           "4e23c7e335b2bee22bb8f2c8",
           "038eb8b917707f28b8e99178",
-          "caa8b85b5c131de2033176a3",
+          "53beb385cf69a2c6c9d58738",
           "71129ee2050ba9e34270d25d",
           "eb23bb7873c6720d3bfe96d4",
-          "665158ad1a9def9e48419fd1",
           "9b7f88b62dccc180eeccc6fa",
-          "4cb70d9c8049bc8b0048eaeb",
           "a2dcd4c0786f567eb710925d",
           "38d3eea6566bb060dbfd46b1",
           "1e8e42e20346f11bddb0bdfe",
@@ -130013,9 +130010,12 @@
           "3a070f5aecbf3f0f2c0a0b5a",
           "fd850c04c33d3665c8e9b800",
           "612129b62d51be9ce6cf0057",
-          "0785ad2630f741e7e1efbdeb"
+          "0785ad2630f741e7e1efbdeb",
+          "399a194a693f2fcc5e67a50b",
+          "da3552d273a93c1fbf7deb87",
+          "15aed0775ca9a3f31e577836"
         ],
-        "documentCount": 1264,
+        "documentCount": 1247,
         "sourceChecks": [
           {
             "id": "nsf-research",
@@ -130439,7 +130439,6 @@
     "collectedToday": true,
     "discoveryTruncated": false,
     "openScan": [
-      "4cd535eeb86079321797afd8",
       "652b0bbbd04aeef1215a4134",
       "13b6010bf2a2da2e6b4f51fa",
       "0ebac700a77f2aba2480e0eb",
@@ -130482,7 +130481,6 @@
       "63ae06d894f1337eee60f403",
       "9a0102b23d3bd73bf6b21278",
       "4ac74cb7c7a8ab6c5ef24cc5",
-      "504021924805dd3138b1ed6a",
       "b08b0f4f114838380042f972",
       "ab5ede92f625fe503af3c49f",
       "f06430882edc3073cfeeff44",
@@ -130558,9 +130556,11 @@
       "956e0dca9d6db041c76ccc57",
       "3754c22e785bd05f3722a883",
       "9900b61cfa7ae6de316828d4",
-      "e267f8674b93266fc942462b"
+      "e267f8674b93266fc942462b",
+      "9d36e33d397a8a6e76d94b73",
+      "d277610212ff067e75f59268"
     ],
-    "unmatchedDocuments": 1016,
+    "unmatchedDocuments": 914,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -130569,8 +130569,8 @@
           "Nature",
           "Hacker News"
         ],
-        "recentDocuments": 13,
-        "priorDocuments": 0,
+        "recentDocuments": 11,
+        "priorDocuments": 2,
         "momentumPercent": null,
         "status": "Repeated across sources",
         "evidenceTypes": [
@@ -130587,19 +130587,17 @@
           "9ef4b9cc224483aa739814b3",
           "e470327eeb0810067e7e4b53",
           "025d51471f7ee9338245c130",
-          "edc301b53c1d4226be151852",
-          "74c7f472cde519606827cbc5",
-          "8d38ba8942c35143753bdfb1"
+          "edc301b53c1d4226be151852"
         ],
         "lanes": [
           "research",
           "community"
         ],
-        "spanDays": 12,
+        "spanDays": 11,
         "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -130633,7 +130631,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -130661,7 +130659,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "5c85686c3d7033acd170ffca",
@@ -130689,35 +130687,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "53beb385cf69a2c6c9d58738",
-        "phrase": "coding agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting",
-          "Risk / setback language"
-        ],
-        "documentIds": [
-          "23692f191d2515dbbda05dc3",
-          "f81ae2f5b5e9d77e447a7a9e",
-          "8fafded7924cbd016c7b1e12"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 7,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4e23c7e335b2bee22bb8f2c8",
@@ -130743,7 +130713,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "038eb8b917707f28b8e99178",
@@ -130769,32 +130739,33 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
-        "id": "caa8b85b5c131de2033176a3",
-        "phrase": "agenttrafficcop stop ai agents",
+        "id": "53beb385cf69a2c6c9d58738",
+        "phrase": "coding agents",
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
+        "recentDocuments": 2,
+        "priorDocuments": 1,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
           "Announcement / reporting"
         ],
         "documentIds": [
-          "74c7f472cde519606827cbc5"
+          "23692f191d2515dbbda05dc3",
+          "f81ae2f5b5e9d77e447a7a9e"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 0,
+        "spanDays": 1,
         "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
+        "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "71129ee2050ba9e34270d25d",
@@ -130819,7 +130790,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "eb23bb7873c6720d3bfe96d4",
@@ -130844,32 +130815,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "665158ad1a9def9e48419fd1",
-        "phrase": "engine built around agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "b60090bc32c0326805d9c708"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "9b7f88b62dccc180eeccc6fa",
@@ -130894,32 +130840,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "4cb70d9c8049bc8b0048eaeb",
-        "phrase": "momentic yc w24 agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Deployment language"
-        ],
-        "documentIds": [
-          "e043dc3ae39fe684d4b02e2b"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a2dcd4c0786f567eb710925d",
@@ -130944,7 +130865,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "38d3eea6566bb060dbfd46b1",
@@ -130969,7 +130890,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -130994,7 +130915,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a695157969fbfe7e45facb18",
@@ -131019,7 +130940,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "60add2dd25cc9d372b6c3968",
@@ -131044,7 +130965,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "3e45a7760d7f4125aabf77b6",
@@ -131069,7 +130990,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4b22e201927ffadf4876dbe9",
@@ -131094,7 +131015,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4bbf79b05b608ecf77e57055",
@@ -131119,7 +131040,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "09cf7632ba27eaa179f02d30",
@@ -131144,7 +131065,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a5d8dfba2d4fe0316349d240",
@@ -131169,7 +131090,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "ea6f5928073fea53f0f4afa9",
@@ -131194,7 +131115,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-04",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a2345ee38432c1bdbae545c4",
@@ -131219,7 +131140,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "b872d0ab96f21eb34c11ac1f",
@@ -131244,7 +131165,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "3a070f5aecbf3f0f2c0a0b5a",
@@ -131269,7 +131190,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "fd850c04c33d3665c8e9b800",
@@ -131294,7 +131215,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "612129b62d51be9ce6cf0057",
@@ -131319,7 +131240,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "0785ad2630f741e7e1efbdeb",
@@ -131344,391 +131265,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      }
-    ],
-    "archive": [
-      {
-        "id": "e748f8750672ca8b04b242be",
-        "phrase": "ai agents",
-        "owners": [
-          "Nature",
-          "Hacker News"
-        ],
-        "recentDocuments": 13,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Repeated across sources",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "a21cab7afd74e3cc8d0b831c",
-          "839104443bc151e469f8a0a3",
-          "add4879b94727c4c090bb962",
-          "05e472edbf5ba4d3953ba0e9",
-          "cc34359ee40ef9dc0128bc95",
-          "e1810c78f290902046b4c010",
-          "2c39381f93c47c9d5369fa38",
-          "9ef4b9cc224483aa739814b3",
-          "e470327eeb0810067e7e4b53",
-          "025d51471f7ee9338245c130",
-          "edc301b53c1d4226be151852",
-          "74c7f472cde519606827cbc5",
-          "8d38ba8942c35143753bdfb1"
-        ],
-        "lanes": [
-          "research",
-          "community"
-        ],
-        "spanDays": 12,
-        "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "caa8b85b5c131de2033176a3",
-        "phrase": "agenttrafficcop stop ai agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "74c7f472cde519606827cbc5"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "665158ad1a9def9e48419fd1",
-        "phrase": "engine built around agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "b60090bc32c0326805d9c708"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "ee662f0a4316976d226a3faf",
-        "phrase": "ai agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 4,
-        "priorDocuments": 1,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "0ef6201877a823e4ae426c98",
-          "57638837b70054aee29a07fb",
-          "f84224dc6926dbf816310873",
-          "b331c1578bc3b88401239b03"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 10,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "53beb385cf69a2c6c9d58738",
-        "phrase": "coding agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting",
-          "Risk / setback language"
-        ],
-        "documentIds": [
-          "23692f191d2515dbbda05dc3",
-          "f81ae2f5b5e9d77e447a7a9e",
-          "8fafded7924cbd016c7b1e12"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 7,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-11",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "4cb70d9c8049bc8b0048eaeb",
-        "phrase": "momentic yc w24 agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Deployment language"
-        ],
-        "documentIds": [
-          "e043dc3ae39fe684d4b02e2b"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-02",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "eb23bb7873c6720d3bfe96d4",
-        "phrase": "common ground ai agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "b331c1578bc3b88401239b03"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-03",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "b872d0ab96f21eb34c11ac1f",
-        "phrase": "cant claude agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3680a158a53ef86f0c8f3001"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-03",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "31a85e22a24a7a4fba06c2c6",
-        "phrase": "coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 8,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting",
-          "Deployment language",
-          "Research / test language"
-        ],
-        "documentIds": [
-          "5540c7b01605b78f664203a2",
-          "655999be1840316fc09993d4",
-          "5f7d632f7b785f3616f5d77b",
-          "acf1dd2e4af26fc3f49ce4c0",
-          "425f3f8cbe2871edb7f5df6e",
-          "9aeed6beedc430c134153e2f",
-          "a70f1ec4fc597b81077b38f9",
-          "aad0f4cfc1648b5edeb24be0"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 11,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-10-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "5c85686c3d7033acd170ffca",
-        "phrase": "show hn agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting",
-          "Research / test language"
-        ],
-        "documentIds": [
-          "e470327eeb0810067e7e4b53",
-          "491d9a22da057423aafdd006",
-          "aad0f4cfc1648b5edeb24be0"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 7,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-04",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "a695157969fbfe7e45facb18",
-        "phrase": "room scale gripper robot",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "f0b2278c96eed6687b6ff000"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-04",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "ea6f5928073fea53f0f4afa9",
-        "phrase": "tokeneconomizer cut coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "a70f1ec4fc597b81077b38f9"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-04",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "fd850c04c33d3665c8e9b800",
-        "phrase": "observing interstitial hydrogen",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "8166fc5b43959b0f1dc9b8be"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-05",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
-      },
-      {
-        "id": "612129b62d51be9ce6cf0057",
-        "phrase": "read out chips",
-        "owners": [
-          "Nature"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "7e26bcaa1d4d5c087798f324"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-05",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "399a194a693f2fcc5e67a50b",
@@ -131753,7 +131290,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "da3552d273a93c1fbf7deb87",
@@ -131778,7 +131315,387 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-05",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "15aed0775ca9a3f31e577836",
+        "phrase": "unifi cloud storage",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "aca6991c15e5487914eeed18"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-03",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      }
+    ],
+    "archive": [
+      {
+        "id": "e748f8750672ca8b04b242be",
+        "phrase": "ai agents",
+        "owners": [
+          "Nature",
+          "Hacker News"
+        ],
+        "recentDocuments": 11,
+        "priorDocuments": 2,
+        "momentumPercent": null,
+        "status": "Repeated across sources",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "a21cab7afd74e3cc8d0b831c",
+          "839104443bc151e469f8a0a3",
+          "add4879b94727c4c090bb962",
+          "05e472edbf5ba4d3953ba0e9",
+          "cc34359ee40ef9dc0128bc95",
+          "e1810c78f290902046b4c010",
+          "2c39381f93c47c9d5369fa38",
+          "9ef4b9cc224483aa739814b3",
+          "e470327eeb0810067e7e4b53",
+          "025d51471f7ee9338245c130",
+          "edc301b53c1d4226be151852"
+        ],
+        "lanes": [
+          "research",
+          "community"
+        ],
+        "spanDays": 11,
+        "nextCheck": "Check paying usage, repeat orders or measured deployment—not more headlines.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "ee662f0a4316976d226a3faf",
+        "phrase": "ai agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 4,
+        "priorDocuments": 1,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "0ef6201877a823e4ae426c98",
+          "57638837b70054aee29a07fb",
+          "f84224dc6926dbf816310873",
+          "b331c1578bc3b88401239b03"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 10,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-02",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "53beb385cf69a2c6c9d58738",
+        "phrase": "coding agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 1,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "23692f191d2515dbbda05dc3",
+          "f81ae2f5b5e9d77e447a7a9e"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 1,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-11",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "eb23bb7873c6720d3bfe96d4",
+        "phrase": "common ground ai agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "b331c1578bc3b88401239b03"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-03",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "b872d0ab96f21eb34c11ac1f",
+        "phrase": "cant claude agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "3680a158a53ef86f0c8f3001"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-03",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "31a85e22a24a7a4fba06c2c6",
+        "phrase": "coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 8,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting",
+          "Deployment language",
+          "Research / test language"
+        ],
+        "documentIds": [
+          "5540c7b01605b78f664203a2",
+          "655999be1840316fc09993d4",
+          "5f7d632f7b785f3616f5d77b",
+          "acf1dd2e4af26fc3f49ce4c0",
+          "425f3f8cbe2871edb7f5df6e",
+          "9aeed6beedc430c134153e2f",
+          "a70f1ec4fc597b81077b38f9",
+          "aad0f4cfc1648b5edeb24be0"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 11,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-10-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "5c85686c3d7033acd170ffca",
+        "phrase": "show hn agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 3,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting",
+          "Research / test language"
+        ],
+        "documentIds": [
+          "e470327eeb0810067e7e4b53",
+          "491d9a22da057423aafdd006",
+          "aad0f4cfc1648b5edeb24be0"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 7,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-04",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "a695157969fbfe7e45facb18",
+        "phrase": "room scale gripper robot",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f0b2278c96eed6687b6ff000"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-04",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "ea6f5928073fea53f0f4afa9",
+        "phrase": "tokeneconomizer cut coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "a70f1ec4fc597b81077b38f9"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-04",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "fd850c04c33d3665c8e9b800",
+        "phrase": "observing interstitial hydrogen",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "8166fc5b43959b0f1dc9b8be"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-05",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "612129b62d51be9ce6cf0057",
+        "phrase": "read out chips",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "7e26bcaa1d4d5c087798f324"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-05",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "399a194a693f2fcc5e67a50b",
+        "phrase": "tandem solar cells",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "e2beacb3c4abf12a59de818a"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-05",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "da3552d273a93c1fbf7deb87",
+        "phrase": "test time compute",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Research / test language"
+        ],
+        "documentIds": [
+          "30646326407f143d97de9a21"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-05",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "1e8e42e20346f11bddb0bdfe",
@@ -131803,7 +131720,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-06",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "0785ad2630f741e7e1efbdeb",
@@ -131828,7 +131745,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-07",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a2dcd4c0786f567eb710925d",
@@ -131853,7 +131770,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4bbf79b05b608ecf77e57055",
@@ -131878,7 +131795,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a5d8dfba2d4fe0316349d240",
@@ -131903,7 +131820,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-10",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "09cf7632ba27eaa179f02d30",
@@ -131928,7 +131845,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "71129ee2050ba9e34270d25d",
@@ -131953,7 +131870,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "60add2dd25cc9d372b6c3968",
@@ -131978,7 +131895,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "3a070f5aecbf3f0f2c0a0b5a",
@@ -132003,7 +131920,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "3e45a7760d7f4125aabf77b6",
@@ -132028,7 +131945,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4e23c7e335b2bee22bb8f2c8",
@@ -132054,7 +131971,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "9b7f88b62dccc180eeccc6fa",
@@ -132079,7 +131996,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "38d3eea6566bb060dbfd46b1",
@@ -132104,7 +132021,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "15aed0775ca9a3f31e577836",
@@ -132129,7 +132046,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-03",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "038eb8b917707f28b8e99178",
@@ -132155,7 +132072,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "4b22e201927ffadf4876dbe9",
@@ -132180,7 +132097,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-16"
+        "lastSeenAt": "2026-11-17"
       },
       {
         "id": "a2345ee38432c1bdbae545c4",
@@ -132204,6 +132121,81 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-17"
+      },
+      {
+        "id": "caa8b85b5c131de2033176a3",
+        "phrase": "agenttrafficcop stop ai agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "74c7f472cde519606827cbc5"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-02",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-16"
+      },
+      {
+        "id": "665158ad1a9def9e48419fd1",
+        "phrase": "engine built around agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "b60090bc32c0326805d9c708"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-02",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-16"
+      },
+      {
+        "id": "4cb70d9c8049bc8b0048eaeb",
+        "phrase": "momentic yc w24 agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Deployment language"
+        ],
+        "documentIds": [
+          "e043dc3ae39fe684d4b02e2b"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-16"
       },
@@ -132823,13 +132815,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1264,
-    "comparableDays": 14,
+    "datedDocuments": 1247,
+    "comparableDays": 15,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 19,
+    "readableSources": 20,
     "companies": 8
   }
 }

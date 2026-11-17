@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T13:57:55.508Z",
+  "generatedAt": "2026-11-17T01:02:24.232Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -165,12 +165,12 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "error",
-      "lastAttemptAt": "2026-11-16T13:57:55.508Z",
+      "lastAttemptAt": "2026-11-17T01:02:24.232Z",
       "lastSuccessAt": "2026-11-15T12:56:36.411Z",
       "baselineAt": "2026-11-15T12:56:36.411Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-11-16T14:57:55.508Z",
-      "failureStreak": 1,
+      "nextAttemptAt": "2026-11-17T03:02:24.232Z",
+      "failureStreak": 2,
       "error": "HTTP 403",
       "fingerprint": "ab15f647f2be54228020690a6dee95f05c6b3b94792fbe89ec3e821479bd8f91",
       "items": [
@@ -275,14 +275,14 @@
       "sourceUrl": "https://newsroom.bmwgroup.com/global/tagfeed/en/tags/focus_news",
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"bmw-news\",\"https://newsroom.bmwgroup.com/global/tagfeed/en/tags/focus_news\",\"rss\",\"links\",[\"newsroom.bmwgroup.com\"],[\"batteries\",\"battery\",\"solid power\",\"solid-state\"],null,null,false,true,\"BMW\",\"BMW selected newsroom releases\",[\"solid-state-batteries\"],\"customer\",false]",
-      "status": "error",
-      "lastAttemptAt": "2026-11-16T13:57:55.508Z",
-      "lastSuccessAt": "2026-11-15T12:56:36.411Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-11-17T01:02:24.232Z",
+      "lastSuccessAt": "2026-11-17T01:02:24.232Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-09T14:18:39.630Z",
-      "nextAttemptAt": "2026-11-16T14:57:55.508Z",
-      "failureStreak": 1,
-      "error": "Expected RSS/Atom, not an HTML error page",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
       "fingerprint": "02fb7524882f145d86faa87d6024ff6253223477f01f0a1939adb83f66e7f310",
       "items": [
         {
@@ -313,8 +313,7 @@
       "researchPublishedAt": null,
       "title": "BMW selected newsroom releases",
       "etag": null,
-      "lastModified": null,
-      "attemptContract": "[1,5,\"bmw-news\",\"https://newsroom.bmwgroup.com/global/tagfeed/en/tags/focus_news\",\"rss\",\"links\",[\"newsroom.bmwgroup.com\"],[\"batteries\",\"battery\",\"solid power\",\"solid-state\"],null,null,false,true,\"BMW\",\"BMW selected newsroom releases\",[\"solid-state-batteries\"],\"customer\",false]"
+      "lastModified": null
     },
     "rogers-service": {
       "id": "rogers-service",
