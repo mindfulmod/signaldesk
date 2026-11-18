@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "fea7b0b1-b677-4e66-a208-832b5006ab9e",
-  "generatedAt": "2026-11-18T14:30:52.714Z",
-  "sourceCheckedAt": "2026-11-18T14:30:52.714Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44324988246",
+  "collectionId": "744ef87a-6e82-4765-8cf5-a1afc171b555",
+  "generatedAt": "2026-11-18T23:33:45.195Z",
+  "sourceCheckedAt": "2026-11-18T23:33:45.195Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44421736715",
   "documents": [
     {
       "id": "024c226a13e113dd8f22c683",
@@ -117002,8 +117002,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-11-17T14:52:09.692Z",
-      "factsCheckedAt": "2026-11-17T14:52:09.692Z",
+      "factsAttemptAt": "2026-11-18T23:33:45.195Z",
+      "factsCheckedAt": "2026-11-18T23:33:45.195Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-11-18T14:30:52.714Z",
@@ -119215,8 +119215,8 @@
         "form": "10-Q",
         "accession": "0001104659-26-122310"
       },
-      "factsAttemptAt": "2026-11-17T14:52:09.692Z",
-      "factsCheckedAt": "2026-11-17T14:52:09.692Z",
+      "factsAttemptAt": "2026-11-18T23:33:45.195Z",
+      "factsCheckedAt": "2026-11-18T23:33:45.195Z",
       "factsAccession": "0001104659-26-122310",
       "factsError": null,
       "quoteAttemptAt": "2026-11-18T14:30:52.714Z",
@@ -120927,8 +120927,8 @@
         "form": "6-K",
         "accession": "0001193125-26-448368"
       },
-      "factsAttemptAt": "2026-11-17T14:52:09.692Z",
-      "factsCheckedAt": "2026-11-17T14:52:09.692Z",
+      "factsAttemptAt": "2026-11-18T23:33:45.195Z",
+      "factsCheckedAt": "2026-11-18T23:33:45.195Z",
       "factsAccession": "0001193125-26-448368",
       "factsError": null,
       "quoteAttemptAt": "2026-11-18T14:30:52.714Z",
@@ -123294,8 +123294,8 @@
         "form": "10-Q",
         "accession": "0001283699-26-000129"
       },
-      "factsAttemptAt": "2026-11-17T14:52:09.692Z",
-      "factsCheckedAt": "2026-11-17T14:52:09.692Z",
+      "factsAttemptAt": "2026-11-18T23:33:45.195Z",
+      "factsCheckedAt": "2026-11-18T23:33:45.195Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
       "quoteAttemptAt": "2026-11-18T14:30:52.714Z",
@@ -130011,8 +130011,8 @@
         "form": "8-K",
         "accession": "0001193125-26-448357"
       },
-      "factsAttemptAt": "2026-11-17T14:52:09.692Z",
-      "factsCheckedAt": "2026-11-17T14:52:09.692Z",
+      "factsAttemptAt": "2026-11-18T23:33:45.195Z",
+      "factsCheckedAt": "2026-11-18T23:33:45.195Z",
       "factsAccession": "0001193125-26-448357",
       "factsError": null,
       "quoteAttemptAt": "2026-11-18T14:30:52.714Z",
@@ -136244,7 +136244,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-18T14:30:52.714Z",
+    "generatedAt": "2026-11-18T23:33:45.195Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -137684,7 +137684,7 @@
       "7dc9c443712e753d114bbccb",
       "20c3f3661c69564745c72868"
     ],
-    "unmatchedDocuments": 905,
+    "unmatchedDocuments": 883,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -140130,12 +140130,12 @@
       }
     ],
     "datedDocuments": 1346,
-    "comparableDays": 16,
+    "comparableDays": 17,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 19,
+    "readableSources": 20,
     "companies": 8
   }
 }
