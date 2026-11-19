@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T04:29:19.550Z",
+  "generatedAt": "2026-11-19T14:39:58.791Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -9913,23 +9913,23 @@
         ]
       },
       "latestFiling": {
-        "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226052865/form8-k.htm",
+        "url": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226053080/form8-k.htm",
         "title": "AST SpaceMobile · 8-K · 8-K",
-        "publishedAt": "2026-11-17",
-        "reportDate": "2026-11-17",
-        "acceptedAt": "2026-11-17T21:35:20.000Z",
+        "publishedAt": "2026-11-18",
+        "reportDate": "2026-11-18",
+        "acceptedAt": "2026-11-18T21:35:21.000Z",
         "filingItems": [
           "8.01",
           "9.01"
         ],
-        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226052865/0001493152-26-052865-index.html",
+        "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000149315226053080/0001493152-26-053080-index.html",
         "excerpt": "Company-filed disclosure; reported items 8.01, 9.01. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
         "form": "8-K",
-        "accession": "0001493152-26-052865"
+        "accession": "0001493152-26-053080"
       },
-      "factsAttemptAt": "2026-11-18T14:30:52.714Z",
-      "factsCheckedAt": "2026-11-18T14:30:52.714Z",
-      "factsAccession": "0001493152-26-052865",
+      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
+      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
+      "factsAccession": "0001493152-26-053080",
       "factsError": null,
       "quoteAttemptAt": "2026-11-19T04:29:19.550Z",
       "quote": {
@@ -11885,8 +11885,8 @@
         "form": "8-K",
         "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-18T14:30:52.714Z",
-      "factsCheckedAt": "2026-11-18T14:30:52.714Z",
+      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
+      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
       "factsAccession": "0001193125-26-458525",
       "factsError": null,
       "quoteAttemptAt": "2026-11-19T04:29:19.550Z",
@@ -16792,8 +16792,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-18T14:30:52.714Z",
-      "factsCheckedAt": "2026-11-18T14:30:52.714Z",
+      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
+      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-19T04:29:19.550Z",
