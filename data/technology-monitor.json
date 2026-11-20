@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T14:19:51.729Z",
+  "generatedAt": "2026-11-20T23:19:29.838Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -69,12 +69,12 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "error",
-      "lastAttemptAt": "2026-11-20T14:19:51.729Z",
+      "lastAttemptAt": "2026-11-20T23:19:29.838Z",
       "lastSuccessAt": "2026-11-17T14:52:09.692Z",
       "baselineAt": "2026-11-15T12:56:36.411Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-11-20T20:19:51.729Z",
-      "failureStreak": 6,
+      "nextAttemptAt": "2026-11-21T05:19:29.838Z",
+      "failureStreak": 7,
       "error": "HTTP 403",
       "matchedItems": 10,
       "datedItems": 0,

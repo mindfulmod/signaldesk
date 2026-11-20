@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "collectionId": "859d998b-1d3d-42a5-a6dd-d08c4fb2c7be",
-  "generatedAt": "2026-11-20T14:19:51.729Z",
-  "sourceCheckedAt": "2026-11-20T14:19:51.729Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44752344076",
+  "collectionId": "50a6124f-8de2-4aea-9477-264cb011bdc2",
+  "generatedAt": "2026-11-20T23:19:29.838Z",
+  "sourceCheckedAt": "2026-11-20T23:19:29.838Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/44835896840",
   "documents": [
     {
       "id": "01886fc65c368d12b986a971",
@@ -134559,8 +134559,8 @@
         "form": "8-K",
         "accession": "0001493152-26-053080"
       },
-      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
-      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
+      "factsAttemptAt": "2026-11-20T23:19:29.838Z",
+      "factsCheckedAt": "2026-11-20T23:19:29.838Z",
       "factsAccession": "0001493152-26-053080",
       "factsError": null,
       "quoteAttemptAt": "2026-11-20T14:19:51.729Z",
@@ -136526,8 +136526,8 @@
         "form": "8-K",
         "accession": "0001193125-26-458525"
       },
-      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
-      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
+      "factsAttemptAt": "2026-11-20T23:19:29.838Z",
+      "factsCheckedAt": "2026-11-20T23:19:29.838Z",
       "factsAccession": "0001193125-26-458525",
       "factsError": null,
       "quoteAttemptAt": "2026-11-20T14:19:51.729Z",
@@ -141451,8 +141451,8 @@
         "form": "8-K",
         "accession": "0001193125-26-449835"
       },
-      "factsAttemptAt": "2026-11-19T14:39:58.791Z",
-      "factsCheckedAt": "2026-11-19T14:39:58.791Z",
+      "factsAttemptAt": "2026-11-20T23:19:29.838Z",
+      "factsCheckedAt": "2026-11-20T23:19:29.838Z",
       "factsAccession": "0001193125-26-449835",
       "factsError": null,
       "quoteAttemptAt": "2026-11-20T14:19:51.729Z",
@@ -145136,7 +145136,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-20T14:19:51.729Z",
+    "generatedAt": "2026-11-20T23:19:29.838Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -146627,10 +146627,8 @@
       "14cd07d239c600bdb535847f",
       "93b24e9ea2761b8188ff0402",
       "1e557f06f82c70f750d89f3d",
-      "1a2f171067af1f9170b0753b",
       "a361f2af0f9c637b7c9186f1",
       "d62aabd79bd42e60280f646c",
-      "a67fe2c5dc0cedf767fb623d",
       "b80d1ea5c6e0941b6ed9da89",
       "dbf10352d164859e2f98bf07",
       "c71319e3850426bc2de4e753",
@@ -146690,9 +146688,11 @@
       "7bedc58229115191427d5c92",
       "7649ef943688972cf3ce523c",
       "7ebac2111ce1963c6b58bebd",
-      "25ed45d0876eb1bba45dc4f2"
+      "25ed45d0876eb1bba45dc4f2",
+      "7ff1ce294d9c43b29df8d1a0",
+      "bba9275125183db180529019"
     ],
-    "unmatchedDocuments": 950,
+    "unmatchedDocuments": 936,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -146700,8 +146700,8 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 8,
-        "priorDocuments": 5,
+        "recentDocuments": 6,
+        "priorDocuments": 7,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -146713,14 +146713,12 @@
           "e1810c78f290902046b4c010",
           "2c39381f93c47c9d5369fa38",
           "9ef4b9cc224483aa739814b3",
-          "e470327eeb0810067e7e4b53",
-          "025d51471f7ee9338245c130",
-          "edc301b53c1d4226be151852"
+          "e470327eeb0810067e7e4b53"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 8,
+        "spanDays": 4,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
@@ -147475,8 +147473,8 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 8,
-        "priorDocuments": 5,
+        "recentDocuments": 6,
+        "priorDocuments": 7,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -147488,14 +147486,12 @@
           "e1810c78f290902046b4c010",
           "2c39381f93c47c9d5369fa38",
           "9ef4b9cc224483aa739814b3",
-          "e470327eeb0810067e7e4b53",
-          "025d51471f7ee9338245c130",
-          "edc301b53c1d4226be151852"
+          "e470327eeb0810067e7e4b53"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 8,
+        "spanDays": 4,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
@@ -149259,7 +149255,7 @@
       }
     ],
     "datedDocuments": 1516,
-    "comparableDays": 18,
+    "comparableDays": 19,
     "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
