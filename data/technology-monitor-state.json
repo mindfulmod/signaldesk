@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T13:35:14.528Z",
+  "generatedAt": "2026-11-22T22:45:43.812Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -165,12 +165,12 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "error",
-      "lastAttemptAt": "2026-11-22T13:35:14.528Z",
+      "lastAttemptAt": "2026-11-22T22:45:43.812Z",
       "lastSuccessAt": "2026-11-17T14:52:09.692Z",
       "baselineAt": "2026-11-15T12:56:36.411Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-11-22T19:35:14.528Z",
-      "failureStreak": 10,
+      "nextAttemptAt": "2026-11-23T04:45:43.812Z",
+      "failureStreak": 11,
       "error": "HTTP 403",
       "fingerprint": "ab15f647f2be54228020690a6dee95f05c6b3b94792fbe89ec3e821479bd8f91",
       "items": [
@@ -761,16 +761,22 @@
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"nature-research\",\"https://www.nature.com/nature.rss\",\"rss\",\"links\",[\"nature.com\",\"www.nature.com\"],[],null,null,false,false,\"Nature\",\"Nature research and news\",[],\"research\",true]",
-      "status": "error",
-      "lastAttemptAt": "2026-11-22T13:35:14.528Z",
-      "lastSuccessAt": "2026-11-21T13:41:22.665Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-11-22T22:45:43.812Z",
+      "lastSuccessAt": "2026-11-22T22:45:43.812Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-21T13:41:22.665Z",
-      "nextAttemptAt": "2026-11-22T14:35:14.528Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "c443b39af850b0810155c88526460d4d94f1c650fff5effd0537aba389ee1caa",
+      "lastChangedAt": "2026-11-22T22:45:43.812Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "e1683bf8b8853e6cc2d4a82298024099a4bb294df20510dae5d77aa4a33e6dc4",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03803-8",
+          "title": "BepiColombo finally reaches Mercury after eight-year odyssey",
+          "excerpt": "",
+          "publishedAt": "2026-11-21"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03680-1",
           "title": "How AI is affecting science careers",
@@ -815,7 +821,7 @@
         },
         {
           "url": "https://www.nature.com/articles/d41586-026-03812-7",
-          "title": "Mathematician says he and AI solved Riemann hypothesis — the field’s biggest outstanding challenge",
+          "title": "Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis",
           "excerpt": "",
           "publishedAt": "2026-11-20"
         },
@@ -1214,12 +1220,6 @@
           "title": "Hypothalamic volume and cell-type changes in ageing and Alzheimer’s disease",
           "excerpt": "",
           "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03750-4",
-          "title": "Meet the ‘celestial bodies of fathomless powerful darkness’",
-          "excerpt": "",
-          "publishedAt": "2026-11-17"
         }
       ],
       "seenLinks": [
@@ -1871,21 +1871,21 @@
         "https://www.nature.com/articles/d41586-026-03789-3",
         "https://www.nature.com/articles/d41586-026-03812-7",
         "https://www.nature.com/articles/d41586-026-03799-1",
-        "https://www.nature.com/articles/d41586-026-03811-8"
+        "https://www.nature.com/articles/d41586-026-03811-8",
+        "https://www.nature.com/articles/d41586-026-03803-8"
       ],
       "matchedItems": 75,
       "datedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-11-20",
+      "newestPublicationAt": "2026-11-21",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"c5f53f44cb6698fd89fff18acf8919bc\"",
-      "lastModified": null,
-      "attemptContract": "[1,5,\"nature-research\",\"https://www.nature.com/nature.rss\",\"rss\",\"links\",[\"nature.com\",\"www.nature.com\"],[],null,null,false,false,\"Nature\",\"Nature research and news\",[],\"research\",true]"
+      "etag": "\"46793e150aca3bf06c963e17fd5ec4cc\"",
+      "lastModified": null
     },
     "sec-qs": {
       "id": "sec-qs",
@@ -9841,6 +9841,18 @@
   },
   "events": [
     {
+      "id": "8f912de627fb66db530105e0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "BepiColombo finally reaches Mercury after eight-year odyssey",
+      "url": "https://www.nature.com/articles/d41586-026-03803-8",
+      "detectedAt": "2026-11-22T22:45:43.812Z",
+      "publishedAt": "2026-11-21",
+      "verification": "unreviewed"
+    },
+    {
       "id": "ccac411ba902ca05306e9d5c",
       "sourceId": "hn-discovery",
       "themes": [],
@@ -14656,18 +14668,6 @@
       "url": "https://news.ycombinator.com/item?id=50532158",
       "detectedAt": "2026-11-17T14:52:09.692Z",
       "publishedAt": "2026-11-17T14:51:36.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "f6f85e84ef4dd03ee955755b",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "AI music company claims copyright over musician's recording, gets video removed",
-      "url": "https://news.ycombinator.com/item?id=50532154",
-      "detectedAt": "2026-11-17T14:52:09.692Z",
-      "publishedAt": "2026-11-17T14:50:53.000Z",
       "verification": "unreviewed"
     }
   ]
