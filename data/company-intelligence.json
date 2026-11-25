@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T16:20:51.279Z",
+  "generatedAt": "2026-11-25T01:34:22.598Z",
   "providerMode": "Public quote fallbacks; no licensed provider configured",
   "companies": {
     "QS": {
@@ -1226,8 +1226,8 @@
         "form": "10-Q",
         "accession": "0001193125-26-430428"
       },
-      "factsAttemptAt": "2026-11-23T16:26:55.806Z",
-      "factsCheckedAt": "2026-11-23T16:26:55.806Z",
+      "factsAttemptAt": "2026-11-25T01:34:22.598Z",
+      "factsCheckedAt": "2026-11-25T01:34:22.598Z",
       "factsAccession": "0001193125-26-430428",
       "factsError": null,
       "quoteAttemptAt": "2026-11-24T16:20:51.279Z",
@@ -3475,8 +3475,8 @@
         "form": "10-Q",
         "accession": "0001104659-26-122310"
       },
-      "factsAttemptAt": "2026-11-23T16:26:55.806Z",
-      "factsCheckedAt": "2026-11-23T16:26:55.806Z",
+      "factsAttemptAt": "2026-11-25T01:34:22.598Z",
+      "factsCheckedAt": "2026-11-25T01:34:22.598Z",
       "factsAccession": "0001104659-26-122310",
       "factsError": null,
       "quoteAttemptAt": "2026-11-24T16:20:51.279Z",
@@ -5223,8 +5223,8 @@
         "form": "6-K",
         "accession": "0001193125-26-448368"
       },
-      "factsAttemptAt": "2026-11-23T16:26:55.806Z",
-      "factsCheckedAt": "2026-11-23T16:26:55.806Z",
+      "factsAttemptAt": "2026-11-25T01:34:22.598Z",
+      "factsCheckedAt": "2026-11-25T01:34:22.598Z",
       "factsAccession": "0001193125-26-448368",
       "factsError": null,
       "quoteAttemptAt": "2026-11-24T16:20:51.279Z",
@@ -7626,8 +7626,8 @@
         "form": "10-Q",
         "accession": "0001283699-26-000129"
       },
-      "factsAttemptAt": "2026-11-23T16:26:55.806Z",
-      "factsCheckedAt": "2026-11-23T16:26:55.806Z",
+      "factsAttemptAt": "2026-11-25T01:34:22.598Z",
+      "factsCheckedAt": "2026-11-25T01:34:22.598Z",
       "factsAccession": "0001283699-26-000129",
       "factsError": null,
       "quoteAttemptAt": "2026-11-24T16:20:51.279Z",
@@ -14450,8 +14450,8 @@
         "form": "8-K",
         "accession": "0001193125-26-448357"
       },
-      "factsAttemptAt": "2026-11-23T16:26:55.806Z",
-      "factsCheckedAt": "2026-11-23T16:26:55.806Z",
+      "factsAttemptAt": "2026-11-25T01:34:22.598Z",
+      "factsCheckedAt": "2026-11-25T01:34:22.598Z",
       "factsAccession": "0001193125-26-448357",
       "factsError": null,
       "quoteAttemptAt": "2026-11-24T16:20:51.279Z",
