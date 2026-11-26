@@ -1,10 +1,1880 @@
 {
   "schemaVersion": 1,
-  "collectionId": "ce3fc8cf-843e-4259-bc5a-5e0a7ad1bd0e",
-  "generatedAt": "2026-11-25T16:00:31.907Z",
-  "sourceCheckedAt": "2026-11-25T16:00:31.907Z",
-  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/45650285416",
+  "collectionId": "02a313da-c643-49af-989d-940019154b8c",
+  "generatedAt": "2026-11-26T01:08:25.215Z",
+  "sourceCheckedAt": "2026-11-26T01:08:25.215Z",
+  "runUrl": "https://github.com/mindfulmod/signaldesk/actions/runs/45733634627",
   "documents": [
+    {
+      "id": "02b79b06c57d5d2af58b2f5a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11403-9",
+      "title": "Author Correction: Reference genomes and fossils revise bat family phylogeny and biogeography",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "7877d5a9aa2efd90b26f3156",
+      "originalPublishedAt": "2026-11-24",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-24",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-24",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "11b12cad67e0b78b1381715b",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03469-2",
+      "title": "Helsinki puts trust at the heart of its smart-city model",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "a2af4bc72fd6ce1daab05bbc",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "196d548c112b4ecf4ab7919a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11318-5",
+      "title": "Context-dependent response of endothelial cells to PIK3CA mutation",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "713d933a75a5f7ecb5b64bc5",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1ce249d20c6e3dcb767044f7",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03472-7",
+      "title": "How Singapore has turned a nation into a smart-city testing ground",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ae30eaa8221128a6d294738c",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "1fa7451f84831fb27c145fc9",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03718-4",
+      "title": "A powerful HIV vaccine is finally within reach — thanks to these super antibodies",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ce8735e7473995658d91720b",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "25f0c180c72f16d823c21d08",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11354-1",
+      "title": "Disturbances and climate drive tree elevational shifts",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3c4954e7a1ba43e3a8089960",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "260ef82a95c7f78e4091703a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03835-0",
+      "title": "‘If we can solve Riemann, what can’t we do?’: mathematicians shocked and excited by AI breakthroughs",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "4769b923b56e260a154a8726",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2a28ee2629d319ec01647435",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11326-5",
+      "title": "Engineering signalling centres to trigger human trunk morphogenesis in vitro",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e0657ce4ac989cbb1d8c31e6",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2be52deeaeb05be20798f959",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11287-9",
+      "title": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "abeae3003f713eff83420306",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2fc9f1b3bce343d6ec64010a",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11196-x",
+      "title": "Structural basis of RNA-guided DNA integration by type I CAST systems",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "bbea799b602682ecbe068dcd",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3093af45be9058c21098948e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03836-z",
+      "title": "Watch out, AlphaFold: Claude and ChatGPT’s new biology skills wow scientists",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "0b1318af3e7989be199ec526",
+      "originalPublishedAt": "2026-11-24",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-24",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-24",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "345d8f67b676ab20323a29ae",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03872-9",
+      "title": "Rare gene variants can affect a person’s height by up to 17 centimetres",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "c61f96e5cedfa45f88b9f67f",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "34b22df2207650ee089d787e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11288-8",
+      "title": "Unconventional resistivity reduction in NbP semimetal nanoribbons",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ce21a51d87be5c5af9f81231",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3992435be18eea2653f169a1",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03468-3",
+      "title": "The leading cities in the world for high-quality research in 2025",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e327bdc7214f7f43ff5b25e0",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Research / test language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3a2043509d80f92df6d91bea",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03470-9",
+      "title": "Can Beijing scale up its smart-city ambitions?",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "34202d4717e298f3e14258ad",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3e627d5c257120f7ebe85d13",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03467-4",
+      "title": "Can smart cities attract the talent they need to thrive?",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "1dcd5e46d58d44e86bb5b9d8",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4435153b381f864452aa95fb",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03809-2",
+      "title": "The world has a golden chance to improve HIV prevention: don’t squander it",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "1c4d90b5aeeac7dee10fde30",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "46bf5c1563564aa1b985e46d",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11151-w",
+      "title": "An extremophile transgene improves drought resistance and yield in cereals",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "1c44dee389553100783f2fb4",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "46cee0fb99f181868d939f27",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11341-6",
+      "title": "Middle–Late Pleistocene Denisovans and unresolved Homo in southern China",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "c6143306d8f4ed5fa7227837",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "54b6d766de45ed33ba824165",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03474-5",
+      "title": "A guide to the Nature Index",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "993504e26fef195ac8ab8e13",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "56a62f433f81bb32723e426e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11309-6",
+      "title": "Coherent parity oscillations in coupled minimal Kitaev chains",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "51a44158658e6a1e2f2f8934",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5d189f6b990c7195945e80f2",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03268-9",
+      "title": "Gut microbes can adapt to our ageing bodies",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "461aa98ec6463594c0026f3c",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5e9921cd2cf9100a9b571e11",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03473-6",
+      "title": "China’s AI-powered smart-city model is going global",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "8057680cfb25906562f86fed",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "625abb946e269e8f166b1ec8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11304-x",
+      "title": "Enzymatic living polymerization for polysaccharide synthesis",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "a3123dfbfffa6bae420c650a",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7f9b2838228b996c1d88e2b4",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11315-8",
+      "title": "A gut–brain sensory-motor circuit regulates sugar ingestion in Drosophila",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "3adc8557663641c5e4098d50",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "80c2d813a852cb3c7c9a5bb8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03853-y",
+      "title": "Dual proofs of legendary Riemann hypothesis stun mathematicians",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ad662abe6f01af9d6009c165",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8193a34276cca12b9358deb8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03827-0",
+      "title": "COP31 went up in flames over fossil fuels — it sends an important message",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "4327653378decf81b7c9c838",
+      "originalPublishedAt": "2026-11-23",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-24T16:20:51.279Z",
+      "announcementAt": "2026-11-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-23",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "revision",
+      "previousId": "18955f3adab6753480834296",
+      "previousExcerpt": null,
+      "previousTitle": "COP31 went down in flames over fossil fuels — it sends an important message",
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "82c4666814ae037847040b3e",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03802-9",
+      "title": "Mariana Trench holds deepest-ever evidence of volcanic explosion",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "0b3927bb09dcc7f9d392bd27",
+      "originalPublishedAt": "2026-11-23",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-23",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-23",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "83302a342e6e875b9b96b4d8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11338-1",
+      "title": "De novo design of high-potency dual-target therapeutic peptides with ORIDTP",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "dec377bce9dc7d33f4160a7c",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8c0193e3269bad0640530a97",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11313-w",
+      "title": "Sustainable cement production via a liquid-phase pathway",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "253e4c7ebaf45d2c043ba692",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Deployment language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9022aafae12dd162a1d806bd",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03494-1",
+      "title": "A fine-grained reconstruction of barley’s evolutionary history",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "70e00247d5903ff0aac3b06c",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "91130c5728bbd57f9c974b77",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03466-5",
+      "title": "The world’s leading science cities are changing — here’s why",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "5465676ac62f3b60b8bd42a3",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "96721a52e75af2a3f6272bd8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11231-x",
+      "title": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "9d97e1327201603c55175179",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Risk / setback language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "96b80f984057a604a9791657",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11311-y",
+      "title": "Transcription from megabase-scale heterochromatin generates neural barcodes",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "b34127940639caf3fd72eb77",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9c9ba7e58dfda964b8255201",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11275-z",
+      "title": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "8ea737f88cede489df0c26ae",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a706bc66d18952d0b4d01251",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03471-8",
+      "title": "London’s people-first approach to smart-city development",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "d7adfa084a3203f5c0633f20",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b0a950722ef7c216064fe274",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03491-4",
+      "title": "How arteries keep their shape in the face of overgrowth-inducing mutations",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "4db771a27174d3c3b8ba7bab",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b2f1fbca847b36f679947bda",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03333-3",
+      "title": "Just eight universities dominate Nobel and other top economics prizes",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e66381ae5c356412afdf3f3e",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c3c195a3c65da514823d8673",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03813-6",
+      "title": "Dengue has exploded globally with shocking speed",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "82dde5f4244095f99df5003a",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c879b9b72de7472fee15f78d",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11146-7",
+      "title": "Augmenting reality with integrated photonics",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "737d6f7f1495f707f49fd8f1",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ce0adcceed168e6a89a1e7d0",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03513-1",
+      "title": "From sketch to publication-ready flowchart: how AI tools can bridge the gap",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "a6a39843bc6eab47fef39090",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d31dc762664cdeed17b78ecc",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11353-2",
+      "title": "Quantum-enhanced sensing with 500 photons via Fock-space confocal focusing",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "2472cc6b19c562ca21243426",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d453c4a2c0ef2c4bc4bc10d6",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03475-4",
+      "title": "Saving Nepal’s wild orchids — in photos",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "4bc82295e052dad46c247ed8",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d7d8774a5e9e149a526ad0aa",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11339-0",
+      "title": "An enduring climatic burden from past peatland drainage",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "4fe489c127dba2f10641b0c4",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "db486152d589d06c574776ec",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03854-x",
+      "title": "What is the Riemann hypothesis? A guide to the famed conjecture that rules prime numbers",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "50d5d2d7816c4ab2a2c53187",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dc0486277ec099e6603904c8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11345-2",
+      "title": "Rare-variant genetic architecture of height in over 1.4 million individuals",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "6b0b239ddb19610f08de2685",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e05aa54b7a0355438b4887e1",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03382-8",
+      "title": "Enzymatic reactions adapted to make ‘living’ chains of sugars",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "25d0abc501ded36d13461166",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e599d1f99d4b0b4fe7f5270d",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03837-y",
+      "title": "Succumbing to certainty is a failure in science",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "ae464803df3e5ef588cee2de",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Risk / setback language",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ec22f87602d17af02ad44909",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03521-1",
+      "title": "The Mona Lisa Lottery",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "7d9bd3d3621b64ec3b41d96d",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ef3a540989896d9fde1870d0",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03847-w",
+      "title": "William D. Nordhaus obituary: economist whose tools transformed climate policy",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "72b6f7dee51374cd4ee63edd",
+      "originalPublishedAt": "2026-11-24",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-24",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-24",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f0293cb054ca6c77149da2df",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11465-9",
+      "title": "An in situ redox-converted molecule for all-perovskite tandem solar cells",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "1cee6ab69be6fb1be79ac410",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f4edfc464406cade6305b27d",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03492-3",
+      "title": "Pockets in compacted DNA tune gene activation",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "1c5ec799b7cacbfad61f0902",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f6ef68402408b2e1ba18fd45",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/d41586-026-03693-w",
+      "title": "Bogong moths can migrate using an internal geomagnetic compass",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "95d836c666e972e98391a6f2",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f79704ea13a059e4a84245a8",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11301-0",
+      "title": "Heterogeneity co-evolves with architecture to determine colon cancer outcome",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "e16c2fce52576243053b05fb",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fffd7bb73d827abcb74c6062",
+      "sourceId": "nature-research",
+      "url": "https://www.nature.com/articles/s41586-026-11279-9",
+      "title": "Submillimetre hot-electron transport in manganese-doped quantum dot solids",
+      "excerpt": null,
+      "owner": "Nature",
+      "tier": "research",
+      "storyId": "52742a3bd9791dea54055cad",
+      "originalPublishedAt": "2026-11-25",
+      "linkedUrl": null,
+      "dateKind": "publication",
+      "engagement": null,
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "announcementAt": "2026-11-25",
+      "researchPublishedAt": null,
+      "researchUrl": null,
+      "metadataOnly": true,
+      "themes": [],
+      "associatedThemes": [],
+      "filingItems": [],
+      "reportDate": null,
+      "acceptedAt": null,
+      "exhibitsIndexUrl": null,
+      "publishedAt": "2026-11-25",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "changeType": "new-document",
+      "previousId": null,
+      "previousExcerpt": null,
+      "previousTitle": null,
+      "discovery": true,
+      "headlineSignal": "Announcement / reporting",
+      "verification": "unreviewed"
+    },
     {
       "id": "00854fe4c66ccc028737a7c3",
       "sourceId": "hn-discovery",
@@ -138812,9 +140682,10 @@
       "sourceId": "nature-research",
       "originalPublishedAt": "2026-11-23",
       "firstSeenAt": "2026-11-24T16:20:51.279Z",
-      "latestId": "18955f3adab6753480834296",
+      "latestId": "8193a34276cca12b9358deb8",
       "versions": {
-        "18955f3adab6753480834296": "2026-11-24T16:20:51.279Z"
+        "18955f3adab6753480834296": "2026-11-24T16:20:51.279Z",
+        "8193a34276cca12b9358deb8": "2026-11-26T01:08:25.215Z"
       }
     },
     "f54b501e2ae5d7f2b53c43a7": {
@@ -139922,6 +141793,492 @@
       "latestId": "339a5ebdfc5d5c91f5656cf1",
       "versions": {
         "339a5ebdfc5d5c91f5656cf1": "2026-11-25T16:00:31.907Z"
+      }
+    },
+    "e327bdc7214f7f43ff5b25e0": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "3992435be18eea2653f169a1",
+      "versions": {
+        "3992435be18eea2653f169a1": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "ad662abe6f01af9d6009c165": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "80c2d813a852cb3c7c9a5bb8",
+      "versions": {
+        "80c2d813a852cb3c7c9a5bb8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "1cee6ab69be6fb1be79ac410": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "f0293cb054ca6c77149da2df",
+      "versions": {
+        "f0293cb054ca6c77149da2df": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "ae30eaa8221128a6d294738c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "1ce249d20c6e3dcb767044f7",
+      "versions": {
+        "1ce249d20c6e3dcb767044f7": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "4db771a27174d3c3b8ba7bab": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "b0a950722ef7c216064fe274",
+      "versions": {
+        "b0a950722ef7c216064fe274": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "50d5d2d7816c4ab2a2c53187": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "db486152d589d06c574776ec",
+      "versions": {
+        "db486152d589d06c574776ec": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "4bc82295e052dad46c247ed8": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "d453c4a2c0ef2c4bc4bc10d6",
+      "versions": {
+        "d453c4a2c0ef2c4bc4bc10d6": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "70e00247d5903ff0aac3b06c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "9022aafae12dd162a1d806bd",
+      "versions": {
+        "9022aafae12dd162a1d806bd": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "ce8735e7473995658d91720b": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "1fa7451f84831fb27c145fc9",
+      "versions": {
+        "1fa7451f84831fb27c145fc9": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "34202d4717e298f3e14258ad": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "3a2043509d80f92df6d91bea",
+      "versions": {
+        "3a2043509d80f92df6d91bea": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "a6a39843bc6eab47fef39090": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "ce0adcceed168e6a89a1e7d0",
+      "versions": {
+        "ce0adcceed168e6a89a1e7d0": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "5465676ac62f3b60b8bd42a3": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "91130c5728bbd57f9c974b77",
+      "versions": {
+        "91130c5728bbd57f9c974b77": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "461aa98ec6463594c0026f3c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "5d189f6b990c7195945e80f2",
+      "versions": {
+        "5d189f6b990c7195945e80f2": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "8057680cfb25906562f86fed": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "5e9921cd2cf9100a9b571e11",
+      "versions": {
+        "5e9921cd2cf9100a9b571e11": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "1c5ec799b7cacbfad61f0902": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "f4edfc464406cade6305b27d",
+      "versions": {
+        "f4edfc464406cade6305b27d": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "a2af4bc72fd6ce1daab05bbc": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "11b12cad67e0b78b1381715b",
+      "versions": {
+        "11b12cad67e0b78b1381715b": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "d7adfa084a3203f5c0633f20": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "a706bc66d18952d0b4d01251",
+      "versions": {
+        "a706bc66d18952d0b4d01251": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "95d836c666e972e98391a6f2": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "f6ef68402408b2e1ba18fd45",
+      "versions": {
+        "f6ef68402408b2e1ba18fd45": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "1dcd5e46d58d44e86bb5b9d8": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "3e627d5c257120f7ebe85d13",
+      "versions": {
+        "3e627d5c257120f7ebe85d13": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "82dde5f4244095f99df5003a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "c3c195a3c65da514823d8673",
+      "versions": {
+        "c3c195a3c65da514823d8673": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "7d9bd3d3621b64ec3b41d96d": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "ec22f87602d17af02ad44909",
+      "versions": {
+        "ec22f87602d17af02ad44909": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "1c4d90b5aeeac7dee10fde30": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "4435153b381f864452aa95fb",
+      "versions": {
+        "4435153b381f864452aa95fb": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "993504e26fef195ac8ab8e13": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "54b6d766de45ed33ba824165",
+      "versions": {
+        "54b6d766de45ed33ba824165": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "ae464803df3e5ef588cee2de": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "e599d1f99d4b0b4fe7f5270d",
+      "versions": {
+        "e599d1f99d4b0b4fe7f5270d": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "c61f96e5cedfa45f88b9f67f": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "345d8f67b676ab20323a29ae",
+      "versions": {
+        "345d8f67b676ab20323a29ae": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "25d0abc501ded36d13461166": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "e05aa54b7a0355438b4887e1",
+      "versions": {
+        "e05aa54b7a0355438b4887e1": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "4769b923b56e260a154a8726": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "260ef82a95c7f78e4091703a",
+      "versions": {
+        "260ef82a95c7f78e4091703a": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "e66381ae5c356412afdf3f3e": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "b2f1fbca847b36f679947bda",
+      "versions": {
+        "b2f1fbca847b36f679947bda": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "4fe489c127dba2f10641b0c4": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "d7d8774a5e9e149a526ad0aa",
+      "versions": {
+        "d7d8774a5e9e149a526ad0aa": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "8ea737f88cede489df0c26ae": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "9c9ba7e58dfda964b8255201",
+      "versions": {
+        "9c9ba7e58dfda964b8255201": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "e16c2fce52576243053b05fb": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "f79704ea13a059e4a84245a8",
+      "versions": {
+        "f79704ea13a059e4a84245a8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "3adc8557663641c5e4098d50": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "7f9b2838228b996c1d88e2b4",
+      "versions": {
+        "7f9b2838228b996c1d88e2b4": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "2472cc6b19c562ca21243426": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "d31dc762664cdeed17b78ecc",
+      "versions": {
+        "d31dc762664cdeed17b78ecc": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "abeae3003f713eff83420306": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "2be52deeaeb05be20798f959",
+      "versions": {
+        "2be52deeaeb05be20798f959": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "c6143306d8f4ed5fa7227837": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "46cee0fb99f181868d939f27",
+      "versions": {
+        "46cee0fb99f181868d939f27": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "253e4c7ebaf45d2c043ba692": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "8c0193e3269bad0640530a97",
+      "versions": {
+        "8c0193e3269bad0640530a97": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "713d933a75a5f7ecb5b64bc5": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "196d548c112b4ecf4ab7919a",
+      "versions": {
+        "196d548c112b4ecf4ab7919a": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "737d6f7f1495f707f49fd8f1": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "c879b9b72de7472fee15f78d",
+      "versions": {
+        "c879b9b72de7472fee15f78d": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "a3123dfbfffa6bae420c650a": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "625abb946e269e8f166b1ec8",
+      "versions": {
+        "625abb946e269e8f166b1ec8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "51a44158658e6a1e2f2f8934": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "56a62f433f81bb32723e426e",
+      "versions": {
+        "56a62f433f81bb32723e426e": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "b34127940639caf3fd72eb77": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "96b80f984057a604a9791657",
+      "versions": {
+        "96b80f984057a604a9791657": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "bbea799b602682ecbe068dcd": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "2fc9f1b3bce343d6ec64010a",
+      "versions": {
+        "2fc9f1b3bce343d6ec64010a": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "9d97e1327201603c55175179": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "96721a52e75af2a3f6272bd8",
+      "versions": {
+        "96721a52e75af2a3f6272bd8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "1c44dee389553100783f2fb4": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "46bf5c1563564aa1b985e46d",
+      "versions": {
+        "46bf5c1563564aa1b985e46d": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "3c4954e7a1ba43e3a8089960": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "25f0c180c72f16d823c21d08",
+      "versions": {
+        "25f0c180c72f16d823c21d08": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "ce21a51d87be5c5af9f81231": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "34b22df2207650ee089d787e",
+      "versions": {
+        "34b22df2207650ee089d787e": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "dec377bce9dc7d33f4160a7c": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "83302a342e6e875b9b96b4d8",
+      "versions": {
+        "83302a342e6e875b9b96b4d8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "e0657ce4ac989cbb1d8c31e6": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "2a28ee2629d319ec01647435",
+      "versions": {
+        "2a28ee2629d319ec01647435": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "6b0b239ddb19610f08de2685": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "dc0486277ec099e6603904c8",
+      "versions": {
+        "dc0486277ec099e6603904c8": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "52742a3bd9791dea54055cad": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-25",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "fffd7bb73d827abcb74c6062",
+      "versions": {
+        "fffd7bb73d827abcb74c6062": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "0b1318af3e7989be199ec526": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-24",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "3093af45be9058c21098948e",
+      "versions": {
+        "3093af45be9058c21098948e": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "7877d5a9aa2efd90b26f3156": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-24",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "02b79b06c57d5d2af58b2f5a",
+      "versions": {
+        "02b79b06c57d5d2af58b2f5a": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "72b6f7dee51374cd4ee63edd": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-24",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "ef3a540989896d9fde1870d0",
+      "versions": {
+        "ef3a540989896d9fde1870d0": "2026-11-26T01:08:25.215Z"
+      }
+    },
+    "0b3927bb09dcc7f9d392bd27": {
+      "sourceId": "nature-research",
+      "originalPublishedAt": "2026-11-23",
+      "firstSeenAt": "2026-11-26T01:08:25.215Z",
+      "latestId": "82c4666814ae037847040b3e",
+      "versions": {
+        "82c4666814ae037847040b3e": "2026-11-26T01:08:25.215Z"
       }
     }
   },
@@ -150146,8 +152503,8 @@
         "form": "8-K",
         "accession": "0001493152-26-053080"
       },
-      "factsAttemptAt": "2026-11-24T16:20:51.279Z",
-      "factsCheckedAt": "2026-11-24T16:20:51.279Z",
+      "factsAttemptAt": "2026-11-26T01:08:25.215Z",
+      "factsCheckedAt": "2026-11-26T01:08:25.215Z",
       "factsAccession": "0001493152-26-053080",
       "factsError": null,
       "quoteAttemptAt": "2026-11-25T16:00:31.907Z",
@@ -152148,8 +154505,8 @@
         "form": "8-K",
         "accession": "0001628280-26-075541"
       },
-      "factsAttemptAt": "2026-11-24T16:20:51.279Z",
-      "factsCheckedAt": "2026-11-24T16:20:51.279Z",
+      "factsAttemptAt": "2026-11-26T01:08:25.215Z",
+      "factsCheckedAt": "2026-11-26T01:08:25.215Z",
       "factsAccession": "0001628280-26-075541",
       "factsError": null,
       "quoteAttemptAt": "2026-11-25T16:00:31.907Z",
@@ -160866,7 +163223,7 @@
     }
   },
   "discovery": {
-    "generatedAt": "2026-11-25T16:00:31.907Z",
+    "generatedAt": "2026-11-26T01:08:25.215Z",
     "historyVersion": 1,
     "calendar": "America/Toronto",
     "coverageKey": "08326439496288a3ebf03c34",
@@ -162132,6 +164489,64 @@
             "checkedAt": "2026-11-24T16:20:51.279Z"
           }
         ]
+      },
+      {
+        "date": "2026-11-25",
+        "topics": [
+          "e748f8750672ca8b04b242be",
+          "31a85e22a24a7a4fba06c2c6",
+          "4e23c7e335b2bee22bb8f2c8",
+          "ee662f0a4316976d226a3faf",
+          "038eb8b917707f28b8e99178",
+          "a2345ee38432c1bdbae545c4",
+          "da298a0cb88763ad2138b4b6",
+          "b2a020128954e58413112e4c",
+          "dea167a347a7e010f327afe1",
+          "a0d86d718320e6921d60d00b",
+          "d6633cb315f3e129180e0399",
+          "98f7b48e8e171dc1fac243e9",
+          "9b7f88b62dccc180eeccc6fa",
+          "ccb3220d78200104bcf5459c",
+          "b0cc8add943575eadd520692",
+          "2674e5a82b80bb81eb9ab79a",
+          "a9b2d461ea198ca0b702b90e",
+          "38d3eea6566bb060dbfd46b1",
+          "1f8f82dc0e1f7233d143ef11",
+          "25ce80b2ac32f4764ad2dbc7",
+          "60add2dd25cc9d372b6c3968",
+          "2ae5d50d3ac0bfa00f3dab75",
+          "3e45a7760d7f4125aabf77b6",
+          "f469c7b3455eed49f1057662",
+          "4b22e201927ffadf4876dbe9",
+          "50bfcf92dd6e0b69ef71b715",
+          "0d267393a33d167029a121bc",
+          "b27ce828c6c0a2af9226db61",
+          "10b02e6101c2cfdcff39f50b",
+          "d0b32e62b86c910585834f80"
+        ],
+        "documentCount": 1796,
+        "sourceChecks": [
+          {
+            "id": "nsf-research",
+            "checkedAt": "2026-11-25T16:00:31.907Z"
+          },
+          {
+            "id": "mit-research",
+            "checkedAt": "2026-11-25T16:00:31.907Z"
+          },
+          {
+            "id": "nature-research",
+            "checkedAt": "2026-11-26T01:08:25.215Z"
+          },
+          {
+            "id": "nist-research",
+            "checkedAt": "2026-11-25T16:00:31.907Z"
+          },
+          {
+            "id": "hn-discovery",
+            "checkedAt": "2026-11-25T16:00:31.907Z"
+          }
+        ]
       }
     ],
     "legacyHistory": [
@@ -162493,12 +164908,12 @@
         "id": "nature-research",
         "owner": "Nature",
         "lane": "research",
-        "fresh": false,
+        "fresh": true,
         "quiet": false,
         "sampleUsable": true,
-        "collectedToday": false,
-        "lastSuccessAt": "2026-11-24T16:20:51.279Z",
-        "newestPublicationAt": "2026-11-24",
+        "collectedToday": true,
+        "lastSuccessAt": "2026-11-26T01:08:25.215Z",
+        "newestPublicationAt": "2026-11-25",
         "matchedItems": 75,
         "datedItems": 75
       },
@@ -162529,132 +164944,132 @@
         "datedItems": 58
       }
     ],
-    "healthy": false,
-    "collectedToday": false,
+    "healthy": true,
+    "collectedToday": true,
     "discoveryTruncated": false,
     "openScan": [
       "bea81ea4c9ca5dbf84b01a46",
       "f6089a198a416d42f6b14814",
-      "065a5562d5ceb867fa0ce5eb",
+      "11b12cad67e0b78b1381715b",
       "8fc6d541efdf7e47ed16b2f0",
       "04178c7f6914ad0d7f99c8f3",
       "2e893abee98de8a51b0fe7f1",
       "b849c63aa1042f711ad988e8",
-      "20725652a8deb0af103d9a13",
+      "196d548c112b4ecf4ab7919a",
       "e5e039bf1a497794b0d4eca1",
       "ee6a1c8c6fc19199f5a57c6d",
       "5932553abcc0c63e50b9ecc4",
-      "270130571bf041a023e5052e",
+      "1ce249d20c6e3dcb767044f7",
       "13c14f8ec43cf8bdad2e15e7",
       "5876e4f66b40766edba463ba",
-      "2aa3e4779b5604ed66bdb423",
+      "1fa7451f84831fb27c145fc9",
       "4215f191a808e5773e97ec5b",
       "47a4341673b846c13883781d",
-      "2c3bc7a1bee57742ec9fe5a2",
+      "25f0c180c72f16d823c21d08",
       "197cd8639959fe5efece87c8",
       "313b6680d563671a0f4623e4",
-      "7c4a346ce5b28de57437c16b",
+      "260ef82a95c7f78e4091703a",
       "5ab1bd875a22f313f39e8f10",
       "dd5ab8129435254226cc26f6",
-      "8a2f9a6315f9ea7d5f1d12ed",
+      "2a28ee2629d319ec01647435",
       "1d9cab3cfb9c69817b6ae3c2",
       "3fbf11b0ebf42738b63a4826",
-      "9455f37cd66d9fcc2735b35b",
+      "2be52deeaeb05be20798f959",
       "0e592fb7743e0455a91a7872",
       "dbac97239e4a62a0a72201f9",
-      "b1cacb2c307d7710c7b88923",
+      "2fc9f1b3bce343d6ec64010a",
       "c8ce4e1a0efb1f9341f4c986",
       "cd91488dca1efb93ec96c251",
-      "bc1f92ea3ac45d8772d95a1e",
+      "345d8f67b676ab20323a29ae",
       "0cb8b5392256ad38af543ae2",
       "2c0ed54fe8c735166775f300",
-      "c01619e93407ea0dd784c33d",
+      "34b22df2207650ee089d787e",
       "d4708e3ba27e9b823ab2ee20",
       "c47eb544b93117ade5021858",
-      "c4bcedcb970f0f90f0989272",
+      "3992435be18eea2653f169a1",
       "6dd6f0d4aa469a3ff79c9165",
       "9026cbe8697ff6f8c0066076",
-      "cbdf884b403ec8d1186ac76e",
+      "3a2043509d80f92df6d91bea",
       "7dd173441054659acf184129",
       "cd6bc4cc341a6b0a761f1284",
-      "d66943a9ed5b0be9c3ee5c07",
+      "3e627d5c257120f7ebe85d13",
       "7e2a56060df79bd727dc5a63",
       "f030ba82a1d59238bd6449a1",
-      "f113cc1b7ee0c6d04c8c622e",
+      "4435153b381f864452aa95fb",
       "764e136a60a133822bc87ac6",
       "c3dc3977289c163c5ff6aed4",
-      "f2c20ed42ccc37357735e7b4",
+      "46bf5c1563564aa1b985e46d",
       "99b7d5ec103aa06731542d93",
       "a2ab83b5e6fb56ca51626915",
-      "18955f3adab6753480834296",
+      "46cee0fb99f181868d939f27",
       "f6a195bf54889d58c59766c1",
       "44cac19ae206c1c7a8d30bab",
-      "31dfee7e837ffac832636aea",
+      "54b6d766de45ed33ba824165",
       "c5ddc4a39471f0544fac17d4",
       "593133a85045b76fdcb534b3",
-      "5ba29e8c90b0c85768aa3513",
+      "56a62f433f81bb32723e426e",
       "b21d545454258c12f8ae1b5d",
       "652b0bbbd04aeef1215a4134",
-      "b59e5e32f7b217ac89d0c7f5",
+      "5d189f6b990c7195945e80f2",
       "c60b33ceabcb05f260102c16",
       "65eeced0633088d841799c1b",
-      "be8dc43e17d78caeff3cd419",
+      "5e9921cd2cf9100a9b571e11",
       "646cbc2b19be982845450be8",
       "9ddc9d92d5c8eb34beaf7c88",
-      "d0c262928cd69a1b72be6496",
+      "625abb946e269e8f166b1ec8",
       "0e3ab12de28acad1051b997a",
-      "f7524ab1d050ee866ce2bd5c",
+      "7f9b2838228b996c1d88e2b4",
       "083b056095e851ccd8d9e97b",
-      "4cce7285970e51c3b3fcbaa9",
+      "80c2d813a852cb3c7c9a5bb8",
       "e7407dea090321ba639a998b",
-      "8a2cf4fb4246f8066002d233",
+      "83302a342e6e875b9b96b4d8",
       "cc8f7f0f1f804f17b0c585ea",
-      "8eef6ed57c846ca9377ad585",
+      "8c0193e3269bad0640530a97",
       "22c146b26a441a08a39ce4ec",
-      "920795cd9894d7f9b903fb42",
+      "9022aafae12dd162a1d806bd",
       "afc73639248cab7212515760",
-      "f1c31760faf04c0caefdbebe",
+      "91130c5728bbd57f9c974b77",
       "0cca3c1dad5952fd3fee7181",
-      "8320a66b73d3cf3008999334",
+      "96721a52e75af2a3f6272bd8",
       "0c30c50b9f55c5eb2c691c09",
-      "4f4bd985c4e9a15d55c431ba",
+      "96b80f984057a604a9791657",
       "38a656bcec1a0425cdcda56e",
-      "e1b2d6de321f9720b2215f86",
+      "9c9ba7e58dfda964b8255201",
       "98e2fa44271675bbc7752464",
-      "923e6998444ae884afe4a42f",
+      "a706bc66d18952d0b4d01251",
       "df6e67cbdf89b2f2ba446655",
-      "c9d6f40bfbf742eec24960c5",
+      "b0a950722ef7c216064fe274",
       "f3acecf0d4121c513cfa574d",
-      "cbb7c39df769287d8b54dc49",
+      "b2f1fbca847b36f679947bda",
       "3964ecc7917c8357b7b744d0",
-      "cf8bdf153deaf3f89d6123b4",
+      "c3c195a3c65da514823d8673",
       "208bcd0a42407cec14f5172a",
-      "0ec0eb8bb4ed2f27d529b14a",
+      "c879b9b72de7472fee15f78d",
       "90a534ea3826ab66102ccaa8",
-      "11b1c9c56276bd7235eaef8b",
+      "ce0adcceed168e6a89a1e7d0",
       "7fe3c9cd8a9a104ce449d60b",
-      "36631e7608f99a77de14569e",
+      "d31dc762664cdeed17b78ecc",
       "46681f4c15d1fe8f387712bf",
-      "5a624412f1f440bf2b023c2b",
+      "d453c4a2c0ef2c4bc4bc10d6",
       "e5c1704617e3e2dab6a99561",
-      "80b37b01af6c3b799a273236",
+      "d7d8774a5e9e149a526ad0aa",
       "2a015d49d8fc517c5eefbb58",
-      "841d9b44bd8251d391357ac6",
+      "db486152d589d06c574776ec",
       "b83001b522022b89d05d3863",
-      "b23443a4f7fc03d22072fc70",
+      "dc0486277ec099e6603904c8",
       "12bd7b8d27c758eca314e012",
-      "c74e79fdf3ceddfc684b31b4",
+      "e05aa54b7a0355438b4887e1",
       "165f6f2337fc48b93abff2da",
-      "dd5c7d20179e8197eb9aad05",
+      "e599d1f99d4b0b4fe7f5270d",
       "8441c4a9d13aee989e0c4fa4",
-      "ef9eea39a9b68df7d5640c03",
+      "ec22f87602d17af02ad44909",
       "4bad52663090b65c12016624",
-      "3bb6de250637b06e72dcdf12",
+      "f0293cb054ca6c77149da2df",
       "00854fe4c66ccc028737a7c3",
-      "10292838c51731cc91c5b6f0",
+      "f4edfc464406cade6305b27d",
       "384c9cffc52bf5aa629c68a7"
     ],
-    "unmatchedDocuments": 918,
+    "unmatchedDocuments": 947,
     "candidates": [
       {
         "id": "e748f8750672ca8b04b242be",
@@ -162662,8 +165077,8 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 6,
-        "priorDocuments": 11,
+        "recentDocuments": 5,
+        "priorDocuments": 12,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -162674,17 +165089,16 @@
           "1d5397ba140e8c93a95796e2",
           "5515f261bdad81d7a548a3b5",
           "1151d25637a2a4e81e235a2d",
-          "05e472edbf5ba4d3953ba0e9",
-          "e1810c78f290902046b4c010"
+          "05e472edbf5ba4d3953ba0e9"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 13,
+        "spanDays": 10,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -162692,30 +165106,28 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 6,
-        "priorDocuments": 4,
+        "recentDocuments": 5,
+        "priorDocuments": 5,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
-          "Announcement / reporting",
-          "Deployment language"
+          "Announcement / reporting"
         ],
         "documentIds": [
           "f3acecf0d4121c513cfa574d",
           "5e5dcfb8d6c5f420efdc4bb6",
           "5540c7b01605b78f664203a2",
           "655999be1840316fc09993d4",
-          "5f7d632f7b785f3616f5d77b",
-          "acf1dd2e4af26fc3f49ce4c0"
+          "5f7d632f7b785f3616f5d77b"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 13,
+        "spanDays": 11,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "4e23c7e335b2bee22bb8f2c8",
@@ -162742,7 +165154,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -162769,7 +165181,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "038eb8b917707f28b8e99178",
@@ -162796,7 +165208,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-09",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "a2345ee38432c1bdbae545c4",
@@ -162822,7 +165234,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "da298a0cb88763ad2138b4b6",
@@ -162848,7 +165260,33 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-19",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "b2a020128954e58413112e4c",
+        "phrase": "solar cells",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 1,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f0293cb054ca6c77149da2df",
+          "db2afe7b9fb89cfb914af833"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 7,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-26",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "dea167a347a7e010f327afe1",
@@ -162873,32 +165311,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "71129ee2050ba9e34270d25d",
-        "phrase": "airlines bans ai agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "e1810c78f290902046b4c010"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-12",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "a0d86d718320e6921d60d00b",
@@ -162923,7 +165336,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-17",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "d6633cb315f3e129180e0399",
@@ -162948,7 +165361,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-17",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "98f7b48e8e171dc1fac243e9",
@@ -162973,7 +165386,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-23",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "9b7f88b62dccc180eeccc6fa",
@@ -162998,7 +165411,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "ccb3220d78200104bcf5459c",
@@ -163023,7 +165436,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-18",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "b0cc8add943575eadd520692",
@@ -163048,7 +165461,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-19",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "2674e5a82b80bb81eb9ab79a",
@@ -163073,7 +165486,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-20",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "a9b2d461ea198ca0b702b90e",
@@ -163098,7 +165511,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-17",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "38d3eea6566bb060dbfd46b1",
@@ -163123,7 +165536,32 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-14",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "1f8f82dc0e1f7233d143ef11",
+        "phrase": "perovskite tandem solar cells",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f0293cb054ca6c77149da2df"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-26",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "25ce80b2ac32f4764ad2dbc7",
@@ -163148,7 +165586,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-17",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "60add2dd25cc9d372b6c3968",
@@ -163173,7 +165611,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "2ae5d50d3ac0bfa00f3dab75",
@@ -163198,7 +165636,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-24",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "3e45a7760d7f4125aabf77b6",
@@ -163223,7 +165661,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "f469c7b3455eed49f1057662",
@@ -163248,7 +165686,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-17",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "4b22e201927ffadf4876dbe9",
@@ -163273,7 +165711,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-16",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "50bfcf92dd6e0b69ef71b715",
@@ -163298,7 +165736,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-24",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "0d267393a33d167029a121bc",
@@ -163323,7 +165761,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-21",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "b27ce828c6c0a2af9226db61",
@@ -163348,7 +165786,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-23",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "10b02e6101c2cfdcff39f50b",
@@ -163373,7 +165811,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-19",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "d0b32e62b86c910585834f80",
@@ -163398,32 +165836,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-24",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "203e5271b1128f99f8e2669d",
-        "phrase": "own sub agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3c9a4e9ab7c580a4d852f848"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       }
     ],
     "archive": [
@@ -163433,8 +165846,8 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 6,
-        "priorDocuments": 11,
+        "recentDocuments": 5,
+        "priorDocuments": 12,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
@@ -163445,17 +165858,16 @@
           "1d5397ba140e8c93a95796e2",
           "5515f261bdad81d7a548a3b5",
           "1151d25637a2a4e81e235a2d",
-          "05e472edbf5ba4d3953ba0e9",
-          "e1810c78f290902046b4c010"
+          "05e472edbf5ba4d3953ba0e9"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 13,
+        "spanDays": 10,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-11",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "ee662f0a4316976d226a3faf",
@@ -163482,7 +165894,7 @@
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-02",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "31a85e22a24a7a4fba06c2c6",
@@ -163490,30 +165902,710 @@
         "owners": [
           "Hacker News"
         ],
-        "recentDocuments": 6,
-        "priorDocuments": 4,
+        "recentDocuments": 5,
+        "priorDocuments": 5,
         "momentumPercent": null,
         "status": "Single-owner lead",
         "evidenceTypes": [
-          "Announcement / reporting",
-          "Deployment language"
+          "Announcement / reporting"
         ],
         "documentIds": [
           "f3acecf0d4121c513cfa574d",
           "5e5dcfb8d6c5f420efdc4bb6",
           "5540c7b01605b78f664203a2",
           "655999be1840316fc09993d4",
-          "5f7d632f7b785f3616f5d77b",
-          "acf1dd2e4af26fc3f49ce4c0"
+          "5f7d632f7b785f3616f5d77b"
         ],
         "lanes": [
           "community"
         ],
-        "spanDays": 13,
+        "spanDays": 11,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-10-13",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "60add2dd25cc9d372b6c3968",
+        "phrase": "scopedb accesses object storage",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "5e8fcc7e7da23004fceeb9e4"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-12",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "3e45a7760d7f4125aabf77b6",
+        "phrase": "self improving managed agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "ca0b392ca9eff9d41f4e5dca"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "4e23c7e335b2bee22bb8f2c8",
+        "phrase": "ai coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 3,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "5e5dcfb8d6c5f420efdc4bb6",
+          "655999be1840316fc09993d4",
+          "5f7d632f7b785f3616f5d77b"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 7,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-13",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "9b7f88b62dccc180eeccc6fa",
+        "phrase": "fight ai shopping agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "065b8e8b756cc8a1f45763aa"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-14",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "38d3eea6566bb060dbfd46b1",
+        "phrase": "own ai coding agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "655999be1840316fc09993d4"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-14",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "038eb8b917707f28b8e99178",
+        "phrase": "ai chips",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 3,
+        "priorDocuments": 1,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "3f7f4bf6b7839361e41ff546",
+          "3c0ef53d887c3573bed2c967",
+          "4ac74cb7c7a8ab6c5ef24cc5"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 4,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-09",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "4b22e201927ffadf4876dbe9",
+        "phrase": "show hn cheesedb agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "1fbf5f4d39dfd7247715d5e0"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-16",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "a2345ee38432c1bdbae545c4",
+        "phrase": "advanced ai chips",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "3c0ef53d887c3573bed2c967",
+          "4ac74cb7c7a8ab6c5ef24cc5"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 1,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-16",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "a0d86d718320e6921d60d00b",
+        "phrase": "china advanced ai chips",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "3c0ef53d887c3573bed2c967"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-17",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "d6633cb315f3e129180e0399",
+        "phrase": "daytona vs e2b agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "00399cfe8341ee7e93a7d9e4"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-17",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "a9b2d461ea198ca0b702b90e",
+        "phrase": "open source terminal agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "014a32d6d154909252b8bebe"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-17",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "25ce80b2ac32f4764ad2dbc7",
+        "phrase": "pulsar cross harness agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "a2157de05f2260491df4b86a"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-17",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "f469c7b3455eed49f1057662",
+        "phrase": "show hn aktor agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "3c9a4e9ab7c580a4d852f848"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-17",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "ccb3220d78200104bcf5459c",
+        "phrase": "find ai coding agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Research / test language"
+        ],
+        "documentIds": [
+          "bcecb8afb42def0b0f33a54b"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-18",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "da298a0cb88763ad2138b4b6",
+        "phrase": "object storage",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "d726e477b6368a29295411de",
+          "5e8fcc7e7da23004fceeb9e4"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 7,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-19",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "b0cc8add943575eadd520692",
+        "phrase": "high performance blob storage",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "05df4c7dafe45c32a6bcc1f0"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-19",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "10b02e6101c2cfdcff39f50b",
+        "phrase": "featherweight flying robot",
+        "owners": [
+          "MIT"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f030ba82a1d59238bd6449a1"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-19",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "2674e5a82b80bb81eb9ab79a",
+        "phrase": "hn heterogeneous distributed computing",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "02120bc88f647339c15e72d3"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-20",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "dea167a347a7e010f327afe1",
+        "phrase": "actors cairn ai agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "1151d25637a2a4e81e235a2d"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-21",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "0d267393a33d167029a121bc",
+        "phrase": "ai browser agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "ecd68a1d6b77ed380a0bf7aa"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-21",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "98f7b48e8e171dc1fac243e9",
+        "phrase": "engineers design analog chips",
+        "owners": [
+          "MIT"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "313b6680d563671a0f4623e4"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-23",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "b27ce828c6c0a2af9226db61",
+        "phrase": "coordinates specialist agents",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "0a124e133bdf3fe29aa19dcc"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-23",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "2ae5d50d3ac0bfa00f3dab75",
+        "phrase": "seastore redesigning cephs storage",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "01a3bb946e383ec0d13862cf"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-24",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "50bfcf92dd6e0b69ef71b715",
+        "phrase": "show hn mygraph agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "c65a52c463da7e376b8b8172"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-24",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "d0b32e62b86c910585834f80",
+        "phrase": "interactive ai agent",
+        "owners": [
+          "Hacker News"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "976b0b79e9bb69b1bd706af3"
+        ],
+        "lanes": [
+          "community"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-24",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "b2a020128954e58413112e4c",
+        "phrase": "solar cells",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 2,
+        "priorDocuments": 1,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f0293cb054ca6c77149da2df",
+          "db2afe7b9fb89cfb914af833"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 7,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-26",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
+      },
+      {
+        "id": "1f8f82dc0e1f7233d143ef11",
+        "phrase": "perovskite tandem solar cells",
+        "owners": [
+          "Nature"
+        ],
+        "recentDocuments": 1,
+        "priorDocuments": 0,
+        "momentumPercent": null,
+        "status": "Single-owner lead",
+        "evidenceTypes": [
+          "Announcement / reporting"
+        ],
+        "documentIds": [
+          "f0293cb054ca6c77149da2df"
+        ],
+        "lanes": [
+          "research"
+        ],
+        "spanDays": 0,
+        "nextCheck": "Find another reporting owner, then look for customer use.",
+        "firstObservedAt": "2026-11-26",
+        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
+        "lastSeenAt": "2026-11-26"
       },
       {
         "id": "09cf7632ba27eaa179f02d30",
@@ -163562,637 +166654,6 @@
         "spanDays": 0,
         "nextCheck": "Find another reporting owner, then look for customer use.",
         "firstObservedAt": "2026-11-12",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "60add2dd25cc9d372b6c3968",
-        "phrase": "scopedb accesses object storage",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "5e8fcc7e7da23004fceeb9e4"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-12",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "3e45a7760d7f4125aabf77b6",
-        "phrase": "self improving managed agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "ca0b392ca9eff9d41f4e5dca"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "4e23c7e335b2bee22bb8f2c8",
-        "phrase": "ai coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "5e5dcfb8d6c5f420efdc4bb6",
-          "655999be1840316fc09993d4",
-          "5f7d632f7b785f3616f5d77b"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 7,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-13",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "9b7f88b62dccc180eeccc6fa",
-        "phrase": "fight ai shopping agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "065b8e8b756cc8a1f45763aa"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-14",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "38d3eea6566bb060dbfd46b1",
-        "phrase": "own ai coding agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "655999be1840316fc09993d4"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-14",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "038eb8b917707f28b8e99178",
-        "phrase": "ai chips",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 3,
-        "priorDocuments": 1,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3f7f4bf6b7839361e41ff546",
-          "3c0ef53d887c3573bed2c967",
-          "4ac74cb7c7a8ab6c5ef24cc5"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 4,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-09",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "4b22e201927ffadf4876dbe9",
-        "phrase": "show hn cheesedb agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "1fbf5f4d39dfd7247715d5e0"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-16",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "a2345ee38432c1bdbae545c4",
-        "phrase": "advanced ai chips",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 2,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3c0ef53d887c3573bed2c967",
-          "4ac74cb7c7a8ab6c5ef24cc5"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 1,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-16",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "a0d86d718320e6921d60d00b",
-        "phrase": "china advanced ai chips",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3c0ef53d887c3573bed2c967"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "d6633cb315f3e129180e0399",
-        "phrase": "daytona vs e2b agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "00399cfe8341ee7e93a7d9e4"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "a9b2d461ea198ca0b702b90e",
-        "phrase": "open source terminal agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "014a32d6d154909252b8bebe"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "25ce80b2ac32f4764ad2dbc7",
-        "phrase": "pulsar cross harness agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "a2157de05f2260491df4b86a"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "f469c7b3455eed49f1057662",
-        "phrase": "show hn aktor agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "3c9a4e9ab7c580a4d852f848"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-17",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "ccb3220d78200104bcf5459c",
-        "phrase": "find ai coding agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Research / test language"
-        ],
-        "documentIds": [
-          "bcecb8afb42def0b0f33a54b"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-18",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "da298a0cb88763ad2138b4b6",
-        "phrase": "object storage",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 2,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "d726e477b6368a29295411de",
-          "5e8fcc7e7da23004fceeb9e4"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 7,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-19",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "b0cc8add943575eadd520692",
-        "phrase": "high performance blob storage",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "05df4c7dafe45c32a6bcc1f0"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-19",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "10b02e6101c2cfdcff39f50b",
-        "phrase": "featherweight flying robot",
-        "owners": [
-          "MIT"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "f030ba82a1d59238bd6449a1"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-19",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "2674e5a82b80bb81eb9ab79a",
-        "phrase": "hn heterogeneous distributed computing",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "02120bc88f647339c15e72d3"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-20",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "dea167a347a7e010f327afe1",
-        "phrase": "actors cairn ai agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "1151d25637a2a4e81e235a2d"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-21",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "0d267393a33d167029a121bc",
-        "phrase": "ai browser agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "ecd68a1d6b77ed380a0bf7aa"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-21",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "98f7b48e8e171dc1fac243e9",
-        "phrase": "engineers design analog chips",
-        "owners": [
-          "MIT"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "313b6680d563671a0f4623e4"
-        ],
-        "lanes": [
-          "research"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-23",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "b27ce828c6c0a2af9226db61",
-        "phrase": "coordinates specialist agents",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "0a124e133bdf3fe29aa19dcc"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-23",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "2ae5d50d3ac0bfa00f3dab75",
-        "phrase": "seastore redesigning cephs storage",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "01a3bb946e383ec0d13862cf"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-24",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "50bfcf92dd6e0b69ef71b715",
-        "phrase": "show hn mygraph agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "c65a52c463da7e376b8b8172"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-24",
-        "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
-        "lastSeenAt": "2026-11-25"
-      },
-      {
-        "id": "d0b32e62b86c910585834f80",
-        "phrase": "interactive ai agent",
-        "owners": [
-          "Hacker News"
-        ],
-        "recentDocuments": 1,
-        "priorDocuments": 0,
-        "momentumPercent": null,
-        "status": "Single-owner lead",
-        "evidenceTypes": [
-          "Announcement / reporting"
-        ],
-        "documentIds": [
-          "976b0b79e9bb69b1bd706af3"
-        ],
-        "lanes": [
-          "community"
-        ],
-        "spanDays": 0,
-        "nextCheck": "Find another reporting owner, then look for customer use.",
-        "firstObservedAt": "2026-11-24",
         "caveat": "An extracted headline phrase, not a verified technology category or adoption claim.",
         "lastSeenAt": "2026-11-25"
       },
@@ -165389,13 +167850,13 @@
         "lastSeenAt": "2026-10-09"
       }
     ],
-    "datedDocuments": 1748,
+    "datedDocuments": 1796,
     "comparableDays": 23,
-    "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Coverage is incomplete, quiet, undated or overdue; comparable history is paused. Older history without compatible per-source check receipts is retained for audit, not comparisons."
+    "note": "Daily sample, not whole-market coverage. Pattern grouping uses technical vocabulary; Open scan has no keyword gate. Momentum needs actual checks from every source today and on the preceding 28 Toronto calendar days, with unchanged collection contracts and dated samples. Cached checks cannot create extra days. Backfill, votes and headlines are not adoption. Older history without compatible per-source check receipts is retained for audit, not comparisons."
   },
   "coverage": {
     "totalSources": 24,
-    "readableSources": 19,
+    "readableSources": 20,
     "companies": 8
   }
 }

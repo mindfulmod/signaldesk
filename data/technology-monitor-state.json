@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T16:00:31.907Z",
+  "generatedAt": "2026-11-26T01:08:25.215Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -165,12 +165,12 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "error",
-      "lastAttemptAt": "2026-11-25T16:00:31.907Z",
+      "lastAttemptAt": "2026-11-26T01:08:25.215Z",
       "lastSuccessAt": "2026-11-17T14:52:09.692Z",
       "baselineAt": "2026-11-15T12:56:36.411Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-11-25T22:00:31.907Z",
-      "failureStreak": 16,
+      "nextAttemptAt": "2026-11-26T07:08:25.215Z",
+      "failureStreak": 17,
       "error": "HTTP 403",
       "fingerprint": "ab15f647f2be54228020690a6dee95f05c6b3b94792fbe89ec3e821479bd8f91",
       "items": [
@@ -744,16 +744,316 @@
       "sourceUrl": "https://www.nature.com/nature.rss",
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"nature-research\",\"https://www.nature.com/nature.rss\",\"rss\",\"links\",[\"nature.com\",\"www.nature.com\"],[],null,null,false,false,\"Nature\",\"Nature research and news\",[],\"research\",true]",
-      "status": "error",
-      "lastAttemptAt": "2026-11-25T16:00:31.907Z",
-      "lastSuccessAt": "2026-11-24T16:20:51.279Z",
+      "status": "ok",
+      "lastAttemptAt": "2026-11-26T01:08:25.215Z",
+      "lastSuccessAt": "2026-11-26T01:08:25.215Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-24T16:20:51.279Z",
-      "nextAttemptAt": "2026-11-25T17:00:31.907Z",
-      "failureStreak": 1,
-      "error": "Source or redirect host is not allowlisted",
-      "fingerprint": "585ea475fc3b5455a416595f11ed430d368384661f967600fbf4c2680d67de98",
+      "lastChangedAt": "2026-11-26T01:08:25.215Z",
+      "nextAttemptAt": null,
+      "failureStreak": 0,
+      "error": null,
+      "fingerprint": "7505b439bfe9e0f12c32ce801e853e3ad52bdcfe26f860eadde7a99ea6971a21",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03468-3",
+          "title": "The leading cities in the world for high-quality research in 2025",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03853-y",
+          "title": "Dual proofs of legendary Riemann hypothesis stun mathematicians",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11465-9",
+          "title": "An in situ redox-converted molecule for all-perovskite tandem solar cells",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03472-7",
+          "title": "How Singapore has turned a nation into a smart-city testing ground",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03491-4",
+          "title": "How arteries keep their shape in the face of overgrowth-inducing mutations",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03854-x",
+          "title": "What is the Riemann hypothesis? A guide to the famed conjecture that rules prime numbers",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03475-4",
+          "title": "Saving Nepal’s wild orchids — in photos",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03494-1",
+          "title": "A fine-grained reconstruction of barley’s evolutionary history",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03718-4",
+          "title": "A powerful HIV vaccine is finally within reach — thanks to these super antibodies",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03470-9",
+          "title": "Can Beijing scale up its smart-city ambitions?",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03513-1",
+          "title": "From sketch to publication-ready flowchart: how AI tools can bridge the gap",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03466-5",
+          "title": "The world’s leading science cities are changing — here’s why",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03268-9",
+          "title": "Gut microbes can adapt to our ageing bodies",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03473-6",
+          "title": "China’s AI-powered smart-city model is going global",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03492-3",
+          "title": "Pockets in compacted DNA tune gene activation",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03469-2",
+          "title": "Helsinki puts trust at the heart of its smart-city model",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03471-8",
+          "title": "London’s people-first approach to smart-city development",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03693-w",
+          "title": "Bogong moths can migrate using an internal geomagnetic compass",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03467-4",
+          "title": "Can smart cities attract the talent they need to thrive?",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03813-6",
+          "title": "Dengue has exploded globally with shocking speed",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03521-1",
+          "title": "The Mona Lisa Lottery",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03809-2",
+          "title": "The world has a golden chance to improve HIV prevention: don’t squander it",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03474-5",
+          "title": "A guide to the Nature Index",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03837-y",
+          "title": "Succumbing to certainty is a failure in science",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03872-9",
+          "title": "Rare gene variants can affect a person’s height by up to 17 centimetres",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03382-8",
+          "title": "Enzymatic reactions adapted to make ‘living’ chains of sugars",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03835-0",
+          "title": "‘If we can solve Riemann, what can’t we do?’: mathematicians shocked and excited by AI breakthroughs",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03333-3",
+          "title": "Just eight universities dominate Nobel and other top economics prizes",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11339-0",
+          "title": "An enduring climatic burden from past peatland drainage",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11275-z",
+          "title": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11301-0",
+          "title": "Heterogeneity co-evolves with architecture to determine colon cancer outcome",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11315-8",
+          "title": "A gut–brain sensory-motor circuit regulates sugar ingestion in Drosophila",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11353-2",
+          "title": "Quantum-enhanced sensing with 500 photons via Fock-space confocal focusing",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11287-9",
+          "title": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11341-6",
+          "title": "Middle–Late Pleistocene Denisovans and unresolved Homo in southern China",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11313-w",
+          "title": "Sustainable cement production via a liquid-phase pathway",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11318-5",
+          "title": "Context-dependent response of endothelial cells to PIK3CA mutation",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11146-7",
+          "title": "Augmenting reality with integrated photonics",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11304-x",
+          "title": "Enzymatic living polymerization for polysaccharide synthesis",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11309-6",
+          "title": "Coherent parity oscillations in coupled minimal Kitaev chains",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11311-y",
+          "title": "Transcription from megabase-scale heterochromatin generates neural barcodes",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11196-x",
+          "title": "Structural basis of RNA-guided DNA integration by type I CAST systems",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11231-x",
+          "title": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11151-w",
+          "title": "An extremophile transgene improves drought resistance and yield in cereals",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11354-1",
+          "title": "Disturbances and climate drive tree elevational shifts",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11288-8",
+          "title": "Unconventional resistivity reduction in NbP semimetal nanoribbons",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11338-1",
+          "title": "De novo design of high-potency dual-target therapeutic peptides with ORIDTP",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11326-5",
+          "title": "Engineering signalling centres to trigger human trunk morphogenesis in vitro",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11345-2",
+          "title": "Rare-variant genetic architecture of height in over 1.4 million individuals",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11279-9",
+          "title": "Submillimetre hot-electron transport in manganese-doped quantum dot solids",
+          "excerpt": "",
+          "publishedAt": "2026-11-25"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-03824-3",
           "title": "Fight AI slop without punishing legitimate researchers",
@@ -797,6 +1097,12 @@
           "publishedAt": "2026-11-24"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03836-z",
+          "title": "Watch out, AlphaFold: Claude and ChatGPT’s new biology skills wow scientists",
+          "excerpt": "",
+          "publishedAt": "2026-11-24"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03381-9",
           "title": "How acidic compounds in human sweat open a mosquito ion channel",
           "excerpt": "",
@@ -833,6 +1139,12 @@
           "publishedAt": "2026-11-24"
         },
         {
+          "url": "https://www.nature.com/articles/s41586-026-11403-9",
+          "title": "Author Correction: Reference genomes and fossils revise bat family phylogeny and biogeography",
+          "excerpt": "",
+          "publishedAt": "2026-11-24"
+        },
+        {
           "url": "https://www.nature.com/articles/s41586-026-11474-8",
           "title": "Author Correction: Synthetic super-enhancers enable precision viral immunotherapy",
           "excerpt": "",
@@ -851,14 +1163,26 @@
           "publishedAt": "2026-11-24"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03847-w",
+          "title": "William D. Nordhaus obituary: economist whose tools transformed climate policy",
+          "excerpt": "",
+          "publishedAt": "2026-11-24"
+        },
+        {
           "url": "https://www.nature.com/articles/s41586-026-11449-9",
           "title": "Hexa-substituted benzene synthesis with non-classical carbocations",
           "excerpt": "",
           "publishedAt": "2026-11-23"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03802-9",
+          "title": "Mariana Trench holds deepest-ever evidence of volcanic explosion",
+          "excerpt": "",
+          "publishedAt": "2026-11-23"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03827-0",
-          "title": "COP31 went down in flames over fossil fuels — it sends an important message",
+          "title": "COP31 went up in flames over fossil fuels — it sends an important message",
           "excerpt": "",
           "publishedAt": "2026-11-23"
         },
@@ -879,330 +1203,6 @@
           "title": "Build for the future climate — or waste trillions of dollars",
           "excerpt": "",
           "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03720-w",
-          "title": "‘Mozart of maths’ Terence Tao is your guide to what underpins reality",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03808-3",
-          "title": "Chemistry giant George Whitesides dies: one of the most influential researchers of his generation",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03818-1",
-          "title": "How to make climate anxiety your superpower",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-02203-2",
-          "title": "I t’s our duty to promote ourselves: even to other scientists. Am I wrong?",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03721-9",
-          "title": "Ayanna Howard thinks ‘everyone has to be part of’ building ethical AI tools",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03724-6",
-          "title": "Is trust in science falling, or does it just feel that way?",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03795-5",
-          "title": "How AI shocks are rattling the next generation of mathematicians — in charts",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03803-8",
-          "title": "BepiColombo finally reaches Mercury after eight-year odyssey",
-          "excerpt": "",
-          "publishedAt": "2026-11-21"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03680-1",
-          "title": "How AI is affecting science careers",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03751-3",
-          "title": "Lifting weights reduces muscle loss from obesity drugs",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03806-5",
-          "title": "Briefing Chat: Voyager 1 is now one ‘light day’ from Earth — setting a cosmic record",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03776-8",
-          "title": "Fraud helps little fire ants to survive and conquer",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03590-2",
-          "title": "‘I had felt overconfident’: senior scientists reveal mistakes that aided discovery",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03805-6",
-          "title": "‘Incredibly frustrating’: prestigious fellowship applications close in just 21 hours",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03789-3",
-          "title": "Net zero emissions won’t reverse climate change — some nations look to ‘net negative’",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03812-7",
-          "title": "Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03799-1",
-          "title": "Sleuth finds ‘impossible proteins’ in hundreds of research papers",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03787-5",
-          "title": "US science academy urges journals to fix errors more quickly",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-10974-x",
-          "title": "Author Correction: SARS-CoV-2 mRNA vaccines sensitize tumours to immune checkpoint blockade",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03816-3",
-          "title": "Daily briefing: Older people are staying sharp for longer",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03519-9",
-          "title": "Ruminations on a last movement",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03790-w",
-          "title": "Claude, find me a planet: amateur astronomers are using AI with mixed results",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03465-6",
-          "title": "How to turn impostor syndrome into a superpower",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03811-8",
-          "title": "These gaps in weather data affect forecasts everywhere: plugging them is not charity",
-          "excerpt": "",
-          "publishedAt": "2026-11-20"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11388-5",
-          "title": "Retraction Note: Detection of anisotropic cosmic structures on a gigaparsec scale",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11445-z",
-          "title": "Calcium catalysed nucleophilic fluorination",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03748-y",
-          "title": "More tropical cyclones hit peak fury at the worst possible time",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03783-9",
-          "title": "People entering old age now have better memory than their parents did",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03746-0",
-          "title": "University students are biggest spreaders of COVID",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03774-w",
-          "title": "Sore throat? The brain has surprising control over how ill you feel",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03753-1",
-          "title": "AI is ditching hallucinated references — and other bad habits",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03379-3",
-          "title": "What do various cancers have in common?",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11421-7",
-          "title": "Author Correction: Pharmacological inhibition of METTL1 as a therapy against solid and blood cancers",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11436-0",
-          "title": "Author Correction: Replication-stress-induced chromatin loops protect fork stability",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03775-9",
-          "title": "AI is turbocharging cyberattacks — can computer scientists catch up?",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03797-3",
-          "title": "Daily briefing: Homo erectus had what it takes to thrive in the rainforest",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03606-x",
-          "title": "Bacteria and viruses team up to hasten the demise of algal blooms",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03788-4",
-          "title": "Anthropic IPO: four ways the AI giant wants to disrupt science",
-          "excerpt": "",
-          "publishedAt": "2026-11-19"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03678-9",
-          "title": "Conference networking made simple, in three short videos",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03784-8",
-          "title": "First observation of a giant star swallowing its neighbour",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03708-6",
-          "title": "How to make AI data centres more sustainable",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03710-y",
-          "title": "Microbiome home tests are taking off. Can they be trusted?",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03602-1",
-          "title": "Tropical land-use intensification reshapes biodiversity in expected and unexpected ways",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03777-7",
-          "title": "Kings of the jungle? This early human had surprising survival skills that rivalled ours",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03791-9",
-          "title": "Daily briefing: Can you spot the ‘tortured phrases’?",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03273-y",
-          "title": "Intra-stellar: a star inside a giant star",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03377-5",
-          "title": "Glucose-powered implant brings devices for treating diabetes a step closer",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11427-1",
-          "title": "Band-Edge-Extended Heterointerfaces for Perovskite Solar Cells and Tandems",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03436-x",
-          "title": "Poxviruses probably evolved in the digestive system of animals",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03766-w",
-          "title": "Meet ‘egoviruses’: the surprise microbes living in the guts of millions of people",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03490-5",
-          "title": "A new view of Amazonian leaf seasonality",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03599-7",
-          "title": "Injured locusts heal or are cannibalized depending on levels of a bacterial odour molecule",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03040-z",
-          "title": "Are you a budding science sleuth? Take our plagiarism quiz to test your skills",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03717-5",
-          "title": "AI must be held accountable — value statements won’t protect human dignity",
-          "excerpt": "",
-          "publishedAt": "2026-11-18"
         }
       ],
       "seenLinks": [
@@ -1884,21 +1884,74 @@
         "https://www.nature.com/articles/d41586-026-03808-3",
         "https://www.nature.com/articles/d41586-026-03724-6",
         "https://www.nature.com/articles/d41586-026-03795-5",
-        "https://www.nature.com/articles/d41586-026-03816-3"
+        "https://www.nature.com/articles/d41586-026-03816-3",
+        "https://www.nature.com/articles/d41586-026-03468-3",
+        "https://www.nature.com/articles/d41586-026-03853-y",
+        "https://www.nature.com/articles/s41586-026-11465-9",
+        "https://www.nature.com/articles/d41586-026-03472-7",
+        "https://www.nature.com/articles/d41586-026-03491-4",
+        "https://www.nature.com/articles/d41586-026-03854-x",
+        "https://www.nature.com/articles/d41586-026-03475-4",
+        "https://www.nature.com/articles/d41586-026-03494-1",
+        "https://www.nature.com/articles/d41586-026-03718-4",
+        "https://www.nature.com/articles/d41586-026-03470-9",
+        "https://www.nature.com/articles/d41586-026-03513-1",
+        "https://www.nature.com/articles/d41586-026-03466-5",
+        "https://www.nature.com/articles/d41586-026-03268-9",
+        "https://www.nature.com/articles/d41586-026-03473-6",
+        "https://www.nature.com/articles/d41586-026-03492-3",
+        "https://www.nature.com/articles/d41586-026-03469-2",
+        "https://www.nature.com/articles/d41586-026-03471-8",
+        "https://www.nature.com/articles/d41586-026-03693-w",
+        "https://www.nature.com/articles/d41586-026-03467-4",
+        "https://www.nature.com/articles/d41586-026-03813-6",
+        "https://www.nature.com/articles/d41586-026-03521-1",
+        "https://www.nature.com/articles/d41586-026-03809-2",
+        "https://www.nature.com/articles/d41586-026-03474-5",
+        "https://www.nature.com/articles/d41586-026-03837-y",
+        "https://www.nature.com/articles/d41586-026-03872-9",
+        "https://www.nature.com/articles/d41586-026-03382-8",
+        "https://www.nature.com/articles/d41586-026-03835-0",
+        "https://www.nature.com/articles/d41586-026-03333-3",
+        "https://www.nature.com/articles/s41586-026-11339-0",
+        "https://www.nature.com/articles/s41586-026-11275-z",
+        "https://www.nature.com/articles/s41586-026-11301-0",
+        "https://www.nature.com/articles/s41586-026-11315-8",
+        "https://www.nature.com/articles/s41586-026-11353-2",
+        "https://www.nature.com/articles/s41586-026-11287-9",
+        "https://www.nature.com/articles/s41586-026-11341-6",
+        "https://www.nature.com/articles/s41586-026-11313-w",
+        "https://www.nature.com/articles/s41586-026-11318-5",
+        "https://www.nature.com/articles/s41586-026-11146-7",
+        "https://www.nature.com/articles/s41586-026-11304-x",
+        "https://www.nature.com/articles/s41586-026-11309-6",
+        "https://www.nature.com/articles/s41586-026-11311-y",
+        "https://www.nature.com/articles/s41586-026-11196-x",
+        "https://www.nature.com/articles/s41586-026-11231-x",
+        "https://www.nature.com/articles/s41586-026-11151-w",
+        "https://www.nature.com/articles/s41586-026-11354-1",
+        "https://www.nature.com/articles/s41586-026-11288-8",
+        "https://www.nature.com/articles/s41586-026-11338-1",
+        "https://www.nature.com/articles/s41586-026-11326-5",
+        "https://www.nature.com/articles/s41586-026-11345-2",
+        "https://www.nature.com/articles/s41586-026-11279-9",
+        "https://www.nature.com/articles/d41586-026-03836-z",
+        "https://www.nature.com/articles/s41586-026-11403-9",
+        "https://www.nature.com/articles/d41586-026-03847-w",
+        "https://www.nature.com/articles/d41586-026-03802-9"
       ],
       "matchedItems": 75,
       "datedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-11-24",
+      "newestPublicationAt": "2026-11-25",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"ae4050969a59fcb95776ba056d0ae104\"",
-      "lastModified": null,
-      "attemptContract": "[1,5,\"nature-research\",\"https://www.nature.com/nature.rss\",\"rss\",\"links\",[\"nature.com\",\"www.nature.com\"],[],null,null,false,false,\"Nature\",\"Nature research and news\",[],\"research\",true]"
+      "etag": "\"f6bcf8c44a85e482377f973f1e642174\"",
+      "lastModified": null
     },
     "sec-qs": {
       "id": "sec-qs",
@@ -10035,6 +10088,654 @@
   },
   "events": [
     {
+      "id": "2f19d97d439aebb2bfa9e6cc",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The leading cities in the world for high-quality research in 2025",
+      "url": "https://www.nature.com/articles/d41586-026-03468-3",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f27777ea94fb1abcd907c140",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Dual proofs of legendary Riemann hypothesis stun mathematicians",
+      "url": "https://www.nature.com/articles/d41586-026-03853-y",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fd2750a420adeff806a5fa07",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "An in situ redox-converted molecule for all-perovskite tandem solar cells",
+      "url": "https://www.nature.com/articles/s41586-026-11465-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "dd629c87d1fdd19c1eb9d7fa",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How Singapore has turned a nation into a smart-city testing ground",
+      "url": "https://www.nature.com/articles/d41586-026-03472-7",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "89a9bf7ccf65f4dd911a9129",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "How arteries keep their shape in the face of overgrowth-inducing mutations",
+      "url": "https://www.nature.com/articles/d41586-026-03491-4",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "97fcd4af9d89be3876cadc39",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "What is the Riemann hypothesis? A guide to the famed conjecture that rules prime numbers",
+      "url": "https://www.nature.com/articles/d41586-026-03854-x",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "38da334b4ff10482f0066a5c",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Saving Nepal’s wild orchids — in photos",
+      "url": "https://www.nature.com/articles/d41586-026-03475-4",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7b63183315448ed34c86e902",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A fine-grained reconstruction of barley’s evolutionary history",
+      "url": "https://www.nature.com/articles/d41586-026-03494-1",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6b20410bf00c023772f97c40",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A powerful HIV vaccine is finally within reach — thanks to these super antibodies",
+      "url": "https://www.nature.com/articles/d41586-026-03718-4",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a60ed7f1695768bb30705db1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Can Beijing scale up its smart-city ambitions?",
+      "url": "https://www.nature.com/articles/d41586-026-03470-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0f2f22b1bc45789d3f129cff",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "From sketch to publication-ready flowchart: how AI tools can bridge the gap",
+      "url": "https://www.nature.com/articles/d41586-026-03513-1",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c4fdb8a866f6379308db8fb9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The world’s leading science cities are changing — here’s why",
+      "url": "https://www.nature.com/articles/d41586-026-03466-5",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "877e24171d2ad4a2032dd9e9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Gut microbes can adapt to our ageing bodies",
+      "url": "https://www.nature.com/articles/d41586-026-03268-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "00797008ee8757ce671694ed",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "China’s AI-powered smart-city model is going global",
+      "url": "https://www.nature.com/articles/d41586-026-03473-6",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a2dcc7d435699d025b744252",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Pockets in compacted DNA tune gene activation",
+      "url": "https://www.nature.com/articles/d41586-026-03492-3",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ba76d5d5b043dbdbe7107101",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Helsinki puts trust at the heart of its smart-city model",
+      "url": "https://www.nature.com/articles/d41586-026-03469-2",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "70202d51f86dbf01fbe9538d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "London’s people-first approach to smart-city development",
+      "url": "https://www.nature.com/articles/d41586-026-03471-8",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8957d4fa6d626ce05b7d49b0",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Bogong moths can migrate using an internal geomagnetic compass",
+      "url": "https://www.nature.com/articles/d41586-026-03693-w",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c489e024d57b1256614a8150",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Can smart cities attract the talent they need to thrive?",
+      "url": "https://www.nature.com/articles/d41586-026-03467-4",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "87bd8bed0c912fec8298a489",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Dengue has exploded globally with shocking speed",
+      "url": "https://www.nature.com/articles/d41586-026-03813-6",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fd396ccfc042c9b7e3431f05",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The Mona Lisa Lottery",
+      "url": "https://www.nature.com/articles/d41586-026-03521-1",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "55ffdb23b0850fe00aafaf8e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The world has a golden chance to improve HIV prevention: don’t squander it",
+      "url": "https://www.nature.com/articles/d41586-026-03809-2",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e52051cee1f5491d7b700464",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A guide to the Nature Index",
+      "url": "https://www.nature.com/articles/d41586-026-03474-5",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bb00adcae5131eb18e99bff9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Succumbing to certainty is a failure in science",
+      "url": "https://www.nature.com/articles/d41586-026-03837-y",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a4267f5215cd83b4b9143fb4",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Rare gene variants can affect a person’s height by up to 17 centimetres",
+      "url": "https://www.nature.com/articles/d41586-026-03872-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2a71a54b54ae45ccbaac8e82",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Enzymatic reactions adapted to make ‘living’ chains of sugars",
+      "url": "https://www.nature.com/articles/d41586-026-03382-8",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9fc5f26d5f0fad4390fcd142",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "‘If we can solve Riemann, what can’t we do?’: mathematicians shocked and excited by AI breakthroughs",
+      "url": "https://www.nature.com/articles/d41586-026-03835-0",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f0d337d3a3a6e7c45348f75d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Just eight universities dominate Nobel and other top economics prizes",
+      "url": "https://www.nature.com/articles/d41586-026-03333-3",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a586a818a06891484799b975",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "An enduring climatic burden from past peatland drainage",
+      "url": "https://www.nature.com/articles/s41586-026-11339-0",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "15d7c6733faec843e704e51b",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Single-cell variant-to-enhancer-to-gene map for coronary artery disease",
+      "url": "https://www.nature.com/articles/s41586-026-11275-z",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c62b211bdfb8d92161c53838",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Heterogeneity co-evolves with architecture to determine colon cancer outcome",
+      "url": "https://www.nature.com/articles/s41586-026-11301-0",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "906dfc665d5a1c67a7ca8148",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "A gut–brain sensory-motor circuit regulates sugar ingestion in Drosophila",
+      "url": "https://www.nature.com/articles/s41586-026-11315-8",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3ed5d8295284a7212761a3b3",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Quantum-enhanced sensing with 500 photons via Fock-space confocal focusing",
+      "url": "https://www.nature.com/articles/s41586-026-11353-2",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f1fa9e1ebd3dcd2c0f2c4199",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Licensing mechanisms during RNA-guided DNA integration by type I-F3 CAST",
+      "url": "https://www.nature.com/articles/s41586-026-11287-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b8f94930d5d618c3e820f29e",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Middle–Late Pleistocene Denisovans and unresolved Homo in southern China",
+      "url": "https://www.nature.com/articles/s41586-026-11341-6",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "b5a1cacfaafb1e0ed6f9d672",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Sustainable cement production via a liquid-phase pathway",
+      "url": "https://www.nature.com/articles/s41586-026-11313-w",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3c223ba3a7e52ddb2112abf1",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Context-dependent response of endothelial cells to PIK3CA mutation",
+      "url": "https://www.nature.com/articles/s41586-026-11318-5",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "665aa966ccf4824b34a0ea65",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Augmenting reality with integrated photonics",
+      "url": "https://www.nature.com/articles/s41586-026-11146-7",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "212737878bbf64651b444855",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Enzymatic living polymerization for polysaccharide synthesis",
+      "url": "https://www.nature.com/articles/s41586-026-11304-x",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5ab7a726ec3ebc54d00f3233",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Coherent parity oscillations in coupled minimal Kitaev chains",
+      "url": "https://www.nature.com/articles/s41586-026-11309-6",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5037d2b4e597afcef508b622",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Transcription from megabase-scale heterochromatin generates neural barcodes",
+      "url": "https://www.nature.com/articles/s41586-026-11311-y",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f31025f5fb5b1a8147bca04d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Structural basis of RNA-guided DNA integration by type I CAST systems",
+      "url": "https://www.nature.com/articles/s41586-026-11196-x",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7f16ba74e11cb3757ba0944d",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Clinical landscape of cardiometabolic heart failure with preserved ejection fraction",
+      "url": "https://www.nature.com/articles/s41586-026-11231-x",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "191b9de98442698008316fe6",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "An extremophile transgene improves drought resistance and yield in cereals",
+      "url": "https://www.nature.com/articles/s41586-026-11151-w",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "41452c68777f110ebcac6a35",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Disturbances and climate drive tree elevational shifts",
+      "url": "https://www.nature.com/articles/s41586-026-11354-1",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "276e3036daa2290d8ae8b902",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Unconventional resistivity reduction in NbP semimetal nanoribbons",
+      "url": "https://www.nature.com/articles/s41586-026-11288-8",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ae3514bd7ea8352725d165ee",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "De novo design of high-potency dual-target therapeutic peptides with ORIDTP",
+      "url": "https://www.nature.com/articles/s41586-026-11338-1",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "af49d5c9efa714ec63c60ba2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Engineering signalling centres to trigger human trunk morphogenesis in vitro",
+      "url": "https://www.nature.com/articles/s41586-026-11326-5",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3a9dd72638e793baaa85a9d6",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Rare-variant genetic architecture of height in over 1.4 million individuals",
+      "url": "https://www.nature.com/articles/s41586-026-11345-2",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "14faaf4795faf0e86e43af0f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Submillimetre hot-electron transport in manganese-doped quantum dot solids",
+      "url": "https://www.nature.com/articles/s41586-026-11279-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-25",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c104a3e5fa8497a2e347b9d9",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Watch out, AlphaFold: Claude and ChatGPT’s new biology skills wow scientists",
+      "url": "https://www.nature.com/articles/d41586-026-03836-z",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-24",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "adf4f97f720abef76af27f68",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Author Correction: Reference genomes and fossils revise bat family phylogeny and biogeography",
+      "url": "https://www.nature.com/articles/s41586-026-11403-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-24",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4d2f33132d07300df9e612ea",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "William D. Nordhaus obituary: economist whose tools transformed climate policy",
+      "url": "https://www.nature.com/articles/d41586-026-03847-w",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-24",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "bcd14aac75f577fc9c6ce61f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Mariana Trench holds deepest-ever evidence of volcanic explosion",
+      "url": "https://www.nature.com/articles/d41586-026-03802-9",
+      "detectedAt": "2026-11-26T01:08:25.215Z",
+      "publishedAt": "2026-11-23",
+      "verification": "unreviewed"
+    },
+    {
       "id": "7bf1102a7e7166d3404b0b35",
       "sourceId": "mit-research",
       "themes": [],
@@ -14206,654 +14907,6 @@
       "url": "https://news.ycombinator.com/item?id=50574991",
       "detectedAt": "2026-11-20T14:19:51.729Z",
       "publishedAt": "2026-11-20T14:18:57.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "afdb3b275a2972e846e293dc",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: TheGeoPot – AI scanner for minerals, coins, plants and crops",
-      "url": "https://news.ycombinator.com/item?id=50574984",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:18:12.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d3989feb30f04095437f2d84",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Anthropic employee claims general proof of the Riemann Hypothesis [pdf]",
-      "url": "https://news.ycombinator.com/item?id=50574968",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:16:21.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "be7fd9510f783d798075a2d2",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Trackpad gestures could return to normal by Christmas",
-      "url": "https://news.ycombinator.com/item?id=50574961",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:16:00.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "82e77e7739402c6d3cfc605f",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Feature Parity",
-      "url": "https://news.ycombinator.com/item?id=50574960",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:15:54.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "716767975fd2aea6d7546eae",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Cursor tells lawmakers it's considering phasing out Chinese AI models",
-      "url": "https://news.ycombinator.com/item?id=50574957",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:15:42.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "33b6883771a381c333f865d0",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Cursor considering phasing out Chinese AI models",
-      "url": "https://news.ycombinator.com/item?id=50574952",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:15:24.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "fd21fac3dd880f80da87e516",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "US Commerce approved sales of more than 879,000 AI chips to Chinese companies",
-      "url": "https://news.ycombinator.com/item?id=50574934",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:14:05.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "66b9e5ccde6e06c0f70a6e8c",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Small TTS Bench: open-weight text-to-speech models on CPU",
-      "url": "https://news.ycombinator.com/item?id=50574930",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:13:54.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "cf7ba79febdaf1dd5c56d99b",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Combining Tests and Proofs with Contracts for Better Software Verification",
-      "url": "https://news.ycombinator.com/item?id=50574927",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:13:34.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "948c6264ca13b77508f06565",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "California Attorney General subpoenas Nvidia over chips",
-      "url": "https://news.ycombinator.com/item?id=50574925",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:13:30.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "c969a496dcd86c3616b3cc01",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Five Layers. An architecture for systems built with agents",
-      "url": "https://news.ycombinator.com/item?id=50574916",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:12:39.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a6fd111795d206039968d34f",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Flawless UI-UX Skill 3.0.0",
-      "url": "https://news.ycombinator.com/item?id=50574891",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:10:04.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8fb542c47eb830dc4f5e6797",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "SureQ – a Node.js job queue that runs on your existing database",
-      "url": "https://news.ycombinator.com/item?id=50574888",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:09:54.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "9cd9cbcea39f1dbf053878d0",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Heterogeneous Distributed Computing",
-      "url": "https://news.ycombinator.com/item?id=50574885",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:09:45.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "9272cd2ea9206377e93896bb",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "AI Gateway: Manage your company's AI from one place",
-      "url": "https://news.ycombinator.com/item?id=50574879",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:09:22.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "7c164c9cf205da8301151668",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Declutta – Free, on-device iOS photo cleaner and video compressor",
-      "url": "https://news.ycombinator.com/item?id=50574872",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:08:55.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "dfaa6fefe3fe89b94d048351",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Arc Chain Analyzer",
-      "url": "https://news.ycombinator.com/item?id=50574870",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:08:46.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d1a919c3e3bfbffa51574f92",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Pihole in Ha Mode",
-      "url": "https://news.ycombinator.com/item?id=50574868",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:08:41.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "c1eaec794b2494808f908d02",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "First Step Epoch: a real-world stardate",
-      "url": "https://news.ycombinator.com/item?id=50574866",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T14:08:38.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "356b7fae089c970532601fbb",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Drive around my village in 3D",
-      "url": "https://news.ycombinator.com/item?id=50574412",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T13:32:42.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d9a3679cf08de1d28bc82bd1",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Global stock markets slump as Anthropic's record IPO fails to stem AI sell-off",
-      "url": "https://news.ycombinator.com/item?id=50574383",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T13:29:59.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "f654c6d92f6d99d8eef44faa",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "If you stop writing code, you also get worse at reviewing it",
-      "url": "https://news.ycombinator.com/item?id=50573886",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T12:41:38.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a7dce5c3e2b626b541023036",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "The Making of Oxygene",
-      "url": "https://news.ycombinator.com/item?id=50572822",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T10:41:10.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "61a7b0f13e595b370c17d063",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
-      "url": "https://news.ycombinator.com/item?id=50572503",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T10:01:41.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "dbc84edf0e1ab7515418ccc3",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "What people are building, discovered through new domains",
-      "url": "https://news.ycombinator.com/item?id=50572448",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:54:33.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5583de7e5da4fd0b10c752b9",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "UK fridges secured from hackers",
-      "url": "https://news.ycombinator.com/item?id=50572430",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:52:20.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1d8b375486cd9cff8569cea7",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "If you can't explain something in simple terms, you don't understand it (2017)",
-      "url": "https://news.ycombinator.com/item?id=50572355",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:43:19.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4f99d871060d51a349fd3b62",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Reaktiv Workbook – A spreadsheet where every cell is Python",
-      "url": "https://news.ycombinator.com/item?id=50572351",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:42:31.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5a821fae141e144b5288043f",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Signal Is Serious About Protecting Your Privacy",
-      "url": "https://news.ycombinator.com/item?id=50572348",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:42:16.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a0803f44cfb6da03f5f81cdc",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
-      "url": "https://news.ycombinator.com/item?id=50572116",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T09:13:09.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "481681672972a0136c2a8669",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "\"I can tell you wrote this yourself\"",
-      "url": "https://news.ycombinator.com/item?id=50571189",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T07:13:21.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "405b4eed067b07153cfa7b3a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Jujutsu Primer",
-      "url": "https://news.ycombinator.com/item?id=50570628",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T05:46:01.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "823abfc664882813e5995b73",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "FFmpeg 9.1 'Gauss'",
-      "url": "https://news.ycombinator.com/item?id=50569998",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T04:02:39.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ec24aeb4c9f75739c4d72f83",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "PostgreSQL 19",
-      "url": "https://news.ycombinator.com/item?id=50569890",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T03:45:45.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "112b65d5df0c3ec9ba479bf2",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "What Comes After AGI?",
-      "url": "https://news.ycombinator.com/item?id=50569519",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T02:44:13.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "f0e5e20960347c13708b8a0d",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Postgres 19 Repack: Faster, Built-In Table Bloat Cleanup",
-      "url": "https://news.ycombinator.com/item?id=50569516",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T02:43:49.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "6eaaac30fd314842e7f35022",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
-      "url": "https://news.ycombinator.com/item?id=50569226",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T02:01:09.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "750e5c50e91b9efb8874992c",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Vint Cerf on why TCP/IP was never patented",
-      "url": "https://news.ycombinator.com/item?id=50568861",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-20T01:06:12.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ec7bb05ded2034f8b294781a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Synology Security Advisory",
-      "url": "https://news.ycombinator.com/item?id=50567209",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-19T22:13:40.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "724dfec0b08fd5c1e5315126",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Pancreatic cancer halted by virus injection in three patients",
-      "url": "https://news.ycombinator.com/item?id=50563066",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-19T17:25:33.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "2e230d80ccb4968b4cf26eb7",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest",
-      "url": "https://news.ycombinator.com/item?id=50561515",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-19T15:38:32.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ff207f247f78ba7c01ef99eb",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Watch weight-space programming in action with WebGPU",
-      "url": "https://news.ycombinator.com/item?id=50561436",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-19T15:32:47.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "35c89b4b823a2a39ffea00fc",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Fast deterministic natural language search for OpenStreetMap data",
-      "url": "https://news.ycombinator.com/item?id=50561199",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-19T15:16:02.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a7c3fdc44adc2e332d0606de",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "µ-Wire – USB on an ATtiny 10",
-      "url": "https://news.ycombinator.com/item?id=50545818",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-18T13:02:08.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ed38e98ca2eb8bcf989fdd58",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Tinnitus frequency finder and audio notch tool",
-      "url": "https://news.ycombinator.com/item?id=50541568",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-18T03:40:01.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "e89c753adb004ba6dc4bbd37",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "How to CAD Almost Anything",
-      "url": "https://news.ycombinator.com/item?id=50528119",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-17T06:29:57.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "90e0528083cc7a59ec80de71",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: I made an audio-to-MIDI model 60x more efficient",
-      "url": "https://news.ycombinator.com/item?id=50526023",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-17T01:03:05.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "c5c3e477fbf527671b429c1e",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "The Strongest Sokoban Solver",
-      "url": "https://news.ycombinator.com/item?id=50523241",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-16T21:04:01.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "69a1d7c75b3c8366972d5f6a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "I can’t believe it’s 1!",
-      "url": "https://news.ycombinator.com/item?id=50521550",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-16T19:07:13.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "dfbfbaed41a5d8b3c7a4c68a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Bit Shifting in Basic",
-      "url": "https://news.ycombinator.com/item?id=50521512",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-16T19:04:36.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d07bf63b5898974a250d965a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Radiotherapy Delivery Demo",
-      "url": "https://news.ycombinator.com/item?id=50500000",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-14T19:30:16.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "33d3eb3c4d83eddf78db09df",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Why the Airbus A321XLR often gets stuck climbing for first few hours of flight",
-      "url": "https://news.ycombinator.com/item?id=50495392",
-      "detectedAt": "2026-11-20T14:19:51.729Z",
-      "publishedAt": "2026-11-14T09:13:24.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "442526272d10dab2730289f4",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Retraction Note: Detection of anisotropic cosmic structures on a gigaparsec scale",
-      "url": "https://www.nature.com/articles/s41586-026-11388-5",
-      "detectedAt": "2026-11-19T23:47:14.112Z",
-      "publishedAt": "2026-11-19",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "604a378897f3f620c1f153a5",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Calcium catalysed nucleophilic fluorination",
-      "url": "https://www.nature.com/articles/s41586-026-11445-z",
-      "detectedAt": "2026-11-19T23:47:14.112Z",
-      "publishedAt": "2026-11-19",
       "verification": "unreviewed"
     }
   ]
