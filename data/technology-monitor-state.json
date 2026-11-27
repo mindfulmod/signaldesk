@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T01:08:33.899Z",
+  "generatedAt": "2026-11-27T15:33:18.535Z",
   "sources": {
     "tmobile-network": {
       "id": "tmobile-network",
@@ -165,12 +165,12 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"qs-news\",\"https://ir.quantumscape.com/news-events/news-releases\",\"html\",\"links\",[\"ir.quantumscape.com\"],[\"quantumscape\"],\"/news-releases/news-release-details/\",null,false,false,\"QuantumScape\",\"QuantumScape news releases\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "error",
-      "lastAttemptAt": "2026-11-27T01:08:33.899Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
       "lastSuccessAt": "2026-11-17T14:52:09.692Z",
       "baselineAt": "2026-11-15T12:56:36.411Z",
       "lastChangedAt": null,
-      "nextAttemptAt": "2026-11-27T07:08:33.899Z",
-      "failureStreak": 19,
+      "nextAttemptAt": "2026-11-27T21:33:18.535Z",
+      "failureStreak": 20,
       "error": "HTTP 403",
       "fingerprint": "ab15f647f2be54228020690a6dee95f05c6b3b94792fbe89ec3e821479bd8f91",
       "items": [
@@ -247,8 +247,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"toyota-news\",\"https://global.toyota/en/newsroom/\",\"html\",\"links\",[\"global.toyota\"],[\"batteries\",\"battery\",\"idemitsu\",\"solid-state\"],\"/en/newsroom/.*\\\\.html\",null,false,false,\"Toyota\",\"Toyota global newsroom\",[\"solid-state-batteries\"],\"company\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -276,8 +276,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"bmw-news\",\"https://newsroom.bmwgroup.com/global/tagfeed/en/tags/focus_news\",\"rss\",\"links\",[\"newsroom.bmwgroup.com\"],[\"batteries\",\"battery\",\"solid power\",\"solid-state\"],null,null,false,true,\"BMW\",\"BMW selected newsroom releases\",[\"solid-state-batteries\"],\"customer\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-19T14:39:58.791Z",
       "nextAttemptAt": null,
@@ -335,14 +335,14 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"rogers-service\",\"https://www.rogers.com/mobility/satellite\",\"html\",\"page\",[\"www.rogers.com\"],[\"satellite\"],null,null,false,false,\"Rogers\",\"Rogers Satellite capabilities\",[\"satellite-phones\"],\"product\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-26T15:44:29.856Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "093972cc6e811a3590a4b5ef0b0d03650a63d1f6a3b1a0ce050f213b96ee3abc",
+      "fingerprint": "bc267ac2a2e2bde22311a9cce4ca3757ab4635a67bdea4180f54bd67d9280407",
       "items": [
         {
           "url": "https://www.rogers.com/phones/bring-your-own-device?segmentIds=satellite&icid=R_WIR_SEM_3PL0LJ",
@@ -359,7 +359,7 @@
       ],
       "matchedItems": 2,
       "datedItems": 0,
-      "extractedEntries": 11,
+      "extractedEntries": 12,
       "newestPublicationAt": null,
       "excerpt": "Rogers Satellite keeps you connected in remote areas with satellite-ready apps, messaging, text-to-911 and emergency alerts on compatible smartphones.",
       "publishedAt": null,
@@ -367,7 +367,7 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Satellite-to-Mobile messaging and satellite-ready apps - Rogers",
-      "etag": "W/\"29d46-KmfMrs4EXjKdaSLGSak5JhD3U5E\"",
+      "etag": "W/\"29e39-713D1/6Lrtn7e/v/9my4lauXW+4\"",
       "lastModified": null
     },
     "meta-news": {
@@ -376,8 +376,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"meta-news\",\"https://about.fb.com/news/feed/\",\"rss\",\"links\",[\"about.fb.com\"],[\"glasses\",\"wearable\"],null,null,false,false,\"Meta\",\"Meta newsroom\",[\"ai-glasses\"],\"company\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-18T14:30:52.714Z",
       "nextAttemptAt": null,
@@ -401,8 +401,8 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Meta newsroom",
-      "etag": "W/\"0813c2e1ad738634912504b2473076e5\"",
-      "lastModified": "Tue, 24 Nov 2026 14:25:41 GMT"
+      "etag": "W/\"6c471549b9275fb9a8b42757b1a321c1\"",
+      "lastModified": "Fri, 27 Nov 2026 12:33:00 GMT"
     },
     "microsoft-news": {
       "id": "microsoft-news",
@@ -410,8 +410,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"microsoft-news\",\"https://blogs.microsoft.com/feed/\",\"rss\",\"links\",[\"blogs.microsoft.com\"],[\"agent\",\"copilot\",\"work\"],null,null,false,false,\"Microsoft\",\"Microsoft company blog\",[\"ai-work\"],\"company\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-13T13:24:50.482Z",
       "nextAttemptAt": null,
@@ -473,8 +473,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"waymo-news\",\"https://waymo.com/blog/\",\"html\",\"links\",[\"waymo.com\"],[],\"/blog/20[0-9]{2}/\",null,true,false,\"Waymo\",\"Waymo newsroom\",[\"robotaxis\"],\"company\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-21T13:41:22.665Z",
       "nextAttemptAt": null,
@@ -543,40 +543,15 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"fcc-releases\",\"https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss\",\"rss\",\"links\",[\"api2.fcc.gov\",\"docs.fcc.gov\",\"www.fcc.gov\"],[\"satellite\",\"spacemobile\",\"spacex\",\"supplemental coverage\"],null,null,false,false,\"FCC\",\"FCC releases\",[\"satellite-phones\"],\"regulator\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-26T15:44:29.856Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "b07aa1c71956e30bdb9817b465368b3c071183770e16f38826f9449af4103018",
-      "items": [
-        {
-          "url": "https://www.fcc.gov/edoc/427557",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/427558",
-          "title": "Satellite Communications Services - SES",
-          "excerpt": ".",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/427564",
-          "title": "Space Exploration Holdings, LLC Application for Launch and Operating Authority for the SpaceX Orbital Data Center System",
-          "excerpt": "Space Exploration Holdings, LLC Application for Launch and Operating Authority for the SpaceX Orbital Data Center System",
-          "publishedAt": null
-        },
-        {
-          "url": "https://www.fcc.gov/edoc/427572",
-          "title": "FCC Authorizes 1 Million Satellites for Data Centers in Space",
-          "excerpt": "'Starmind' Satellites to Support America's Booming Super Intelligence Economy",
-          "publishedAt": null
-        }
-      ],
+      "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "items": [],
       "seenLinks": [
         "https://www.fcc.gov/edoc/425765",
         "https://www.fcc.gov/edoc/425768",
@@ -612,9 +587,9 @@
         "https://www.fcc.gov/edoc/427564",
         "https://www.fcc.gov/edoc/427572"
       ],
-      "matchedItems": 4,
+      "matchedItems": 0,
       "datedItems": 0,
-      "extractedEntries": 24,
+      "extractedEntries": 1,
       "newestPublicationAt": null,
       "excerpt": null,
       "publishedAt": null,
@@ -631,8 +606,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"nsf-research\",\"https://www.nsf.gov/rss/rss_www_news.xml\",\"rss\",\"links\",[\"nsf.gov\",\"www.nsf.gov\"],[],null,null,false,false,\"NSF\",\"NSF research news\",[],\"research\",true]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-24T16:20:51.279Z",
       "nextAttemptAt": null,
@@ -765,8 +740,8 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NSF research news",
-      "etag": "\"1795700407-gzip\"",
-      "lastModified": "Thu, 26 Nov 2026 13:40:07 GMT"
+      "etag": "\"1795786815-gzip\"",
+      "lastModified": "Fri, 27 Nov 2026 13:40:15 GMT"
     },
     "nature-research": {
       "id": "nature-research",
@@ -774,15 +749,57 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"nature-research\",\"https://www.nature.com/nature.rss\",\"rss\",\"links\",[\"nature.com\",\"www.nature.com\"],[],null,null,false,false,\"Nature\",\"Nature research and news\",[],\"research\",true]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-26T15:44:29.856Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "3a2da8372a30da98180abbd50dcdea40f801f231c5569237128e9560fca5b7ea",
+      "fingerprint": "9b356f26556588d7bb9b7abb763e1a49b5b597b3aaf7048dbacb875bca301de5",
       "items": [
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03885-4",
+          "title": "The haunting loveliness of boglands: Books in brief",
+          "excerpt": "",
+          "publishedAt": "2026-11-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03800-x",
+          "title": "Brain area’s mysterious role in speech decoded at last",
+          "excerpt": "",
+          "publishedAt": "2026-11-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03801-w",
+          "title": "Life-saving cancer drug pumped out by a plant",
+          "excerpt": "",
+          "publishedAt": "2026-11-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03523-z",
+          "title": "Postcards from your graves",
+          "excerpt": "",
+          "publishedAt": "2026-11-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03849-8",
+          "title": "Why the incoming US Congress should ban the development of self-improving AI",
+          "excerpt": "",
+          "publishedAt": "2026-11-27"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41586-026-11475-7",
+          "title": "Editorial Expression of Concern: Dual control of nuclear EIN3 by bifurcate MAPK cascades in C 2 H 4 signalling",
+          "excerpt": "",
+          "publishedAt": "2026-11-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03874-7",
+          "title": "Chromosome ‘glue’ could boost fertility by stabilizing ageing eggs",
+          "excerpt": "",
+          "publishedAt": "2026-11-26"
+        },
         {
           "url": "https://www.nature.com/articles/d41586-026-02752-6",
           "title": "Navigating grief in academia: ways to find balance",
@@ -790,8 +807,20 @@
           "publishedAt": "2026-11-26"
         },
         {
+          "url": "https://www.nature.com/articles/d41586-026-03875-6",
+          "title": "Has AI just cracked Internet encryption? Rumoured ‘bombshell’ stuns scientists",
+          "excerpt": "",
+          "publishedAt": "2026-11-26"
+        },
+        {
           "url": "https://www.nature.com/articles/d41586-026-03828-z",
           "title": "Orangutans face bleak future after Indonesia’s devastating wildfires",
+          "excerpt": "",
+          "publishedAt": "2026-11-26"
+        },
+        {
+          "url": "https://www.nature.com/articles/d41586-026-03894-3",
+          "title": "Daily briefing: A guide to the Riemann hypothesis",
           "excerpt": "",
           "publishedAt": "2026-11-26"
         },
@@ -1178,60 +1207,6 @@
           "title": "Menopause can speed up brain ageing — hormone therapy might protect it",
           "excerpt": "",
           "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03542-w",
-          "title": "Who did figure 3? Why scientists should make experimental contributions visible",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11403-9",
-          "title": "Author Correction: Reference genomes and fossils revise bat family phylogeny and biogeography",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11474-8",
-          "title": "Author Correction: Synthetic super-enhancers enable precision viral immunotherapy",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03804-7",
-          "title": "Pregnancy rewires the brain — scientists are finally mapping it",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03380-w",
-          "title": "Mini microscope captures brain activity while mice are on the go",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03847-w",
-          "title": "William D. Nordhaus obituary: economist whose tools transformed climate policy",
-          "excerpt": "",
-          "publishedAt": "2026-11-24"
-        },
-        {
-          "url": "https://www.nature.com/articles/s41586-026-11449-9",
-          "title": "Hexa-substituted benzene synthesis with non-classical carbocations",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03802-9",
-          "title": "Mariana Trench holds deepest-ever evidence of volcanic explosion",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
-        },
-        {
-          "url": "https://www.nature.com/articles/d41586-026-03827-0",
-          "title": "COP31 went up in flames over fossil fuels — it sends an important message",
-          "excerpt": "",
-          "publishedAt": "2026-11-23"
         }
       ],
       "seenLinks": [
@@ -1970,19 +1945,28 @@
         "https://www.nature.com/articles/d41586-026-03802-9",
         "https://www.nature.com/articles/d41586-026-02752-6",
         "https://www.nature.com/articles/d41586-026-03828-z",
-        "https://www.nature.com/articles/d41586-026-03841-2"
+        "https://www.nature.com/articles/d41586-026-03841-2",
+        "https://www.nature.com/articles/d41586-026-03885-4",
+        "https://www.nature.com/articles/d41586-026-03800-x",
+        "https://www.nature.com/articles/d41586-026-03801-w",
+        "https://www.nature.com/articles/d41586-026-03523-z",
+        "https://www.nature.com/articles/d41586-026-03849-8",
+        "https://www.nature.com/articles/s41586-026-11475-7",
+        "https://www.nature.com/articles/d41586-026-03874-7",
+        "https://www.nature.com/articles/d41586-026-03875-6",
+        "https://www.nature.com/articles/d41586-026-03894-3"
       ],
       "matchedItems": 75,
       "datedItems": 75,
       "extractedEntries": 75,
-      "newestPublicationAt": "2026-11-26",
+      "newestPublicationAt": "2026-11-27",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "Nature research and news",
-      "etag": "\"48df6ff6c6cf49c01017ddeaf42140fd\"",
+      "etag": "\"e6a9347cf451ed1504c8e83133c10d32\"",
       "lastModified": null
     },
     "sec-qs": {
@@ -1991,8 +1975,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-qs\",\"https://data.sec.gov/submissions/CIK0001811414.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001811414\",false,false,\"QuantumScape\",\"QuantumScape SEC filings\",[\"solid-state-batteries\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -2619,8 +2603,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-sldp\",\"https://data.sec.gov/submissions/CIK0001844862.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001844862\",false,false,\"Solid Power\",\"Solid Power SEC filings\",[\"solid-state-batteries\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-04T13:15:05.071Z",
       "nextAttemptAt": null,
@@ -3265,15 +3249,27 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-tm\",\"https://data.sec.gov/submissions/CIK0001094517.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001094517\",false,false,\"Toyota\",\"Toyota SEC filings\",[\"solid-state-batteries\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-05T13:28:11.396Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "db29f6ca2cb609f983555c4125dc82f2bb7855439bf81add5efc560953ba6540",
+      "fingerprint": "53c416bfd9d4a850c5fc7cab9131ad979fccb59cb2c7510561f8999dd000f3bc",
       "items": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526479077/d85142d6k.htm",
+          "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
+          "publishedAt": "2026-11-27",
+          "reportDate": "2026-11-27",
+          "acceptedAt": "2026-11-27T11:03:54.000Z",
+          "filingItems": [],
+          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526479077/0001193125-26-479077-index.html",
+          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
+          "form": "6-K",
+          "accession": "0001193125-26-479077"
+        },
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526448368/d87505d6k.htm",
           "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
@@ -3741,18 +3737,6 @@
           "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
           "form": "6-K",
           "accession": "0001193125-25-139513"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525138136/d59059d6k.htm",
-          "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
-          "publishedAt": "2025-06-10",
-          "reportDate": "2025-06-10",
-          "acceptedAt": "2025-06-10T10:02:58.000Z",
-          "filingItems": [],
-          "exhibitsIndexUrl": "https://www.sec.gov/Archives/edgar/data/1094517/000119312525138136/0001193125-25-138136-index.html",
-          "excerpt": "Company-filed disclosure. Review the filing and exhibit index; filing type alone does not establish an adoption milestone.",
-          "form": "6-K",
-          "accession": "0001193125-25-138136"
         }
       ],
       "seenLinks": [
@@ -3797,12 +3781,13 @@
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525133718/d62410d6k.htm",
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312525131083/d948032d6k.htm",
         "https://www.sec.gov/Archives/edgar/data/1094517/000119312526446018/d193967d6k.htm",
-        "https://www.sec.gov/Archives/edgar/data/1094517/000119312526448368/d87505d6k.htm"
+        "https://www.sec.gov/Archives/edgar/data/1094517/000119312526448368/d87505d6k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1094517/000119312526479077/d85142d6k.htm"
       ],
       "matchedItems": 40,
       "datedItems": 40,
-      "extractedEntries": 1000,
-      "newestPublicationAt": "2026-11-05",
+      "extractedEntries": 1001,
+      "newestPublicationAt": "2026-11-27",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -3818,8 +3803,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-tmus\",\"https://data.sec.gov/submissions/CIK0001283699.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001283699\",false,false,\"T-Mobile US\",\"T-Mobile US SEC filings\",[\"satellite-phones\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": null,
       "nextAttemptAt": null,
@@ -4462,8 +4447,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-asts\",\"https://data.sec.gov/submissions/CIK0001780312.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001780312\",false,false,\"AST SpaceMobile\",\"AST SpaceMobile SEC filings\",[\"satellite-phones\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-19T14:39:58.791Z",
       "nextAttemptAt": null,
@@ -5146,8 +5131,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-meta\",\"https://data.sec.gov/submissions/CIK0001326801.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001326801\",false,false,\"Meta Platforms\",\"Meta Platforms SEC filings\",[\"ai-glasses\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-24T16:20:51.279Z",
       "nextAttemptAt": null,
@@ -5720,7 +5705,7 @@
       ],
       "matchedItems": 37,
       "datedItems": 37,
-      "extractedEntries": 1005,
+      "extractedEntries": 1000,
       "newestPublicationAt": "2026-11-23",
       "excerpt": null,
       "publishedAt": null,
@@ -5737,8 +5722,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-msft\",\"https://data.sec.gov/submissions/CIK0000789019.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0000789019\",false,false,\"Microsoft\",\"Microsoft SEC filings\",[\"ai-work\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-05T13:28:11.396Z",
       "nextAttemptAt": null,
@@ -6358,7 +6343,7 @@
       ],
       "matchedItems": 40,
       "datedItems": 40,
-      "extractedEntries": 1011,
+      "extractedEntries": 1000,
       "newestPublicationAt": "2026-11-05",
       "excerpt": null,
       "publishedAt": null,
@@ -6375,8 +6360,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"sec-googl\",\"https://data.sec.gov/submissions/CIK0001652044.json\",\"sec\",\"links\",[\"data.sec.gov\",\"www.sec.gov\"],[],null,\"0001652044\",false,false,\"Alphabet\",\"Alphabet SEC filings\",[\"robotaxis\"],\"filing\",false]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-25T16:00:31.907Z",
       "nextAttemptAt": null,
@@ -7024,15 +7009,21 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"mit-research\",\"https://news.mit.edu/rss/research\",\"rss\",\"links\",[\"news.mit.edu\"],[],null,null,false,true,\"MIT\",\"MIT News · all research\",[],\"research\",true]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-26T15:44:29.856Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "6eb85bc36b956ccd034e948f16de44ee71d4250b5e1621adec829b832990e813",
+      "fingerprint": "d18ccdc3b7ef5a0f78f3b57d600e31ef19726bb0100591461a5ec908bb760077",
       "items": [
+        {
+          "url": "https://news.mit.edu/2026/engineering-antibiotics-could-expand-new-drug-candidates-pool-1127",
+          "title": "Engineering antibiotics could expand the pool of new drug candidates",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T10:00:00.000Z"
+        },
         {
           "url": "https://news.mit.edu/2026/draining-peatlands-leaves-long-warming-legacy-1125",
           "title": "Draining peatlands leaves a long legacy of warming",
@@ -7326,12 +7317,6 @@
           "title": "Giving AI a “crystal clear” view of the materials world",
           "excerpt": "",
           "publishedAt": "2026-10-18T04:00:00.000Z"
-        },
-        {
-          "url": "https://news.mit.edu/2026/satellite-data-reveal-how-antarcticas-ice-cliffs-behave-over-time-1015",
-          "title": "Satellite data reveal how Antarctica’s ice cliffs behave over time",
-          "excerpt": "",
-          "publishedAt": "2026-10-15T18:00:00.000Z"
         }
       ],
       "seenLinks": [
@@ -7448,20 +7433,21 @@
         "https://news.mit.edu/2026/3-questions-tackling-energy-challenges-changing-world-1124",
         "https://news.mit.edu/2026/tangimap-agentic-system-personalizes-physical-controls-help-users-dj-their-art-1124",
         "https://news.mit.edu/2026/excess-renewable-energy-could-power-new-industrial-processes-1124",
-        "https://news.mit.edu/2026/draining-peatlands-leaves-long-warming-legacy-1125"
+        "https://news.mit.edu/2026/draining-peatlands-leaves-long-warming-legacy-1125",
+        "https://news.mit.edu/2026/engineering-antibiotics-could-expand-new-drug-candidates-pool-1127"
       ],
       "matchedItems": 50,
       "datedItems": 50,
       "extractedEntries": 50,
-      "newestPublicationAt": "2026-11-25T16:00:00.000Z",
+      "newestPublicationAt": "2026-11-27T10:00:00.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "MIT News · all research",
-      "etag": "\"1795706544\"",
-      "lastModified": "Thu, 26 Nov 2026 15:22:24 GMT"
+      "etag": "\"1795793080\"",
+      "lastModified": "Fri, 27 Nov 2026 15:24:40 GMT"
     },
     "nist-research": {
       "id": "nist-research",
@@ -7469,8 +7455,8 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"nist-research\",\"https://www.nist.gov/news-events/news/rss.xml\",\"rss\",\"links\",[\"www.nist.gov\"],[],null,null,false,false,\"NIST\",\"NIST research & standards\",[],\"research\",true]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
       "lastChangedAt": "2026-11-20T14:19:51.729Z",
       "nextAttemptAt": null,
@@ -7776,8 +7762,8 @@
       "researchUrl": null,
       "researchPublishedAt": null,
       "title": "NIST research & standards",
-      "etag": "\"1795707062-gzip\"",
-      "lastModified": "Thu, 26 Nov 2026 15:31:02 GMT"
+      "etag": "\"1795793462-gzip\"",
+      "lastModified": "Fri, 27 Nov 2026 15:31:02 GMT"
     },
     "hn-discovery": {
       "id": "hn-discovery",
@@ -7785,286 +7771,637 @@
       "extractorVersion": 5,
       "sourceContract": "[1,5,\"hn-discovery\",\"https://hacker-news.firebaseio.com/v0/topstories.json\",\"hn\",\"links\",[\"hacker-news.firebaseio.com\",\"news.ycombinator.com\"],[],null,null,false,false,\"Hacker News\",\"Hacker News · open discovery\",[],\"community\",true]",
       "status": "ok",
-      "lastAttemptAt": "2026-11-26T15:44:29.856Z",
-      "lastSuccessAt": "2026-11-26T15:44:29.856Z",
+      "lastAttemptAt": "2026-11-27T15:33:18.535Z",
+      "lastSuccessAt": "2026-11-27T15:33:18.535Z",
       "baselineAt": "2026-11-02T20:45:38.312Z",
-      "lastChangedAt": "2026-11-26T15:44:29.856Z",
+      "lastChangedAt": "2026-11-27T15:33:18.535Z",
       "nextAttemptAt": null,
       "failureStreak": 0,
       "error": null,
-      "fingerprint": "e481b5869b3894ea55276e47aaedcd2fcd3e2aad8e9df9e78d152da0affbc8eb",
+      "fingerprint": "380ea2efeacc6df497115c31f8a45e52885c5e1e3bba6e8d3b0b5cb29572273d",
       "items": [
         {
-          "url": "https://news.ycombinator.com/item?id=50656429",
-          "title": "Wyoming uranium operation shuts down after cyberattack",
+          "url": "https://news.ycombinator.com/item?id=50668024",
+          "title": "Show HN: Open-source ESP32 desk body for a local AI assistant",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:41:57.000Z",
+          "publishedAt": "2026-11-27T15:29:03.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.theregister.com/security/2026/11/26/wyoming-uranium-operation-shuts-down-after-cyberattack/5312323",
+          "linkedUrl": "https://www.bobebot.com/body",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656427",
-          "title": "Progresume| tuios (OSC 7577 wrapper)",
+          "url": "https://news.ycombinator.com/item?id=50667989",
+          "title": "False Computer-Checked Proofs",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:41:50.000Z",
+          "publishedAt": "2026-11-27T15:26:09.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://tuios.dev/docs/libraries/progresume",
+          "linkedUrl": "https://cr.yp.to/proofs/falseccp.html",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656422",
-          "title": "LLM or Not?",
+          "url": "https://news.ycombinator.com/item?id=50667970",
+          "title": "Grand Theft GTA",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:41:40.000Z",
+          "publishedAt": "2026-11-27T15:22:52.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://llmornot.com/",
+          "linkedUrl": "https://grandtheftgta.com/",
           "engagement": {
-            "points": 1,
+            "points": 4,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656417",
-          "title": "Show HN: Isaref: Machine-readable atlas of computing hardware",
+          "url": "https://news.ycombinator.com/item?id=50667956",
+          "title": "Ask HN: What separates a smart vs. effective programmer in your experience?",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:40:51.000Z",
+          "publishedAt": "2026-11-27T15:21:19.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://isaref.com/",
-          "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50656398",
-          "title": "Strange 'topological' wires conduct electricity better the thinner they get",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T15:38:59.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.science.org/content/article/strange-topological-wires-conduct-electricity-better-thinner-they-get",
+          "linkedUrl": null,
           "engagement": {
             "points": 3,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "comments": 1,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656359",
-          "title": "How we built Duo, a full-duplex, speech-to-speech model",
+          "url": "https://news.ycombinator.com/item?id=50667949",
+          "title": "Did Turing Stand on Gödel's Shoulders? [pdf]",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:35:09.000Z",
+          "publishedAt": "2026-11-27T15:20:39.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://duplexio.ai/blog/how-we-built-duo/",
+          "linkedUrl": "https://link.springer.com/content/pdf/10.1007/s00283-022-10177-y.pdf",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656361",
-          "title": "Memo: Memory as a Model",
+          "url": "https://news.ycombinator.com/item?id=50667865",
+          "title": "Quinn Nelson on the touch screen of the 2026 MacBook Pro [video]",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:35:09.000Z",
+          "publishedAt": "2026-11-27T15:11:51.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://arxiv.org/abs/2605.15156",
+          "linkedUrl": "https://www.youtube.com/watch?v=JHyHBPPnemQ",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667860",
+          "title": "Show HN: Just Dashboard, open-source Linux full management dashboard",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:11:28.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://just-dashboard.com/",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667853",
+          "title": "Ratio Tracking, Intuitively",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:10:54.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://lisyarus.github.io/blog/posts/ratio-tracking-intuitively.html",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667848",
+          "title": "Revisiting Importance Sampling",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:10:45.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://lisyarus.github.io/blog/posts/revisiting-importance-sampling.html",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667843",
+          "title": "I Built IQ-Stream: Streaming LLM Tokens to the Browser Without the Workarounds",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:10:35.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.neuron-ai.dev/blog/why-i-built-iq-stream/",
           "engagement": {
             "points": 2,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656357",
-          "title": "Returning to the Neuron Basis for Interpretability",
+          "url": "https://news.ycombinator.com/item?id=50667811",
+          "title": "Show HN: Targeted Mutation Testing – Observation-guided mutation testing tool",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:34:56.000Z",
+          "publishedAt": "2026-11-27T15:07:53.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://alignment.anthropic.com/2026/neuron-basis-theory/",
+          "linkedUrl": "https://github.com/t-k/targeted-mutation",
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656350",
-          "title": "People who refuse to let their gadgets die",
+          "url": "https://news.ycombinator.com/item?id=50667793",
+          "title": "More code. Not production-ready code [pdf]",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:34:06.000Z",
+          "publishedAt": "2026-11-27T15:06:50.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.theatlantic.com/technology/2026/10/meet-the-upgrade-holdouts/688874/",
+          "linkedUrl": "https://pages.faros.ai/hubfs/AI_Engineering_Report_2026_The_Acceleration_Whiplash_Faros.pdf",
           "engagement": {
             "points": 2,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656333",
-          "title": "Microkernels Do Improve Security (2018)",
+          "url": "https://news.ycombinator.com/item?id=50667780",
+          "title": "Show HN: Precitions Until 2030",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:32:57.000Z",
+          "publishedAt": "2026-11-27T15:05:59.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://microkerneldude.org/2018/08/23/microkernels-really-do-improve-security/",
+          "linkedUrl": null,
           "engagement": {
             "points": 1,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656330",
-          "title": "From PG Connector to SW Connector: Growing a Multi-Engine Security Boundary",
+          "url": "https://news.ycombinator.com/item?id=50667771",
+          "title": "IBM ends US visa sponsorship; India workers face 80% pay cut or job loss",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:32:51.000Z",
+          "publishedAt": "2026-11-27T15:05:17.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://schemaweaver.dev/blog/from-pg-connector-to-sw-connector-growing-a-multi-engine-security-boundary",
+          "linkedUrl": "https://www.business-standard.com/immigration/ibm-ends-us-visa-sponsorship-india-workers-face-80-pay-cut-or-job-loss-126112600191_1.html",
           "engagement": {
             "points": 3,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "comments": 1,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656309",
-          "title": "Show HN: Dear Website – make and change a small website by email",
+          "url": "https://news.ycombinator.com/item?id=50667755",
+          "title": "Show HN: AI agents can now call you",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:30:42.000Z",
+          "publishedAt": "2026-11-27T15:04:12.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://dear.website/",
+          "linkedUrl": "https://onair.io/blog/agents-can-call",
+          "engagement": {
+            "points": 3,
+            "comments": 1,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667747",
+          "title": "Thinpack.js Packs Node.js Hello World into 4.1 MiB with QuickJS",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:03:37.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/thinpack-js/thinpack.js",
           "engagement": {
             "points": 1,
             "comments": 1,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656284",
-          "title": "AI Is Fire",
+          "url": "https://news.ycombinator.com/item?id=50667749",
+          "title": "The SciML Factory: A New Approach to Agentic Open Source Maintenance",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:27:19.000Z",
+          "publishedAt": "2026-11-27T15:03:37.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://bigfastblog.com/ai-is-fire/",
+          "linkedUrl": "https://www.stochasticlifestyle.com/the-sciml-factory-a-new-approach-to-agentic-open-source-maintenance/",
+          "engagement": {
+            "points": 1,
+            "comments": 0,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667744",
+          "title": "GPT 6.2 Astra Solves a Historical Mystery",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:03:17.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+          "engagement": {
+            "points": 7,
+            "comments": 3,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667742",
+          "title": "Ask HN: Will GPTs Get Stupider?",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:03:10.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": null,
+          "engagement": {
+            "points": 1,
+            "comments": 1,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667726",
+          "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T15:01:50.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://bouncemarket.minhanhday.com/",
+          "engagement": {
+            "points": 23,
+            "comments": 14,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667664",
+          "title": "Stanford Physicist Uses AI to Tackle Quantum Gravity Problem",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T14:55:57.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://thequantuminsider.com/2026/11/26/stanford-physicist-uses-ai-to-tackle-quantum-gravity-problem/",
+          "engagement": {
+            "points": 10,
+            "comments": 3,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50667452",
+          "title": "Show HN: I restored Palm's last device, and brought its OS to other platforms",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T14:37:02.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.webosarchive.org/pivot/2026/11/27/the-story-so-far/",
           "engagement": {
             "points": 3,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656277",
-          "title": "Show HN: I made an app that changes how any window looks",
+          "url": "https://news.ycombinator.com/item?id=50667143",
+          "title": "Norse Atlantic suspends all flights as it faces potential collapse",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:26:23.000Z",
+          "publishedAt": "2026-11-27T14:09:44.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://dimmerswitch.app/",
+          "linkedUrl": "https://www.bbc.com/news/articles/c9kgmd0ldy0lo",
           "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 22,
+            "comments": 14,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656262",
-          "title": "RIP IT Off",
+          "url": "https://news.ycombinator.com/item?id=50666436",
+          "title": "Mental Health Resources and Political Engagement",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:24:41.000Z",
+          "publishedAt": "2026-11-27T13:01:02.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://ripitoff.robertborghesi.is/",
+          "linkedUrl": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ssqu.70219",
           "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 76,
+            "comments": 133,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656251",
-          "title": "The British Pirated a Computer – Compukit UK101 [video]",
+          "url": "https://news.ycombinator.com/item?id=50666375",
+          "title": "US Air Force's cloud computing platform hacked",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:23:41.000Z",
+          "publishedAt": "2026-11-27T12:54:11.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.youtube.com/watch?v=rHcdL-4GGjs",
+          "linkedUrl": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
           "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 113,
+            "comments": 58,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656245",
-          "title": "One month of selling an AI-written novel: 996 free downloads, 5 sales",
+          "url": "https://news.ycombinator.com/item?id=50666279",
+          "title": "New York and California age gating rules go into effect in the new year",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:22:23.000Z",
+          "publishedAt": "2026-11-27T12:43:40.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://jayhumelexier.substack.com/p/one-month-of-selling-an-ai-written",
+          "linkedUrl": "https://www.eff.org/deeplinks/2026/11/new-york-and-california-age-gating-rules-go-effect-new-year",
+          "engagement": {
+            "points": 70,
+            "comments": 62,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50665968",
+          "title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T12:08:51.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://eprint.iacr.org/2026/3020.pdf",
+          "engagement": {
+            "points": 144,
+            "comments": 65,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50665920",
+          "title": "Kimi for Science: More scientific ideas, made possible",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T12:03:11.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.kimi.ai/news/kimi-for-science-program",
+          "engagement": {
+            "points": 100,
+            "comments": 55,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50665796",
+          "title": "Show HN: Open-Sourced Code Mode to Cut ~60% of My Rust Agent's Token Burn",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T11:51:03.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/legend-of-alan/ghostmode",
+          "engagement": {
+            "points": 2,
+            "comments": 4,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50665488",
+          "title": "AI on brink of making online security useless, mathematicians fear",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T11:09:04.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://www.thetimes.com/uk/technology-uk/article/ai-making-online-security-useless-smr73d3n8",
+          "engagement": {
+            "points": 62,
+            "comments": 71,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50665405",
+          "title": "Show HN: Gerber 3D – view, compare and fab-check PCB files in the browser",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T10:55:45.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://wespeakenglish.github.io/VisualGerber/",
           "engagement": {
             "points": 2,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656233",
-          "title": "Show HN: Clockwork – 2D game engine with an AI agent verified by Kane CLI",
+          "url": "https://news.ycombinator.com/item?id=50664931",
+          "title": "Pimalaya goes stable: Himalaya v3 and the pimdir standard",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:21:32.000Z",
+          "publishedAt": "2026-11-27T09:50:02.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/tope-olajide/clockwork",
+          "linkedUrl": "https://blog.pimalaya.org/pimalaya-goes-stable/",
           "engagement": {
-            "points": 1,
+            "points": 10,
             "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656219",
-          "title": "AI-Assisted Development in CNCF Projects: Findings from Maintainers",
+          "url": "https://news.ycombinator.com/item?id=50663595",
+          "title": "The group chat where your AI talks behind your back",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:20:19.000Z",
+          "publishedAt": "2026-11-27T06:44:34.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.cncf.io/blog/2026/04/29/the-state-of-ai-in-cncf-projects-a-first-look-at-the-data/",
+          "linkedUrl": "https://construct22.com/",
           "engagement": {
-            "points": 1,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 501,
+            "comments": 218,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656213",
-          "title": "Leisure Sickness Is What Happens When Workaholics Relax",
+          "url": "https://news.ycombinator.com/item?id=50663261",
+          "title": "Buy Nothing Day – Friday November 27th 2026",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:19:51.000Z",
+          "publishedAt": "2026-11-27T05:52:42.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://www.bloomberg.com/news/articles/2026-11-25/always-get-sick-on-vacation-you-re-not-alone",
+          "linkedUrl": "https://www.buynothingday.co.uk/",
           "engagement": {
-            "points": 3,
-            "comments": 2,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 235,
+            "comments": 72,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50656067",
-          "title": "Show HN: Lazyfwd, a TUI for managing SSH port forwards",
+          "url": "https://news.ycombinator.com/item?id=50663089",
+          "title": "The need for a formally verifiable mainstream programming language",
           "excerpt": "",
-          "publishedAt": "2026-11-26T15:03:08.000Z",
+          "publishedAt": "2026-11-27T05:22:06.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/glattziehen/lazyfwd",
+          "linkedUrl": "https://blainehansen.me/post/mainstream-verifiable-language/",
           "engagement": {
-            "points": 3,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 221,
+            "comments": 214,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50661705",
+          "title": "The Cutthroat Business of Shipwrecks",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T01:21:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://daily.jstor.org/the-cutthroat-business-of-shipwrecks/",
+          "engagement": {
+            "points": 50,
+            "comments": 11,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50661646",
+          "title": "Hard Drive pricing has gotten bad",
+          "excerpt": "",
+          "publishedAt": "2026-11-27T01:13:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+          "engagement": {
+            "points": 469,
+            "comments": 406,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50660180",
+          "title": "AI made self-hosting fun again",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T21:47:45.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://janlukas.blog/posts/ai-self-hosting",
+          "engagement": {
+            "points": 908,
+            "comments": 443,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50659841",
+          "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T21:08:05.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+          "engagement": {
+            "points": 458,
+            "comments": 116,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50659640",
+          "title": "Company Culture = Slack Emoji ÷ √Headcount",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T20:49:49.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+          "engagement": {
+            "points": 471,
+            "comments": 244,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50658632",
+          "title": "Rvoip: VoIP stack in Rust",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T19:18:09.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/eisenzopf/rvoip",
+          "engagement": {
+            "points": 150,
+            "comments": 35,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50658498",
+          "title": "An introduction to uncertainty in machine learning",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T19:04:50.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
+          "engagement": {
+            "points": 116,
+            "comments": 11,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50658193",
+          "title": "Largest 2D Chart library in the world using BUI: BlenderUI",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T18:37:24.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://bui.preetham.top/charts/",
+          "engagement": {
+            "points": 129,
+            "comments": 35,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50657645",
+          "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T17:47:45.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+          "engagement": {
+            "points": 312,
+            "comments": 156,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50657530",
+          "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T17:36:47.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/antonpictures/youtube-punisher",
+          "engagement": {
+            "points": 474,
+            "comments": 558,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50657392",
+          "title": "First images of the impact of DART asteroid deflection experiment",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T17:24:37.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
+          "engagement": {
+            "points": 57,
+            "comments": 7,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50657265",
+          "title": "AMD-specific fork of llama.cpp",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T17:11:29.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://devnull.land/amd-specific-llama-cpp",
+          "engagement": {
+            "points": 408,
+            "comments": 100,
+            "observedAt": "2026-11-27T15:33:22.285Z"
+          }
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50657070",
+          "title": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar",
+          "excerpt": "",
+          "publishedAt": "2026-11-26T16:51:38.000Z",
+          "dateKind": "community-submission",
+          "linkedUrl": "https://github.com/rxliuli/sim-drop",
+          "engagement": {
+            "points": 51,
+            "comments": 10,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
@@ -8075,100 +8412,48 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://michidk.github.io/sidebyside/",
           "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 149,
+            "comments": 33,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50655748",
-          "title": "Show HN: RebillKit – BYOK failed-payment recovery for Stripe (0% rev share)",
+          "url": "https://news.ycombinator.com/item?id=50655868",
+          "title": "Show HN: I wrote an entire Vim manual over 4 years",
           "excerpt": "",
-          "publishedAt": "2026-11-26T14:34:43.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://rebillkit.com/en",
-          "engagement": {
-            "points": 2,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50655664",
-          "title": "Tell HN: Happy Thanksgiving",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T14:26:54.000Z",
+          "publishedAt": "2026-11-26T14:44:22.000Z",
           "dateKind": "community-submission",
           "linkedUrl": null,
           "engagement": {
-            "points": 154,
-            "comments": 45,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50655278",
-          "title": "45°C inlets just killed the chiller. Most people haven't noticed yet",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T13:48:11.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.theregister.com/hpc/2026/11/26/45c-inlets-just-killed-the-chiller-most-people-havent-noticed-yet/5311831",
-          "engagement": {
-            "points": 71,
-            "comments": 19,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50654289",
-          "title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T11:50:49.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
-          "engagement": {
-            "points": 235,
-            "comments": 94,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 249,
+            "comments": 85,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
           "url": "https://news.ycombinator.com/item?id=50653667",
-          "title": "Intel One Mono font",
+          "title": "Intel One Mono font (2023)",
           "excerpt": "",
           "publishedAt": "2026-11-26T10:11:01.000Z",
           "dateKind": "community-submission",
           "linkedUrl": "https://github.com/intel/intel-one-mono",
           "engagement": {
-            "points": 277,
-            "comments": 164,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 556,
+            "comments": 264,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
-          "url": "https://news.ycombinator.com/item?id=50652560",
-          "title": "Show HN: Anthropic and OpenAI Math Tracker",
+          "url": "https://news.ycombinator.com/item?id=50653477",
+          "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
           "excerpt": "",
-          "publishedAt": "2026-11-26T07:38:01.000Z",
+          "publishedAt": "2026-11-26T09:44:23.000Z",
           "dateKind": "community-submission",
-          "linkedUrl": "https://bedolpab.github.io/antoai-math/",
+          "linkedUrl": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
           "engagement": {
-            "points": 7,
-            "comments": 0,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50652184",
-          "title": "Moat: Your OpenRouter Replacement",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T06:32:48.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://commandcode.ai/moat",
-          "engagement": {
-            "points": 145,
-            "comments": 96,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 380,
+            "comments": 318,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
@@ -8179,48 +8464,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://arxiv.org/abs/2611.34924",
           "engagement": {
-            "points": 117,
-            "comments": 29,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50651719",
-          "title": "Lions' Commentary on Unix: Why It Was Secretly Copied for 20 Years",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T05:12:59.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/",
-          "engagement": {
-            "points": 182,
-            "comments": 36,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50651627",
-          "title": "Unconditional Integer Factorization in Subexponential Time",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T04:59:56.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/google-research/google-research/tree/4a7bc8ab0bc770e71a259b7966c500496b99010a/cogentic_research_papers/integer_factorization",
-          "engagement": {
-            "points": 100,
-            "comments": 13,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50651117",
-          "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T03:36:58.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://twitter.com/thsottiaux/status/2125784147889393806",
-          "engagement": {
-            "points": 393,
-            "comments": 218,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 258,
+            "comments": 104,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
@@ -8231,230 +8477,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://olumino.app/",
           "engagement": {
-            "points": 11,
-            "comments": 6,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50650892",
-          "title": "Minipg: PostgreSQL as a Single Executable",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T03:00:48.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://progrium.github.io/minipg/",
-          "engagement": {
-            "points": 215,
-            "comments": 33,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50649864",
-          "title": "Tell HN: Lots of Ask HNs again",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T00:43:34.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": null,
-          "engagement": {
-            "points": 343,
-            "comments": 135,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50649834",
-          "title": "Collection of preserved UI style guides",
-          "excerpt": "",
-          "publishedAt": "2026-11-26T00:40:00.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://aresluna.org/ui-style-guides/",
-          "engagement": {
-            "points": 318,
-            "comments": 54,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50648365",
-          "title": "Bare Metal Qwen",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T22:15:34.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os",
-          "engagement": {
-            "points": 204,
-            "comments": 43,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50648323",
-          "title": "Deploying a payphone on a tiny Pacific Island for fun and zero profit",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T22:12:25.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://nickvsnetworking.com/deploying-a-payphone-on-a-tiny-pacific-island-for-fun-and-zero-profit/",
-          "engagement": {
-            "points": 136,
-            "comments": 18,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50648050",
-          "title": "Much shorter version of GRH Lean verification from Anthropic",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T21:48:10.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/lsernau/grh-lean",
-          "engagement": {
-            "points": 502,
-            "comments": 317,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50647673",
-          "title": "The New York Times warns photographers not to update Photoshop over AI features",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T21:18:02.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-          "engagement": {
-            "points": 512,
-            "comments": 430,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50647181",
-          "title": "Slow Ubuntu security response times",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T20:38:00.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
-          "engagement": {
-            "points": 363,
-            "comments": 199,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50647161",
-          "title": "Nfs2root: A 12-year-old pre-auth remote root in the Linux kernel's NFS server",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T20:35:50.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://opensec.in/blog/nfs2root-cve-2026-99362",
-          "engagement": {
-            "points": 186,
-            "comments": 76,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50646108",
-          "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T19:11:27.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://scottaaronson.blog/?p=10379",
-          "engagement": {
-            "points": 1790,
-            "comments": 1631,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50644817",
-          "title": "1Password Security Incident",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T17:18:26.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://1password.com/blog/update-on-nov-2026-security-incident",
-          "engagement": {
-            "points": 1562,
-            "comments": 673,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50642300",
-          "title": "Show HN: Turned a $5 AliExpress clock into a desk Clawd pet(+usage)",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T13:51:44.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://github.com/click6067-ship-it/token-tv",
-          "engagement": {
-            "points": 51,
-            "comments": 5,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50638503",
-          "title": "Show HN: Old Nvidia and ATI tech demos, running again in the browser",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T04:31:48.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://gpu-demo-gallery.pages.dev/",
-          "engagement": {
-            "points": 352,
-            "comments": 80,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50636931",
-          "title": "Curiosity Is No Solo Act",
-          "excerpt": "",
-          "publishedAt": "2026-11-25T00:37:07.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act/",
-          "engagement": {
-            "points": 25,
-            "comments": 5,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50634381",
-          "title": "The history of civilization is the history of wheat",
-          "excerpt": "",
-          "publishedAt": "2026-11-24T20:40:18.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://asteriskmag.com/issues/16/marginal-grains",
-          "engagement": {
-            "points": 89,
-            "comments": 49,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50626466",
-          "title": "What VP ≠ VNP Means (In 3 Minutes)",
-          "excerpt": "",
-          "publishedAt": "2026-11-24T10:56:56.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.friedgil.com/vpvnp",
-          "engagement": {
-            "points": 190,
-            "comments": 70,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50624684",
-          "title": "Show HN: Rchive – Every drive I've owned since the 90s, searchable in one window",
-          "excerpt": "",
-          "publishedAt": "2026-11-24T07:03:33.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://www.rchive.computer/",
-          "engagement": {
-            "points": 50,
-            "comments": 26,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 122,
+            "comments": 52,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         },
         {
@@ -8465,87 +8490,9 @@
           "dateKind": "community-submission",
           "linkedUrl": "https://swarkentin.github.io/synth-patch-hero/",
           "engagement": {
-            "points": 105,
-            "comments": 19,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50620120",
-          "title": "MCP Gateway: How Snap Checks Both the Person and the Agent",
-          "excerpt": "",
-          "publishedAt": "2026-11-23T22:10:43.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://eng.snap.com/mcp-gateway",
-          "engagement": {
-            "points": 20,
-            "comments": 8,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50619466",
-          "title": "Discovery of curse ritual in trash dump surprises Egyptologist",
-          "excerpt": "",
-          "publishedAt": "2026-11-23T21:18:49.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://phys.org/news/2026-11-discovery-curse-ritual-trash-dump.html",
-          "engagement": {
-            "points": 41,
-            "comments": 32,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50611593",
-          "title": "Show HN: An agent skill that optimizes code with falsifiable hypotheses",
-          "excerpt": "",
-          "publishedAt": "2026-11-23T14:02:15.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://chszlab.github.io/AgenticAlgorithmEngineering/",
-          "engagement": {
-            "points": 121,
-            "comments": 10,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50601280",
-          "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
-          "excerpt": "",
-          "publishedAt": "2026-11-22T16:44:48.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://bjin.github.io/go-codegolf-benchmark/",
-          "engagement": {
-            "points": 426,
-            "comments": 120,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50598636",
-          "title": "The Great Automatic Grammatizator (By Roald Dahl), 1954 [pdf]",
-          "excerpt": "",
-          "publishedAt": "2026-11-22T11:29:44.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://gwern.net/doc/fiction/science-fiction/1953-dahl-thegreatautomaticgrammatizator.pdf",
-          "engagement": {
-            "points": 129,
-            "comments": 49,
-            "observedAt": "2026-11-26T15:44:33.207Z"
-          }
-        },
-        {
-          "url": "https://news.ycombinator.com/item?id=50589784",
-          "title": "SSH is a GUI framework",
-          "excerpt": "",
-          "publishedAt": "2026-11-21T14:52:41.000Z",
-          "dateKind": "community-submission",
-          "linkedUrl": "https://zydra.sh/articles/ssh-is-a-gui-framework/",
-          "engagement": {
-            "points": 231,
-            "comments": 117,
-            "observedAt": "2026-11-26T15:44:33.207Z"
+            "points": 145,
+            "comments": 28,
+            "observedAt": "2026-11-27T15:33:22.285Z"
           }
         }
       ],
@@ -10159,12 +10106,62 @@
         "https://news.ycombinator.com/item?id=50611593",
         "https://news.ycombinator.com/item?id=50601280",
         "https://news.ycombinator.com/item?id=50598636",
-        "https://news.ycombinator.com/item?id=50589784"
+        "https://news.ycombinator.com/item?id=50589784",
+        "https://news.ycombinator.com/item?id=50668024",
+        "https://news.ycombinator.com/item?id=50667989",
+        "https://news.ycombinator.com/item?id=50667970",
+        "https://news.ycombinator.com/item?id=50667956",
+        "https://news.ycombinator.com/item?id=50667949",
+        "https://news.ycombinator.com/item?id=50667865",
+        "https://news.ycombinator.com/item?id=50667860",
+        "https://news.ycombinator.com/item?id=50667853",
+        "https://news.ycombinator.com/item?id=50667848",
+        "https://news.ycombinator.com/item?id=50667843",
+        "https://news.ycombinator.com/item?id=50667811",
+        "https://news.ycombinator.com/item?id=50667793",
+        "https://news.ycombinator.com/item?id=50667780",
+        "https://news.ycombinator.com/item?id=50667771",
+        "https://news.ycombinator.com/item?id=50667755",
+        "https://news.ycombinator.com/item?id=50667747",
+        "https://news.ycombinator.com/item?id=50667749",
+        "https://news.ycombinator.com/item?id=50667744",
+        "https://news.ycombinator.com/item?id=50667742",
+        "https://news.ycombinator.com/item?id=50667726",
+        "https://news.ycombinator.com/item?id=50667664",
+        "https://news.ycombinator.com/item?id=50667452",
+        "https://news.ycombinator.com/item?id=50667143",
+        "https://news.ycombinator.com/item?id=50666436",
+        "https://news.ycombinator.com/item?id=50666375",
+        "https://news.ycombinator.com/item?id=50666279",
+        "https://news.ycombinator.com/item?id=50665968",
+        "https://news.ycombinator.com/item?id=50665920",
+        "https://news.ycombinator.com/item?id=50665796",
+        "https://news.ycombinator.com/item?id=50665488",
+        "https://news.ycombinator.com/item?id=50665405",
+        "https://news.ycombinator.com/item?id=50664931",
+        "https://news.ycombinator.com/item?id=50663595",
+        "https://news.ycombinator.com/item?id=50663261",
+        "https://news.ycombinator.com/item?id=50663089",
+        "https://news.ycombinator.com/item?id=50661705",
+        "https://news.ycombinator.com/item?id=50661646",
+        "https://news.ycombinator.com/item?id=50660180",
+        "https://news.ycombinator.com/item?id=50659841",
+        "https://news.ycombinator.com/item?id=50659640",
+        "https://news.ycombinator.com/item?id=50658632",
+        "https://news.ycombinator.com/item?id=50658498",
+        "https://news.ycombinator.com/item?id=50658193",
+        "https://news.ycombinator.com/item?id=50657645",
+        "https://news.ycombinator.com/item?id=50657530",
+        "https://news.ycombinator.com/item?id=50657392",
+        "https://news.ycombinator.com/item?id=50657265",
+        "https://news.ycombinator.com/item?id=50657070",
+        "https://news.ycombinator.com/item?id=50655868",
+        "https://news.ycombinator.com/item?id=50653477"
       ],
-      "matchedItems": 58,
-      "datedItems": 58,
-      "extractedEntries": 59,
-      "newestPublicationAt": "2026-11-26T15:41:57.000Z",
+      "matchedItems": 55,
+      "datedItems": 55,
+      "extractedEntries": 55,
+      "newestPublicationAt": "2026-11-27T15:29:03.000Z",
       "excerpt": null,
       "publishedAt": null,
       "announcementAt": null,
@@ -10176,6 +10173,754 @@
     }
   },
   "events": [
+    {
+      "id": "f336579374193ebd1abd19d5",
+      "sourceId": "rogers-service",
+      "themes": [
+        "satellite-phones"
+      ],
+      "owner": "Rogers",
+      "kind": "page-change",
+      "title": "Rogers Satellite capabilities: page content changed",
+      "url": "https://www.rogers.com/mobility/satellite",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": null,
+      "verification": "unreviewed"
+    },
+    {
+      "id": "038ee2f4e64d334626b704fb",
+      "sourceId": "mit-research",
+      "themes": [],
+      "owner": "MIT",
+      "kind": "new-link",
+      "title": "Engineering antibiotics could expand the pool of new drug candidates",
+      "url": "https://news.mit.edu/2026/engineering-antibiotics-could-expand-new-drug-candidates-pool-1127",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T10:00:00.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "29970d1fdb79afea522efe55",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "The haunting loveliness of boglands: Books in brief",
+      "url": "https://www.nature.com/articles/d41586-026-03885-4",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e63e71ac3f7e7a84063ce791",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Brain area’s mysterious role in speech decoded at last",
+      "url": "https://www.nature.com/articles/d41586-026-03800-x",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c0c77283a55b8a4c2251d271",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Life-saving cancer drug pumped out by a plant",
+      "url": "https://www.nature.com/articles/d41586-026-03801-w",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8b9fe3f2c0106dc5e04227d2",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Postcards from your graves",
+      "url": "https://www.nature.com/articles/d41586-026-03523-z",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3e8338e8144673c0f86c7e03",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Why the incoming US Congress should ban the development of self-improving AI",
+      "url": "https://www.nature.com/articles/d41586-026-03849-8",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8278b81e87deb75003be614f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Editorial Expression of Concern: Dual control of nuclear EIN3 by bifurcate MAPK cascades in C 2 H 4 signalling",
+      "url": "https://www.nature.com/articles/s41586-026-11475-7",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "836b1aea695082585ba56311",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Chromosome ‘glue’ could boost fertility by stabilizing ageing eggs",
+      "url": "https://www.nature.com/articles/d41586-026-03874-7",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5ab8d7c7e6d976e9ef44d09f",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Has AI just cracked Internet encryption? Rumoured ‘bombshell’ stuns scientists",
+      "url": "https://www.nature.com/articles/d41586-026-03875-6",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6bb48f6ecdb9ce73d4a64d74",
+      "sourceId": "nature-research",
+      "themes": [],
+      "owner": "Nature",
+      "kind": "new-link",
+      "title": "Daily briefing: A guide to the Riemann hypothesis",
+      "url": "https://www.nature.com/articles/d41586-026-03894-3",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "746e38e0a7ba787fc959add6",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Open-source ESP32 desk body for a local AI assistant",
+      "url": "https://news.ycombinator.com/item?id=50668024",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:29:03.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f449eea40376181c3244a2ee",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "False Computer-Checked Proofs",
+      "url": "https://news.ycombinator.com/item?id=50667989",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:26:09.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e3f412bc1415a35eadb1cc11",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Grand Theft GTA",
+      "url": "https://news.ycombinator.com/item?id=50667970",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:22:52.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "68b98da50e87626e8716bb3f",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Ask HN: What separates a smart vs. effective programmer in your experience?",
+      "url": "https://news.ycombinator.com/item?id=50667956",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:21:19.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "fcb06afe8430bb8ae7ba3e52",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Did Turing Stand on Gödel's Shoulders? [pdf]",
+      "url": "https://news.ycombinator.com/item?id=50667949",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:20:39.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "0eefcaf8e20fadb427e6424b",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Quinn Nelson on the touch screen of the 2026 MacBook Pro [video]",
+      "url": "https://news.ycombinator.com/item?id=50667865",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:11:51.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "8b064e6a646c9500309af07e",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Just Dashboard, open-source Linux full management dashboard",
+      "url": "https://news.ycombinator.com/item?id=50667860",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:11:28.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c1fd50df0735eefe5c85122b",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Ratio Tracking, Intuitively",
+      "url": "https://news.ycombinator.com/item?id=50667853",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:10:54.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "e60dbf6d0060b569039ac8c5",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Revisiting Importance Sampling",
+      "url": "https://news.ycombinator.com/item?id=50667848",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:10:45.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "795942577da826fcae5d4130",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "I Built IQ-Stream: Streaming LLM Tokens to the Browser Without the Workarounds",
+      "url": "https://news.ycombinator.com/item?id=50667843",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:10:35.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "11e11ba31c5072a4adc2e9ab",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Targeted Mutation Testing – Observation-guided mutation testing tool",
+      "url": "https://news.ycombinator.com/item?id=50667811",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:07:53.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d54c45b758da83a4f449278b",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "More code. Not production-ready code [pdf]",
+      "url": "https://news.ycombinator.com/item?id=50667793",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:06:50.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c0d475aab9702824600e97d9",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Precitions Until 2030",
+      "url": "https://news.ycombinator.com/item?id=50667780",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:05:59.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4fb11063a2de2117c8daf555",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "IBM ends US visa sponsorship; India workers face 80% pay cut or job loss",
+      "url": "https://news.ycombinator.com/item?id=50667771",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:05:17.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "6127debbf46f0b211a1ed13e",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: AI agents can now call you",
+      "url": "https://news.ycombinator.com/item?id=50667755",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:04:12.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3618864e39ce1eb584ca1131",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Thinpack.js Packs Node.js Hello World into 4.1 MiB with QuickJS",
+      "url": "https://news.ycombinator.com/item?id=50667747",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:03:37.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "02de4608027ca2e59d1e68d1",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The SciML Factory: A New Approach to Agentic Open Source Maintenance",
+      "url": "https://news.ycombinator.com/item?id=50667749",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:03:37.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "780fbc3dc63b4777189a1109",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "url": "https://news.ycombinator.com/item?id=50667744",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:03:17.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "081d3c8335167e8281cbf1ed",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Ask HN: Will GPTs Get Stupider?",
+      "url": "https://news.ycombinator.com/item?id=50667742",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:03:10.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f65fc1acd74787c515da0199",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+      "url": "https://news.ycombinator.com/item?id=50667726",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T15:01:50.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "27b6cd001cdd9e897bafc7df",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Stanford Physicist Uses AI to Tackle Quantum Gravity Problem",
+      "url": "https://news.ycombinator.com/item?id=50667664",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T14:55:57.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "66448ee2ee33e3632791f794",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: I restored Palm's last device, and brought its OS to other platforms",
+      "url": "https://news.ycombinator.com/item?id=50667452",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T14:37:02.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "5155f6ef41169ded74329c21",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Norse Atlantic suspends all flights as it faces potential collapse",
+      "url": "https://news.ycombinator.com/item?id=50667143",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T14:09:44.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ba8c629da72084368692f8ad",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Mental Health Resources and Political Engagement",
+      "url": "https://news.ycombinator.com/item?id=50666436",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T13:01:02.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c8b7b83b355f31dccd1f17b0",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "US Air Force's cloud computing platform hacked",
+      "url": "https://news.ycombinator.com/item?id=50666375",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T12:54:11.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f75771bdcd4d250f781fb59e",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "New York and California age gating rules go into effect in the new year",
+      "url": "https://news.ycombinator.com/item?id=50666279",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T12:43:40.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "4d003f699868c5f0a86d35c6",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
+      "url": "https://news.ycombinator.com/item?id=50665968",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T12:08:51.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a85babe53b5b8ddb860b2e38",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Kimi for Science: More scientific ideas, made possible",
+      "url": "https://news.ycombinator.com/item?id=50665920",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T12:03:11.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "f7b09edd2ec483be99f26445",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Open-Sourced Code Mode to Cut ~60% of My Rust Agent's Token Burn",
+      "url": "https://news.ycombinator.com/item?id=50665796",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T11:51:03.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "9d88df0ab1c6fd82d711cbb4",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "AI on brink of making online security useless, mathematicians fear",
+      "url": "https://news.ycombinator.com/item?id=50665488",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T11:09:04.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d9fa751464c86fe11e961f31",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: Gerber 3D – view, compare and fab-check PCB files in the browser",
+      "url": "https://news.ycombinator.com/item?id=50665405",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T10:55:45.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d9e1b1b29ad88c36c5833eeb",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Pimalaya goes stable: Himalaya v3 and the pimdir standard",
+      "url": "https://news.ycombinator.com/item?id=50664931",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T09:50:02.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "af066f7e3a1bccc631473786",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The group chat where your AI talks behind your back",
+      "url": "https://news.ycombinator.com/item?id=50663595",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T06:44:34.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d6f8fba4e859b08148275403",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Buy Nothing Day – Friday November 27th 2026",
+      "url": "https://news.ycombinator.com/item?id=50663261",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T05:52:42.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "242409503e1c3277825bf328",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The need for a formally verifiable mainstream programming language",
+      "url": "https://news.ycombinator.com/item?id=50663089",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T05:22:06.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d519f7713380bf1ddebc69da",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "The Cutthroat Business of Shipwrecks",
+      "url": "https://news.ycombinator.com/item?id=50661705",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T01:21:49.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "d3cda70799d0921aff77a2e5",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Hard Drive pricing has gotten bad",
+      "url": "https://news.ycombinator.com/item?id=50661646",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27T01:13:49.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "92dc16d89e653e51a0f21e29",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "AI made self-hosting fun again",
+      "url": "https://news.ycombinator.com/item?id=50660180",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T21:47:45.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2013bc5c56d9acd9529a2417",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "url": "https://news.ycombinator.com/item?id=50659841",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T21:08:05.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "caaa1c37d299eae3dd7fc0b5",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Company Culture = Slack Emoji ÷ √Headcount",
+      "url": "https://news.ycombinator.com/item?id=50659640",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T20:49:49.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "7c96c6a771bfa0cb110593d7",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Rvoip: VoIP stack in Rust",
+      "url": "https://news.ycombinator.com/item?id=50658632",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T19:18:09.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "a09c7e44a71f88f432747733",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "An introduction to uncertainty in machine learning",
+      "url": "https://news.ycombinator.com/item?id=50658498",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T19:04:50.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "651b6f6b84419dc13b407c33",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Largest 2D Chart library in the world using BUI: BlenderUI",
+      "url": "https://news.ycombinator.com/item?id=50658193",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T18:37:24.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2afdf4fe41a62703fc9930f0",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+      "url": "https://news.ycombinator.com/item?id=50657645",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T17:47:45.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "ac4b40094a6a93df2336aacd",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "url": "https://news.ycombinator.com/item?id=50657530",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T17:36:47.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c917428d20140f082ea5bcaf",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "First images of the impact of DART asteroid deflection experiment",
+      "url": "https://news.ycombinator.com/item?id=50657392",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T17:24:37.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "3b34dd4b5d832979f4d97793",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "AMD-specific fork of llama.cpp",
+      "url": "https://news.ycombinator.com/item?id=50657265",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T17:11:29.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "922a67aeae613a18d108a0b8",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar",
+      "url": "https://news.ycombinator.com/item?id=50657070",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T16:51:38.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "2785af86fcd7d4111672a7cd",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Show HN: I wrote an entire Vim manual over 4 years",
+      "url": "https://news.ycombinator.com/item?id=50655868",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T14:44:22.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "eb7878dc8a7b6e8e45d6dda9",
+      "sourceId": "hn-discovery",
+      "themes": [],
+      "owner": "Hacker News",
+      "kind": "new-link",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "url": "https://news.ycombinator.com/item?id=50653477",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-26T09:44:23.000Z",
+      "verification": "unreviewed"
+    },
+    {
+      "id": "c0436ff61c9c71078aa1e228",
+      "sourceId": "sec-tm",
+      "themes": [
+        "solid-state-batteries"
+      ],
+      "owner": "Toyota",
+      "kind": "new-link",
+      "title": "Toyota · 6-K · REPORT OF FOREIGN PRIVATE ISSUER",
+      "url": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526479077/d85142d6k.htm",
+      "detectedAt": "2026-11-27T15:33:18.535Z",
+      "publishedAt": "2026-11-27",
+      "verification": "unreviewed"
+    },
     {
       "id": "e51056c840c99b04bb972f0f",
       "sourceId": "fcc-releases",
@@ -14242,764 +14987,6 @@
       "url": "https://news.ycombinator.com/item?id=50599473",
       "detectedAt": "2026-11-22T13:35:14.528Z",
       "publishedAt": "2026-11-22T13:22:37.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ba83d7eef210adcd70177936",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "The Rise & Fall Of The World's First Commercial Jetliner",
-      "url": "https://news.ycombinator.com/item?id=50599471",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:22:35.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8d1f9fbb7cc0469ee3c7178f",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "What if Netscape did SSL the HTTP way?",
-      "url": "https://news.ycombinator.com/item?id=50599464",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:22:00.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8439088f359d1d05584de498",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "A Mechanical Watch Keeps Time (Interactive 3D)",
-      "url": "https://news.ycombinator.com/item?id=50599458",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:21:25.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "c35bc0fa66a97ee6e7e16e10",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "South Korea education minister resigns over exam cheating scandal",
-      "url": "https://news.ycombinator.com/item?id=50599444",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:19:47.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "9ec2ef26f8590059ef6c09e0",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Loom – Memory that follows the code you edit",
-      "url": "https://news.ycombinator.com/item?id=50599422",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:17:34.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "e1ebfae8e88b4dbc51190dd3",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "COP31 climate talks fail to agree deal over fossil fuels row",
-      "url": "https://news.ycombinator.com/item?id=50599409",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:15:41.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4c42ae2b549d00e6272fa00b",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Apple’s Siri Recap Has a Privacy Problem: It Doesn’t Know Who’s Talking",
-      "url": "https://news.ycombinator.com/item?id=50599397",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:13:49.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "586d12777ec0bae121203f16",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Nuclear Nonproliferation Treaty and the German Nuclear Question Part 1 1954-1964",
-      "url": "https://news.ycombinator.com/item?id=50599361",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:08:08.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5b4987224177f9d5fcafe716",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Cordium – FOSS sandbox platform on Kubernetes to eliminate credentials",
-      "url": "https://news.ycombinator.com/item?id=50599359",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:07:44.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "2368f0ea90fbd2a60af30d2c",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "This Month in Redox – October 2026",
-      "url": "https://news.ycombinator.com/item?id=50599354",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:07:10.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "46defc36199083188577579e",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Shed Skin restricted-Python to C++ transpiler v1.0 released",
-      "url": "https://news.ycombinator.com/item?id=50599323",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T13:02:26.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "44962822fba52143abcec5fe",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: NestDaddy Memory, one memory shared by ChatGPT, Claude and Cursor",
-      "url": "https://news.ycombinator.com/item?id=50599108",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T12:37:28.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "fff65c703b770bc01a8b9a7f",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator",
-      "url": "https://news.ycombinator.com/item?id=50597959",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T09:57:01.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "11374b53fc0c537ea747f365",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
-      "url": "https://news.ycombinator.com/item?id=50597612",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T08:57:34.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "6ec750f45756e8e11cc754da",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: I built a newspaper for white-collar crime that paints every portrait",
-      "url": "https://news.ycombinator.com/item?id=50597371",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T08:12:40.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4ece4ef3dc543d02a9a09c7e",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Notes on the discrete Fourier transform (DFT)",
-      "url": "https://news.ycombinator.com/item?id=50596960",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T06:52:25.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d39089b16ecb63a27414962e",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: The Riemann Proof Handbook",
-      "url": "https://news.ycombinator.com/item?id=50596664",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T05:46:30.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "7c04f04d67553f243795dc76",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow",
-      "url": "https://news.ycombinator.com/item?id=50596155",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T04:10:09.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5aaa0ba5b1b2a15c3731dbe6",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
-      "url": "https://news.ycombinator.com/item?id=50596133",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T04:04:56.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "3cdb44840cc508326f517677",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Data Processing Incidents on Inference Providers",
-      "url": "https://news.ycombinator.com/item?id=50595554",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T02:14:14.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "88c96a2c5c626e587c7048d3",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "The Mythology of Conscious AI",
-      "url": "https://news.ycombinator.com/item?id=50595537",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T02:10:02.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1361afd76fb1bc6646d443e0",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Sandwich Simulator",
-      "url": "https://news.ycombinator.com/item?id=50594911",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-22T00:07:59.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1f2acf5eb781907855f882a9",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "PcapAnalyzer – self-hosted pcap analyzer with 27 problem detectors",
-      "url": "https://news.ycombinator.com/item?id=50594132",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T22:09:58.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a895810e483ce4e1aa057285",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Advice for the next 100 Rust GUIs",
-      "url": "https://news.ycombinator.com/item?id=50593737",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T21:17:53.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "19d1935c79b4816dcfeb1034",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Pandex – Official European Law for AI Agents, over MCP",
-      "url": "https://news.ycombinator.com/item?id=50593481",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T20:47:41.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8373c6d64bd8362154ed90fc",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Upload2Shell (CVE-2026-125396)",
-      "url": "https://news.ycombinator.com/item?id=50592097",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T18:29:29.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "ab0e49c7207969d246bfca55",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Inkling-2-Mini in 5.4 GB Memory",
-      "url": "https://news.ycombinator.com/item?id=50591853",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T18:02:19.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4ddf6c53680b0003da25c6ea",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Zero C# – C# without a runtime or GC",
-      "url": "https://news.ycombinator.com/item?id=50590279",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T15:39:09.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "bbbbbe2a09669113eaf4761c",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Lean verification of the Riemann Hypothesis",
-      "url": "https://news.ycombinator.com/item?id=50589618",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T14:36:45.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "04e456eaa600f1c3ef951b82",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: I made a PS1 style racing game",
-      "url": "https://news.ycombinator.com/item?id=50589184",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-21T13:47:45.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "191439764e4678dac8cf58f8",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Getting the mind to steer the body to steer you",
-      "url": "https://news.ycombinator.com/item?id=50583028",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-20T22:11:05.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "89bdac5bca64e1120e99d12d",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
-      "url": "https://news.ycombinator.com/item?id=50582069",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-20T21:03:12.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "523b7c3a8d8a41d82f3bbf6c",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Field Mice on Drugs",
-      "url": "https://news.ycombinator.com/item?id=50573870",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-20T12:40:06.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a913b50ae644d4e3ca92a4b7",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "If tiny 'primordial' black holes exist",
-      "url": "https://news.ycombinator.com/item?id=50569846",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-20T03:37:41.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "1a7d5879df65a645eaa1ecf5",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Self-hosted library branch over public web OPDS",
-      "url": "https://news.ycombinator.com/item?id=50566495",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-19T21:15:47.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "0a5715063fbd25bb2b6c98d9",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Split Radiance Cascades",
-      "url": "https://news.ycombinator.com/item?id=50560314",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-19T14:08:33.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a148307516296500864cb111",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Is 'fork' missing operation in sandboxes?",
-      "url": "https://news.ycombinator.com/item?id=50559820",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-19T13:28:43.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d51976fad2194533076ba439",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Reversing the Next-Page Prefetcher in Skylake-X",
-      "url": "https://news.ycombinator.com/item?id=50554572",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-19T00:50:05.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "8f2695544e1db1c15d13a991",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "String Art Font (2017)",
-      "url": "https://news.ycombinator.com/item?id=50549457",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-18T17:42:57.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "a3e66d57f27521dfa486cd7a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: An ASCII cell aquarium for your terminal",
-      "url": "https://news.ycombinator.com/item?id=50541047",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-18T02:18:29.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4f110288a8b6878b03ebb0ae",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "A real Linux kernel, compiled to WebAssembly",
-      "url": "https://news.ycombinator.com/item?id=50533945",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-17T16:35:46.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "737e9ceb17e87f67d5a845b7",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Show HN: Compile the same source for GPUs and CPUs",
-      "url": "https://news.ycombinator.com/item?id=50487155",
-      "detectedAt": "2026-11-22T13:35:14.528Z",
-      "publishedAt": "2026-11-13T17:53:42.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "92b342e05768e6dc7e5e5cae",
-      "sourceId": "rogers-service",
-      "themes": [
-        "satellite-phones"
-      ],
-      "owner": "Rogers",
-      "kind": "page-change",
-      "title": "Rogers Satellite capabilities: page content changed",
-      "url": "https://www.rogers.com/mobility/satellite",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": null,
-      "verification": "unreviewed"
-    },
-    {
-      "id": "eefcdcd60ed960de3e825301",
-      "sourceId": "waymo-news",
-      "themes": [
-        "robotaxis"
-      ],
-      "owner": "Waymo",
-      "kind": "new-link",
-      "title": "Read more: How the Waymo Driver Manages Severe Winter Weather",
-      "url": "https://waymo.com/blog/2026/11/winter-weather-preparedness/",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "f46487ff47f7f499423b4c76",
-      "sourceId": "waymo-news",
-      "themes": [
-        "robotaxis"
-      ],
-      "owner": "Waymo",
-      "kind": "new-link",
-      "title": "Read more: Introducing the Waymo Accessibility Network UK: Co-Designing the Future of Autonomous Mobility",
-      "url": "https://waymo.com/blog/2026/11/uk-accessibility-network/",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-10",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "afae6fc44e125dacabcd7f79",
-      "sourceId": "waymo-news",
-      "themes": [
-        "robotaxis"
-      ],
-      "owner": "Waymo",
-      "kind": "new-link",
-      "title": "Read more: Rethinking What Freedom of Movement Feels Like for Women",
-      "url": "https://waymo.com/blog/2026/11/because-women/",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-05",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d8b88d23d3cc94ea5cd1e022",
-      "sourceId": "fcc-releases",
-      "themes": [
-        "satellite-phones"
-      ],
-      "owner": "FCC",
-      "kind": "new-link",
-      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-      "url": "https://www.fcc.gov/edoc/427342",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": null,
-      "verification": "unreviewed"
-    },
-    {
-      "id": "21fcc0dafcf33fbe71a2e734",
-      "sourceId": "fcc-releases",
-      "themes": [
-        "satellite-phones"
-      ],
-      "owner": "FCC",
-      "kind": "new-link",
-      "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-      "url": "https://www.fcc.gov/edoc/427341",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": null,
-      "verification": "unreviewed"
-    },
-    {
-      "id": "d53bb3cd8962c89d487e0c91",
-      "sourceId": "fcc-releases",
-      "themes": [
-        "satellite-phones"
-      ],
-      "owner": "FCC",
-      "kind": "new-link",
-      "title": "Amendment of Parts 2 and 25 of the Commission's Rules to Facilitate the Use of Earth Stations in Motion Communicating with Geostationary Orbit Space Stations in Frequency Bands Allocated to the Fixed Satellite Service, e",
-      "url": "https://www.fcc.gov/edoc/427377",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": null,
-      "verification": "unreviewed"
-    },
-    {
-      "id": "71883f0961c011b23683f9ba",
-      "sourceId": "mit-research",
-      "themes": [],
-      "owner": "MIT",
-      "kind": "new-link",
-      "title": "Q&A: Enabling more human-like interactions and understanding in multimodal foundation models",
-      "url": "https://news.mit.edu/2026/qa-enabling-more-human-interactions-understanding-multimodal-foundation-models-1120",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20T21:00:00.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "6c191a5899f86ed05fd5620b",
-      "sourceId": "mit-research",
-      "themes": [],
-      "owner": "MIT",
-      "kind": "new-link",
-      "title": "New approach enables physically consistent AI models of chaotic systems",
-      "url": "https://news.mit.edu/new-approach-enables-physically-consistent-ai-models-chaotic-systems-1120",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20T20:00:00.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "74ae8c85d574b4e20c2443f3",
-      "sourceId": "mit-research",
-      "themes": [],
-      "owner": "MIT",
-      "kind": "new-link",
-      "title": "MIT in the media: At STAT Summit, U.S. science leaders defend role of the American university",
-      "url": "https://news.mit.edu/2026/mit-media-stat-summit-us-science-leaders-defend-role-american-university",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-13T21:30:00.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "2ae0a29a3e1c8fd15a85985e",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Briefing Chat: Voyager 1 is now one ‘light day’ from Earth — setting a cosmic record",
-      "url": "https://www.nature.com/articles/d41586-026-03806-5",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5b1b7530fbb6754cefff28b6",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Net zero emissions won’t reverse climate change — some nations look to ‘net negative’",
-      "url": "https://www.nature.com/articles/d41586-026-03789-3",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "02553133ffca9f94720d4dd6",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Mathematician says he and AI solved Riemann hypothesis — the field’s biggest outstanding challenge",
-      "url": "https://www.nature.com/articles/d41586-026-03812-7",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "7306649d0c2e26d3c811e130",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "Sleuth finds ‘impossible proteins’ in hundreds of research papers",
-      "url": "https://www.nature.com/articles/d41586-026-03799-1",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5ae9cdaaa5a2584e1b912caf",
-      "sourceId": "nature-research",
-      "themes": [],
-      "owner": "Nature",
-      "kind": "new-link",
-      "title": "These gaps in weather data affect forecasts everywhere: plugging them is not charity",
-      "url": "https://www.nature.com/articles/d41586-026-03811-8",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-20",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "e3e411fe06628d51fb5c00dd",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "How to Make Product Growth Last (Retention Before Acquisition) [video]",
-      "url": "https://news.ycombinator.com/item?id=50589104",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-21T13:39:26.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "6d6bd5d7da4760b812f09633",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "GL.iNet Router and KVM Security Incident",
-      "url": "https://news.ycombinator.com/item?id=50589092",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-21T13:37:14.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "4e6d88f1d475a7e314ed6831",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "XMPP – Multi User Chat 2 (MUC2)",
-      "url": "https://news.ycombinator.com/item?id=50589081",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-21T13:35:50.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "e670c5c2fda4181ee6ea0b5a",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Ask HN: Does C/C++/Rust/Zig have agent framework?",
-      "url": "https://news.ycombinator.com/item?id=50589077",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-21T13:35:25.000Z",
-      "verification": "unreviewed"
-    },
-    {
-      "id": "5a05473a279d3b11eb2cd9a5",
-      "sourceId": "hn-discovery",
-      "themes": [],
-      "owner": "Hacker News",
-      "kind": "new-link",
-      "title": "Compiling the claimed Riemann Hypothesis proof, live",
-      "url": "https://news.ycombinator.com/item?id=50589043",
-      "detectedAt": "2026-11-21T13:41:22.665Z",
-      "publishedAt": "2026-11-21T13:31:19.000Z",
       "verification": "unreviewed"
     }
   ]
